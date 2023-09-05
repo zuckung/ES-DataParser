@@ -2673,7 +2673,7 @@
 <details>
 <summary>data/human/events.txt | event "fw safe passage ends"</summary>
 <pre>event "fw safe passage ends"
-	"reputation: Republic" <?= -1000
+	"reputation: Republic" &#60;?= -1000
 </pre>
 </details>
 
@@ -3628,7 +3628,7 @@
 <details>
 <summary>data/human/events.txt | event "at war with the pug"</summary>
 <pre>event "at war with the pug"
-	"reputation: Pug" <?= -1000
+	"reputation: Pug" &#60;?= -1000
 	government "Pug"
 		"attitude toward"
 			"Free Worlds" -.01
@@ -4237,7 +4237,7 @@
 	link "Alderamin" "Deneb"
 	link "Zeta Aquilae" "Deneb"
 	link "Rasalhague" "Deneb"
-	"reputation: Pug" <?= -1000
+	"reputation: Pug" &#60;?= -1000
 	"tribute: Rand" /= 500
 	"tribute: Oblivion" /= 500
 	"tribute: Shiver" /= 300
@@ -4423,7 +4423,7 @@
 <details>
 <summary>data/human/events.txt | event "fwc defend oblivion"</summary>
 <pre>event "fwc defend oblivion"
-	"reputation: Pug" <?= -10
+	"reputation: Pug" &#60;?= -10
 	government "Pug"
 		"attitude toward"
 			"Free Worlds" -.01
@@ -4881,7 +4881,7 @@
 <details>
 <summary>data/human/free worlds 3 reconciliation.txt | event "fw begin syndicate capture"</summary>
 <pre>event "fw begin syndicate capture"
-	"reputation: Syndicate" <?= -100
+	"reputation: Syndicate" &#60;?= -100
 	government "Syndicate"
 		"attitude toward"
 			"Deep Security" -.01
@@ -6677,7 +6677,7 @@
 	government "Kor Efret"
 		"attitude toward"
 			"Kor Mereti" 0
-	"reputation: Kor Mereti" >?= 1
+	"reputation: Kor Mereti" &#62;?= 1
 	"reputation: Kor Mereti (Hostile)" = -1000
 	planet "Rekat Moraski"
 		"required reputation" 1000
@@ -6765,7 +6765,7 @@
 	planet Zenith
 		bribe 0
 		"required reputation" 1000
-	"reputation: Pirate" <?= -1
+	"reputation: Pirate" &#60;?= -1
 	"unvisit planet" "Varu K'prai"
 </pre>
 </details>
@@ -6832,8 +6832,8 @@
 <details>
 <summary>data/wanderer/wanderers middle.txt | event "wanderers: exiles peaceful"</summary>
 <pre>event "wanderers: exiles peaceful"
-	"reputation: Korath" >?= 1
-	"reputation: Korath (Civilian)" >?= 1
+	"reputation: Korath" &#62;?= 1
+	"reputation: Korath (Civilian)" &#62;?= 1
 </pre>
 </details>
 
@@ -7090,7 +7090,7 @@
 <details>
 <summary>data/wanderer/wanderers start.txt | event "wanderer / unfettered peace"</summary>
 <pre>event "wanderer / unfettered peace"
-	"reputation: Hai (Unfettered)" >?= 1
+	"reputation: Hai (Unfettered)" &#62;?= 1
 	system "Ehma Ti"
 		remove fleet "Unfettered Raid"
 		add fleet "Unfettered Tribute" 1000
@@ -7345,7 +7345,7 @@
 		add fleet "Wanderer Defense" 500
 		add fleet "Wanderer Flycatchers" 480
 		add fleet "Large Unfettered" 1200
-	"reputation: Hai (Unfettered)" <?= -100
+	"reputation: Hai (Unfettered)" &#60;?= -100
 	government "Hai (Unfettered)"
 		"attitude toward"
 			"Wanderer" -.01

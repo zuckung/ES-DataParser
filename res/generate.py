@@ -1,22 +1,15 @@
 import os
 import time
 
-def check_local():
-	if os.getcwd() == "/storage/emulated/0/Download/mgit/ES-Dataarser/res": # check for local testing
-		os.chdir("../")
-
 def read_template():
-	with open('res/template.txt', 'r') as file1:
+	with open('template.txt', 'r') as file1:
 		templates_all = file1.read()
 		templates = templates_all.split('%cut template here%')
-	index_temp = templates[0]
-	menu_temp = templates[1]
-	category_temp = templates[2].split('%tmpl%')
-	upper_category_temp = category_temp[0]
-	lower_category_temp = category_temp[1]
-	object_temp = templates[3]
-	return index_temp, menu_temp, object_temp, upper_category_temp, lower_category_temp
-
+	menu_template = templates[0]
+	category_template = templates[1]
+	object_template = templates[2]
+	return menu_template, category_template, object_template
+	
 def read_everything():
 	started = False
 	obj, obj_path, obj_name = [], [], []
@@ -50,9 +43,9 @@ def read_everything():
 						continue
 					elif line[:1] != '\t':
 							if started == True:
-								obj.append(txt)
+								obj.append(txt.replace('<', '&#60;').replace('>', '&#62;'))
 								obj_path.append(txt2)
-								obj_name.append(txt3)
+								obj_name.append(txt3.replace('\t', ' '))
 								started = False
 							txt = line
 							if folder != '':
@@ -67,46 +60,50 @@ def read_everything():
 							txt += line
 	return obj, obj_path, obj_name
 
-def write_frameset():
-	if os.path.isdir('page/') == False:
-		os.mkdir('page/')
-	with open('page/index.html', 'w') as readme_write:
-		readme_write.writelines(index_template)
-	with open('page/menu.html', 'w') as readme_write:
-		readme_write.writelines(menu_template)
+def get_object_categories():
+	categories = []
+	for obj in object_names:
+		if obj[:1] == '"':
+			pos = obj.find('"', 1) + 1
+			category = obj[:pos]
+		else:
+			category = obj.split(' ')[0]
+		if category in categories:
+			continue
+		else:
+			categories.append(category)
+	return categories
 
-def replace_template(ob, ob_path, ob_name):
-	template = object_template
-	template = template.replace('%filename%', ob_path).replace('%objectname%', ob_name).replace('%object%', ob)
-	return template
-
-def store_category(category):
-	with open('page/' + category.strip() + '.html', 'w') as file1:
-		file1.writelines(upper_category_template)
-		for each in objects:
-			if each[:len(category)] == category:
-				o_index = objects.index(each)
-				obj_path = object_paths[o_index]
-				obj_name = object_names[o_index]
-				txt = replace_template(each, obj_path, obj_name)
-				#print(each)		
-				file1.writelines(txt + '\n')
-		file1.writelines(lower_category_template)
+def write_menu():
+	splitted = menu_template.split('%categories%')
+	with open('page/menu.html', 'w') as file1:
+		file1.writelines(splitted[0])
+		for each in categories:
+			each = each.replace('"', '').replace(' ', '_')
+			file1.writelines('<a href="' + each + '.html" target="main">' + each + '</a><br>\n')
+		file1.writelines(splitted[1])
 
 def write_html():
-	#categories = ['system '] # for testing
-	categories = ['category ', 'conversation ', 'effect ', 'event ', 'fleet ', 'galaxy ', 'government ', 'hazard ', 'minable ', 'mission ', 'news ', 'outfit ', 'outfitter ', 'person ', 'phrase ', 'planet ', 'ship ', 'shipyard ', 'star ', 'start ', 'system ']
-	print('\n\n')
-	for each in categories:
-		print('creating ' + each[:len(each)-1] + '.html')
-		store_category(each)
+	for category in categories:
+		catfile = category.replace('"', '').replace(' ', '_')
+		print('creating ' + catfile.strip() + '.html')
+		with open('page/' + catfile.strip() + '.html', 'w') as file1:
+			splitted = category_template.split('%tmpl%')
+			file1.writelines(splitted[0])
+			for obj_name in object_names:
+				if obj_name.startswith(category):
+					o_index = object_names.index(obj_name)
+					obj_path = object_paths[o_index]
+					obj = objects[o_index]
+					txt = object_template.replace('%filename%', obj_path).replace('%objectname%', obj_name).replace('%object%', obj)
+					#print(each)		
+					file1.writelines(txt + '\n')
+			file1.writelines(splitted[1])
 
-		
-data_folder = 'data/'
-
-check_local()
+data_folder = '/storage/9C33-6BBD/endless sky/data_0.10.2/'
+menu_template, category_template, object_template = read_template()
 objects, object_paths, object_names = read_everything() # creates list of objects, a list of each path and each name
-index_template, menu_template, object_template, upper_category_template, lower_category_template = read_template() # read the templates
-write_frameset() # write indec.html and menu.html
-write_html() # write all category html files
+categories = get_object_categories()
 
+write_menu()
+write_html()
