@@ -72,6 +72,7 @@ def get_object_categories():
 			continue
 		else:
 			categories.append(category)
+	categories.sort()
 	return categories
 
 def write_menu():
