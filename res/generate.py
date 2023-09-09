@@ -78,21 +78,27 @@ def get_object_categories():
 def write_menu():
 	splitted = menu_template.split('%categories%')
 	with open('page/menu.html', 'w') as file1:
+		print('creating menu.html')
 		file1.writelines(splitted[0])
+		catpos = 0
 		for each in categories:
 			each = each.replace('"', '').replace(' ', '_')
-			file1.writelines('<a href="' + each + '.html" target="main">' + each + '</a><br>\n')
+			file1.writelines('<a href="' + each + '.html" target="main">' + each + '</a>  (' + str(counting[catpos]) + ')<br>\n')
+			catpos += 1
 		file1.writelines(splitted[1])
 
 def write_html():
+	counting = []
 	for category in categories:
+		catcount = 0
 		catfile = category.replace('"', '').replace(' ', '_')
 		print('creating ' + catfile.strip() + '.html')
 		with open('page/' + catfile.strip() + '.html', 'w') as file1:
 			splitted = category_template.split('%tmpl%')
 			file1.writelines(splitted[0])
 			for obj_name in object_names:
-				if obj_name.startswith(category):
+				if obj_name.startswith(category + ' ') or obj_name.startswith(category + '\t') or obj_name == (category):
+					catcount += 1
 					o_index = object_names.index(obj_name)
 					obj_path = object_paths[o_index]
 					obj = objects[o_index]
@@ -100,11 +106,13 @@ def write_html():
 					#print(each)		
 					file1.writelines(txt + '\n')
 			file1.writelines(splitted[1])
+			counting.append(catcount)
+	return counting
 
 data_folder = '/storage/9C33-6BBD/endless sky/data_0.10.2/'
 menu_template, category_template, object_template = read_template()
 objects, object_paths, object_names = read_everything() # creates list of objects, a list of each path and each name
 categories = get_object_categories()
 
+counting = write_html()
 write_menu()
-write_html()
