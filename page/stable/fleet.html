@@ -120,7 +120,8 @@
 <pre>fleet "Bunrodea Royalty"
 	government "Bunrodea (Erabu)"
 	names "bunrodea (erabu)"
-	fighters "bunrodea"
+	fighters
+		names "bunrodea"
 	personality
 		timid vindictive unconstrained mute
 	variant 20
@@ -148,7 +149,8 @@
 <pre>fleet "Heliarch"
 	government "Heliarch"
 	names "heliarch"
-	fighters "heliarch fighter"
+	fighters
+		names "heliarch fighter"
 	cargo 1
 	personality
 		heroic opportunistic
@@ -1393,7 +1395,7 @@
 <details>
 <summary>data/hai/hai fleets.txt | fleet "Small Hai Merchant"</summary>
 <pre>fleet "Small Hai Merchant"
-	government "Hai"
+	government "Hai Merchant"
 	names "hai"
 	cargo 3
 	personality
@@ -1481,7 +1483,7 @@
 <details>
 <summary>data/hai/hai fleets.txt | fleet "Large Hai Merchant"</summary>
 <pre>fleet "Large Hai Merchant"
-	government "Hai"
+	government "Hai Merchant"
 	names "hai"
 	cargo 4
 	personality
@@ -2140,15 +2142,20 @@
 	names "civilian"
 	cargo 0
 	personality timid
-	variant 3
+	variant 7
 		"Blackbird (Hai Trafficker)"
-	variant 2
-		"Clipper (Hai Trafficker)"
-	variant 2
+	variant 7
+		"Mule (Hai Trafficker)"
+	variant 7
 		"Freighter (Hai Trafficker)"
-	variant 1
-		# The Corvettes are infrequent because they're nearly impossible to catch and serve mostly to show that the smugglers are desperate to avoid capture.
+	variant 5
+		"Clipper (Hai Trafficker)"
+	variant 5
 		"Corvette (Hai Trafficker)"
+	variant 3
+		"Bounder (Hai Trafficker)"
+	variant 3
+		"Star Queen (Hai Trafficker)"
 </pre>
 </details>
 
@@ -2196,7 +2203,8 @@
 	government "Republic that won't enter wormhole"
 	# ... otherwise the surveillance drones fly through the wormhole
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		surveillance opportunistic disables plunders
@@ -2214,7 +2222,8 @@
 <pre>fleet "Navy Friendly Wormhole Guards"
 	government "Republic that won't enter wormhole"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		heroic disables plunders frugal opportunistic
@@ -2336,7 +2345,7 @@
 
 
 <details>
-<summary>data/human/events.txt | fleet "gunboat only"</summary>
+<summary>data/human/campaign events.txt | fleet "gunboat only"</summary>
 <pre>fleet "gunboat only"
 	government "Republic"
 	names "republic small"
@@ -3737,7 +3746,8 @@
 <pre>fleet "Large Republic"
 	government "Republic"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		heroic opportunistic
@@ -3783,7 +3793,8 @@
 <pre>fleet "Republic Logistics"
 	government "Republic"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 3
 	personality
 		heroic opportunistic
@@ -3840,7 +3851,8 @@
 <pre>fleet "Navy Surveillance"
 	government "Republic"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		surveillance opportunistic
@@ -3963,7 +3975,8 @@
 <pre>fleet "Small Deep Security"
 	government "Deep Security"
 	names "deep"
-	fighters "deep fighter"
+	fighters
+		names "deep fighter"
 	cargo 0
 	personality
 		heroic
@@ -3997,7 +4010,8 @@
 <pre>fleet "Large Deep Security"
 	government "Deep Security"
 	names "deep"
-	fighters "deep fighter"
+	fighters
+		names "deep fighter"
 	cargo 0
 	personality
 		heroic
@@ -4087,7 +4101,8 @@
 <pre>fleet "Large Oathkeeper"
 	government "Navy (Oathkeeper)"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		heroic opportunistic
@@ -4161,7 +4176,8 @@
 <pre>fleet "Large Syndicate"
 	government "Syndicate"
 	names "syndicate capital"
-	fighters "syndicate fighter"
+	fighters
+		names "syndicate fighter"
 	cargo 2
 	personality
 		heroic
@@ -4906,6 +4922,145 @@
 	names "pirate"
 	cargo 1
 	personality
+		disables nemesis plunders harvests
+		confusion 20
+	variant 3
+		"Argosy (Blaster)"
+	variant 2
+		"Argosy (Laser)"
+	variant 2
+		"Argosy (Turret)"
+	variant 1
+		"Modified Argosy"
+	variant 1
+		"Modified Argosy (Heavy)"
+	variant 1
+		"Modified Argosy (Blaster)"
+	variant 2
+		"Clipper (Speedy)"
+	variant 1
+		"Clipper"
+		"Hawk"
+	variant 1
+		"Clipper (Speedy)"
+		"Hawk (Speedy)"
+	variant 6
+		"Hawk (Speedy)" 3
+	variant 4
+		"Hawk" 2
+	variant 4
+		"Fury" 2
+	variant 1
+		"Argosy (Blaster)"
+		"Hawk"
+	variant 1
+		"Argosy (Laser)"
+		"Hawk (Speedy)"
+	variant 1
+		"Argosy (Turret)"
+		"Hawk (Speedy)"
+	variant 1
+		"Argosy"
+		"Hawk"
+	variant 1
+		"Modified Argosy (Heavy)"
+		"Hawk (Speedy)" 2
+	variant 1
+		"Modified Argosy (Blaster)"
+		"Raven (Afterburner)" 2
+	variant 2
+		"Falcon"
+	variant 1
+		"Falcon (Heavy)"
+	variant 1
+		"Falcon (Laser)"
+	variant 5
+		"Quicksilver (Proton)" 3
+	variant 2
+		"Quicksilver" 3
+	variant 3
+		"Splinter"
+		"Quicksilver (Proton)"
+	variant 3
+		"Splinter (Laser)"
+		"Quicksilver"
+	variant 3
+		"Splinter (Proton)"
+		"Quicksilver"
+	variant 4
+		"Manta (Proton)"
+	variant 2
+		"Manta"
+	variant 2
+		"Splinter" 2
+	variant 1
+		"Splinter (Laser)" 2
+	variant 1
+		"Splinter (Proton)" 2
+	variant 2
+		"Firebird"
+	variant 1
+		"Firebird (Laser)"
+	variant 1
+		"Firebird (Plasma)"
+	variant 4
+		"Firebird"
+	variant 2
+		"Firebird (Laser)"
+	variant 2
+		"Firebird (Plasma)"
+	variant 3
+		"Firebird"
+		"Corvette"
+	variant 1
+		"Firebird (Plasma)"
+		"Corvette (Speedy)"
+	variant 2
+		"Firebird"
+		"Berserker" 2
+	variant 1
+		"Firebird (Plasma)"
+		"Fury (Missile)"
+	variant 1
+		"Firebird (Missile)"
+		"Fury"
+	variant 8
+		"Raven (Afterburner)" 2
+	variant 2
+		"Raven (Heavy)" 2
+	variant 1
+		"Headhunter (Particle)" 3
+	variant 1
+		"Fury (Heavy)" 2
+		"Firebird (Missile)"
+	variant 2
+		"Leviathan"
+		"Firebird"
+	variant 2
+		"Leviathan (Laser)"
+		"Firebird"
+	variant 2
+		"Leviathan (Heavy)"
+		"Firebird (Plasma)"
+	variant 1
+		"Berserker" 3
+	variant 8
+		"Berserker (Afterburner)" 3
+	variant 2
+		"Berserker (Afterburner)" 2
+	variant 3
+		"Scout (Speedy)" 3
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/fleets.txt | fleet "pirate explosive"</summary>
+<pre>fleet "pirate explosive"
+	government "Pirate"
+	names "pirate"
+	cargo 1
+	personality
 		nemesis plunders harvests
 		confusion 20
 	variant 3
@@ -5043,7 +5198,8 @@
 <pre>fleet "Syndicate Extremists"
 	government "Syndicate (Extremist)"
 	names "syndicate capital"
-	fighters "syndicate fighter"
+	fighters
+		names "syndicate fighter"
 	cargo 0
 	personality
 		heroic
@@ -5793,7 +5949,8 @@
 <pre>fleet "Human Wormhole Guards"
 	government "Republic that won't enter wormhole"
 	names "republic capital"
-	fighters "republic fighter"
+	fighters
+		names "republic fighter"
 	cargo 0
 	personality
 		heroic opportunistic
@@ -5820,7 +5977,7 @@
 <details>
 <summary>data/iije/iije.txt | fleet "Iije (Uninterested)"</summary>
 <pre>fleet "Iije (Uninterested)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid unconstrained uninterested mute
@@ -5866,7 +6023,7 @@
 <details>
 <summary>data/iije/iije.txt | fleet "Iije (Swarming)"</summary>
 <pre>fleet "Iije (Swarming)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid unconstrained swarming mute
@@ -5912,7 +6069,7 @@
 <details>
 <summary>data/iije/iije.txt | fleet "Iije (Surveillance)"</summary>
 <pre>fleet "Iije (Surveillance)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid unconstrained surveillance mute
@@ -6170,7 +6327,8 @@
 <pre>fleet "Korath Raid"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 1
 	personality
 		disables plunders opportunistic harvests
@@ -6189,7 +6347,8 @@
 <pre>fleet "Korath Ember Waste Raid"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 1
 	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
 	outfitters "Korath Exiles Remnant Donations"
@@ -6219,7 +6378,8 @@
 <pre>fleet "Korath Miners"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 0
 	personality
 		timid disables plunders frugal mining harvests
@@ -6235,7 +6395,8 @@
 <pre>fleet "Korath Civilian Miners"
 	government "Korath (Civilian)"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 0
 	personality
 		heroic disables frugal mining harvests coward
@@ -6259,7 +6420,8 @@
 <pre>fleet "Korath Home"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 3
 	personality
 		timid opportunistic
@@ -6284,7 +6446,8 @@
 <pre>fleet "Korath Defense"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 1
 	personality
 		disables plunders opportunistic harvests
@@ -6342,7 +6505,8 @@
 <pre>fleet "Korath Surveillance"
 	government "Korath"
 	names "korath"
-	fighters "korath probes"
+	fighters
+		names "korath probes"
 	cargo 1
 	personality
 		disables plunders opportunistic harvests surveillance
@@ -6358,7 +6522,8 @@
 <pre>fleet "Korath Large Raid"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 1
 	personality
 		disables plunders opportunistic harvests
@@ -6381,7 +6546,8 @@
 <pre>fleet "Korath Ember Waste Large Raid"
 	government "Korath"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 1
 	commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
 	outfitters "Korath Exiles Remnant Donations"
@@ -6427,7 +6593,8 @@
 <pre>fleet "Korath Civilian Large"
 	government "Korath (Civilian)"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 3
 	personality
 		frugal opportunistic disables forbearing
@@ -6473,7 +6640,8 @@
 <pre>fleet "Korsmanath A'awojs"
 	government "Korath (Civilian)"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 3
 	variant 21
 		"Korsmanath A'awoj"
@@ -6501,7 +6669,8 @@
 <pre>fleet "Korath Rescue"
 	government "Korath (Civilian)"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	commodities Medical
 	personality
 		timid disables coward surveillance harvests opportunistic merciful
@@ -6517,7 +6686,8 @@
 <pre>fleet "Kor Efret Home"
 	government "Kor Efret"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 3
 	personality
 		timid
@@ -6536,7 +6706,8 @@
 <pre>fleet "Kor Efret Miners"
 	government "Kor Efret"
 	names "korath"
-	fighters "korath"
+	fighters
+		names "korath"
 	cargo 0
 	personality
 		timid disables plunders frugal mining harvests
@@ -6551,7 +6722,8 @@
 <pre>fleet "Small Kor Sestor"
 	government "Kor Sestor"
 	names "kor sestor"
-	fighters "kor sestor fighter"
+	fighters
+		names "kor sestor fighter"
 	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
 	variant 5
 		"Met Par Tek 53" 3
@@ -6614,7 +6786,8 @@
 <pre>fleet "Large Kor Sestor"
 	government "Kor Sestor"
 	names "kor sestor"
-	fighters "kor sestor fighter"
+	fighters
+		names "kor sestor fighter"
 	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
 	variant 8
 		"Kar Ik Vot 349"
@@ -6731,7 +6904,8 @@
 <pre>fleet "Small Kor Mereti"
 	government "Kor Mereti"
 	names "kor mereti"
-	fighters "kor mereti"
+	fighters
+		names "kor mereti"
 	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
 	personality
 		opportunistic
@@ -6787,7 +6961,8 @@
 <pre>fleet "Large Kor Mereti"
 	government "Kor Mereti"
 	names "kor mereti"
-	fighters "kor mereti"
+	fighters
+		names "kor mereti"
 	commodities Plastic Equipment Industrial Electronics "Heavy Metals"
 	personality
 		opportunistic
@@ -7482,7 +7657,7 @@
 <details>
 <summary>data/vyrmeid/vyrmeid.txt | fleet "Vyrmeid (Plankton)"</summary>
 <pre>fleet "Vyrmeid (Plankton)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid mute swarming surveillance unconstrained
@@ -7503,7 +7678,7 @@
 <details>
 <summary>data/vyrmeid/vyrmeid.txt | fleet "Vyrmeid (Boomerang)"</summary>
 <pre>fleet "Vyrmeid (Boomerang)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid mute
@@ -7520,7 +7695,7 @@
 <details>
 <summary>data/vyrmeid/vyrmeid.txt | fleet "Vyrmeid (Cephalopod)"</summary>
 <pre>fleet "Vyrmeid (Cephalopod)"
-	government "Indigenous Lifeform"
+	government "Indigenous Lifeform (Acheron)"
 	cargo 0
 	personality
 		timid mute pacifist

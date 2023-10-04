@@ -25,6 +25,9 @@
 		"A125 Atomic Steering"
 		"A120 Atomic Thruster"
 		"Ionic Afterburner"
+	gun
+	gun "Electron Beam"
+	gun "Electron Beam"
 </pre>
 </details>
 
@@ -581,24 +584,24 @@
 	engine -45 212
 	engine -21 220
 		zoom 0.8
+	gun 0 -223 "Prototype Fusion Cannon"
 	gun -59 14 "Typhoon Pod"
 	gun 59 14 "Typhoon Pod"
 	gun -72 25 "Torpedo Pod"
 	gun 72 26 "Torpedo Pod"
 	gun -84 38 "Torpedo Pod"
 	gun 84 38 "Torpedo Pod"
-	gun 0 -223 "Prototype Fusion Cannon"
 	turret -37 -11 "Electron Turret"
 	turret 37 -11 "Electron Turret"
+	turret 0 10 "Wanderer Anti-Missile"
 	turret -37 31 "Quad Blaster Turret"
 	turret 37 31 "Quad Blaster Turret"
 	turret -39 73 "Quad Blaster Turret"
 	turret 39 73 "Quad Blaster Turret"
-	turret -23 108 "Heavy Laser Turret"
-	turret 23 108 "Heavy Laser Turret"
 	turret -75 108 "Heavy Laser Turret"
 	turret 75 108 "Heavy Laser Turret"
-	turret 0 10 "Wanderer Anti-Missile"
+	turret -23 108 "Heavy Laser Turret"
+	turret 23 108 "Heavy Laser Turret"
 	explode "tiny explosion" 20
 	explode "small explosion" 45
 	explode "medium explosion" 50
@@ -1939,12 +1942,12 @@
 		"Hyperdrive"
 	engine -11.5 132.5
 	engine 11.5 132.5
+	gun -24.5 -129 "Swarm Pod"
+	gun 24.5 -129 "Swarm Pod"
 	gun -5 -114 "Mandible Cannon"
 	gun 5 -114 "Mandible Cannon"
 	gun -14 -105.5 "Mandible Cannon"
 	gun 14 -105.5 "Mandible Cannon"
-	gun -24.5 -129 "Swarm Pod"
-	gun 24.5 -129 "Swarm Pod"
 	gun -54.5 -20 "Swarm Pod"
 	gun 54.5 -20 "Swarm Pod"
 	gun -62.5 -9.5 "Swarm Pod"
@@ -2008,13 +2011,13 @@
 	engine 75 155
 	engine -22.5 183.5
 	engine 22.5 183.5
-	gun 0 -143 "Thorax Cannon"
-	gun -14.5 -153 "Locust Blaster"
-	gun 14.5 -153 "Locust Blaster"
-	gun -24 -157.5 "Locust Blaster"
-	gun 24 -157.5 "Locust Blaster"
 	gun -33.5 -175 "Locust Blaster"
 	gun 33.5 -175 "Locust Blaster"
+	gun -24 -157.5 "Locust Blaster"
+	gun 24 -157.5 "Locust Blaster"
+	gun -14.5 -153 "Locust Blaster"
+	gun 14.5 -153 "Locust Blaster"
+	gun 0 -143 "Thorax Cannon"
 	gun -67 -26.5 "Swarm Pod"
 	gun 67 -26.5 "Swarm Pod"
 	gun -75 12.5 "Swarm Pod"
@@ -2341,6 +2344,50 @@
 		"Small Reverse Module" 3
 		"Small Steering Module"
 		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition ships.txt | ship "Arach Spindle" "Arach Spindle (Plasma)"</summary>
+<pre>ship "Arach Spindle" "Arach Spindle (Plasma)"
+	outfits
+		"Hyperdrive"
+		"Outfits Expansion" 3
+		"Small Shield Module"
+		"Small Repair Module" 2
+		"Large Repair Module"
+		"Cooling Module" 5
+		"Small Thrust Module" 3
+		"Large Thrust Module" 2
+		"Small Steering Module"
+		"Small Battery Module"
+		"Large Battery Module"
+		"Large Steering Module" 2
+		"Fusion Reactor"
+		"Plasma Turret" 2
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition ships.txt | ship "Arach Spindle" "Arach Spindle (Jump Drive)"</summary>
+<pre>ship "Arach Spindle" "Arach Spindle (Jump Drive)"
+	outfits
+		"Large Collector Module" 3
+		"Small Collector Module" 2
+		"Large Battery Module"
+		"Large Shield Module"
+		"Small Shield Module"
+		"Large Repair Module"
+		"Small Repair Module" 2
+		"Cooling Module" 2
+		"Fuel Module" 4
+		"Large Thrust Module" 2
+		"Small Thrust Module" 3
+		"Large Steering Module" 2
+		"Small Steering Module"
+		"Jump Drive"
 </pre>
 </details>
 
@@ -3367,6 +3414,31 @@
 
 
 <details>
+<summary>data/coalition/coalition ships.txt | ship "Heliarch Punisher" "Heliarch Punisher (Fuel)"</summary>
+<pre>ship "Heliarch Punisher" "Heliarch Punisher (Fuel)"
+	outfits
+		"Finisher Pod" 2
+		"Finisher Torpedo" 80
+		"Bombardment Turret" 4
+		"Large Reactor Module" 2
+		"Large Battery Module"
+		"Overcharged Shield Module" 2
+		"Overclocked Repair Module" 2
+		"Cooling Module" 4
+		"Scanning Module" 4
+		"Fuel Module" 4
+		"Enforcer Riot Staff" 160
+		"Enforcer Confrontation Gear" 150
+		"Large Thrust Module" 2
+		"Small Thrust Module" 2
+		"Large Steering Module" 2
+		"Small Steering Module" 2
+		"Jump Drive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/coalition/coalition ships.txt | ship "Heliarch Punisher" "Heliarch Punisher (Interdicting)"</summary>
 <pre>ship "Heliarch Punisher" "Heliarch Punisher (Interdicting)"
 	outfits
@@ -3909,6 +3981,27 @@
 
 
 <details>
+<summary>data/coalition/coalition ships.txt | ship "Kimek Thistle" "Kimek Thistle (Torpedoes)"</summary>
+<pre>ship "Kimek Thistle" "Kimek Thistle (Torpedoes)"
+	outfits
+		"Hyperdrive"
+		"Small Shield Module" 2
+		"Small Repair Module" 2
+		"Cooling Module" 2
+		"Small Thrust Module" 2
+		"Small Steering Module"
+		"Large Thrust Module"
+		"Small Battery Module"
+		"Large Steering Module"
+		"Heavy Anti-Missile Turret"
+		"Torpedo Launcher" 2
+		Torpedo 60
+		"Breeder Reactor"
+</pre>
+</details>
+
+
+<details>
 <summary>data/coalition/coalition ships.txt | ship "Kimek Thorn"</summary>
 <pre>ship "Kimek Thorn"
 	sprite "ship/kimek thorn"
@@ -4115,6 +4208,27 @@
 		"Small Reverse Module" 3
 		"Small Steering Module"
 		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition ships.txt | ship "Saryd Sojourner" "Saryd Sojourner (Bombardments)"</summary>
+<pre>ship "Saryd Sojourner" "Saryd Sojourner (Bombardments)"
+	outfits
+		"Hyperdrive"
+		"Bombardment Turret" 3
+		"Ion Rain Gun" 2
+		"Large Reactor Module"
+		"Small Battery Module"
+		"Large Battery Module" 2
+		"Cooling Module" 3
+		"Small Thrust Module" 3
+		"Large Thrust Module" 2
+		"Small Steering Module" 2
+		"Large Steering Module" 2
+		"Overclocked Repair Module"
+		"Overcharged Shield Module"
 </pre>
 </details>
 
@@ -4570,11 +4684,11 @@
 		"jump drive" 1
 	outfits
 		Mouthparts? 5
-	gun 3 -83.5 Mouthparts?
-	gun -3 -83.5 Mouthparts?
-	gun 9 -104 Mouthparts?
 	gun -9 -104 Mouthparts?
+	gun 9 -104 Mouthparts?
 	gun 0 -84 Mouthparts?
+	gun -3 -83.5 Mouthparts?
+	gun 3 -83.5 Mouthparts?
 	leak "blood" 40 40
 	explode "blood" 40
 	"final explode" "void sprite adult death"
@@ -4660,7 +4774,7 @@
 		"gaslining" 1
 		"inscrutable" 1
 		"atmospheric scan" 1000
-		"shield resistance" 1
+		"ion resistance" 1
 	outfits
 		"Absorption Organ" 1
 	turret 0 0 "Absorption Organ"
@@ -6424,7 +6538,7 @@
 	turret "Chameleon Anti-Missile"
 	turret "Chameleon Anti-Missile"
 	turret "Electron Turret"
-	description "This modified Geocoris has identical cargo capacity, but is the result of an alien technology being merged with a hybrid Human-Hai operating system. It has additional shield emitters in a geodesic pattern over its main cargo wings, and some kind of integrated system core which seems to have something of a life of its own. As such, some systems are built-in and unable to be removed. Nevertheless it is significantly more survivable than a traditional Geocoris and at least as useful."
+	description "This modified Geocoris has identical cargo capacity, but is the result of an alien technology being merged with a hybrid Human-Hai operating system. It has additional shield emitters in a geodesic pattern over its main cargo wings, and some kind of integrated system core which seems to have something of a life of its own. As such, some systems are built-in and unable to be removed. Nevertheless, it is significantly more survivable than a traditional Geocoris and at least as useful."
 </pre>
 </details>
 
@@ -6810,7 +6924,7 @@
 	gun 0 -27 "Railgun"
 	leak "leak" 60 50
 	explode "tiny explosion" 15
-	description `This combat drone is built to amplify the strength of any combat force for as few credits as possible. It was designed in conjunction with the tactical recoil of the Railgun to allow it to kite its targets, prolonging its combat efficacy while it supports its allies with debilitating ion damage.`
+	description `This combat drone is built to amplify the strength of any combat force for as few credits as possible. It was designed in conjunction with the tactical recoil of the Skipper Railgun to allow it to kite its targets, prolonging its combat efficacy while it supports its allies with debilitating ion damage.`
 	description "	Drones do not come equipped with a hyperdrive. You cannot carry a drone unless you have a ship in your fleet with a drone bay."
 </pre>
 </details>
@@ -6871,11 +6985,11 @@
 	engine -100 39
 	gun 24 -118 "Pulse Cannon"
 	gun -24 -118 "Pulse Cannon"
+	turret 0 -89 "Bullfrog Anti-Missile"
 	turret 110 -23 "Pulse Turret"
 	turret -110 -23 "Pulse Turret"
 	turret 35 94 "Bullfrog Anti-Missile"
 	turret -35 94 "Bullfrog Anti-Missile"
-	turret 0 -89 "Bullfrog Anti-Missile"
 	leak "leak" 40 50
 	leak "flame" 40 80
 	leak "big leak" 70 30
@@ -6910,6 +7024,11 @@
 		`"Biroo" Atomic Thruster`
 		`"Bondir" Atomic Steering`
 		Hyperdrive
+	turret "Chameleon Anti-Missile"
+	turret "Pulse Turret"
+	turret "Pulse Turret"
+	turret "Bullfrog Anti-Missile"
+	turret "Bullfrog Anti-Missile"
 </pre>
 </details>
 
@@ -7358,7 +7477,7 @@
 	explode "large explosion" 40
 	explode "huge explosion" 10
 	"final explode" "final explosion large"
-	description "The Hai upgraded their original Pond Strider after acquiring hull repair technology through alien diplomacy. These improvements have greatly reduced casualties in their conflict with the Unfettered, since the light Pond Striders become vulnerable as they collect damaged drones. Besides enabling the ship to repair damaged drones, the Hai have cleverly innovated the Railgun to make the Pond Strider and Fleas into very efficient combat support for their fleets."
+	description "The Hai upgraded their original Pond Strider after acquiring hull repair technology through alien diplomacy. These improvements have greatly reduced casualties in their conflict with the Unfettered, since the light Pond Striders become vulnerable as they collect damaged drones. Besides enabling the ship to repair damaged drones, the Hai have cleverly innovated the Skipper Railgun to make the Pond Strider and Fleas into very efficient combat support for their fleets."
 </pre>
 </details>
 
@@ -7524,7 +7643,7 @@
 	explode "medium explosion" 30
 	explode "large explosion" 14
 	"final explode" "final explosion medium"
-	description "The Sea Scorpion was designed several decades ago to serve as a mobile platform to launch Trackers. However, it is only recently that the Unfettered have been able to mass produce them. While individually vulnerable, the reduced cost of manufacturing compared to Shield Beetles allow the materially inferior Unfettered to gain a numerical advantage against their brethren."
+	description "The Sea Scorpion was designed several decades ago to serve as a mobile platform to launch Trackers. However, it is only recently that the Unfettered have been able to mass-produce them. While individually vulnerable, the reduced cost of manufacturing compared to Shield Beetles allow the materially inferior Unfettered to gain a numerical advantage against their brethren."
 </pre>
 </details>
 
@@ -8214,12 +8333,12 @@
 	"steering engine" 43 131
 		zoom 0.45
 		left
-	gun -42.5 -53.5 "Tripulse Shredder"
-	gun 43.5 -54.5 "Tripulse Shredder"
-	gun -23 -102.5
-	gun 24.5 -102.5
 	gun 12.5 -128
 	gun -10 -128
+	gun -23 -102.5
+	gun 24.5 -102.5
+	gun -42.5 -53.5 "Tripulse Shredder"
+	gun 43.5 -54.5 "Tripulse Shredder"
 	turret 0.5 -25.5 "Warder Anti-Missile"
 	turret -47.5 11.5
 	turret 48.5 11.5
@@ -8465,7 +8584,7 @@
 		"drag" 0.9
 		"heat dissipation" .7
 		"outfit space" 92
-		"weapon capacity" 19
+		"weapon capacity" 23
 		"engine capacity" 30
 		weapon
 			"blast radius" 12
@@ -8685,10 +8804,10 @@
 	turret "Heavy Laser Turret"
 	turret "Heavy Laser Turret"
 	turret "Heavy Laser Turret"
-	turret "Modified Blaster Turret"
-	turret "Modified Blaster Turret"
 	turret "Heavy Laser Turret"
 	turret "Heavy Laser Turret"
+	turret "Modified Blaster Turret"
+	turret "Modified Blaster Turret"
 </pre>
 </details>
 
@@ -8733,6 +8852,7 @@
 <details>
 <summary>data/human/human missions.txt | ship "Hallucination"</summary>
 <pre>ship "Hallucination"
+	noun "flower"
 	sprite "ship/hallucination"
 		"frame rate" 1
 		"random start frame"
@@ -9281,20 +9401,20 @@
 	sprite "ship/mfalcone"
 	thumbnail "thumbnail/mfalcone"
 	add attributes
-		"engine capacity" 55
+		"engine capacity" 25
 	outfits
 		"Electron Beam" 4
-		"Blaster Turret" 2
+		"Quad Blaster Turret" 2
 		"Modified Blaster Turret" 2
 		"Fusion Reactor"
 		"LP144a Battery Pack"
-		"D41-HY Shield Generator"
+		"D94-YV Shield Generator"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
 		"Laser Rifle" 80
 		"A860 Atomic Thruster"
-		"A865 Atomic Steering"
+		"A525 Atomic Steering"
 		"Hyperdrive"
 	engine -23.5 140 .7
 	engine 0 151
@@ -9305,8 +9425,8 @@
 	gun 19 -76.5 "Electron Beam"
 	turret -16 -29 "Modified Blaster Turret"
 	turret 16 -29 "Modified Blaster Turret"
-	turret -50 39.5 "Blaster Turret"
-	turret 50 39.5 "Blaster Turret"
+	turret -50 39.5 "Quad Blaster Turret"
+	turret 50 39.5 "Quad Blaster Turret"
 	description "Whoever modified this Falcon clearly valued speed above all else. Major sections of the hull have been reconfigured to accommodate the largest possible engines. If hot-rodding across the galaxy in a 1000-ton warship that handles like a Flivver is your dream, look no further."
 </pre>
 </details>
@@ -9534,19 +9654,20 @@
 	sprite "ship/mleviathane"
 	thumbnail "thumbnail/mleviathane"
 	add attributes
-		"engine capacity" 80
+		"engine capacity" 40
 	outfits
 		"Electron Beam" 4
 		"Quad Blaster Turret" 4
 		"Fusion Reactor"
 		"LP144a Battery Pack"
 		"D94-YV Shield Generator"
+		"D67-TM Shield Generator"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion" 2
 		"Laser Rifle" 69
-		"A860 Atomic Thruster"
+		"A520 Atomic Thruster"
 		"A865 Atomic Steering"
 		"Hyperdrive"
 	engine -41 118.5 0.6
@@ -9634,12 +9755,12 @@
 		"Hyperdrive"
 	engine -33 40
 	engine 33 40
+	gun -68.5 -33 "Meteor Missile Launcher"
+	gun 68.5 -33 "Meteor Missile Launcher"
 	gun -20 -31 "Plasma Cannon"
 	gun 20 -31 "Plasma Cannon"
 	gun -26.5 -30 "Plasma Cannon"
 	gun 26.5 -30 "Plasma Cannon"
-	gun -68.5 -33 "Meteor Missile Launcher"
-	gun 68.5 -33 "Meteor Missile Launcher"
 	turret 0 -28 "Quad Blaster Turret"
 	explode "tiny explosion" 10
 	explode "small explosion" 20
@@ -9717,7 +9838,7 @@
 	gun -20 -33 "Particle Cannon"
 	gun 20 -33 "Particle Cannon"
 	turret 0 -28.5 "Heavy Anti-Missile Turret"
-	description `This Manta has undergone extensive modification, featuring extra gun ports, hull plating, and shield emitters. Whoever modified it seems to have forgotten to include dedicated space for the power systems, as they're crammed in and around everything else like an afterthought. If its dry tonnage were any higher, it would be classified as a heavy warship.`
+	description `This Manta has undergone extensive modification, featuring extra hull plating, shield emitters, weapon space, and even a turret mount. Whoever modified it seems to have forgotten to include dedicated space for the power systems, as they're crammed in and around everything else like an afterthought. If its dry tonnage were any higher, it would be classified as a heavy warship.`
 </pre>
 </details>
 
@@ -10518,7 +10639,7 @@
 		"drag" .8
 		"heat dissipation" .78
 		"outfit space" 85
-		"weapon capacity" 24
+		"weapon capacity" 28
 		"engine capacity" 22
 		weapon
 			"blast radius" 12
@@ -10540,28 +10661,7 @@
 	explode "tiny explosion" 15
 	explode "small explosion" 5
 	description `Though the Syndicate doesn't build fighter carriers, it is testing the waters with the Barb, a cheap and flexible carrier-launched craft featuring newly-developed miniaturized ion engines. The design philosophy of the Barb seems to have been "uglier than the Protector," and as you look at the cockpit nestled between the massive gun port and turret mount, you wonder where the power systems are supposed to go. Though an awkward-looking ship, it seems flexible enough to become a dangerous addition to any fleet with carriers.`
-	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/ships.txt | ship "Barb" "Barb (Proton)"</summary>
-<pre>ship "Barb" "Barb (Proton)"
-	sprite "ship/barbp"
-	thumbnail "thumbnail/barbp"
-	add attributes
-		"bunks" -1
-		"weapon capacity" 4
-	outfits
-		"Proton Gun"
-		"nGVF-AA Fuel Cell"
-		"Supercapacitor"
-		"D14-RN Shield Generator"
-		"X1050 Ion Engines"
-	gun -7.5 -24.5 "Proton Gun"
-	leak "leak" 60 50
-	description `The Barb's commercial success spurred demand for a variant equipped with a Proton Gun. Syndicated Systems had to remove the turret mounting hardware to fit the powerful cannon, but the result is a level of short-range firepower that is unheard-of for a craft its size.`
+	description "	In order to be capable of fitting a Proton Gun while still maintaining a turret mount, Syndicated Systems had to remove various life support systems, requiring that the pilot wear a pressurized suit rather than having the cabin be fully pressurized. Although it makes piloting a Barb an uncomfortable experience, the result is a level of short-range firepower that is unheard of for a craft its size."
 	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
 </pre>
 </details>
@@ -10611,13 +10711,13 @@
 		"Hyperdrive"
 	engine 31.5 89.5
 	engine -31.5 89.5
-	gun 52.5 -0.5 "Heavy Rocket Launcher"
-	gun 52.5 -0.5 "Plasma Cannon"
 	gun -52.5 -0.5 "Heavy Rocket Launcher"
 	gun -52.5 -0.5 "Plasma Cannon"
-	turret 35.5 29.5 "Blaster Turret"
-	turret -35.5 29.5 "Blaster Turret"
+	gun 52.5 -0.5 "Heavy Rocket Launcher"
+	gun 52.5 -0.5 "Plasma Cannon"
 	turret 0 0.5 "Anti-Missile Turret"
+	turret -35.5 29.5 "Blaster Turret"
+	turret 35.5 29.5 "Blaster Turret"
 	leak "leak" 40 50
 	leak "flame" 40 80
 	leak "big leak" 70 30
@@ -10990,13 +11090,13 @@
 		"Hyperdrive"
 	engine 31.5 89.5
 	engine -31.5 89.5
-	gun 52.5 -0.5 "Heavy Rocket Launcher"
-	gun 52.5 -0.5 "Plasma Cannon"
 	gun -52.5 -0.5 "Heavy Rocket Launcher"
 	gun -52.5 -0.5 "Plasma Cannon"
-	turret 35.5 29.5 "Quad Blaster Turret"
-	turret -35.5 29.5 "Quad Blaster Turret"
+	gun 52.5 -0.5 "Heavy Rocket Launcher"
+	gun 52.5 -0.5 "Plasma Cannon"
 	turret 0 0.5 "Heavy Anti-Missile Turret"
+	turret -35.5 29.5 "Quad Blaster Turret"
+	turret 35.5 29.5 "Quad Blaster Turret"
 	leak "leak" 40 50
 	leak "flame" 40 80
 	leak "big leak" 70 30
@@ -11565,7 +11665,7 @@
 		"heat dissipation" .9
 		"outfit space" 90
 		"weapon capacity" 20
-		"engine capacity" 30
+		"engine capacity" 35
 		weapon
 			"blast radius" 12
 			"shield damage" 120
@@ -11573,19 +11673,19 @@
 			"hit force" 180
 	outfits
 		"Beam Laser"
-		"Javelin Mini Pod"
-		"Javelin" 40
+		"Javelin Mini Pod" 2
+		"Javelin" 80
 		"nGVF-AA Fuel Cell"
 		"Supercapacitor"
 		"D14-RN Shield Generator"
 		"Small Radar Jammer"
-		"X1700 Ion Thruster"
+		"A120 Atomic Thruster"
 		"X1200 Ion Steering"
 	engine -8 34
 	engine 8 34
-	gun -11 -21 "Beam Laser"
+	gun 0 -35 "Beam Laser"
+	gun -11 -21 "Javelin Mini Pod"
 	gun 11 -21 "Javelin Mini Pod"
-	gun 0 -35
 	leak "leak" 60 50
 	explode "tiny explosion" 15
 	explode "small explosion" 5
@@ -11801,8 +11901,9 @@
 			"hit force" 180
 	outfits
 		"Beam Laser"
-		"Javelin Mini Pod"
-		"Javelin" 40
+		"Javelin Mini Pod" 2
+		"Javelin Storage Crate"
+		"Javelin" 180
 		"nGVF-BB Fuel Cell"
 		"LP036a Battery Pack"
 		"D14-RN Shield Generator"
@@ -11810,9 +11911,9 @@
 		"Chipmunk Plasma Steering"
 	engine -5 32
 	engine 5 32
-	gun -7 -14 "Beam Laser"
+	gun 0 -31.5 "Beam Laser"
+	gun -7 -14 "Javelin Mini Pod"
 	gun 7 -14 "Javelin Mini Pod"
-	gun 0 -31.5
 	leak "flame" 60 80
 	explode "tiny explosion" 15
 	explode "small explosion" 5
@@ -12008,14 +12109,13 @@
 			"hit force" 1500
 	outfits
 		"Particle Cannon" 2
-		"Torpedo Launcher"
-		"Sidewinder Missile Launcher"
+		"Torpedo Launcher" 2
 		"Torpedo" 60
-		"Sidewinder Missile" 45
 		"Blaster Turret" 2
 		"Anti-Missile Turret"
 		"NT-200 Nucleovoltaic"
-		"LP144a Battery Pack"
+		"LP072a Battery Pack"
+		"LP036a Battery Pack"
 		"D41-HY Shield Generator"
 		"Large Radar Jammer"
 		"Laser Rifle" 5
@@ -12029,7 +12129,7 @@
 	gun -11 -84.5 "Particle Cannon"
 	gun 11 -84.5 "Particle Cannon"
 	gun -11 -84.5 "Torpedo Launcher"
-	gun 11 -84.5 "Sidewinder Missile Launcher"
+	gun 11 -84.5 "Torpedo Launcher"
 	turret 0 -37.5 "Anti-Missile Turret"
 	turret -15.5 -12.5 "Blaster Turret"
 	turret 15.5 -12.5 "Blaster Turret"
@@ -12507,19 +12607,20 @@
 			"hit force" 180
 	outfits
 		"Energy Blaster"
-		"Sidewinder Missile Pod"
-		"Sidewinder Missile" 4
+		"Sidewinder Missile Pod" 2
+		"Sidewinder Missile Rack"
+		"Sidewinder Missile" 31
 		"nGVF-AA Fuel Cell"
-		"LP036a Battery Pack"
+		"Supercapacitor" 4
 		"D14-RN Shield Generator"
 		"Small Radar Jammer" 2
 		"X1700 Ion Thruster"
 		"X1200 Ion Steering"
 	engine -14.5 30.5 0.5
 	engine 14.5 30.5 0.5
-	gun -13.5 -6.5 "Energy Blaster"
+	gun 0 -34 "Energy Blaster"
+	gun -13.5 -6.5 "Sidewinder Missile Pod"
 	gun 13.5 -6.5 "Sidewinder Missile Pod"
-	gun 0 -34
 	explode "tiny explosion" 15
 	explode "small explosion" 5
 	description "The Lance is the primary fighter used by the Republic Navy. As with all fighters, it is weak by itself but very effective as part of a larger squadron."
@@ -12642,12 +12743,12 @@
 	gun 47.5 -57.5
 	turret -31 -50 "Anti-Missile Turret"
 	turret 31 -50 "Anti-Missile Turret"
+	turret -14.5 0 "Quad Blaster Turret"
+	turret 14.5 0 "Quad Blaster Turret"
 	turret -47.5 33.5 "Proton Turret"
 	turret 47.5 33.5 "Proton Turret"
 	turret -22 66.5 "Anti-Missile Turret"
 	turret 22 66.5 "Anti-Missile Turret"
-	turret -14.5 0 "Quad Blaster Turret"
-	turret 14.5 0 "Quad Blaster Turret"
 	leak "leak" 30 50
 	leak "flame" 30 80
 	leak "big leak" 50 30
@@ -12700,12 +12801,12 @@
 		"Hyperdrive"
 	engine -33 40
 	engine 33 40
+	gun -68.5 -33 "Torpedo Pod"
+	gun 68.5 -33 "Torpedo Pod"
 	gun -20 -31 "Particle Cannon"
 	gun 20 -31 "Particle Cannon"
 	gun -26.5 -30 "Particle Cannon"
 	gun 26.5 -30 "Particle Cannon"
-	gun -68.5 -33 "Torpedo Pod"
-	gun 68.5 -33 "Torpedo Pod"
 	leak "leak" 60 50
 	leak "flame" 40 80
 	explode "tiny explosion" 10
@@ -13007,10 +13108,10 @@
 	engine 42.5 62.5 .8
 	engine -16.5 105 .6
 	engine 16.5 105 .6
-	gun -25 -49.5 "Plasma Cannon"
-	gun 25 -49.5 "Plasma Cannon"
 	gun -9.5 -95.5 "Plasma Cannon"
 	gun 9.5 -95.5 "Plasma Cannon"
+	gun -25 -49.5 "Plasma Cannon"
+	gun 25 -49.5 "Plasma Cannon"
 	turret -15.5 -12 "Quad Blaster Turret"
 	turret 15.5 -12 "Heavy Anti-Missile Turret"
 	leak "leak" 40 50
@@ -13070,14 +13171,14 @@
 	engine 12 122.5
 	gun -17.5 -101 "Meteor Missile Launcher"
 	gun 17.5 -101 "Meteor Missile Launcher"
-	turret 0 -28.5 "Heavy Anti-Missile Turret"
 	turret -48.5 -48.5 "Quad Blaster Turret"
 	turret 48.5 -48.5 "Quad Blaster Turret"
+	turret 0 -28.5 "Heavy Anti-Missile Turret"
 	turret -68.5 0 "Quad Blaster Turret"
 	turret 68.5 0 "Quad Blaster Turret"
+	turret 0 30 "Anti-Missile Turret"
 	turret -48.5 48.5 "Quad Blaster Turret"
 	turret 48.5 48.5 "Quad Blaster Turret"
-	turret 0 30 "Anti-Missile Turret"
 	leak "leak" 60 50
 	leak "flame" 20 80
 	explode "tiny explosion" 18
@@ -14215,7 +14316,6 @@
 		"Cooling Ducts"
 		"Outfits Expansion" 2
 		"S-970 Regenerator" 5
-		"Quantum Keystone"
 		"Armageddon Core"
 		"LP288a Battery Pack"
 		"A520 Atomic Thruster"
@@ -14373,6 +14473,19 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Barb" "Barb (Proton)"</summary>
+<pre>ship "Barb" "Barb (Proton)"
+	outfits
+		"Proton Gun"
+		"nGVF-AA Fuel Cell"
+		"Supercapacitor"
+		"D14-RN Shield Generator"
+		"X1050 Ion Engines"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Barb" "Barb (Gatling)"</summary>
 <pre>ship "Barb" "Barb (Gatling)"
 	outfits
@@ -14453,6 +14566,10 @@
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
+	gun "Heavy Rocket Launcher"
+	gun "Plasma Cannon"
+	gun "Heavy Rocket Launcher"
+	gun "Plasma Cannon"
 </pre>
 </details>
 
@@ -14678,6 +14795,26 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Bounder" "Bounder (Hai Trafficker)"</summary>
+<pre>ship "Bounder" "Bounder (Hai Trafficker)"
+	outfits
+		"A255 Atomic Steering"
+		"A370 Atomic Thruster"
+		"Fuel Pod"
+		"Hai Fissure Batteries"
+		"Hai Corundum Regenerator"
+		"Water Coolant System"
+		"NT-200 Nucleovoltaic"
+		"Ramscoop"
+		"Scram Drive"
+		"Brig"
+		"Outfits Expansion"
+		"Pulse Rifle" 7
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Bulk Freighter" "Bulk Freighter (Blaster)"</summary>
 <pre>ship "Bulk Freighter" "Bulk Freighter (Blaster)"
 	outfits
@@ -14837,9 +14974,9 @@
 	gun "Plasma Cannon"
 	gun "Torpedo Launcher"
 	gun "Plasma Cannon"
-	turret "Anti-Missile Turret"
-	turret "Anti-Missile Turret"
 	turret "Heavy Laser Turret"
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
 </pre>
 </details>
 
@@ -15474,7 +15611,6 @@
 		"Catalytic Ramscoop"
 		"Fuel Pod" 3
 		"Jump Drive"
-		"Quantum Keystone"
 		"S-970 Regenerator" 3
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
@@ -15567,8 +15703,8 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Dreadnought" "Dreadnought (Plasma Jump Keystone)"</summary>
-<pre>ship "Dreadnought" "Dreadnought (Plasma Jump Keystone)"
+<summary>data/human/variants.txt | ship "Dreadnought" "Dreadnought (Plasma Jump)"</summary>
+<pre>ship "Dreadnought" "Dreadnought (Plasma Jump)"
 	outfits
 		"Heavy Anti-Missile Turret" 2
 		"Plasma Turret" 3
@@ -15582,7 +15718,6 @@
 		"A525 Atomic Steering"
 		"Laser Rifle" 25
 		"LP144a Battery Pack"
-		"Quantum Keystone"
 		"Fuel Pod" 2
 		"Catalytic Ramscoop"
 </pre>
@@ -16410,6 +16545,9 @@
 		"D14-RN Shield Generator"
 		"X1700 Ion Thruster"
 		"X1200 Ion Steering"
+	gun
+	gun "Gatling Gun"
+	gun "Gatling Gun"
 </pre>
 </details>
 
@@ -16579,12 +16717,12 @@
 		"A375 Atomic Steering"
 		"Hyperdrive"
 		"Ionic Afterburner"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
 	gun "Sidewinder Missile Launcher"
 	gun
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
 </pre>
 </details>
 
@@ -16603,12 +16741,12 @@
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
 	gun "Nuclear Missile"
 	gun "Nuclear Missile"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
+	gun "Particle Cannon"
 </pre>
 </details>
 
@@ -16834,6 +16972,28 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Mule" "Mule (Hai Trafficker)"</summary>
+<pre>ship "Mule" "Mule (Hai Trafficker)"
+	outfits
+		`"Basrem" Reverse Thruster`
+		`"Bondir" Atomic Thruster`
+		"A375 Atomic Steering"
+		"Boulder Reactor"
+		Brig
+		"Chameleon Anti-Missile" 4
+		"Fuel Pod" 3
+		"Hai Chasm Batteries"
+		"Hai Diamond Regenerator"
+		"Liquid Nitrogen Cooler"
+		"Pulse Rifle" 10
+		Ramscoop
+		"Scram Drive"
+		"Security Station"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Mule" "Mule (Hai Weapons)"</summary>
 <pre>ship "Mule" "Mule (Hai Weapons)"
 	outfits
@@ -17050,14 +17210,14 @@
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
-	turret
-	turret "Heavy Laser Turret"
-	turret "Heavy Laser Turret"
-	turret "Anti-Missile Turret"
-	turret "Anti-Missile Turret"
 	turret "Heavy Laser Turret"
 	turret "Heavy Laser Turret"
 	turret
+	turret "Anti-Missile Turret"
+	turret "Anti-Missile Turret"
+	turret
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
 </pre>
 </details>
 
@@ -17079,14 +17239,14 @@
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
-	turret
-	turret "Proton Turret"
-	turret "Proton Turret"
-	turret "Heavy Anti-Missile Turret"
-	turret "Heavy Anti-Missile Turret"
 	turret "Proton Turret"
 	turret "Proton Turret"
 	turret
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret
+	turret "Proton Turret"
+	turret "Proton Turret"
 </pre>
 </details>
 
@@ -17502,6 +17662,28 @@
 		"A375 Atomic Steering"
 		"Luxury Accommodations"
 		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Star Queen" "Star Queen (Hai Trafficker)"</summary>
+<pre>ship "Star Queen" "Star Queen (Hai Trafficker)"
+	outfits
+		`"Biroo" Atomic Steering`
+		`"Biroo" Atomic Thruster`
+		"AR120 Reverse Thruster"
+		"Breeder Reactor"
+		Brig
+		"Fuel Pod" 2
+		"Hai Chasm Batteries"
+		"Hai Diamond Regenerator"
+		"Heavy Anti-Missile Turret" 2
+		"Liquid Nitrogen Cooler"
+		"Outfits Expansion"
+		Ramscoop
+		"Scram Drive"
+		"Security Station" 2
 </pre>
 </details>
 
@@ -18118,12 +18300,12 @@
 	engine -23.5 132 0.8
 	engine 23.5 132 0.8
 	gun 0 -141 "Ka'het Nullifier"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
 	gun -52.5 -122 "Ka'het Ravager Beam"
 	gun 52.5 -122 "Ka'het Ravager Beam"
+	gun -72.5 -61.5 "Ka'het Annihilator"
+	gun 72.5 -61.5 "Ka'het Annihilator"
+	gun -72.5 -61.5 "Ka'het Annihilator"
+	gun 72.5 -61.5 "Ka'het Annihilator"
 	turret -14 -24.5 "Ka'het Annihilator Turret"
 	turret 14 -24.5 "Ka'het Annihilator Turret"
 	turret -14 -4 "Ka'het Ravager Turret"
@@ -18166,19 +18348,19 @@
 		"Ka'het Support Cooling"
 		"Vareti Engine Block"
 		"Hyperdrive"
-	gun 0 -141 "Ka'het Nullifier"
-	gun -72.5 -61.5 "Ka'het EMP Deployer"
-	gun 72.5 -61.5 "Ka'het EMP Deployer"
-	gun -72.5 -61.5 "Ka'het Ravager Beam"
-	gun 72.5 -61.5 "Ka'het Ravager Beam"
-	gun -52.5 -122 "Ka'het Ravager Beam"
-	gun 52.5 -122 "Ka'het Ravager Beam"
-	turret -14 -24.5 "Ka'het Annihilator Turret"
-	turret 14 -24.5 "Ka'het Annihilator Turret"
-	turret -14 -4 "Ka'het Annihilator Turret"
-	turret 14 -4 "Ka'het Annihilator Turret"
-	turret -13.5 16.5 "Ka'het Ravager Turret"
-	turret 13.5 16.5
+	gun "Ka'het Nullifier"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het EMP Deployer"
+	gun "Ka'het EMP Deployer"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het Ravager Beam"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Ravager Turret"
+	turret
 </pre>
 </details>
 
@@ -18201,19 +18383,19 @@
 		"Ka'het Support Cooling"
 		"Vareti Engine Block"
 		"Hyperdrive"
-	gun 0 -141 "Ka'het Nullifier"
-	gun -72.5 -61.5 "Ka'het EMP Deployer"
-	gun 72.5 -61.5 "Ka'het EMP Deployer"
-	gun -72.5 -61.5 "Ka'het Ravager Beam"
-	gun 72.5 -61.5 "Ka'het Ravager Beam"
-	gun -52.5 -122 "Ka'het Ravager Beam"
-	gun 52.5 -122 "Ka'het Ravager Beam"
-	turret -14 -24.5 "Ka'het Annihilator Turret"
-	turret 14 -24.5 "Ka'het Annihilator Turret"
-	turret -14 -4 "Ka'het Annihilator Turret"
-	turret 14 -4 "Ka'het Annihilator Turret"
-	turret -13.5 16.5 "Ka'het Ravager Turret"
-	turret 13.5 16.5
+	gun "Ka'het Nullifier"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het EMP Deployer"
+	gun "Ka'het EMP Deployer"
+	gun "Ka'het Ravager Beam"
+	gun "Ka'het Ravager Beam"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Ravager Turret"
+	turret
 </pre>
 </details>
 
@@ -18233,19 +18415,19 @@
 		"Ka'het Support Cooling"
 		"Vareti Engine Block"
 		"Hyperdrive"
-	gun 0 -141 "Ka'het Nullifier"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
-	gun -52.5 -122 "Ka'het Annihilator"
-	gun 52.5 -122 "Ka'het Annihilator"
-	turret -14 -24.5 "Ka'het Annihilator Turret"
-	turret 14 -24.5 "Ka'het Annihilator Turret"
-	turret -14 -4
-	turret 14 -4
-	turret -13.5 16.5 "Ka'het Ravager Turret"
-	turret 13.5 16.5 "Ka'het Ravager Turret"
+	gun "Ka'het Nullifier"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret
+	turret
+	turret "Ka'het Ravager Turret"
+	turret "Ka'het Ravager Turret"
 </pre>
 </details>
 
@@ -18265,19 +18447,19 @@
 		"Ka'het Support Cooling"
 		"Vareti Engine Block"
 		"Hyperdrive"
-	gun 0 -141 "Ka'het Nullifier"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
-	gun -72.5 -61.5 "Ka'het Annihilator"
-	gun 72.5 -61.5 "Ka'het Annihilator"
-	gun -52.5 -122 "Ka'het Annihilator"
-	gun 52.5 -122 "Ka'het Annihilator"
-	turret -14 -24.5 "Ka'het Annihilator Turret"
-	turret 14 -24.5 "Ka'het Annihilator Turret"
-	turret -14 -4
-	turret 14 -4
-	turret -13.5 16.5 "Ka'het Ravager Turret"
-	turret 13.5 16.5 "Ka'het Ravager Turret"
+	gun "Ka'het Nullifier"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	gun "Ka'het Annihilator"
+	turret "Ka'het Annihilator Turret"
+	turret "Ka'het Annihilator Turret"
+	turret
+	turret
+	turret "Ka'het Ravager Turret"
+	turret "Ka'het Ravager Turret"
 </pre>
 </details>
 
@@ -18427,6 +18609,30 @@
 <summary>data/kahet/kahet ships.txt | ship "Fetri'sei" "Fetri'sei (Disable-able)"</summary>
 <pre>ship "Fetri'sei" "Fetri'sei (Disable-able)"
 	"uncapturable"
+</pre>
+</details>
+
+
+<details>
+<summary>data/korath/korath missions.txt | ship "Charm-Shallop" "Charm-Shallop (Distressed)"</summary>
+<pre>ship "Charm-Shallop" "Charm-Shallop (Distressed)"
+	outfits
+		"Digger Mining Beam" 2
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		"Large Heat Shunt"
+		"Plasma Core"
+		"Scram Drive"
+		"Small Heat Shunt"
+		"Steering (Planetary Class)"
+		"Thermal Repeater Rifle" 19
+		"Thruster (Lunar Class)"
+		"Warder Anti-Missile"
+	gun 0 -118 "Digger Mining Beam"
+	gun -16.5 -114.5 "Digger Mining Beam"
+	gun 16.5 -114.5
+	turret 0 -35 "Warder Anti-Missile"
+	turret 0 97
 </pre>
 </details>
 
@@ -18924,9 +19130,9 @@
 		angle 270
 	turret -96.5 -129.5 "Langrage Hyper-Heaver"
 	turret 96.5 -129.5 "Warder Anti-Missile"
+	turret 36.5 -55.5 "Banisher Grav-Turret"
 	turret -62.5 55 "Warder Anti-Missile"
 	turret 62.5 55 "Langrage Hyper-Heaver"
-	turret 36.5 -55.5 "Banisher Grav-Turret"
 	bay "Fighter" -115 -152
 		angle 30
 		"launch effect" "korath internal"
@@ -22308,7 +22514,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | ship "Pug Zibruka"</summary>
+<summary>data/pug/pug ships.txt | ship "Pug Zibruka"</summary>
 <pre>ship "Pug Zibruka"
 	sprite "ship/pug zibruka"
 	thumbnail "thumbnail/pug zibruka"
@@ -22359,7 +22565,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | ship "Pug Enfolta"</summary>
+<summary>data/pug/pug ships.txt | ship "Pug Enfolta"</summary>
 <pre>ship "Pug Enfolta"
 	sprite "ship/pug enfolta"
 	thumbnail "thumbnail/pug enfolta"
@@ -22415,7 +22621,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | ship "Pug Maboro"</summary>
+<summary>data/pug/pug ships.txt | ship "Pug Maboro"</summary>
 <pre>ship "Pug Maboro"
 	sprite "ship/pug maboro"
 	thumbnail "thumbnail/pug maboro"
@@ -22455,10 +22661,10 @@
 		"Jump Drive"
 	engine -21 134.5
 	engine 21 134.5
-	gun -33.5 -142.5 "Pug Seeker"
-	gun 33.5 -142.5 "Pug Seeker"
 	gun -24.5 -165 "Pug Seeker"
 	gun 24.5 -165 "Pug Seeker"
+	gun -33.5 -142.5 "Pug Seeker"
+	gun 33.5 -142.5 "Pug Seeker"
 	turret 0 -68 "Pug Anti-Missile"
 	turret -13.5 -11.5 "Pug Zapper Turret"
 	turret 13.5 -11.5 "Pug Zapper Turret"
@@ -22473,7 +22679,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | ship "Pug Arfecta"</summary>
+<summary>data/pug/pug ships.txt | ship "Pug Arfecta"</summary>
 <pre>ship "Pug Arfecta"
 	sprite "ship/pug arfecta"
 	thumbnail "thumbnail/pug arfecta"
@@ -22629,10 +22835,10 @@
 		"Jump Drive"
 	engine -14 47
 	engine 14 47
-	turret -28 7 "Quarg Skylance"
-	turret 28 7 "Quarg Skylance"
 	turret -9 -14 "Quarg Anti-Missile"
 	turret 9 -14 "Quarg Anti-Missile"
+	turret -28 7 "Quarg Skylance"
+	turret 28 7 "Quarg Skylance"
 	explode "tiny explosion" 12
 	explode "small explosion" 16
 	explode "medium explosion" 30
@@ -23433,14 +23639,14 @@
 	gun 0 -325 "Ember Tear"
 	gun -23.5 -302.5
 	gun 23.5 -302.5
+	turret 0 -240.5 "Point Defense Turret"
 	turret -34.5 -134.5 "Inhibitor Turret"
 	turret 34.5 -134.5 "Inhibitor Turret"
 	turret -53 -17.5 "Inhibitor Turret"
 	turret 53 -17.5 "Inhibitor Turret"
+	turret 0 0 "Point Defense Turret"
 	turret -123.5 125.5 "Inhibitor Turret"
 	turret 123.5 125.5 "Inhibitor Turret"
-	turret 0 -240.5 "Point Defense Turret"
-	turret 0 0 "Point Defense Turret"
 	turret 0 250 "Point Defense Turret"
 	bay "Drone" -124 -122.5
 		"launch effect" "remnant internal"
@@ -24650,15 +24856,15 @@
 		angle 300
 		over
 		left
+	gun 0 -276 "Dragonflame Cannon"
 	turret -18 -41.5 "Particle Waveform Turret"
 	turret 18 -41.5 "Particle Waveform Turret"
 	turret -70 70.5 "Particle Waveform Turret"
 	turret 70 70.5 "Particle Waveform Turret"
+	turret 0 114 "Sheragi Anti-Missile"
 	turret -128.5 174 "Particle Waveform Turret"
 	turret 128.5 174 "Particle Waveform Turret"
-	turret 0 114 "Sheragi Anti-Missile"
 	turret 0 183 "Sheragi Anti-Missile"
-	gun 0 -276 "Dragonflame Cannon"
 	bay "Fighter" 0 220.5 back
 		"launch effect" "sheragi launch"
 	bay "Fighter" 0 220.5 back
@@ -24701,15 +24907,15 @@
 		"Outfits Expansion" 2
 		"Fusion Drive"
 		"Jump Drive"
-	turret "Particle Waveform Turret"
-	turret "Particle Waveform Turret"
-	turret "Particle Waveform Turret"
-	turret "Particle Waveform Turret"
-	turret "Particle Waveform Turret"
-	turret "Particle Waveform Turret"
-	turret "Sheragi Anti-Missile"
-	turret "Sheragi Anti-Missile"
 	gun "Dragonflame Cannon"
+	turret "Particle Waveform Turret"
+	turret "Particle Waveform Turret"
+	turret "Particle Waveform Turret"
+	turret "Particle Waveform Turret"
+	turret "Sheragi Anti-Missile"
+	turret "Particle Waveform Turret"
+	turret "Particle Waveform Turret"
+	turret "Sheragi Anti-Missile"
 </pre>
 </details>
 
@@ -24807,10 +25013,10 @@
 		"outfit space" 0
 		"weapon capacity" 0
 		"engine capacity" 0
+		"inscrutable" 1
 		"hull repair rate" 1
 		"energy capacity" 100
 		"energy generation" 1
-		"inscrutable" 1
 		"thrust" 10
 		"turn" 120
 		"atmospheric scan" 1
@@ -24851,8 +25057,8 @@
 		"outfit space" 10
 		"weapon capacity" 0
 		"engine capacity" 0
-		"hull repair rate" 1
 		"inscrutable" 1
+		"hull repair rate" 1
 		"thrust" 12
 		"turn" 60
 		"energy protection" 1
@@ -24881,8 +25087,8 @@
 		"cost" 0
 		"shields" 0
 		"hull" 860
-		"required crew" 1
-		"bunks" 1
+		"required crew" 2
+		"bunks" 2
 		"mass" 200
 		"drag" 9
 		"heat dissipation" 1.8
@@ -24891,9 +25097,9 @@
 		"outfit space" 0
 		"weapon capacity" 0
 		"engine capacity" 0
+		"inscrutable" 1
 		"energy capacity" 1000
 		"energy generation" 100
-		"inscrutable" 1
 		"thrust" 6
 		"turn" 80
 		"energy protection" 1
@@ -24925,8 +25131,8 @@
 		"cost" 0
 		"shields" 0
 		"hull" 11000
-		"required crew" 1
-		"bunks" 1
+		"required crew" 9
+		"bunks" 9
 		"mass" 1200
 		"drag" 15.7
 		"heat dissipation" 0.68
@@ -24935,6 +25141,7 @@
 		"outfit space" 0
 		"weapon capacity" 0
 		"engine capacity" 0
+		"inscrutable" 1
 		"hull repair rate" 3
 		"ramscoop" 5
 		"energy capacity" 2000

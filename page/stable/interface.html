@@ -24,10 +24,10 @@
 <pre>interface "map planet card"
 	value "text start" 13
 	value "category size" 20
-	value "height" 130
+	value "categories" 5
+	value "height padding" 30
 	value "width" 235
 	value "planet icon max size" 100
-	value "categories" 5
 </pre>
 </details>
 
@@ -45,6 +45,44 @@
 		center 0 0
 	sprite "_menu/title"
 		center 0 -200
+	anchor bottom right
+	# draw the text in black offset by one pixel in every direction,
+	# then draw the real text on top of it. This makes it so that you
+	# can read it, even with the stars in the background.
+	string "game version"
+		center -159 -14
+		dimensions 300 30
+		align right
+		color black
+		size 18
+	string "game version"
+		center -161 -14
+		dimensions 300 30
+		align right
+		color black
+		size 18
+	string "game version"
+		center -159 -16
+		dimensions 300 30
+		align right
+		color black
+		size 18
+	string "game version"
+		center -161 -16
+		dimensions 300 30
+		align right
+		color black
+		size 18
+	string "game version"
+		center -160 -15
+		dimensions 300 30
+		align right
+		color medium
+		size 18
+	# should make this a button, but want to support double-click
+	box "version box"
+		center -160 -15
+		dimensions 300 30
 </pre>
 </details>
 
@@ -266,17 +304,19 @@
 	sprite "ui/keys panel"
 		center -65 -20
 	# Box to hold supported gestures
-	line
-		center -344 -45
-		dimensions 161 156
-		color "bright"
-	line
-		center -344 -45
-		dimensions 159 154
-		color "map side panel background"
+	uirect
+		center -344.5 -55
+		dimensions 161 136
 	box "supported gestures"
-		center -344 -45
-		dimensions 136 147
+		center -344.5 -50
+		dimensions 136 137
+	# dropdown for displayed control type
+	uirect
+		center -344.5 170
+		dimensions 161 30
+	box "control type"
+		center -344.5 170
+		dimensions 159 28
 	button c "_Controls"
 		center -300 -230
 		dimensions 90 30
@@ -291,6 +331,201 @@
 		dimensions 90 30
 		color medium
 		hover bright
+	uirect
+		center -195 209.5
+		dimensions 120 31
+	button g "_Game Controllers"
+		center -195 209.5
+		dimensions 120 31
+		color medium
+		hover bright
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "gamepad panel"</summary>
+<pre>interface "gamepad panel"
+	uirect
+		from 50 50 top left
+		to -50 -50 bottom right
+		color "panel background"
+	uirect
+		center -120 -25 bottom right
+		dimensions 140 30
+		color "panel background"
+	button b "_Back to Preferences"
+		center -120 -25 bottom right
+		dimensions 140 30
+		color medium
+		hover bright
+	visible if "has controller"
+	uirect
+		center 120 -25 bottom left
+		dimensions 140 30
+		color "panel background"
+	button r "_Remap Buttons"
+		center 120 -25 bottom left
+		dimensions 140 30
+		color medium
+		hover bright
+	uirect
+		center 270 -25 bottom left
+		dimensions 140 30
+		color "panel background"
+	button e "R_eset Buttons"
+		center 270 -25 bottom left
+		dimensions 140 30
+		color medium
+		hover bright
+	visible if "needs save"
+	uirect
+		center 270 -25 bottom left
+		dimensions 140 30
+		color "panel background"
+	button r "_Save Mapping"
+		center 270 -25 bottom left
+		dimensions 140 30
+		color medium
+		hover bright
+	# gamepad and button overlays
+	visible
+	anchor top left
+	sprite "ui/gamepad"
+		center 316 218.5 top left
+	ring "B Button"
+		center 515 215
+		dimensions 20 20
+		color shields
+		size 11
+	ring "A Button"
+		center 472 251
+		dimensions 20 20
+		color shields
+		size 11
+	ring "Y Button"
+		center 475 184
+		dimensions 20 20
+		color shields
+		size 11
+	ring "X Button"
+		center 431 217
+		dimensions 20 20
+		color shields
+		size 11
+	ring "Guide Button"
+		center 317 211
+		dimensions 26 26
+		color shields
+		size 14
+	ring "Start Button"
+		center 374 219
+		dimensions 14 14
+		color shields
+		size 8
+	ring "Back Button"
+		center 261 219
+		dimensions 14 14
+		color shields
+		size 8
+	visible if "Left Shoulder Button"
+	line
+		center 160 120
+		dimensions 90 26
+		color shields
+	visible if "Right Shoulder Button"
+	line
+		center 476 120
+		dimensions 90 26
+		color shields
+	visible if "Left Trigger Button"
+	line
+		center 175 84
+		dimensions 30 42
+		color shields
+	visible if "Right Trigger Button"
+	line
+		center 460 84
+		dimensions 30 42
+		color shields
+	visible
+	ring "Left Stick Button"
+		center 157 236
+		dimensions 26 26
+		color shields
+		size 14
+	ring "Right Stick Button"
+		center 391 314
+		dimensions 26 26
+		color shields
+		size 14
+	visible if "Left Dpad Button"
+	sprite "ui/left_button"
+		center 207 302
+	visible if "Right Dpad Button"
+	sprite "ui/right_button"
+		center 272 302
+	visible if "Up Dpad Button"
+	sprite "ui/up_button"
+		center 240 270
+	visible if "Down Dpad Button"
+	sprite "ui/down_button"
+		center 240 334
+	box "Left Joystick"
+		center 157 236
+		dimensions 96 96
+	box "Right Joystick"
+		center 391 314
+		dimensions 96 96
+	visible if "Left Joystick Left"
+	sprite "ui/left_button"
+		center 125 236
+	visible if "Left Joystick Right"
+	sprite "ui/right_button"
+		center 189 236
+	visible if "Left Joystick Up"
+	sprite "ui/up_button"
+		center 157 204
+	visible if "Left Joystick Down"
+	sprite "ui/down_button"
+		center 157 268
+	visible if "Right Joystick Left"
+	sprite "ui/left_button"
+		center 359 314
+	visible if "Right Joystick Right"
+	sprite "ui/right_button"
+		center 423 314
+	visible if "Right Joystick Up"
+	sprite "ui/up_button"
+		center 391 282
+	visible if "Right Joystick Down"
+	sprite "ui/down_button"
+		center 391 346
+	# Begin text
+	visible
+	box "Gamepad Dropdown"
+		from -360 60 to -60 80 top right
+	box "Button List"
+		from -360 82 top right
+		to -60 -60 bottom right
+	label "Joystick Dead Zone:"
+		from -550 60 to -450 80 top right
+		size 18
+		align right
+	box "Deadzone Dropdown"
+		from -445 60 to -365 80 top right
+	label "Joystick Trigger Threshold:"
+		from -550 85 to -450 105 top right
+		size 18
+		align right
+	box "Trigger Threshold Dropdown"
+		from -445 85 to -365 105 top right
+	string "status"
+		from 60 -60 to 80 -80 bottom left
+		size 18
+		# put the text at the bottom-left of its bounding box. it will overflow
+		# the bounding box to the right
+		align bottom left
 </pre>
 </details>
 
@@ -351,6 +586,11 @@
 		dimensions 90 30
 		color bright
 	visible if "plugin import"
+	# hide the "open plugin folder button" under the import/remove button
+	line
+		center -180 210
+		dimensions 20 40
+		color black
 	sprite "ui/dialog cancel"
 		center -220 210
 	button i "_Import"
@@ -554,10 +794,10 @@
 		color "medium"
 	# Other HUD elements:
 	box "escorts"
-		from 0 460 top left
-		to 120 0 bottom left
+		from 0 442 top left
+		to 160 0 bottom left
 	box "messages"
-		from 120 0 bottom left
+		from 160 0 bottom left
 		to -335 -200 bottom right
 	box "ammo"
 		from -110 450 top right
@@ -567,6 +807,135 @@
 	anchor top
 	point "mini-map"
 		center 0 100
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "escort element"</summary>
+<pre>interface "escort element"
+	value "width" 80
+	value "basic height" 25
+	value "system label height" 15
+	box "icon click zone"
+		center 20 10
+	anchor top left
+	outline "icon"
+		center 20 10
+		dimensions 20 20
+		colored
+	visible if "selected"
+	pointer
+		center 10 10
+		dimensions 10 10
+		"orientation angle" 90
+		color "escort selected"
+	visible if "other system"
+	string "system"
+		from 10 28
+		width 120
+		size 14
+		align left
+		truncate back
+		color "escort elsewhere"
+	visible if "!multiple"
+	bar "shields high"
+		from 35 1.5
+		dimensions 50 0
+		size 1.5
+		reversed
+		color "escort shields"
+	bar "hull high"
+		from 35 5.5
+		dimensions 50 0
+		size 1.5
+		reversed
+		color "escort hull"
+	bar "energy high"
+		from 40 9.5
+		dimensions 45 0
+		size 1.5
+		reversed
+		color "escort energy"
+	bar "heat high"
+		from 40 13.5
+		dimensions 45 0
+		size 1.5
+		reversed
+		color "escort heat"
+	bar "fuel high"
+		from 40 17.5
+		dimensions 45 0
+		size 1.5
+		reversed
+		color "escort fuel"
+	visible if "multiple"
+	anchor top right
+	string "count"
+		from 5 3 to -55 17
+		align right
+		color "escort elsewhere"
+	anchor top left
+	bar "shields high"
+		from 35 1.5
+		dimensions 35 0
+		size 1.5
+		reversed
+		color "escort split shields"
+	bar "shields low"
+		from 35 1.5
+		dimensions 35 0
+		size 1.5
+		reversed
+		color "escort split shields"
+	bar "hull high"
+		from 35 5.5
+		dimensions 35 0
+		size 1.5
+		reversed
+		color "escort split hull"
+	bar "hull low"
+		from 35 5.5
+		dimensions 35 0
+		size 1.5
+		reversed
+		color "escort split hull"
+	bar "energy high"
+		from 40 9.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split energy"
+	bar "energy low"
+		from 40 9.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split energy"
+	bar "heat high"
+		from 40 13.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split heat"
+	bar "heat low"
+		from 40 13.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split heat"
+	bar "fuel high"
+		from 40 17.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split fuel"
+	bar "fuel low"
+		from 40 17.5
+		dimensions 30 0
+		size 1.5
+		reversed
+		color "escort split fuel"
 </pre>
 </details>
 
@@ -1024,6 +1393,58 @@
 
 
 <details>
+<summary>data/_ui/interfaces.txt | interface "map buttons (small screen)" bottom right</summary>
+<pre>interface "map buttons (small screen)" bottom right
+	active
+	sprite "ui/dialog cancel"
+		from -350 -50 to -260 0
+	button n "_Info"
+		from -350 -40 to -260 -10
+	active if "!is shipyards"
+	sprite "ui/wide button"
+		from -270 -40 to -160 -90
+	button s "_Shipyards"
+		from -260 -50 to -170 -80
+	active if "!is outfitters"
+	sprite "ui/wide button"
+		from -270 -50 to -160 0
+	button o "_Outfitters"
+		from -260 -40 to -170 -10
+	active if "!is missions"
+	sprite "ui/dialog cancel"
+		from -170 -40 to -80 -90
+	button i "M_issions"
+		from -160 -80 to -90 -50
+	active if "!is ports"
+	sprite "ui/dialog cancel"
+		from -170 -50 to -80 0
+	button p "_Ports"
+		from -160 -40 to -90 -10
+	active
+	sprite "ui/dialog cancel"
+		from -90 -50 to 0 0
+	button d "_Done"
+		from -80 -40 to -10 -10
+	active
+	sprite "ui/dialog cancel"
+		from 0 -40 to -90 -90
+	button f "_Find"
+		from -80 -80 to -10 -50
+	sprite "ui/zoom"
+		from 0 -80 to -90 -130
+	active if "!max zoom"
+	button + "_+"
+		from -10 -90 to -40 -120
+		size 18
+	active if "!min zoom"
+	button - "_-"
+		from -50 -90 to -80 -120
+		size 18
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/interfaces.txt | interface "map"</summary>
 <pre>interface "map"
 	value "max zoom" 2
@@ -1279,7 +1700,7 @@
 	anchor top left
 	button "Select next ship"
 		center 75 315
-		dimensions 50 50
+		radius 80
 	# Overlayed on the navigational panel, which displays something like
 	# "Can land on: Earth"
 	visible
@@ -1294,9 +1715,15 @@
 		from 0 0 to 48 48
 	# box in bottom left corner that defines a location for the onscreen joystick
 	anchor bottom left
+	active if "onscreen joystick"
 	box "onscreen joystick"
 		center 128 -128
 		dimensions 192 192
+	# This button doesn't do anything. It is here to swallow any clicks on the
+	# onscreen joystick, in case some of these controls overlap
+	button ^ ""
+		center 128 -128
+		radius 96
 </pre>
 </details>
 

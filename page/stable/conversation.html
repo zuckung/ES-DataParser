@@ -60,16 +60,6 @@
 
 
 <details>
-<summary>data/_ui/flight checks.txt | conversation "flight check: insufficient bunks!"</summary>
-<pre>conversation "flight check: insufficient bunks!"
-	scene "scene/engine"
-	`You've heard enough horror stories about the sort of accidents that happen when starship systems malfunction to be completely convinced of the necessity of a pre-flight safety check. As you listen to the complex symphony of hums, rattles, and clicks of the &#60;ship&#62; warming up, you run through a mental checklist. Computers: check. Life support: check.`
-	`	But when you reach the end of the checklist, although nothing appears wrong, you have a sneaking suspicion that something isn't right. You go through the checklist again, but the suspicion only grows. You decide to check the specifications of the ship and each of the outfits you have installed and finally find the issue that was scratching at the back of your mind: you've somehow managed to outfit the &#60;ship&#62; to require more crew than it has space for. You are going to have to either install more bunk rooms, or trade out some components that require extra crew, lest the ship come crashing down during takeoff as a result of not having enough crew to man all the necessary systems.`
-</pre>
-</details>
-
-
-<details>
 <summary>data/gegno/gegno intro missions.txt | conversation "interfered with duel"</summary>
 <pre>conversation "interfered with duel"
 	action
@@ -145,45 +135,6 @@
 	`	"I'll probably reach out to you for help later, then. In a situation like this, the Hai need humans they can trust. They seem to trust me enough so far, so hopefully they'll also trust you by proxy, or, at the very least, you can gain their trust in short order.`
 	`	"Well, good luck with whatever it is that you're busy with," he says. You say your goodbyes to Alondo, and the Hai escort him away.`
 		decline
-</pre>
-</details>
-
-
-<details>
-<summary>data/hai/hai reveal 5 philosophers.txt | conversation "giti tripped an alert"</summary>
-<pre>conversation "giti tripped an alert"
-	`After a long series of shuttles, high-speed rails, and a several-minute-long elevator ride, you once again reach Giti's office.`
-	`	As soon as she sees you she says, "Captain &#60;last&#62;! Welcome back. Please, come in."`
-	`	She walks into the room and as you follow you go to shut the door, since she didn't, and come face to face with four people in Republic Intelligence uniforms standing either side of the door waiting for you. They each have a hand on their holstered weapons, but none make any move to draw them.`
-	`	"Captain &#60;last&#62;," says the man to your right, "please shut the door."`
-	choice
-		`	(Shut the door.)`
-			goto talk
-		`	(Draw your weapon.)`
-	`	You are not faster than four trained intelligence operatives.`
-		die
-	label talk
-	`	The man, whose Republic Intelligence uniform is labeled with the name "Agent Kopkow", nods very firmly and gestures for you to take one of the only seats in the room. He takes the one opposite and Giti sits at her desk. The three agents remain standing.`
-	`	You've had some encounters with Republic Intelligence, but you know what everyone knows. They're the top police force of the Republic, dealing with high-profile civilian crimes that local authorities can't handle: murder investigations, interplanetary kidnappings, and the like. They also gather intelligence throughout human space, and possibly beyond, reporting directly to the Republic Parliament... which mostly means it's beholden to the interests of the members of Parliament.`
-	choice
-		`	"What's the problem?"`
-			goto uncomplaining
-		`	"I'm on an urgent mission that is critical for three governments. Don't bar my way."`
-	`	Uncannily, the agents all smirk at you at the same time. Kopkow responds flatly, "We don't respond well to threats."`
-	label uncomplaining
-	`	"Now, Captain &#60;last&#62;, your friend Giti here has tripped a flag in our systems that marks what you're looking into as an item of particular interest to Syndicate Internal Affairs. In fact, it is an interest which they have exclusive and sole jurisdiction over, even over and above us." He looks at you meaningfully. "That requires an Act of Parliament in a closed session, which has not occurred for a significant length of time, if you catch my drift."`
-	`	He clears his throat. "We've been following you recently, and interrogating some people you've met. Since we have determined that you have found... something, and that it is meaningful, we must send you to Hephaestus. We request that you take Giti, any information or equipment you were planning to take, and go immediately and directly. Do you understand?"`
-	choice
-		`	"Yes"`
-			accept
-		`	"I would prefer not to."`
-	`	Agent Kopkow narrows his eyes at you very slightly. "This is not an optional request." Beyond your line of sight you can hear the faint rustle of clothing shift where the agents are still standing.`
-	choice
-		`	(Comply.)`
-			accept
-		`	(Draw your weapon.)`
-	`	You are not faster than four trained intelligence operatives.`
-		die
 </pre>
 </details>
 
@@ -684,7 +635,7 @@
 <details>
 <summary>data/human/south jobs.txt | conversation "pirate occupation"</summary>
 <pre>conversation "pirate occupation"
-	`Suddenly you hear raised voices and shouting outside as pilots run for their ships: "&#60;destination&#62; is being occupied by a pirate fleet! They are requesting help from any combat-worthy ship in the region to join the defenses!" The authorities of &#60;planet&#62; will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
+	`Suddenly you hear raised voices and shouting outside as pilots run for their ships: "&#60;destination&#62; is being occupied by a pirate fleet! They are requesting help from any combat-worthy ship that can get there by &#60;date&#62; to join the defenses!" The authorities of &#60;planet&#62; will probably pay you quite well if you assist them, but this could also be an easy way to get yourself killed.`
 	choice
 		`	(Don't join the fight.)`
 			decline
@@ -727,7 +678,7 @@
 	`Your ship loses all power immediately upon touching down on the landing pad. As you walk around to try and find the problem, you pass by your hatch. You find that it is already opened with dozens of Quarg coming in, all clad in elegant full-body armor suits.`
 	`	"&#60;first&#62; &#60;last&#62;, you are found to be in illegal possession of Quarg equipment. Our devices are precious and ours alone. Though it is regrettable, we must seize you."`
 	`	They don't allow you to get as much as a word out before one of the guards has locked your arms behind your back, completely halting your attempts to fight back with surprisingly little effort. You are brought before something akin to a Quarg jury, where they lecture you for several hours on how dangerous it is for Quarg apparatus to be stolen and used so lightly by others. At the end of it all, they sentence you to life imprisonment.`
-	`	You spend the rest of your days in the same cell, which although large and comfortable, quickly proves plain and dull. You're kept in very good health and are well fed, but the Quarg do not allow you to leave the cell and seldom entertain your attempts at striking conversation. You get few visitors and can only wonder what life would've been like had you the chance to live out all these years in freedom, the captain of a starship.`
+	`	You spend the rest of your days in the same cell, which although large and comfortable, quickly proves plain and dull. You're kept in very good health and are well-fed, but the Quarg do not allow you to leave the cell and seldom entertain your attempts at striking conversation. You get few visitors and can only wonder what life would've been like had you the chance to live out all these years in freedom, the captain of a starship.`
 		die
 </pre>
 </details>
@@ -738,6 +689,8 @@
 <pre>conversation "remnant key stones"
 	branch found
 		has "Remnant: Found Keystones: offered"
+	branch equipped
+		has "outfit: Quantum Keystone"
 	`As you are walking through the spaceport, a man comes up to you and introduces himself as the manager of the local outfitter. "Greetings, outsider," he says. "I have heard many good things about you and your assistance to our people. Would you be interested in going on a quest for me?"`
 	choice
 		`	"What kind of quest?"`
@@ -763,6 +716,9 @@
 	label hai1
 	`	"I've seen that before," you say.`
 	`	He looks at you with surprise. "You found another world where these stones can be mined?"`
+		goto exchange
+	label equipped
+	`As you are walking through the spaceport, a man comes up to you and introduces himself as the manager of the local outfitter. He says, "I could not help but notice that you have a Key Stone that looks different from the ones from our mines. You may have noticed the red anomalies scattered within this region of space. What you may not have known is that these are wormholes, accessible only with the possession of a Quantum Key Stone. My people highly value these Key Stones because of this, but our mines produce very few of them. Have you found another world where these stones can be mined?"`
 	label exchange
 	choice
 		`	"Yes, in the territory of some aliens far to the north of here."`

@@ -16,6 +16,9 @@
 			"A sizable crowd is watching one of the monitors in the spaceport where an interviewer is speaking to a Heliarch agent. You learn from someone in the crowd that the agent was a professional athlete until recently."
 			"A news broadcast shows footage of many Heliarch agents arresting a group of terrorists. The Heliarch who was supervising the operation is later interviewed, explaining that the now prisoners were found to have stolen government equipment."
 			"The news show a Heliarch consul giving a short speech in a ship launching ceremony. After they finish, the brand new Heliarch warships are shown heading to their first patrol."
+			"All the spaceport screens momentarily swap to a broadcast from the Heliarch government, where they show a video of several dozens of arrested criminals. The Heliarch host describing the event mentions their sentences range from 40 years to life, prompting varying reactions from the civilian spectators."
+			"During one of the more busy hours on the spaceport, the news details the crimes of a recently arrested terrorist group: arson, kidnapping, theft of government equipment, possession of weapons, conspiring against the Coalition, attacking both government and civilian properties, subversion... The list goes on for a few more minutes."
+			`After the latest report on how the Heliarchs arrested some terrorists on a nearby world, the news shows various short clips with the same message, asking the public to "stay vigilant" and report any and all suspicious activity.`
 </pre>
 </details>
 
@@ -102,6 +105,7 @@
 			"An agent is trying to calm down a small crowd outside a local bar. After some minutes, the more agitated drunkards are convinced to accompany the agent to a nearby Heliarch office."
 			"A pair of agents passes by you. Most of the spaceport crowd gives them a wide berth."
 			`"A pilot, I once was. Learned from an older sibling, I did."`
+			`"Seen those charity workers in blue on some of our worlds, have you? Noble intentions they may have, but understand it I do not. Why trouble themselves with it when taking care of everyone, we already are?"`
 </pre>
 </details>
 
@@ -117,7 +121,7 @@
 	message
 		word
 			`"Laws, history, theory, too much of it I have read, and still behind I am..."`
-			`"As part of my trials, read the works of consul Elirom, I had to. Exceeded my expectations, his books have."`
+			`"As part of my trials, read the works of consul Aulori, I had to. Exceeded my expectations, his books have."`
 			`"Meant to prove our dedication and show our potential, the trials we candidates go through are. Though difficult, we're sure to be apt to serve once passed, we have."`
 </pre>
 </details>
@@ -549,6 +553,47 @@
 			"The lines of people heading to the Coalition Games seem to have stopped moving abruptly. Upon further investigation, you see some young Kimek have fallen on their backs and are being helped back to their feet one by one by both Heliarch agents and others from the crowd."
 			"This is a particularly crowded part of the spaceport today. The lines of people waiting for admission into the Games have started crossing and looping in on themselves. Some even head inside shops and restaurants while others stretch into docking areas. Battalions of Heliarch agents work as hard as they can to bring everyone back into orderly lines."
 			"Several children coming to see the Coalition Games are running and playing simplified versions of the events, sporting different colors and assets for different games. Their parents struggle to get them to settle down while keeping their spots in the waiting lines."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition news.txt | news "lunarium charity"</summary>
+<pre>news "lunarium charity"
+	location
+		government "Coalition"
+		not planet "Fourth Shadow"
+	name
+		word
+			"Charitable Organization"
+	message
+		word
+			"Several workers in blue uniforms are loading up cargo crates and containers full of charity goods into Coalition merchant ships."
+			"A few civilian captains in the spaceport are discussing their recent jobs for a charity organization. It seems they operate mostly in Kimek space."
+			"The spaceport has a few flyers glued to the entrance walls. You ask one of the locals, and they tell you they're for promoting a charity organization."
+			"Coalition families have formed a line to a large cargo ship. Brought by their parents, the children are one by one giving away blankets, outdated electronics, and all sorts of toys, which are all carefully packed into cargo containers. It seems they are donating to a charity organization."
+			"Charity workers are meeting with a few wealthy-looking individuals in the spaceport. Apparently all the expenses of the endeavor are paid by donations, and they are trying to bring in some new patrons to expand the efforts."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition news.txt | news "lunarium charity worker"</summary>
+<pre>news "lunarium charity worker"
+	to show
+		not "Heliarch License 1: offered"
+	location
+		government "Coalition"
+	name
+		word
+			"Charity worker"
+	message
+		word
+			`"Help bring amenity goods and services to those who can't afford them, we do. Operate mostly in Kimek space we do, if interested in helping you are."`
+			`"Interested in contributing to the charity, are you? Take every sort of donation, we do. Credits, winter supplies, trinkets, old tech devices. Whatever it is, if willing to donate you are, drop them here you can."`
+			`"Just finished filling up an entire Arach fleet's cargo holds with school supplies, we have. Very tiring, the job is, but glad I am that making a difference, our charity efforts are."`
+			`"Get most of our funding from some of the Arach Houses and rich Saryd families, we do. Meant only to acquire part of the charity goods and the means to transport them, the credits are, for voluntary work, this is."`
+			`Standing by the spaceport entrance, a worker is distributing flyers to those who come in and out. "Hello human visitor. Part of a charity group, I am, raising awareness to our cause. Aware were you, that lack the electronics for many educational activities, children on poor Kimek worlds do? Together, make a difference we can!"`
 </pre>
 </details>
 
@@ -2538,6 +2583,28 @@
 
 
 <details>
+<summary>data/human/news.txt | news "mechanic on frozen world"</summary>
+<pre>news "mechanic on frozen world"
+	location
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+		attributes "frozen"
+	name
+		word
+			"Mechanic"
+	message
+		word
+			`"`
+		word
+			"If the generators or heaters fail, you could have a lot of very cold folks right quick."
+			"People don't appreciate the toll this climate takes on infrastructure and machinery. Expanding ice cracks concrete. Shrinking metal cracks ships."
+			"If your ship is deploying any surface vehicles, be sure to have them properly winterized with low-temperature oils and lubricants."
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/news.txt | news "ship salesperson"</summary>
 <pre>news "ship salesperson"
 	location
@@ -3177,6 +3244,31 @@
 
 
 <details>
+<summary>data/human/news.txt | news "tourist on frozen world"</summary>
+<pre>news "tourist on frozen world"
+	location
+		government "Republic" "Free Worlds" "Syndicate" "Independent" "Neutral"
+		attributes "frozen"
+	name
+		word
+			"Adventure tourist"
+			"Arctic tourist"
+			"Tourist"
+	message
+		word
+			`"`
+		word
+			"Have you ever seen so much white?"
+			"This place has such a stark beauty."
+			"I know this isn't the usual sort of tourist destination, but I like getting off the beaten path."
+			"Enjoying a hot tub while in the bitter cold really is the sort of pleasure that is frustratingly rare in the Paradise Worlds."
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/news.txt | news "protester"</summary>
 <pre>news "protester"
 	location
@@ -3275,6 +3367,31 @@
 			"Nobody thinks about the Alphas anymore, but don't forget that they just disappeared. They could return at any time. If that happens, I'm going to kill every last one of 'em."
 			"While it seems pointless to have the Bactrian locked behind a license, don't forget that it's one of the oldest designs in human space. It was the Navy Carrier of its time - and it's still comparable to one."
 			`We recently went to full alert, because somebody screamed "It's scrambled!" Turns out some rookie in the galley was enthusiastic about making scrambled eggs.`
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/news.txt | news "lawyer"</summary>
+<pre>news "lawyer"
+	location
+		government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+	name
+		word
+			"Lawyer"
+			"Attorney"
+	message
+		word
+			`"`
+		word
+			"The Dereliction and Salvage Act of 2976 states unmanned vessels gain abandoned status as soon as their owners leave the system. This makes drones a prime target for pirates and scavengers."
+			"The Capable Rescue Act of 2318 requires all manned vessels to be capable of individual spaceflight in case of an emergency. This is the oldest interstellar law still recognized today, predating the Republic by four centuries."
+			"In 2937, the Parliament voted to classify crewing spaceships as hazardous duty, raising the crew's minimum wage to a 100 credits. Their salary has not changed since."
+			"I'm reviewing a case on the destruction of an abandoned drone. The owner argues it was a personal hyperspace relay, which exempts it from salvage law."
+			"My client is accused of destroying a landing pad and flooding the surrounding area with leaked reactor plasma. Really, it's the spaceport's fault for not verifying whether he had a pilot's license in the first place."
+			"I was involved in a case of an out-of-spec Syndicate nuclear reactor. Allegedly, the Syndicate threatened the inspector to prevent him from publishing his results, but he didn't give in."
 		word
 			`"`
 </pre>
@@ -3536,6 +3653,107 @@
 
 
 <details>
+<summary>data/human/news.txt | news "republic navy advisory system"</summary>
+<pre>news "republic navy advisory system"
+	location
+		government "Republic"
+	name
+		word
+			"Republic Navy Advisory System"
+	message
+		word
+			`"`
+		word
+			"${rnas travel advisory}"
+			"Please notify Republic officials immediately if you have been detained by any ship not granted legal authority to do so by the Republic Navy."
+			"Report all sightings of pirate vessels immediately."
+			"${rnas port emergency alert test}"
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/news.txt | news "republic navy advisory system [wartime]"</summary>
+<pre>news "republic navy advisory system [wartime]"
+	location
+		government "Republic"
+	name
+		word
+			"Republic Navy Advisory System"
+	to show
+		not "event: fw armistice"
+		has "chosen sides"
+	message
+		word
+			`"`
+		word
+			"Attention: Travel by civilians to rebel-held systems is to be undertaken at your own risk."
+			"Attention: Dangerous combat conditions persist in the galactic South. Avoid all travel to affected systems unless strictly necessary."
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/news.txt | news "explorer on frozen world"</summary>
+<pre>news "explorer on frozen world"
+	location
+		government "Republic" "Free Worlds" "Neutral" "Independent" "Syndicate"
+		attributes "frozen"
+	name
+		word
+			"Arctic"
+			"Glacial"
+			"Polar"
+		word
+			" "
+		word
+			"explorer"
+			"surveyor"
+	message
+		word
+			`"`
+		word
+			"There's only so much you can get from orbital mapping. Sometimes, you've got to gear up and go see it yourself."
+			"Cold? You don't know cold. You don't know true cold until you've been bivouacked in a scree field for a week, wondering when the storm will end."
+			"Happiness is finding the can of peaches you buried in the snow a month ago."
+			"It's my responsibility to check on the remote weather stations. If one of those go down, the whole colony could be at risk."
+			"There's no bad weather, only bad clothing."
+			"It lacks the romance of furs and seal skin, but I'm glad for modern textiles."
+			"It's hard to have a bond with a snowcat quite like you do with a husky."
+			"It's not intuitive, but make sure you wear sunglasses here. Snowblindness is a sunburn on your corneas. Trust me, it's unpleasant."
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/news.txt | news "republic navy advisory system [alphas]"</summary>
+<pre>news "republic navy advisory system [alphas]"
+	location
+		government "Republic"
+	name
+		word
+			"Republic Navy Advisory System"
+	to show
+		has "alphas capture Poisonwood"
+	message
+		word
+			`"`
+		word
+			"Attention: Report suspected Alpha activity to Republic authorities."
+			"For your safety, do not attempt to apprehend an Alpha. Instead, contact Republic Navy personnel at once."
+		word
+			`"`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/news.txt | news "safety posters"</summary>
 <pre>news "safety posters"
 	location
@@ -3768,6 +3986,391 @@
 			"It is [disheartening, upsetting] to see how damaged this world is, but I take comfort knowing we will work to [restore, rebirth] it."
 		word
 			`"`
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "artist on post-fw Deneb"</summary>
+<pre>news "artist on post-fw Deneb"
+	location
+		government "Neutral"
+		system "Deneb"
+	name
+		word
+			"Writer"
+			"Painter"
+			"Artist"
+			"Sculptor"
+			"Designer"
+			"Photographer"
+			"Composer"
+	message
+		word
+			"This "
+		word
+			"planet"
+			"city"
+			"building"
+		word
+			"'s "
+		word
+			"alien"
+			"extraterrestrial"
+			"unique"
+			"Pug"
+		word
+			" origin is so "
+		word
+			"inspiring"
+			"intriguing"
+			"thrilling"
+			"exciting"
+		word
+			"! I'm "
+		word
+			"full of"
+			"bristling with"
+		word
+			" "
+		word
+			"ideas"
+			"creativity"
+			"energy"
+		word
+			"!"
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "tourist on post-fw Deneb"</summary>
+<pre>news "tourist on post-fw Deneb"
+	location
+		government "Neutral"
+		system "Deneb"
+	name
+		word
+			"Tourist"
+			"Sightseer"
+			"Traveler"
+	message
+		word
+			"Can you imagine"
+			"Did you know"
+		word
+			" that "
+		word
+			"this entire"
+			"this whole"
+			"every part of this"
+		word
+			" "
+		word
+			"city"
+			"building"
+		word
+			" was "
+		word
+			"constructed"
+			"created"
+			"built"
+			"made"
+		word
+			" by "
+		word
+			"an alien species"
+			"aliens"
+			"insectoid aliens"
+			"another race"
+		word
+			"? "
+		word
+			"That's"
+			"I find that"
+		word
+			" "
+			" so "
+		word
+			"inspiring"
+			"incredible"
+			"exciting"
+			"fascinating"
+		word
+			"!"
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "conspiracy theorist on post-fw Deneb"</summary>
+<pre>news "conspiracy theorist on post-fw Deneb"
+	location
+		government "Neutral"
+		system "Deneb"
+	name
+		word
+			"Conspiracy theorist"
+			"Critical thinker"
+			"Truth seeker"
+	message
+		word
+			"Do you really"
+			"How can you"
+		word
+			" "
+		word
+			"believe"
+			"still think"
+			"accept"
+			"trust"
+		word
+			" that this "
+		word
+			"city"
+			"spaceport"
+			"building"
+			"place"
+		word
+			" was "
+		word
+			"created"
+			"made"
+			"inhabited"
+		word
+			" by "
+		word
+			"another species"
+			"aliens"
+			"a different race"
+		word
+			"? "
+		word
+			"This was "
+		word
+			"clearly"
+			"obviously"
+			"without a doubt"
+		word
+			" built for humans, by humans. "
+		word
+			"You will eventually realize that"
+			"You will come to see that"
+			"I'm gathering evidence for a public trial"
+			"I can provide you with all the proof you need"
+			"This is all just a stunt by the Republic and the Free Worlds"
+		word
+			"."
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "reporter on post-fw Deneb"</summary>
+<pre>news "reporter on post-fw Deneb"
+	location
+		government "Neutral"
+		system "Deneb"
+	name
+		word
+			"Reporter"
+			"Journalist"
+			"Correspondent"
+	message
+		word
+			"I don't think there is anything"
+			"I don't find anything to be"
+			"There isn't anything"
+		word
+			" "
+		word
+			"special"
+			"unique"
+			"different"
+		word
+			" about this "
+		word
+			"planet"
+			"place"
+		word
+			", but "
+		word
+			"the people"
+			"my viewers"
+		word
+			" "
+		word
+			"believe otherwise"
+			"always love when I report from here"
+			"still love to see me here"
+			"want me here, so here I am"
+			"find it fascinating"
+		word
+			". Anyway, I"
+		word
+			" have to go now"
+			"'m off to the studio"
+			" have to get going"
+			" stayed too long already"
+			" shouldn't be chatting with you"
+		word
+			", "
+		word
+			"the show"
+			"my segment"
+		word
+			" "
+		word
+			"is about to begin"
+			"starts in three minutes"
+			"is going live in a minute"
+		word
+			"."
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "merchant on post-fw Deneb"</summary>
+<pre>news "merchant on post-fw Deneb"
+	location
+		government "Neutral"
+		system "Deneb"
+	name
+		phrase
+			"merchant names"
+	message
+		word
+			"You wouldn't believe"
+			"I didn't imagine"
+		word
+			" the "
+		word
+			"kind"
+			"amount"
+			"sort"
+			"sheer volume"
+		word
+			" of "
+		word
+			"ships"
+			"traffic"
+			"traders"
+		word
+			" passing through"
+		word
+			" here"
+			" this system"
+			""
+		word
+			". This is a shortcut between "
+		word
+			"the Free Worlds"
+			"the Dirt Belt"
+			"the South"
+			"Tarazed"
+		word
+			" and the Syndicate. "
+		word
+			"Just yesterday"
+			"A couple days ago"
+			"When I arrived"
+		word
+			" "
+		word
+			"I had to wait"
+			"I was delayed"
+			"they put me on hold"
+			"they kept telling me there wasn't a free landing pad"
+		word
+			" for "
+		word
+			""
+			"like "
+			"what seemed like "
+			"about "
+			"nearly "
+		word
+			"four hours"
+			"half a day"
+			"ninety minutes"
+		word
+			"!"
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "worker on pug-occupied planet after fw"</summary>
+<pre>news "worker on pug-occupied planet after fw"
+	location
+		neighbor system "Deneb"
+		not government "Pug"
+	name
+		word
+			"Dock worker"
+			"Worker"
+	message
+		word
+			"I "
+		word
+			"was"
+			"was working"
+			"happened to be"
+			"had a contract"
+		word
+			" here "
+		word
+			"during the occupation"
+			"during the Pug war"
+			"when the Pug attacked us"
+		word
+			". "
+		word
+			"For the weird aliens they are"
+			"Even when provoked"
+			"For the most part"
+		word
+			", they "
+		word
+			"didn't really cause trouble"
+			"didn't cause much damage"
+			"just left us alone"
+		word
+			". "
+		word
+			"Unlike some "
+		word
+			"politicians"
+			"pencil pushers"
+			"people"
+			"bureaucrats"
+		word
+			" "
+		word
+			"back home"
+			"on Earth"
+			"I know"
+			"here"
+			"we get these days"
+		word
+			"."
+</pre>
+</details>
+
+
+<details>
+<summary>data/pug/pug news.txt | news "pug on pug planets during fw"</summary>
+<pre>news "pug on pug planets during fw"
+	location
+		government "Pug"
+		not attributes "uninhabited"
+	name
+		word
+			"Pug"
+	message
+		phrase
+			"friendly pug"
 </pre>
 </details>
 

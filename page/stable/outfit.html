@@ -563,7 +563,7 @@
 	"mass" 22
 	"outfit space" -22
 	"weapon capacity" -22
-	"reverse thrust" 15.4
+	"reverse thrust" 18.68
 	"reverse thrusting energy" 1.8
 	"reverse thrusting heat" 3.5
 </pre>
@@ -1368,6 +1368,7 @@
 	thumbnail "outfit/lasher pistol"
 	"capture attack" 2.6
 	"capture defense" 1.4
+	"unplunderable" 1
 	description "During their wars with the Korath, it was not uncommon for Bunrodean vessels to be boarded by Korath raiders looking for technology and supplies to steal. As such, effective small arms weapons became an essential part of every Bunrodean crew that may need to fight off any boarding parties."
 </pre>
 </details>
@@ -1382,7 +1383,7 @@
 	"mass" 11
 	"outfit space" -11
 	"engine capacity" -11
-	"thrust" 6.25
+	"thrust" 7.775
 	"thrusting energy" 1.15
 	"thrusting heat" 0.65
 	"flare sprite" "effect/bunrodea flare/large"
@@ -1404,7 +1405,7 @@
 	"mass" 19
 	"outfit space" -19
 	"engine capacity" -19
-	"thrust" 12.1
+	"thrust" 14.09
 	"thrusting energy" 2.3
 	"thrusting heat" 1.3
 	"flare sprite" "effect/bunrodea flare/large"
@@ -1426,7 +1427,7 @@
 	"mass" 32
 	"outfit space" -32
 	"engine capacity" -32
-	"thrust" 22.9
+	"thrust" 24.97
 	"thrusting energy" 4.4
 	"thrusting heat" 2.5
 	"flare sprite" "effect/bunrodea flare/large"
@@ -2012,7 +2013,7 @@
 	"outfit space" -5
 	"active cooling" 21
 	"cooling energy" 1.4
-	description "This Cooling Module consumes energy. To conserve power, it does not ramp up to full strength unless a ship is very close to overheating."
+	description "This Cooling Module consumes energy. To conserve power, it does not ramp up to full strength unless a ship is overheated."
 </pre>
 </details>
 
@@ -2031,6 +2032,77 @@
 	"fuel protection" .25
 	description "In their early days of space exploration, the Saryds developed the Fuel Module to travel far from Saros without worrying about becoming stranded without fuel, or sudden fuel leaks."
 	description "	Nowadays, nearly every system in the Coalition has refueling facilities, but some captains still find use in the extra jumps these modules offer."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition outfits.txt | outfit "Decoy Plating"</summary>
+<pre>outfit "Decoy Plating"
+	category "Systems"
+	cost 93000
+	thumbnail "outfit/decoy plating"
+	"mass" 7
+	"outfit space" -7
+	"scan interference" 2
+	"radar jamming" 5
+	description "This plating takes advantage of a ship's scan logs and reproduces the data of other ships nearby, effectively deflecting attempts to scan a ship's true cargo and equipment."
+	description "	Out of a need to protect themselves against destructive Heliarch torpedoes, the Lunarium incorporated small, independent radar jamming systems in each section of the plating, if only to act as a last line of defense."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition outfits.txt | outfit "Refueling Module"</summary>
+<pre>outfit "Refueling Module"
+	category "Systems"
+	cost 822000
+	thumbnail "outfit/refueling module"
+	"mass" 10
+	"outfit space" -10
+	"fuel capacity" -100
+	"fuel generation" .05
+	"energy consumption" .11
+	description "To avoid the risk of being inspected by the Heliarchs as they refuel on planets, Lunarium captains employ this outfit when carrying supplies or stolen outfits."
+	description "	The outfit's mechanisms need a partitioned amount of fuel set aside to allow it to work properly, so a ship can only install so many of these before becoming incapable of jumping to another system."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition outfits.txt | outfit "Shield Refactor Module"</summary>
+<pre>outfit "Shield Refactor Module"
+	category "Systems"
+	cost 2843000
+	thumbnail "outfit/shield refactor module"
+	"mass" 7
+	"outfit space" -7
+	"hull repair rate" -.2
+	"shield energy" .2
+	"shield heat" .24
+	"shield generation multiplier" .25
+	"hull repair multiplier" -.2
+	description "In theory, all shield generators can operate at a much faster rate than normal, if pushed to their true limit. However, the constant need to reform shields during a heated battle quickly overloads shield generators and damages them in the process. By relocating dedicated hull repair systems to focus exclusively on repairing such damage, this compact device allows shield generators to reach their true potential."
+	description "	A much needed boon against the Heliarch torpedoes' devastating effects on hull plating, the Lunarium highly favors production of this expensive piece due to its advantages over other shield generators."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition outfits.txt | outfit "Small Recovery Module"</summary>
+<pre>outfit "Small Recovery Module"
+	category "Systems"
+	cost 625000
+	thumbnail "outfit/small recovery module"
+	"mass" 25
+	"outfit space" -25
+	"shield generation" .97
+	"shield energy" .43
+	"shield heat" .7
+	"hull repair rate" .43
+	"hull energy" .97
+	"hull heat" .07
+	description "By combining the Coalition's shield generation and hull repair technologies into one piece of equipment, the Lunarium has increased the effectiveness of both, allowing for better defenses against Heliarch weaponry."
 </pre>
 </details>
 
@@ -2082,7 +2154,7 @@
 	"mass" 9
 	"outfit space" -9
 	"engine capacity" -9
-	"thrust" 6.6
+	"thrust" 8.3
 	"thrusting energy" 0.46
 	"thrusting heat" 3
 	"flare sprite" "effect/coalition flare/small"
@@ -2104,7 +2176,7 @@
 	"mass" 32
 	"outfit space" -32
 	"engine capacity" -32
-	"thrust" 26.2
+	"thrust" 30.6
 	"thrusting energy" 1.7
 	"thrusting heat" 11
 	"flare sprite" "effect/coalition flare/large"
@@ -2126,7 +2198,7 @@
 	"mass" 9
 	"outfit space" -9
 	"weapon capacity" -9
-	"reverse thrust" 6.6
+	"reverse thrust" 8.3
 	"reverse thrusting energy" 0.46
 	"reverse thrusting heat" 3
 	"reverse flare sprite" "effect/coalition flare/small"
@@ -2149,7 +2221,7 @@
 	"mass" 32
 	"outfit space" -32
 	"weapon capacity" -32
-	"reverse thrust" 26.2
+	"reverse thrust" 30.6
 	"reverse thrusting energy" 1.7
 	"reverse thrusting heat" 11
 	"reverse flare sprite" "effect/coalition flare/large"
@@ -2238,11 +2310,35 @@
 
 
 <details>
+<summary>data/coalition/coalition outfits.txt | outfit "Anti-Materiel Gun"</summary>
+<pre>outfit "Anti-Materiel Gun"
+	category "Hand to Hand"
+	cost 128600
+	thumbnail "outfit/anti-materiel gun"
+	"capture attack" 3.6
+	"capture defense" 1.8
+	"unplunderable" 1
+	description "Easy to use and relatively cheap to manufacture, these weapons were born by refurbishing the Heliarchs' favored arms, with the new barrel shaping the energy into deadly blasts that make short work of even the toughest body armor."
+</pre>
+</details>
+
+
+<details>
 <summary>data/coalition/coalition outfits.txt | outfit "Coalition License"</summary>
 <pre>outfit "Coalition License"
 	category "Licenses"
 	thumbnail "outfit/coalition license"
 	description "Completed a lot of Coalition jobs and received permission to purchase civilian technology and ships."
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/coalition outfits.txt | outfit "Heliarch License"</summary>
+<pre>outfit "Heliarch License"
+	category "Licenses"
+	thumbnail "outfit/heliarch license"
+	description "An ornate circlet of gold and platinum, it serves as both a symbol of rank and as a license to access exclusive Heliarch facilities. Custom-made to fit a human's head, it's surprisingly light and comfortable."
 </pre>
 </details>
 
@@ -3179,7 +3275,7 @@
 	"mass" 31
 	"outfit space" -31
 	"engine capacity" -31
-	"thrust" 9.7
+	"thrust" 11.57
 	"thrusting energy" 0.7
 	"thrusting heat" 1.5
 	"flare sprite" "effect/vi flare/small"
@@ -3223,7 +3319,7 @@
 	"mass" 51
 	"outfit space" -51
 	"engine capacity" -51
-	"thrust" 18.7
+	"thrust" 20.4
 	"thrusting energy" 1.25
 	"thrusting heat" 2.9
 	"flare sprite" "effect/vi flare/medium"
@@ -3320,7 +3416,7 @@
 	"mass" 21
 	"outfit space" -21
 	"engine capacity" -21
-	"thrust" 5.1
+	"thrust" 6.55
 	"thrusting energy" 0.4
 	"thrusting heat" 1
 	"flare sprite" "effect/scin flare/tiny"
@@ -3349,7 +3445,7 @@
 	"mass" 25
 	"outfit space" -25
 	"engine capacity" -25
-	"thrust" 11.1
+	"thrust" 13.54
 	"thrusting energy" 0.85
 	"thrusting heat" 2.25
 	"flare sprite" "effect/scin flare/small"
@@ -3395,7 +3491,7 @@
 	"mass" 45
 	"outfit space" -45
 	"engine capacity" -45
-	"thrust" 24
+	"thrust" 26.4
 	"thrusting energy" 1.7
 	"thrusting heat" 4.95
 	"flare sprite" "effect/scin flare/med"
@@ -4218,8 +4314,8 @@
 		"hit force" 120
 		"shield damage" 168
 		"hull damage" 60
-		"ion damage" 5
-		"scrambling damage" 5
+		"ion damage" 6
+		"scrambling damage" 6
 	description "Ion cannons do not inflict as much damage as some other weapons, but they disrupt the electrical systems on any ship they hit, draining its energy and causing its weapons to jam. If a ship has sizable battery reserves, this may have little effect, but for a ship running at near its energy generation capacity an ion strike can take it out of the battle for a few seconds while it recovers, or otherwise cause it to have difficulty firing its weapons."
 </pre>
 </details>
@@ -4289,7 +4385,7 @@
 		"ion damage" 17.5
 		"scrambling damage" 10
 	description "This weapon vastly improves upon the ionization capabilities of the Ion Cannon, while doing less raw damage and not having nearly the weapon jamming affects. It is, however, also turret-mounted, enabling it to fire at enemies in any direction instead of just those directly ahead."
-	description "	This design cannot yet be mass produced, but those that have been produced are prized by the few lucky enough to possess them."
+	description "	This design cannot yet be mass-produced, but those that have been produced are prized by the few lucky enough to possess them."
 </pre>
 </details>
 
@@ -4297,12 +4393,13 @@
 <details>
 <summary>data/hai/hai outfits.txt | outfit "Railgun Slug"</summary>
 <pre>outfit "Railgun Slug"
+	"display name" "Skipper Railgun Slug"
 	category "Ammunition"
 	cost 13
 	thumbnail "outfit/railslug"
 	"mass" 0.003
 	"railgun slug capacity" -1
-	description "These Railgun Slugs incorporate energy-discharging capacitors that deal a small amount of ion damage to their target. Although not terribly damaging, this ion damage combined with the significant recoil that each shot has turns Flea drones into effective long-range support ships."
+	description "Skipper Railgun Slugs incorporate energy-discharging capacitors that deal a small amount of ion damage to their target. Although not terribly damaging, this ion damage combined with the significant recoil that each shot has turns Flea drones into effective long-range support ships."
 </pre>
 </details>
 
@@ -4310,6 +4407,7 @@
 <details>
 <summary>data/hai/hai outfits.txt | outfit "Railgun Slug Rack"</summary>
 <pre>outfit "Railgun Slug Rack"
+	"display name" "Skipper Slug Rack"
 	category "Ammunition"
 	cost 15000
 	thumbnail "outfit/railslug rack"
@@ -4317,7 +4415,7 @@
 	"outfit space" -3
 	"railgun slug capacity" 500
 	ammo "Railgun Slug"
-	description "The railgun slug rack is used to store and load extra railgun ammunition."
+	description "This railgun slug rack is used to store and load extra Skipper Railgun ammunition."
 </pre>
 </details>
 
@@ -4325,6 +4423,7 @@
 <details>
 <summary>data/hai/hai outfits.txt | outfit "Railgun"</summary>
 <pre>outfit "Railgun"
+	"display name" "Skipper Railgun"
 	category "Secondary Weapons"
 	cost 20000
 	thumbnail "outfit/railgun"
@@ -4351,7 +4450,7 @@
 		"firing force" 70
 		"stream"
 		"submunition" "rslug" 1
-	description "The Hai designed this weapon to best complement their Flea drones. Each Railgun provides a significant amount of force upon firing, pushing the Flea drone backwards and therefore forcing it to keep its distance from its target."
+	description "The Hai designed this weapon to best complement their Flea drones. Each Skipper Railgun provides a significant amount of force upon firing, pushing the Flea drone backwards and therefore forcing it to keep its distance from its target."
 	description "	Flea drone pilots joke that they provide more thrust than engines of similar size, so Unfettered should be using them at the back of their ships. There's probably a cultural component to the joke that many miss, because it's told quite often and the Hai laugh hysterically about it - every time."
 </pre>
 </details>
@@ -4757,7 +4856,7 @@
 	"mass" 22
 	"outfit space" -22
 	"engine capacity" -22
-	"thrust" 7.3
+	"thrust" 9.8
 	"thrusting energy" .87
 	"thrusting heat" 1.7
 	"turn" 244
@@ -4783,7 +4882,7 @@
 	"mass" 18
 	"outfit space" -18
 	"engine capacity" -18
-	"thrust" 12.5
+	"thrust" 15.22
 	"thrusting energy" 1.4
 	"thrusting heat" 2.8
 	"flare sprite" "effect/atomic flare/tiny"
@@ -4803,7 +4902,7 @@
 	"mass" 28
 	"outfit space" -28
 	"engine capacity" -28
-	"thrust" 22.4
+	"thrust" 25.15
 	"thrusting energy" 2.5
 	"thrusting heat" 4.8
 	"flare sprite" "effect/atomic flare/tiny"
@@ -4823,7 +4922,7 @@
 	"mass" 44
 	"outfit space" -44
 	"engine capacity" -44
-	"thrust" 39.4
+	"thrust" 41.65
 	"thrusting energy" 4
 	"thrusting heat" 8.2
 	"flare sprite" "effect/atomic flare/small"
@@ -4863,7 +4962,7 @@
 	"mass" 104
 	"outfit space" -104
 	"engine capacity" -104
-	"thrust" 114.1
+	"thrust" 108.85
 	"thrusting energy" 10.4
 	"thrusting heat" 22.6
 	"flare sprite" "effect/atomic flare/large"
@@ -4883,7 +4982,7 @@
 	"mass" 18
 	"outfit space" -18
 	"weapon capacity" -18
-	"reverse thrust" 12.5
+	"reverse thrust" 15.22
 	"reverse thrusting energy" 1.4
 	"reverse thrusting heat" 2.8
 	"reverse flare sprite" "effect/atomic flare/tiny"
@@ -4903,7 +5002,7 @@
 	"mass" 28
 	"outfit space" -28
 	"weapon capacity" -28
-	"reverse thrust" 22.4
+	"reverse thrust" 25.15
 	"reverse thrusting energy" 2.5
 	"reverse thrusting heat" 4.8
 	"reverse flare sprite" "effect/atomic flare/tiny"
@@ -4923,7 +5022,7 @@
 	"mass" 44
 	"outfit space" -44
 	"weapon capacity" -44
-	"reverse thrust" 39.4
+	"reverse thrust" 41.65
 	"reverse thrusting energy" 4
 	"reverse thrusting heat" 8.2
 	"reverse flare sprite" "effect/atomic flare/small"
@@ -5091,6 +5190,8 @@
 <summary>data/human/engines.txt | outfit "Volcano Afterburner"</summary>
 <pre>outfit "Volcano Afterburner"
 	category "Engines"
+	series "Human: Afterburners"
+	index 10
 	"cost" 70000
 	thumbnail "outfit/afterburner"
 	"mass" 10
@@ -5109,6 +5210,8 @@
 <summary>data/human/engines.txt | outfit "Caldera Afterburner"</summary>
 <pre>outfit "Caldera Afterburner"
 	category "Engines"
+	series "Human: Afterburners"
+	index 20
 	"cost" 390000
 	thumbnail "outfit/caldera afterburner"
 	"mass" 37
@@ -5127,6 +5230,8 @@
 <summary>data/human/engines.txt | outfit "Ionic Afterburner"</summary>
 <pre>outfit "Ionic Afterburner"
 	category "Engines"
+	series "Human: Afterburners"
+	index 30
 	"cost" 340000
 	thumbnail "outfit/ionic afterburner"
 	"mass" 16
@@ -5147,12 +5252,14 @@
 <pre>outfit "X1050 Ion Engines"
 	plural "X1050 Ion Engines"
 	category "Engines"
+	series "Human: Ion"
+	index 10
 	"cost" 20000
 	thumbnail "outfit/tiny ion engines"
 	"mass" 20
 	"outfit space" -20
 	"engine capacity" -20
-	"thrust" 4.8
+	"thrust" 6.2
 	"thrusting energy" .4
 	"thrusting heat" .6
 	"turn" 132
@@ -5173,12 +5280,14 @@
 <summary>data/human/engines.txt | outfit "X1700 Ion Thruster"</summary>
 <pre>outfit "X1700 Ion Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 17
 	"cost" 12000
 	thumbnail "outfit/tiny ion thruster"
 	"mass" 16
 	"outfit space" -16
 	"engine capacity" -16
-	"thrust" 7.2
+	"thrust" 9.03
 	"thrusting energy" .6
 	"thrusting heat" .9
 	"flare sprite" "effect/ion flare/tiny"
@@ -5194,12 +5303,14 @@
 <summary>data/human/engines.txt | outfit "X2700 Ion Thruster"</summary>
 <pre>outfit "X2700 Ion Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 27
 	"cost" 26000
 	thumbnail "outfit/small ion thruster"
 	"mass" 27
 	"outfit space" -27
 	"engine capacity" -27
-	"thrust" 13.8
+	"thrust" 16.05
 	"thrusting energy" 1.1
 	"thrusting heat" 1.7
 	"flare sprite" "effect/ion flare/small"
@@ -5215,12 +5326,14 @@
 <summary>data/human/engines.txt | outfit "X3700 Ion Thruster"</summary>
 <pre>outfit "X3700 Ion Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 37
 	"cost" 58000
 	thumbnail "outfit/medium ion thruster"
 	"mass" 46
 	"outfit space" -46
 	"engine capacity" -46
-	"thrust" 26.5
+	"thrust" 28.85
 	"thrusting energy" 1.9
 	"thrusting heat" 3.2
 	"flare sprite" "effect/ion flare/medium"
@@ -5236,6 +5349,8 @@
 <summary>data/human/engines.txt | outfit "X4700 Ion Thruster"</summary>
 <pre>outfit "X4700 Ion Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 47
 	"cost" 128000
 	thumbnail "outfit/large ion thruster"
 	"mass" 79
@@ -5257,12 +5372,14 @@
 <summary>data/human/engines.txt | outfit "X5700 Ion Thruster"</summary>
 <pre>outfit "X5700 Ion Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 57
 	"cost" 281000
 	thumbnail "outfit/huge ion thruster"
 	"mass" 121
 	"outfit space" -121
 	"engine capacity" -121
-	"thrust" 97.8
+	"thrust" 89.95
 	"thrusting energy" 6.3
 	"thrusting heat" 11.7
 	"flare sprite" "effect/ion flare/huge"
@@ -5278,6 +5395,8 @@
 <summary>data/human/engines.txt | outfit "X1200 Ion Steering"</summary>
 <pre>outfit "X1200 Ion Steering"
 	category "Engines"
+	series "Human: Ion"
+	index 12
 	"cost" 10000
 	thumbnail "outfit/tiny ion steering"
 	"mass" 12
@@ -5299,6 +5418,8 @@
 <summary>data/human/engines.txt | outfit "X2200 Ion Steering"</summary>
 <pre>outfit "X2200 Ion Steering"
 	category "Engines"
+	series "Human: Ion"
+	index 22
 	"cost" 21000
 	thumbnail "outfit/small ion steering"
 	"mass" 20
@@ -5320,6 +5441,8 @@
 <summary>data/human/engines.txt | outfit "X3200 Ion Steering"</summary>
 <pre>outfit "X3200 Ion Steering"
 	category "Engines"
+	series "Human: Ion"
+	index 32
 	"cost" 46000
 	thumbnail "outfit/medium ion steering"
 	"mass" 35
@@ -5341,6 +5464,8 @@
 <summary>data/human/engines.txt | outfit "X4200 Ion Steering"</summary>
 <pre>outfit "X4200 Ion Steering"
 	category "Engines"
+	series "Human: Ion"
+	index 42
 	"cost" 102000
 	thumbnail "outfit/large ion steering"
 	"mass" 59
@@ -5362,6 +5487,8 @@
 <summary>data/human/engines.txt | outfit "X5200 Ion Steering"</summary>
 <pre>outfit "X5200 Ion Steering"
 	category "Engines"
+	series "Human: Ion"
+	index 52
 	"cost" 225000
 	thumbnail "outfit/huge ion steering"
 	"mass" 89
@@ -5383,12 +5510,14 @@
 <summary>data/human/engines.txt | outfit "X1100 Ion Reverse Thruster"</summary>
 <pre>outfit "X1100 Ion Reverse Thruster"
 	category "Engines"
+	series "Human: Ion"
+	index 18
 	"cost" 12000
 	thumbnail "outfit/reverse thruster ion"
 	"mass" 16
 	"outfit space" -16
 	"weapon capacity" -16
-	"reverse thrust" 7.2
+	"reverse thrust" 9.03
 	"reverse thrusting energy" .6
 	"reverse thrusting heat" .9
 	"reverse flare sprite" "effect/ion flare/tiny"
@@ -5404,12 +5533,14 @@
 <summary>data/human/engines.txt | outfit "Chipmunk Plasma Thruster"</summary>
 <pre>outfit "Chipmunk Plasma Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 15
 	"cost" 20000
 	thumbnail "outfit/tiny plasma thruster"
 	"mass" 20
 	"outfit space" -20
 	"engine capacity" -20
-	"thrust" 11.5
+	"thrust" 14.5
 	"thrusting energy" 1.0
 	"thrusting heat" 1.8
 	"flare sprite" "effect/plasma flare/tiny"
@@ -5425,12 +5556,14 @@
 <summary>data/human/engines.txt | outfit "Greyhound Plasma Thruster"</summary>
 <pre>outfit "Greyhound Plasma Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 25
 	"cost" 45000
 	thumbnail "outfit/small plasma thruster"
 	"mass" 34
 	"outfit space" -34
 	"engine capacity" -34
-	"thrust" 22.1
+	"thrust" 25.9
 	"thrusting energy" 1.8
 	"thrusting heat" 3.4
 	"flare sprite" "effect/plasma flare/small"
@@ -5446,12 +5579,14 @@
 <summary>data/human/engines.txt | outfit "Impala Plasma Thruster"</summary>
 <pre>outfit "Impala Plasma Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 35
 	"cost" 99000
 	thumbnail "outfit/medium plasma thruster"
 	"mass" 58
 	"outfit space" -58
 	"engine capacity" -58
-	"thrust" 42.5
+	"thrust" 46.6
 	"thrusting energy" 3.2
 	"thrusting heat" 6.5
 	"flare sprite" "effect/plasma flare/medium"
@@ -5467,6 +5602,8 @@
 <summary>data/human/engines.txt | outfit "Orca Plasma Thruster"</summary>
 <pre>outfit "Orca Plasma Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 45
 	"cost" 217000
 	thumbnail "outfit/large plasma thruster"
 	"mass" 98
@@ -5488,12 +5625,14 @@
 <summary>data/human/engines.txt | outfit "Tyrant Plasma Thruster"</summary>
 <pre>outfit "Tyrant Plasma Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 55
 	"cost" 389000
 	thumbnail "outfit/huge plasma thruster"
 	"mass" 129
 	"outfit space" -129
 	"engine capacity" -129
-	"thrust" 127.6
+	"thrust" 120.15
 	"thrusting energy" 8.6
 	"thrusting heat" 19.1
 	"flare sprite" "effect/plasma flare/huge"
@@ -5509,6 +5648,8 @@
 <summary>data/human/engines.txt | outfit "Chipmunk Plasma Steering"</summary>
 <pre>outfit "Chipmunk Plasma Steering"
 	category "Engines"
+	series "Human: Plasma"
+	index 12
 	"cost" 16000
 	thumbnail "outfit/tiny plasma steering"
 	"mass" 15
@@ -5530,6 +5671,8 @@
 <summary>data/human/engines.txt | outfit "Greyhound Plasma Steering"</summary>
 <pre>outfit "Greyhound Plasma Steering"
 	category "Engines"
+	series "Human: Plasma"
+	index 22
 	"cost" 36000
 	thumbnail "outfit/small plasma steering"
 	"mass" 26
@@ -5551,6 +5694,8 @@
 <summary>data/human/engines.txt | outfit "Impala Plasma Steering"</summary>
 <pre>outfit "Impala Plasma Steering"
 	category "Engines"
+	series "Human: Plasma"
+	index 32
 	"cost" 79000
 	thumbnail "outfit/medium plasma steering"
 	"mass" 43
@@ -5572,6 +5717,8 @@
 <summary>data/human/engines.txt | outfit "Orca Plasma Steering"</summary>
 <pre>outfit "Orca Plasma Steering"
 	category "Engines"
+	series "Human: Plasma"
+	index 42
 	"cost" 174000
 	thumbnail "outfit/large plasma steering"
 	"mass" 74
@@ -5593,6 +5740,8 @@
 <summary>data/human/engines.txt | outfit "Tyrant Plasma Steering"</summary>
 <pre>outfit "Tyrant Plasma Steering"
 	category "Engines"
+	series "Human: Plasma"
+	index 52
 	"cost" 324700
 	thumbnail "outfit/huge plasma steering"
 	"mass" 101
@@ -5614,12 +5763,14 @@
 <summary>data/human/engines.txt | outfit "Capybara Reverse Thruster"</summary>
 <pre>outfit "Capybara Reverse Thruster"
 	category "Engines"
+	series "Human: Plasma"
+	index 18
 	"cost" 20000
 	thumbnail "outfit/reverse thruster plasma"
 	"mass" 20
 	"outfit space" -20
 	"weapon capacity" -20
-	"reverse thrust" 11.5
+	"reverse thrust" 14.5
 	"reverse thrusting energy" 1.0
 	"reverse thrusting heat" 1.8
 	"reverse flare sprite" "effect/plasma flare/tiny"
@@ -5635,12 +5786,14 @@
 <summary>data/human/engines.txt | outfit "A120 Atomic Thruster"</summary>
 <pre>outfit "A120 Atomic Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 15
 	"cost" 140000
 	thumbnail "outfit/tiny atomic thruster"
 	"mass" 22
 	"outfit space" -22
 	"engine capacity" -22
-	"thrust" 15.4
+	"thrust" 18.68
 	"thrusting energy" 1.8
 	"thrusting heat" 3.5
 	"flare sprite" "effect/atomic flare/tiny"
@@ -5655,12 +5808,14 @@
 <summary>data/human/engines.txt | outfit "A250 Atomic Thruster"</summary>
 <pre>outfit "A250 Atomic Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 25
 	"cost" 280000
 	thumbnail "outfit/small atomic thruster"
 	"mass" 34
 	"outfit space" -34
 	"engine capacity" -34
-	"thrust" 27.3
+	"thrust" 30.625
 	"thrusting energy" 3.1
 	"thrusting heat" 6.1
 	"flare sprite" "effect/atomic flare/small"
@@ -5675,12 +5830,14 @@
 <summary>data/human/engines.txt | outfit "A370 Atomic Thruster"</summary>
 <pre>outfit "A370 Atomic Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 35
 	"cost" 560000
 	thumbnail "outfit/medium atomic thruster"
 	"mass" 53
 	"outfit space" -53
 	"engine capacity" -53
-	"thrust" 47.6
+	"thrust" 50.25
 	"thrusting energy" 5.1
 	"thrusting heat" 10.3
 	"flare sprite" "effect/atomic flare/medium"
@@ -5695,6 +5852,8 @@
 <summary>data/human/engines.txt | outfit "A520 Atomic Thruster"</summary>
 <pre>outfit "A520 Atomic Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 45
 	"cost" 1120000
 	thumbnail "outfit/large atomic thruster"
 	"mass" 82
@@ -5715,12 +5874,14 @@
 <summary>data/human/engines.txt | outfit "A860 Atomic Thruster"</summary>
 <pre>outfit "A860 Atomic Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 55
 	"cost" 2240000
 	thumbnail "outfit/huge atomic thruster"
 	"mass" 127
 	"outfit space" -127
 	"engine capacity" -127
-	"thrust" 139.7
+	"thrust" 133.3
 	"thrusting energy" 13.3
 	"thrusting heat" 29.1
 	"flare sprite" "effect/atomic flare/huge"
@@ -5735,6 +5896,8 @@
 <summary>data/human/engines.txt | outfit "A125 Atomic Steering"</summary>
 <pre>outfit "A125 Atomic Steering"
 	category "Engines"
+	series "Human: Atomic"
+	index 12
 	"cost" 120000
 	thumbnail "outfit/tiny atomic steering"
 	"mass" 16
@@ -5755,6 +5918,8 @@
 <summary>data/human/engines.txt | outfit "A255 Atomic Steering"</summary>
 <pre>outfit "A255 Atomic Steering"
 	category "Engines"
+	series "Human: Atomic"
+	index 22
 	"cost" 240000
 	thumbnail "outfit/small atomic steering"
 	"mass" 25
@@ -5775,6 +5940,8 @@
 <summary>data/human/engines.txt | outfit "A375 Atomic Steering"</summary>
 <pre>outfit "A375 Atomic Steering"
 	category "Engines"
+	series "Human: Atomic"
+	index 32
 	"cost" 480000
 	thumbnail "outfit/medium atomic steering"
 	"mass" 38
@@ -5795,6 +5962,8 @@
 <summary>data/human/engines.txt | outfit "A525 Atomic Steering"</summary>
 <pre>outfit "A525 Atomic Steering"
 	category "Engines"
+	series "Human: Atomic"
+	index 42
 	"cost" 960000
 	thumbnail "outfit/large atomic steering"
 	"mass" 60
@@ -5815,6 +5984,8 @@
 <summary>data/human/engines.txt | outfit "A865 Atomic Steering"</summary>
 <pre>outfit "A865 Atomic Steering"
 	category "Engines"
+	series "Human: Atomic"
+	index 52
 	"cost" 1920000
 	thumbnail "outfit/huge atomic steering"
 	"mass" 92
@@ -5835,12 +6006,14 @@
 <summary>data/human/engines.txt | outfit "AR120 Reverse Thruster"</summary>
 <pre>outfit "AR120 Reverse Thruster"
 	category "Engines"
+	series "Human: Atomic"
+	index 18
 	"cost" 140000
 	thumbnail "outfit/reverse thruster"
 	"mass" 22
 	"outfit space" -22
 	"weapon capacity" -22
-	"reverse thrust" 15.4
+	"reverse thrust" 18.68
 	"reverse thrusting energy" 1.8
 	"reverse thrusting heat" 3.5
 	"reverse flare sprite" "effect/atomic flare/tiny"
@@ -6559,7 +6732,7 @@
 <summary>data/human/power.txt | outfit "Supercapacitor"</summary>
 <pre>outfit "Supercapacitor"
 	category "Power"
-	cost 9000
+	cost 1500
 	thumbnail "outfit/supercapacitor"
 	"mass" 2
 	"outfit space" -2
@@ -7395,7 +7568,7 @@
 		"firing energy" 15
 		"firing force" 2
 		"firing heat" 60
-	description "The Proton Gun started out as the Syndicate's attempt to reverse engineer and mass produce a cheap competitor for the Particle Cannon. Unfortunately, they were unable to find a reliable way to keep the beam coherent, but the resulting weapon is still popular with some captains, particularly as an anti-fighter gun."
+	description "The Proton Gun started out as the Syndicate's attempt to reverse engineer and mass-produce a cheap competitor for the Particle Cannon. Unfortunately, they were unable to find a reliable way to keep the beam coherent, but the resulting weapon is still popular with some captains, particularly as an anti-fighter gun."
 </pre>
 </details>
 
@@ -8436,8 +8609,9 @@
 		"turn" 73
 		"shield damage" 120
 		"hull damage" 40
-		"ion damage" 150
-		"scrambling damage" 150
+		"energy damage" 3200
+		"ion damage" 220
+		"scrambling damage" 10
 		"hit force" 50
 		"blast radius" 20
 	description "The Nullifier was one of the largest weapons the Builders ever developed, created specifically to be carried in battle by the Vareti. Although it does almost no damage to shields and hull, one shot is capable of disabling most kinds of reactors in a matter of seconds."
@@ -8770,7 +8944,7 @@
 	"engine capacity" -59
 	"energy consumption" 5.01
 	"heat generation" 1.1
-	"thrust" 37.1
+	"thrust" 38.72
 	"thrusting heat" 2.8
 	"turn" 931.4
 	"turning heat" 1.3
@@ -8797,7 +8971,7 @@
 	"engine capacity" -27
 	"heat generation" 0.6
 	"energy consumption" 2.49
-	"thrust" 15.1
+	"thrust" 16.78
 	"thrusting heat" 1.0
 	"turn" 432.1
 	"turning heat" 0.5
@@ -8876,7 +9050,7 @@
 	"engine capacity" -21
 	"heat generation" 0.3
 	"energy consumption" 0.48
-	"thrust" 11.2
+	"thrust" 12.78
 	"thrusting energy" 1.7
 	"thrusting heat" 1.2
 	"turn" 234.4
@@ -9290,7 +9464,7 @@
 	"mass" 18
 	"outfit space" -18
 	"engine capacity" -18
-	"thrust" 9
+	"thrust" 10.5
 	"thrusting energy" 1.35
 	"thrusting heat" 2.9
 	"turn" 240
@@ -9321,7 +9495,7 @@
 	"turn" 240
 	"turning energy" 0.65
 	"turning heat" 1.95
-	"reverse thrust" 9
+	"reverse thrust" 10.5
 	"reverse thrusting energy" 1.35
 	"reverse thrusting heat" 2.9
 	"steering flare sprite" "effect/korath flare/tiny"
@@ -9346,7 +9520,7 @@
 	"outfit space" -14
 	"engine capacity" -7
 	"weapon capacity" -7
-	"reverse thrust" 11.2
+	"reverse thrust" 13.84
 	"reverse thrusting energy" 1.5
 	"reverse thrusting heat" 3.4
 	"reverse flare sprite" "effect/korath flare/tiny"
@@ -9369,7 +9543,7 @@
 	"outfit space" -24
 	"engine capacity" -12
 	"weapon capacity" -12
-	"reverse thrust" 21.8
+	"reverse thrust" 25.02
 	"reverse thrusting energy" 2.8
 	"reverse thrusting heat" 6.5
 	"reverse flare sprite" "effect/korath flare/small"
@@ -9392,13 +9566,13 @@
 	"outfit space" -40
 	"engine capacity" -20
 	"weapon capacity" -20
-	"reverse thrust" 41.2
+	"reverse thrust" 44.13
 	"reverse thrusting energy" 4.9
 	"reverse thrusting heat" 11.9
 	"reverse flare sprite" "effect/korath flare/medium"
 		"frame rate" 7
 	"reverse flare sound" "plasma medium"
-	description "Dwarfing any reversers in human space, this engine provides a considerable amount of reverse thrust for medium sized Korath ships, where it is most commonly found."
+	description "Dwarfing any reversers in human space, this engine provides a considerable amount of reverse thrust for medium-sized Korath ships, where it is most commonly found."
 	description "	This Korath engine has been modified to be partially installed in a ship's weapon space, allowing it to push the ship in reverse."
 </pre>
 </details>
@@ -9438,7 +9612,7 @@
 	"outfit space" -118
 	"engine capacity" -59
 	"weapon capacity" -59
-	"reverse thrust" 153.4
+	"reverse thrust" 149.4
 	"reverse thrusting energy" 15.8
 	"reverse thrusting heat" 42.6
 	"reverse flare sprite" "effect/korath flare/huge"
@@ -9460,7 +9634,7 @@
 	"mass" 14
 	"outfit space" -14
 	"engine capacity" -14
-	"thrust" 11.2
+	"thrust" 13.84
 	"thrusting energy" 1.5
 	"thrusting heat" 3.4
 	"flare sprite" "effect/korath flare/tiny"
@@ -9481,7 +9655,7 @@
 	"mass" 24
 	"outfit space" -24
 	"engine capacity" -24
-	"thrust" 21.8
+	"thrust" 25.02
 	"thrusting energy" 2.8
 	"thrusting heat" 6.5
 	"flare sprite" "effect/korath flare/small"
@@ -9502,7 +9676,7 @@
 	"mass" 40
 	"outfit space" -40
 	"engine capacity" -40
-	"thrust" 41.2
+	"thrust" 44.13
 	"thrusting energy" 4.9
 	"thrusting heat" 11.9
 	"flare sprite" "effect/korath flare/medium"
@@ -9544,7 +9718,7 @@
 	"mass" 118
 	"outfit space" -118
 	"engine capacity" -118
-	"thrust" 153.4
+	"thrust" 149.4
 	"thrusting energy" 15.8
 	"thrusting heat" 42.6
 	"flare sprite" "effect/korath flare/huge"
@@ -9669,7 +9843,7 @@
 	"mass" 19
 	"outfit space" -19
 	"engine capacity" -19
-	"thrust" 16.5
+	"thrust" 19.3
 	"thrusting energy" 2.6
 	"thrusting heat" 3
 	"flare sprite" "effect/efreti flare/tiny"
@@ -9689,7 +9863,7 @@
 	"mass" 33
 	"outfit space" -33
 	"engine capacity" -33
-	"thrust" 32.5
+	"thrust" 35.4
 	"thrusting energy" 5.05
 	"thrusting heat" 5.9
 	"flare sprite" "effect/efreti flare/small"
@@ -9709,7 +9883,7 @@
 	"mass" 57
 	"outfit space" -57
 	"engine capacity" -57
-	"thrust" 63.5
+	"thrust" 64.95
 	"thrusting energy" 9.1
 	"thrusting heat" 11.05
 	"flare sprite" "effect/efreti flare/medium"
@@ -9729,7 +9903,7 @@
 	"mass" 86
 	"outfit space" -86
 	"engine capacity" -86
-	"thrust" 105
+	"thrust" 104.6
 	"thrusting energy" 14
 	"thrusting heat" 18
 	"flare sprite" "effect/efreti flare/large"
@@ -10913,7 +11087,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Zapper"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Zapper"</summary>
 <pre>outfit "Pug Zapper"
 	category "Guns"
 	cost 290000
@@ -10943,7 +11117,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Zapper Turret"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Zapper Turret"</summary>
 <pre>outfit "Pug Zapper Turret"
 	category "Turrets"
 	cost 860000
@@ -10976,7 +11150,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Seeker"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Seeker"</summary>
 <pre>outfit "Pug Seeker"
 	category "Guns"
 	cost 540000
@@ -11013,7 +11187,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Anti-Missile"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Anti-Missile"</summary>
 <pre>outfit "Pug Anti-Missile"
 	category "Turrets"
 	cost 350000
@@ -11038,7 +11212,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Tier 3 Anti-Missile"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Tier 3 Anti-Missile"</summary>
 <pre>outfit "Tier 3 Anti-Missile"
 	category "Turrets"
 	cost 12000000
@@ -11063,7 +11237,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Gridfire Turret"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Gridfire Turret"</summary>
 <pre>outfit "Pug Gridfire Turret"
 	category "Turrets"
 	cost 24000000
@@ -11096,7 +11270,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Akfar Thruster"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Akfar Thruster"</summary>
 <pre>outfit "Pug Akfar Thruster"
 	category "Engines"
 	"cost" 608000
@@ -11104,7 +11278,7 @@
 	"mass" 43
 	"outfit space" -43
 	"engine capacity" -43
-	"thrust" 29.4
+	"thrust" 32.45
 	"thrusting energy" 2.2
 	"thrusting heat" 3.1
 	"flare sprite" "effect/pug flare/medium"
@@ -11116,7 +11290,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Akfar Steering"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Akfar Steering"</summary>
 <pre>outfit "Pug Akfar Steering"
 	category "Engines"
 	"cost" 472000
@@ -11136,7 +11310,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Cormet Thruster"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Cormet Thruster"</summary>
 <pre>outfit "Pug Cormet Thruster"
 	category "Engines"
 	"cost" 1050000
@@ -11144,7 +11318,7 @@
 	"mass" 60
 	"outfit space" -60
 	"engine capacity" -60
-	"thrust" 46.2
+	"thrust" 47.85
 	"thrusting energy" 3.3
 	"thrusting heat" 4.6
 	"flare sprite" "effect/pug flare/large"
@@ -11156,7 +11330,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Cormet Steering"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Cormet Steering"</summary>
 <pre>outfit "Pug Cormet Steering"
 	category "Engines"
 	"cost" 880000
@@ -11176,7 +11350,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Lohmar Thruster"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Lohmar Thruster"</summary>
 <pre>outfit "Pug Lohmar Thruster"
 	category "Engines"
 	"cost" 1740000
@@ -11196,7 +11370,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Lohmar Steering"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Lohmar Steering"</summary>
 <pre>outfit "Pug Lohmar Steering"
 	category "Engines"
 	"cost" 1580000
@@ -11216,7 +11390,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Biodefenses"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Biodefenses"</summary>
 <pre>outfit "Pug Biodefenses"
 	plural "Pug Biodefenses"
 	category "Hand to Hand"
@@ -11230,7 +11404,7 @@
 
 
 <details>
-<summary>data/pug/pug.txt | outfit "Pug Peacekeeping Staff"</summary>
+<summary>data/pug/pug outfits.txt | outfit "Pug Peacekeeping Staff"</summary>
 <pre>outfit "Pug Peacekeeping Staff"
 	plural "Pug Peacekeeping Staves"
 	category "Hand to Hand"
@@ -11894,7 +12068,7 @@
 	"energy consumption" .4
 	"heat generation" .4
 	"ion resistance" 0.01
-	"scrambling resistance" 0.01
+	"scramble resistance" 0.01
 	description "These crystals, mined on the Remnant planet Viminal, can store a surprising amount of power in a compact form. Crystals pure enough to be used in such a manner are hard to find, however."
 	description "	The capacitors tend to leak small amounts of energy in the form of excess heat. This leaking of energy also results in a quicker dissipation of ionization, granting ships with these crystals some resistance against the occasional ion storms that occur in the Waste."
 </pre>
@@ -11914,7 +12088,7 @@
 	"energy generation" 3.6
 	"heat generation" 6.0
 	"ion resistance" 0.025
-	"scrambling resistance" 0.025
+	"scramble resistance" 0.025
 	description "This quite compact radiothermal generator uses isotopes so radioactive, and so tightly packed together, that it could almost be classified as a nuclear reactor."
 	description "	Although not very impressive in terms of how much energy they produce, Remnant generators have been designed to better handle the energy draining effects of ionization."
 </pre>
@@ -11934,7 +12108,7 @@
 	"energy generation" 12.7
 	"heat generation" 19.8
 	"ion resistance" 0.085
-	"scrambling resistance" 0.085
+	"scramble resistance" 0.085
 	description "Efficient Remnant technology ensures that nearly all the heat produced by this generator's radioisotopes is converted into electricity instead of becoming waste heat."
 	description "	The Remnant took the ion dissipation effects of the crystals found on Viminal and replicated them for their generators in order to help survive the hostile environment of the Ember Waste."
 </pre>
@@ -11954,7 +12128,7 @@
 	"energy generation" 21.9
 	"heat generation" 31.5
 	"ion resistance" 0.14
-	"scrambling resistance" 0.14
+	"scramble resistance" 0.14
 	description "The early Remnant engineers did not trust the finicky and unpredictable nuclear reactors that were then in use in human space, so they instead focused on perfecting the art of radioisotope thermoelectric power."
 	description "	The ion resistance on all Remnant generators not only allows them to bounce back from ion storms more quickly, but also gives their ships a window of time when an ion storm starts where they are not affected, giving them a chance to escape before becoming debilitated by the storm."
 </pre>
@@ -12098,13 +12272,13 @@
 	"mass" 26
 	"outfit space" -26
 	"engine capacity" -26
-	"thrust" 13.5
+	"thrust" 13.8
 	"thrusting energy" 2.05
 	"thrusting heat" 1.95
 	"turn" 369.6
 	"turning energy" 1.05
 	"turning heat" 1.1
-	"reverse thrust" 10.1
+	"reverse thrust" 10.3
 	"reverse thrusting energy" 1.5
 	"reverse thrusting heat" 1.45
 	"slowing resistance" 0.02
@@ -12133,10 +12307,10 @@
 	"mass" 20
 	"outfit space" -20
 	"engine capacity" -20
-	"thrust" 14.4
+	"thrust" 16.55
 	"thrusting energy" 2.1
 	"thrusting heat" 2.0
-	"reverse thrust" 10.8
+	"reverse thrust" 12.4
 	"reverse thrusting energy" 1.6
 	"reverse thrusting heat" 1.5
 	"slowing resistance" 0.012
@@ -12162,10 +12336,10 @@
 	"mass" 39
 	"outfit space" -39
 	"engine capacity" -39
-	"thrust" 31.5
+	"thrust" 34
 	"thrusting energy" 4.4
 	"thrusting heat" 4.25
-	"reverse thrust" 23.6
+	"reverse thrust" 25.5
 	"reverse thrusting energy" 3.3
 	"reverse thrusting heat" 3.2
 	"slowing resistance" 0.024
@@ -12601,7 +12775,7 @@
 	"engine capacity" -38
 	"energy generation" 5.2
 	"heat generation" 19.4
-	"thrust" 15.47
+	"thrust" 17.8
 	"thrusting energy" 1.508
 	"thrusting heat" 2.86
 	"turn" 319.8
@@ -12636,10 +12810,10 @@
 	"turn" 2496.0
 	"turning energy" 4.55
 	"turning heat" 12.35
-	"thrust" 190
+	"thrust" 180.5
 	"thrusting energy" 11
 	"thrusting heat" 33
-	"reverse thrust" 44.8
+	"reverse thrust" 42.6
 	"reverse thrusting energy" 4.9
 	"reverse thrusting heat" 13.3
 	"flare sprite" "effect/fusionflare"
@@ -13424,7 +13598,7 @@
 	"mass" 12
 	"outfit space" -12
 	"engine capacity" -12
-	"thrust" 6.9
+	"thrust" 8.8
 	"thrusting energy" 0.55
 	"thrusting heat" 0.85
 	"cooling" 1.5
@@ -13447,7 +13621,7 @@
 	"mass" 27
 	"outfit space" -27
 	"engine capacity" -27
-	"thrust" 18.5
+	"thrust" 21.3
 	"thrusting energy" 1.3
 	"thrusting heat" 2.4
 	"cooling" 3.6
@@ -13470,7 +13644,7 @@
 	"mass" 42
 	"outfit space" -42
 	"engine capacity" -42
-	"thrust" 33.1
+	"thrust" 35.28
 	"thrusting energy" 2.2
 	"thrusting heat" 4.3
 	"cooling" 6.5
