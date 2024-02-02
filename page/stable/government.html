@@ -223,8 +223,10 @@
 <details>
 <summary>data/governments.txt | government "Deep"</summary>
 <pre>government "Deep"
+	"display name" "Deep Security"
 	swizzle 0
 	"player reputation" -1000
+	"hostile hail" "hostile deep"
 </pre>
 </details>
 
@@ -402,6 +404,7 @@
 	"penalty for"
 		assist 0
 		provoke 10
+		destroy 10
 </pre>
 </details>
 
@@ -420,6 +423,9 @@
 		"Gegno Vi" -0.01
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 </pre>
 </details>
 
@@ -435,9 +441,14 @@
 	"crew defense" 1.5
 	"attitude toward"
 		"Gegno" 1
+		"Gegno Vi (Duelist A)" 1
+		"Gegno Vi (Duelist B)" 1
 		"Gegno Scin" -0.01
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 </pre>
 </details>
 
@@ -456,6 +467,9 @@
 		"Gegno" 1
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 	"foreign penalties for"
 		"Gegno"
 </pre>
@@ -476,6 +490,9 @@
 		"Gegno" 1
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 	"foreign penalties for"
 		"Gegno"
 </pre>
@@ -499,6 +516,9 @@
 		"Gegno Vi (Duelist B)" -0.01
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 </pre>
 </details>
 
@@ -520,6 +540,9 @@
 		"Gegno Vi (Duelist A)" -0.01
 	"penalty for"
 		assist 0
+		disable 0.3
+		board 0.5
+		destroy 0.3
 </pre>
 </details>
 
@@ -900,21 +923,7 @@
 <pre>government "Ka'het"
 	swizzle 0
 	language "Ka'het"
-	"attitude toward"
-		"Ka'het (Infighting)" -.01
-		"Remnant" -.01
-		"Quarg" -.01
-		"Pug" -.01
-		"Hai" -.01
-		"Hai (Wormhole Access)" -.01
-		"Korath" -.01
-		"Navy (Oathkeeper)" -.01
-		"Republic" -.01
-		"Free Worlds" -.01
-		"Hai (Unfettered)" -.01
-		"Wanderer" -.01
-		"Coalition" -.01
-		"Heliarch" -.01
+	"default attitude" -.01
 	"player reputation" -1
 </pre>
 </details>
@@ -926,21 +935,7 @@
 	"display name" "Ka'het"
 	swizzle 0
 	language "Ka'het"
-	"attitude toward"
-		"Ka'het" -.01
-		"Remnant" -.01
-		"Quarg" -.01
-		"Pug" -.01
-		"Hai" -.01
-		"Hai (Wormhole Access)" -.01
-		"Korath" -.01
-		"Navy (Oathkeeper)" -.01
-		"Republic" -.01
-		"Free Worlds" -.01
-		"Hai (Unfettered)" -.01
-		"Wanderer" -.01
-		"Coalition" -.01
-		"Heliarch" -.01
+	"default attitude" -.01
 	"player reputation" -1
 </pre>
 </details>
@@ -1087,6 +1082,27 @@
 <summary>data/governments.txt | government "Lunarium"</summary>
 <pre>government "Lunarium"
 	swizzle 2
+	"crew attack" 1.2
+	"crew defense" 2.7
+	language "Coalition"
+	"player reputation" 1
+	"friendly hail" "friendly lunarium"
+	"friendly disabled hail" "friendly disabled lunarium"
+	"hostile hail" "hostile lunarium"
+	"hostile disabled hail" "hostile disabled lunarium"
+	"attitude toward"
+		"Quarg" .01
+		"Heliarch" -.01
+		"Pirate" -.01
+</pre>
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Lunarium (Hidden)"</summary>
+<pre>government "Lunarium (Hidden)"
+	"display name" "Lunarium"
+	swizzle 5
 	"crew attack" 1.2
 	"crew defense" 2.7
 	language "Coalition"
@@ -1382,6 +1398,8 @@
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
 		"Quantum Shield Generator"
+		ship "Quarg Skylark"
+		ship "Quarg Wardragon"
 </pre>
 </details>
 
@@ -1398,6 +1416,7 @@
 		"Quarg (Kor Efret)" 1
 		"Quarg (Gegno)" 1
 		"Merchant" .01
+		"Kor Sestor" -.01
 		"Hai" .01
 		"Hai (Wormhole Access)" .01
 		"Pirate" -.01
@@ -1414,6 +1433,8 @@
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
 		"Quantum Shield Generator"
+		ship "Quarg Skylark"
+		ship "Quarg Wardragon"
 </pre>
 </details>
 
@@ -1446,6 +1467,8 @@
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
 		"Quantum Shield Generator"
+		ship "Quarg Skylark"
+		ship "Quarg Wardragon"
 </pre>
 </details>
 
@@ -1476,6 +1499,8 @@
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
 		"Quantum Shield Generator"
+		ship "Quarg Skylark"
+		ship "Quarg Wardragon"
 </pre>
 </details>
 

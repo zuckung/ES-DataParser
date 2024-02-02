@@ -705,6 +705,58 @@
 
 
 <details>
+<summary>data/persons.txt | ship "Waverider"</summary>
+<pre>ship "Waverider"
+	sprite "ship/waverider"
+	attributes
+		category "Light Warship"
+		"cost" 3000000
+		"shields" 10000
+		"hull" 7000
+		"required crew" 1
+		"bunks" 1
+		"mass" 150
+		"drag" 1.5
+		"heat dissipation" 1
+		"fuel capacity" 1000
+		"cargo space" 100
+		"outfit space" 346
+		"weapon capacity" 120
+		"engine capacity" 54
+		weapon
+			"blast radius" 340
+			"shield damage" 3400
+			"hull damage" 1700
+			"hit force" 5000
+	outfits
+		"Particle Cannon" 4
+		"S-970 Regenerator"
+		"Dwarf Core"
+		"LP072a Battery Pack"
+		"Liquid Nitrogen Cooler"
+		"Catalytic Ramscoop"
+		"Tactical Scanner"
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Asteroid Scanner"
+		"A120 Atomic Thruster"
+		"A125 Atomic Steering" 2
+		"Scram Drive"
+		"Emotional Baggage"
+	engine 0 56
+	engine -23 64
+	engine 23 64
+	gun -22.5 -56.5 "Particle Cannon"
+	gun 22.5 -56.5 "Particle Cannon"
+	gun -31.5 -7 "Particle Cannon"
+	gun 31.5 -7 "Particle Cannon"
+	description `The Waverider was a ship that was first requested and never used for five years, seven months and twenty-seven days.`
+	description `	Its disappointment was so immense, it willed itself into being.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_deprecated/deprecated ships.txt | ship "Korath Dredger"</summary>
 <pre>ship "Korath Dredger"
 	sprite "ship/dredger"
@@ -6885,7 +6937,7 @@
 	explode "large explosion" 16
 	explode "huge explosion" 4
 	"final explode" "final explosion medium"
-	description `A design nearly as old as the Aphid, practically no new Cicadas have been built in recent memory; it is so reliable that the second-hand market is saturated Cicadas that have outlived not just one pilot, but in many cases multiple whole lineages of Hai that have owned one and passed it down through the generations. This feature is likely the main factor which has kept the popularity of the Scarab in check as well as defining the Yeer e Ki shipyard's motto: "Service for Life".`
+	description `A design nearly as old as the Aphid, practically no new Cicadas have been built in recent memory; it is so reliable that the second-hand market is saturated Cicadas that have outlived not just one pilot, but in many cases multiple whole lineages of Hai that have owned one and passed it down through the generations. This feature is likely the main factor which has kept the popularity of the Scarab in check as well as defining the Yeer e Ki shipyard's motto: "Service for Life."`
 </pre>
 </details>
 
@@ -9119,6 +9171,51 @@
 	turret 7 -4 "Heavy Laser Turret"
 	turret -23 14 "Heavy Laser Turret"
 	turret 23 14 "Heavy Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/kestrel.txt | ship "Kestrel" "Kestrel (More Bays)"</summary>
+<pre>ship "Kestrel" "Kestrel (More Bays)"
+	sprite "ship/kestrelc"
+	thumbnail "thumbnail/kestrelc"
+	add attributes
+		"mass" 60
+		"weapon capacity" -20
+	outfits
+		"Particle Cannon" 2
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret" 4
+		"Fusion Reactor"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Liquid Nitrogen Cooler"
+		"Tactical Scanner" 2
+		"Orca Plasma Thruster"
+		"Orca Plasma Steering"
+		"Hyperdrive"
+	gun -73.5 46 "Torpedo Launcher"
+	gun 73.5 46 "Torpedo Launcher"
+	gun -29.5 52 "Particle Cannon"
+	gun 29.5 52 "Particle Cannon"
+	turret -8 -10.5 "Heavy Laser Turret"
+	turret 8 -10.5 "Heavy Laser Turret"
+	turret -20.5 9 "Heavy Laser Turret"
+	turret 20.5 9 "Heavy Laser Turret"
+	bay "Fighter" -46 106
+		"launch effect" "human internal"
+	bay "Fighter" 46 106
+		"launch effect" "human internal"
+	bay "Fighter" -62 78
+		"launch effect" "human internal"
+	bay "Fighter" 62 78
+		"launch effect" "human internal"
+	bay "Fighter" -56 70
+		"launch effect" "human internal"
+	bay "Fighter" 56 70
+		"launch effect" "human internal"
 </pre>
 </details>
 
@@ -11811,6 +11908,57 @@
 
 
 <details>
+<summary>data/human/ships.txt | ship "Enforcer"</summary>
+<pre>ship "Enforcer"
+	sprite "ship/enforcer"
+	thumbnail "thumbnail/enforcer"
+	attributes
+		category "Light Warship"
+		"cost" 490000
+		"shields" 2300
+		"hull" 1100
+		"required crew" 3
+		"bunks" 5
+		"mass" 130
+		"drag" 2.9
+		"heat dissipation" .7
+		"fuel capacity" 400
+		"cargo space" 30
+		"outfit space" 210
+		"weapon capacity" 55
+		"engine capacity" 60
+		weapon
+			"blast radius" 34
+			"shield damage" 340
+			"hull damage" 170
+			"hit force" 510
+	outfits
+		"Energy Blaster" 4
+		"Laser Turret"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Hyperdrive"
+	engine 0 39
+	gun -11 -52
+	gun 11 -52
+	gun -5.5 -48
+	gun 5.5 -48
+	turret 0 -0.5
+	leak "leak" 40 30
+	leak "flame" 50 60
+	explode "tiny explosion" 8
+	explode "small explosion" 12
+	explode "medium explosion" 4
+	description `Prior to the formation of the galactic Republic, many star systems were owned by "governing corporate entities," with the vast majority of space being inaccessible to private citizens. The only exception to this rule were the pirate bands, whose few ships were often stolen or rebellious corporate fleets of their own, yet who had an outsized impact on interstellar trade. The necessity for corporations to protect their operations meant that Enforcer was one of the most common vessels used for security and defense. The ship boasts an armament of four gun ports and a turreted mount, all packed on a small but defensible frame that was powerful for its time.`
+	description `	Although no longer on the market, the Enforcer finds itself in the possession of a small number of merchants and, ironically, various groups of pirates, as an aging combat ship easily outperformed by other light warships or even interceptors of a similar size.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Falcon"</summary>
 <pre>ship "Falcon"
 	sprite "ship/falcon"
@@ -12583,6 +12731,62 @@
 
 
 <details>
+<summary>data/human/ships.txt | ship "Hogshead"</summary>
+<pre>ship "Hogshead"
+	sprite "ship/hogshead"
+	thumbnail "thumbnail/hogshead"
+	attributes
+		category "Space Liner"
+		"cost" 3150000
+		"shields" 3200
+		"hull" 1900
+		"required crew" 18
+		"bunks" 84
+		"mass" 210
+		"drag" 4.3
+		"heat dissipation" .55
+		"fuel capacity" 600
+		"cargo space" 45
+		"outfit space" 320
+		"weapon capacity" 80
+		"engine capacity" 90
+		weapon
+			"blast radius" 51
+			"shield damage" 510
+			"hull damage" 255
+			"hit force" 765
+	outfits
+		"Heavy Anti-Missile Turret"
+		"Anti-Missile Turret"
+		"S3 Thermionic"
+		"KP-6 Photovoltaic Array" 2
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Small Radar Jammer" 2
+		"Luxury Accommodations"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+	engine 34 42
+	engine -34 42
+	gun -17.5 -79.5
+	gun 17.5 -79.5
+	turret 0 -44 "Heavy Anti-Missile Turret"
+	turret 0 63 "Anti-Missile Turret"
+	leak "leak" 50 40
+	leak "big leak" 70 40
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+	description `First manufactured by a forgotten shipyard many centuries ago, the Hogshead got its iconic name from the keg-like shape of its engine pods; its design was a hot topic of discussion for captains everywhere. The ship quickly became popular after first being released for consumer purchase and was commonly seen around various systems as the go-to "space bus" in human space.`
+	description `	Unfortunately, only a few decades after introducing the ship, the shipyard went bankrupt and was never heard from again, leaving the Hogshead to history as their one-hit-wonder. In the current era, Hogsheads are much less common; they are considered "unsightly" compared to modern vessels such as the Star Queen, though a few places in human space still sell them.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Lance"</summary>
 <pre>ship "Lance"
 	sprite "ship/lance"
@@ -12814,6 +13018,42 @@
 	explode "medium explosion" 15
 	"final explode" "final explosion small"
 	description "After their Quicksilver light warship with its armament of Particle Cannons became a large success with convoy escorts and planetary defense forces, Megaparsec decided to develop a larger ship with similar maneuverability but heavier firepower. The Manta is the result: a ship with enough long-range firepower that fleeing from a battle with it is almost impossible."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/ships.txt | ship "Mining Drone"</summary>
+<pre>ship "Mining Drone"
+	sprite "ship/mining drone"
+	thumbnail "thumbnail/mining drone"
+	attributes
+		category "Drone"
+		"cost" 58000
+		"hull" 300
+		"automaton" 1
+		"mass" 12
+		"drag" .55
+		"heat dissipation" .8
+		"outfit space" 62
+		"weapon capacity" 12
+		"engine capacity" 28
+		weapon
+			"blast radius" 3
+			"shield damage" 30
+			"hull damage" 15
+			"hit force" 45
+	outfits
+		"Mining Laser"
+		"nGVF-AA Fuel Cell"
+		"Supercapacitor"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+	engine 0 22 0.9
+	gun 0 -22
+	explode "tiny explosion" 10
+	description "The semi-autonomous Mining Drone is used by the Syndicate alongside the Sunder mining vessel in a supportive role. Not being much more than a Mining Laser with an engine stuck to the rear of it, these drones do not last long in combat with other ships due to how fragile they are."
+	description "	Drones do not come equipped with a hyperdrive. You cannot carry a drone unless you have a ship in your fleet with a drone bay."
 </pre>
 </details>
 
@@ -13421,6 +13661,63 @@
 
 
 <details>
+<summary>data/human/ships.txt | ship "Saber"</summary>
+<pre>ship "Saber"
+	sprite "ship/saber"
+	thumbnail "thumbnail/saber"
+	attributes
+		category "Medium Warship"
+		"cost" 2200000
+		"shields" 4600
+		"hull" 2600
+		"required crew" 16
+		"bunks" 25
+		"mass" 370
+		"drag" 6
+		"heat dissipation" .5
+		"fuel capacity" 600
+		"cargo space" 30
+		"outfit space" 280
+		"weapon capacity" 105
+		"engine capacity" 90
+		weapon
+			"blast radius" 72
+			"shield damage" 720
+			"hull damage" 360
+			"hit force" 1080
+	outfits
+		"Beam Laser" 3
+		"Javelin Pod" 2
+		"Javelin" 600
+		"Javelin Storage Crate" 2
+		"Blaster Turret"
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	engine 0 105
+	gun -10.5 -105 "Beam Laser"
+	gun 0 -105 "Beam Laser"
+	gun 10.5 -105 "Beam Laser"
+	gun -5 -104 "Javelin Pod"
+	gun 5 -104 "Javelin Pod"
+	turret 0 27.5 "Blaster Turret"
+	leak "leak" 60 60
+	leak "flame" 40 80
+	leak "big leak" 40 20
+	explode "tiny explosion" 10
+	explode "small explosion" 24
+	explode "medium explosion" 28
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+	description "During the caravan era, a boom of economic development spread along the paths of more heavily armed and technologically advanced merchant fleets originating from the Deep, which resulted in ships such as the Saber being developed. This medium warship was one of the powerhouses of military might in its time, armed to the teeth with five gun ports in the nose and a dorsal turret mount to fire at anything not in front of it. As pirates began to join together in larger war bands in response to the more heavily defended merchants, the Saber became popular amongst them as well. Unlike other ships such as the Firebird, it slowly faded out as competition rose, but it is nevertheless cherished by those who still own one."
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Scout"</summary>
 <pre>ship "Scout"
 	sprite "ship/scout"
@@ -13852,6 +14149,64 @@
 
 
 <details>
+<summary>data/human/ships.txt | ship "Sunder"</summary>
+<pre>ship "Sunder"
+	sprite "ship/sunder"
+	thumbnail "thumbnail/sunder"
+	attributes
+		category "Utility"
+		"cost" 1000000
+		"shields" 1200
+		"hull" 1600
+		"required crew" 3
+		"bunks" 5
+		"mass" 160
+		"drag" 3.8
+		"heat dissipation" .7
+		"fuel capacity" 600
+		"cargo space" 80
+		"outfit space" 230
+		"weapon capacity" 50
+		"engine capacity" 90
+		weapon
+			"blast radius" 28
+			"shield damage" 280
+			"hull damage" 140
+			"hit force" 420
+	outfits
+		"Mining Laser" 2
+		"Tractor Beam"
+		"Asteroid Scanner"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	engine -11.5 54
+	engine 11.5 54
+	gun -9.5 -53
+	gun 9.5 -53
+	turret 0 28.5
+	bay "Drone" 0 -14
+		"under"
+		"launch effect" "human external"
+	bay "Drone" 0 38
+		"under"
+		"angle" 180
+		"launch effect" "human external"
+	leak "leak" 60 50
+	leak "flame" 50 80
+	explode "tiny explosion" 20
+	explode "small explosion" 15
+	explode "medium explosion" 15
+	"final explode" "final explosion small"
+	description "The Sunder is a versatile mining platform equipped with dedicated prospecting equipment, most notably an undercarriage that supports two Mining Drones. The lineage of this ship can be traced back to the old asteroid mining ships used in the Sol Main Belt centuries ago; however, because of recent Syndicate efforts to further exploit the Core's mineral wealth, the newest model of the Sunder is now manufactured by Syndicated Shipyards."
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Surveillance Drone"</summary>
 <pre>ship "Surveillance Drone"
 	sprite "ship/surveillance drone"
@@ -14102,6 +14457,34 @@
 	add attributes
 		"automaton" 1
 		"self destruct" 1
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Aerie" "Aerie (Miner)"</summary>
+<pre>ship "Aerie" "Aerie (Miner)"
+	outfits
+		"Mining Laser" 2
+		"Mining Laser Turret" 2
+		"Tractor Beam"
+		"Asteroid Scanner" 2
+		"NT-200 Nucleovoltaic"
+		"KP-6 Photovoltaic Panel" 2
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cargo Expansion"
+		"Large Radar Jammer"
+		"Laser Rifle" 3
+		"X1100 Ion Reverse Thruster"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	gun "Mining Laser"
+	gun "Mining Laser"
+	turret "Tractor Beam"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
 </pre>
 </details>
 
@@ -14501,6 +14884,19 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Barb" "Barb (Miner)"</summary>
+<pre>ship "Barb" "Barb (Miner)"
+	outfits
+		"Mining Laser Turret"
+		"nGVF-AA Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"X1050 Ion Engines"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Bastion" "Bastion (Heavy)"</summary>
 <pre>ship "Bastion" "Bastion (Heavy)"
 	outfits
@@ -14544,6 +14940,37 @@
 	turret "Heavy Anti-Missile Turret"
 	turret "Heavy Laser Turret"
 	turret "Heavy Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Bastion" "Bastion (Gatling)"</summary>
+<pre>ship "Bastion" "Bastion (Gatling)"
+	outfits
+		"Plasma Cannon" 2
+		"Twin Modified Blaster" 2
+		"Gatling Turret" 2
+		"Gatling Gun Ammo" 9000
+		"Bullet Boxes" 2
+		"Heavy Anti-Missile Turret"
+		"S3 Thermionic"
+		"nGVF-BB Fuel Cell"
+		"D67-TM Shield Generator"
+		"LP144a Battery Pack"
+		"Water Coolant System"
+		"Laser Rifle" 9
+		"Tactical Scanner"
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	turret "Heavy Anti-Missile Turret"
+	turret "Gatling Turret"
+	turret "Gatling Turret"
+	gun "Plasma Cannon"
+	gun "Twin Modified Blaster"
+	gun "Plasma Cannon"
+	gun "Twin Modified Blaster"
 </pre>
 </details>
 
@@ -14676,6 +15103,38 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Behemoth" "Behemoth (Miner)"</summary>
+<pre>ship "Behemoth" "Behemoth (Miner)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 90
+		"Mining Laser Turret" 4
+		"Tractor Beam" 2
+		"Asteroid Scanner" 2
+		"NT-200 Nucleovoltaic"
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cooling Ducts" 2
+		"Large Radar Jammer"
+		"Cargo Expansion" 2
+		"Laser Rifle" 6
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	turret "Tractor Beam"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Tractor Beam"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Berserker" "Berserker (Afterburner)"</summary>
 <pre>ship "Berserker" "Berserker (Afterburner)"
 	outfits
@@ -14708,6 +15167,27 @@
 		"Ramscoop"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Berserker" "Berserker (CCOR)"</summary>
+<pre>ship "Berserker" "Berserker (CCOR)"
+	outfits
+		"Gatling Gun" 4
+		"Gatling Gun Ammo" 12000
+		"nGVF-CC Fuel Cell"
+		"Water Coolant System"
+		"D41-HY Shield Generator"
+		"Small Radar Jammer" 3
+		"Cargo Scanner" 2
+		"Outfit Scanner" 2
+		"Security Station"
+		"Laser Rifle" 2
+		"Chipmunk Plasma Thruster"
+		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -15651,6 +16131,20 @@
 
 
 <details>
+<summary>data/hai/hai reveal 7 epilogue.txt | ship "Dagger" "Dagger (Miner)"</summary>
+<pre>ship "Dagger" "Dagger (Miner)"
+	outfits
+		"Beam Laser" 2
+		"Small Radar Jammer"
+		"nGVF-BB Fuel Cell"
+		"Supercapacitor"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Dreadnought" "Dreadnought (Jump)"</summary>
 <pre>ship "Dreadnought" "Dreadnought (Jump)"
 	outfits
@@ -15720,6 +16214,26 @@
 		"LP144a Battery Pack"
 		"Fuel Pod" 2
 		"Catalytic Ramscoop"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Enforcer" "Enforcer (CCOR)"</summary>
+<pre>ship "Enforcer" "Enforcer (CCOR)"
+	outfits
+		"Energy Blaster" 4
+		"Javelin Turret"
+		"Javelin" 500
+		"Javelin Storage Crate"
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Cargo Scanner"
+		"Laser Rifle" 3
+		"Greyhound Plasma Steering"
+		"Greyhound Plasma Thruster"
+		"Hyperdrive"
 </pre>
 </details>
 
@@ -15836,6 +16350,39 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Falcon" "Falcon (Javelin)"</summary>
+<pre>ship "Falcon" "Falcon (Javelin)"
+	outfits
+		"Twin Blaster" 4
+		"Heavy Laser Turret"
+		"Heavy Anti-Missile Turret"
+		"Javelin Turret" 2
+		"Javelin" 1100
+		"Javelin Storage Crate" 3
+		"Breeder Reactor"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer"
+		"Liquid Nitrogen Cooler"
+		"Tactical Scanner"
+		"Laser Rifle" 25
+		"Capybara Reverse Thruster"
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Hyperdrive"
+	gun "Twin Blaster"
+	gun "Twin Blaster"
+	gun "Twin Blaster"
+	gun "Twin Blaster"
+	turret "Heavy Laser Turret"
+	turret "Heavy Anti-Missile Turret"
+	turret "Javelin Turret"
+	turret "Javelin Turret"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Firebird" "Firebird (Hai Shields)"</summary>
 <pre>ship "Firebird" "Firebird (Hai Shields)"
 	outfits
@@ -15945,6 +16492,32 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Firebird" "Firebird (CCOR)"</summary>
+<pre>ship "Firebird" "Firebird (CCOR)"
+	outfits
+		"Twin Modified Blaster" 4
+		"Heavy Anti-Missile Turret"
+		"Javelin Turret"
+		"Javelin" 700
+		"Javelin Storage Crate" 3
+		"Fission Reactor"
+		"Water Coolant System"
+		"nGVF-BB Fuel Cell"
+		"Supercapacitor"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer"
+		"Outfit Scanner"
+		"Laser Rifle" 22
+		"Security Station"
+		"Chipmunk Plasma Steering"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Flivver" "Flivver (Hai)"</summary>
 <pre>ship "Flivver" "Flivver (Hai)"
 	outfits
@@ -15985,6 +16558,48 @@
 		"A120 Atomic Thruster"
 		"A125 Atomic Steering"
 		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Freighter" "Freighter (Miner A)"</summary>
+<pre>ship "Freighter" "Freighter (Miner A)"
+	outfits
+		"Mining Laser Turret"
+		"Tractor Beam" 2
+		"Asteroid Scanner"
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D14-RN Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"X1100 Ion Reverse Thruster"
+		"Scram Drive"
+	turret "Tractor Beam"
+	turret "Mining Laser Turret"
+	turret "Tractor Beam"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Freighter" "Freighter (Miner B)"</summary>
+<pre>ship "Freighter" "Freighter (Miner B)"
+	outfits
+		"Mining Laser Turret" 2
+		"Tractor Beam"
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D14-RN Shield Generator"
+		"Asteroid Scanner"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"X1100 Ion Reverse Thruster"
+		"Scram Drive"
+	turret "Mining Laser Turret"
+	turret "Tractor Beam"
+	turret "Mining Laser Turret"
 </pre>
 </details>
 
@@ -16263,8 +16878,8 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Fury" "Fury (Miner)"</summary>
-<pre>ship "Fury" "Fury (Miner)"
+<summary>data/human/variants.txt | ship "Fury" "Fury (Miner A)"</summary>
+<pre>ship "Fury" "Fury (Miner A)"
 	outfits
 		"Heavy Laser" 2
 		"nGVF-CC Fuel Cell"
@@ -16274,6 +16889,28 @@
 		"X2700 Ion Thruster"
 		"X2200 Ion Steering"
 		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Fury" "Fury (Miner B)"</summary>
+<pre>ship "Fury" "Fury (Miner B)"
+	outfits
+		"Mining Laser" 2
+		"Energy Blaster" 2
+		"nGVF-CC Fuel Cell"
+		"LP036a Battery Pack"
+		"Small Radar Jammer" 2
+		"X2700 Ion Thruster"
+		"X2200 Ion Steering"
+		"Hyperdrive"
+	gun "Mining Laser"
+	gun "Mining Laser"
+	gun
+	gun
+	gun "Energy Blaster"
+	gun "Energy Blaster"
 </pre>
 </details>
 
@@ -16343,6 +16980,27 @@
 	turret "Chameleon Anti-Missile"
 	turret "Chameleon Anti-Missile"
 	turret "Quad Blaster Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Hauler II" "Hauler II (CCOR)"</summary>
+<pre>ship "Hauler II" "Hauler II (CCOR)"
+	outfits
+		"Heavy Anti-Missile Turret" 2
+		"Anti-Missile Turret" 2
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle" 12
+		"Security Station" 2
+		"Capybara Reverse Thruster"
+		"Chipmunk Plasma Thruster"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
 </pre>
 </details>
 
@@ -16438,8 +17096,8 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner)"</summary>
-<pre>ship "Hawk" "Hawk (Miner)"
+<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner A)"</summary>
+<pre>ship "Hawk" "Hawk (Miner A)"
 	outfits
 		"Heavy Laser" 2
 		"S3 Thermionic"
@@ -16448,6 +17106,23 @@
 		"Asteroid Scanner"
 		"A120 Atomic Thruster"
 		"A255 Atomic Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner B)"</summary>
+<pre>ship "Hawk" "Hawk (Miner B)"
+	outfits
+		"Mining Laser" 2
+		"nGVF-CC Fuel Cell"
+		"KP-6 Photovoltaic Panel" 2
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -16485,8 +17160,8 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Miner)"</summary>
-<pre>ship "Headhunter" "Headhunter (Miner)"
+<summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Miner A)"</summary>
+<pre>ship "Headhunter" "Headhunter (Miner A)"
 	outfits
 		"Particle Cannon" 2
 		"NT-200 Nucleovoltaic"
@@ -16495,6 +17170,23 @@
 		"Asteroid Scanner"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Miner B)"</summary>
+<pre>ship "Headhunter" "Headhunter (Miner B)"
+	outfits
+		"Mining Laser" 4
+		"Asteroid Scanner"
+		"RT-I Radiothermal"
+		"KP-6 Photovoltaic Array"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -16548,6 +17240,26 @@
 	gun
 	gun "Gatling Gun"
 	gun "Gatling Gun"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Hogshead" "Hogshead (CCOR)"</summary>
+<pre>ship "Hogshead" "Hogshead (CCOR)"
+	outfits
+		"Heavy Anti-Missile Turret" 2
+		"S3 Thermionic"
+		"LP036a Battery Pack"
+		"D67-TM Shield Generator"
+		"Large Radar Jammer"
+		"Outfits Expansion"
+		"Bunk Room" 2
+		"Laser Rifle" 56
+		"Capybara Reverse Thruster"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
 </pre>
 </details>
 
@@ -16696,6 +17408,32 @@
 		"Laser Rifle" 32
 		"Quad Blaster Turret" 2
 		"Armageddon Core"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Leviathan" "Leviathan (CCOR)"</summary>
+<pre>ship "Leviathan" "Leviathan (CCOR)"
+	outfits
+		"Plasma Cannon" 4
+		"Heavy Anti-Missile Turret" 2
+		"Javelin Turret" 2
+		"Javelin" 1200
+		"Javelin Storage Crate" 4
+		"Fusion Reactor"
+		"nGVF-EE Fuel Cell"
+		"Supercapacitor"
+		"Liquid Helium Cooler"
+		"D67-TM Shield Generator"
+		"Outfits Expansion" 3
+		"Tactical Scanner"
+		"Laser Rifle" 64
+		"Security Station"
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Chipmunk Plasma Steering"
+		"Scram Drive"
 </pre>
 </details>
 
@@ -16928,6 +17666,51 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Javelin)"</summary>
+<pre>ship "Modified Argosy" "Modified Argosy (Javelin)"
+	outfits
+		"Twin Blaster" 4
+		"Javelin Turret"
+		"Javelin" 600
+		"Javelin Storage Crate" 2
+		"Heavy Anti-Missile Turret"
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Brig"
+		"Outfits Expansion"
+		"Laser Rifle" 3
+		"Greyhound Plasma Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Gatling)"</summary>
+<pre>ship "Modified Argosy" "Modified Argosy (Gatling)"
+	outfits
+		"Twin Modified Blaster" 2
+		"Gatling Gun" 2
+		"Gatling Turret"
+		"Gatling Gun Ammo" 9000
+		"Bullet Boxes" 2
+		"Heavy Anti-Missile Turret"
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Brig"
+		"Laser Rifle" 5
+		"X1100 Ion Reverse Thruster"
+		"X3700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Smuggler)"</summary>
 <pre>ship "Modified Argosy" "Modified Argosy (Smuggler)"
 	outfits
@@ -17055,6 +17838,36 @@
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		Hyperdrive
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Nest" "Nest (Miner)"</summary>
+<pre>ship "Nest" "Nest (Miner)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Mining Laser Turret"
+		"Tractor Beam" 2
+		"Heavy Anti-Missile Turret"
+		"Asteroid Scanner"
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Large Radar Jammer"
+		"Cargo Expansion"
+		"Laser Rifle" 3
+		"Capybara Reverse Thruster"
+		"Greyhound Plasma Thruster"
+		"Impala Plasma Steering"
+		"Scram Drive"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	turret "Mining Laser Turret"
+	turret "Tractor Beam"
+	turret "Tractor Beam"
+	turret "Heavy Anti-Missile Turret"
 </pre>
 </details>
 
@@ -17423,6 +18236,49 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Saber" "Saber (CCOR Javelin)"</summary>
+<pre>ship "Saber" "Saber (CCOR Javelin)"
+	outfits
+		"Twin Modified Blaster" 2
+		"Gatling Gun" 3
+		"Gatling Gun Ammo" 9000
+		"Javelin Turret"
+		"Javelin" 500
+		"Javelin Storage Crate"
+		"nGVF-CC Fuel Cell"
+		"LP072a Battery Pack"
+		"D41-HY Shield Generator"
+		"Laser Rifle" 16
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Saber" "Saber (CCOR Gatling)"</summary>
+<pre>ship "Saber" "Saber (CCOR Gatling)"
+	outfits
+		"Twin Blaster" 3
+		"Gatling Turret"
+		"Gatling Gun Ammo" 6000
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"nGVF-BB Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Laser Rifle" 12
+		"Security Station"
+		"X3700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Scout" "Scout (Speedy)"</summary>
 <pre>ship "Scout" "Scout (Speedy)"
 	outfits
@@ -17544,6 +18400,20 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Sparrow" "Sparrow (Miner)"</summary>
+<pre>ship "Sparrow" "Sparrow (Miner)"
+	outfits
+		"Mining Laser" 2
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Splinter" "Splinter (Laser)"</summary>
 <pre>ship "Splinter" "Splinter (Laser)"
 	outfits
@@ -17648,6 +18518,21 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Star Barge" "Star Barge (Miner)"</summary>
+<pre>ship "Star Barge" "Star Barge (Miner)"
+	outfits
+		"Mining Laser Turret"
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Star Queen" "Star Queen (Hai)"</summary>
 <pre>ship "Star Queen" "Star Queen (Hai)"
 	outfits
@@ -17684,6 +18569,23 @@
 		Ramscoop
 		"Scram Drive"
 		"Security Station" 2
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Sunder" "Sunder (Heavy)"</summary>
+<pre>ship "Sunder" "Sunder (Heavy)"
+	outfits
+		"Mining Laser" 2
+		"Mining Laser Turret"
+		"Asteroid Scanner"
+		"nGVF-DD Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
 </pre>
 </details>
 
@@ -19689,8 +20591,8 @@
 	explode "large explosion" 40
 	explode "huge explosion" 50
 	"final explode" "final explosion large"
-	description "Originally designed as a luxury habitat for those wealthy enough to escape living on the polluted surface of Korath worlds, when the Korath were exiled, it was into these gargantuan 'world-ships' they first crammed themselves into and fled to the core on. Nostalgically, the class was then renamed after the devastated and now forbidden Korath homeworld."
-	description "	Since the introduction of purpose-built city ships, these ancient vessels have mostly been decommissioned, turned into stations, or reconfigured into smaller, specialized vessels. Yet a few still ply the starlanes, crewed by those too restless to live on stations yet not bold enough to go on raids."
+	description `Originally designed as a luxury habitat for those wealthy enough to escape living on the polluted surface of Korath worlds, when the Korath were exiled, it was into these gargantuan "world-ships" they first crammed themselves into and fled to the core on. Nostalgically, the class was then renamed after the devastated and now forbidden Korath homeworld.`
+	description `	Since the introduction of purpose-built city ships, these ancient vessels have mostly been decommissioned, turned into stations, or reconfigured into smaller, specialized vessels. Yet a few still ply the starlanes, crewed by those too restless to live on stations yet not bold enough to go on raids.`
 </pre>
 </details>
 

@@ -267,8 +267,18 @@
 <pre>interface "load menu"
 	sprite "_menu/side panel"
 		center -360 0
+	box "pilots"
+		center -360 -19
+		dimensions 230 280
 	sprite "_menu/side panel"
 		center 0 0
+	box "snapshots"
+		center 0 -19
+		dimensions 230 280
+	value "pilot horizontal text pad" 5
+	value "pilot fade out" 10
+	value "snapshot horizontal text pad" 5
+	value "snapshot fade out" 10
 	sprite "_menu/side panel"
 		center 360 0
 	button n "_New Pilot"
@@ -277,6 +287,17 @@
 	active if "pilot selected"
 	button d "_Delete"
 		center -285 155
+		dimensions 90 30
+	sprite "ui/wide button"
+		center -435 195
+	button x "E_xport..."
+		center -435 195
+		dimensions 120 30
+	active
+	sprite "ui/wide button"
+		center -285 195
+	button i "_Import..."
+		center -285 195
 		dimensions 90 30
 	active if "pilot alive"
 	button a "_Add Snapshot"
@@ -611,6 +632,13 @@
 		from -225 -236
 		align top left
 		color bright
+	visible
+	line
+		from -230 -222 to -10 -221
+	box "plugin list"
+		from -250 -216 to -10 184
+	box "plugin description"
+		from 250 -244 to 10 184
 </pre>
 </details>
 
@@ -797,7 +825,7 @@
 		from 0 442 top left
 		to 160 0 bottom left
 	box "messages"
-		from 160 0 bottom left
+		from 180 0 bottom left
 		to -335 -200 bottom right
 	box "ammo"
 		from -110 450 top right
@@ -812,13 +840,26 @@
 
 
 <details>
+<summary>data/_ui/interfaces.txt | interface "main view"</summary>
+<pre>interface "main view"
+	list "zooms"
+		.25
+		.35
+		.5
+		.7
+		1.
+		1.4
+		2.
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/interfaces.txt | interface "escort element"</summary>
 <pre>interface "escort element"
 	value "width" 80
 	value "basic height" 25
 	value "system label height" 15
-	box "icon click zone"
-		center 20 10
 	anchor top left
 	outline "icon"
 		center 20 10
@@ -970,7 +1011,7 @@
 		size 18
 		align right
 		pad 10 0
-	visible if "is inhabited"
+	visible if "has job board"
 	sprite "ui/planet dialog button"
 		center -400 150
 	button j "_Job Board"
@@ -979,6 +1020,7 @@
 		size 18
 		align left
 		pad 10 0
+	visible if "can hire crew"
 	sprite "ui/planet dialog button"
 		center 280 210
 	button h "_Hire Crew"
@@ -1014,16 +1056,16 @@
 		size 18
 		align left
 		pad 10 0
-	visible if "has spaceport"
+	visible if "has port"
 	sprite "ui/planet dialog button"
 		center -400 270
-	button p "Space_port"
+	"dynamic button" p "port name"
 		center -400 270
 		dimensions 140 40
 		size 18
 		align left
 		pad 10 0
-	visible if "no spaceport"
+	visible if "!has port"
 	sprite "ui/planet dialog button"
 		center -400 270
 	button "View player info" "Info"
@@ -1032,7 +1074,8 @@
 		size 18
 		align left
 		pad 10 0
-	visible if "has ship"
+	visible
+	active if "has ship"
 	sprite "ui/planet dialog button"
 		center 280 270
 	button d "_Depart"
@@ -1274,19 +1317,19 @@
 	active if "can buy"
 	sprite "ui/dialog cancel"
 		center 40 355
-	button B "Buy All"
+	button u "B_uy All"
 		center 40 355
 		dimensions 70 30
 	sprite "ui/wide button"
 		center 130 355
 	active if "can sell"
 	visible if "!can sell outfits"
-	button S "Sell All"
+	button e "S_ell All"
 		center 130 355
 		dimensions 90 30
 	active if "can sell outfits"
 	visible if "can sell outfits"
-	button S "Sell Outfits"
+	button e "S_ell Outfits"
 		center 130 355
 		dimensions 90 30
 </pre>
@@ -1578,6 +1621,14 @@
 	button v "Sa_ve Order"
 		center -195 305
 		dimensions 90 30
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "message log"</summary>
+<pre>interface "message log"
+	value "width" 570
 </pre>
 </details>
 

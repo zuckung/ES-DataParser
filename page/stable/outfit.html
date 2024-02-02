@@ -264,6 +264,7 @@
 	"outfit space" -2
 	"gun ports" -1
 	"crystal projector" -1
+	"unique" 1
 	weapon
 		"hardpoint sprite" "hardpoint/shooting star flare/ss-rays"
 			"frame time" 3
@@ -282,6 +283,7 @@
 	"outfit space" -3
 	"turret mounts" -1
 	"spinal mount" -1
+	"unique" 1
 	weapon
 		"turret turn" 6
 		"velocity" 250
@@ -305,6 +307,7 @@
 	"outfit space" -1
 	"turret mounts" -1
 	"shooting star" -1
+	"unique" 1
 	"core crystal" 1
 	weapon
 		sound "crunch"
@@ -330,6 +333,7 @@
 	"outfit space" -1
 	"turret mounts" -1
 	"shooting star" -1
+	"unique" 1
 	"core crystal" 1
 	weapon
 		sound "crunch"
@@ -355,6 +359,7 @@
 	thumbnail "outfit/rock 1"
 	"mass" 1
 	"outfit space" -1
+	"unique" 1
 	"quantum keystone" 1
 	description "Although in appearance it may look somewhat similar to a tree, you don't know how it is supposed to resemble a skeleton. You aren't sure you want to find out either."
 </pre>
@@ -402,6 +407,17 @@
 		"hit force" 100
 		"missile strength" 10
 	description "This is a personally obtained prototype Fusion Cannon, a deadly, massive spinal weapon. Where it came from, nobody knows except the owner, and those who wish to ask are too afraid of being on the receiving end."
+</pre>
+</details>
+
+
+<details>
+<summary>data/persons.txt | outfit "Emotional Baggage"</summary>
+<pre>outfit "Emotional Baggage"
+	category "Unique"
+	thumbnail "outfit/unknown"
+	description `The physical embodiment of everything that makes the Reviewers who they are today.`
+	description `	Unfortunately, it's not for sale.`
 </pre>
 </details>
 
@@ -2013,7 +2029,7 @@
 	"outfit space" -5
 	"active cooling" 21
 	"cooling energy" 1.4
-	description "This Cooling Module consumes energy. To conserve power, it does not ramp up to full strength unless a ship is overheated."
+	description "This Cooling Module consumes energy. To conserve power, it does not ramp up to full strength unless a ship is very close to overheating."
 </pre>
 </details>
 
@@ -2073,14 +2089,14 @@
 <summary>data/coalition/coalition outfits.txt | outfit "Shield Refactor Module"</summary>
 <pre>outfit "Shield Refactor Module"
 	category "Systems"
-	cost 2843000
+	cost 3248000
 	thumbnail "outfit/shield refactor module"
 	"mass" 7
 	"outfit space" -7
-	"hull repair rate" -.2
-	"shield energy" .2
-	"shield heat" .24
-	"shield generation multiplier" .25
+	"hull repair rate" -.25
+	"shield energy multiplier" .2
+	"shield heat" .32
+	"shield generation multiplier" .2
 	"hull repair multiplier" -.2
 	description "In theory, all shield generators can operate at a much faster rate than normal, if pushed to their true limit. However, the constant need to reform shields during a heated battle quickly overloads shield generators and damages them in the process. By relocating dedicated hull repair systems to focus exclusively on repairing such damage, this compact device allows shield generators to reach their true potential."
 	description "	A much needed boon against the Heliarch torpedoes' devastating effects on hull plating, the Lunarium highly favors production of this expensive piece due to its advantages over other shield generators."
@@ -2135,6 +2151,7 @@
 	thumbnail "outfit/outskirts gauger"
 	"mass" 8
 	"outfit space" -8
+	"unique" 1
 	"tactical scan power" 169
 	"energy consumption" .2
 	description "Completed with the data from one of their long-lost satellites, the newest scanner of House Idriss excels at reading various energy signatures across vast distances."
@@ -2288,7 +2305,7 @@
 	"capture attack" 3.1
 	"capture defense" 4.9
 	"unplunderable" 1
-	description "The peak of Heliarch combat engineering, this weapon uses condensed blasts of energy to dispatch any who dare threaten the Coalition safety."
+	description "The peak of Heliarch combat engineering, this weapon uses condensed blasts of energy to dispatch any who dare threaten the safety of the Coalition."
 </pre>
 </details>
 
@@ -2313,10 +2330,10 @@
 <summary>data/coalition/coalition outfits.txt | outfit "Anti-Materiel Gun"</summary>
 <pre>outfit "Anti-Materiel Gun"
 	category "Hand to Hand"
-	cost 128600
+	cost 257200
 	thumbnail "outfit/anti-materiel gun"
-	"capture attack" 3.6
-	"capture defense" 1.8
+	"capture attack" 3.4
+	"capture defense" 1.9
 	"unplunderable" 1
 	description "Easy to use and relatively cheap to manufacture, these weapons were born by refurbishing the Heliarchs' favored arms, with the new barrel shaping the energy into deadly blasts that make short work of even the toughest body armor."
 </pre>
@@ -2738,6 +2755,7 @@
 		"shield damage" .2
 		"hull damage" 1.4
 		"minable damage" 8.2
+		"prospecting" 9
 	description `Not legally a weapon under Heliarch definitions, the "Mineral Collection and Sorting" extraction unit consists of a set of sharp, durable blades designed to quickly break down minable asteroids. It also comes with an integrated scanning system that looks for asteroids rich in minerals to facilitate the mining efforts.`
 	description `	Especially popular with novice pilots looking to pay off their ships, the extractor has been a reliable tool of mining businesses in the Coalition for millennia.`
 </pre>
@@ -3941,6 +3959,7 @@
 		"shield damage" 6
 		"hull damage" 14
 		"minable damage" 104
+		"prospecting" 145
 		"hit force" -4
 	description `Excavator Drills are large drills designed by the Gegno that rip materials out of asteroids in an efficient manner. These types of drill systems are only found on ships specifically designed around them as they require substantial infrastructure to be functional.`
 </pre>
@@ -3977,6 +3996,7 @@
 		"shield damage" .4
 		"hull damage" 6
 		"minable damage" 3
+		"prospecting" 10.5
 		"hit force" 4
 	description `Burrower Drills are longer, thinner, and more precise than the larger Excavator Drill system, although they are nowhere near as powerful. Burrowers can mine asteroids more carefully, preserving more materials in the process. Rather than constructing the spaceship around the base system, these drills are more compact and are mounted on self-sustaining drill spars, resulting in lower required internal space and machinery.`
 	description `	This mining outfit requires a drill spar port, in addition to a gun port, in order to be mounted.`
@@ -4365,12 +4385,13 @@
 	"turret mounts" -1
 	"required crew" 1
 	weapon
-		sprite "projectile/ion bolt"
-			"frame rate" 5
+		sprite "projectile/ionic turret"
+			"frame rate" 20
+		"fade out" 10
 		"hardpoint sprite" "hardpoint/hai ionic turret"
 		"hardpoint offset" 16.
 		sound "ion"
-		"hit effect" "ion impact" 5
+		"hit effect" "ionic impact" 5
 		"inaccuracy" 2
 		"turret turn" 2.4
 		"velocity" 12
@@ -5153,6 +5174,7 @@
 	category "Unique"
 	thumbnail "outfit/crystal pendant"
 	"quantum keystone" 1
+	"unique" 1
 	description "A pendant made of the same crystalline rocks found on the Hai homeworld, fashioned after a Shield Beetle. A gift from Nanachi."
 	description "	It comes with a finely crafted lit shadowbox so it can be installed and displayed with pride. A trio of mounting brackets - miniatures of those used on Quantum Keystones - provide a secure anchor to keep the pendant safe."
 </pre>
@@ -5169,19 +5191,6 @@
 	"unplunderable" 1
 	"integrated control systems" 1
 	description "This was meant to control some sort of experimental system, but it appears to have failed. Unfortunately it doesn't appear to be safely removable."
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/culture conversations.txt | outfit "Mug"</summary>
-<pre>outfit "Mug"
-	category "Hand to Hand"
-	cost 50
-	thumbnail "outfit/unknown"
-	"capture attack" .1
-	"unplunderable" 1
-	description "You can throw it in a pinch, you guess."
 </pre>
 </details>
 
@@ -6422,6 +6431,7 @@
 	"cloak" .01
 	"cloaking energy" 1
 	"cloaking fuel" .2
+	"unique" 1
 	"unplunderable" 1
 	description "You're sure the cloaking device is here somewhere, but you can't see it."
 </pre>
@@ -6611,11 +6621,42 @@
 
 
 <details>
+<summary>data/human/outfits.txt | outfit "Mug"</summary>
+<pre>outfit "Mug"
+	category "Hand to Hand"
+	cost 50
+	thumbnail "outfit/mug"
+	"capture attack" .1
+	"unique" 1
+	"unplunderable" 1
+	description "You can throw it in a pinch, you guess."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/outfits.txt | outfit "Antigrav Glass"</summary>
+<pre>outfit "Antigrav Glass"
+	category "Hand to Hand"
+	plural "Antigrav Glasses"
+	cost 25
+	thumbnail "outfit/unknown"
+	"capture attack" .2
+	"unique" 1
+	"unplunderable" 1
+	description "This glass has had a miniature repulsor attached to it, similar to those found on drones, anti-grav trolleys, and spaceships. When it is activated it allows you to drink your beverage without holding it by way of levitation."
+	description "	The miniature repulsor installed on the bottom makes this glass a bit heavier than other cups, so if the time ever comes that you need to knock someone else out with a drinking vessel, you suspect this one will be marginally more effective than anything else you've got."
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/outfits.txt | outfit "Puny"</summary>
 <pre>outfit "Puny"
 	category "Unique"
 	"display name" `"Puny"`
 	thumbnail "outfit/unknown"
+	"unique" 1
 	description `A poodle you rescued from a dubious racing complex on Freedom. She appears to have formed a strong bond with you, willing to stick by your side.`
 	description `	Her history matches with Pookie's, but Pookie's owner claimed that Puny was not hers. Puny is also vastly less urine-prone; you suspect that the race organizers may have toilet-trained her.`
 </pre>
@@ -6628,6 +6669,7 @@
 	category "Unique"
 	thumbnail "outfit/skadetear"
 	"cooling" 4
+	"unique" 1
 	description "A strange glowing stone gifted to you by the Skadenga. It lacks any power source, yet is quite cold."
 </pre>
 </details>
@@ -7097,7 +7139,7 @@
 			"facing" -0.3
 		"hit effect" "blaster impact" 2
 		"inaccuracy" 3
-		"lifetime" 0
+		"lifetime" 1
 		"velocity override" 10.625
 		"range override" 510
 		"reload" 12
@@ -7403,6 +7445,98 @@
 		"shield damage" 3.4
 		"hull damage" 4.8
 	description "For ships with enough space to install one, the Heavy Laser Turret is a powerful weapon, equally useful for driving off fighters and for bombarding larger targets with continuous fire without having to worry about pointing your ship in the right direction."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/weapons.txt | outfit "Mining Laser"</summary>
+<pre>outfit "Mining Laser"
+	category "Guns"
+	cost 38000
+	thumbnail "outfit/mining laser"
+	"mass" 12
+	"outfit space" -12
+	"weapon capacity" -12
+	"gun ports" -1
+	weapon
+		sprite "projectile/mining laser"
+			"frame rate" 1
+		sound "mining laser"
+		"hit effect" "beam laser impact"
+		"inaccuracy" .35
+		"velocity" 200
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1.1
+		"firing heat" 2.1
+		"shield damage" .8
+		"hull damage" 1.4
+		"minable damage" 1.9
+		"prospecting" 1
+	description "The development of the Beam Laser in the mid-2400s not only led to advancements in space warfare, but also to the field of asteroid mining, as the traditional but inefficient method of towing asteroids to bases for extraction was supplanted by individual spacecraft that could precisely extract the ore from asteroids themselves."
+	description "	The modern Mining Laser is a derivative of the Beam Laser engineered to optimize mineral yield and extraction rates at the expense of range and shield damage."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/weapons.txt | outfit "Mining Laser Turret"</summary>
+<pre>outfit "Mining Laser Turret"
+	category "Turrets"
+	cost 66000
+	thumbnail "outfit/mining laser turret"
+	"mass" 18
+	"outfit space" -18
+	"weapon capacity" -18
+	"turret mounts" -1
+	"required crew" 1
+	weapon
+		sprite "projectile/mining laser"
+			"frame rate" 1
+		"hardpoint sprite" "hardpoint/mining laser turret"
+		"hardpoint offset" 0.7 8.
+		sound "mining laser"
+		"hit effect" "beam laser impact"
+		"inaccuracy" .35
+		"turret turn" 3.8
+		"velocity" 200
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 1.1
+		"firing heat" 2.1
+		"shield damage" .8
+		"hull damage" 1.4
+		"minable damage" 1.9
+		"prospecting" 1
+	description "While asteroid miners typically prefer more nimble ships that can keep speed with asteroids, the Mining Laser Turret makes it easier for large and slow ships with spacious cargo holds to mine."
+	description "	Mining Laser Turrets are designed to be used in conjunction with asteroid scanners, as being unable to target asteroids means you have to aim the weapon manually as if it were a fixed gun."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/weapons.txt | outfit "Tractor Beam"</summary>
+<pre>outfit "Tractor Beam"
+	category "Turrets"
+	cost 75000
+	thumbnail "outfit/tractor beam"
+	"mass" 22
+	"outfit space" -22
+	"weapon capacity" -22
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/tractor beam"
+		"hardpoint offset" 4.
+		sound "tractor beam"
+		"hit effect" "tractor beam"
+		"tractor beam" 7
+		"velocity" 300
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 2.1
+		"firing heat" .8
+	description "The anti-gravity properties of repulsor engines started a revolution in human spaceflight during the 24th century, and it was not long before this technology was put to use elsewhere. Tractor beams utilize repulsor technology to allow ships to attract space debris to them, be that the ores from a recently mined asteroid, or the dumped cargo from a merchant ship fleeing for its life. This has led to tractor beams being a popular outfit among asteroid miners and pirates alike."
 </pre>
 </details>
 
@@ -7738,7 +7872,7 @@
 		"lifetime" 5
 		"reload" 1
 		"firing energy" .1
-		"firing fuel" .25
+		"firing fuel" .4
 		"firing heat" 4
 	description "A crude but impressive-looking weapon, the Flamethrower ignites your hyperspace fuel and directs a stream of it towards your adversaries. The damage it does is relatively minor, but it can be useful for causing a target that is already operating near its thermal capacity to overheat, temporarily taking it out of the fight."
 </pre>
@@ -7761,7 +7895,7 @@
 		"dropoff modifier" .5
 		"shield damage" .8
 		"hull damage" .7
-		"heat damage" 150
+		"heat damage" 125
 </pre>
 </details>
 
@@ -8096,6 +8230,41 @@
 	description "The Javelin Pod fires a rapid stream of unguided missiles. A Javelin Pod does far more damage than any gun of a comparable size, and has a longer range as well, but once a ship has expended all of its ammunition it must leave combat and find a planet where it can buy more, which makes Javelins less useful in protracted battles."
 	description "	The weapon's high rate of fire also makes it useful for saturating well-protected ships' anti-missile defenses so that more dangerous projectiles fired by allied ships can sneak through."
 	description "	Mini pods enable fighters and other light craft to carry small quantities of Javelins into battle while retaining enough space for other weapons. Large ships are better off with full-size pods."
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/weapons.txt | outfit "Javelin Turret"</summary>
+<pre>outfit "Javelin Turret"
+	category "Secondary Weapons"
+	cost 110000
+	thumbnail "outfit/javelin turret"
+	"mass" 15
+	"outfit space" -31
+	"weapon capacity" -31
+	"turret mounts" -1
+	"javelin capacity" 400
+	weapon
+		sprite "projectile/javelin"
+		"hardpoint sprite" "hardpoint/javelin turret"
+		"hardpoint offset" 9.
+		sound "javelin"
+		ammo "Javelin"
+		icon "icon/javelin turret"
+		"hit effect" "tiny explosion"
+		"inaccuracy" 4
+		"turret turn" 2
+		"velocity" 10
+		"lifetime" 60
+		"reload" 7.5
+		"firing energy" .2
+		"firing heat" 12
+		"shield damage" 48
+		"hull damage" 26
+		"hit force" 50
+		"missile strength" 3
+	description "Mounting not one but two Javelin Pods, the Javelin Turret delivers a torrential downpour of unguided missiles that deal noticeably more damage than other turreted weapons of the same size, at the expense of using a prodigious amount of ammo due to its high fire rate. For that reason, these turrets are commonly paired with Javelin Storage Crates and weapons that don't require the use of ammunition to fall back on once all of the missiles are expended."
 </pre>
 </details>
 
@@ -8553,6 +8722,46 @@
 		"cluster"
 		"hit effect" "bullet impact"
 	description `When Dr. Richard J. Gatling invented the rapid-fire gun bearing his name in the 19th century, he hoped that its destructiveness would lead to the end of war itself. Over a millennium later, this modern incarnation of the Gatling Gun sees action in the stars, a testament to its fundamentally robust design - and Dr. Gatling's naivete. While capable of a high fire rate, this gun needs to cool down for twice as long as it fires, and can only sustain a maximum of three seconds of continuous fire.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/weapons.txt | outfit "Gatling Turret"</summary>
+<pre>outfit "Gatling Turret"
+	category "Secondary Weapons"
+	cost 120000
+	thumbnail "outfit/gat turret"
+	"mass" 11
+	"outfit space" -23
+	"weapon capacity" -23
+	"turret mounts" -1
+	"gatling round capacity" 6000
+	weapon
+		sound "gatling"
+		sprite "projectile/2x tinyflare"
+			"random start frame"
+		"hardpoint sprite" "hardpoint/gat turret hardpoint"
+		"submunition" "gbullet"
+			"offset" 1.5 -6
+			"facing" 0.3
+		"submunition" "gbullet"
+			"offset" -1.5 -6
+			"facing" -0.3
+		ammo "Gatling Gun Ammo" 2
+		icon "icon/gat turret"
+		"inaccuracy" 2
+		"turret turn" 3.4
+		"velocity" 16
+		"lifetime" 1
+		"reload" 3
+		"burst count" 180
+		"burst reload" 1
+		"firing energy" .06
+		"firing heat" 5
+		"cluster"
+		"hit effect" "bullet impact"
+	description `In an act that would make Dr. Richard J. Gatling spin in his grave with the ferocity of the barrels of his invention, the Gatling Turret was born when a resourceful pirate thought to replace the Energy Blasters on a Blaster Turret with a pair of Gatling Guns. Ever since, the dominion of the Gatling Turret has spread across the Southern Rim, terrorizing merchants and law enforcement alike with its unparalleled ability to tear apart the hulls of ships.`
 </pre>
 </details>
 
@@ -10256,7 +10465,7 @@
 		sound "blaze-pike"
 		"hit effect" "blaze-pike hit"
 		"inaccuracy" 0.45
-		"turret turn" 2.8
+		"turret turn" 2.1
 		"velocity" 450
 		"lifetime" 1
 		"reload" 1
@@ -10265,7 +10474,7 @@
 		"shield damage" 7.1
 		"hull damage" 3.1
 		"heat damage" 18
-		"burn damage" 0.45
+		"burn damage" 0.4
 	description "The seeming reverence the Korath have for fire appears embodied in this weapon. This pair of Fire-Lances mounted together in a turret do not merely create twin lances of fire: Rather, they begin to form a gestalt - a single, longer, hotter, and almost hypnotic column of fire."
 </pre>
 </details>
@@ -10289,7 +10498,7 @@
 		sound "korath inferno"
 		"hit effect" "korath inferno hit"
 		"inaccuracy" 0.5
-		"turret turn" 2
+		"turret turn" 1.3
 		"velocity" 550
 		"lifetime" 1
 		"reload" 1
@@ -10298,7 +10507,7 @@
 		"shield damage" 10.8
 		"hull damage" 4.8
 		"heat damage" 30
-		"burn damage" 0.9
+		"burn damage" 0.75
 	description "Some Korath consider the Inferno the crowning achievement of Exile weapon design. Three Fire-Lances mounted together in precisely the right manner combine synergistically, creating a longer, more powerful beam than three would individually."
 </pre>
 </details>
@@ -10705,6 +10914,7 @@
 		"shield damage" 0.8
 		"hull damage" 1.3
 		"minable damage" 5.2
+		"prospecting" 4.2
 		"disruption damage" .08
 	description `When the Korath Exiles needed a cheap mining laser for their large vessels, they re-engineered this ancient, robust design and added a turret base. The mild shield disruption effect makes it somewhat useful in combat if required.`
 </pre>
@@ -10736,6 +10946,7 @@
 		"shield damage" 0.5
 		"hull damage" 0.9
 		"minable damage" 4.6
+		"prospecting" 3.7
 		"disruption damage" .06
 	description `The gun version of the classic Korath mining laser allows a larger mothership to release a cloud of fighter-sized miners to harvest resources when working faster-moving or more dangerous asteroid fields.`
 </pre>
@@ -11221,6 +11432,7 @@
 	"outfit space" -67
 	"weapon capacity" -67
 	"turret mounts" -1
+	"unique" 1
 	weapon
 		"hardpoint sprite" "hardpoint/t3 anti missile"
 		"fire effect" "tier 3 anti-missile fire"
@@ -11246,6 +11458,7 @@
 	"outfit space" -83
 	"weapon capacity" -83
 	"turret mounts" -1
+	"unique" 1
 	weapon
 		"hardpoint sprite" "hardpoint/pug gridfire turret"
 		"fire effect" "gridfire fire"
@@ -12163,7 +12376,7 @@
 	"mass" 4
 	"outfit space" -4
 	"ramscoop" 1.25
-	description "The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. While this risk is non-existent in Remnant ships due to their 'gills', which are effectively built-in ramscoops, some captains prefer to speed up the process by adding additional capacity. For the rare captain braving the area in non-Remnant ships, this ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded."
+	description `The Ember Waste is the sort of place where only a very foolish captain would travel without some sort of device for replenishing hyperspace fuel. While this risk is non-existent in Remnant ships due to their "gills," which are effectively built-in ramscoops, some captains prefer to speed up the process by adding additional capacity. For the rare captain braving the area in non-Remnant ships, this ramscoop is not particularly powerful, but it allows a ship to explore without fear of getting stranded.`
 </pre>
 </details>
 
@@ -12176,6 +12389,7 @@
 	thumbnail "outfit/android"
 	"required crew" -1
 	"energy consumption" 0.01
+	"unique" 1
 	unplunderable 1
 	description "While these were once considered cutting-edge outfits, their lack of autonomous capabilities and economic benefit ensured they were never licensed by a manufacturer."
 	description "	Despite this, some captains commissioned these directly from their inventor, effectively replacing one of their crew members with a robotic counterpart. These captains found that androids possessed sufficient capabilities to perform most work, but lacked the capability to captain a ship or take part in boarding actions."
@@ -12479,6 +12693,7 @@
 	"capture attack" 20
 	"capture defense" 20
 	"energy consumption" 0.017
+	"unique" 1
 	"unplunderable" 1
 	description "The Remnant made a significant number of these weapons during the early years of their research on the void sprites, but have not been able to make any new ones since the Archon stopped their harvests. Without a supply of new tentacles to use, the Remnant have been unable to manufacture more. While durable, they rarely last more than a decade, so even the best cared for of the old Void Rifles degraded into uselessness centuries ago. These highly effective weapons are credited with helping the Remnant safeguard their refuges from ground-based threats during their early years."
 	description "	When fired, the Void Rifle emits a beam that has a strong paralyzing effect on the nervous system. With an area of effect that penetrates walls and other solid objects, it is an incredibly effective weapon."
@@ -12498,6 +12713,7 @@
 	"outfit space" -1
 	"flotsam chance" .5
 	"installable" -1
+	"unique" 1
 	description "This is nothing more and nothing less than a cubic meter of void sprite parts. To the Remnant, this represents both a terrible occurrence and a dreadful opportunity."
 	description "	This could have been very valuable to someone who knew what they were doing, if it had been handled properly. Instead, it is worth little more than the value of the compounds contained within."
 </pre>
@@ -12704,6 +12920,7 @@
 	thumbnail "outfit/small embattery"
 	"mass" 14
 	"outfit space" -14
+	"unique" 1
 	"shield generation" 0.14
 	"shield energy" 0.14
 	"shield heat" 0.14
@@ -12722,6 +12939,7 @@
 	thumbnail "outfit/embattery"
 	"mass" 150
 	"outfit space" -150
+	"unique" 1
 	"shield generation" 0.8
 	"shield energy" 0.8
 	"shield heat" 0.8
@@ -12739,6 +12957,7 @@
 	thumbnail "outfit/small sheragi cooling"
 	"mass" 8
 	"outfit space" -8
+	"unique" 1
 	"cooling" 9
 	"active cooling" 17
 	"cooling energy" 3.1
@@ -12755,6 +12974,7 @@
 	thumbnail "outfit/sheragicooling"
 	"mass" 40
 	"outfit space" -40
+	"unique" 1
 	"cooling" 24
 	"active cooling" 128
 	"cooling energy" 16.2
@@ -12773,6 +12993,7 @@
 	"mass" 71
 	"outfit space" -71
 	"engine capacity" -38
+	"unique" 1
 	"energy generation" 5.2
 	"heat generation" 19.4
 	"thrust" 17.8
@@ -12803,6 +13024,7 @@
 	"mass" 480
 	"outfit space" -480
 	"engine capacity" -230
+	"unique" 1
 	"jump speed" 0.2
 	"hyperdrive" 1
 	"energy generation" 54
@@ -12842,6 +13064,7 @@
 	thumbnail "outfit/sheragi ews"
 	"mass" 6
 	"outfit space" -6
+	"unique" 1
 	"radar jamming" 10
 	"tactical scan power" 25
 	"scan interference" 2
@@ -12863,6 +13086,7 @@
 	"required crew" 10
 	"gun ports" -1
 	"spinal mount" -1
+	"unique" 1
 	weapon
 		sound "dragonflame"
 		icon "icon/dragonflame"
@@ -12898,6 +13122,7 @@
 	"outfit space" -35
 	"weapon capacity" -35
 	"turret mounts" -1
+	"unique" 1
 	weapon
 		"hardpoint sprite" "hardpoint/sheragiam"
 		"hardpoint offset" 1.5
@@ -12924,6 +13149,7 @@
 	"weapon capacity" -47
 	"turret mounts" -1
 	"required crew" 1
+	"unique" 1
 	weapon
 		sprite "projectile/pwavecannon"
 			"frame rate" 20
@@ -12960,6 +13186,7 @@
 	"weapon capacity" -7
 	"fuel capacity" 36
 	"gun ports" -1
+	"unique" 1
 	"operating costs" 150
 	weapon
 		sprite "projectile/shardactive"
@@ -13019,6 +13246,7 @@
 	"outfit space" -33
 	"weapon capacity" -21
 	"gun ports" -1
+	"unique" 1
 	weapon
 		sprite "projectile/hion"
 			"frame rate" 30

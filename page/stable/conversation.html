@@ -142,7 +142,16 @@
 <details>
 <summary>data/human/boarding missions.txt | conversation "assisting merchant"</summary>
 <pre>conversation "assisting merchant"
-	`When you repair the &#60;origin&#62;, the captain thanks you for your assistance and pays you &#60;payment&#62;.`
+	`${assist merchant 1} &#60;origin&#62;${assist merchant 2} ${assist merchant 3} &#60;payment&#62;${assist merchant 4}`
+		decline
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/boarding missions.txt | conversation "assisting merchant hazardous"</summary>
+<pre>conversation "assisting merchant hazardous"
+	`${assist merchant 1 hazardous} &#60;origin&#62;${assist merchant 2} ${assist merchant 3} &#60;payment&#62;${assist merchant 4}`
 		decline
 </pre>
 </details>
@@ -558,8 +567,6 @@
 	label choices
 	choice
 		`	"Where should I go if I want to avoid pirates?"`
-		`	"What's a good place to mine asteroids?"`
-			goto asteroids
 		`	"Have you ever met any aliens?"`
 			goto aliens
 		`	"Are there any good trade routes you can give me?"`
@@ -569,9 +576,6 @@
 		`	"I think I'll manage."`
 			goto end
 	`	"Stay near Sol and around the Paradise Worlds. The Navy stays there the most, so even if a pirate does show up, they won't last long. The Deep is also a pretty safe place, as they have their own security forces. Once you start moving farther south, things get riskier. The worlds down there don't bring in as much tax revenue as the Paradise Worlds do, so the Navy tends to ignore them. You'll find some local militia to back you up, but they're nothing compared to one of the Navy's Cruisers.`
-		goto more
-	label asteroids
-	`	"Well to start off, you'll want to stay right here in the Paradise Worlds. The asteroids aren't the best, but it's the safest place to mine while you're still in a small ship. But once you're in something that's able to take a hit, you'll want to explore for an uninhabited system with lots of asteroids. You'll encounter more pirates, but you'll likely find better asteroids.`
 		goto more
 	label aliens
 	`	"I've spoken with the Quarg a few times, but what captain hasn't? You'll find them down south by Tarazed. I haven't met any other aliens," he pauses for a moment, "as far as I'm aware, that is, but I'm sure they're out there if you go looking hard enough. I've explored all of Republic space in my many years, but there are far more systems out there that we don't even know how to reach.`
@@ -679,7 +683,6 @@
 	`	"&#60;first&#62; &#60;last&#62;, you are found to be in illegal possession of Quarg equipment. Our devices are precious and ours alone. Though it is regrettable, we must seize you."`
 	`	They don't allow you to get as much as a word out before one of the guards has locked your arms behind your back, completely halting your attempts to fight back with surprisingly little effort. You are brought before something akin to a Quarg jury, where they lecture you for several hours on how dangerous it is for Quarg apparatus to be stolen and used so lightly by others. At the end of it all, they sentence you to life imprisonment.`
 	`	You spend the rest of your days in the same cell, which although large and comfortable, quickly proves plain and dull. You're kept in very good health and are well-fed, but the Quarg do not allow you to leave the cell and seldom entertain your attempts at striking conversation. You get few visitors and can only wonder what life would've been like had you the chance to live out all these years in freedom, the captain of a starship.`
-		die
 </pre>
 </details>
 

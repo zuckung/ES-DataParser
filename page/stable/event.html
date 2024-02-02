@@ -206,6 +206,62 @@
 
 
 <details>
+<summary>data/coalition/lunarium intro.txt | event "fix: chose heliarchs"</summary>
+<pre>event "fix: chose heliarchs"
+	planet "Remote Blue"
+		remove outfitter "Lunarium Basics"
+	planet "Fourth Shadow"
+		remove outfitter "Lunarium Basics"
+	planet "Into White"
+		remove outfitter "Lunarium Basics"
+	planet "Secret Sky"
+		remove outfitter "Lunarium Basics"
+	planet "Shifting Sand"
+		remove outfitter "Lunarium Basics"
+	planet "Mebla's Portion"
+		remove outfitter "Lunarium Basics"
+	planet "Refuge of Belugt"
+		remove outfitter "Lunarium Basics"
+</pre>
+</details>
+
+
+<details>
+<summary>data/coalition/lunarium intro.txt | event "fix: chose lunarium"</summary>
+<pre>event "fix: chose lunarium"
+	planet "Ring of Friendship"
+		remove outfitter "Heliarch Basics"
+	planet "Ring of Power"
+		remove outfitter "Heliarch Basics"
+	planet "Ring of Wisdom"
+		remove outfitter "Heliarch Basics"
+	planet "Saros"
+		remove outfitter "Heliarch Basics"
+	planet "Ahr"
+		remove outfitter "Heliarch Basics"
+	planet "Ki Patek Ka"
+		remove outfitter "Heliarch Basics"
+	planet "Belug's Plunge"
+		remove outfitter "Heliarch Basics"
+	planet "Stronghold of Flugbu"
+		remove outfitter "Heliarch Basics"
+	planet "Delve of Bloptab"
+		remove outfitter "Heliarch Basics"
+	planet "Far Home"
+		remove outfitter "Heliarch Basics"
+	planet "Dwelling of Speloog"
+		remove outfitter "Heliarch Basics"
+	planet "Blue Interor"
+		remove outfitter "Heliarch Basics"
+	planet "Sandy Two"
+		remove outfitter "Heliarch Basics"
+	planet "Second Rose"
+		remove outfitter "Heliarch Basics"
+</pre>
+</details>
+
+
+<details>
 <summary>data/gegno/gegno events.txt | event "gegno space label"</summary>
 <pre>event "gegno space label"
 	galaxy "label gegno"
@@ -411,6 +467,13 @@
 			"Shield Beetle (Pulse)"
 			"Pond Strider (Pulse)"
 			"Flea (Pulse)" 8
+</pre>
+</details>
+
+
+<details>
+<summary>data/hai/hai missions.txt | event "hai film crew"</summary>
+<pre>event "hai film crew"
 </pre>
 </details>
 
@@ -1231,7 +1294,7 @@
 <pre>event "mooncreek main outfitters"
 	planet Mooncreek
 		add outfitter "Lovelace Security"
-		add outfitter "Syndicate Security"
+		add outfitter "Syndicated Security"
 		add outfitter "Hai Security"
 		security 0.8
 </pre>
@@ -1941,6 +2004,10 @@
 		add variant 1
 			"Roost"
 			"Lance (Gatling)" 4
+	fleet "Human Miners"
+		add variant 1
+			"Nest (Miner)"
+			"Barb (Miner)" 2
 </pre>
 </details>
 
@@ -2444,7 +2511,7 @@
 		fleet "Large Free Worlds" 9000
 	planet "Greenrock"
 		description `Greenrock was the closest thing that the pirates in southern human space had to a center of government, at least until the Free Worlds occupied it. When rival pirate bands sought to negotiate on neutral territory, this is where they met. Nearly everything was for sale here: illegal weapons, ships customized for pirating, and even slaves.`
-		description `	That was until the Free Worlds occupied the system and cleaned up many of the major population centers. With the Free Worlds gone though, the planet has begun to return to its natural state of crime and villainy.`
+		description `	That was until the Free Worlds occupied the system and cleaned up many of the major population centers. With the Free Worlds gone, the planet has begun to return to its natural state of crime and villainy.`
 		spaceport `You have heard enough about this port's reputation that you are not surprised to see the remnants of slave markets, now empty as a result of the Free Worlds occupation. The spaceport's shady establishments are beginning to return to their normal clientele and services.`
 		spaceport `	With the Free Worlds now gone, dark alleyways are absolutely to be avoided. Down one alley you see a shop called "Mike's Mustelids," the inside like a jungle. You hear the howls and yells of various exotic animals coming from inside, and the alleyway is home to a number of presumably-escaped weasels, ferrets, and wolverines running about.`
 </pre>
@@ -3249,6 +3316,18 @@
 		"Typhoon Pod"
 		"Typhoon Storage Tube"
 		"Electron Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/campaign events.txt | event "navy expand typhoon sales"</summary>
+<pre>event "navy expand typhoon sales"
+	outfitter "Lovelace Advanced"
+		"Typhoon Torpedo"
+		"Typhoon Launcher"
+		"Typhoon Pod"
+		"Typhoon Storage Tube"
 </pre>
 </details>
 
@@ -5262,6 +5341,16 @@
 
 
 <details>
+<summary>data/human/kestrel.txt | event "kestrel available: more bays"</summary>
+<pre>event "kestrel available: more bays"
+	set "kestrel available"
+	shipyard "Tarazed Advanced"
+		"Kestrel (More Bays)"
+</pre>
+</details>
+
+
+<details>
 <summary>data/kahet/kahet missions.txt | event "graveyard label"</summary>
 <pre>event "graveyard label"
 	galaxy "label graveyard"
@@ -6828,6 +6917,9 @@
 		"attitude toward"
 			"Wanderer" 1
 	government "Quarg (Kor Efret)"
+		"attitude toward"
+			"Kor Mereti" 0
+	government "Quarg"
 		"attitude toward"
 			"Kor Mereti" 0
 	government "Kor Efret"
