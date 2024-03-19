@@ -4798,13 +4798,14 @@
 <pre>ship "Embersylph"
 	noun "creature"
 	sprite "ship/embersylph/embersylph"
+		"center" 0 -80
 		"frame rate" 34
 		"random start frame"
 	"never disabled"
 	attributes
 		category "Light Warship"
-		"shields" 7200
-		"hull" 1800
+		"shields" 4400
+		"hull" 900
 		"required crew" 1
 		"bunks" 1
 		"mass" 140
@@ -4812,9 +4813,9 @@
 		"heat dissipation" .7
 		"cargo space" 0
 		"fuel capacity" 100
-		"thrust" 8
+		"thrust" 10
 		"reverse thrust" 3
-		"turn" 90
+		"turn" 100
 		"energy capacity" 800
 		"energy generation" 7
 		"hull repair rate" 2
@@ -4832,24 +4833,7 @@
 	turret 0 0 "Absorption Organ"
 	leak "blood" 2
 	explode "blood" 1
-	description "Ember Ray."
-</pre>
-</details>
-
-
-<details>
-<summary>data/drak/indigenous.txt | ship "Embersylph" "Embersylph (Small)"</summary>
-<pre>ship "Embersylph" "Embersylph (Small)"
-	sprite "ship/embersylph/embersylph"
-		"frame rate" 36
-		"random start frame"
-		"scale" 0.5
-	"never disabled"
-	add attributes
-		"shields" -2800
-		"hull" -900
-		"thrust" 2
-		"turn" 10
+	description "Embersylphs are notably strange creatures, even compared to other known space fauna. Glowing in various hues while gracefully swinging several long appendages in a strangely methodical motion, the only consistent behavior these creatures are known to display is curiosity for other life."
 </pre>
 </details>
 
@@ -8492,7 +8476,7 @@
 	explode "large explosion" 50
 	explode "huge explosion" 20
 	"final explode" "final explosion large"
-	description `Impressed by the Alpha's "Giftbringer," the Unfettered endeavored to build their own fighter carrier to take more advantage of their supply of jump drives.`
+	description `Impressed by the Alphas' "Giftbringer," the Unfettered endeavored to build their own fighter carrier to take more advantage of their supply of jump drives.`
 </pre>
 </details>
 
@@ -11820,13 +11804,13 @@
 			"hull damage" 1300
 			"hit force" 3900
 	outfits
-		"Torpedo Launcher" 3
-		"Torpedo" 90
+		"Torpedo Launcher" 4
+		"Torpedo" 120
 		"Plasma Turret" 3
 		"Heavy Anti-Missile Turret" 2
 		"Breeder Reactor"
 		"S3 Thermionic"
-		"LP144a Battery Pack"
+		"LP072a Battery Pack"
 		"D41-HY Shield Generator"
 		"Small Radar Jammer"
 		"Liquid Helium Cooler"
@@ -11840,7 +11824,7 @@
 	gun -9.5 -186 "Torpedo Launcher"
 	gun 9.5 -186 "Torpedo Launcher"
 	gun -18.5 -173.5 "Torpedo Launcher"
-	gun 18.5 -173.5
+	gun 18.5 -173.5 "Torpedo Launcher"
 	turret 0 -99.5 "Plasma Turret"
 	turret -39 -63.5 "Heavy Anti-Missile Turret"
 	turret 39 -63.5 "Heavy Anti-Missile Turret"
