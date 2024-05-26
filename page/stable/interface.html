@@ -352,11 +352,24 @@
 		dimensions 90 30
 		color medium
 		hover bright
+	visible if "multiple controls pages"
+	sprite "ui/dialog cancel"
+		center -115 210
+	active if "show next controls"
+	button n "_Next"
+		center -115 210
+		dimensions 70 30
+	sprite "ui/wide button"
+		center -210 210
+	active if "show previous controls"
+	button r "P_revious"
+		center -210 210
+		dimensions 90 30
 	uirect
-		center -195 209.5
+		center -324 209.5
 		dimensions 120 31
 	button g "_Game Controllers"
-		center -195 209.5
+		center -324 209.5
 		dimensions 120 31
 		color medium
 		hover bright
@@ -570,16 +583,16 @@
 		dimensions 90 30
 		color medium
 		hover bright
-	visible if "multiple pages"
+	visible if "multiple settings pages"
 	sprite "ui/dialog cancel"
 		center -115 210
-	active if "show next"
+	active if "show next settings"
 	button n "_Next"
 		center -115 210
 		dimensions 70 30
 	sprite "ui/wide button"
 		center -210 210
-	active if "show previous"
+	active if "show previous settings"
 	button r "P_revious"
 		center -210 210
 		dimensions 90 30
@@ -680,9 +693,15 @@
 		from -20 65
 		color "medium"
 		align right
+	visible if "!fast hud sprites"
 	outline "player sprite"
 		center -75 155
 		dimensions 70 70
+	visible if "fast hud sprites"
+	image "player sprite"
+		center -75 155
+		dimensions 70 70
+	visible
 	ring "shields"
 		center -75 155
 		dimensions 120 120
@@ -757,10 +776,16 @@
 		center 75 315
 		dimensions 140 140
 	value "target radius" 70
+	visible if "!fast hud sprites"
 	outline "target sprite"
 		center 75 315
 		dimensions 70 70
 		colored
+	visible if "fast hud sprites"
+	image "target sprite"
+		center 75 315
+		dimensions 70 70
+	visible
 	ring "target shields"
 		center 75 315
 		dimensions 120 120
@@ -1727,13 +1752,9 @@
 	button "Fire secondary weapon"
 		center -155 -110
 		radius 25
-	active
-	box "ammo icon"
-		center -185 -140
-		dimensions 30 30
-	button "Select secondary weapon"
-		center -185 -140
-		dimensions 30 30
+	# The engine will draw the secondary weapons list here.
+	box "ammo"
+		from -200 -145 to -110 -300
 	visible
 	sprite "ui/round_button_bg"
 		center -75 -110
@@ -1741,23 +1762,36 @@
 	sprite "ui/icon_fire"
 		center -75 -110
 		dimensions 64 64
+	visible if "!can attack"
 	button "Fire primary weapon"
 		center -75 -110
 		radius 40
 	visible if "can attack"
-	button "Fleet: Fight my target"
+	button "Fire primary weapon"
 		center -75 -110
 		radius 40
-	visible if "can hail"
+		command "Fleet: Fight my target"
+	visible
 	sprite "ui/round_button_bg"
 		center -240 -30
 		dimensions 50 50
-	sprite "ui/icon_talk"
+	sprite "ui/icon_menu"
 		center -240 -30
 		dimensions 44 44
-	button "Talk to selected ship"
+	radial
 		center -240 -30
 		radius 22
+		selection_angles -1.5 1.1
+		selection_radius 175
+		"Show main menu"
+		"Toggle fast-forward"
+		"Stop"
+		"View player info"
+		"Land on planet / station"
+		visible if "can hail"
+		"Talk to selected ship"
+		visible if "can scan asteroids"
+		"Select nearest asteroid" "asteroid/small rock/spin"
 	visible if "can scan"
 	sprite "ui/round_button_bg"
 		center -240 -86
@@ -1785,10 +1819,10 @@
 	sprite "ui/icon_fleet"
 		center -296 -30
 		dimensions 40 40
-	radial "ui/icon_fleet"
+	radial
 		center -296 -30
 		radius 22
-		selection_angles -1.5 1.5
+		selection_angles -1.5 1.1
 		selection_radius 150
 		"Fleet: Fight my target"
 		"Fleet: Gather around me"
@@ -1821,6 +1855,11 @@
 	box "onscreen joystick"
 		center 128 -128
 		dimensions 192 192
+	# This button doesn't do anything. It is here to swallow any clicks on the
+	# onscreen joystick, in case some of these controls overlap
+	button ^ ""
+		center 128 -128
+		radius 96
 </pre>
 </details>
 

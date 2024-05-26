@@ -286,7 +286,15 @@
 <details>
 <summary>data/_ui/tooltips.txt | tip "cloak:"</summary>
 <pre>tip "cloak:"
-	`Allows your ship to cloak. The value represents how long it takes to fully activate or deactivate cloaking. Ships cannot fire while cloaked.`
+	`This outfit allows your ship to cloak. The value represents how long it takes to fully activate or deactivate cloaking. Ships cannot fire while cloaked, except if they have the related "cloaked firing" attribute.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloak by mass:"</summary>
+<pre>tip "cloak by mass:"
+	`This outfit allows your ship to cloak. The value represents how long it takes to fully activate or deactivate cloaking for a ship with 1000 mass. The higher a ships mass, the slower the cloak works, the lower its mass, the faster the cloak works. Ships cannot fire while cloaked, except if they have the related "cloaked firing" attribute.`
 </pre>
 </details>
 
@@ -311,6 +319,78 @@
 <summary>data/_ui/tooltips.txt | tip "cloaking heat:"</summary>
 <pre>tip "cloaking heat:"
 	`Heat generated per second when cloaked.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloaking shields:"</summary>
+<pre>tip "cloaking shields:"
+	`Shields consumed per second while cloaked.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloaking shield delay:"</summary>
+<pre>tip "cloaking shield delay:"
+	`This ship is unable to regenerate shields whilst cloaked, instead its shield regeneration will suffer a delay that will grow the longer it is cloaked`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloaking hull:"</summary>
+<pre>tip "cloaking hull:"
+	`Hull consumed per second while cloaked.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloaking repair delay:"</summary>
+<pre>tip "cloaking repair delay:"
+	`This ship is unable to regenerate hull whilst cloaked, instead its hull regeneration will suffer a delay that will grow the longer it is cloaked.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloak hull protection:"</summary>
+<pre>tip "cloak hull protection:"
+	`Protection against weapons that do hull damage when the cloak is active. If you add more than one outfit with this attribute, each additional one is less effective: a total value of 1 results in a 1 percent reduction in hull damage, while a total value of 11 only results in a 10 percent reduction.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloak shield protection:"</summary>
+<pre>tip "cloak shield protection:"
+	`Protection against weapons that do shield damage when the cloak is active. If you add more than one outfit with this attribute, each additional one is less effective: a total value of 1 results in a 1 percent reduction in shield damage, while a total value of 11 only results in a 10 percent reduction.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloak phasing:"</summary>
+<pre>tip "cloak phasing:"
+	`When cloaked, weapons cannot affect this ship, and pass right through.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloaked firing:"</summary>
+<pre>tip "cloaked firing:"
+	`This device is so efficient at hiding you that you may shoot when cloaking, losing this amount of cloaking in the process, before being cloaked again. A negative value means shooting does not even hinder your cloak.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "cloak hull threshold:"</summary>
+<pre>tip "cloak hull threshold:"
+	`If you have hull lower than this value (seen as a % between 0 and 1) the cloaking device can no longer operate.`
 </pre>
 </details>
 
@@ -684,6 +764,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "delayed hull energy:"</summary>
+<pre>tip "delayed hull energy:"
+	`Additional energy consumed per second when repairing the hull after the repair delay period.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "hull energy multiplier:"</summary>
 <pre>tip "hull energy multiplier:"
 	`Modifies the energy consumed when repairing the hull by the given factor.`
@@ -700,6 +788,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "delayed hull fuel:"</summary>
+<pre>tip "delayed hull fuel:"
+	`Additional fuel consumed per second when repairing the hull after the repair delay period.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "hull fuel multiplier:"</summary>
 <pre>tip "hull fuel multiplier:"
 	`Modifies the fuel consumed when repairing the hull by the given factor.`
@@ -711,6 +807,14 @@
 <summary>data/_ui/tooltips.txt | tip "hull heat:"</summary>
 <pre>tip "hull heat:"
 	`Heat produced per second when repairing the hull.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "delayed hull heat:"</summary>
+<pre>tip "delayed hull heat:"
+	`Additional heat produced per second when repairing the hull after the repair delay period.`
 </pre>
 </details>
 
@@ -740,9 +844,17 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "delayed hull repair rate:"</summary>
+<pre>tip "delayed hull repair rate:"
+	`Additional hull strength that can be repaired per second after the repair delay period.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "repair delay:"</summary>
 <pre>tip "repair delay:"
-	`The number of seconds it takes for hull repairs to begin after taking hull damage.`
+	`The number of seconds it takes for additional hull repairs to begin after taking hull damage.`
 </pre>
 </details>
 
@@ -751,6 +863,102 @@
 <summary>data/_ui/tooltips.txt | tip "disabled repair delay:"</summary>
 <pre>tip "disabled repair delay:"
 	`The number of seconds it takes for hull repairs to begin after being disabled.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery time:"</summary>
+<pre>tip "disabled recovery time:"
+	`The number of seconds it takes for a disabled ship to repair itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery energy:"</summary>
+<pre>tip "disabled recovery energy:"
+	`The energy cost required for a disabled ship to repair itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery fuel:"</summary>
+<pre>tip "disabled recovery fuel:"
+	`The fuel cost required for a disabled ship to repair itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery heat:"</summary>
+<pre>tip "disabled recovery heat:"
+	`The heat applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery ionization:"</summary>
+<pre>tip "disabled recovery ionization:"
+	`The ion damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery scrambling:"</summary>
+<pre>tip "disabled recovery scrambling:"
+	`The scrambling damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery disruption:"</summary>
+<pre>tip "disabled recovery disruption:"
+	`The disruption damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery slowing:"</summary>
+<pre>tip "disabled recovery slowing:"
+	`The slowing damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery discharge:"</summary>
+<pre>tip "disabled recovery discharge:"
+	`The discharge damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery corrosion:"</summary>
+<pre>tip "disabled recovery corrosion:"
+	`The corrosion damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery leak:"</summary>
+<pre>tip "disabled recovery leak:"
+	`The leak damage applied when a disabled ship repairs itself.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "disabled recovery burning:"</summary>
+<pre>tip "disabled recovery burning:"
+	`The burning damage applied when a disabled ship repairs itself.`
 </pre>
 </details>
 
@@ -1356,6 +1564,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "delayed shield energy:"</summary>
+<pre>tip "delayed shield energy:"
+	`Additional energy consumed per second when recharging shields after the shield delay period.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "shield energy multiplier:"</summary>
 <pre>tip "shield energy multiplier:"
 	`Modifies the energy consumed when recharging shields by the given factor.`
@@ -1367,6 +1583,14 @@
 <summary>data/_ui/tooltips.txt | tip "shield fuel:"</summary>
 <pre>tip "shield fuel:"
 	`Fuel consumed per second when recharging shields.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "delayed shield fuel:"</summary>
+<pre>tip "delayed shield fuel:"
+	`Additional fuel consumed per second when recharging shields after the shield delay period.`
 </pre>
 </details>
 
@@ -1388,6 +1612,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "delayed shield heat:"</summary>
+<pre>tip "delayed shield heat:"
+	`Additional heat produced per second when recharging shields after the shield delay period.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "shield heat multiplier:"</summary>
 <pre>tip "shield heat multiplier:"
 	`Modifies the heat produced when recharging shields by the given factor.`
@@ -1399,6 +1631,14 @@
 <summary>data/_ui/tooltips.txt | tip "shield generation:"</summary>
 <pre>tip "shield generation:"
 	`Shield points recharged per second. Recharging shields usually consumes energy, and may also produce heat.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "delayed shield generation:"</summary>
+<pre>tip "delayed shield generation:"
+	`Additional shield points recharged per second after the shield delay period.`
 </pre>
 </details>
 
@@ -1454,7 +1694,7 @@
 <details>
 <summary>data/_ui/tooltips.txt | tip "shield delay:"</summary>
 <pre>tip "shield delay:"
-	`The number of seconds it takes for shield generation to begin after taking shield damage.`
+	`The number of seconds it takes for additional shield generation to begin after taking shield damage.`
 </pre>
 </details>
 
@@ -1462,7 +1702,7 @@
 <details>
 <summary>data/_ui/tooltips.txt | tip "depleted shield delay:"</summary>
 <pre>tip "depleted shield delay:"
-	`The number of seconds it takes for shield generation to begin after your shields have been depleted.`
+	`The number of seconds it takes for additional shield generation to begin after your shields have been depleted.`
 </pre>
 </details>
 
@@ -2340,6 +2580,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "arc:"</summary>
+<pre>tip "arc:"
+	`The angular range of protection provided by this weapon, in degrees.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "homing:"</summary>
 <pre>tip "homing:"
 	`This projectile's ability to track its target. Weapons with better homing can adjust to the target's speed to plot a more effective intercept course.`
@@ -3010,6 +3258,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Toggle turret tracking"</summary>
+<pre>tip "Toggle turret tracking"
+	`Toggle the "Turret tracking" setting.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Select secondary weapon"</summary>
 <pre>tip "Select secondary weapon"
 	`Cycle to your flagship's next secondary weapon. After cycling through all secondary weapons individually, selects every secondary weapon at once, then selects no weapons.`
@@ -3162,6 +3418,14 @@
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Camera acceleration"</summary>
+<pre>tip "Camera acceleration"
+	`Determines whether the screen center is fixed on, trails behind, or speeds ahead of the flagship while accelerating.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Show CPU / GPU load"</summary>
 <pre>tip "Show CPU / GPU load"
 	`Display the CPU and GPU load at the top of the screen while in flight. Loads are presented as a percentage of a frame (1/60th of a second) that it takes to calculate or draw each frame. &#62;100% load (or &#62;33% when fast-forward is active) means the game will run slower.`
@@ -3229,6 +3493,22 @@
 <summary>data/_ui/tooltips.txt | tip "Ship outlines in shops"</summary>
 <pre>tip "Ship outlines in shops"
 	`Controls the display of your fleet ship icons when in the shipyard or outfitter. When fancy, applies a sobel filter to all ships. (This can result in high GPU load for large fleets.) When fast, just uses the ship's sprite.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Ship outlines in HUD"</summary>
+<pre>tip "Ship outlines in HUD"
+	`Controls the display of your flagship and target ship icons in the HUD. When fancy, applies a sobel filter to the sprites. (This can result in high GPU load for some ships on very old or low performance computers.) When fast, just uses the ship's sprite.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Cloaked ship outlines"</summary>
+<pre>tip "Cloaked ship outlines"
+	`Controls the display of cloaked escorts. When fancy, causes the ship to become transparent and applies a red outline. When fast, simply shifts the ship to being red.`
 </pre>
 </details>
 

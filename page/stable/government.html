@@ -21,6 +21,8 @@
 <pre>government "Author"
 	"player reputation" 1
 	"bribe" 0
+	"friendly disabled hail" "friendly disabled"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -150,6 +152,7 @@
 	"player reputation" -1000
 	"fine" 0
 	"hostile hail" "hostile bounty"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -162,7 +165,9 @@
 	"player reputation" 1
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile bounty"
+	"hostile disabled hail" "hostile disabled"
 	"penalty for"
 		assist 0
 		disable 0
@@ -183,6 +188,7 @@
 	"bribe" .2
 	"fine" 0
 	"hostile hail" "hostile bounty hunter"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -197,6 +203,7 @@
 	"bribe" .2
 	"fine" 0
 	"hostile hail" "hostile bounty hunter"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -226,7 +233,9 @@
 	"display name" "Deep Security"
 	swizzle 0
 	"player reputation" -1000
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile deep"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -242,7 +251,9 @@
 		"Pirate (Devil-Run Gang)" -.2
 		"Smuggler (Hai Trafficker)" .05
 	"friendly hail" "friendly deep"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile deep"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -251,6 +262,19 @@
 <summary>data/governments.txt | government "Derelict"</summary>
 <pre>government "Derelict"
 	"fine" 0
+</pre>
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Derelict (Boardable)"</summary>
+<pre>government "Derelict (Boardable)"
+	swizzle 10
+	"display name" "Derelict"
+	"player reputation" -1
+	"default attitude" -.01
+	"crew attack" 0
+	"crew defense" 0
 </pre>
 </details>
 
@@ -317,7 +341,9 @@
 		"Korath" -.01
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -359,7 +385,9 @@
 		"Neutral" .1
 	"bribe" .1
 	"friendly hail" "friendly free worlds"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile free worlds"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -382,7 +410,9 @@
 		"Neutral" .1
 	"bribe" .1
 	"friendly hail" "friendly free worlds"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile free worlds"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -683,7 +713,9 @@
 		system "Wah Yoot"
 	"bribe" .02
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -835,7 +867,9 @@
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
 	raid "Large Southern Pirates"
 </pre>
 </details>
@@ -851,7 +885,9 @@
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1126,7 +1162,9 @@
 	"player reputation" 1
 	"bribe" .1
 	"fine" 0
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1143,30 +1181,9 @@
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
-</pre>
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Merchant (Hijacked)"</summary>
-<pre>government "Merchant (Hijacked)"
-	"display name" "Merchant"
-	swizzle 5
-	"attitude toward"
-		"Republic" -.01
-		"Syndicate" -.01
-	"player reputation" 1
-	"fine" 0
-	"friendly hail" "friendly civilian"
-	"hostile hail" "hostile pirate"
-	"penalty for"
-		assist 0
-		disable 0
-		board 0
-		capture 0
-		destroy 0
-		atrocity 0
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1184,7 +1201,9 @@
 		"Smuggler (Hai Trafficker)" .05
 	"bribe" .1
 	"friendly hail" "friendly militia"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile militia"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1199,6 +1218,8 @@
 		"Syndicate" -.1
 		"Pirate" -.3
 		"Pirate (Devil-Run Gang)" -.3
+	"friendly disabled hail" "friendly disabled"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1223,7 +1244,9 @@
 		"Navy Intelligence" 1
 		"Republic Intelligence" 1
 	"friendly hail" "friendly navy"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1241,7 +1264,9 @@
 		"Smuggler (Hai Trafficker)" .05
 	"bribe" .05
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1253,6 +1278,8 @@
 	swizzle 2
 	"player reputation" 1
 	"bribe" 0
+	"friendly disabled hail" "friendly disabled"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1274,7 +1301,9 @@
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly pirate"
+	"friendly disabled hail" "friendly disabled pirate"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1299,7 +1328,9 @@
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly pirate"
+	"friendly disabled hail" "friendly disabled pirate"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
 </pre>
 </details>
 
@@ -1321,7 +1352,9 @@
 	"bribe" 0
 	"fine" 0
 	"friendly hail" "friendly pirate"
+	"friendly disabled hail" "friendly disabled pirate"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled pirate"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1532,7 +1565,9 @@
 			scan 0
 	"provoked on scan"
 	"friendly hail" "remnant uncontacted"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "remnant uncontacted hostile"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1560,7 +1595,9 @@
 	"foreign penalties for"
 		"Remnant"
 	"friendly hail" "remnant uncontacted"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "remnant uncontacted hostile"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1586,7 +1623,9 @@
 		"Navy (Oathkeeper)" 1
 		"Neutral" .1
 	"friendly hail" "friendly navy"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1601,6 +1640,8 @@
 	"attitude toward"
 		"Pirate" -.3
 		"Pirate (Devil-Run Gang)" -.3
+	"friendly disabled hail" "friendly disabled"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1627,7 +1668,9 @@
 		"Navy (Oathkeeper)" 1
 		"Neutral" .1
 	"friendly hail" "friendly navy"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1651,7 +1694,9 @@
 		"Navy (Oathkeeper)" .01
 		"Neutral" .01
 	"friendly hail" "friendly navy"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1681,6 +1726,7 @@
 	bribe 0
 	fine 0
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1695,6 +1741,7 @@
 	bribe 0
 	fine 0
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 
@@ -1718,7 +1765,9 @@
 	"bribe" .1
 	"fine" 0
 	"friendly hail" "friendly civilian"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile pirate"
+	"hostile disabled hail" "hostile disabled"
 	# They just want to pass through the system alive, so they
 	# won't attack anyone unless they have to.
 	"player reputation" 1
@@ -1747,7 +1796,9 @@
 		"Korath" -.5
 	"bribe" .08
 	"friendly hail" "friendly syndicate"
+	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile syndicate"
+	"hostile disabled hail" "hostile disabled"
 	raid "pirate raid"
 </pre>
 </details>
@@ -1766,6 +1817,7 @@
 	"bribe" 0
 	"fine" 0
 	"hostile hail" "hostile syndicate"
+	"hostile disabled hail" "hostile disabled"
 </pre>
 </details>
 

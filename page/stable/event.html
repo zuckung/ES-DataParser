@@ -1523,6 +1523,7 @@
 		fleet "Large Republic" 400
 		fleet "Small Northern Pirates" 4000
 		fleet "Large Northern Pirates" 8000
+		fleet "Derelict Northern" 30000
 		fleet "Navy Surveillance" 2000
 	system "Phecda"
 		fleet "Small Northern Merchants" 900
@@ -1557,6 +1558,7 @@
 		fleet "Small Republic" 2500
 		fleet "Large Republic" 4000
 		fleet "Small Southern Pirates" 5000
+		fleet "Derelict Northern" 10000
 		fleet "Navy Surveillance" 2000
 	system "Mizar"
 		fleet "Small Southern Merchants" 1400
@@ -1564,6 +1566,7 @@
 		fleet "Small Republic" 1000
 		fleet "Large Republic" 1400
 		fleet "Small Southern Pirates" 9000
+		fleet "Derelict Northern" 30000
 		fleet "Navy Surveillance" 2000
 	system "Muphrid"
 		fleet "Small Southern Merchants" 1200
@@ -1571,6 +1574,7 @@
 		fleet "Small Republic" 1100
 		fleet "Large Republic" 1900
 		fleet "Small Southern Pirates" 9000
+		fleet "Derelict Northern" 30000
 		fleet "Navy Surveillance" 2000
 	system "Menkent"
 		fleet "Small Southern Merchants" 700
@@ -1636,8 +1640,7 @@
 		fleet "Large Southern Merchants" 1800
 		fleet "Small Free Worlds" 2200
 		fleet "Large Free Worlds" 3600
-		fleet "Small Southern Pirates" 4000
-		fleet "Large Southern Pirates" 7000
+		fleet "Derelict Southern" 25000
 	system "Mora"
 		fleet "Small Southern Merchants" 2800
 		fleet "Large Southern Merchants" 5000
@@ -1645,6 +1648,7 @@
 		fleet "Large Southern Pirates" 4000
 		fleet "Small Republic" 1000
 		fleet "Large Republic" 2000
+		fleet "Derelict Northern" 30000
 		fleet "Navy Surveillance" 1600
 	system "Delta Velorum"
 		fleet "Small Southern Merchants" 1000
@@ -1669,6 +1673,7 @@
 		fleet "Large Southern Pirates" 4000
 		fleet "Small Republic" 2000
 		fleet "Large Republic" 3000
+		fleet "Derelict Northern" 30000
 		fleet "Navy Surveillance" 1600
 	system "Cor Caroli"
 		fleet "Small Southern Merchants" 700
@@ -1714,6 +1719,7 @@
 		fleet "Small Southern Pirates" 5000
 		fleet "Small Republic" 2000
 		fleet "Large Republic" 3000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1600
 	system "Arcturus"
 		fleet "Small Southern Merchants" 700
@@ -1742,6 +1748,7 @@
 		fleet "Small Southern Pirates" 1500
 		fleet "Small Republic" 7000
 		fleet "Large Republic" 12000
+		fleet "Derelict Southern" 10000
 		fleet "Navy Surveillance" 1600
 	system "Cebalrai"
 		fleet "Small Southern Merchants" 600
@@ -1763,6 +1770,16 @@
 
 
 <details>
+<summary>data/human/campaign events.txt | event "remove pirates from Ildaria"</summary>
+<pre>event "remove pirates from Ildaria"
+	system Ildaria
+		remove fleet "Small Southern Pirates"
+		remove fleet "Large Southern Pirates"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/campaign events.txt | event "initial deployment 3"</summary>
 <pre>event "initial deployment 3"
 	date 29 8 3014
@@ -1773,6 +1790,7 @@
 		fleet "Large Free Worlds" 1000
 		fleet "Small Southern Pirates" 5000
 		fleet "Large Southern Pirates" 8000
+		fleet "Derelict Southern" 30000
 	system "Unukalhai"
 		fleet "Small Southern Merchants" 900
 		fleet "Large Southern Merchants" 3000
@@ -1804,6 +1822,7 @@
 		fleet "Small Southern Pirates" 6000
 		fleet "Small Republic" 800
 		fleet "Large Republic" 700
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1200
 	system "Seginus"
 		fleet "Small Southern Merchants" 1200
@@ -1818,6 +1837,7 @@
 		fleet "Small Southern Pirates" 6000
 		fleet "Small Republic" 900
 		fleet "Large Republic" 1100
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1200
 	system "Eber"
 		fleet "Small Southern Merchants" 1900
@@ -1825,6 +1845,7 @@
 		fleet "Small Southern Pirates" 3000
 		fleet "Small Republic" 1000
 		fleet "Large Republic" 1500
+		fleet "Derelict Southern" 10000
 		fleet "Navy Surveillance" 1200
 	system "Alpha Arae"
 		fleet "Small Southern Merchants" 2100
@@ -1833,6 +1854,7 @@
 		fleet "Large Southern Pirates" 13000
 		fleet "Small Republic" 900
 		fleet "Large Republic" 800
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1200
 	system "Kaus Borealis"
 		fleet "Small Southern Merchants" 900
@@ -1841,6 +1863,23 @@
 		fleet "Small Republic" 1100
 		fleet "Large Republic" 800
 		fleet "Navy Surveillance" 1200
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/campaign events.txt | event "central outfitters expansion"</summary>
+<pre>event "central outfitters expansion"
+	planet "Earth"
+		add outfitter "Central Outfits Expansion"
+	planet "Luna"
+		add outfitter "Central Outfits Expansion"
+	planet "New China"
+		add outfitter "Central Outfits Expansion"
+	planet "New Wales"
+		add outfitter "Central Outfits Expansion"
+	planet "Heartland"
+		add outfitter "Central Outfits Expansion"
 </pre>
 </details>
 
@@ -2041,6 +2080,7 @@
 		fleet "Large Southern Pirates" 7000
 		fleet "Small Free Worlds" 800
 		fleet "Large Free Worlds" 1100
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 800
 	system "Atria"
 		fleet "Small Southern Merchants" 700
@@ -2076,6 +2116,7 @@
 		fleet "Large Southern Pirates" 1600
 		fleet "Small Free Worlds" 4000
 		fleet "Large Free Worlds" 8000
+		fleet "Derelict Southern" 30000
 	system "Yed Prior"
 		fleet "Small Northern Merchants" 800
 		fleet "Large Northern Merchants" 1100
@@ -2292,6 +2333,7 @@
 		fleet "Republic Logistics" 5400
 		fleet "Small Northern Pirates" 3000
 		fleet "Large Northern Pirates" 5000
+		fleet "Derelict Northern" 30000
 	system "Alnitak"
 		fleet "Small Northern Pirates" 3000
 		fleet "Large Northern Pirates" 5000
@@ -2310,6 +2352,7 @@
 		fleet "Large Northern Pirates" 2000
 		fleet "Large Oathkeeper" 2000
 		fleet "Small Northern Merchants" 4000
+		fleet "Derelict Pirate" 30000
 	system "Almaaz"
 		fleet "Small Northern Pirates" 500
 		fleet "Large Northern Pirates" 600
@@ -2319,11 +2362,13 @@
 		fleet "Large Northern Pirates" 1000
 		fleet "Large Oathkeeper" 4000
 		fleet "Small Northern Merchants" 8000
+		fleet "Derelict Pirate" 10000
 	system "Tortor"
 		fleet "Small Northern Pirates" 1000
 		fleet "Large Northern Pirates" 1000
 		fleet "Large Oathkeeper" 6000
 		fleet "Small Northern Merchants" 6000
+		fleet "Derelict Pirate" 10000
 	planet "Farpoint"
 		description `Farpoint, on the northernmost end of human space, is a rocky desert planet home to a Republic Navy base and not much else. Farming is possible only within greenhouses, and this system is too far from the galactic center to be desirable for trade or industry.`
 		description `	Lately the Navy base on Farpoint is growing, because it has become the new home of the Navy Oathkeepers, a small branch of the Navy that has sworn to stay uninvolved in the conflict with the Free Worlds.`
@@ -2532,6 +2577,16 @@
 		description `	The Free Worlds occupied this planet for a short while long ago, attempting to clean up the criminal hub, but almost all traces of the Free Worlds' influence on the planet is now long gone.`
 		spaceport `You have heard enough about this port's reputation that you are not surprised to see the slave markets, heavily guarded in case any visitors happen to find themselves in possession of a conscience. Nor are you shocked by the shady establishments catering to all manner of prurient interests. This is, after all, a pirate port, and everything is for sale here.`
 		spaceport `	Everything, in fact, including the very bizarre. You find one dark alley that has been completely fenced off from the rest of the spaceport, the howls of animals coming from behind the barrier. Beside the alley you see a sign for a shop called "Mike's Mustelids," promising the sale of "exotic animals from within Greenrock's urban spaceport jungle."`
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/campaign events.txt | event "memorial on Deep"</summary>
+<pre>event "memorial on Deep"
+	planet "Deep"
+		spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its center. Most of the large-scale fishing here is done by a single company, Poseidon Industries, which also built and maintains the spaceport. Steep winding roads and sturdy concrete homes and warehouses line the mountain slopes, and below you in the harbor several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+		spaceport `	Positioned north of the spaceport is the Free Worlds War Memorial, a series of granite walls engraved with the names of the fallen. The nine completed walls are already filled on both sides; it seems unlikely the other fourteen walls will last the war.`
 </pre>
 </details>
 
@@ -2823,6 +2878,7 @@
 		fleet "Small Southern Pirates" 6000
 		fleet "Small Republic" 900
 		fleet "Large Republic" 1100
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1200
 	system "Wei"
 		add fleet "Large Republic" 700
@@ -2840,6 +2896,7 @@
 		fleet "Large Free Worlds" 1100
 		fleet "Small Southern Pirates" 2000
 		fleet "Large Southern Pirates" 5000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 4000
 	system "Sargas"
 		fleet "Small Southern Merchants" 600
@@ -2911,6 +2968,16 @@
 
 
 <details>
+<summary>data/human/campaign events.txt | event "Deep memorial expansion 1"</summary>
+<pre>event "Deep memorial expansion 1"
+	planet "Deep"
+		spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its center. Most of the large-scale fishing here is done by a single company, Poseidon Industries, which also built and maintains the spaceport. Steep winding roads and sturdy concrete homes and warehouses line the mountain slopes, and below you in the harbor several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+		spaceport `	Positioned north of the spaceport is the Free Worlds War Memorial, a series of granite walls engraved with the names of the fallen. The site has progressed from its original scale, with an outer ring being erected to hold fifty additional walls of names.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/campaign events.txt | event "fw occupying the north"</summary>
 <pre>event "fw occupying the north"
 	system "Alioth"
@@ -2932,6 +2999,7 @@
 		fleet "Large Northern Merchants" 8000
 		fleet "Small Free Worlds" 1500
 		fleet "Large Free Worlds" 3800
+		fleet "Derelict Southern" 10000
 	system "Seginus"
 		fleet "Small Southern Merchants" 1200
 		fleet "Large Southern Merchants" 2700
@@ -2945,6 +3013,7 @@
 		fleet "Large Southern Merchants" 2500
 		fleet "Small Free Worlds" 800
 		fleet "Large Free Worlds" 1000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 4000
 </pre>
 </details>
@@ -3200,12 +3269,14 @@
 		fleet "Small Republic" 1000
 		fleet "Large Republic" 1000
 		fleet "Large Free Worlds" 800
+		fleet "Derelict Southern" 30000
 	system "Alpha Arae"
 		fleet "Small Southern Merchants" 5000
 		fleet "Large Southern Merchants" 6000
 		fleet "Small Republic" 800
 		fleet "Large Republic" 1000
 		fleet "Large Free Worlds" 3000
+		fleet "Derelict Southern" 30000
 </pre>
 </details>
 
@@ -3289,6 +3360,7 @@
 		fleet "Small Southern Pirates" 5000
 		fleet "Small Republic" 2000
 		fleet "Large Republic" 3000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1600
 	system "Kaus Borealis"
 		remove fleet "Republic Logistics"
@@ -3402,6 +3474,7 @@
 		fleet "Large Free Worlds" 1100
 		fleet "Small Southern Pirates" 2000
 		fleet "Large Southern Pirates" 5000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 4000
 	system "Alpha Arae"
 		fleet "Small Southern Merchants" 2100
@@ -3410,6 +3483,7 @@
 		fleet "Large Southern Pirates" 13000
 		fleet "Small Republic" 900
 		fleet "Large Republic" 800
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 1200
 </pre>
 </details>
@@ -3825,11 +3899,13 @@
 		fleet "Small Republic" 3000
 		fleet "Large Republic" 7000
 		fleet "Small Northern Pirates" 2500
+		fleet "Derelict Northern" 10000
 	system "Orvala"
 		fleet "Small Southern Merchants" 3000
 		fleet "Large Southern Merchants" 6000
 		fleet "Small Southern Pirates" 1000
 		fleet "Large Southern Pirates" 3000
+		fleet "Derelict Southern" 10000
 	system "Deneb"
 		fleet "Small Core Merchants" 5000
 		add object "Pug Wormhole"
@@ -4078,6 +4154,7 @@
 		fleet "Large Free Worlds" 1100
 		fleet "Small Southern Pirates" 2000
 		fleet "Large Southern Pirates" 5000
+		fleet "Derelict Southern" 30000
 		fleet "Navy Surveillance" 4000
 </pre>
 </details>
@@ -4707,6 +4784,16 @@
 
 
 <details>
+<summary>data/human/campaign events.txt | event "Deep memorial completed"</summary>
+<pre>event "Deep memorial completed"
+	planet "Deep"
+		spaceport `The spaceport is built on a large island, a now-extinct volcano with an elevation of several kilometers at its center. Most of the large-scale fishing here is done by a single company, Poseidon Industries, which also built and maintains the spaceport. Steep winding roads and sturdy concrete homes and warehouses line the mountain slopes, and below you in the harbor several massive trawling vessels are moored. On the outskirts of the spaceport are the ramshackle houses and open-air marketplace used by the smaller, independent fishing families.`
+		spaceport `	Positioned north of the spaceport is the Free Worlds War Memorial, a series of granite walls engraved with the names of the fallen. Two additional rings of walls have been constructed around both the first twenty-three walls and the fifty walls of the old outer ring.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/campaign events.txt | event "geminus rebuilt"</summary>
 <pre>event "geminus rebuilt"
 	planet "Geminus"
@@ -5163,15 +5250,6 @@
 
 
 <details>
-<summary>data/human/free worlds 4 epilogue.txt | event "plasma repeater basics"</summary>
-<pre>event "plasma repeater basics"
-	outfitter "Kraz Basics"
-		"Plasma Repeater"
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/free worlds side plots.txt | event "wolf pack 3 ready"</summary>
 <pre>event "wolf pack 3 ready"
 </pre>
@@ -5342,15 +5420,22 @@
 
 
 <details>
-<summary>data/human/human missions.txt | event "carl elected governor"</summary>
-<pre>event "carl elected governor"
+<summary>data/human/human missions.txt | event "hogshead poll"</summary>
+<pre>event "hogshead poll"
 </pre>
 </details>
 
 
 <details>
-<summary>data/human/human missions.txt | event "tom and carl's child"</summary>
-<pre>event "tom and carl's child"
+<summary>data/human/human missions.txt | event "lost dog: homeward bound"</summary>
+<pre>event "lost dog: homeward bound"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "adelita 2 offer expired"</summary>
+<pre>event "adelita 2 offer expired"
 </pre>
 </details>
 
@@ -5359,8 +5444,10 @@
 <summary>data/human/kestrel.txt | event "kestrel available: more weapons"</summary>
 <pre>event "kestrel available: more weapons"
 	set "kestrel available"
-	shipyard "Tarazed Advanced"
+	shipyard "Kestrel"
 		"Kestrel (More Weapons)"
+	planet Wayfarer
+		add shipyard "Kestrel"
 </pre>
 </details>
 
@@ -5369,8 +5456,10 @@
 <summary>data/human/kestrel.txt | event "kestrel available: more engines"</summary>
 <pre>event "kestrel available: more engines"
 	set "kestrel available"
-	shipyard "Tarazed Advanced"
+	shipyard "Kestrel"
 		"Kestrel (More Engines)"
+	planet Wayfarer
+		add shipyard "Kestrel"
 </pre>
 </details>
 
@@ -5379,8 +5468,10 @@
 <summary>data/human/kestrel.txt | event "kestrel available: more shields"</summary>
 <pre>event "kestrel available: more shields"
 	set "kestrel available"
-	shipyard "Tarazed Advanced"
+	shipyard "Kestrel"
 		"Kestrel (More Shields)"
+	planet Wayfarer
+		add shipyard "Kestrel"
 </pre>
 </details>
 
@@ -5389,8 +5480,10 @@
 <summary>data/human/kestrel.txt | event "kestrel available: more bays"</summary>
 <pre>event "kestrel available: more bays"
 	set "kestrel available"
-	shipyard "Tarazed Advanced"
+	shipyard "Kestrel"
 		"Kestrel (More Bays)"
+	planet Wayfarer
+		add shipyard "Kestrel"
 </pre>
 </details>
 
@@ -6914,6 +7007,22 @@
 
 
 <details>
+<summary>data/wanderer/wanderer missions.txt | event "mereti visiting eneremprukt"</summary>
+<pre>event "mereti visiting eneremprukt"
+	system eneremprukt
+		fleet "Small Kor Mereti" 800
+</pre>
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderer missions.txt | event "field of mereti plants"</summary>
+<pre>event "field of mereti plants"
+</pre>
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers middle.txt | event "wanderers: kaliptari battle begins"</summary>
 <pre>event "wanderers: kaliptari battle begins"
 	system Kaliptari
@@ -7299,6 +7408,7 @@
 	planet "Sestor Ikfar"
 		"required reputation" 0
 		spaceport clear
+		description `This dry, hot world is home to almost no native life, but is ideal for the Korath automata because of its abundant solar energy. In the places where the Korath cities once were, the Kor Sestor have built massive factories with buildings sometimes close to a kilometer in height. In other places the land remains undeveloped, and now that the factories have been shut down it seems likely that it will stay that way for a very long time.`
 	planet "Devru Kaska"
 		"required reputation" 0
 		spaceport clear
@@ -7311,6 +7421,7 @@
 	planet "Sopi Lefarkata"
 		"required reputation" 0
 		spaceport clear
+		description `This is a cold and mountainous world, and most of its oceans are covered in ice. A handful of giant craters gouged out from the sides of mountains are the only sign that there were once Korath settlements here. The Kor Sestor robots began building settlements of their own, in caverns deep under the mountains where they are safe from orbital bombardment, but now these settlements are falling into disrepair. Where the last set of Kor Mereti attacks collapsed one of the access tunnels, a handful of robots have gathered, trying in vain to dig them out.`
 </pre>
 </details>
 
@@ -7449,6 +7560,19 @@
 
 
 <details>
+<summary>data/wanderer/wanderers start.txt | event "wanderers: varu mer'ek evacuated"</summary>
+<pre>event "wanderers: varu mer'ek evacuated"
+	planet "Varu Mer'ek"
+		remove spaceport
+		remove shipyard
+		remove outfitter
+		remove "required reputation"
+		remove tribute
+</pre>
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers start.txt | event "eastern evacuation"</summary>
 <pre>event "eastern evacuation"
 	planet "Vara Ke'stai"
@@ -7459,6 +7583,18 @@
 		add attributes "evacuation"
 	planet "Kort Vek'kri"
 		add attributes "evacuation"
+</pre>
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderers start.txt | event "wanderers: vara ke'stai evacuated"</summary>
+<pre>event "wanderers: vara ke'stai evacuated"
+	planet "Vara Ke'stai"
+		remove spaceport
+		remove outfitter
+		remove "required reputation"
+		remove tribute
 </pre>
 </details>
 
