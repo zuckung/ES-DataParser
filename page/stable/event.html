@@ -271,6 +271,56 @@
 
 
 <details>
+<summary>data/gegno/gegno events.txt | event "gegno: civilian suspicion"</summary>
+<pre>event "gegno: civilian suspicion"
+	government "Gegno"
+		"send untranslated hails"
+		"friendly hail" "gegno untranslated"
+</pre>
+</details>
+
+
+<details>
+<summary>data/gegno/gegno events.txt | event "gegno: quarg talks"</summary>
+<pre>event "gegno: quarg talks"
+</pre>
+</details>
+
+
+<details>
+<summary>data/gegno/gegno events.txt | event "gegno: apprehension"</summary>
+<pre>event "gegno: apprehension"
+</pre>
+</details>
+
+
+<details>
+<summary>data/gegno/gegno events.txt | event "gegno: vi occupy zydee"</summary>
+<pre>event "gegno: vi occupy zydee"
+	system "Vesvii"
+		fleet "Scin Warfleet" 2700
+		fleet "Vi Warfleet" 2400
+	system "Kneirc"
+		government "Gegno Vi"
+		attributes "gegno" "vi"
+		fleet "Small Vi" 1400
+		fleet "Vi Warfleet" 3300
+		fleet "Small Scin" 1900
+		fleet "Scin Warfleet" 3000
+	planet "Zydee"
+		attributes "gegno" "vi" "moon"
+		description `There is evidence that the nearby Gegno Scin have attempted to establish a presence on this barren moon in the form of several partially-constructed buildings and landing zones scattered about the surface. In recent times, however, the opposing Gegno Vi have fielded their own forces to take control of the system, and have begun a number of operations to convert existing infrastructure and set up posts of their own, claiming the moon in their name.`
+		spaceport `The Vi have made makeshift landing zones and outposts, such as this one, for the group of warriors they've distributed across the moon. Although their numbers are no more than than that of a small village, those who are present have accomplished a considerable amount during their time on the surface while the fleets above defend them.`
+		government "Gegno Vi"
+		"required reputation" 1
+	planet "Ghneoe"
+		description `Ghneoe's orbital period is dominated by a very long dry season due to the binary stars at the system's center. However, during a short portion of the year, Ghneoe experiences an intense water cycle that results in a boom of greenery and wildlife activity, developing a short-lived but flourishing ecosystem. Much of the flora and fauna have adapted to such drastic shifts in climate, and return to a dormant state once the intense heat cycle returns.`
+		description `	Unlike its moon, Ghneoe sees few to no colonization efforts from either the Gegno Vi or Scin, perhaps due to the abnormal weather cycles, continued system warfare, or a combination of both.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/gegno/gegno events.txt | event "gegno: unified defense"</summary>
 <pre>event "gegno: unified defense"
 	government "Gegno Vi"
@@ -283,7 +333,7 @@
 		"attitude toward"
 			"Gegno Scin" 1
 			"Gegno Vi" 1
-	government "Quarg"
+	government "Quarg (Gegno)"
 		"attitude toward"
 			"Gegno" 1
 			"Gegno Vi" 1
@@ -294,14 +344,32 @@
 		add fleet "Gegno Miners" 1000
 	system "Zeinar"
 		add fleet "Scin Warfleet" 600
-		add fleet "Quarg" 1000
+		add fleet "Quarg (Gegno)" 1000
 	system "Scija"
 		add fleet "Vi Warfleet" 600
-		add fleet "Quarg" 1000
+		add fleet "Quarg (Gegno)" 1000
 	system "Heutesl"
 		add fleet "Scin Warfleet" 600
 		add fleet "Vi Warfleet" 600
-		add fleet "Quarg Large" 600
+		add fleet "Large Quarg (Gegno)" 600
+</pre>
+</details>
+
+
+<details>
+<summary>data/gegno/gegno events.txt | event "gegno leave quarg space"</summary>
+<pre>event "gegno leave quarg space"
+	system "Aleit"
+		remove fleet "Gegno Basic"
+		remove fleet "Gegno Cargo"
+	system "Elifennka"
+		remove fleet "Gegno Miners"
+	system "Yllke"
+		remove fleet "Gegno Basic"
+		remove fleet "Gegno Cargo"
+		remove fleet "Gegno Miners"
+	system "Heutesl"
+		remove fleet "Quarg (Gegno)"
 </pre>
 </details>
 
@@ -3965,8 +4033,10 @@
 		fleet "Large Syndicate" 2000
 	planet "Pugglemug"
 		remove attributes
+		"bribe" 0.01
 	planet "Pugglequat"
 		remove attributes
+		"bribe" 0.01
 	planet "Rand"
 		security 0.05
 		tribute 500
@@ -4711,8 +4781,10 @@
 		government "Republic"
 	planet "Pugglemug"
 		remove attributes
+		"bribe" 0.01
 	planet "Pugglequat"
 		remove attributes
+		"bribe" 0.01
 	planet "Shiver"
 		security 0.1
 		tribute 300
@@ -5005,6 +5077,27 @@
 <details>
 <summary>data/human/deep missions.txt | event "hjlod waits"</summary>
 <pre>event "hjlod waits"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/free worlds 0 prologue.txt | event "pact recon 0"</summary>
+<pre>event "pact recon 0"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/free worlds 0 prologue.txt | event "pact recon 1"</summary>
+<pre>event "pact recon 1"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/free worlds 0 prologue.txt | event "pact recon 2"</summary>
+<pre>event "pact recon 2"
 </pre>
 </details>
 
@@ -5489,6 +5582,15 @@
 
 
 <details>
+<summary>data/incipias/incipias first contact.txt | event "label incipias space"</summary>
+<pre>event "label incipias space"
+	galaxy "label incipias"
+		sprite "label/incipias"
+</pre>
+</details>
+
+
+<details>
 <summary>data/kahet/kahet missions.txt | event "graveyard label"</summary>
 <pre>event "graveyard label"
 	galaxy "label graveyard"
@@ -5863,7 +5965,7 @@
 		add attributes remnant
 		remove attributes uninhabited
 		description `While Esquiline used to be simply another planet the Remnant harvested valuable resources from, the introduction of void sprites and the activation of their station has turned this world into a hidden research lab: The first human astrobiology station studying void sprites.`
-		add spaceport `Although the facilities here are basic, the Remnant cafeteria boasts a food dispenser that is available at any time, along with a mesmerizing view of the clouds outside. Occasionally a void sprite will pass in front of the window, much to the delight of everyone.`
+		spaceport `Although the facilities here are basic, the Remnant cafeteria boasts a food dispenser that is available at any time, along with a mesmerizing view of the clouds outside. Occasionally a void sprite will pass in front of the window, much to the delight of everyone.`
 </pre>
 </details>
 
@@ -6877,6 +6979,9 @@
 		add "Teciimach Pod"
 		add "Teciimach Canister"
 		add "Teciimach Canister Rack"
+	outfitter "Remnant Core"
+		remove "EMP Torpedo"
+		add "Teciimach Canister"
 	fleet "Small Remnant"
 		add variant 5
 			"Merganser (II)" 2
@@ -6966,6 +7071,15 @@
 
 
 <details>
+<summary>data/rulei/rulei.txt | event "umbral reach label"</summary>
+<pre>event "umbral reach label"
+	galaxy "label umbral"
+		sprite "label/umbral"
+</pre>
+</details>
+
+
+<details>
 <summary>data/sheragi/archaeology missions.txt | event "rim archaeology results"</summary>
 <pre>event "rim archaeology results"
 	planet Zug
@@ -7007,9 +7121,130 @@
 
 
 <details>
+<summary>data/successors/successor events.txt | event "label successor space"</summary>
+<pre>event "label successor space"
+	galaxy "label successors"
+		sprite label/successors
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: first contact wait"</summary>
+<pre>event "successors: first contact wait"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: tardy for sioeora"</summary>
+<pre>event "successors: tardy for sioeora"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: released kijra-pet wait"</summary>
+<pre>event "successors: released kijra-pet wait"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: trust 1"</summary>
+<pre>event "successors: trust 1"
+	# Associated with getting the translation device.
+	# Add facilities to previously-available but limited planets.
+	planet "Iyra-Ijasa-Iret"
+		add shipyard "Successor Basics"
+		add shipyard "Waterlining"
+		add outfitter "Successor Basics"
+	planet "Kua-Oa-Aava"
+		add outfitter "Successor Basics"
+	planet "Mavra-Sol-Kvel"
+		add shipyard "Successor Civilian"
+		add outfitter "Successor Civilian"
+	planet "Mosaa-Oa-Vyret"
+		add shipyard "Successor Heavy"
+		add outfitter "Successor Civilian"
+		add outfitter "Successor Heavy"
+		add outfitter "Successor High Tech"
+		add outfitter "Successor Weapons Heavy"
+	planet "Raaqa-Kvelq-Ryuit"
+		add shipyard "Successor Civilian"
+		add outfitter "Successor Civilian"
+		add outfitter "Successor Weapons Basics"
+	planet "Staja-Kella-Oa"
+		add shipyard "Successor Basics"
+		add outfitter "Successor Basics"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: trust 2"</summary>
+<pre>event "successors: trust 2"
+	# Associated with "Successors: Trusted" mission.
+	# Replace "Naive" variants in shipyards.
+	shipyard "Successor Basics"
+		remove "Kvelqde (Naive)"
+		remove "Stolsaqra (Naive)"
+		add "Kvelqde"
+		add "Stolsaqra"
+	shipyard "Successor Civilian"
+		remove "Kvelqde (Naive)"
+		remove "Stolsaqra (Naive)"
+		remove "Myaede (Naive)"
+		add "Kvelqde"
+		add "Stolsaqra"
+		add "Myaede"
+	shipyard "Successor Heavy"
+		remove "Kvelqde (Naive)"
+		remove "Stolsaqra (Naive)"
+		remove "Myaede (Naive)"
+		remove "Nnesaarau (Naive)"
+		remove "Ojde (Naive)"
+		add "Kvelqde"
+		add "Stolsaqra"
+		add "Myaede"
+		add "Nnesaarau"
+		add "Ojde"
+	shipyard "New Houses Light"
+		remove "Vujlet (Naive)"
+		add "Vujlet"
+	shipyard "High Houses Light"
+		remove "Aaulqra (Naive)"
+		remove "Veusade (Naive)"
+		add "Aaulqra"
+		add "Veusade"
+	shipyard "High Houses Heavy"
+		remove "Aaulqra (Naive)"
+		remove "Veusade (Naive)"
+		add "Aaulqra"
+		add "Veusade"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: unified defense"</summary>
+<pre>event "successors: unified defense"
+	government "People's Houses"
+		bribe 0
+	system "Kella-Uoasa"
+		add fleet "Large New Houses" 1200
+		add fleet "Small New Houses" 600
+	system "Myruet-Kvelq"
+		add fleet "Large Old Houses" 1200
+		add fleet "Large New Houses" 1200
+</pre>
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderer missions.txt | event "mereti visiting eneremprukt"</summary>
 <pre>event "mereti visiting eneremprukt"
-	system eneremprukt
+	system Eneremprukt
 		fleet "Small Kor Mereti" 800
 </pre>
 </details>
@@ -7794,6 +8029,7 @@
 		spaceport `The Unfettered are using the few jump drives they have to ferry more and more of their people into Wanderer space. When each wave of ships arrives here in the spaceport, technicians carefully remove the jump drives from all but a few of them. A few well guarded jump-capable ships then carry those spare jump drives back to Unfettered space, where they are used to bring more ships and people.`
 		shipyard clear
 		outfitter clear
+		tribute clear
 	planet "Varu Mer'ek"
 		add attributes "evacuation"
 </pre>
@@ -7895,12 +8131,14 @@
 		description `	Now that the Unfettered have taken over control of the planet, it may be only a matter of time before the deserts dominate it once again.`
 		spaceport `The spaceport is in a forest village near the planet's north pole. The landing pads are massive stone monoliths laid on the ground in a nearby clearing. But aside from a few large warehouses at ground level, the village itself is entirely made of tree-houses. Although they are very different from Hai architecture, the Unfettered seem to be quite at home living in the tree-houses, and have not built many of their own structures yet.`
 		outfitter clear
+		tribute clear
 	planet "Var' Kar'i'i"
 		attributes "unfettered" "urban" "farming"
 		description `Of all the worlds that the Unfettered have captured, this is surely the one that the Wanderers will miss the most: a heavily forested planet that was once home to countless small villages and even a few cities. The Unfettered are clearly doing their best to tend the farms here, but they operate on a permaculture system that relies heavily on maintaining a delicate ecological balance, rather than on machines and pesticides.`
 		spaceport `A large number of Unfettered settlers have already arrived here and begun setting up a spaceport village, complete with markets, taverns, and military barracks. To the Unfettered, who have lived their whole lives on worlds where the local ecology is in shambles, this planet must seem like a paradise.`
-		shipyard clear
 		outfitter clear
+		shipyard clear
+		tribute clear
 	planet "Vara Ke'sok"
 		attributes "unfettered" "fishing"
 		description `The surface of this world is almost entirely ocean. The Wanderer settlements were built on massive floating algae mats, some of them the size of a small city. Engines are attached to some of these floating villages, allowing them to be slowly propelled from one part of the planet's surface to another, and the only native industries are fishing and seaweed farming.`
@@ -8022,6 +8260,9 @@
 		spaceport `The Wanderers have hollowed out hangars and caves in the soft sandstone walls of this canyon and have begun to build a military base where they can store supplies and repair their ships while trying to decide how best to deal with the new challenges that face them in Korath space.`
 		spaceport `	Oddly enough, they have also found enough time to plant a large garden on a terrace near the base of the canyon, where they are experimenting to find out which plant species will best grow in this arid environment. The Wanderer drive to understand and transform the local ecology is strong, indeed.`
 		outfitter "Wanderer Basics"
+		tribute 600
+			threshold 1200
+			fleet "Wanderer Defense" 2
 </pre>
 </details>
 
@@ -8066,6 +8307,9 @@
 		description `Plumes of soot and ash rise from a cluster of several dozen volcanoes on this planet's main continent, shrouding the planet in a thick layer of clouds and choking out the sunlight. The ruins of several Korath cities and the geometric grids of cleared land surrounding them show that this was once a farming world, but now few plants are able to survive and kilometer-high glaciers have begun creeping down from the poles.`
 		description `	With some help from the Mereti drones, the Wanderers have set up factories here that are pumping out carbon dioxide and methane to warm the atmosphere. In a few decades, the glaciers may start to recede.`
 		spaceport `This odd settlement was built half by the Wanderers and half by the Mereti drones. The layout of the streets is completely chaotic, and they have planted rows of trees and bushes everywhere: some inside greenhouses, and some hardier species out in the open air. The settlement is near the equator, but it is still not particularly warm.`
+		tribute 500
+			threshold 1100
+			fleet "Wanderer Defense" 2
 </pre>
 </details>
 
@@ -8092,6 +8336,27 @@
 	outfitter "Wanderer Advanced"
 		"Moonbeam"
 		"Moonbeam Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderers.txt | event "wanderer tribute patch"</summary>
+<pre>event "wanderer tribute patch"
+	planet "Varu K'est"
+		tribute clear
+	planet "Vara Ke'stai"
+		tribute clear
+	planet "Var' Kar'i'i"
+		tribute clear
+	planet "Spera Anatrusk"
+		tribute 600
+			threshold 1200
+			fleet "Wanderer Defense" 2
+	planet "Desi Seledrak"
+		tribute 500
+			threshold 1100
+			fleet "Wanderer Defense" 2
 </pre>
 </details>
 

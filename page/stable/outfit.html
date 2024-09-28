@@ -1686,7 +1686,7 @@
 	"outfit space" -10
 	"swarm capacity" 200
 	ammo "Swarm Missile"
-	description "Swarm Clips provide a sizeable increase in ammo capacity for Swarm Pods, holding a respectable 200 missiles able to be swiftly loaded into a launcher after its current clip is empty."
+	description "Swarm Clips provide a sizable increase in ammo capacity for Swarm Pods, holding a respectable 200 missiles able to be swiftly loaded into a launcher after its current clip is empty."
 </pre>
 </details>
 
@@ -2261,7 +2261,7 @@
 	"mass" 7
 	"outfit space" -7
 	"engine capacity" -7
-	"turn" 214.2
+	"turn" 268.2
 	"turning energy" 0.26
 	"turning heat" 1.8
 	"steering flare sprite" "effect/coalition flare/small"
@@ -2816,7 +2816,7 @@
 		"scrambling damage" .5
 		"disruption damage" 1
 		"safe"
-	description "This device is the Archon's primary defensive tool: Not only does it disrupt the shields and energy supplies of all hostile ships within it, it also exerts a powerful repelling force that keeps ships from closing in with the Archon."
+	description "This device is the Archon's primary defensive tool: not only does it disrupt the shields and energy supplies of all hostile ships within it, it also exerts a powerful repelling force that keeps ships from closing in with the Archon."
 </pre>
 </details>
 
@@ -2851,7 +2851,7 @@
 		"scrambling damage" 1
 		"disruption damage" 2
 		"safe"
-	description "This device is the Archon's primary defensive tool: Not only does it disrupt the shields and energy supplies of all hostile ships within it, it also exerts a powerful repelling force that keeps ships from closing in with the Archon."
+	description "This device is the Archon's primary defensive tool: not only does it disrupt the shields and energy supplies of all hostile ships within it, it also exerts a powerful repelling force that keeps ships from closing in with the Archon."
 	description "	While normally kept at minimal strength, the Archons have demonstrated the ability to ramp up the field to be vastly stronger when faced with a serious threat."
 </pre>
 </details>
@@ -2931,7 +2931,7 @@
 		"shield damage" 256
 		"hull damage" 256
 		"hit force" 180
-	description "This is a turret based cannon with significant range and accuracy."
+	description "This is a turret-based cannon with significant range and accuracy."
 </pre>
 </details>
 
@@ -2963,7 +2963,7 @@
 		"shield damage" 2560
 		"hull damage" 2560
 		"hit force" 180
-	description "This is a turret based cannon with significant range and accuracy."
+	description "This is a turret-based cannon with significant range and accuracy."
 	description "	Against most threats, Archons respond with their weapons set to very low levels. They are, however, more than capable of dealing much more damage when the situation requires it."
 </pre>
 </details>
@@ -3961,7 +3961,7 @@
 		"minable damage" 104
 		"prospecting" 145
 		"hit force" -6
-	description `Excavator Drills are large drills designed by the Gegno that rip materials out of asteroids in an efficient manner. These types of drill systems are only found on ships specifically designed around them as they require substantial infrastructure to be functional.`
+	description `Excavators are large drills designed by the Gegno that rip materials out of asteroids in an efficient manner. These types of drill systems are only found on ships specifically designed around them as they require substantial infrastructure to be functional.`
 </pre>
 </details>
 
@@ -5028,7 +5028,7 @@
 	"reverse thrusting heat" 4.8
 	"reverse flare sprite" "effect/atomic flare/tiny"
 		"frame rate" 14
-	"flare sound" "atomic tiny"
+	"reverse flare sound" "atomic tiny"
 	description "Considering them to be well worth the steep cost, many Hai freighter pilots install reverse thrusters such as these to supplement the often poor steering on larger Hai vessels."
 </pre>
 </details>
@@ -8768,6 +8768,433 @@
 
 
 <details>
+<summary>data/incipias/incipias outfits.txt | outfit "Plasma Discharger"</summary>
+<pre>outfit "Plasma Discharger"
+	category "Guns"
+	cost 140000
+	mass 25
+	"outfit space" -20
+	"weapon capacity" -20
+	"gun ports" -1
+	thumbnail "outfit/plasma discharger"
+	weapon
+		sprite "projectile/plasma discharge"
+		sound "plasma discharger"
+		"hit effect" "blaster impact"
+		"submunition" "plasma particle" 5
+		"inaccuracy" 8
+		"velocity" 10
+		"lifetime" 64
+		"random lifetime" 12
+		"reload" 40
+		"firing energy" 60
+		"firing heat" 30
+		"shield damage" 33
+		"hull damage" 39
+		"minable damage" 90
+	description "The Incipias started to mine asteroids long before they began intrasystem travel due to the proximity of their home world's atmosphere to its rings. As a result this mining tool seems to be more advanced than their general technology, yet it is still not comparable to the efficiency of human weapons."
+	description "	The discharger itself shoots bolts of high density plasma that split up into small particles after some time. Because of the plasma infuser the fire rate is exceptional, but the energy usage is severe."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "plasma particle"</summary>
+<pre>outfit "plasma particle"
+	weapon
+		sprite "effect/plasma particle"
+		"hit effect" "blaster impact"
+		"lifetime" 60
+		"random velocity" 2
+		"inaccuracy" 20
+		"shield damage" 6.6
+		"hull damage" 7.8
+		"minable damage" 18
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Stagnation Beam"</summary>
+<pre>outfit "Stagnation Beam"
+	category "Turrets"
+	cost 180000
+	mass 30
+	"outfit space" -30
+	"weapon capacity" -30
+	"turret mounts" -1
+	thumbnail "outfit/stagnation beam"
+	licenses
+		"Hicemus Conflict"
+	weapon
+		sprite "projectile/stagnation beam"
+			"random start frame"
+			"frame rate" 6
+		"hardpoint sprite" "hardpoint/stagnation beam"
+		sound "stagnation beam"
+		"hit effect" "stagnation beam impact"
+		"inaccuracy" .5
+		"turret turn" 3
+		"velocity" 600
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 0.5
+		"firing heat" 3.2
+		# Deal damage to provoke ships.
+		"shield damage" 0.1
+		"hull damage" 0.1
+		"hit force" -40
+		"slowing damage" 0.1
+	description "The Stagnation Beam is one of the few technologies of the Incipias that surpasses anything humanity has made thus far - in fact, the first prototypes were built before the Incipias even dreamed of space travel. The weapon's origins lie in giant reactors that were constructed to pull asteroids out of their home planet's orbit, providing easy access to more resources. Naturally, a mechanism to slow the asteroids down was also implemented to prevent accidental asteroid strikes."
+	description "	As the Incipias' mastery of spaceflight grew, so did the generators' efficiency, which allowed for more compact, ship-based tractor beams. Resource collection was greatly streamlined by these new models, much to the benefit of the Incipias' otherwise sluggish ships."
+	description "	The secret of how these beams work is only known to a few scientists of the Incipias who are under the control of the state. Such knowledge, if made public, could have disastrous consequences for the Hicemus and their grip on power."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Star Tail"</summary>
+<pre>outfit "Star Tail"
+	category "Secondary Weapons"
+	cost 320000
+	mass 48
+	"outfit space" -50
+	"weapon capacity" -50
+	"gun ports" -1
+	thumbnail "outfit/star tail launcher"
+	"star tail capacity" 20
+	licenses
+		"Hicemus Conflict"
+	weapon
+		sprite "projectile/star tail upload"
+			"frame rate" 10
+			"no repeat"
+		sound "star tail"
+		"hit effect" "blaster impact"
+		"velocity" 1
+		"lifetime" 58
+		"reload" 180
+		"firing energy" 60
+		"firing heat" 30
+		"shield damage" 820
+		"hull damage" 860
+		"range override" 3000
+		# To make the AI fire even if the ship is not directly in front.
+		"homing" 1
+		"optical tracking" 1
+		"turn" 0.5
+		ammo "Star Tail Cell"
+		"submunition" "Star Tail Projectile" 1
+	description "Little to no information about this weapon has ever been made public. Rumors are that it shoots highly volatile plasma chunks."
+	description "	Captains that have used this weapon say that its projectiles could change direction mid-flight, and were able to follow their targets despite attempts by their victims to dodge the shots."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Star Tail Projectile"</summary>
+<pre>outfit "Star Tail Projectile"
+	weapon
+		sprite "projectile/star tail"
+			"frame rate" 12
+		"hit effect" "star tail hit"
+		"live effect" "star tail live" 120
+		"velocity" 1
+		acceleration 5
+		drag .2
+		"lifetime" 120
+		"shield damage" 410
+		"hull damage" 430
+		"homing" 1
+		"optical tracking" 1
+		"turn" .5
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Star Tail Cell"</summary>
+<pre>outfit "Star Tail Cell"
+	category "Ammunition"
+	cost 1500
+	thumbnail "outfit/star tail cell"
+	"mass" .1
+	"star tail capacity" -1
+	licenses
+		"Hicemus Conflict"
+	description "The Star Tail needs an extreme amount of energy that the Incipias are not able to create in a short amount of time. To accommodate this, the Star Tail Cell contains an energy-rich substance that releases its energy when fired. One of these cells holds enough energy to fire exactly one shot."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Star Tail Storage"</summary>
+<pre>outfit "Star Tail Storage"
+	category "Ammunition"
+	cost 6000
+	thumbnail "outfit/star tail cell storage"
+	"mass" 10
+	"outfit space" -10
+	"star tail capacity" 20
+	licenses
+		"Hicemus Conflict"
+	description "Because Star Tail Cells are highly volatile, they need a robust storage system. This radial design is able to withstand minor explosions by using a variant of a shield that can be deployed temporarily."
+	description "	One layer of this easily expandable system is already shipped with the gun itself. To increase storage space, more layers are simply stacked on top."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Horizon Grappler"</summary>
+<pre>outfit "Horizon Grappler"
+	category "Turrets"
+	cost 200000
+	thumbnail "outfit/horizon grappler"
+	"mass" 25
+	"outfit space" -25
+	"weapon capacity" -25
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/horizon grappler"
+		"hardpoint offset" 0.
+		sound "tractor beam"
+		"hit effect" "horizon grappler"
+		"tractor beam" 9
+		"velocity" 400
+		"lifetime" 1
+		"reload" 1
+		"firing energy" 3.2
+		"firing heat" 1.1
+	description `The pinnacle of Incipian technology is represented by this mining utility. Perfected over centuries, this tractor beam is far beyond anything the Incipias have developed so far. The beam's name originates from its first prototypes developed before the advent of spaceflight, which gathered minerals by pulling asteroids from their homeworld's rings into its atmosphere.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Gas-Class Shield"</summary>
+<pre>outfit "Gas-Class Shield"
+	category "Systems"
+	thumbnail "outfit/gas class shield"
+	cost 136000
+	mass 60
+	"outfit space" -60
+	"shield generation" .1
+	"energy generation" 4.2
+	"heat generation" 5
+	"shield fuel" .01
+	description "Shield technology is one of the most recent developments of the Incipias. While this shield appears similar to a human shield device, it works on a completely different basis. In its core hydrogen is burned, providing energy for regeneration. This proved so effective that it became the main power source of all of their ships."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Liquid-Class Shield"</summary>
+<pre>outfit "Liquid-Class Shield"
+	category "Systems"
+	thumbnail "outfit/liquid class shield"
+	cost 216000
+	mass 80
+	"outfit space" -90
+	"shield generation" .25
+	"energy generation" 6.1
+	"heat generation" 6
+	"shield fuel" .02
+	description "This more advanced shield generator burns a liquid instead of a gas. This raises the efficiency considerably but also requires more space, making this outfit popular only on larger ships."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Metallic Hydrogen Cell"</summary>
+<pre>outfit "Metallic Hydrogen Cell"
+	category "Power"
+	thumbnail "outfit/metallic hydrogen cell"
+	cost 2500
+	mass 20
+	"outfit space" -20
+	"energy capacity" 500
+	description "Hydrogen energy storage was discovered early by the Incipias because of the great amount of metallic hydrogen on their homeworld. Because Incipias ships usually access their energy at the time it is produced, only a small amount of storage is needed. Most of their ships have only one cell installed as a consequence."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Blue-Class Thruster"</summary>
+<pre>outfit "MH Blue-Class Thruster"
+	category "Engines"
+	thumbnail "outfit/mh blue-class thruster"
+	cost 32000
+	mass 27
+	"outfit space" -27
+	"engine capacity" -27
+	"flare sprite" "effect/incipias flare/metallic hydrogen small"
+		"frame rate" 24
+	"flare sound" "incip plasma small"
+	"thrust" 24
+	"thrusting energy" 2
+	"thrusting heat" 2.5
+	description "In Incipian culture, blue is the weakest color. A thruster labeled as blue does not bode well for the speed of any ship using it."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Blue-Class Steering"</summary>
+<pre>outfit "MH Blue-Class Steering"
+	category "Engines"
+	thumbnail "outfit/mh blue-class steering"
+	cost 28000
+	mass 24
+	"outfit space" -24
+	"engine capacity" -24
+	"turn" 498
+	"turning energy" 1.
+	"turning heat" 3
+	description "This steering barely provides the minimum force needed to turn a ship, but it is still used often because of how cheap it is."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Green-Class Thruster"</summary>
+<pre>outfit "MH Green-Class Thruster"
+	category "Engines"
+	thumbnail "outfit/mh green-class thruster"
+	cost 44000
+	mass 32
+	"outfit space" -32
+	"engine capacity" -32
+	"flare sprite" "effect/incipias flare/metallic hydrogen medium"
+		"frame rate" 24
+	"flare sound" "incip plasma med"
+	"thrust" 30
+	"thrusting energy" 2.2
+	"thrusting heat" 2.8
+	description "Green is a color of balance for the Incipias. This thruster balances the need for space with the need for powerful engines."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Green-Class Steering"</summary>
+<pre>outfit "MH Green-Class Steering"
+	category "Engines"
+	thumbnail "outfit/mh green-class steering"
+	cost 35000
+	mass 28
+	"outfit space" -28
+	"engine capacity" -28
+	"turn" 618
+	"turning energy" 1.1
+	"turning heat" 3.1
+	description "The Incipias seem to have something against turning their ships. Even though this steering is supposed to be an upgrade from the Blue-Class steering, it is barely an improvement."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Red-Class Thruster"</summary>
+<pre>outfit "MH Red-Class Thruster"
+	category "Engines"
+	thumbnail "outfit/mh red-class thruster"
+	cost 50000
+	mass 41
+	"outfit space" -41
+	"engine capacity" -41
+	"flare sprite" "effect/incipias flare/metallic hydrogen large"
+		"frame rate" 24
+	"flare sound" "incip plasma large"
+	"thrust" 48
+	"thrusting energy" 5
+	"thrusting heat" 10
+	description "The abundance of metallic hydrogen on the Incipias home planet has led to the development of engines that utilize this potent source of energy, allowing for more efficient thrusters than what might be expected given the Incipias' short history of spaceflight."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "MH Red-Class Steering"</summary>
+<pre>outfit "MH Red-Class Steering"
+	category "Engines"
+	thumbnail "outfit/mh red-class steering"
+	cost 49000
+	mass 41
+	"outfit space" -41
+	"engine capacity" -41
+	"turn" 1134
+	"turning energy" 2.5
+	"turning heat" 12
+	description "Even the Incipias realize that ships need to turn towards their target to be able to shoot it. This steering is specifically designed for combat, but captains with a lot of money find it very useful for mining."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Cloud Piercer"</summary>
+<pre>outfit "Cloud Piercer"
+	category "Hand to Hand"
+	cost 10000
+	thumbnail "outfit/cloud piercer"
+	licenses
+		"Hicemus Conflict"
+	"capture attack" .55
+	"capture defense" 1.5
+	"unplunderable" 1
+	description "When it comes to close combat, the Incipias are formidable opponents. This brutal weapon may not be the best to invade another ship with, but when it comes to defending, it quite literally shreds enemies."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias outfits.txt | outfit "Hicemus Conflict License"</summary>
+<pre>outfit "Hicemus Conflict License"
+	category "Licenses"
+	description "The Hicemus have trusted you enough to give you this license, allowing a glimpse at their most precious technology - technology that is meant to give them an advantage over other factions."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/tace mesa.txt | outfit "Strange Ray"</summary>
+<pre>outfit "Strange Ray"
+	mass 25
+	"outfit space" -20
+	"gun ports" -1
+	weapon
+		sprite "projectile/strange ray"
+			"frame rate" 60
+			"no repeat"
+		"inaccuracy" 20
+		"velocity" 6
+		"lifetime" 10
+		"fade out" 2
+		"reload" 1
+		"firing energy" 8
+		"firing heat" 4
+		"shield damage" 50
+		"hull damage" 43
+		"minable damage" 64
+	description "It should be impossible for an organic being to heat up gas to this level, but this organ seems to be an exception."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/tace mesa.txt | outfit "Internal Plasma Exhaust"</summary>
+<pre>outfit "Internal Plasma Exhaust"
+	"mass" 25
+	"outfit space" -25
+	"engine capacity" -25
+	"thrust" 36
+	"turn" 1500
+	"flare sprite" "effect/plasma exhaust"
+		"frame rate" 16
+	description "The Tace Mesa move by expelling plasma from the end of their body."
+</pre>
+</details>
+
+
+<details>
 <summary>data/kahet/kahet outfits.txt | outfit "Ka'het Nullifier"</summary>
 <pre>outfit "Ka'het Nullifier"
 	category "Guns"
@@ -11061,6 +11488,7 @@
 		ammo "Firelight Missile"
 		icon "icon/firelight"
 		"hit effect" "firelight ring" 20
+		"die effect" "piercer fire"
 		"velocity" 4
 		"velocity override" 16
 		"lifetime" 10
@@ -11623,7 +12051,7 @@
 	"mass" 50
 	"outfit space" -50
 	"energy capacity" 60000
-	description "Human engineers who first came into contact with the Quarg were astonished by the sheer efficiency of their technology. The energy density of Quarg batteries is unparalleled, storing nearly a third more energy than the best human batteries while being less than a third the size."
+	description "Human engineers who first came into contact with the Quarg were astonished by the sheer efficiency of their technology. The energy density of Quarg batteries is unparalleled, storing nearly a third more energy than the best human batteries while being over a third smaller."
 </pre>
 </details>
 
@@ -12198,7 +12626,7 @@
 		"ion damage" 60
 		"scrambling damage" 60
 		"energy damage" 2000
-		"hit force"135
+		"hit force" 135
 		"missile strength" 95
 	description "While originally developed as a heavy weapon to paralyze enemy capital ships, the Remnant have utilized on-the-spot assembly techniques to support their use on smaller ships. These pods sacrifice multiple assembly systems in order to fit them onto interceptor-class vessels."
 	description "	Despite this explanation, a careful examination of these bays and pods suggest that there is much more here than their volume would suggest."
@@ -12443,13 +12871,13 @@
 	"cost" 640000
 	thumbnail "outfit/remnant afterburner"
 	"mass" 8
-	"outfit space" -7
-	"engine capacity" -7
+	"outfit space" -11
+	"engine capacity" -11
 	"slowing resistance" 0.01
 	"afterburner thrust" 187.5
-	"afterburner fuel" 0.65
-	"afterburner energy" 6.0
-	"afterburner heat" 8.0
+	"afterburner fuel" 1.3
+	"afterburner energy" 6
+	"afterburner heat" 18
 	"afterburner effect" "remnant afterburner"
 	description "The Remnant live in an environment where the raw materials for fuel are relatively common on the winds of the nebula. As such, their ships incorporate significant built-in ramscoop technology, and while they are reluctant to waste fuel, they aren't afraid of using it when needed. Far more important is the ability for their ships to quickly and efficiently enter or exit combat as needed. At the end of the day, it is continued life that is paramount."
 	description "	The Bellows-Class Afterburner embodies this philosophy by providing captains with a tool that allows them to make great leaps of acceleration, typically during evasive maneuvers or to catch up with a fleeing target. Due to their enormous fuel usage, only the most specialized of ships have enough fuel to use these for more than a few seconds at a time before completely running out of fuel."
@@ -13088,7 +13516,7 @@
 		"hull damage" 15000
 		"heat damage" 50000
 		"piercing" 0.4
-		"blast radius" 50
+		"penetration count" 20
 	description "The ancient Sheragi superweapon is simple in concept, but the cost involved in developing something like it is exorbitant. It's hard to envision what could have motivated the creation of such a thing. It uses an obscene amount of energy to trigger an extremely powerful thermonuclear reaction, directing most of the energy from the resulting explosion forwards in a devastatingly powerful beam of gamma radiation."
 </pre>
 </details>
@@ -13263,6 +13691,1162 @@
 		"hit force" 4.5
 		"shield damage" 1.79
 		"hull damage" 1.47
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Successor License"</summary>
+<pre>outfit "Successor License"
+	category "Licenses"
+	series "Licenses: Successors"
+	index 10
+	thumbnail "outfit/successor license"
+	description "Presented to you by the High Houses in council, this small blue and white pin is an emblem of Successor diplomacy. Given to an alien such as yourself, it communicates their trust and confidence, and with it, their willingness to sell you their civilian-grade technology."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "High Houses License"</summary>
+<pre>outfit "High Houses License"
+	category "Licenses"
+	series "Licenses: Successors"
+	index 20
+	thumbnail "outfit/successor license"
+	description "The High Houses produce most of the advanced technology present in Successor space, and restrict its purchase to only those individuals and groups who support their interests. By aligning yourself with one of the houses, you have earned the right to purchase this exclusive technology."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Byiaa" Shield Cortex`</summary>
+<pre>outfit `"Byiaa" Shield Cortex`
+	category "Systems"
+	series "Shields: Successors"
+	index 10
+	licenses
+		"Successor"
+	cost 225000
+	thumbnail "outfit/tiny successor shield"
+	"mass" 13
+	"outfit space" -13
+	"shield generation" 1.9
+	"shield protection" -0.33
+	"shield energy" 2.92
+	"shield connection point" 1
+	description "At their peak, the Predecessors were feared not by how quickly they could overpower their enemies, but by how effectively they could outlast them. Many generations later, this philosophy is still reflected in modern Successor shield cortices, which are exceptionally powerful for their size but weaken the shield's resistance to incoming fire. This allows Successor ships to recover quickly from sustained damage, even if they are slightly more vulnerable to it."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Ej" Shield Cortex`</summary>
+<pre>outfit `"Ej" Shield Cortex`
+	category "Systems"
+	series "Shields: Successors"
+	index 20
+	licenses
+		"Successor"
+	cost 565000
+	thumbnail "outfit/small successor shield"
+	"mass" 21
+	"outfit space" -21
+	"shield generation" 3.0
+	"shield protection" -0.33
+	"shield energy" 4.7
+	"shield connection point" 1
+	description "Because their bimodal engines draw power from a ship's shield matrix, even non-combat Successor craft can justify equipping powerful shield generators to afford them greater mobility. This is the largest unit the High Houses permit for sale to the general public; even so, it offers substantially faster regeneration than even the largest human shield generators."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Jaase" Shield Cortex`</summary>
+<pre>outfit `"Jaase" Shield Cortex`
+	category "Systems"
+	series "Shields: Successors"
+	index 30
+	licenses
+		"High Houses"
+	cost 3550000
+	thumbnail "outfit/medium successor shield"
+	"mass" 30
+	"outfit space" -30
+	"shield generation" 4.8
+	"shield protection" -0.33
+	"shield energy" 7.4
+	"shield connection point" 1
+	description "The technology of their Predecessors was not nearly as modular as the modern Successor equivalents, which must be built with more limited resources and comparatively primitive manufacturing techniques. Nonetheless, this medium-sized shield cortex is powerful enough to shrug off the combined damage output of several lesser attackers, and consequently is reserved by the High Houses for use in their private navies."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Jorv" Shield Cortex`</summary>
+<pre>outfit `"Jorv" Shield Cortex`
+	category "Systems"
+	series "Shields: Successors"
+	index 40
+	cost 8250000
+	thumbnail "outfit/large successor shield"
+	licenses
+		"High Houses"
+	"mass" 55
+	"outfit space" -55
+	"shield generation" 10.5
+	"shield protection" -0.33
+	"shield energy" 16.1
+	"shield connection point" 1
+	description "Bristling with regeneration nodes, this large Successor shield cortex requires a power budget greater than most human warships in their entirety. Many more traditional members of the High Houses disapprove of its design, arguing that such a powerful piece of their technology deserves a more artful form, but there has ultimately been little desire to invest time and money into a redesign for purely aesthetic reasons."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Shield Cortex Interface"</summary>
+<pre>outfit "Shield Cortex Interface"
+	category "Systems"
+	cost 250000
+	thumbnail "outfit/shield cortex interface"
+	series "Shields: Successors"
+	index 99
+	licenses
+		"Successor"
+	mass 3
+	"outfit space" -3
+	"shield protection" 0.33
+	"shield generation multiplier" -0.05
+	"shield connection point" -2
+	description "This compact tract of electrical fibers connects two Successor shield cortices to function as a single unit, preventing the shield-softening effect of one of the generators from unduly reducing the durability of the ship's shields at the cost of slightly reducing efficiency. The effect scales poorly past two connected generators."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `1-"Uurau" Betavoltaic Cell`</summary>
+<pre>outfit `1-"Uurau" Betavoltaic Cell`
+	category "Power"
+	series "Power: Successors"
+	index 10
+	licenses
+		Successor
+	cost 120000
+	thumbnail "outfit/small betavoltaic"
+	"mass" 10
+	"outfit space" -10
+	"energy generation" 0.85
+	"heat generation" 0.65
+	"energy capacity" 1200
+	description "Unlike most radioisotope generators, this power cell operates by extracting electricity directly from beta particles produced by radioactive decay. While this process yields less energy per unit of material, it is also safer and produces very little waste heat."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `OC-"Mavra" Betavoltaic Cell`</summary>
+<pre>outfit `OC-"Mavra" Betavoltaic Cell`
+	category "Power"
+	series "Power: Successors"
+	index 40
+	licenses
+		Successor
+	cost 540000
+	thumbnail "outfit/overcharged betavoltaic"
+	"mass" 17
+	"outfit space" -17
+	"energy generation" 2.25
+	"heat generation" 3.8
+	"energy capacity" 2000
+	description "In an effort to produce a high-density power source smaller than their fusion reactors, the Successors have created this overcharged betavoltaic cell, which contains particularly high-density radioactive material and lacks much of the radiation shielding of the standard models. While it has technically passed safety inspection, most Successor pilots understandably prefer to keep a bulkhead between themselves and one of these potent little cores at all times."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `3-"Kaska" Betavoltaic Cell`</summary>
+<pre>outfit `3-"Kaska" Betavoltaic Cell`
+	category "Power"
+	series "Power: Successors"
+	index 20
+	licenses
+		Successor
+	cost 455000
+	thumbnail "outfit/medium betavoltaic"
+	"mass" 35
+	"outfit space" -35
+	"energy generation" 3.5
+	"heat generation" 2.6
+	"energy capacity" 3100
+	description "The Successors' betavoltaic generators are products of a time shortly after the collapse of their Predecessors' empire, one marked by scarcity and necessity. Their rugged designs did not appeal to traditional values of beauty, elegance, or uniqueness, but instead offered a level of reliability that made them very popular among those who were then struggling to survive."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `6-"Ruuv" Betavoltaic Cell`</summary>
+<pre>outfit `6-"Ruuv" Betavoltaic Cell`
+	category "Power"
+	series "Power: Successors"
+	index 30
+	licenses
+		Successor
+	cost 950000
+	thumbnail "outfit/large betavoltaic"
+	"mass" 75
+	"outfit space" -75
+	"energy generation" 8.1
+	"heat generation" 5.3
+	"energy capacity" 8500
+	description "This large modular betavoltaic generator is designed to be resilient and dependable: if one of its component cells fails, it can continue to operate at only a slightly reduced output. The Successors eschew its use on warships because of its low energy density, but it sees substantial use aboard their merchant, archaeological, and other civilian craft."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Auxiliary Power Reserve"</summary>
+<pre>outfit "Auxiliary Power Reserve"
+	category "Power"
+	series "Power: Successors"
+	index 100
+	cost 60000
+	thumbnail "outfit/small successor battery"
+	licenses
+		"Successor"
+	"mass" 5
+	"outfit space" -5
+	"energy capacity" 3000
+	"hull energy" -0.16
+	description "The relatively limited output of the Successors' betavoltaic cells has encouraged them to build efficient batteries to make up for that deficit. In order to gain some additional power overhead on their warships, these reserve a portion of their capacity exclusively for use by hull repair systems, effectively reducing the amount of power these systems draw from a ship's total energy pool while active."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Primary Power Reserve"</summary>
+<pre>outfit "Primary Power Reserve"
+	category "Power"
+	series "Power: Successors"
+	index 110
+	cost 320000
+	thumbnail "outfit/large successor battery"
+	licenses
+		"Successor"
+	"mass" 20
+	"outfit space" -20
+	"energy capacity" 15000
+	"hull energy" -0.8
+	description "This larger Successor battery stores an impressive amount of energy, and can noticeably reduce the effective power draw of a ship's hull repair systems while in combat. The High Houses use this in concert with their reactors' power distribution systems to keep their warships powered and functional even when equipped with their most energy-hungry equipment. Even so, they do not restrict the sale of this unit to the general public."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Nnesa" Fusion Core`</summary>
+<pre>outfit `"Nnesa" Fusion Core`
+	category "Power"
+	series "Power: Successors"
+	index 50
+	cost 4754000
+	thumbnail "outfit/small successor reactor"
+	licenses
+		"High Houses"
+	"mass" 56
+	"outfit space" -56
+	"energy generation" 9.6
+	"heat generation" 14.6
+	"shield energy multiplier" -0.08
+	"hull energy multiplier" -0.08
+	description "While betavoltaics may be sufficient for civilian use, the more advanced technology of the High Houses is energy-hungry enough to require more powerful generators. Rather than focusing on extracting as much power from as little space as possible, the High Houses have designed these stellarator fusion reactors for efficiency and portability; they produce little heat and few waste byproducts. In addition, they are designed to channel power more efficiently to a ship's defensive systems, manifested as a reduction in the power draw of the associated outfits."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Ryuit" Fusion Core`</summary>
+<pre>outfit `"Ryuit" Fusion Core`
+	category "Power"
+	series "Power: Successors"
+	index 60
+	cost 12250000
+	thumbnail "outfit/medium successor reactor"
+	licenses
+		"High Houses"
+	"mass" 98
+	"outfit space" -98
+	"energy generation" 17.9
+	"heat generation" 23.5
+	"shield energy multiplier" -0.14
+	"hull energy multiplier" -0.14
+	description "Like most Successor technology, their modern reactors are based on similar ones secreted away by the High Houses during the collapse of the Predecessors' empire. Even though their modern efforts don't quite match the potency of their ancestors', the designs retain an aura of elegance and power, twisting like flames and humming with energy."
+	description "	One also can't help but wonder about those few original reactors, which presumably remain locked away in the private vaults of the High Houses, kept in prime condition for if and when they are needed once again."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Uoret" Fusion Core`</summary>
+<pre>outfit `"Uoret" Fusion Core`
+	category "Power"
+	series "Power: Successors"
+	index 70
+	cost 17754000
+	thumbnail "outfit/large successor reactor"
+	licenses
+		"High Houses"
+	"mass" 145
+	"outfit space" -145
+	"energy generation" 28.5
+	"heat generation" 35.1
+	"shield energy multiplier" -0.22
+	"hull energy multiplier" -0.22
+	description "Designed in the form of a flowering plant from the ancestral homeworld of the Successors, this largest and most powerful of the High Houses' stellarators demonstrates a mastery of nuclear fusion power far exceeding humanity's. In addition to being powerful and surprisingly efficient, it is also supported by a large and well-integrated power distribution network capable of massively reducing the draw of the Successors' energy-hungry defensive outfits."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Successor Cooling"</summary>
+<pre>outfit "Successor Cooling"
+	category "Systems"
+	series "Cooling: Successors"
+	index 10
+	cost 94000
+	thumbnail "outfit/successor cooling"
+	licenses
+		"Successor"
+	"mass" 8
+	"outfit space" -8
+	"cooling" 4.5
+	"active cooling" 10.5
+	"cooling energy" 1.1
+	description "Like much of their technology, Successor cooling is bimodal, running a constant low-flow coolant loop that can be increased in both volume and heat rejection when the situation demands it."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Successor Fuel Sail"</summary>
+<pre>outfit "Successor Fuel Sail"
+	category "Systems"
+	series "Ramscoops: Successors"
+	index 10
+	cost 112000
+	thumbnail "outfit/fuel sail"
+	licenses
+		"Successor"
+	"mass" 4
+	"outfit space" -14
+	"ramscoop" 4.0
+	"solar heat" 6.0
+	"drag" 0.1
+	description "The Successors maintain a strong connection to their maritime tradition, exemplified in this strangely rustic fuel collector. The sail expands to a vast area when in the vicinity of a stellar corona, gently collecting hydrogen from it and condensing it into a ship's fuel storage in a fashion much more elegant than the comparatively brutish action of a traditional ramscoop. Pilots should note, however, that the large surface area of the deployed sail also absorbs a lot of heat."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Veldt" Combat Scanner`</summary>
+<pre>outfit `"Veldt" Combat Scanner`
+	category "Systems"
+	series "Scanners: Successors"
+	index 20
+	cost 220000
+	thumbnail "outfit/veldt combat scanner"
+	licenses
+		"High Houses"
+	"mass" 6
+	"outfit space" -6
+	"energy consumption" 0.12
+	"tactical scan power" 50
+	"cargo scan power" 50
+	"cargo scan efficiency" 15
+	description "The High Houses prefer to keep their territories well-monitored, and have a long history of developing powerful and efficient scanners to that end. This scanning system is their latest generation, used to both identify contraband and target potential foes at great distance."
+	description "	While restricted for sale to the public, the sheer number of scanners produced has allowed a few to slip onto black markets; a persistent problem the High Houses are extremely eager to correct."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Tuur" Scanning Suite`</summary>
+<pre>outfit `"Tuur" Scanning Suite`
+	category "Systems"
+	series "Scanners: Successors"
+	index 10
+	cost 220000
+	thumbnail "outfit/tuur scanning suite"
+	licenses
+		"Successor"
+	"mass" 4
+	"outfit space" -4
+	"energy consumption" 0.10
+	"asteroid scan power" 35
+	"atmosphere scan" 100
+	description "This scanning system was developed during the first years after the Predecessors' collapse, when the newly emigrated High Houses needed to find new resource deposits to replace those that they had left behind. While less efficient than human scanners, it is compact and powerful, useful for identifying materials both in asteroids and planetside."
+	description "	In the modern day, with the territories of the High Houses more or less static, these scanners are primarily used either by researchers as tools for planetary analysis or by independent pilots supporting themselves via asteroid mining."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Niis" Inductive Engines`</summary>
+<pre>outfit `"Niis" Inductive Engines`
+	plural `"Niis" Inductive Engines`
+	category "Engines"
+	series "Engines: Successors"
+	index 10
+	"cost" 255000
+	thumbnail "outfit/successor engines tiny"
+	licenses
+		"Successor"
+	"mass" 28
+	"outfit space" -28
+	"engine capacity" -28
+	"thrust" 16.8
+	"thrusting energy" 0.9
+	"thrusting heat" 0.8
+	"afterburner thrust" 25.2
+	"afterburner shields" 3.0
+	"afterburner heat" 1.6
+	"afterburner effect" "tiny successor afterburner"
+	"flare sprite" "effect/successor flare/tiny"
+		"frame rate" 20
+	"flare sound" "ion tiny"
+	"turn" 405
+	"turning energy" 0.24
+	"turning heat" 0.4
+	"steering flare sprite" "effect/successor flare/tiny"
+		"frame rate" 20
+	"steering flare sound" "ion tiny"
+	description "This tiny set of inductive engines is just enough to push around a Successor shuttle. They retain the dual-mode capabilities of the larger models, albeit at a much smaller scale."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Aqra" Inductive Thruster`</summary>
+<pre>outfit `"Aqra" Inductive Thruster`
+	category "Engines"
+	series "Engines: Successors"
+	index 21
+	"cost" 150000
+	thumbnail "outfit/small successor thruster"
+	licenses
+		"Successor"
+	"mass" 25
+	"outfit space" -25
+	"engine capacity" -25
+	"thrust" 27.0
+	"thrusting energy" 1.74
+	"thrusting heat" 1.1
+	"afterburner thrust" 40.5
+	"afterburner shields" 4.5
+	"afterburner heat" 2.2
+	"afterburner energy" 1.74
+	"afterburner effect" "small successor afterburner"
+	"flare sprite" "effect/successor flare/small"
+		"frame rate" 20
+	"flare sound" "ion small"
+	description "Successor thrusters are bimodal: most of the time, they are run in an energy-efficient low-power state, but when the time comes to flee or fight, they can be switched to a less efficient but very powerful high-thrust mode that draws power from the ship's shields."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Aqra" Inductive Steering`</summary>
+<pre>outfit `"Aqra" Inductive Steering`
+	category "Engines"
+	series "Engines: Successors"
+	index 20
+	"cost" 120000
+	thumbnail "outfit/small successor steering"
+	licenses
+		"Successor"
+	"mass" 18
+	"outfit space" -18
+	"engine capacity" -18
+	"afterburner energy" -0.7
+	"turn" 684
+	"turning energy" 1.1
+	"turning heat" 0.8
+	"steering flare sprite" "effect/successor flare/small"
+		"frame rate" 20
+	"steering flare sound" "ion small"
+	description "Since their steering thrusters lack the mode switch emblematic of their linear propulsion, the Successors have invested their efforts into making these thrusters both powerful for their size and relatively efficient. In addition, recurrent power streams from the steering thrusters feed back into the ship's linear engines during afterburning modes, reducing or even reversing the additional energy cost associated with using afterburners."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Aqra" Inductive Reverser`</summary>
+<pre>outfit `"Aqra" Inductive Reverser`
+	category "Engines"
+	series "Engines: Successors"
+	index 22
+	"cost" 140000
+	thumbnail "outfit/small successor reverse"
+	licenses
+		"Successor"
+	"mass" 15
+	"outfit space" -15
+	"weapon capacity" -15
+	"reverse thrust" 15.8
+	"reverse thrusting energy" 0.9
+	"reverse thrusting heat" 0.7
+	"afterburner energy" -0.52
+	"reverse flare sprite" "effect/successor flare/small"
+		"frame rate" 20
+	"reverse flare sound" "ion small"
+	description "The inductive thruster technology used by the Successors is most similar to the ion thrusters used in human space, but the more powerful magnetic fields utilized by these thrusters lets them generate substantially more thrust than any comparable human ion thruster."
+	description "	Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Chyyra" Inductive Thruster`</summary>
+<pre>outfit `"Chyyra" Inductive Thruster`
+	category "Engines"
+	series "Engines: Successors"
+	index 31
+	"cost" 680000
+	thumbnail "outfit/medium successor thruster"
+	licenses
+		"Successor"
+	"mass" 40
+	"outfit space" -40
+	"engine capacity" -40
+	"thrust" 48.0
+	"thrusting energy" 2.7
+	"thrusting heat" 1.8
+	"afterburner thrust" 72.0
+	"afterburner shields" 8.0
+	"afterburner heat" 4.0
+	"afterburner energy" 2.7
+	"afterburner effect" "medium successor afterburner"
+	"flare sprite" "effect/successor flare/medium"
+		"frame rate" 20
+	"flare sound" "ion medium"
+	description "This larger set of inductive thrusters is impressively efficient under low power, and produces an equally impressive amount of thrust in its high-power mode. With these, even large and apparently lumbering Successor ships can suddenly become substantially more agile when under threat."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Chyyra" Inductive Steering`</summary>
+<pre>outfit `"Chyyra" Inductive Steering`
+	category "Engines"
+	series "Engines: Successors"
+	index 30
+	"cost" 560000
+	thumbnail "outfit/medium successor steering"
+	licenses
+		"Successor"
+	"mass" 32
+	"outfit space" -32
+	"engine capacity" -32
+	"afterburner energy" -1.4
+	"turn" 1357.5
+	"turning energy" 2.3
+	"turning heat" 1.7
+	"steering flare sprite" "effect/successor flare/medium"
+		"frame rate" 20
+	"steering flare sound" "ion medium"
+	description "While not particularly powerful for its size, this set of inductive steering engines is extraordinarily efficient, allowing large Successor vessels to remain relatively nimble even when equipped with very small generators."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Chyyra" Inductive Reverser`</summary>
+<pre>outfit `"Chyyra" Inductive Reverser`
+	category "Engines"
+	series "Engines: Successors"
+	index 32
+	"cost" 590000
+	thumbnail "outfit/medium successor reverse"
+	licenses
+		"Successor"
+	"mass" 24
+	"outfit space" -24
+	"weapon capacity" -24
+	"reverse thrust" 33.0
+	"reverse thrusting energy" 2.1
+	"reverse thrusting heat" 1.6
+	"afterburner energy" -1.2
+	"reverse flare sprite" "effect/successor flare/medium"
+		"frame rate" 20
+	"reverse flare sound" "ion medium"
+	description "This large reverse thruster sees use in both commerce and warfare, speeding up the traversal of trade routes in the former situation and enhancing combat agility in the latter."
+	description "	Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Veusa" Inductive Thruster`</summary>
+<pre>outfit `"Veusa" Inductive Thruster`
+	category "Engines"
+	series "Engines: Successors"
+	index 41
+	"cost" 3550000
+	thumbnail "outfit/large successor thruster"
+	licenses
+		"Successor"
+	"mass" 65
+	"outfit space" -65
+	"engine capacity" -65
+	"thrust" 82.0
+	"thrusting energy" 4.8
+	"thrusting heat" 3.15
+	"afterburner thrust" 123.0
+	"afterburner shields" 12.2
+	"afterburner heat" 8.3
+	"afterburner energy" 4.8
+	"afterburner effect" "large successor afterburner"
+	"flare sprite" "effect/successor flare/large"
+		"frame rate" 20
+	"flare sound" "ion large"
+	description `The largest of the Successors' pulsed inductive thrusters, the Veusa is used primarily to propel their large warships and freighters. While its high-performance mode is powerful enough to accelerate even the largest vessels to high speeds, it also drains shield power remarkably quickly; this is clearly meant to be paired with one of the Successors' fast-recharging shield generators.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Veusa" Inductive Steering`</summary>
+<pre>outfit `"Veusa" Inductive Steering`
+	category "Engines"
+	series "Engines: Successors"
+	index 40
+	"cost" 2925000
+	thumbnail "outfit/large successor steering"
+	licenses
+		"Successor"
+	"mass" 42
+	"outfit space" -42
+	"engine capacity" -42
+	"afterburner energy" -2.4
+	"turn" 1850
+	"turning energy" 3.15
+	"turning heat" 2.54
+	"steering flare sprite" "effect/successor flare/large"
+		"frame rate" 20
+	"steering flare sound" "ion large"
+	description `The Veusa series of Successor steering units is significantly smaller than comparable human engines, allowing the Successors to gain some flexibility in the engine layouts of their large ships.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit `"Veusa" Inductive Reverser`</summary>
+<pre>outfit `"Veusa" Inductive Reverser`
+	category "Engines"
+	series "Engines: Successors"
+	index 42
+	"cost" 3050000
+	thumbnail "outfit/large successor reverse"
+	licenses
+		"Successor"
+	"mass" 35
+	"outfit space" -35
+	"weapon capacity" -35
+	"afterburner energy" -2.1
+	"reverse thrust" 51.0
+	"reverse thrusting energy" 3.5
+	"reverse thrusting heat" 2.8
+	"reverse flare sprite" "effect/successor flare/large"
+		"frame rate" 20
+	"reverse flare sound" "ion large"
+	description "While the invertebrate Successors are relatively unaffected, human pilots must take care when using a reverse thruster this large to avoid dangerous g-force stress on the body."
+	description "	Because a reverse thruster must be facing forwards, it must be installed in the weapon section of your ship instead of the engine section."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Multimodal Armor: Heavy"</summary>
+<pre>outfit "Multimodal Armor: Heavy"
+	category "Systems"
+	series "Special Systems: Successors"
+	index 10
+	thumbnail "outfit/successor armor heavy"
+	licenses
+		"High Houses"
+	"hull protection" .20
+	"multimodal armor" -1
+	"unplunderable" 1
+	description "The metamaterial armor of Successor warships can be altered in an appropriately equipped spaceport to change its attributes."
+	description "	This configuration strengthens the bonds between the atoms making up the armor, increasing its resistance to direct damage."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Multimodal Armor: Keystone"</summary>
+<pre>outfit "Multimodal Armor: Keystone"
+	category "Systems"
+	series "Special Systems: Successors"
+	index 40
+	thumbnail "outfit/successor armor keystone"
+	licenses
+		"High Houses"
+	cost 10000000
+	"quantum keystone" 1
+	"scan interference" 3
+	"multimodal armor" -1
+	"unplunderable" 1
+	description "The metamaterial armor of Successor warships can be altered in an appropriately equipped spaceport to change its attributes."
+	description "	This configuration allows a vessel equipped with it to safely pass through unstable wormholes. As a side effect, it also substantially interferes with external scans of a vessel's cargo or outfits."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Multimodal Armor: Regen"</summary>
+<pre>outfit "Multimodal Armor: Regen"
+	category "Systems"
+	series "Special Systems: Successors"
+	index 20
+	thumbnail "outfit/successor armor regen"
+	licenses
+		"High Houses"
+	"hull repair multiplier" 0.75
+	"multimodal armor" -1
+	"unplunderable" 1
+	description "The metamaterial armor of Successor warships can be altered in an appropriately equipped spaceport to change its attributes."
+	description "	This configuration increases the plasticity of the armor, greatly increasing the effectiveness of in-combat repair efforts."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Multimodal Armor: Resilient"</summary>
+<pre>outfit "Multimodal Armor: Resilient"
+	category "Systems"
+	series "Special Systems: Successors"
+	index 30
+	thumbnail "outfit/successor armor resilient"
+	licenses
+		"High Houses"
+	"slowing protection" 0.5
+	"corrosion protection" 0.5
+	"multimodal armor" -1
+	"unplunderable" 1
+	description "The metamaterial armor of Successor warships can be altered in an appropriately equipped spaceport to change its attributes."
+	description "	This configuration is designed for exploring hazardous areas, substantially increasing the armor's ability to resist engine-dampening effects and long-term degradation."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor outfits.txt | outfit "Kinetic Rail Rifle"</summary>
+<pre>outfit "Kinetic Rail Rifle"
+	category "Hand to Hand"
+	thumbnail "outfit/railgun h2h"
+	licenses "High Houses"
+	cost 72000
+	"capture attack" 1.9
+	"capture defense" 3.2
+	"unplunderable" 1
+	description "While projectile weapons of this scale are considered obsolete in human space, having been superseded by laser weaponry, the Successors' generations of experience with high-power kinetic weapons have allowed them to produce this particularly terrifying railgun rifle, firing projectiles capable of piercing body armor and even intervening bulkheads. Particularly effective at repelling boarders, it is capable of interfacing with a Successor ship's computer and surveillance systems, routing target information to a built-in display."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit `"Ojet" Bimodal Coilgun`</summary>
+<pre>outfit `"Ojet" Bimodal Coilgun`
+	category "Guns"
+	series "Guns: Successors"
+	index 10
+	cost 1370000
+	thumbnail "outfit/bimodal coilgun"
+	licenses
+		"High Houses"
+	"mass" 22
+	"outfit space" -22
+	"weapon capacity" -22
+	"gun ports" -1
+	weapon
+		sprite "projectile/bimodal"
+			"frame rate" 5
+			"start frame" 0
+			"no repeat"
+		sound "bimodal"
+		"hit effect" "bimodal impact"
+		"fire effect" "moonbeam fleck" 4
+		"inaccuracy" 1
+		"velocity" 30
+		"lifetime" 15
+		"range override" 900
+		"burst count" 12
+		"burst reload" 6
+		"reload" 30
+		"firing energy" 80
+		"firing heat" 120
+		# Because parent projectiles inherit the damage of their submunitions, we must subtract the total damage of all submunitions from the parent projectile to get the desired behavior (different damage profiles over different ranges).
+		"shield damage" -94
+		# 50 (parent) - 3*48 (child)
+		# close: 50 shield damage
+		# far: 144 shield damage
+		"hull damage" 75
+		# 135 (parent) - 3*20 (child)
+		# close: 135 hull damage
+		# far: 60 hull damage
+		"hit force" 120
+		"cluster"
+		"submunition" "Bimodal Switch" 3
+	description `Precise and deadly, the Ojet Bimodal Coilgun has been the High Houses' armament of choice since long before humans ever took to the stars. It was designed quite simply as a perfect weapon; it is said that by the time the empire of the Predecessors fell, they had seen no need to install any other weapon on their ships for over a thousand years.`
+	description `	The Ojet fires hyperdense packets of charged particles that disperse as they travel: up close the concentrated bolt pierces armor, while at a distance the ionic spray destabilizes shielding. Together, a ship equipped with these weapons can adjust its damage profile just by changing its engagement range, allowing it to be highly effective against any foe.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Bimodal Coilgun Turret"</summary>
+<pre>outfit "Bimodal Coilgun Turret"
+	category "Turrets"
+	series "Turrets: Successors"
+	index 10
+	cost 2950000
+	thumbnail "outfit/bimodal coilgun turret"
+	licenses
+		"High Houses"
+	"mass" 55
+	"outfit space" -55
+	"weapon capacity" -55
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/bimodal turret"
+		"hardpoint offset" 12
+		sprite "projectile/bimodal"
+			"frame rate" 5
+			"start frame" 0
+			"no repeat"
+		sound "bimodal"
+		"hit effect" "bimodal impact"
+		"fire effect" "moonbeam fleck" 4
+		"inaccuracy" 1
+		"velocity" 30
+		"lifetime" 15
+		"range override" 900
+		"turret turn" 1.6
+		"burst count" 24
+		"burst reload" 3
+		"reload" 15
+		"firing energy" 80
+		"firing heat" 120
+		"firing force" 25
+		"shield damage" -94
+		"hull damage" 75
+		"hit force" 120
+		"cluster"
+		"submunition" "Bimodal Switch" 3
+	description `Successor warships have traditionally relied on fixed weaponry to deal with their foes, but the High Houses do produce a turreted platform for the Ojet Coilgun so that their larger and slower vessels can maintain their combat effectiveness against more maneuverable targets. It mounts two of the weapons side by side, rigged to fire double the amount of shots per burst to keep them in sync with the fixed hardpoints.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Bimodal Switch"</summary>
+<pre>outfit "Bimodal Switch"
+	weapon
+		sprite "projectile/bimodal switch"
+			"random start frame"
+			"frame rate" 20
+		"hit effect" "bimodal switch impact"
+		"inaccuracy" 10
+		"velocity" 30
+		"lifetime" 6
+		"random lifetime" 3
+		"shield damage" 48
+		"hull damage" 20
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Drag Cannon"</summary>
+<pre>outfit "Drag Cannon"
+	category "Guns"
+	series "Guns: Successors"
+	index 20
+	cost 455000
+	thumbnail "outfit/drag cannon"
+	licenses
+		"High Houses"
+	"mass" 12
+	"outfit space" -12
+	"weapon capacity" -12
+	"gun ports" -1
+	weapon
+		sound "drag cannon"
+		"fire effect" "moonbeam fleck" 2
+		"hit effect" "drag cannon impact" 3
+		"velocity" 0
+		"lifetime" 0
+		"range override" 375
+		"velocity override" 25
+		"burst count" 6
+		"burst reload" 6
+		"reload" 45
+		"firing energy" 30
+		"firing heat" 55
+		"cluster"
+		"submunition" "Drag Projectile" 3
+	description `The Successors have a historical affinity for projectile weaponry which persists to the modern day. The Drag Cannon fires a short-ranged, highly inaccurate blast of projectiles that not only deal substantial damage but also temporarily disrupt the target's engines.`
+	description `	While it is an inelegant design in comparison to the time-tested Ojet Coilgun, and consequently less appreciated, the Drag Cannon has found a place on the Successors' fast attack craft primarily as a tool for slowing down enemy vessels so that they can be engaged by a larger fleet.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Drag Projectile"</summary>
+<pre>outfit "Drag Projectile"
+	weapon
+		sprite "projectile/drag cannon"
+			"frame rate" 20
+			"no repeat"
+		"hit effect" "drag cannon impact"
+		"inaccuracy" 20
+		"velocity" 25
+		"lifetime" 10
+		"random lifetime" 5
+		"slowing damage" 0.45
+		"shield damage" 52
+		"hull damage" 48
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Successor Pulse Laser"</summary>
+<pre>outfit "Successor Pulse Laser"
+	category "Guns"
+	series "Guns: Successors"
+	index 30
+	cost 69000
+	thumbnail "outfit/successor pulse laser"
+	licenses
+		"Successor"
+	"mass" 10
+	"outfit space" -10
+	"weapon capacity" -10
+	"gun ports" -1
+	weapon
+		sprite "projectile/successor pulse laser"
+			"random start frame"
+			"frame rate" 5
+		sound "successor pulse laser"
+		"hit effect" "successor pulse laser impact"
+		"inaccuracy" 0.4
+		"velocity" 490
+		"lifetime" 1
+		"burst count" 9
+		"burst reload" 1
+		"reload" 6
+		"firing energy" 11
+		"firing heat" 15
+		"shield damage" 10.5
+		"hull damage" 12
+		"piercing" 0.05
+	description "This shield-penetrating laser is one of the few weapons manufactured independently in Successor space, rather than under the auspices and restrictions of the High Houses. As a consequence of this, it is neither especially powerful nor efficient, but its low cost and space requirements make it a nonetheless relatively appealing defensive choice for those without access to the High Houses' more potent weaponry."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Pulse Laser Turret"</summary>
+<pre>outfit "Pulse Laser Turret"
+	category "Turrets"
+	series "Turrets: Successors"
+	index 20
+	cost 145000
+	thumbnail "outfit/successor pulse laser turret"
+	licenses
+		"Successor"
+	"mass" 30
+	"outfit space" -30
+	"weapon capacity" -30
+	"turret mounts" -1
+	weapon
+		sprite "projectile/successor pulse laser"
+			"random start frame"
+			"frame rate" 5
+		"hardpoint sprite" "hardpoint/successor pulse laser turret"
+		"hardpoint offset" 8
+		sound "successor pulse laser"
+		"hit effect" "successor pulse laser impact"
+		"inaccuracy" 0.4
+		"velocity" 490
+		"turret turn" 2.5
+		"lifetime" 1
+		"burst count" 9
+		"burst reload" 1
+		"reload" 3
+		"firing energy" 11
+		"firing heat" 15
+		"shield damage" 10.5
+		"hull damage" 12
+		"piercing" 0.05
+	description "The introduction of the Pulse Laser was a wake-up call for the more astute in the High Houses, as it was the first time in hundreds of years that weapons were being manufactured by groups other than themselves. Most Successors see the turreted version as a continuation of this democratization of violence, while the more paranoid claim that the High Houses have infiltrated production and intentionally sabotaged the design."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Overcharged Pulse Laser"</summary>
+<pre>outfit "Overcharged Pulse Laser"
+	category "Guns"
+	series "Guns: Successors"
+	index 40
+	cost 84000
+	thumbnail "outfit/overcharged pulse laser"
+	licenses
+		"Successor"
+	"mass" 12
+	"outfit space" -12
+	"weapon capacity" -12
+	"gun ports" -1
+	weapon
+		sprite "projectile/successor pulse laser"
+			"start frame" 2
+			"frame rate" 8
+			"rewind"
+		sound "overcharged pulse laser"
+		"hit effect" "overcharged pulse laser impact"
+		"inaccuracy" 5.5
+		"velocity" 490
+		"lifetime" 1
+		"burst count" 4
+		"burst reload" 1
+		"reload" 7
+		"firing energy" 9.1
+		"firing heat" 30.8
+		"shield damage" 14
+		"hull damage" 13.3
+		"piercing" 0.05
+		"cluster"
+	description `Unable to access large quantities of the high-quality weaponry produced by the High Houses, the People's Houses have had to work with what is available to them: mostly the relatively low-powered pulse lasers produced independently in Successor space. This pulse laser has had its safeties bypassed and its optics upgraded, allowing it to do more damage to shields at a lower power cost in exchange for producing substantially more heat.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "Overcharged Laser Turret"</summary>
+<pre>outfit "Overcharged Laser Turret"
+	category "Turrets"
+	series "Turrets: Successors"
+	index 30
+	cost 136000
+	thumbnail "outfit/overcharged pulse laser turret"
+	licenses
+		"Successor"
+	"mass" 24
+	"outfit space" -24
+	"weapon capacity" -24
+	"turret mounts" -1
+	weapon
+		sprite "projectile/successor pulse laser"
+			"start frame" 2
+			"frame rate" 8
+			"rewind"
+		"hardpoint sprite" "hardpoint/overcharged pulse laser turret"
+		"hardpoint offset" 8
+		sound "overcharged pulse laser"
+		"hit effect" "overcharged pulse laser impact"
+		"inaccuracy" 5.5
+		"velocity" 490
+		"lifetime" 1
+		"turret turn" 3.5
+		"burst count" 4
+		"burst reload" 1
+		"reload" 7
+		"firing energy" 12.6
+		"firing heat" 43.05
+		"shield damage" 19.6
+		"hull damage" 18.667
+		"piercing" 0.05
+		"cluster"
+	description `Hand-crafted by the more colorful members of the People's Houses, this bespoke overcharged Pulse Laser turret has had even more power pumped into its laser generator compared to the fixed version, producing a truly prodigious amount of heat for a weapon of its size. Despite its inelegant design, it is nonetheless a fearsome weapon, especially considering that it retains the ability to partially punch through shielding.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit `"Sjeja" Kinetic Lance`</summary>
+<pre>outfit `"Sjeja" Kinetic Lance`
+	category "Secondary Weapons"
+	cost 3500000
+	licenses
+		"High Houses"
+	thumbnail "outfit/sjeja kinetic lance"
+	"mass" 60
+	"outfit space" -60
+	"weapon capacity" -60
+	"energy capacity" 1900
+	"gun ports" -1
+	"spike capacity" 20
+	weapon
+		sprite "projectile/sjeja kinetic lance"
+			"frame rate" 4
+			"random start frame"
+		sound "typhoon"
+		ammo "High-Velocity Spike"
+		icon "icon/hv spike"
+		"fire effect" "moonbeam fleck" 20
+		"fire effect" "electron impact"
+		"hit effect" "torpedo hit"
+		"cluster"
+		"velocity" 320
+		"lifetime" 8
+		"reload" 160
+		"firing force" 800
+		"firing energy" 1900
+		"firing ion" 3.0
+		"firing heat" 4000
+		"shield damage" 1336
+		"hull damage" 1920
+		"piercing" 0.15
+		"hit force" 800
+		"penetration count" 5
+	description "The largest and most powerful of the Successors' modern weapons, this massive superconducting coilgun is elegant in its simplicity, cleanly perforating targets at extreme range. Although the weapon requires a substantial burst of power in order to fire, it is capable of storing some of this within the coils themselves, allowing it to be fired without additional battery banks at the cost of inflicting a lingering power draw on the ship's systems."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "High-Velocity Spike"</summary>
+<pre>outfit "High-Velocity Spike"
+	category "Ammunition"
+	series "Ammunition: Successors"
+	index 10
+	licenses
+		"High Houses"
+	cost 3500
+	thumbnail "outfit/hv spike"
+	"mass" .5
+	"spike capacity" -1
+	description `The projectiles fired by the Sjeja Kinetic Lance are too large to be synthesized on-the-fly from the ship's reserves, and must be carried separately.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor weapons.txt | outfit "High-Velocity Spike Rack"</summary>
+<pre>outfit "High-Velocity Spike Rack"
+	category "Ammunition"
+	series "Ammunition: Successors"
+	index 20
+	cost 350000
+	licenses
+		"High Houses"
+	thumbnail "outfit/hv spike rack"
+	"mass" 7
+	"outfit space" -12
+	"energy capacity" 800
+	"spike capacity" 16
+	description `Though the built-in ammunition reserves of the Sjeja Kinetic Lance are sufficient for all but the most protracted engagements, the High Houses do manufacture this additional storage unit for use on their largest warships. The rack includes a small set of batteries to help support the high power costs of the Sjeja.`
 </pre>
 </details>
 

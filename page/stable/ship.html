@@ -1712,7 +1712,7 @@
 	explode "medium explosion" 20
 	explode "large explosion" 5
 	"final explode" "final explosion small"
-	description "The Sasumata is the chief scout ship of the Bunrodea. While not designed for combat, this stealth transport vessel is still capable of holding its all against some smaller warships; its four fighter bays turn the Sasumata into a force to be reckoned with when its fighters are deployed."
+	description "The Sasumata is the chief scout ship of the Bunrodea. While not designed for combat, this stealth transport vessel is still capable of holding its own against some smaller warships; its four fighter bays turn the Sasumata into a force to be reckoned with when its fighters are deployed."
 </pre>
 </details>
 
@@ -4558,6 +4558,34 @@
 
 
 <details>
+<summary>data/drak/drak ships.txt | ship "Archon" "Archon (Hyperdrive Cloaked)"</summary>
+<pre>ship "Archon" "Archon (Hyperdrive Cloaked)"
+	sprite "ship/archon b"
+		"frame rate" 0.87
+	"never disabled"
+	add attributes
+		"cloak" .04
+		"jump speed" 1
+		"hyperdrive" 1
+		"hyperdrive sound" ""
+		"hyperdrive out sound" ""
+		"hyperdrive in sound" ""
+	"final explode" "archon b teleport"
+	outfits
+		"Drak Antimatter Cannon"
+		"Drak Antimatter Cannon (Augmented)"
+		"Drak Anti-Missile Field" 2
+		"Drak Anti-Missile Field (Augmented)" 2
+		"Drak Draining Field"
+		"Drak Draining Field (Augmented)"
+		"Drak Distancer" 2
+		"Drak Turret" 3
+		"Drak Turret (Augmented)" 3
+</pre>
+</details>
+
+
+<details>
 <summary>data/drak/indigenous.txt | ship "Subsidurial"</summary>
 <pre>ship "Subsidurial"
 	noun "creature"
@@ -5531,6 +5559,58 @@
 		"mass" 57
 		"drag" 0.3
 		"cargo space" 49
+</pre>
+</details>
+
+
+<details>
+<summary>data/gegno/gegno ships.txt | ship "Rhyolite"</summary>
+<pre>ship "Rhyolite"
+	sprite "ship/gegno rhyolite"
+	thumbnail "thumbnail/gegno rhyolite"
+	attributes
+		category "Interceptor"
+		licenses
+			"Vi Centurion"
+		"cost" 1165000
+		"shields" 0
+		"hull" 4000
+		"required crew" 5
+		"bunks" 9
+		"mass" 225
+		"drag" 4
+		"heat dissipation" 0.64
+		"fuel capacity" 400
+		"cargo space" 30
+		"outfit space" 220
+		"weapon capacity" 78
+		"engine capacity" 100
+		weapon
+			"blast radius" 28
+			"shield damage" 190
+			"hull damage" 360
+			"hit force" 330
+	outfits
+		"Irate Cannon" 4
+		"C7 Brawl Cell"
+		"R02 Battlezone Battery"
+		"Savagery Pike" 5
+		"RG18 Torch Thruster"
+		"RG18 Torch Steering"
+		"Hyperdrive"
+	engine -28.5 61.5
+	engine 28.5 61.5
+	gun -43.5 -15 "Irate Cannon"
+	gun 43.5 -15 "Irate Cannon"
+	gun -52 -11 "Irate Cannon"
+	gun 52 -11 "Irate Cannon"
+	leak "leak" 50 40
+	leak "flame" 40 70
+	explode "medium explosion" 10
+	explode "small explosion" 15
+	explode "tiny explosion" 10
+	"final explode" "final explosion small"
+	description `The Rhyolite is a prototype Vi interceptor design constructed by the same shipyard that manufactures the Eclogite and Diorite. Only a few have been produced, and those that exist are currently piloted by a handful of Vi warriors either testing the vessel or owning one privately.`
 </pre>
 </details>
 
@@ -9726,6 +9806,7 @@
 		"Supercapacitor" 2
 		"D14-RN Shield Generator"
 		"Laser Rifle" 5
+		"Nerve Gas"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Volcano Afterburner"
@@ -9915,6 +9996,7 @@
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
 		"Laser Rifle" 80
+		"Nerve Gas" 15
 		"Security Station"
 		"A520 Atomic Thruster"
 		"A525 Atomic Steering"
@@ -9995,6 +10077,7 @@
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 3
 		"Laser Rifle" 80
+		"Nerve Gas" 20
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Volcano Afterburner"
@@ -10052,6 +10135,7 @@
 		"Liquid Helium Cooler"
 		"Outfits Expansion"
 		"Laser Rifle" 25
+		"Nerve Gas" 29
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -10092,6 +10176,7 @@
 		"Outfits Expansion"
 		"Security Station"
 		"Laser Rifle" 24
+		"Nerve Gas"
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -10120,6 +10205,7 @@
 		"Outfits Expansion"
 		"Security Station"
 		"Laser Rifle" 24
+		"Nerve Gas" 13
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -10172,6 +10258,7 @@
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
 		"Laser Rifle" 69
+		"Nerve Gas" 15
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Ionic Afterburner"
@@ -10216,6 +10303,7 @@
 		"Liquid Nitrogen Cooler"
 		"Outfits Expansion" 2
 		"Laser Rifle" 69
+		"Nerve Gas" 8
 		"A520 Atomic Thruster"
 		"A865 Atomic Steering"
 		"Hyperdrive"
@@ -10247,6 +10335,7 @@
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 2
 		"Laser Rifle" 69
+		"Nerve Gas" 48
 		"A370 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Ionic Afterburner"
@@ -10301,6 +10390,7 @@
 		"Liquid Nitrogen Cooler"
 		"Security Station" 3
 		"Laser Rifle" 8
+		"Nerve Gas" 4
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -10377,6 +10467,7 @@
 		"D14-RN Shield Generator"
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 11
+		"Nerve Gas" 2
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -10470,6 +10561,7 @@
 		"Liquid Nitrogen Cooler"
 		"Security Station" 2
 		"Laser Rifle" 5
+		"Nerve Gas"
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -10602,6 +10694,7 @@
 		"Volcano Afterburner"
 		"Hyperdrive"
 		"Laser Rifle" 14
+		"Nerve Gas" 3
 	engine -9.5 63
 	engine 9.5 63
 	gun -13.5 -35.5 "Heavy Laser"
@@ -10638,6 +10731,7 @@
 		"A375 Atomic Steering"
 		"Hyperdrive"
 		"Laser Rifle" 14
+		"Nerve Gas"
 	engine -10.5 63.5
 	engine 10.5 63.5
 	engine -4.5 62.5 .5
@@ -10667,6 +10761,7 @@
 		"A375 Atomic Steering"
 		"Hyperdrive"
 		"Laser Rifle" 14
+		"Nerve Gas" 5
 	gun -13.5 -35.5
 	gun 13.5 -35.5
 	gun -21 -28 "Pulse Cannon"
@@ -10712,6 +10807,7 @@
 		"D67-TM Shield Generator"
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 22
+		"Nerve Gas" 2
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -10781,6 +10877,7 @@
 		"Liquid Nitrogen Cooler"
 		"Security Station" 2
 		"Laser Rifle" 20
+		"Nerve Gas" 4
 		"A250 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
@@ -11639,6 +11736,7 @@
 		"Water Coolant System"
 		"Tactical Scanner"
 		"Laser Rifle" 19
+		"Nerve Gas" 3
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -13552,7 +13650,7 @@
 		"D23-QP Shield Generator"
 		"Small Radar Jammer"
 		"Brig"
-		"Laser Rifle" 2
+		"Laser Rifle" 12
 		"Greyhound Plasma Thruster"
 		"X3200 Ion Steering"
 		"Hyperdrive"
@@ -14736,6 +14834,7 @@
 		"D67-TM Shield Generator"
 		"Large Radar Jammer"
 		"Laser Rifle" 18
+		"Nerve Gas" 3
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
@@ -15378,30 +15477,6 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Bastion" "Bastion (Laser)"</summary>
-<pre>ship "Bastion" "Bastion (Laser)"
-	outfits
-		"Heavy Laser" 4
-		"Heavy Anti-Missile Turret"
-		"Heavy Laser Turret" 2
-		"Fusion Reactor"
-		"Supercapacitor" 4
-		"D94-YV Shield Generator"
-		"Small Radar Jammer"
-		"Water Coolant System"
-		"Laser Rifle" 6
-		"Outfits Expansion"
-		"A370 Atomic Thruster"
-		"A525 Atomic Steering"
-		"Hyperdrive"
-	turret "Heavy Anti-Missile Turret"
-	turret "Heavy Laser Turret"
-	turret "Heavy Laser Turret"
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Bastion" "Bastion (Gatling)"</summary>
 <pre>ship "Bastion" "Bastion (Gatling)"
 	outfits
@@ -15428,6 +15503,30 @@
 	gun "Twin Modified Blaster"
 	gun "Plasma Cannon"
 	gun "Twin Modified Blaster"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Bastion" "Bastion (Laser)"</summary>
+<pre>ship "Bastion" "Bastion (Laser)"
+	outfits
+		"Heavy Laser" 4
+		"Heavy Anti-Missile Turret"
+		"Heavy Laser Turret" 2
+		"Fusion Reactor"
+		"Supercapacitor" 4
+		"D94-YV Shield Generator"
+		"Small Radar Jammer"
+		"Water Coolant System"
+		"Laser Rifle" 6
+		"Outfits Expansion"
+		"A370 Atomic Thruster"
+		"A525 Atomic Steering"
+		"Hyperdrive"
+	turret "Heavy Anti-Missile Turret"
+	turret "Heavy Laser Turret"
+	turret "Heavy Laser Turret"
 </pre>
 </details>
 
@@ -15511,6 +15610,38 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Behemoth" "Behemoth (Miner)"</summary>
+<pre>ship "Behemoth" "Behemoth (Miner)"
+	outfits
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 90
+		"Mining Laser Turret" 4
+		"Tractor Beam" 2
+		"Asteroid Scanner" 2
+		"NT-200 Nucleovoltaic"
+		"LP144a Battery Pack"
+		"D67-TM Shield Generator"
+		"Cooling Ducts" 2
+		"Large Radar Jammer"
+		"Cargo Expansion" 2
+		"Laser Rifle" 6
+		"AR120 Reverse Thruster"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Scram Drive"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	turret "Tractor Beam"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Mining Laser Turret"
+	turret "Tractor Beam"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Behemoth" "Behemoth (Proton)"</summary>
 <pre>ship "Behemoth" "Behemoth (Proton)"
 	outfits
@@ -15555,38 +15686,6 @@
 		"A125 Atomic Steering"
 		"A375 Atomic Steering"
 		"Scram Drive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Behemoth" "Behemoth (Miner)"</summary>
-<pre>ship "Behemoth" "Behemoth (Miner)"
-	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 90
-		"Mining Laser Turret" 4
-		"Tractor Beam" 2
-		"Asteroid Scanner" 2
-		"NT-200 Nucleovoltaic"
-		"LP144a Battery Pack"
-		"D67-TM Shield Generator"
-		"Cooling Ducts" 2
-		"Large Radar Jammer"
-		"Cargo Expansion" 2
-		"Laser Rifle" 6
-		"AR120 Reverse Thruster"
-		"A250 Atomic Thruster"
-		"A375 Atomic Steering"
-		"Scram Drive"
-	gun "Meteor Missile Launcher"
-	gun "Meteor Missile Launcher"
-	turret "Tractor Beam"
-	turret "Mining Laser Turret"
-	turret "Mining Laser Turret"
-	turret "Mining Laser Turret"
-	turret "Mining Laser Turret"
-	turret "Tractor Beam"
 </pre>
 </details>
 
@@ -16523,7 +16622,7 @@
 		"S-970 Regenerator"
 		"Liquid Helium Cooler" 2
 		"Catalytic Ramscoop"
-		Hyperdrive
+		"Hyperdrive"
 		"Volcano Afterburner"
 		"Outfits Expansion" 2
 		"Plasma Cannon" 6
@@ -17345,24 +17444,6 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Fury" "Fury (Missile)"</summary>
-<pre>ship "Fury" "Fury (Missile)"
-	outfits
-		"Javelin Pod"
-		"Javelin" 200
-		"Meteor Missile Pod" 2
-		"Meteor Missile" 14
-		"nGVF-BB Fuel Cell"
-		"Supercapacitor" 3
-		"D14-RN Shield Generator"
-		"Greyhound Plasma Thruster"
-		"Chipmunk Plasma Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Fury" "Fury (Miner A)"</summary>
 <pre>ship "Fury" "Fury (Miner A)"
 	outfits
@@ -17396,6 +17477,24 @@
 	gun
 	gun "Energy Blaster"
 	gun "Energy Blaster"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Fury" "Fury (Missile)"</summary>
+<pre>ship "Fury" "Fury (Missile)"
+	outfits
+		"Javelin Pod"
+		"Javelin" 200
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 14
+		"nGVF-BB Fuel Cell"
+		"Supercapacitor" 3
+		"D14-RN Shield Generator"
+		"Greyhound Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
 </pre>
 </details>
 
@@ -17445,6 +17544,27 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Hauler II" "Hauler II (CCOR)"</summary>
+<pre>ship "Hauler II" "Hauler II (CCOR)"
+	outfits
+		"Heavy Anti-Missile Turret" 2
+		"Anti-Missile Turret" 2
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Small Radar Jammer"
+		"Laser Rifle" 12
+		"Security Station" 2
+		"Capybara Reverse Thruster"
+		"Chipmunk Plasma Thruster"
+		"Greyhound Plasma Thruster"
+		"Greyhound Plasma Steering"
+		"Scram Drive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Hauler II" "Hauler II (Hai)"</summary>
 <pre>ship "Hauler II" "Hauler II (Hai)"
 	outfits
@@ -17465,27 +17585,6 @@
 	turret "Chameleon Anti-Missile"
 	turret "Chameleon Anti-Missile"
 	turret "Quad Blaster Turret"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Hauler II" "Hauler II (CCOR)"</summary>
-<pre>ship "Hauler II" "Hauler II (CCOR)"
-	outfits
-		"Heavy Anti-Missile Turret" 2
-		"Anti-Missile Turret" 2
-		"S3 Thermionic"
-		"LP072a Battery Pack"
-		"D67-TM Shield Generator"
-		"Small Radar Jammer"
-		"Laser Rifle" 12
-		"Security Station" 2
-		"Capybara Reverse Thruster"
-		"Chipmunk Plasma Thruster"
-		"Greyhound Plasma Thruster"
-		"Greyhound Plasma Steering"
-		"Scram Drive"
 </pre>
 </details>
 
@@ -17528,6 +17627,39 @@
 		"D41-HY Shield Generator"
 		"Small Radar Jammer" 2
 		"X2700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner A)"</summary>
+<pre>ship "Hawk" "Hawk (Miner A)"
+	outfits
+		"Heavy Laser" 2
+		"S3 Thermionic"
+		"LP036a Battery Pack"
+		"D41-HY Shield Generator"
+		"Asteroid Scanner"
+		"A120 Atomic Thruster"
+		"A255 Atomic Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner B)"</summary>
+<pre>ship "Hawk" "Hawk (Miner B)"
+	outfits
+		"Mining Laser" 2
+		"nGVF-CC Fuel Cell"
+		"KP-6 Photovoltaic Panel" 2
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
+		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
@@ -17581,39 +17713,6 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner A)"</summary>
-<pre>ship "Hawk" "Hawk (Miner A)"
-	outfits
-		"Heavy Laser" 2
-		"S3 Thermionic"
-		"LP036a Battery Pack"
-		"D41-HY Shield Generator"
-		"Asteroid Scanner"
-		"A120 Atomic Thruster"
-		"A255 Atomic Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Hawk" "Hawk (Miner B)"</summary>
-<pre>ship "Hawk" "Hawk (Miner B)"
-	outfits
-		"Mining Laser" 2
-		"nGVF-CC Fuel Cell"
-		"KP-6 Photovoltaic Panel" 2
-		"LP036a Battery Pack"
-		"D23-QP Shield Generator"
-		"Small Radar Jammer"
-		"Greyhound Plasma Thruster"
-		"Greyhound Plasma Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Hai)"</summary>
 <pre>ship "Headhunter" "Headhunter (Hai)"
 	outfits
@@ -17622,21 +17721,6 @@
 		"Hai Chasm Batteries"
 		"Hai Corundum Regenerator"
 		"Hai Williwaw Cooling"
-		"A250 Atomic Thruster"
-		"A375 Atomic Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Particle)"</summary>
-<pre>ship "Headhunter" "Headhunter (Particle)"
-	outfits
-		"Particle Cannon" 2
-		"NT-200 Nucleovoltaic"
-		"LP036a Battery Pack"
-		"D23-QP Shield Generator"
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
 		"Hyperdrive"
@@ -17672,6 +17756,21 @@
 		"D23-QP Shield Generator"
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Headhunter" "Headhunter (Particle)"</summary>
+<pre>ship "Headhunter" "Headhunter (Particle)"
+	outfits
+		"Particle Cannon" 2
+		"NT-200 Nucleovoltaic"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -17764,6 +17863,32 @@
 		"Capybara Reverse Thruster"
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
+		"Scram Drive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Leviathan" "Leviathan (CCOR)"</summary>
+<pre>ship "Leviathan" "Leviathan (CCOR)"
+	outfits
+		"Plasma Cannon" 4
+		"Heavy Anti-Missile Turret" 2
+		"Javelin Turret" 2
+		"Javelin" 1200
+		"Javelin Storage Crate" 4
+		"Fusion Reactor"
+		"nGVF-EE Fuel Cell"
+		"Supercapacitor"
+		"Liquid Helium Cooler"
+		"D67-TM Shield Generator"
+		"Outfits Expansion" 3
+		"Tactical Scanner"
+		"Laser Rifle" 64
+		"Security Station"
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Chipmunk Plasma Steering"
 		"Scram Drive"
 </pre>
 </details>
@@ -17913,32 +18038,6 @@
 		"Laser Rifle" 32
 		"Quad Blaster Turret" 2
 		"Armageddon Core"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Leviathan" "Leviathan (CCOR)"</summary>
-<pre>ship "Leviathan" "Leviathan (CCOR)"
-	outfits
-		"Plasma Cannon" 4
-		"Heavy Anti-Missile Turret" 2
-		"Javelin Turret" 2
-		"Javelin" 1200
-		"Javelin Storage Crate" 4
-		"Fusion Reactor"
-		"nGVF-EE Fuel Cell"
-		"Supercapacitor"
-		"Liquid Helium Cooler"
-		"D67-TM Shield Generator"
-		"Outfits Expansion" 3
-		"Tactical Scanner"
-		"Laser Rifle" 64
-		"Security Station"
-		"Impala Plasma Thruster"
-		"Impala Plasma Steering"
-		"Chipmunk Plasma Steering"
-		"Scram Drive"
 </pre>
 </details>
 
@@ -18127,6 +18226,29 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Gatling)"</summary>
+<pre>ship "Modified Argosy" "Modified Argosy (Gatling)"
+	outfits
+		"Twin Modified Blaster" 2
+		"Gatling Gun" 2
+		"Gatling Turret"
+		"Gatling Gun Ammo" 9000
+		"Bullet Boxes" 2
+		"Heavy Anti-Missile Turret"
+		"S3 Thermionic"
+		"LP072a Battery Pack"
+		"D67-TM Shield Generator"
+		"Brig"
+		"Laser Rifle" 5
+		"X1100 Ion Reverse Thruster"
+		"X3700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Heavy)"</summary>
 <pre>ship "Modified Argosy" "Modified Argosy (Heavy)"
 	outfits
@@ -18141,30 +18263,6 @@
 		"Laser Rifle" 3
 		"A250 Atomic Thruster"
 		"A375 Atomic Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Missile)"</summary>
-<pre>ship "Modified Argosy" "Modified Argosy (Missile)"
-	outfits
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 105
-		"Meteor Missile Box" 3
-		"Torpedo Launcher" 2
-		"Torpedo" 60
-		"Laser Turret"
-		"Heavy Anti-Missile Turret"
-		"S3 Thermionic"
-		"LP072a Battery Pack"
-		"D41-HY Shield Generator"
-		"Brig"
-		"Outfits Expansion"
-		"Laser Rifle"
-		"X3700 Ion Thruster"
-		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -18193,21 +18291,22 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Gatling)"</summary>
-<pre>ship "Modified Argosy" "Modified Argosy (Gatling)"
+<summary>data/human/variants.txt | ship "Modified Argosy" "Modified Argosy (Missile)"</summary>
+<pre>ship "Modified Argosy" "Modified Argosy (Missile)"
 	outfits
-		"Twin Modified Blaster" 2
-		"Gatling Gun" 2
-		"Gatling Turret"
-		"Gatling Gun Ammo" 9000
-		"Bullet Boxes" 2
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 105
+		"Meteor Missile Box" 3
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Laser Turret"
 		"Heavy Anti-Missile Turret"
 		"S3 Thermionic"
 		"LP072a Battery Pack"
-		"D67-TM Shield Generator"
+		"D41-HY Shield Generator"
 		"Brig"
-		"Laser Rifle" 5
-		"X1100 Ion Reverse Thruster"
+		"Outfits Expansion"
+		"Laser Rifle"
 		"X3700 Ion Thruster"
 		"Greyhound Plasma Steering"
 		"Hyperdrive"
@@ -18327,27 +18426,6 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Nest" "Nest (Sidewinder)"</summary>
-<pre>ship "Nest" "Nest (Sidewinder)"
-	outfits
-		"Sidewinder Missile Launcher" 2
-		"Sidewinder Missile" 90
-		"Quad Blaster Turret" 2
-		"Anti-Missile Turret"
-		"Heavy Anti-Missile Turret"
-		"S3 Thermionic"
-		"LP144a Battery Pack"
-		"D94-YV Shield Generator"
-		"Large Radar Jammer"
-		"Laser Rifle" 2
-		"A250 Atomic Thruster"
-		"A375 Atomic Steering"
-		Hyperdrive
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Nest" "Nest (Miner)"</summary>
 <pre>ship "Nest" "Nest (Miner)"
 	outfits
@@ -18373,6 +18451,27 @@
 	turret "Tractor Beam"
 	turret "Tractor Beam"
 	turret "Heavy Anti-Missile Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Nest" "Nest (Sidewinder)"</summary>
+<pre>ship "Nest" "Nest (Sidewinder)"
+	outfits
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Quad Blaster Turret" 2
+		"Anti-Missile Turret"
+		"Heavy Anti-Missile Turret"
+		"S3 Thermionic"
+		"LP144a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Laser Rifle" 2
+		"A250 Atomic Thruster"
+		"A375 Atomic Steering"
+		"Hyperdrive"
 </pre>
 </details>
 
@@ -18772,6 +18871,27 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Saber" "Saber (CCOR Gatling)"</summary>
+<pre>ship "Saber" "Saber (CCOR Gatling)"
+	outfits
+		"Twin Blaster" 3
+		"Gatling Turret"
+		"Gatling Gun Ammo" 6000
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"nGVF-BB Fuel Cell"
+		"LP072a Battery Pack"
+		"D23-QP Shield Generator"
+		"Laser Rifle" 12
+		"Security Station"
+		"X3700 Ion Thruster"
+		"Greyhound Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Saber" "Saber (CCOR Javelin)"</summary>
 <pre>ship "Saber" "Saber (CCOR Javelin)"
 	outfits
@@ -18788,27 +18908,6 @@
 		"Greyhound Plasma Thruster"
 		"Greyhound Plasma Steering"
 		"Chipmunk Plasma Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Saber" "Saber (CCOR Gatling)"</summary>
-<pre>ship "Saber" "Saber (CCOR Gatling)"
-	outfits
-		"Twin Blaster" 3
-		"Gatling Turret"
-		"Gatling Gun Ammo" 6000
-		"Meteor Missile Launcher" 2
-		"Meteor Missile" 60
-		"nGVF-BB Fuel Cell"
-		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
-		"Laser Rifle" 12
-		"Security Station"
-		"X3700 Ion Thruster"
-		"Greyhound Plasma Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -18836,20 +18935,6 @@
 
 
 <details>
-<summary>data/human/variants.txt | ship "Scrapper" "Scrapper (Minimal)"</summary>
-<pre>ship "Scrapper" "Scrapper (Minimal)"
-	outfits
-		"Energy Blaster"
-		"KP-6 Photovoltaic Panel"
-		"LP036a Battery Pack"
-		"X1700 Ion Thruster"
-		"X1200 Ion Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Scrapper" "Scrapper (Gatling)"</summary>
 <pre>ship "Scrapper" "Scrapper (Gatling)"
 	outfits
@@ -18860,6 +18945,20 @@
 		"D14-RN Shield Generator"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Scrapper" "Scrapper (Minimal)"</summary>
+<pre>ship "Scrapper" "Scrapper (Minimal)"
+	outfits
+		"Energy Blaster"
+		"KP-6 Photovoltaic Panel"
+		"LP036a Battery Pack"
+		"X1700 Ion Thruster"
+		"X1200 Ion Steering"
 		"Hyperdrive"
 </pre>
 </details>
@@ -18919,6 +19018,20 @@
 
 
 <details>
+<summary>data/human/variants.txt | ship "Sparrow" "Sparrow (Miner)"</summary>
+<pre>ship "Sparrow" "Sparrow (Miner)"
+	outfits
+		"Mining Laser" 2
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+</pre>
+</details>
+
+
+<details>
 <summary>data/human/variants.txt | ship "Sparrow" "Sparrow (Patrol)"</summary>
 <pre>ship "Sparrow" "Sparrow (Patrol)"
 	outfits
@@ -18928,20 +19041,6 @@
 		"D14-RN Shield Generator"
 		"Cargo Scanner"
 		"Outfit Scanner"
-		"Chipmunk Plasma Thruster"
-		"Chipmunk Plasma Steering"
-		"Hyperdrive"
-</pre>
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Sparrow" "Sparrow (Miner)"</summary>
-<pre>ship "Sparrow" "Sparrow (Miner)"
-	outfits
-		"Mining Laser" 2
-		"nGVF-BB Fuel Cell"
-		"LP036a Battery Pack"
 		"Chipmunk Plasma Thruster"
 		"Chipmunk Plasma Steering"
 		"Hyperdrive"
@@ -19432,6 +19531,307 @@
 		angle -53
 	"final explode" "ayym boom"
 	description "This is an adult form of the Iije, having grown enormous from consuming stellar matter over hundreds of thousands of years. They can be seen carrying the smaller Jje around the Umbral Reach, but the exact purpose of this activity is unknown."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias first contact.txt | ship "Nimbus" "Nimbus FTL"</summary>
+<pre>ship "Nimbus" "Nimbus FTL"
+	add attributes
+		"bunks" -25
+	outfits
+		"Liquid-Class Shield"
+		"Metallic Hydrogen Cell"
+		"Cloud Piercer" 20
+		"MH Red-Class Thruster"
+		"MH Red-Class Steering"
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Venta"</summary>
+<pre>ship "Venta"
+	"plural" "Ventae"
+	"sprite" ship/venta
+	"thumbnail" thumbnail/venta
+	"swizzle" 0
+	attributes
+		"category" "Heavy Warship"
+		licenses
+			"Hicemus Conflict"
+		"cost" 25000000
+		"hull" 9600
+		"shields" 12800
+		"required crew" 40
+		"bunks" 45
+		"mass" 2400
+		"drag" 10.2
+		"heat dissipation" .42
+		"cargo space" 20
+		"outfit space" 552
+		"weapon capacity" 240
+		"engine capacity" 130
+		"gaslining" 1
+		"fuel capacity" 200
+	outfits
+		"Liquid-Class Shield"
+		"Liquid-Class Shield"
+		"Metallic Hydrogen Cell"
+		"Plasma Discharger" 2
+		"Star Tail" 4
+		"Star Tail Cell" 80
+		"Star Tail Storage" 2
+		"Cloud Piercer" 40
+		"MH Red-Class Thruster"
+		"MH Red-Class Steering"
+	engine -90.5 42
+	engine 0 42
+		"over"
+	engine 90 42
+	gun 58.5 -76.5
+	gun 29 -76.5
+	gun 29 -76.5
+	gun -28 -76.5
+	gun -28 -76.5
+	gun -57 -76
+	explode "medium explosion" 50
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large"
+	description "When the Hicemus came to power they needed a ship to symbolize their strength. With six guns, the Venta is the most powerful ship in the Incipias' history. Thanks to its sleek and aerodynamic design it is as comfortable hunting down outlaws in space as in the clouds of a gas giant."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Nimbus"</summary>
+<pre>ship "Nimbus"
+	"plural" "Nimbi"
+	"sprite" ship/nimbus
+	"thumbnail" thumbnail/nimbus
+	"swizzle" 0
+	attributes
+		"category" "Medium Warship"
+		licenses
+			"Hicemus Conflict"
+		"cost" 3250000
+		"hull" 4000
+		"shields" 6000
+		"required crew" 20
+		"bunks" 40
+		"mass" 1640
+		"drag" 10.8
+		"heat dissipation" .46
+		"cargo space" 75
+		"outfit space" 450
+		"weapon capacity" 120
+		"engine capacity" 85
+		"gaslining" 1
+		"fuel capacity" 200
+	outfits
+		"Liquid-Class Shield"
+		"Metallic Hydrogen Cell"
+		"Plasma Discharger" 4
+		"Stagnation Beam"
+		"Cloud Piercer" 20
+		"MH Red-Class Thruster"
+		"MH Red-Class Steering"
+	engine 0 120
+	engine 0 120
+	engine -30.5 120
+	engine 30.5 120
+	gun -15 -117
+	gun 15 -117
+	gun 0 -117
+	gun 0 -117
+	turret 0 31.5
+	explode "medium explosion" 50
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large"
+	description "The Nimbus is the first spaceship that the Incipias built that was truly able to navigate through a system. Since it was first manufactured it has been cherished among wealthier captains and a dream of captains just starting out."
+	description "	Although the Nimbus is labeled as a medium warship, it is multipurpose; whether one uses it for mining, passenger transport or cargo, it will perform its job nicely. It is only occasionally used in combat because the Incipias are not currently fighting open wars."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Nimbus" "Nimbus (Civilian)"</summary>
+<pre>ship "Nimbus" "Nimbus (Civilian)"
+	outfits
+		"Liquid-Class Shield"
+		"Metallic Hydrogen Cell"
+		"MH Red-Class Thruster"
+		"MH Red-Class Steering"
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Nimbus" "Nimbus (Mining)"</summary>
+<pre>ship "Nimbus" "Nimbus (Mining)"
+	outfits
+		"Liquid-Class Shield"
+		"Metallic Hydrogen Cell"
+		"Plasma Discharger" 4
+		"Horizon Grappler"
+		"Cloud Piercer" 20
+		"MH Red-Class Thruster"
+		"MH Red-Class Steering"
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Nimbo Stratus"</summary>
+<pre>ship "Nimbo Stratus"
+	"plural" "Nimbo Strati"
+	"sprite" ship/stratus
+	"thumbnail" thumbnail/stratus
+	"swizzle" 0
+	attributes
+		"category" "Utility"
+		"cost" 460000
+		"hull" 500
+		"shields" 700
+		"required crew" 5
+		"bunks" 10
+		"mass" 534
+		"drag" 8.4
+		"heat dissipation" .67
+		"cargo space" 50
+		"outfit space" 270
+		"weapon capacity" 50
+		"engine capacity" 60
+		"gaslining" 1
+		"fuel capacity" 200
+	outfits
+		"Gas-Class Shield"
+		"Metallic Hydrogen Cell"
+		"Plasma Discharger" 2
+		"MH Blue-Class Thruster"
+		"MH Blue-Class Steering"
+	gun -13 -48.5
+	gun 13 -48.5
+	engine 0 61.5
+	explode "medium explosion" 10
+	explode "large explosion" 20
+	"final explode" "final explosion medium"
+	description "Mining has always been a big business in Incipias society, which is why the Nimbo Stratus is the most common ship for beginning captains. Its cheap price tag and ability to bring money in quickly ensure its continuing popularity. While the Stratus could theoretically be used in combat, it stands no chance against the Nimbus and therefore has never been used by the Hicemus military forces."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Nimbo Cirrus"</summary>
+<pre>ship "Nimbo Cirrus"
+	"plural" "Nimbo Cirri"
+	"sprite" ship/cirrus
+	"thumbnail" thumbnail/cirrus
+	"swizzle" 0
+	attributes
+		"category" "Light Freighter"
+		"cost" 330000
+		"hull" 750
+		"shields" 1500
+		"required crew" 7
+		"bunks" 14
+		"mass" 800
+		"drag" 8.7
+		"heat dissipation" .6
+		"cargo space" 200
+		"outfit space" 160
+		"engine capacity" 60
+		"gaslining" 1
+		"fuel capacity" 200
+	outfits
+		"Gas-Class Shield"
+		"Metallic Hydrogen Cell"
+		"MH Green-Class Thruster"
+		"MH Green-Class Steering"
+	engine -32 80
+	engine 32 80
+	engine 0 80
+	explode "medium explosion" 20
+	explode "large explosion" 30
+	"final explode" "final explosion medium"
+	description "When Pon'tes was built, the need arose for a ship that could carry large amounts of material and supplies into orbit. When the Nimbus proved insufficient at this task, the Nimbo Cirrus, a specialized cargo ship, was built. The inhabitants of Pon'tes rely on its regular deliveries for basic goods and equipment."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/incipias ships.txt | ship "Gero"</summary>
+<pre>ship "Gero"
+	"sprite" ship/gero
+	"thumbnail" thumbnail/gero
+	"swizzle" 0
+	attributes
+		"category" "Transport"
+		"cost" 985000
+		"hull" 850
+		"shields" 1700
+		"required crew" 10
+		"bunks" 72
+		"mass" 760
+		"drag" 8.4
+		"heat dissipation" .58
+		"cargo space" 20
+		"outfit space" 158
+		"engine capacity" 54
+		"gaslining" 1
+		"fuel capacity" 200
+	outfits
+		"Gas-Class Shield"
+		"Metallic Hydrogen Cell"
+		"MH Blue-Class Thruster"
+		"MH Blue-Class Steering"
+	engine -41 76.5
+	engine 0 76.5
+	engine 41 76.5
+	explode "medium explosion" 20
+	explode "large explosion" 30
+	"final explode" "final explosion medium"
+	description "The completion of Pon'tes caused a huge increase in travel between the station and Redias. Designers from Alto Shipyards quickly saw an opportunity and so the Incipias' first transport ship was built."
+</pre>
+</details>
+
+
+<details>
+<summary>data/incipias/tace mesa.txt | ship "Tace Mesa"</summary>
+<pre>ship "Tace Mesa"
+	sprite "ship/silent harvester"
+	swizzle 0
+	"never disabled"
+	attributes
+		category "Interceptor"
+		cost 500000
+		"mass" 525
+		"outfit space" 45
+		"weapon capacity" 20
+		"engine capacity" 25
+		"cargo space" 500
+		"hull" 1500
+		"solar collection" 200
+		"fuel capacity" 200
+		"inscrutable" 1
+		"heat dissipation" 0.47
+		"energy capacity" 1000
+		"required crew" 1
+		"drag" 20
+		"bunks" 40
+	outfits
+		"Strange Ray"
+		"Internal Plasma Exhaust"
+	gun 0 -64 "Strange Ray"
+	engine 0 0
+	explode "huge explosion" 10
+	explode "large explosion" 40
+	explode "medium explosion" 50
+	"final explode" "final explosion large"
+	description "The Tace Mesa are creatures whose origins and inner workings are yet to be understood. They have existed for millennia and will probably continue to exist for a long time. Rumors tell of even larger creatures further out in the rims of the system."
 </pre>
 </details>
 
@@ -20033,12 +20433,12 @@
 		"fuel capacity" 100
 		"ramscoop" 0.13
 		"cargo space" 62
-		"outfit space" 383
-		"weapon capacity" 184
-		"engine capacity" 86
-		"energy capacity" 10000
-		"energy generation" 23.3
-		"heat generation" 32
+		"outfit space" 173
+		"weapon capacity" 54
+		"engine capacity" 46
+		"energy capacity" 6000
+		"energy generation" 16.6
+		"heat generation" 24
 		"shield heat" 3.4
 		"hull repair rate" 0.3
 		"ka'sei" 1
@@ -25293,37 +25693,43 @@
 		category "Interceptor"
 		licenses
 			Remnant
-		"cost" 6830000
-		"shields" 3000
-		"hull" 5000
+		"cost" 4830000
+		"shields" 3500
+		"hull" 3000
 		"required crew" 1
 		"bunks" 3
 		"cargo space" 11
 		"fuel capacity" 600
 		"ramscoop" 1.75
-		"mass" 80
-		"drag" 1.8
+		"mass" 130
+		"drag" 1.7
 		"heat dissipation" .75
 		"gaslining" 1
-		"outfit space" 219
-		"shield generation" 2.8
+		"outfit space" 181
+		"weapon capacity" 60
+		"engine capacity" 64
+		"shield generation" 1.4
 		"shield energy" 1.2
-		"hull repair rate" 1.8
+		"hull repair rate" 0.9
 		"hull energy" 0.6
-		"cloak" .04
-		"cloaking energy" 2
-		"cloaking fuel" .05
+		"cloak" .03
+		"cloaking energy" 4
+		"cloaking fuel" .075
 		"atmosphere scan" 100
 		"outfit scan power" 12
 		"outfit scan efficiency" 12
 		"tactical scan power" 26
-		"ion resistance" 0.1
-		"ion resistance energy" -0.05
-		"scramble resistance" 0.1
-		"scramble resistance energy" -0.05
+		"ion resistance" 0.06
+		"scramble resistance" 0.06
 		"thrust" 7.5
 		"turn" 90.0
 		"reverse thrust" 7.5
+		"thrusting energy" 0.75
+		"thrusting heat" 0.7
+		"turning energy" 0.15
+		"turning heat" 0.2
+		"reverse thrusting energy" 0.75
+		"reverse thrusting heat" 0.7
 		"flare sprite" "effect/remnant flare/small"
 			"frame rate" 5
 		"flare sound" "plasma tiny"
@@ -25333,8 +25739,6 @@
 		"reverse flare sprite" "effect/remnant flare/small"
 			"frame rate" 5
 		"reverse flare sound" "plasma tiny"
-		"weapon capacity" 85
-		"engine capacity" 70
 		weapon
 			"blast radius" 10
 			"shield damage" 100
@@ -25343,13 +25747,13 @@
 	outfits
 		"Inhibitor Cannon" 2
 		"Millennium Cell" 2
-		"Crystal Capacitor" 2
+		"Crystal Capacitor"
 		"Small Heat Shunt"
 		"Quantum Key Stone"
 		"Crucible-Class Thruster"
-		"Anvil-Class Engine"
+		"Crucible-Class Steering"
 		"Bellows-Class Afterburner"
-		"Scram Drive"
+		"Hyperdrive"
 	gun 0 -48.5
 	gun -6 -41 "Inhibitor Cannon"
 	gun 6 -41 "Inhibitor Cannon"
@@ -25373,13 +25777,13 @@
 		"Teciimach Pod"
 		"Teciimach Canister" 3
 		"Millennium Cell" 2
-		"Crystal Capacitor" 2
+		"Crystal Capacitor"
 		"Small Heat Shunt"
 		"Quantum Key Stone"
 		"Crucible-Class Thruster"
-		"Anvil-Class Engine"
+		"Crucible-Class Steering"
 		"Bellows-Class Afterburner"
-		"Scram Drive"
+		"Hyperdrive"
 	gun 0 -48.5 "Teciimach Pod"
 	gun -6 -41 "Inhibitor Cannon"
 	gun 6 -41 "Inhibitor Cannon"
@@ -25490,7 +25894,7 @@
 		"bunks" 3
 		"mass" 89
 		"drag" 1.37
-		"heat dissipation" 0.82
+		"heat dissipation" 0.88
 		"fuel capacity" 800
 		"energy capacity" 300
 		"ramscoop" 1.25
@@ -25514,9 +25918,17 @@
 		"scramble protection" 0.25
 		"ion resistance" 0.05
 		"scramble resistance" 0.05
-		"thrust" 4.2
-		"turn" 80.0
-		"reverse thrust" 4.2
+		"thrust" 6.3
+		"thrusting energy" 0.6
+		"thrusting heat" 0.55
+		"turn" 120.0
+		"turning energy" 0.22
+		"turning heat" 0.24
+		"reverse thrust" 6.3
+		"reverse thrusting energy" 0.55
+		"reverse thrusting heat" 0.55
+		"energy generation" 0.6
+		"heat generation" 1
 		"flare sprite" "effect/remnant flare/small"
 			"frame rate" 5
 		"flare sound" "plasma tiny"
@@ -25591,33 +26003,32 @@
 		licenses
 			"Remnant Capital"
 		"cost" 41627000
-		"shields" 16400
-		"hull" 10600
+		"shields" 15400
+		"hull" 8600
 		"required crew" 9
 		"bunks" 25
 		"mass" 801
 		"drag" 6.5
 		"heat dissipation" 0.57
-		"fuel capacity" 1100
+		"fuel capacity" 900
 		"ramscoop" 3.25
 		"cargo space" 59
-		"outfit space" 552
+		"outfit space" 522
 		"weapon capacity" 220
 		"engine capacity" 171
-		"shield generation" 4.9
+		"shield generation" 3.9
 		"shield energy" 3.0
-		"hull repair rate" 2.5
+		"hull repair rate" 1.5
 		"hull energy" 0.90
-		"cloak" .04
-		"cloaking energy" 2.5
-		"cloaking fuel" .05
+		"cloak" .03
+		"cloaking energy" 4
+		"cloaking fuel" .075
 		"gaslining" 1
 		"outfit scan power" 18
 		"outfit scan efficiency" 22
 		"tactical scan power" 50
-		"ion protection" 0.25
-		"scramble protection" 0.25
-		"slowing protection" 0.25
+		"ion resistance" .15
+		"scrambling resistance" .15
 		"remnant node" 5
 		weapon
 			"blast radius" 240
@@ -25639,7 +26050,6 @@
 		"Tuning Rifle" 11
 		"Bellows-Class Afterburner"
 		"Smelter-Class Thruster"
-		"Crucible-Class Thruster"
 		"Smelter-Class Steering"
 		"Scram Drive"
 	gun 0 -133.5 "EMP Torpedo Bay"
@@ -25685,7 +26095,6 @@
 		"Tuning Rifle" 11
 		"Bellows-Class Afterburner"
 		"Smelter-Class Thruster"
-		"Crucible-Class Thruster"
 		"Smelter-Class Steering"
 		"Scram Drive"
 	gun 0 -133.5 "Teciimach Bay"
@@ -26406,8 +26815,8 @@
 		"outfit space" 152
 		"weapon capacity" 35
 		"engine capacity" 38
-		"hull repair rate" 1
-		"hull delay" 60
+		"delayed hull repair rate" 1
+		"repair delay" 60
 		weapon
 			"blast radius" 24
 			"shield damage" 240
@@ -26452,6 +26861,1547 @@
 	description "The Sheragi, being too large to effectively pilot ships this small, invested heavily in the development of autonomous fighters. The hardware that controls this isn't much more complex than the combat drones in human space, but it is bigger, and the lack of life support systems and amenities for a pilot allows it to carry extra outfitting space."
 	description "	The fighter also comes equipped with a powerful hull repair system to aid in its survival. This system doesn't work while the fighter is under fire, though, requiring the fighter to have not taken damage for a short while before activating."
 	description "	Fighters do not come equipped with a hyperdrive. You cannot carry a fighter unless you have a ship in your fleet with a fighter bay."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Aaulqra"</summary>
+<pre>ship "Aaulqra"
+	plural "Aaulqran"
+	sprite "ship/aaulqra"
+	thumbnail "thumbnail/aaulqra"
+	attributes
+		licenses
+			"High Houses"
+		category "Medium Warship"
+		"cost" 26000000
+		"shields" 10000
+		"hull" 55000
+		"required crew" 18
+		"bunks" 25
+		"mass" 650
+		"drag" 8.75
+		"heat dissipation" 0.49
+		"fuel capacity" 600
+		"cargo space" 15
+		"outfit space" 550
+		"weapon capacity" 240
+		"engine capacity" 120
+		"multimodal armor" 1
+		"hull repair rate" 2.75
+		"hull energy" 4.0
+		"hull heat" 4.0
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`"Ojet" Bimodal Coilgun` 6
+		`"Nnesa" Fusion Core`
+		`"Uoret" Fusion Core`
+		"Primary Power Reserve"
+		`"Jorv" Shield Cortex`
+		"Successor Cooling" 2
+		"Multimodal Armor: Heavy"
+		"Kinetic Rail Rifle" 7
+		`"Chyyra" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun 0 -116 `"Ojet" Bimodal Coilgun`
+	gun 0 -109 `"Ojet" Bimodal Coilgun`
+	gun -14 -74 `"Ojet" Bimodal Coilgun`
+	gun 14 -74 `"Ojet" Bimodal Coilgun`
+	gun -12 -83 `"Ojet" Bimodal Coilgun`
+	gun 12 -83 `"Ojet" Bimodal Coilgun`
+	turret -17 4
+	turret 17 4
+	engine -17 50
+	engine 17 50
+	"reverse engine" -36 -20
+		zoom .8
+	"reverse engine" 36 -20
+		zoom .8
+	"steering engine" -41 55
+		zoom .5
+		angle 90
+		left
+	"steering engine" 41 55
+		zoom .5
+		angle 270
+		right
+	"steering engine" -9 -94
+		zoom .5
+		angle 90
+		right
+	"steering engine" 9 -94
+		zoom .5
+		angle 270
+		left
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `The Aaulqra is the oldest warship design currently produced by the High Houses in Successor space, with a recognizable lineage continuing back several thousand years to early in the old empire. It is compact, fast, and durable for a ship of its class, but has relatively limited internal space and lacks any significant cargo or passenger facilities. The captains of these vessels are often up-and-coming Successor officers hoping to prove themselves to one of the High Houses by demonstrating their mastery of the vessel; while most, of course, do not, the ship's flexibility and ubiquitous presence make it an excellent starting point for those who do.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Aaulqra" "Aaulqra (Naive)"</summary>
+<pre>ship "Aaulqra" "Aaulqra (Naive)"
+	description "This medium warship is among the most common designs employed by the High Houses of the Successors. It is compact, fast, and durable for a ship of its class, but limited internal space and fuel capacity restrict it mostly to short-range patrol service."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Ejniisde"</summary>
+<pre>ship "Ejniisde"
+	plural "Ejniisden"
+	sprite "ship/ejniisde"
+	thumbnail "thumbnail/ejniisde"
+	attributes
+		licenses
+			"Successor"
+		category "Space Liner"
+		"cost" 4100000
+		"shields" 2000
+		"hull" 9500
+		"required crew" 12
+		"bunks" 64
+		"mass" 350
+		"drag" 4.6
+		"heat dissipation" 0.67
+		"fuel capacity" 700
+		"cargo space" 50
+		"outfit space" 265
+		"weapon capacity" 85
+		"engine capacity" 100
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`6-"Ruuv" Betavoltaic Cell`
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		"Successor Fuel Sail"
+		`"Veusa" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun 0 -106
+	turret 22 10
+	turret -22 10
+	engine 25 67
+		zoom .8
+	engine -25 67
+		zoom .8
+	"steering engine" 7 -83
+		zoom .5
+		over
+		left
+		angle 270
+	"steering engine" -7 -83
+		zoom .5
+		over
+		right
+		angle 90
+	"steering engine" -6 99
+		zoom .5
+		left
+		angle 90
+	"steering engine" 6 99
+		zoom .5
+		right
+		angle 270
+	"reverse engine" 26 -22
+		zoom .8
+	"reverse engine" -26 -22
+		zoom .8
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "The Successors have a relatively small population and therefore are not in great need of large transport vessels. However, transporting passengers entirely by shuttle lacks a degree of comfort and security, so for longer journeys, the Successors use this dedicated transport ship. While unarmed by default, it is fast enough to escape most ships that might mean it harm."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Kaskhorade"</summary>
+<pre>ship "Kaskhorade"
+	plural "Kaskhoraden"
+	sprite "ship/kaskhorade"
+	thumbnail "thumbnail/kaskhorade"
+	attributes
+		licenses
+			"High Houses"
+		category "Utility"
+		"cost" 45250000
+		"shields" 7000
+		"hull" 44500
+		"required crew" 34
+		"bunks" 130
+		"mass" 990
+		"drag" 13.6
+		"heat dissipation" .5
+		"fuel capacity" 600
+		"cargo space" 140
+		"outfit space" 570
+		"weapon capacity" 280
+		"engine capacity" 110
+		"multimodal armor" 1
+		"hull repair rate" 2.25
+		"hull energy" 3.26
+		"hull heat" 3.26
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`"Ojet" Bimodal Coilgun` 2
+		`"Sjeja" Kinetic Lance` 2
+		"High-Velocity Spike" 40
+		"Bimodal Coilgun Turret"
+		`"Uoret" Fusion Core`
+		"Auxiliary Power Reserve"
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		"Kinetic Rail Rifle" 25
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		`"Veusa" Inductive Reverser`
+		"Hyperdrive"
+	gun -3 -120 `"Sjeja" Kinetic Lance`
+	gun 3 -120 `"Sjeja" Kinetic Lance`
+	gun -19 -74 `"Ojet" Bimodal Coilgun`
+	gun 19 -74 `"Ojet" Bimodal Coilgun`
+	turret -31 6
+	turret 31 6
+	turret 0 -15 "Bimodal Coilgun Turret"
+	turret 0 30
+	engine -8 80
+		zoom .8
+	engine 8 80
+		zoom .8
+	"reverse engine" -40 -13
+		zoom .8
+	"reverse engine" 40 -13
+		zoom .8
+	"steering engine" -30 55
+		zoom .5
+		angle 90
+		left
+		over
+	"steering engine" 30 55
+		zoom .5
+		angle 270
+		right
+		over
+	"steering engine" -16 -90
+		zoom .5
+		angle 90
+		right
+		over
+	"steering engine" 16 -90
+		zoom .5
+		angle 270
+		left
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `Serving as the heavy multipurpose backbone of the fleets of the various High Houses, the Kaskhorade trades some of the maneuverability of its smaller siblings for greater flexibility; in addition to being a capable warship, it also offers a sizable amount of free cargo and bunk space that allow it to fulfill a wide variety of missions. Along with serving as convoy escorts and fleet warships, these vessels are often used to transport high-ranking members of the High Houses, as they can remain well-defended while outfitted for fast and luxurious travel.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Kvelqde"</summary>
+<pre>ship "Kvelqde"
+	plural "Kvelqden"
+	sprite "ship/kvelqde"
+	thumbnail "thumbnail/kvelqde"
+	attributes
+		licenses
+			"Successor"
+		category "Transport"
+		"cost" 185000
+		"shields" 350
+		"hull" 2400
+		"required crew" 1
+		"bunks" 9
+		"mass" 110
+		"drag" 2.25
+		"heat dissipation" 0.82
+		"fuel capacity" 500
+		"cargo space" 25
+		"outfit space" 160
+		"weapon capacity" 55
+		"engine capacity" 45
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`1-"Uurau" Betavoltaic Cell` 2
+		`"Ej" Shield Cortex`
+		`"Aqra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun 0 -32
+	turret 0 0
+	engine -8 28
+	engine 8 28
+	"steering engine" 9 -20.5
+		zoom .5
+		over
+		left
+		angle 270
+	"steering engine" -9 -20.5
+		zoom .5
+		over
+		right
+		angle 90
+	"steering engine" 6.5 29
+		zoom .5
+		over
+		right
+		angle 270
+	"steering engine" -6.5 29
+		zoom .5
+		over
+		left
+		angle 90
+	"reverse engine" 12.5 -5
+		zoom .5
+		over
+	"reverse engine" -12.5 -5
+		zoom .5
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "This tiny shuttle is the smallest vessel operating in Successor space, and the first ship that new Successor pilots are able to get their arms on. Despite their small size, they are capable multipurpose vessels, and are frequently used for transporting passengers and cargo, and for short-duration research expeditions."
+	description "	The design of the Kvelqde is, like most Successor vessels, based on originals from the time of the Predecessors. While the modern incarnation is nowhere near as advanced, successive iterations with more limited resources have promoted the cost-efficiency and user-friendliness of the design."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Kvelqde" "Kvelqde (Naive)"</summary>
+<pre>ship "Kvelqde" "Kvelqde (Naive)"
+	description "This tiny shuttle is the smallest vessel operating in Successor space, and appears to fulfill much the same role as the human shuttles with which you are familiar, transporting small groups of passengers and quantities of cargo throughout their space. While it has enough space to equip weapons if necessary, its limited internal space and the low energy density of civilian Successor generators make these hardpoints most suitable to mining rather than combat."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Kvelqde-Khora"</summary>
+<pre>ship "Kvelqde-Khora"
+	plural "Kvelqden-Khora"
+	sprite "ship/kvelqde-khora"
+	thumbnail "thumbnail/kvelqde-khora"
+	attributes
+		licenses
+			"Successor"
+		category "Interceptor"
+		"cost" 240000
+		"shields" 785
+		"hull" 4625
+		"required crew" 1
+		"bunks" 6
+		"mass" 158
+		"drag" 2.95
+		"heat dissipation" 0.78
+		"fuel capacity" 500
+		"cargo space" 10
+		"outfit space" 197
+		"weapon capacity" 63
+		"engine capacity" 45
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Overcharged Pulse Laser" 2
+		"Overcharged Laser Turret"
+		`3-"Kaska" Betavoltaic Cell`
+		"Auxiliary Power Reserve" 3
+		`"Ej" Shield Cortex`
+		`"Aqra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun -4 -30
+	gun 4 -30
+	turret 0 0
+	engine -8 28
+	engine 8 28
+	"steering engine" 9 -20.5
+		zoom .5
+		over
+		left
+		angle 270
+	"steering engine" -9 -20.5
+		zoom .5
+		over
+		right
+		angle 90
+	"steering engine" 6.5 29
+		zoom .5
+		over
+		right
+		angle 270
+	"steering engine" -6.5 29
+		zoom .5
+		over
+		left
+		angle 90
+	"reverse engine" 12.5 -5
+		zoom .5
+		over
+	"reverse engine" -12.5 -5
+		zoom .5
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `One of the more industrious members of the People's Houses has done their best to ruggedize this Kvelqde: additional armor plating has been laid over most of the exposed hull, a second gun port has been attached to the underside, and the shield grid has had its capacity substantially increased. While not quite capable of standing toe-to-toe with a production interceptor of the High Houses, it bares enough teeth for a bit of light piracy, and its greater durability is quite welcome for navigating the decaying stations and hostile worlds of southwestern Successor space.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Myaede"</summary>
+<pre>ship "Myaede"
+	plural "Myaeden"
+	sprite "ship/myaede"
+	thumbnail "thumbnail/myaede"
+	attributes
+		licenses
+			"Successor"
+		category "Light Freighter"
+		"cost" 3250000
+		"shields" 1500
+		"hull" 13000
+		"required crew" 6
+		"bunks" 20
+		"mass" 500
+		"drag" 7.1
+		"heat dissipation" 0.62
+		"fuel capacity" 500
+		"cargo space" 125
+		"outfit space" 275
+		"weapon capacity" 125
+		"engine capacity" 130
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Pulse Laser Turret" 2
+		`3-"Kaska" Betavoltaic Cell` 2
+		`1-"Uurau" Betavoltaic Cell`
+		`"Ej" Shield Cortex`
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun -3 -60
+	gun 3 -60
+	turret -33 -11 "Pulse Laser Turret"
+	turret 33 -11 "Pulse Laser Turret"
+	engine -40 10
+	engine 40 10
+	"steering engine" 20 -50
+		zoom .5
+		over
+		left
+		angle 270
+	"steering engine" -20 -50
+		zoom .5
+		over
+		right
+		angle 90
+	"steering engine" 13 54
+		zoom .5
+		over
+		right
+		angle 270
+	"steering engine" -13 54
+		zoom .5
+		over
+		left
+		angle 90
+	"reverse engine" -40 -28
+		over
+	"reverse engine" 40 -28
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `The Myaede is neither elegant nor fast, but it has remained the mainstay of Successor commerce since before the collapse of the old empire over a thousand years ago, boasting a spacious cargo hold, heavy armor, and a flexible enough weapons layout to let it fight back in a pinch. Much like the grand heirlooms of the High Houses, a familial Myaede is often passed down through the lineage of spacefaring low-born Successors, and many of the pilots flying these first took the helm as children under a grandparent's watchful gaze.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Myaede" "Myaede (Naive)"</summary>
+<pre>ship "Myaede" "Myaede (Naive)"
+	description `The Myaede is neither elegant nor fast, but has cemented itself as the backbone of Successor commerce with a spacious cargo hold, heavy armor, and a flexible enough weapons layout to let it fight back in a pinch. The design is robust and dependable; many of the ships you've seen appear old and worn but pass through the spaceport no less smoothly than their newer counterparts.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Nnaatej"</summary>
+<pre>ship "Nnaatej"
+	plural "Nnaatejen"
+	sprite "ship/nnaatej"
+	thumbnail "thumbnail/nnaatej"
+	attributes
+		licenses
+			"Successor"
+		category "Transport"
+		"cost" 3825000
+		"shields" 3000
+		"hull" 15500
+		"required crew" 5
+		"bunks" 26
+		"mass" 570
+		"drag" 5.6
+		"heat dissipation" 0.61
+		"fuel capacity" 500
+		"cargo space" 35
+		"outfit space" 220
+		"weapon capacity" 54
+		"engine capacity" 82
+		"waterlining" 1
+		"corrosion resistance" 0.6
+		"slowing resistance" 0.6
+		"hull repair rate" 0.1
+		"hull heat" 0.25
+		"hull energy" 0.2
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`6-"Ruuv" Betavoltaic Cell`
+		`"Ej" Shield Cortex`
+		"Successor Fuel Sail"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	turret 0 -10
+	engine 0 62
+	"steering engine" 5 -75
+		zoom .5
+		over
+		left
+		angle 270
+	"steering engine" -5 -75
+		zoom .5
+		over
+		right
+		angle 90
+	"steering engine" 8 49
+		zoom .5
+		over
+		right
+		angle 270
+	"steering engine" -8 49
+		zoom .5
+		over
+		left
+		angle 90
+	"reverse engine" -9 -56
+		zoom .6
+		over
+	"reverse engine" 9 -56
+		zoom .6
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `Owing to their amphibious nature, a substantial portion of the Successor population lives underwater. Most of their ships are built with this in mind and are capable of some degree of underwater operation. However, the Nnaatej is a specialist vessel built specifically for this purpose, shuttling passengers from deep ocean to deep space and back again. It is designed with a denser, pressure-stable hull, built-in maintenance systems, and increased resistance to corrosion and slowing effects. These features come at the cost of making it a heavy and expensive ship for its size, but are considered well worth it to ensure the safety and comfort of its passengers and cargo.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Nnesaarau"</summary>
+<pre>ship "Nnesaarau"
+	plural "Nnesaaraun"
+	sprite "ship/nnesaarau"
+	thumbnail "thumbnail/nnesaarau"
+	attributes
+		licenses
+			"Successor"
+		category "Transport"
+		"cost" 1225000
+		"shields" 1800
+		"hull" 2200
+		"required crew" 1
+		"bunks" 4
+		"mass" 90
+		"drag" 2.1
+		"heat dissipation" 0.86
+		"fuel capacity" 600
+		"cargo space" 8
+		"outfit space" 175
+		"weapon capacity" 30
+		"engine capacity" 60
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`3-"Kaska" Betavoltaic Cell`
+		`1-"Uurau" Betavoltaic Cell`
+		"Auxiliary Power Reserve"
+		`"Ej" Shield Cortex`
+		`"Chyyra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Scram Drive"
+	gun -7.5 -38
+	gun 0 -34
+	gun 7.5 -38
+	engine 0 34
+	"steering engine" -10 -29
+		zoom .5
+		right
+		over
+		angle 270
+	"steering engine" 10 -29
+		zoom .5
+		over
+		left
+		angle 90
+	"reverse engine" -20 -14
+		zoom .6
+		over
+	"reverse engine" 20 -14
+		zoom .6
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "Quick and comfortable, the Nnesaarau is among the newest designs utilized in Successor space, having first emerged from House Chydiyi's shipyards no more than twenty years ago. For various reasons, it is also among the least popular; it was designed solely as a luxury passenger transport and sees very little use outside that role because of its high price and restrictive internals. Nonetheless, some hotshot pilots swear by these ships as racing or fast courier vessels."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Nnesaarau" "Nnesaarau (Naive)"</summary>
+<pre>ship "Nnesaarau" "Nnesaarau (Naive)"
+	description "These very light vessels don't have much room for passengers or cargo, but move swiftly and elegantly through Successor space. These qualities, combined with their high price and uncommon presence, suggest that these may be luxury craft of some sort, too impractical for use by the majority of Successors."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Ojde"</summary>
+<pre>ship "Ojde"
+	plural "Ojden"
+	sprite "ship/ojde"
+	thumbnail "thumbnail/ojde"
+	attributes
+		licenses
+			"Successor"
+		category "Heavy Freighter"
+		"cost" 8250000
+		"shields" 3000
+		"hull" 31500
+		"required crew" 8
+		"bunks" 24
+		"mass" 1190
+		"drag" 15.5
+		"heat dissipation" 0.5
+		"fuel capacity" 500
+		"cargo space" 450
+		"outfit space" 330
+		"weapon capacity" 180
+		"engine capacity" 150
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Pulse Laser Turret" 2
+		`6-"Ruuv" Betavoltaic Cell`
+		"Auxiliary Power Reserve" 3
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun 28 -110
+	gun -28 -110
+	turret 34 37
+	turret -34 37
+	turret 0 32
+	engine 15 93
+	engine -15 93
+	"reverse engine" -19 -117
+		zoom .8
+	"reverse engine" 19 -117
+		zoom .8
+	"steering engine" 33 -99
+		zoom .5
+		angle 270
+		left
+	"steering engine" -33 -99
+		zoom .5
+		angle 90
+		right
+	"steering engine" 43 63
+		zoom .5
+		angle 270
+		right
+	"steering engine" -43 63
+		zoom .5
+		angle 90
+		left
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `Although it is the largest freighter employed by the Successors, the "Ojde" is still substantially smaller than large human freighters like the Bulk Freighter and Behemoth. While this limits the cargo capacity of any single ship, it also allows these vessels to be surprisingly fast and maneuverable and increases the number of facilities which can effectively tend to them.`
+	description `	Though somewhat less popular among more traditional merchants than the time-tested Myaede, the increased cargo capacity of the Ojde makes it a more or less mandatory choice for those hoping to assemble a large-scale transport operation.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Ojde" "Ojde (Naive)"</summary>
+<pre>ship "Ojde" "Ojde (Naive)"
+	description `Although it is the largest freighter employed by the Successors, the Ojde is still substantially smaller than large human freighters like the Bulk Freighter and Behemoth. While this limits the cargo capacity of any single ship, it also allows these vessels to be surprisingly fast and maneuverable and increases the number of facilities which can effectively tend to them.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Seiitej"</summary>
+<pre>ship "Seiitej"
+	plural "Seiitejen"
+	sprite "ship/seiitej"
+	thumbnail "thumbnail/seiitej"
+	attributes
+		licenses
+			"High Houses"
+		category "Utility"
+		"cost" 9250000
+		"shields" 8000
+		"hull" 19000
+		"required crew" 8
+		"bunks" 36
+		"mass" 320
+		"drag" 5.2
+		"heat dissipation" .60
+		"fuel capacity" 800
+		"cargo space" 130
+		"outfit space" 370
+		"weapon capacity" 90
+		"engine capacity" 110
+		"multimodal armor" 1
+		"hull repair rate" 1.2
+		"hull energy" 1.74
+		"hull heat" 1.74
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`"Ojet" Bimodal Coilgun` 4
+		`"Ryuit" Fusion Core`
+		"Auxiliary Power Reserve" 3
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		"Kinetic Rail Rifle" 15
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		"Hyperdrive"
+	gun -10 -78
+	gun -5 -86
+	gun 5 -86
+	gun 10 -78
+	turret 0 -29
+	engine -25 44
+	engine 25 44
+	"reverse engine" -25 -35
+		zoom .7
+	"reverse engine" 25 -35
+		zoom .7
+	"steering engine" -44 34
+		left
+		angle 90
+		zoom .5
+		over
+	"steering engine" 44 34
+		right
+		angle 270
+		zoom .5
+		over
+	"steering engine" -5 -89
+		right
+		angle 90
+		zoom .4
+	"steering engine" 5 -89
+		left
+		angle 270
+		zoom .4
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `The Seiitej is the High Houses' vessel of choice for transporting small amounts of cargo and passengers throughout Successor space. Though less spacious than a dedicated civilian freighter or transport vessel, it is much more durable while remaining fast and maneuverable. While these vessels support a relatively light armament (by the standards of the High Houses), their speed and flexible internals allow them to frequently serve as patrol craft as well.`
+	description "	Their lighter armor and smaller combat systems also make them significantly less expensive to manufacture than the High Houses' purpose-built warships, which contributes to their growing ubiquity."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Stolsaqra"</summary>
+<pre>ship "Stolsaqra"
+	plural "Stolsaqran"
+	sprite "ship/stolsaqra"
+	thumbnail "thumbnail/stolsaqra"
+	attributes
+		licenses
+			"Successor"
+		category "Interceptor"
+		"cost" 450000
+		"shields" 850
+		"hull" 6100
+		"required crew" 1
+		"bunks" 2
+		"mass" 120
+		"drag" 2.75
+		"heat dissipation" 0.79
+		"fuel capacity" 300
+		"cargo space" 5
+		"outfit space" 212
+		"weapon capacity" 90
+		"engine capacity" 80
+		"multimodal armor" 1
+		"hull repair rate" 0.3
+		"hull energy" 0.4
+		"hull heat" 0.4
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Successor Pulse Laser" 3
+		`3-"Kaska" Betavoltaic Cell`
+		`1-"Uurau" Betavoltaic Cell` 2
+		"Auxiliary Power Reserve" 2
+		`"Byiaa" Shield Cortex`
+		`"Aqra" Inductive Thruster` 2
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun 0 -40 "Successor Pulse Laser"
+	gun -10.5 -20 "Successor Pulse Laser"
+	gun 10.5 -20 "Successor Pulse Laser"
+	engine -8 35
+	engine 8 35
+	"steering engine" 4 -41
+		zoom .4
+		over
+		left
+		angle 270
+	"steering engine" -4 -41
+		zoom .4
+		over
+		right
+		angle 90
+	"steering engine" 12 33
+		zoom .4
+		over
+		right
+		angle 270
+	"steering engine" -12 33
+		zoom .4
+		over
+		left
+		angle 90
+	"reverse engine" 15 -3
+		zoom .8
+		over
+	"reverse engine" -15 -3
+		zoom .8
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description "The Successors have limited experience in making warships this small, and while their attempt at an interceptor is durable and sports a surprising amount of firepower for a ship of its size, it is also plagued with power and propulsion issues, as most of their standard technology is either too large or not powerful enough to yield effective combat performance at this scale. The result is a ship that ambitious pilots call a challenge and prudent captains call a deathtrap, but that continues to see use as a patrol and escort vessel because of its speed and heavy armament."
+	description `	The Stolsaqra also has the distinction of being the only purpose-built warship manufactured by the High Houses that is made available to the general public, albeit with significantly downgraded systems compared to the military-exclusive model.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Stolsaqra" "Stolsaqra (Naive)"</summary>
+<pre>ship "Stolsaqra" "Stolsaqra (Naive)"
+	description `The Successors' attempt at an interceptor is quite compact and sports a surprising amount of firepower for a ship of its size, though restrictive internal space leaves it plagued with power and propulsion issues if it is equipped to fully utilize its weapons capacity. While it is manufactured by the High Houses, the Stolsaqra is made available to the general Successor public, albeit with significantly downgraded systems compared to the military-exclusive model.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Veusade"</summary>
+<pre>ship "Veusade"
+	plural "Veusaden"
+	sprite "ship/veusade"
+	thumbnail "thumbnail/veusade"
+	attributes
+		licenses
+			"High Houses"
+		category "Light Warship"
+		"cost" 16500000
+		"shields" 8000
+		"hull" 29000
+		"required crew" 5
+		"bunks" 10
+		"mass" 360
+		"drag" 5.45
+		"heat dissipation" .62
+		"fuel capacity" 500
+		"cargo space" 15
+		"outfit space" 370
+		"weapon capacity" 96
+		"engine capacity" 120
+		"multimodal armor" 1
+		"hull repair rate" 1.45
+		"hull energy" 2.1
+		"hull heat" 2.1
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Drag Cannon" 8
+		`"Ryuit" Fusion Core`
+		"Auxiliary Power Reserve" 2
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		"Kinetic Rail Rifle" 5
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		"Hyperdrive"
+	gun -25 -32 "Drag Cannon"
+	gun -22 -34 "Drag Cannon"
+	gun -11 -64 "Drag Cannon"
+	gun -7 -72 "Drag Cannon"
+	gun 7 -72 "Drag Cannon"
+	gun 11 -64 "Drag Cannon"
+	gun 22 -34 "Drag Cannon"
+	gun 25 -32 "Drag Cannon"
+	engine -11 21
+		zoom .8
+	engine 11 21
+		zoom .8
+	"reverse engine" -27 -25
+		zoom .7
+	"reverse engine" 27 -25
+		zoom .7
+	"steering engine" -40 28
+		left
+		angle 90
+		zoom .5
+		over
+	"steering engine" 40 28
+		right
+		angle 270
+		zoom .5
+		over
+	"steering engine" -7 -71
+		right
+		angle 90
+		zoom .5
+	"steering engine" 7 -71
+		left
+		angle 270
+		zoom .5
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `Blessed with the honor of being named with the Successor word for swiftness, the Veusade is designed for only one purpose: to carry eight drag cannons as close to an enemy ship's hull as possible.`
+	description "	Vessels of this lineage earned renown in many of the conflicts between the Predecessors' High Houses, catching and killing ships many times their size and escaping before reinforcements could arrive. In the present, such a narrowly-focused design makes these vessels ill-suited for multipurpose use, but they are frequently seen as auxiliary or police craft, owing to their ability to rapidly intercept and immobilize fleeing ships."
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Veusade" "Veusade (Naive)"</summary>
+<pre>ship "Veusade" "Veusade (Naive)"
+	description `The Veusade bristles with gun ports but has a small overall weapons capacity; in fact, it is just enough to saturate its hardpoints with drag cannons. Such a narrowly-focused design makes these ships ill-suited for multipurpose use, but they are frequently seen as auxiliary or police craft, owing to their ability to rapidly catch and immobilize fleeing vessels.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Vujlet"</summary>
+<pre>ship "Vujlet"
+	plural "Vujleten"
+	sprite "ship/vujlet"
+	thumbnail "thumbnail/vujlet"
+	attributes
+		licenses
+			"High Houses"
+		category "Light Warship"
+		"cost" 8200000
+		"shields" 3000
+		"hull" 17500
+		"required crew" 2
+		"bunks" 6
+		"mass" 230
+		"drag" 3.8
+		"heat dissipation" .68
+		"fuel capacity" 600
+		"cargo space" 10
+		"outfit space" 280
+		"weapon capacity" 105
+		"engine capacity" 85
+		"exclusive: Vujlet" 1
+		"multimodal armor" 1
+		"hull repair rate" 0.875
+		"hull energy" 1.27
+		"hull heat" 1.27
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		`"Ojet" Bimodal Coilgun` 2
+		`"Nnesa" Fusion Core`
+		`OC-"Mavra" Betavoltaic Cell`
+		"Auxiliary Power Reserve"
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		"Kinetic Rail Rifle" 4
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun -6 -46 `"Ojet" Bimodal Coilgun`
+	gun 6 -46 `"Ojet" Bimodal Coilgun`
+	gun -9 -30
+	gun 9 -30
+	engine -16 49
+		zoom .9
+	engine 16 49
+		zoom .9
+	"reverse engine" -16 -6
+		zoom .9
+		over
+	"reverse engine" 16 -5
+		zoom .9
+		over
+	"steering engine" -4 -53
+		right
+		angle 90
+		zoom .5
+		over
+	"steering engine" 4 -53
+		left
+		angle 270
+		zoom .5
+		over
+	"steering engine" -28 34
+		left
+		angle 90
+		zoom .5
+		over
+	"steering engine" 28 34
+		right
+		angle 270
+		zoom .5
+		over
+	leak "leak" 50 50
+	leak "flame" 30 80
+	explode "tiny explosion" 18
+	explode "small explosion" 36
+	explode "medium explosion" 24
+	explode "large explosion" 8
+	"final explode" "final explosion medium"
+	description `Navigating the stars with the grace of a flitting bird, the compact Vujlet is a mass-produced High Houses warship flexible enough to serve in a variety of light-duty roles. Large enough to operate as a self-sufficient unit, these vessels serve as a useful bridge between short-ranged and relatively vulnerable interceptors, and larger, more resource-intensive warships that can be much more expensive to build and operate.`
+	description `	The design was originally employed by House Kaatrij as a stealth reconnaissance vessel that made use of their then-recently-developed cloaking technology. As the alliance between the New Houses strengthened, the plans for the Vujlet were distributed among them, and the light warship rapidly became a mainstay of their fleets. Unfortunately, without the materials present in their Predecessors' domain, House Kaatrij has been unable to manufacture stealth equipment for the Vujlet in the modern era.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor ships.txt | ship "Vujlet" "Vujlet (Naive)"</summary>
+<pre>ship "Vujlet" "Vujlet (Naive)"
+	description `The compact Vujlet is a mass-produced High Houses warship flexible enough to serve in a variety of light-duty roles. Large enough to operate as a self-sufficient unit, these vessels serve as a useful bridge between short-ranged, relatively vulnerable interceptors, and larger, more resource-intensive warships that can be much more expensive to build and operate.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Aaulqra" "Aaulqra (Brawler)"</summary>
+<pre>ship "Aaulqra" "Aaulqra (Brawler)"
+	outfits
+		`"Ojet" Bimodal Coilgun` 2
+		"Drag Cannon" 3
+		"Bimodal Coilgun Turret" 2
+		`"Uoret" Fusion Core`
+		`3-"Kaska" Betavoltaic Cell`
+		`"Jorv" Shield Cortex`
+		"Successor Cooling"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	turret "Bimodal Coilgun Turret"
+	turret "Bimodal Coilgun Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Aaulqra" "Aaulqra (Sniper)"</summary>
+<pre>ship "Aaulqra" "Aaulqra (Sniper)"
+	outfits
+		`"Ojet" Bimodal Coilgun` 4
+		`"Sjeja" Kinetic Lance`
+		"High-Velocity Spike" 20
+		`"Uoret" Fusion Core`
+		`3-"Kaska" Betavoltaic Cell`
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Veusa" Inductive Reverser`
+		"Hyperdrive"
+	gun
+	gun `"Sjeja" Kinetic Lance`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	turret
+	turret
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Kaskhorade" "Kaskhorade (Brawler)"</summary>
+<pre>ship "Kaskhorade" "Kaskhorade (Brawler)"
+	outfits
+		"Bimodal Coilgun Turret" 4
+		`"Uoret" Fusion Core`
+		`OC-"Mavra" Betavoltaic Cell`
+		`"Jorv" Shield Cortex`
+		"Successor Cooling"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun
+	gun
+	gun
+	gun
+	turret "Bimodal Coilgun Turret"
+	turret "Bimodal Coilgun Turret"
+	turret "Bimodal Coilgun Turret"
+	turret "Bimodal Coilgun Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Kaskhorade" "Kaskhorade (Sniper)"</summary>
+<pre>ship "Kaskhorade" "Kaskhorade (Sniper)"
+	outfits
+		`"Sjeja" Kinetic Lance` 2
+		"High-Velocity Spike Rack"
+		"High-Velocity Spike" 60
+		`"Uoret" Fusion Core`
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		`"Veusa" Inductive Reverser`
+		"Hyperdrive"
+	gun `"Sjeja" Kinetic Lance`
+	gun `"Sjeja" Kinetic Lance`
+	gun
+	gun
+	turret
+	turret
+	turret
+	turret
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Kvelqde" "Kvelqde (Mining)"</summary>
+<pre>ship "Kvelqde" "Kvelqde (Mining)"
+	outfits
+		"Pulse Laser Turret"
+		`1-"Uurau" Betavoltaic Cell`
+		`OC-"Mavra" Betavoltaic Cell`
+		`3-"Kaska" Betavoltaic Cell`
+		`"Byiaa" Shield Cortex`
+		`"Tuur" Scanning Suite`
+		`"Niis" Inductive Engines`
+		"Hyperdrive"
+	gun
+	turret "Pulse Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Kvelqde" "Kvelqde (Violent)"</summary>
+<pre>ship "Kvelqde" "Kvelqde (Violent)"
+	outfits
+		"Overcharged Pulse Laser"
+		"Overcharged Laser Turret"
+		`1-"Uurau" Betavoltaic Cell` 2
+		`"Ej" Shield Cortex`
+		`"Aqra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun "Overcharged Pulse Laser"
+	turret "Overcharged Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Kvelqde-Khora" "Kvelqde-Khora (Mining)"</summary>
+<pre>ship "Kvelqde-Khora" "Kvelqde-Khora (Mining)"
+	outfits
+		"Successor Pulse Laser" 2
+		`3-"Kaska" Betavoltaic Cell`
+		"Auxiliary Power Reserve"
+		`"Byiaa" Shield Cortex`
+		`"Tuur" Scanning Suite`
+		"Cargo Expansion" 2
+		`"Aqra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun "Successor Pulse Laser"
+	gun "Successor Pulse Laser"
+	turret
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Myaede" "Myaede (Mining)"</summary>
+<pre>ship "Myaede" "Myaede (Mining)"
+	outfits
+		"Pulse Laser Turret" 2
+		`3-"Kaska" Betavoltaic Cell`
+		`1-"Uurau" Betavoltaic Cell` 2
+		`"Ej" Shield Cortex`
+		`"Tuur" Scanning Suite`
+		"Cargo Expansion"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun
+	gun
+	turret "Pulse Laser Turret"
+	turret "Pulse Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Myaede" "Myaede (Mining, Defensive)"</summary>
+<pre>ship "Myaede" "Myaede (Mining, Defensive)"
+	outfits
+		"Successor Pulse Laser" 2
+		"Pulse Laser Turret" 2
+		`6-"Ruuv" Betavoltaic Cell`
+		`"Ej" Shield Cortex`
+		`"Tuur" Scanning Suite`
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		"Hyperdrive"
+	gun "Successor Pulse Laser"
+	gun "Successor Pulse Laser"
+	turret "Pulse Laser Turret"
+	turret "Pulse Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Myaede" "Myaede (Violent)"</summary>
+<pre>ship "Myaede" "Myaede (Violent)"
+	outfits
+		"Overcharged Pulse Laser" 2
+		"Overcharged Laser Turret" 2
+		`6-"Ruuv" Betavoltaic Cell`
+		"Auxiliary Power Reserve"
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		"Hyperdrive"
+	gun "Overcharged Pulse Laser"
+	gun "Overcharged Pulse Laser"
+	turret "Overcharged Laser Turret"
+	turret "Overcharged Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Nnaatej" "Nnaatej (Defensive)"</summary>
+<pre>ship "Nnaatej" "Nnaatej (Defensive)"
+	outfits
+		"Pulse Laser Turret"
+		`3-"Kaska" Betavoltaic Cell`
+		`1-"Uurau" Betavoltaic Cell`
+		`OC-"Mavra" Betavoltaic Cell`
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		"Hyperdrive"
+	turret "Pulse Laser Turret"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Ojde" "Ojde (Mining)"</summary>
+<pre>ship "Ojde" "Ojde (Mining)"
+	outfits
+		"Pulse Laser Turret" 2
+		`6-"Ruuv" Betavoltaic Cell`
+		"Primary Power Reserve"
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		`"Tuur" Scanning Suite` 2
+		`"Chyyra" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun
+	gun
+	turret "Pulse Laser Turret"
+	turret "Pulse Laser Turret"
+	turret
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Stolsaqra" "Stolsaqra (Military)"</summary>
+<pre>ship "Stolsaqra" "Stolsaqra (Military)"
+	outfits
+		`"Ojet" Bimodal Coilgun` 3
+		`3-"Kaska" Betavoltaic Cell`
+		`"Byiaa" Shield Cortex`
+		"Multimodal Armor: Heavy"
+		`"Veldt" Combat Scanner`
+		`"Aqra" Inductive Thruster`
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Stolsaqra" "Stolsaqra (Mission Escort)"</summary>
+<pre>ship "Stolsaqra" "Stolsaqra (Mission Escort)"
+	outfits
+		"Drag Cannon" 3
+		`3-"Kaska" Betavoltaic Cell`
+		`"Byiaa" Shield Cortex`
+		"Fuel Pod" 3
+		"Multimodal Armor: Heavy"
+		`"Aqra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Stolsaqra" "Stolsaqra (Short-Range)"</summary>
+<pre>ship "Stolsaqra" "Stolsaqra (Short-Range)"
+	outfits
+		"Drag Cannon" 3
+		`OC-"Mavra" Betavoltaic Cell` 2
+		`"Byiaa" Shield Cortex`
+		"Multimodal Armor: Heavy"
+		`"Veldt" Combat Scanner`
+		`"Aqra" Inductive Thruster` 2
+		`"Aqra" Inductive Steering`
+		`"Aqra" Inductive Reverser`
+		"Hyperdrive"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Veusade" "Veusade (Surveillance)"</summary>
+<pre>ship "Veusade" "Veusade (Surveillance)"
+	outfits
+		"Drag Cannon" 8
+		`"Ryuit" Fusion Core`
+		"Auxiliary Power Reserve"
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		`"Veldt" Combat Scanner`
+		`"Veusa" Inductive Thruster`
+		`"Veusa" Inductive Steering`
+		"Hyperdrive"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+	gun "Drag Cannon"
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Vujlet" "Vujlet (Aggressive)"</summary>
+<pre>ship "Vujlet" "Vujlet (Aggressive)"
+	outfits
+		`"Ojet" Bimodal Coilgun` 4
+		`"Nnesa" Fusion Core`
+		"Auxiliary Power Reserve" 3
+		`"Ej" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		"Hyperdrive"
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+</pre>
+</details>
+
+
+<details>
+<summary>data/successors/successor variants.txt | ship "Vujlet" "Vujlet (Surveillance)"</summary>
+<pre>ship "Vujlet" "Vujlet (Surveillance)"
+	outfits
+		`"Ojet" Bimodal Coilgun` 2
+		`"Nnesa" Fusion Core`
+		"Primary Power Reserve"
+		`"Jaase" Shield Cortex`
+		"Successor Cooling"
+		"Multimodal Armor: Heavy"
+		`"Veldt" Combat Scanner`
+		`"Chyyra" Inductive Thruster`
+		`"Chyyra" Inductive Steering`
+		`"Chyyra" Inductive Reverser`
+		"Hyperdrive"
+	gun `"Ojet" Bimodal Coilgun`
+	gun `"Ojet" Bimodal Coilgun`
+	gun
+	gun
 </pre>
 </details>
 
