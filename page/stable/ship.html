@@ -4567,9 +4567,7 @@
 		"cloak" .04
 		"jump speed" 1
 		"hyperdrive" 1
-		"hyperdrive sound" ""
-		"hyperdrive out sound" ""
-		"hyperdrive in sound" ""
+		"silent jumps" 1
 	"final explode" "archon b teleport"
 	outfits
 		"Drak Antimatter Cannon"
@@ -19558,7 +19556,7 @@
 	"thumbnail" thumbnail/venta
 	"swizzle" 0
 	attributes
-		"category" "Heavy Warship"
+		category "Heavy Warship"
 		licenses
 			"Hicemus Conflict"
 		"cost" 25000000
@@ -19575,6 +19573,11 @@
 		"engine capacity" 130
 		"gaslining" 1
 		"fuel capacity" 200
+		weapon
+			"blast radius" 224
+			"shield damage" 2240
+			"hull damage" 1120
+			"hit force" 3360
 	outfits
 		"Liquid-Class Shield"
 		"Liquid-Class Shield"
@@ -19613,7 +19616,7 @@
 	"thumbnail" thumbnail/nimbus
 	"swizzle" 0
 	attributes
-		"category" "Medium Warship"
+		category "Medium Warship"
 		licenses
 			"Hicemus Conflict"
 		"cost" 3250000
@@ -19630,6 +19633,11 @@
 		"engine capacity" 85
 		"gaslining" 1
 		"fuel capacity" 200
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
 	outfits
 		"Liquid-Class Shield"
 		"Metallic Hydrogen Cell"
@@ -19692,7 +19700,7 @@
 	"thumbnail" thumbnail/stratus
 	"swizzle" 0
 	attributes
-		"category" "Utility"
+		category "Utility"
 		"cost" 460000
 		"hull" 500
 		"shields" 700
@@ -19707,6 +19715,11 @@
 		"engine capacity" 60
 		"gaslining" 1
 		"fuel capacity" 200
+		weapon
+			"blast radius" 12
+			"shield damage" 120
+			"hull damage" 60
+			"hit force" 180
 	outfits
 		"Gas-Class Shield"
 		"Metallic Hydrogen Cell"
@@ -19732,7 +19745,7 @@
 	"thumbnail" thumbnail/cirrus
 	"swizzle" 0
 	attributes
-		"category" "Light Freighter"
+		category "Light Freighter"
 		"cost" 330000
 		"hull" 750
 		"shields" 1500
@@ -19746,6 +19759,11 @@
 		"engine capacity" 60
 		"gaslining" 1
 		"fuel capacity" 200
+		weapon
+			"blast radius" 22.5
+			"shield damage" 225
+			"hull damage" 113
+			"hit force" 350
 	outfits
 		"Gas-Class Shield"
 		"Metallic Hydrogen Cell"
@@ -19769,7 +19787,7 @@
 	"thumbnail" thumbnail/gero
 	"swizzle" 0
 	attributes
-		"category" "Transport"
+		category "Transport"
 		"cost" 985000
 		"hull" 850
 		"shields" 1700
@@ -19783,6 +19801,11 @@
 		"engine capacity" 54
 		"gaslining" 1
 		"fuel capacity" 200
+		weapon
+			"blast radius" 26.5
+			"shield damage" 265
+			"hull damage" 133
+			"hit force" 400
 	outfits
 		"Gas-Class Shield"
 		"Metallic Hydrogen Cell"
@@ -20767,7 +20790,7 @@
 	explode "large explosion" 40
 	explode "huge explosion" 10
 	"final explode" "final explosion large"
-	description "The venerable Palavret has been a mainstay of the Korath raiding fleet, elements of its design dating back from before the era of shortages and desperation caused by a life in exile. Over forty generations of raiders have terrorised neighboring systems over the centuries."
+	description "The venerable Palavret has been a mainstay of the Korath raiding fleet, elements of its design dating back from before the era of shortages and desperation caused by a life in exile. Over forty generations of raiders have terrorized neighboring systems over the centuries."
 	description "	Constant warfare against surrounding aliens has been building pressure on Korath shipyards to recover some of their ancient prowess. Now, with a fresh industrial network to draw upon, the Korath have created a new raider to deal with modern targets, and the Tubfalet-Class Raiding Ship is named for an admiral who dealt with such enemies. Despite extensive injuries, he remained on his flag bridge during a Remnant attack, leading his squadron to victory."
 </pre>
 </details>
@@ -23273,8 +23296,8 @@
 		"Korath Detainer" 2
 		"Thermal Repeater Turret" 2
 		"Warder Anti-Missile"
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
+		"Piercer Missile Launcher" 2
+		"Piercer Missile" 62
 		"Firelight Missile Bank" 4
 		"Firelight Missile" 80
 		"Systems Core (Large)"
@@ -23291,8 +23314,8 @@
 		"Jump Drive"
 	gun "Korath Detainer"
 	gun "Korath Detainer"
-	gun "Korath Piercer Launcher"
-	gun "Korath Piercer Launcher"
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
 	gun "Firelight Missile Bank"
 	gun "Firelight Missile Bank"
 	gun "Firelight Missile Bank"
@@ -23632,8 +23655,8 @@
 		"Thermal Repeater Turret" 4
 		"Grab-Strike Turret" 2
 		"Banisher Grav-Turret"
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
+		"Piercer Missile Launcher" 2
+		"Piercer Missile" 62
 		"Warder Anti-Missile" 3
 		"Triple Plasma Core"
 		"Double Plasma Core"
@@ -23651,8 +23674,8 @@
 	gun "Korath Detainer"
 	gun "Korath Detainer"
 	gun "Korath Detainer"
-	gun "Korath Piercer Launcher"
-	gun "Korath Piercer Launcher"
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
 	turret "Thermal Repeater Turret"
 	turret "Grab-Strike Turret"
 	turret "Warder Anti-Missile"
@@ -28417,7 +28440,7 @@
 	swizzle 0
 	"never disabled"
 	attributes
-		"category" "Fighter"
+		category "Fighter"
 		"cost" 0
 		"shields" 0
 		"hull" 400
@@ -28461,7 +28484,7 @@
 	swizzle 0
 	"never disabled"
 	attributes
-		"category" "Fighter"
+		category "Fighter"
 		"cost" 0
 		"shields" 0
 		"hull" 1420
@@ -28590,7 +28613,7 @@
 	leak "blood" 60 60
 	explode "blood" 160
 	"final explode" "blood"
-	description `Only few captains have had the chance to observe this illustrious creature. Its natural attenuation to the depths of space allows it to travel beyond where most ships are able, and its appearance reflects both the beauty and mystery of the void itself.`
+	description `Only a few captains have had the chance to observe this illustrious creature. Its natural attenuation to the depths of space allows it to travel beyond where most ships are able, and its appearance reflects both the beauty and mystery of the void itself.`
 </pre>
 </details>
 
