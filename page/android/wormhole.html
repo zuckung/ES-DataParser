@@ -1,0 +1,221 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/map planets.txt | wormhole "Devil-Run Wormhole"</summary>
+<pre>wormhole "Devil-Run Wormhole"
+	mappable
+	link "Deep Space 7C" Devil-Run
+	link Devil-Run "Deep Space 7C"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Ember Gegno"</summary>
+<pre>wormhole "Ember Gegno"
+	mappable
+	link Lucina Rouseu
+	link Rouseu Lucina
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Ember Graveyard"</summary>
+<pre>wormhole "Ember Graveyard"
+	mappable
+	link Polerius Ossipago
+	link Ossipago Polerius
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Ember Reaches"</summary>
+<pre>wormhole "Ember Reaches"
+	mappable
+	link Coluber Convector
+	link Convector Coluber
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Ember Threshold"</summary>
+<pre>wormhole "Ember Threshold"
+	mappable
+	link Cardea Terminus
+	link Terminus Cardea
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Ember Wormhole"</summary>
+<pre>wormhole "Ember Wormhole"
+	mappable
+	link Aescolanus Cardea
+	link Cardea Insitor
+	link Insitor Segesta
+	link Segesta Aescolanus
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Graveyard Wormhole (Stable)"</summary>
+<pre>wormhole "Graveyard Wormhole (Stable)"
+	mappable
+	link Ritilas Fearis
+	link Fearis Ritilas
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Graveyard Wormhole (Unstable)"</summary>
+<pre>wormhole "Graveyard Wormhole (Unstable)"
+	mappable
+	link Esix Relifer
+	link Relifer Esix
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Pug Wormhole"</summary>
+<pre>wormhole "Pug Wormhole"
+	link "Over the Rainbow" Deneb
+	link Deneb "Over the Rainbow"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Remnant Wormhole"</summary>
+<pre>wormhole "Remnant Wormhole"
+	mappable
+	link Peragenor Edusa
+	link Edusa Peragenor
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Successor Wormhole"</summary>
+<pre>wormhole "Successor Wormhole"
+	link "Myruet-Kvelq" "Oublaa-Khora"
+	link "Oublaa-Khora" "Myruet-Kvelq"
+	color "wormholes: Ember Waste"
+	mappable
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Wormhole Alpha"</summary>
+<pre>wormhole "Wormhole Alpha"
+	mappable
+	link "Ultima Thule" Waypoint
+	link Waypoint "Ultima Thule"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Wormhole Barren Alpha"</summary>
+<pre>wormhole "Wormhole Barren Alpha"
+	mappable
+	link Egeria Levana
+	link Levana Egeria
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Wormhole Barren Beta"</summary>
+<pre>wormhole "Wormhole Barren Beta"
+	mappable
+	link Caeculus Prosa
+	link Prosa Caeculus
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/map planets.txt | wormhole "Wormhole Link"</summary>
+<pre>wormhole "Wormhole Link"
+	mappable
+	link Statina Vaticanus
+	link Vaticanus Statina
+	color "wormholes: Ember Waste"
+</pre>
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderers.txt | wormhole "The Eye"</summary>
+<pre>wormhole "The Eye"
+	mappable
+	link Sabriset Sko'karak
+	link Sko'karak Sabriset
+</pre>
+</details>
+
+
+</font>
+</body>
+</html>
+

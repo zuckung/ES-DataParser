@@ -1,0 +1,377 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/formations.txt | formation "Atomic"</summary>
+<pre>formation "Atomic"
+	rotatable 120
+	# Section in front of the lead ship.
+	arc
+		start -75 -129.9
+		angle 60
+		positions 2
+		repeat
+			start -75 -129.9
+			positions 1
+	# Side sections.
+	arc
+		start 150 0
+		angle 60
+		positions 2
+		repeat
+			start 150 0
+			positions 1
+	arc
+		start -150 0
+		angle -60
+		positions 2
+		repeat
+			start -150 0
+			positions 1
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Circle"</summary>
+<pre>formation "Circle"
+	rotatable 1
+	arc
+		start 200 0
+		angle 360
+		# Start and end positions overlap, so we need to specify 7 instead of 6 and use skip first or skip last.
+		# No anchor point specified, since the flagship (position 0,0) is the anchor point (and that is the default).
+		skip last
+		positions 7
+		repeat
+			start 200 0
+			positions 6
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Delta (tailing)"</summary>
+<pre>formation "Delta (tailing)"
+	flippable y
+	line
+		start -75 129.9
+		end 75 129.9
+		positions 2
+		repeat
+			start -75 129.9
+			end 75 129.9
+			positions 1
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Diamond"</summary>
+<pre>formation "Diamond"
+	flippable x y
+	rotatable 90
+	# Segment below, right of lead ship. Growing in down/right direction.
+	line
+		start 100 100
+		end 0 200
+		positions 2
+		repeat
+			start 200 0
+			end 0 200
+			positions 2
+	# Segment left, below of lead ship. Growing in left/down direction.
+	line
+		start -100 100
+		end -200 0
+		positions 2
+		repeat
+			start 0 200
+			end -200 0
+			positions 2
+	# Segment above, left of lead ship. Growing in above/left direction.
+	line
+		start -100 -100
+		end 0 -200
+		positions 2
+		repeat
+			start -200 0
+			end 0 -200
+			positions 2
+	# Segment right, above of lead ship. Growing in right/above direction.
+	line
+		start 100 -100
+		end 200 0
+		positions 2
+		repeat
+			start 0 -200
+			end 200 0
+			positions 2
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Echelon (left)"</summary>
+<pre>formation "Echelon (left)"
+	position -150 150
+		repeat -150 150
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Echelon (right)"</summary>
+<pre>formation "Echelon (right)"
+	position 150 150
+		repeat 150 150
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Hexagon"</summary>
+<pre>formation "Hexagon"
+	flippable y
+	rotatable 60
+	# Section lower-right.
+	line
+		start 75 150
+		end 75 150
+		positions 1
+		repeat
+			start 150 0
+			end 75 150
+			positions 1
+	# Section lower-left.
+	line
+		start -75 150
+		end -75 150
+		positions 1
+		repeat
+			start 75 150
+			end -75 150
+			positions 1
+	# Section left.
+	line
+		start -150 0
+		end -150 0
+		positions 1
+		repeat
+			start -75 150
+			end -150 0
+			positions 1
+	# Section upper-left.
+	line
+		start -75 -150
+		end -75 -150
+		positions 1
+		repeat
+			start -150 0
+			end -75 -150
+			positions 1
+	# Section upper-right.
+	line
+		start 75 -150
+		end 75 -150
+		positions 1
+		repeat
+			start -75 -150
+			end 75 -150
+			positions 1
+	# Section right.
+	line
+		start 150 0
+		end 150 0
+		positions 1
+		repeat
+			start 75 -150
+			end 150 0
+			positions 1
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Line (sides)"</summary>
+<pre>formation "Line (sides)"
+	flippable x y
+	rotatable 180
+	position -200 0
+		repeat -200 0
+	position 200 0
+		repeat 200 0
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Line (trailing)"</summary>
+<pre>formation "Line (trailing)"
+	flippable y
+	position 0 200
+		repeat 0 200
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Nabla (trailing)"</summary>
+<pre>formation "Nabla (trailing)"
+	flippable y
+	line
+		start -150 0
+		end -75 129.9
+		positions 2
+		repeat
+			start -150 0
+			end 0 259.8
+			positions 2
+	line
+		start 150 0
+		end 0 259.8
+		positions 3
+		repeat
+			start 150 0
+			end 0 259.8
+			positions 2
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Square"</summary>
+<pre>formation "Square"
+	flippable x y
+	rotatable 90
+	# Segment ahead of the lead-ship, growing forward, a bit offset to right.
+	line
+		start 0 -200
+		end 200 -200
+		positions 2
+		repeat
+			start -200 -200
+			end 200 -200
+			positions 2
+	# Segment right of the lead-ship, growing right, a bit offset to the back.
+	line
+		start 200 0
+		end 200 200
+		positions 2
+		repeat
+			start 200 -200
+			end 200 200
+			positions 2
+	# Segment behind of the lead-ship, growing backward, a bit offset to left.
+	line
+		start 0 200
+		end -200 200
+		positions 2
+		repeat
+			start 200 200
+			end -200 200
+			positions 2
+	# Segment left of the lead-ship, growing left, a bit offset to the front.
+	line
+		start -200 0
+		end -200 -200
+		positions 2
+		repeat
+			start -200 200
+			end -200 -200
+			positions 2
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "Vic"</summary>
+<pre>formation "Vic"
+	flippable y
+	position -150 87
+		repeat -150 87
+	position 150 87
+		repeat 150 87
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "X"</summary>
+<pre>formation "X"
+	flippable x y
+	rotatable 90
+	position -150 150
+		repeat -150 150
+	position 150 150
+		repeat 150 150
+	position 150 -150
+		repeat 150 -150
+	position -150 -150
+		repeat -150 -150
+</pre>
+</details>
+
+
+<details>
+<summary>data/formations.txt | formation "X stable"</summary>
+<pre>formation "X stable"
+	rotatable 0
+	position -150 150
+		repeat -150 150
+	position 150 150
+		repeat 150 150
+	position 150 -150
+		repeat 150 -150
+	position -150 -150
+		repeat -150 -150
+</pre>
+</details>
+
+
+</font>
+</body>
+</html>
+

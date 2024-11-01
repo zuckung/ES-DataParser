@@ -1,0 +1,112 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/_ui/ratings.txt | rating "combat"</summary>
+<pre>rating "combat"
+	"harmless"
+	"mostly harmless"
+	"not entirely helpless"
+	"borderline competent"
+	"almost dangerous"
+	"moderately intimidating"
+	"not to be trifled with"
+	"seasoned fighter"
+	"respected enemy"
+	"force to be reckoned with"
+	"fearsome scrapper"
+	"formidable adversary"
+	"dread warrior"
+	"veteran battle-lord"
+	"legendary foe"
+	"war-hungry lunatic"
+	"absurdly bloodthirsty"
+	"terror of the galaxy"
+	"inconceivably destructive"
+	"agent of mass extinction"
+	"genocidal maniac"
+	"destroyer of worlds"
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/ratings.txt | rating "cargo attractiveness"</summary>
+<pre>rating "cargo attractiveness"
+	"minimal"
+	"slim pickings"
+	"fair amount"
+	"profitable"
+	"quite valuable"
+	"abundant"
+	"bountiful"
+	"tons of plunder"
+	"copious wealth"
+	"untold riches"
+</pre>
+</details>
+
+
+<details>
+<summary>data/_ui/ratings.txt | rating "armament deterrence"</summary>
+<pre>rating "armament deterrence"
+	"sitting duck"
+	"minimal weaponry"
+	"puny defenses"
+	"somewhat vulnerable"
+	"well-protected"
+	"reasonably dangerous"
+	"heavily armed"
+	"serious threat"
+	"deadly armament"
+	"unassailable"
+</pre>
+</details>
+
+
+</font>
+</body>
+</html>
+
