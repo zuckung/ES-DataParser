@@ -1,5 +1,17 @@
 <html>
-<body style="background-color:#000000; style="color:#ffffff;>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+</style>
+<body>
 <script type="text/javascript" src="//counter.websiteout.com/js/35/6/0/0"></script>
 <font size="1">
 show objects starting with:<br>
@@ -11,7 +23,19 @@ show objects starting with:<br>
 
 %cut template here%
 <html>
-<body style="background-color:#000000; style="color:#ffffff;>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+</style>
+<body>
 <font size="1">
 %tmpl%
 </font>
