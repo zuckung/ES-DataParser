@@ -1,5 +1,6 @@
 <html>
-<body>
+<body style="background-color:#000000; style="color:#ffffff;>
+<script type="text/javascript" src="//counter.websiteout.com/js/35/6/0/0"></script>
 <font size="1">
 show objects starting with:<br>
 <br>
@@ -10,7 +11,7 @@ show objects starting with:<br>
 
 %cut template here%
 <html>
-<body>
+<body style="background-color:#000000; style="color:#ffffff;>
 <font size="1">
 %tmpl%
 </font>

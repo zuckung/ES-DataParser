@@ -1,0 +1,35 @@
+name: (manual) create html
+on: 
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: First job
+    runs-on: ubuntu-latest
+    permissions: write-all
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: install libs
+        run: |
+          python3 -m pip install Pillow
+          python3 -m pip install numpy
+      - name: check for updates
+        run: python3 res/src/check_updates.py
+      - name: make html files
+        run: python3 res/src/make_html.py
+      - name: make star maps
+        run: python3 res/src/pillow.py
+      - name: delete downloaded files
+        run: python3 res/src/delete_downloaded.py
+      - name: Commit file
+        run: |
+          git config user.name "zuckung" 
+          git config user.email "zuckung@gmx.de"
+          git add .
+          git diff-index --quiet HEAD || git commit -m "new version"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          force: true
