@@ -149,6 +149,7 @@ def main():
 	if os.path.isdir('tmp/release/data/'):
 		data_folder = 'tmp/release/data/'
 		vpath  = 'tmp/release/'
+		print('[release]')
 		menu_template, category_template, object_template = read_template()
 		objects, object_paths, object_names = read_everything(data_folder) # creates list of objects, a list of each path and each name
 		categories = get_object_categories(object_names)
@@ -159,6 +160,7 @@ def main():
 	if os.path.isdir('tmp/android/data/'):
 		data_folder = 'tmp/android/data/'
 		vpath  = 'tmp/android/'
+		print('[android]')
 		menu_template, category_template, object_template = read_template()
 		objects, object_paths, object_names = read_everything(data_folder) # creates list of objects, a list of each path and each name
 		categories = get_object_categories(object_names)
@@ -167,8 +169,9 @@ def main():
 		write_menu(menu_template, categories, counting, 'android')
 		print('\n')
 	if os.path.isdir('tmp/continuous/data/'):
-		data_folder = 'tmp/release/data/'
+		data_folder = 'tmp/continuous/data/'
 		vpath  = 'tmp/continuous/'
+		print('[continuous]')
 		menu_template, category_template, object_template = read_template()
 		objects, object_paths, object_names = read_everything(data_folder) # creates list of objects, a list of each path and each name
 		categories = get_object_categories(object_names)

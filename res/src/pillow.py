@@ -347,6 +347,7 @@ def main():
 	if os.path.isdir('tmp/release/data/'):
 		dataFolder = 'tmp/release/data/'
 		backgroundImage = 'tmp/release/images/'
+		print('[release]')
 		setVar()
 		readSystems()
 		readPlanets()
@@ -356,6 +357,7 @@ def main():
 	if os.path.isdir('tmp/continuous/data/'):
 		dataFolder = 'tmp/continuous/data/'
 		backgroundImage = 'tmp/continuous/images/'
+		print('[continuous]')
 		setVar()
 		readSystems()
 		readPlanets()
@@ -365,6 +367,7 @@ def main():
 	if os.path.isdir('tmp/android/data/'):
 		dataFolder = 'tmp/android/data/'
 		backgroundImage = 'tmp/android/images/'
+		print('[android]')
 		setVar()
 		readSystems()
 		readPlanets()

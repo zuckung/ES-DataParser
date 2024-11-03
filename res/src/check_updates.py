@@ -1,12 +1,14 @@
 import requests
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 import os
 import zipfile
 import shutil
 
-
+def check_local():
+	if os.getcwd() == "/storage/emulated/0/Download/mgit/test/res/src": # check for local testing
+		os.chdir("../../")
 
 def get_changelog(vpath, vapi, vchangelog):
 	# getting the changelog online
@@ -22,13 +24,17 @@ def get_changelog(vpath, vapi, vchangelog):
 	request = requests.get(vapi, allow_redirects=True, timeout=30)
 	data = request.json()
 	lastmodified1 = datetime.strptime(data[0]['commit']['committer']['date'],'%Y-%m-%dT%H:%M:%SZ')
+	if vpath == 'tmp/continuous/':
+		newrequest = requests.get('https://api.github.com/repos/endless-sky/endless-sky/commits?path=data&page=1&per_page=1', allow_redirects=True, timeout=30)
+		data = newrequest.json()
+		lastmodified1 = datetime.strptime(data[0]['commit']['committer']['date'],'%Y-%m-%dT%H:%M:%SZ')
 	if os.path.isfile(vpath + 'changelog.txt'):
 		lastmodified2 = datetime.strptime(time.ctime(os.path.getmtime(vpath + 'changelog.txt')), '%a %b %d %H:%M:%S %Y')
 	else:
-		lastmodified2 = lastmodified1
-	difference = lastmodified2 - lastmodified1
+		lastmodified2 = lastmodified1 - timedelta(seconds=10)
+	difference = lastmodified1 - lastmodified2
 	print('    online changelog: ' + str(lastmodified1) + ' | local changelog: ' + str(lastmodified2) + ' | difference: ' + str(difference))
-	if difference.seconds < 1: # if local version is older
+	if difference.seconds <= 100: # if local version is older
 		print('    online changelog is newer, downloading it now')
 		request = requests.get(vchangelog)
 		with open(vpath + 'changelog.txt', 'wb') as changelog:
@@ -51,8 +57,11 @@ def get_version(vpath):
 		print('    different versions, continuing')
 		return True, onlineversion
 	else:
-		print('    same versions, stopping')
-		return False, onlineversion
+		if vpath == 'tmp/continuous/':
+			return True, onlineversion
+		else:
+			print('    same versions, stopping')
+			return False, onlineversion
 	
 
 def download(version, vpath, vzip):
@@ -145,6 +154,8 @@ def main():
 	vCapi = 'https://api.github.com/repos/endless-sky/endless-sky/commits?path=changelog&page=1&per_page=1'
 	vCchangelog = 'https://github.com/endless-sky/endless-sky/raw/refs/heads/master/changelog'
 	vCzip = 'https://github.com/endless-sky/endless-sky/archive/refs/heads/master.zip'
+	
+	check_local()
 	
 	# checking for Release update
 	update = False
