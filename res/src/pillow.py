@@ -48,7 +48,7 @@ def convertCoordinates(pos):  # 4096 x 4096, center at 2048, 2048 sagitarius a, 
 
 
 def readSystems():
-	print('reading systems')
+	print('  reading systems')
 	started = False
 	startedLink = False
 	planet = ''
@@ -97,11 +97,11 @@ def readSystems():
 				planet += '|' + line.strip().replace('object ', '').replace('"', '')
 	systemPlanets.append(planet)
 	systemLinks.append(links[:-1])
-	print('  ' + str(len(systemNames)) + ' systems found')
+	print('    ' + str(len(systemNames)) + ' systems found')
 
 
 def readPlanets():
-	print('reading planets')
+	print('  reading planets')
 	with open(dataFolder + 'map planets.txt') as file1:
 		all = file1.readlines()
 	started = False
@@ -124,11 +124,11 @@ def readPlanets():
 		inhabited.append('spaceport')
 	else:
 		inhabited.append('')
-	print('  ' + str(len(planets)) + ' planets found')
+	print('    ' + str(len(planets)) + ' planets found')
 
 
 def readWormholes():
-	print('reading wormholes')
+	print('  reading wormholes')
 	with open(dataFolder + 'map planets.txt') as file1:
 		all = file1.readlines()
 	startedWorm = False
@@ -160,11 +160,11 @@ def readWormholes():
 					first = line.split(' ')[0]
 					second = line.split(' ')[1]
 					wormholes.append(first +'|' + second)				
-	print('  ' + str(len(wormholes)) + ' wormhole links found')
+	print('    ' + str(len(wormholes)) + ' wormhole links found')
 
 
 def readColors(): # get colors for all factions
-	print('reading colors')
+	print('  reading colors')
 	with open(dataFolder + 'governments.txt') as file1:
 		all = file1.readlines()
 	govColorTemp = []
@@ -197,7 +197,7 @@ def readColors(): # get colors for all factions
 			color = line.strip().replace('color ', '')
 	for each in govColorTemp:
 		govColor.append(colorConvert(each))
-	print('  ' + str(len(governments)) + ' government colors found')
+	print('    ' + str(len(governments)) + ' government colors found')
 
 
 def colorConvert(colInput): # format from rgb 1 to: rgb(255,255,255)
@@ -244,10 +244,10 @@ def line_length(start, end): # start (tuple): l(x1, y1) startpoint, end (tuple):
 
 				
 def createImage(path):
-	print('creating image')
+	print('  creating image')
 	im = Image.open(backgroundImage + 'ui/milky way.jpg', 'r')
 	draw = ImageDraw.Draw(im, 'RGBA')
-	print('  drawing links')
+	print('    drawing links')
 	for each in systemNames:
 		sysIndex = systemNames.index(each)
 		links = systemLinks[sysIndex].split('|')
@@ -291,7 +291,7 @@ def createImage(path):
 					# https://stackoverflow.com/questions/63671018/how-can-i-draw-an-arrow-using-pil
 					# opencv arrowedLine() ?
 					
-	print('  drawing systems')
+	print('    drawing systems')
 	for each in systemNames:
 		inhab = False
 		sysIndex = systemNames.index(each)
@@ -317,7 +317,7 @@ def createImage(path):
 		font = ImageFont.truetype(font=iFont, size=12)
 		draw.text((systemPosX[sysIndex]+12, systemPosY[sysIndex]-5) , systemNames[sysIndex], fill=(255,255,255), font=font)
 	#drawing legend
-	print('  drawing legend')
+	print('    drawing legend')
 	font = ImageFont.truetype(font=iFont, size=20)
 	startX = 3400
 	startY = 2400
@@ -326,7 +326,7 @@ def createImage(path):
 		draw.text((startX+15, startY-14) , each, fill=(255,255,255), font=font)
 		startY += 25
 	# crop image
-	print('  cropping image')
+	print('    cropping image')
 	left = 200 # - 200
 	top = 800 # - 800
 	right = 3596 # -500
@@ -334,9 +334,8 @@ def createImage(path):
 	im = im.crop((left, top, right, bottom))
 	# save now
 	im = im.convert('RGB')
-	print('  saving image')
+	print('    saving image')
 	im.save(path + "Pillow.jpg")
-	print('DONE')
 
 
 def main():
@@ -344,6 +343,7 @@ def main():
 	global backgroundImage
 	global iFont
 	iFont = 'DejaVuSans.ttf'
+	# if release
 	if os.path.isdir('tmp/release/data/'):
 		dataFolder = 'tmp/release/data/'
 		backgroundImage = 'tmp/release/images/'
@@ -354,16 +354,9 @@ def main():
 		readWormholes()
 		readColors()
 		createImage('page/release')
-	if os.path.isdir('tmp/continuous/data/'):
-		dataFolder = 'tmp/continuous/data/'
-		backgroundImage = 'tmp/continuous/images/'
-		print('[continuous]')
-		setVar()
-		readSystems()
-		readPlanets()
-		readWormholes()
-		readColors()
-		createImage('page/continuous')
+		print('  DONE')
+		print(' ')
+	# if android
 	if os.path.isdir('tmp/android/data/'):
 		dataFolder = 'tmp/android/data/'
 		backgroundImage = 'tmp/android/images/'
@@ -374,6 +367,21 @@ def main():
 		readWormholes()
 		readColors()
 		createImage('page/android')
+		print('  DONE')
+		print(' ')
+	# if continuous
+	if os.path.isdir('tmp/continuous/data/'):
+		dataFolder = 'tmp/continuous/data/'
+		backgroundImage = 'tmp/continuous/images/'
+		print('[continuous]')
+		setVar()
+		readSystems()
+		readPlanets()
+		readWormholes()
+		readColors()
+		createImage('page/continuous')
+		print('  DONE')
+		print(' ')
 
 
 

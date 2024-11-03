@@ -4,8 +4,8 @@ import time
 
 
 def read_template():
-	print('creating html')
-	print('  reading templates')
+	print('  creating html')
+	print('    reading templates')
 	with open('res/template.txt', 'r') as file1:
 		templates_all = file1.read()
 		templates = templates_all.split('%cut template here%')
@@ -15,7 +15,7 @@ def read_template():
 	return menu_template, category_template, object_template
 	
 def read_everything(data_folder):
-	print('  reading data folder')
+	print('    reading data folder')
 	started = False
 	obj, obj_path, obj_name = [], [], []
 	folders = os.listdir(data_folder)
@@ -67,7 +67,7 @@ def read_everything(data_folder):
 
 
 def get_object_categories(object_names):
-	print('  getting categories')
+	print('    getting categories')
 	categories = []
 	for obj in object_names:
 		if obj[:1] == '"':
@@ -84,7 +84,7 @@ def get_object_categories(object_names):
 
 
 def write_html(categories, category_template, object_names, object_paths, objects, object_template, version):
-	print('  writing html files')
+	print('    writing html files')
 	counting = []
 	globalcount = 0
 	for category in categories:
@@ -110,7 +110,7 @@ def write_html(categories, category_template, object_names, object_paths, object
 
 
 def write_menu(menu_template, categories, counting, version):
-	print('  writing html menu')
+	print('    writing html menu')
 	splitted = menu_template.split('%categories%')
 	with open('page/' + version + '/menu.html', 'w') as file1:
 		file1.writelines(splitted[0])
@@ -125,27 +125,32 @@ def write_menu(menu_template, categories, counting, version):
 def save_global_count(globalcount, vpath):
 	with open('page/index.html', 'r') as source:
 		lines = source.readlines()
+	# if release
 	if vpath == 'tmp/release/':
 		with open('page/index.html', 'w') as target:
 			for line in lines:
 				if line.find('release objects') > 0:
 					line ='<td style="font-size:11px;">release objects: <br>[' + str(globalcount) + ']</td>\n'
 				target.write(line)
-	if vpath == 'tmp/continuous/':
-		with open('page/index.html', 'w') as target:
-			for line in lines:
-				if line.find('continuous objects') > 0:
-					line ='<td style="font-size:11px;">continuous objects: <br>[' + str(globalcount) + ']</td>\n'
-				target.write(line)
+	# if android
 	if vpath == 'tmp/android/':
 		with open('page/index.html', 'w') as target:
 			for line in lines:
 				if line.find('android objects') > 0:
 					line ='<td style="font-size:11px;">android objects: <br>[' + str(globalcount) + ']</td>\n'
 				target.write(line)
+	# if continuous
+	if vpath == 'tmp/continuous/':
+		with open('page/index.html', 'w') as target:
+			for line in lines:
+				if line.find('continuous objects') > 0:
+					line ='<td style="font-size:11px;">continuous objects: <br>[' + str(globalcount) + ']</td>\n'
+				target.write(line)
+
 
 
 def main():
+	# if release
 	if os.path.isdir('tmp/release/data/'):
 		data_folder = 'tmp/release/data/'
 		vpath  = 'tmp/release/'
@@ -156,7 +161,9 @@ def main():
 		counting, globalcount = write_html(categories, category_template, object_names, object_paths, objects, object_template, 'release')
 		save_global_count(globalcount,vpath)
 		write_menu(menu_template, categories, counting, 'release')
-		print('\n')
+		print('  DONE')
+		print(' ')
+		# if android
 	if os.path.isdir('tmp/android/data/'):
 		data_folder = 'tmp/android/data/'
 		vpath  = 'tmp/android/'
@@ -167,7 +174,9 @@ def main():
 		counting, globalcount = write_html(categories, category_template, object_names, object_paths, objects, object_template, 'android')
 		save_global_count(globalcount,vpath)
 		write_menu(menu_template, categories, counting, 'android')
-		print('\n')
+		print('  DONE')
+		print(' ')
+		# if continuous
 	if os.path.isdir('tmp/continuous/data/'):
 		data_folder = 'tmp/continuous/data/'
 		vpath  = 'tmp/continuous/'
@@ -178,6 +187,8 @@ def main():
 		counting, globalcount = write_html(categories, category_template, object_names, object_paths, objects, object_template, 'continuous')
 		save_global_count(globalcount,vpath)
 		write_menu(menu_template, categories, counting, 'continuous')
+		print('  DONE')
+		print(' ')
 
 
 
