@@ -44,6 +44,29 @@ document.addEventListener("DOMContentLoaded", function() {
 <font size="1">
 
 <details>
+<summary>data/starts.txt | event "not from boston"</summary>
+<pre>event "not from boston"
+	planet "New Boston"
+		description `New Boston is a completely unremarkable world. Most of the land here is wet and marshy, and the coastal regions are prone to flooding. The planet's economy is largely agricultural; some of the farms here grow food for export to Earth and elsewhere, but a significant portion of farming land is devoted to growing fiber crops, which is then processed in the textile mills in the spaceport city.`
+		spaceport `New Boston's shabby spaceport is as about as basic as a spaceport can be. Many of the concrete landing pads are tilted and uneven, having sunk into the muddy soil since they were poured, and you have to be careful landing on them.`
+		spaceport `	The market where ship captains buy and sell cargo is a large tent rather than a permanent building, but it is sturdy enough to keep off the rain. Loads are brought in and out by trucks and the occasional hovercraft. Here some enterprising local mechanics have set up not only a repair shop and outfitter, but also a shipyard with several small, refurbished ships for sale.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/starts.txt | event "grew up on greenwater"</summary>
+<pre>event "grew up on greenwater"
+	planet "Greenwater"
+		description `Greenwater is unique among Hai worlds, not only in that it is home to a sizable human population, but also because it happens to be the world where you grew up.`
+		description `	Most of the humans here live as fishers and farmers on islands and archipelagoes across the equator of Greenwater, where the Hai seldom visit on account of their heavy fur coats. According to those beyond the wormhole, the climate here is like a Paradise Planet, even though it lacks the extensive terraforming common to those worlds.`
+		description `	Thanks to its high human population, the human language is dominant on Greenwater, with the Hai language limited to the poles of the planet where Hai merchants are more frequent.`
+		spaceport `In this bustling spaceport, deeply tanned human merchants are busy haggling with the Hai natives over the price of loads of fish and produce. The atmosphere is quite friendly and relaxed - even here, well into the planet's temperate zone, it is warm enough that everyone, Hai and human alike, moves at a languid pace.`
+</pre>
+</details>
+
+
+<details>
 <summary>data/coalition/coalition missions.txt | event "label coalition space"</summary>
 <pre>event "label coalition space"
 	galaxy "label saryds"
@@ -5504,8 +5527,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		add attributes "tourism"
 		description `Rand is a desert world, too dry for much farming and with gravity low enough to be uncomfortable for most human beings. It is, however, the best source of heavy metals in the galactic south. Aside from the managers of the mining companies, nearly all the people here are migrant workers from elsewhere in the Dirt Belt, who have come to spend a season working for the relatively high wages that uranium mining offers, either to send money off-world or to save it up in order to build a better life for themselves.`
 		description `	Due to the results of recent terraforming experiments, Rand has become a moderately more habitable place. Fascination with this change in climate has led to Rand becoming a semi-popular tourist destination of the Dirt Belt.`
+		spaceport `The landing pads here are poured concrete, raised up slightly above the level of the desert to keep them from being buried in sand. A few workers are constantly driving brush sweepers across the unoccupied pads. The air is filled with sand particles and dust. Aside from the storage sheds, there are only two buildings, each with a large sign out front: "Labor" and "Trade."`
+		spaceport `	For once, the spaceport is lively during Remembrance Day. It appears that more and more people are choosing to invite their family over to Rand to commemorate the day instead of traveling to another planet.`
+			to display
+				"days since year start" &#62; 35
+				"days since year start" &#60; 55
 	planet "Tundra"
 		spaceport `The spaceport village consists of several large domes, which keep out the wind and driving snow; ships enter and exit the largest of the domes through a hatch that closes as soon as they have come through. Before the planet was terraformed, enough snow would pile up on top of one of the domes every decade or so that it became a danger of collapsing under its own weight; the locals would simply move out of that dome and build another one higher up on the snowpack, but the changing climate has reduced the amount of snow enough that the locals may never need to build another dome again.`
+		spaceport `	For Remembrance Day, several stalls have been set up to showcase items of clothing made with the planet's synthetic fabrics. A new addition to the event is a group of stalls dedicated to presenting clothing tailored here on Tundra.`
+			to display
+				"days since year start" &#62; 35
+				"days since year start" &#60; 55
 </pre>
 </details>
 

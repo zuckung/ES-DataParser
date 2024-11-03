@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <font size="1">
 
 <details>
-<summary>data/start.txt | conversation "default intro"</summary>
+<summary>data/starts.txt | conversation "default intro"</summary>
 <pre>conversation "default intro"
 	scene "scene/lobby"
 	`The bank's architecture is what you would have called "futuristic" back when you dreamed that the future would be less squalid than the present: story above story of curves and spires and balconies, all in gleaming metal. A doorman stands by each of the heavy glass doors. You are wearing your very best clothes, but you feel shabby next to them.`
@@ -55,6 +55,86 @@ document.addEventListener("DOMContentLoaded", function() {
 	name
 	`	The elevator is so well-tuned that you do not even realize it is moving until it has deposited you back in the lobby. But as you leave the bank, you are smiling. This crazy adventure suddenly feels real to you. You are going to do it. You are finally going to get off this planet.`
 	`	Compared to the bank, you feel much more at home in the shipyard, walking among the rusted out hulks and newer ships that gleam in the sunlight. You smell grease and dirt and rocket fuel; wonderful smells. There are three ship models within your price range. Which one you choose will determine your future...`
+</pre>
+</details>
+
+
+<details>
+<summary>data/starts.txt | conversation "hai intro"</summary>
+<pre>conversation "hai intro"
+	scene "scene/hai shipyard"
+	action
+		event "not from boston" 0
+		event "grew up on greenwater" 0
+		log "Finally scraped together enough money for a down payment on a starship. The interest on the mortgage is exorbitant."
+		log "Factions" "Republic" `Hundreds of years ago, the independent territories in different parts of human space agreed to join together into a single democratic government, with Earth as its capital. The rise of the Republic ushered in a long period of peace and prosperity in human history.`
+			`Representation in the Republic Parliament is based on population. That means that some individual "Paradise Worlds" have more representatives than entire regions of space like the Dirt Belt that are more sparsely settled.`
+		log "Factions" "Syndicate" `The Syndicate is a megacorporation, the largest employer in human space. People who cannot find steady work elsewhere flock to the Syndicate factory worlds, where they are almost guaranteed to find a job. Although the Syndicate is technically part of the Republic, Syndicate worlds are governed directly by the corporation.`
+			`The Syndicate is a central part of the Republic's economy, but they are also well known for selling shoddy products and for doing damage to the environment on the worlds they control. Their treatment of workers is questionable, and their opposition to organized labor is legendary. Some Syndicate factory towns have even been accused of human rights abuses.`
+		log "Factions" "Pirates" `In poorer and more remote star systems, where the Navy seldom patrols, pirate attacks on merchant ships are frequent. Pirates are also known to attack large, unguarded convoys of freighters even in more populated areas. Most pirate fleets come from lawless worlds on the outskirts of human space.`
+		log "Factions" "Hai" `The Hai are a species of giant, intelligent rodents, who live to the north of human space. They allow any humans who discover their territory to live alongside them, and to trade with them and purchase their technology.`
+		log "Factions" "Unfettered Hai" `The "Unfettered" are a faction within the Hai species who are not as peaceful as the rest, and are normally not friendly toward humans. They claim that long ago the Drak altered the Hai to make them docile and peaceful, and that the Unfettered are descendants of those Hai who avoided undergoing that alteration. They are seeking jump drives so that they can escape the "prison" they are now stuck in: a few deteriorating worlds on the far northern edge of Hai space.`
+		log "Factions" "Sheragi" `A long extinct dragon-like species called the "Sheragi" used to live in human space, back when much of what is now human territory was occupied by the Hai.`
+	`Going to the North Pole already makes you feel as if you're on another world; even within the berth for your ferry, you can see more Hai than there are in your entire hometown. After some parting words from the PA system, you and your fellow passengers disembark, the flow of humanity breaking against the Hai crowd.`
+	`	Making your way towards the shipyard, you pull up the human-language version of your loan agreement to review: You have borrowed 1.431 million credits to be repaid over the course of two years. Your interest rate is 0.3%, making your repayments 4,836 credits per day.`
+	`	You look up from your tablet just before running head-on into a gray-furred Hai wearing a flight suit, knocking him over. As you bend over to help, he takes a glance at your mortgage documents. "You're about to become a captain, aren't you?" he says after dusting himself off.`
+	choice
+		`	"Yes, I am."`
+		`	"How could you tell?"`
+			goto tell
+		`	"Who said you could look at that?"`
+			goto look
+	`	"Then maybe I can help. Follow me."`
+		goto help
+	label tell
+	`	"From your loan," he replies. "There's only one reason to have that exact number of credits. Speaking of which, I think I can help you."`
+		goto help
+	label look
+	`	He scratches the back of his head. "Sorry. I was just trying to help, but if I'm causing too much trouble, I'll get out of your way.`
+	choice
+		`	"I don't mind."`
+			goto happy
+		`	"I'd rather handle things myself."`
+			goto leave
+	label happy
+	`	He bows. "Thank you."`
+	label help
+	`	The Hai brings you to the landing pads of Greenwater, where a large number of humans and Hai are gathered around several vessels. From the crowd, another Hai approaches your companion, talking to him in Hai. The gray-furred Hai simply nods and hands the other Hai a set of keys in exchange for a credit chip. The other Hai quickly bows before dashing towards one of the landed ships.`
+	`	"I'm selling off my fleet before retiring," the Hai says. "Sure, I could just go to the shipyard, but I could never have started if it weren't for another retiring captain selling me a ship for cheap when I was young. So, I've decided to pay it forward and help out other captains-to-be."`
+	`	The Hai walks up to one of the smaller ships in the fleet, a Grasshopper interceptor. "This is the Pristine Jewel. She's served me well over the past century, but I'm sure she'll be safe in your hands."`
+	choice
+		`	"You're giving it to me?"`
+		`	"Is there a freighter I could take instead?"`
+			goto freighter
+		`	"What about the other people here? Shouldn't they get first pick?"`
+			goto pick
+	`	The Hai chuckles. "That would be nice, wouldn't it? Unfortunately, retirement isn't cheap. I'd be happy to part with her for 1.132 million credits, though; that's less than a Aphid, let alone a new Grasshopper.`
+		goto deal
+	label freighter
+	`	"Unfortunately, all my Aphids were bought earlier today. Still, I'm sure you can survive; the Unfettered'll be a tough ask, but pirates in human space won't be much of a match. Plus, if you still can't handle it, you can always sell her. She'll only cost you 1.132 million credits, and you'll be able to use the old parts of the Pristine Jewel to buy an Aphid at a discount.`
+		goto deal
+	label pick
+	`	The Hai shakes his head. "Don't worry. Most of the crowd are just spectators. Usually it'd be a human captain pulling a stunt like selling their fleet publicly; most retiring Hai just donate their fleets to the government. I'm not exactly handing these ships out for free either. If you want her, the Pristine Jewel's 1.132 million credits.`
+	label deal
+	`	"So, do we have a deal?"`
+	choice
+		`	"We do!"`
+		`	"I think I'd be better off buying from the shipyard."`
+			goto leave
+	`	"Great!" He holds out a data tablet. "Just sign here, and she's yours."`
+	name
+	action
+		set "hai space start: Grasshopper"
+		give ship "Grasshopper (Hai Start)" "Pristine Jewel"
+		payment -1132000
+	`	The Hai gives you the keys to the Grasshopper after you hand over the tablet and your payment. "Looks like this your first step to becoming an interstellar entrepreneur. I'd say we'll meet again someday, but I'd rather not lie. In all my years, I never did meet the captain who sold me my first ship again. Not that that should matter, anyway; this is your story, not mine."`
+	`	He gives you one last salute before returning to the crowd to sell yet another ship.`
+		decline
+	label leave
+	`	He nods as you head towards the shipyard.`
+	`	At its entrance is an automated security kiosk. You quickly fill out the form on the screen before picking up the stylus and signing your name:`
+	name
+	`	You step through glass sliding doors into Greenwater's shipyard. In most of the berths, workers are busy refurbishing old vessels for resale, but in some of the more distant bays, you can see the flash of welding torches on brand-new ship skeletons. Vessels of all sizes are lined up within the yard, but for you, there's only one option...`
 </pre>
 </details>
 
@@ -571,6 +651,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			decline
 	label combined
 	`	You follow Barmy into the bar. Even with the smear of grease still on his face, he fits in with the crowd. You both stand at the bar and order your drinks. Barmy's order catches you off guard, and he notices your expression. "What? A man who works with his hands can't enjoy a drink with some age?" You chuckle, and you both tell stories of your early lives. He tells how he had some exciting adventures in his youth among the stars, but found his passion tinkering and finding ways to improve on outdated equipment.`
+	branch end
+		not "human space start"
 	`	He's shocked to discover your origins on New Boston. "You're really from that backwater planet? I'm surprised you were able to escape the racket they have going on there. I was lucky to get out myself!"`
 	choice
 		`	"Wait, you're from New Boston too?"`

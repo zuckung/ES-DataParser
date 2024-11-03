@@ -795,6 +795,92 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/persons.txt | ship "Modified Hauler VI"</summary>
+<pre>ship "Modified Hauler VI"
+	sprite "ship/hauler vi"
+	thumbnail "thumbnail/hauler vi"
+	attributes
+		category "Heavy Freighter"
+		"shields" 13200
+		"hull" 26800
+		"required crew" 3
+		"bunks" 12
+		"mass" 1240
+		"drag" 21.7
+		"heat dissipation" .43
+		"fuel capacity" 800
+		"cargo space" 780
+		"outfit space" 900
+		"weapon capacity" 430
+		"engine capacity" 160
+		weapon
+			"blast radius" 100
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Sidewinder Missile Launcher" 4
+		"Sidewinder Missile" 180
+		"Point Defense Turret" 2
+		"Bombardment Turret" 6
+		"Fusion Reactor"
+		"S3 Thermionic"
+		"LP288a Battery Pack"
+		"D94-YV Shield Generator"
+		"Large Radar Jammer"
+		"Laser Rifle" 3
+		"Impala Plasma Thruster"
+		"Impala Plasma Steering"
+		"Capybara Reverse Thruster"
+		"Hyperdrive"
+	engine -83.5 196.5
+	engine 83.5 196.5
+	engine 0 196.5
+	gun -14.5 -168
+	gun 14.5 -168
+	gun -35 -128
+	gun 35 -128
+	turret -21 -124.5
+	turret 21 -124.5 "Point Defense Turret"
+	turret -32.5 -102.5
+	turret 32.5 -102.5
+	turret -22 154 "Point Defense Turret"
+	turret 22 154
+	turret -60 154
+	turret 60 154
+	leak "leak" 70 50
+	leak "flame" 40 80
+	leak "big leak" 90 40
+	explode "small explosion" 30
+	explode "medium explosion" 60
+	explode "large explosion" 40
+	explode "huge explosion" 10
+	"final explode" "final explosion large"
+	description "The Hauler cargo ships are considered by many to be outdated, and it is unclear if upgrading the cargo space to six containers is sufficient to make this Hauler ship popular. It certainly doesn't help that the Hauler VI is more expensive than four Hauler IIIs."
+</pre>
+</details>
+
+
+<details>
+<summary>data/starts.txt | ship "Grasshopper" "Grasshopper (Hai Start)"</summary>
+<pre>ship "Grasshopper" "Grasshopper (Hai Start)"
+	outfits
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Fuel Pod"
+		"Hai Chasm Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Williwaw Cooling"
+		Hyperdrive
+		"Ion Cannon"
+		"Pebble Core"
+		"Pulse Rifle"
+		"Quantum Keystone" 2
+</pre>
+</details>
+
+
+<details>
 <summary>data/_deprecated/deprecated ships.txt | ship "Korath Dredger"</summary>
 <pre>ship "Korath Dredger"
 	sprite "ship/dredger"
@@ -5988,7 +6074,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "small explosion" 40
 	explode "tiny explosion" 80
 	"final explode" "final explosion large"
-	description `Gneiss battleships are the Gegno Vi's true sword and shield in war. They are slightly older than the Hornfels and Schists, but carry the heaviest armament, bearing three huge mounts dedicated to holding enormous Ballistic Cannons. Gniess also have extremely strong armor plating, and can take a hefty beating while firing threatening broadsides at the opposing force.`
+	description `Gneiss battleships are the Gegno Vi's true sword and shield in war. They are slightly older than the Hornfels and Schists, but carry the heaviest armament, bearing three huge mounts dedicated to holding enormous Ballistic Cannons. Gneiss also have extremely strong armor plating, and can take a hefty beating while firing threatening broadsides at the opposing force.`
 	description `	Unfortunately, in exchange for huge firepower and defensive armor, they lack speed and maneuverability, even when fitted with the largest engine systems the Vi have to offer.`
 </pre>
 </details>
@@ -6818,6 +6904,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/hai/hai ships.txt | ship "Aphid" "Aphid (Phantom Pallet)"</summary>
+<pre>ship "Aphid" "Aphid (Phantom Pallet)"
+	outfits
+		"Pulse Turret"
+		"Pebble Core"
+		"Hai Fissure Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Keystone"
+		"Pulse Rifle"
+		`"Benga" Atomic Thruster`
+		`"Benga" Atomic Steering`
+		"Hyperdrive"
+		"Phantom Pallet" 4
+</pre>
+</details>
+
+
+<details>
 <summary>data/hai/hai ships.txt | ship "Aphid" "Aphid (Armed)"</summary>
 <pre>ship "Aphid" "Aphid (Armed)"
 	outfits
@@ -6910,6 +7015,29 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "large explosion" 10
 	"final explode" "final explosion medium"
 	description `The introduction of humans to the Hai civilization has led to a substantial amount of cultural exchange. While some may argue that pickled acorns have been the greatest product of this relationship, many more will point to this luxury transport ship. The product of human-Hai cooperation from the project's inception, the Centipede was released around the turn of the 31st century, but has already become quite popular among Hai fleets.`
+</pre>
+</details>
+
+
+<details>
+<summary>data/hai/hai ships.txt | ship "Centipede" "Centipede (Holovid)"</summary>
+<pre>ship "Centipede" "Centipede (Holovid)"
+	outfits
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 112
+		"Bullfrog Anti-Missile" 3
+		"Geode Reactor"
+		"Hai Corundum Regenerator"
+		"Hai Ravine Batteries"
+		"Hai Williwaw Cooling" 3
+		"Hai Cuttlefish Jammer" 2
+		"Luxury Accommodations"
+		"Holovid Zone"
+		"Quantum Keystone"
+		`"Biroo" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		`"Basrem" Atomic Steering`
+		Hyperdrive
 </pre>
 </details>
 
@@ -7343,6 +7471,27 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "large explosion" 8
 	"final explode" "final explosion small"
 	description "The Lightning Bug is a small defensive ship, mostly used by the Hai as a convoy escort. The Lightning Bug, as with many insects, works best in a swarm: even a small number of Lightning Bugs can manage to leave the largest of ships helpless with their stock-fitted Ion Cannons."
+</pre>
+</details>
+
+
+<details>
+<summary>data/hai/hai ships.txt | ship "Lightning Bug" "Lightning Bug (Phantom Pallet)"</summary>
+<pre>ship "Lightning Bug" "Lightning Bug (Phantom Pallet)"
+	outfits
+		"Ion Cannon"
+		"Bullfrog Anti-Missile" 2
+		"Hai Cuttlefish Jammer"
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Corundum Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Keystone"
+		"Pulse Rifle" 2
+		`"Benga" Atomic Thruster`
+		`"Biroo" Atomic Steering`
+		"Phantom Pallet" 7
+		"Hyperdrive"
 </pre>
 </details>
 
@@ -8837,6 +8986,29 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "huge explosion" 5
 	"final explode" "final explosion medium"
 	description "The design of the Water Bug is almost as old as the Aphid, but until recently it never saw much use. A spike in aggression from the Unfettered Hai has led the tougher and more well-defended Water Bug to see an increase in popularity over its little brother, the Aphid. The Water Bug is now the most widely used Hai freighter, comprising the bulk of all Hai merchant fleets."
+</pre>
+</details>
+
+
+<details>
+<summary>data/hai/hai ships.txt | ship "Water Bug" "Water Bug (Phantom Pallet)"</summary>
+<pre>ship "Water Bug" "Water Bug (Phantom Pallet)"
+	outfits
+		"Hai Tracker Pod" 2
+		"Hai Tracker" 168
+		"Tracker Storage Pod" 2
+		"Pulse Turret"
+		"Chameleon Anti-Missile" 2
+		"Geode Reactor"
+		"Hai Gorge Batteries"
+		"Hai Diamond Regenerator"
+		"Hai Williwaw Cooling"
+		"Quantum Keystone"
+		`"Basrem" Reverse Thruster`
+		`"Benga" Atomic Thruster`
+		`"Benga" Atomic Steering`
+		"Hyperdrive"
+		"Phantom Pallet" 7
 </pre>
 </details>
 
