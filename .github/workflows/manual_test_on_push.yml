@@ -31,8 +31,10 @@ jobs:
           git config --global user.email "zuckung@gmx.de"
           git add page/test.txt
           git diff-index --quiet HEAD || git commit -m "Initiated test"
-
       - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        run: |
+          git push "https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git" HEAD:main
+#      - name: Push changes
+#        uses: ad-m/github-push-action@master
+#        with:
+#          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
