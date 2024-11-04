@@ -17,7 +17,7 @@ jobs:
               content = source.read()
             content = int(content) + 1
             with open('page/test.txt', 'w') as target:
-              target.write(content)
+              target.write(str(content))
           else:
             with open('page/test.txt', 'w') as target:
               target.write('1')
