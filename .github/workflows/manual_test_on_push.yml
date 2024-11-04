@@ -1,4 +1,4 @@
-name: (manual) set continuous update
+name: (manual) test the on push workflow
 on: 
   workflow_dispatch:
 jobs:
@@ -9,20 +9,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - name: change date
+      - name: change page
         run: |
-          with open('tmp/continuous/check.txt', 'r') as source:
-            lines = source.readlines()
-          date = lines[1]
-          pos1 = date.find(' ')
-          pos2 = date.find(':')
-          first = date[:pos1 + 1]
-          last = date[pos2:]
-          hour = int(date[pos1 + 1:pos2]) - 1
-          with open('tmp/continuous/check.txt', 'w') as target:
-            target.writelines(lines[0])
-            target.writelines(first + str(hour) + last)
-          print(date + ' changed to ' + first + str(hour) + last)
+          import os
+          if os.path.isfile('page/test.txt'):
+            with open('page/test.txt', 'r') as source:
+              content = source.read()
+            content = int(content) + 1
+            with open('page/test.txt', 'w') as target:
+              target.write(content)
+          else:
+            with open('page/test.txt', 'w') as target:
+              target.write('1')
         shell: python
       - name: Commit file
         run: |
