@@ -12,17 +12,17 @@ jobs:
       - name: change date
         run: |
           with open('tmp/continuous/check.txt', 'r') as source:
-	          lines = source.readlines()
-            date = lines[1]
-            pos1 = date.find(' ')
-            pos2 = date.find(':')
-            first = date[:pos1 + 1]
-            last = date[pos2:]
-            hour = int(date[pos1 + 1:pos2]) - 1
-            with open('tmp/continuous/check.txt', 'w') as target:
-              target.writelines(lines[0])
-              target.writelines(first + str(hour) + last)
-            print(date + ' changed to ' + first + str(hour) + last)
+            lines = source.readlines()
+          date = lines[1]
+          pos1 = date.find(' ')
+          pos2 = date.find(':')
+          first = date[:pos1 + 1]
+          last = date[pos2:]
+          hour = int(date[pos1 + 1:pos2]) - 1
+          with open('tmp/continuous/check.txt', 'w') as target:
+            target.writelines(lines[0])
+            target.writelines(first + str(hour) + last)
+          print(date + ' changed to ' + first + str(hour) + last)
         shell: python
       - name: Commit file
         run: |
