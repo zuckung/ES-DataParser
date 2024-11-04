@@ -26,8 +26,6 @@ jobs:
       - name: delete downloaded files
         run: python3 res/src/delete_downloaded.py
       - name: Commit file
-        env:
-          github_token: ${{ secrets.PAT }}
         run: |
           git config user.name "zuckung" 
           git config user.email "zuckung@gmx.de"
@@ -36,5 +34,5 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT }}
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           force: true

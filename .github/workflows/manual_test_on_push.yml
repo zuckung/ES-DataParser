@@ -1,35 +1,38 @@
 name: (manual) test the on push workflow
 on: 
   workflow_dispatch:
+
 jobs:
   zip-files:
     runs-on: ubuntu-latest
     permissions: write-all
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 2
-      - name: change page
+
+      - name: Change file in `page/` folder
         run: |
           import os
           if os.path.isfile('page/test.txt'):
             with open('page/test.txt', 'r') as source:
-              content = source.read()
-            content = int(content) + 1
+              content = int(source.read()) + 1
             with open('page/test.txt', 'w') as target:
               target.write(str(content))
           else:
             with open('page/test.txt', 'w') as target:
               target.write('1')
         shell: python
+
       - name: Commit file
         run: |
-          git config user.name "zuckung" 
-          git config user.email "zuckung@gmx.de"
-          git add .
-          git diff-index --quiet HEAD || git commit -m "initiated test"
+          git config --global user.name "zuckung"
+          git config --global user.email "zuckung@gmx.de"
+          git add page/test.txt
+          git diff-index --quiet HEAD || git commit -m "Initiated test"
+
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.PAT }}
-          force: true
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
