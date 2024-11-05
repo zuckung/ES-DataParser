@@ -74,4 +74,5 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>%filename% | %objectname%</summary>
 <pre>%object%</pre>
+%images%
 </details>

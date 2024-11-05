@@ -15,6 +15,7 @@ jobs:
         run: |
           python3 -m pip install Pillow
           python3 -m pip install numpy
+          python3 -m pip install pymage_size
       - name: check for updates
         run: python3 res/src/check_updates.py
       - name: make html files

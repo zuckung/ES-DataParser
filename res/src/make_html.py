@@ -1,5 +1,7 @@
 import os
 import time
+#from pillow import Image
+from pymage_size import get_image_size
 
 
 
@@ -33,8 +35,6 @@ def read_everything(data_folder):
 					spaces = ''
 					for i in range(0, count):
 						spaces += ' '
-				#print('    reading: ' + folder + '/' + text_file + spaces, end = '\r', flush= True)
-				#time.sleep(.01)
 				with open(data_folder + folder + '/' + text_file, 'r') as source_file:
 					lines = source_file.readlines()
 				for line in lines:
@@ -83,26 +83,77 @@ def get_object_categories(object_names):
 	return categories
 
 
+def gen_imglink(version, imagestring, format):
+	if format != '':
+	# generate image link
+		img_format = get_image_size('tmp/' + version + '/images/' + imagestring + format)
+		width, height = img_format.get_dimensions()
+		if width > height:
+			image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="200">'
+		else:
+			image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" height="200">'
+	else:
+		image = ''
+		print('    format error: ' + imagestring + format)
+	return image
+
+
+def add_images(obj, cat, version):
+	image = ''
+	format = ''
+	if cat == 'outfit' or cat == 'ship':	
+		if obj.find('thumbnail') > 1 :
+			postab = obj.find('\t')
+			posfind = obj.find('thumbnail', postab)
+			pos1 = obj.find(' ', posfind)
+			pos2 = obj.find('\n', pos1)
+			imagestring = obj[pos1 + 1:pos2].replace('"', '')
+			format = '.png'
+			image = gen_imglink(version, imagestring, format)
+	if cat == 'ship':
+		if obj.find('sprite') > 1:
+			postab = obj.find('\t')
+			posfind = obj.find('sprite', postab)
+			pos1 = obj.find(' ', posfind)
+			pos2 = obj.find('\n', pos1)
+			imagestring = obj[pos1 + 1:pos2].replace('"', '')
+			if imagestring.find('#') > 1:
+				imagestring = imagestring[:imagestring.find('#')-1]
+			if os.path.isfile('tmp/' + version + '/images/' + imagestring + '.png'):
+				format = '.png'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '-0.png'):
+				format = '-0.png'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '-00.png'):
+				format = '-00.png'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '=1.png'):
+				format = '=1.png'
+			image = image + '\t\t\t' + gen_imglink(version, imagestring, format)
+	return image
+	
+
 def write_html(categories, category_template, object_names, object_paths, objects, object_template, version):
 	print('    writing html files')
 	counting = []
 	globalcount = 0
+	# writing category html pages
 	for category in categories:
 		catcount = 0
 		catfile = category.replace('"', '').replace(' ', '_')
-		#print('    creating ' + catfile.strip() + '.html')
 		with open('page/' + version + '/' + catfile.strip() + '.html', 'w') as file1:
 			splitted = category_template.split('%tmpl%')
 			file1.writelines(splitted[0])
 			for obj_name in object_names:
+				# check if object fits in category
 				if obj_name.startswith(category + ' ') or obj_name.startswith(category + '\t') or obj_name == (category):
 					catcount += 1
 					globalcount +=1
 					o_index = object_names.index(obj_name)
 					obj_path = object_paths[o_index]
 					obj = objects[o_index]
-					txt = object_template.replace('%filename%', obj_path).replace('%objectname%', obj_name).replace('%object%', obj)
-					#print(each)		
+					# get image/s
+					image = add_images(obj, category, version)
+					# put variables into template
+					txt = object_template.replace('%filename%', obj_path).replace('%objectname%', obj_name).replace('%object%', obj).replace('%images%', image)
 					file1.writelines(txt + '\n')
 			file1.writelines(splitted[1])
 			counting.append(catcount)
@@ -115,6 +166,7 @@ def write_menu(menu_template, categories, counting, version):
 	with open('page/' + version + '/menu.html', 'w') as file1:
 		file1.writelines(splitted[0])
 		catpos = 0
+		# writing category links
 		for each in categories:
 			each = each.replace('"', '').replace(' ', '_')
 			file1.writelines('<a href="' + each + '.html" target="main">' + each + '</a>  (' + str(counting[catpos]) + ')<br>\n')
@@ -123,6 +175,7 @@ def write_menu(menu_template, categories, counting, version):
 
 
 def save_global_count(globalcount, vpath):
+	# write object amounts zo index.html
 	with open('page/index.html', 'r') as source:
 		lines = source.readlines()
 	# if release
