@@ -2,8 +2,7 @@ import os
 import shutil
 
 
-
-def main():
+def run():
 	if os.path.isdir('tmp/release/data/'):
 		print('deleting [release] data')
 		shutil.rmtree('tmp/release/data/')
@@ -39,6 +38,5 @@ def main():
 		print('')
 
 
-
-# run
-main()
+if __name__ == "__main__":
+	run()

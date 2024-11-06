@@ -6,7 +6,6 @@ import numpy as np
 import math
 
 
-
 def setVar():
 	global dataFolder
 	global backgroundImage
@@ -338,7 +337,7 @@ def createImage(path):
 	im.save(path + "Pillow.jpg")
 
 
-def main():
+def run():
 	global dataFolder
 	global backgroundImage
 	global iFont
@@ -384,6 +383,5 @@ def main():
 		print(' ')
 
 
-
-# run
-main()
+if __name__ == "__main__":
+	run()

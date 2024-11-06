@@ -7,7 +7,6 @@ import zipfile
 import shutil
 
 
-
 def check_local():
 	if os.getcwd() == "/storage/emulated/0/Download/mgit/test/res/src": # check for local testing
 		os.chdir("../../")
@@ -40,7 +39,7 @@ def decide_update(vpath, vapi, vchangelog):
 		with open(vpath + 'check.txt', 'w') as target:
 			target.writelines('version=' + onlineversion + '\n')
 			target.writelines('lastUpdate=' + str(lastmodifiedO)+ '\n')
-		return True, onlineversion
+		return True, onlineversion, lastmodifiedO
 	# local data is there
 	else:
 		print('  found local data, comparing now')
@@ -52,10 +51,10 @@ def decide_update(vpath, vapi, vchangelog):
 			with open(vpath + 'check.txt', 'w') as target:
 				target.writelines('version=' + onlineversion + '\n')
 				target.writelines('lastUpdate=' + str(lastmodifiedO)+ '\n')
-			return True, onlineversion
+			return True, onlineversion, lastmodifiedO
 		else:
 			print('  online and local data is the same')
-			return False, onlineversion
+			return False, onlineversion, lastmodifiedO
 	
 
 def download(version, vpath, vzip):
@@ -69,7 +68,7 @@ def download(version, vpath, vzip):
 	print('    download complete')
 
 
-def unpack(version, vpath):
+def unpack(version, vpath, lastmodifiedO):
 	# modifying index.html
 	print('  unpacking zip')
 	archive = zipfile.ZipFile(vpath + version + '.zip')
@@ -82,7 +81,7 @@ def unpack(version, vpath):
 				if line.find('release/index') > 0:
 					line = '<td style="width:200px"><a href="release/index.html" style="color: #80808;">release (' + version + ')</a></td>\n'
 				elif line.find('release update') > 0:
-					line = '<td style="font-size:11px;">release update: <br>[' + datetime.today().strftime('%Y-%m-%d') + ']</td>\n'
+					line = '<td style="font-size:11px;">release update: <br>[' + str(lastmodifiedO) + ']</td>\n'
 				target.write(line)
 	# if android
 	if vpath == 'tmp/android/':
@@ -93,7 +92,7 @@ def unpack(version, vpath):
 				if line.find('android/index') > 0:
 					line = '<td style="width:200px"><a href="android/index.html" style="color: #80808;">android (' + version + ')</a></td>\n'
 				elif line.find('android update') > 0:
-					line = '<td style="font-size:11px;">android update: <br>[' + datetime.today().strftime('%Y-%m-%d') + ']</td>\n'
+					line = '<td style="font-size:11px;">android update: <br>[' + str(lastmodifiedO) + ']</td>\n'
 				target.write(line)
 	# if continuous
 	if vpath == 'tmp/continuous/':
@@ -104,7 +103,7 @@ def unpack(version, vpath):
 				if line.find('continuous/index') > 0:
 					line = '<td style="width:200px"><a href="continuous/index.html" style="color: #808080;">continuous (' + version + ')</a></td>\n'
 				elif line.find('continuous update') > 0:
-					line = '<td style="font-size:11px;">continuous update: <br>[' + datetime.today().strftime('%Y-%m-%d') + ']</td>\n'
+					line = '<td style="font-size:11px;">continuous update: <br>[' + str(lastmodifiedO) + ']</td>\n'
 				target.write(line)		
 	# unpacking
 	for file in archive.namelist():
@@ -128,7 +127,7 @@ def unpack(version, vpath):
 	print('    unpacking done')
 
 
-def main():
+def run():
 	check_local()	
 	# checking for Release update
 	print('[release version]')
@@ -136,10 +135,10 @@ def main():
 	vRapi = 'https://api.github.com/repos/endless-sky/endless-sky/commits?path=changelog&page=1&per_page=1'
 	vRchangelog = 'https://github.com/endless-sky/endless-sky/raw/refs/heads/master/changelog'
 	vRzip = 'https://github.com/endless-sky/endless-sky/releases/download/v0.10.10/EndlessSky-win64-v0.10.10.zip' # 0.10.10 will be replaced with current version	
-	update, version = decide_update(vRpath, vRapi, vRchangelog)
+	update, version, lastmodifiedO = decide_update(vRpath, vRapi, vRchangelog)
 	if update == True:
 		download(version, vRpath, vRzip)
-		unpack(version, vRpath)
+		unpack(version, vRpath, lastmodifiedO)
 		print('  DONE')
 	else:
 		print('  ABORTING')
@@ -150,10 +149,10 @@ def main():
 	vAapi = 'https://api.github.com/repos/thewierdnut/endless-mobile/commits?path=changelog&page=1&per_page=1'
 	vAchangelog = 'https://github.com/thewierdnut/endless-mobile/raw/refs/heads/android/changelog'
 	vAzip = 'https://github.com/thewierdnut/endless-mobile/archive/refs/heads/android.zip'	
-	update, version = decide_update(vApath, vAapi, vAchangelog)
+	update, version, lastmodifiedO = decide_update(vApath, vAapi, vAchangelog)
 	if update == True:
 		download(version, vApath, vAzip)
-		unpack(version, vApath)
+		unpack(version, vApath, lastmodifiedO)
 		print('  DONE')
 	else:
 		print('  ABORTING')
@@ -164,16 +163,15 @@ def main():
 	vCapi = 'https://api.github.com/repos/endless-sky/endless-sky/commits?path=changelog&page=1&per_page=1'
 	vCchangelog = 'https://github.com/endless-sky/endless-sky/raw/refs/heads/master/changelog'
 	vCzip = 'https://github.com/endless-sky/endless-sky/archive/refs/heads/master.zip'
-	update, version = decide_update(vCpath, vCapi, vCchangelog)
+	update, version, lastmodifiedO = decide_update(vCpath, vCapi, vCchangelog)
 	if update == True:
 		download(version, vCpath, vCzip)
-		unpack(version, vCpath)
+		unpack(version, vCpath, lastmodifiedO)
 		print('  DONE')
 	else:
 		print('  ABORTING')
 	print('')
 
 
-
-# run
-main()
+if __name__ == "__main__":
+	run()

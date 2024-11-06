@@ -1,8 +1,8 @@
 import os
+import shutil
 import time
-#from pillow import Image
+from pillow import Image
 from pymage_size import get_image_size
-
 
 
 def read_template():
@@ -15,7 +15,8 @@ def read_template():
 	category_template = templates[1]
 	object_template = templates[2]
 	return menu_template, category_template, object_template
-	
+
+		
 def read_everything(data_folder):
 	print('    reading data folder')
 	started = False
@@ -86,21 +87,64 @@ def get_object_categories(object_names):
 def gen_imglink(version, imagestring, format):
 	if format != '':
 	# generate image link
-		img_format = get_image_size('tmp/' + version + '/images/' + imagestring + format)
-		width, height = img_format.get_dimensions()
-		if width > height:
-			image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="200">'
+		if format == '.gif':
+			img_format = get_image_size('page/' + version + '/images/' + imagestring + format)
+			width, height = img_format.get_dimensions()
+			if width > height:
+				image = '<img src="images/' + imagestring + format + '" width="200">'
+			else:
+				image = '<img src="images/' + imagestring + format + '" height="200">'
 		else:
-			image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" height="200">'
+			img_format = get_image_size('tmp/' + version + '/images/' + imagestring + format)
+			width, height = img_format.get_dimensions()
+			if width > height:
+				image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="200">'
+			else:
+				image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" height="200">'
 	else:
+		# something went wrong
 		image = ''
 		print('    format error: ' + imagestring + format)
 	return image
 
 
+def create_animated(version, imagestring, format):
+	# creates animaated gifs and saves them into page/<version>/images/...
+	# strip variables to get files
+	imgpath = imagestring[:imagestring.rfind('/') + 1]
+	os.makedirs('page/' + version + '/images/' + imgpath, exist_ok=True)
+	formatsplit = format.split('.')
+	char = formatsplit[0][:1]
+	number = formatsplit[0][1:]
+	files = []
+	file = 'tmp/' + version + '/images/' + imagestring + format
+	# get list if corresponding files
+	while os.path.isfile(file):
+		files.append(file)
+		if len(number) == 2:
+			number = str(int(number) + 1).zfill(2)
+		else:
+			number = str(int(number) + 1)
+		file = 'tmp/' + version + '/images/' + imagestring + char + number + '.' + formatsplit[1]
+	# create animated gif
+	frames = []
+	files.sort()
+	for file in files:
+		frame = Image.open(os.path.join(file)).convert("RGBA")  # ensure transparency
+		background = Image.new("RGBA", frame.size, (0, 0, 0, 0))  # transparent background
+		background.paste(frame, (0, 0), frame)  # paste the frame onto the background
+		rgb_frame = background.convert("RGB").convert("P", palette=Image.ADAPTIVE, colors=255)
+		rgb_frame.info['transparency'] = 0
+		frames.append(rgb_frame)
+	frame_one = frames[0]
+	frame_one.save('page/' + version + '/images/' + imagestring + '.gif', format="GIF", append_images=frames[1:], 
+		save_all=True, duration=100, loop=0, disposal=2)
+
+
 def add_images(obj, cat, version):
 	image = ''
 	format = ''
+	# outfit & ship thumbnails
 	if cat == 'outfit' or cat == 'ship':	
 		if obj.find('thumbnail') > 1 :
 			postab = obj.find('\t')
@@ -110,6 +154,7 @@ def add_images(obj, cat, version):
 			imagestring = obj[pos1 + 1:pos2].replace('"', '')
 			format = '.png'
 			image = gen_imglink(version, imagestring, format)
+	# ship sprites (with possiboe animations)
 	if cat == 'ship':
 		if obj.find('sprite') > 1:
 			postab = obj.find('\t')
@@ -119,15 +164,20 @@ def add_images(obj, cat, version):
 			imagestring = obj[pos1 + 1:pos2].replace('"', '')
 			if imagestring.find('#') > 1:
 				imagestring = imagestring[:imagestring.find('#')-1]
+			# no animation
 			if os.path.isfile('tmp/' + version + '/images/' + imagestring + '.png'):
 				format = '.png'
+			# animations
 			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '-0.png'):
-				format = '-0.png'
+				create_animated(version, imagestring, '-0.png')
+				format = '.gif'
 			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '-00.png'):
-				format = '-00.png'
+				create_animated(version, imagestring, '-00.png')
+				format = '.gif'
 			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '=1.png'):
-				format = '=1.png'
-			image = image + '\t\t\t' + gen_imglink(version, imagestring, format)
+				create_animated(version, imagestring, '=1.png')
+				format = '.gif'
+			image = image + '        ' + gen_imglink(version, imagestring, format)
 	return image
 	
 
@@ -201,8 +251,7 @@ def save_global_count(globalcount, vpath):
 				target.write(line)
 
 
-
-def main():
+def run():
 	# if release
 	if os.path.isdir('tmp/release/data/'):
 		data_folder = 'tmp/release/data/'
@@ -244,6 +293,5 @@ def main():
 		print(' ')
 
 
-
-# run
-main()
+if __name__ == "__main__":
+	run()
