@@ -3,6 +3,7 @@ import shutil
 import time
 from pillow import Image
 from pymage_size import get_image_size
+from transparent_gif_converter import save_transparent_gif # local lib
 
 
 def read_template():
@@ -118,7 +119,7 @@ def create_animated(version, imagestring, format):
 	number = formatsplit[0][1:]
 	files = []
 	file = 'tmp/' + version + '/images/' + imagestring + format
-	# get list if corresponding files
+	# get list of corresponding files
 	while os.path.isfile(file):
 		files.append(file)
 		if len(number) == 2:
@@ -126,19 +127,15 @@ def create_animated(version, imagestring, format):
 		else:
 			number = str(int(number) + 1)
 		file = 'tmp/' + version + '/images/' + imagestring + char + number + '.' + formatsplit[1]
-	# create animated gif
+	# create gif
 	frames = []
-	files.sort()
+	save_file = 'page/' + version + '/images/' + imagestring + '.gif'
+	duration = int(100)
 	for file in files:
-		frame = Image.open(os.path.join(file)).convert("RGBA")  # ensure transparency
-		background = Image.new("RGBA", frame.size, (0, 0, 0, 0))  # transparent background
-		background.paste(frame, (0, 0), frame)  # paste the frame onto the background
-		rgb_frame = background.convert("RGB").convert("P", palette=Image.ADAPTIVE, colors=255)
-		rgb_frame.info['transparency'] = 0
-		frames.append(rgb_frame)
-	frame_one = frames[0]
-	frame_one.save('page/' + version + '/images/' + imagestring + '.gif', format="GIF", append_images=frames[1:], 
-		save_all=True, duration=100, loop=0, disposal=2)
+		frame = Image.open(file)
+		frames.append(frame)
+	save_transparent_gif(frames, duration, save_file) # from local lib
+	
 
 
 def add_images(obj, cat, version):
@@ -154,8 +151,8 @@ def add_images(obj, cat, version):
 			imagestring = obj[pos1 + 1:pos2].replace('"', '')
 			format = '.png'
 			image = gen_imglink(version, imagestring, format)
-	# ship sprites (with possiboe animations)
-	if cat == 'ship':
+	# ship sprites (with possible animations)
+	if cat == 'ship' or cat == 'minable':
 		if obj.find('sprite') > 1:
 			postab = obj.find('\t')
 			posfind = obj.find('sprite', postab)
@@ -177,8 +174,41 @@ def add_images(obj, cat, version):
 			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '=1.png'):
 				create_animated(version, imagestring, '=1.png')
 				format = '.gif'
-			image = image + '        ' + gen_imglink(version, imagestring, format)
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '~00.png'):
+				create_animated(version, imagestring, '~00.png')
+				format = '.gif'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '^00.png'):
+				create_animated(version, imagestring, '^00.png')
+				format = '.gif'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '^0.png'):
+				create_animated(version, imagestring, '^0.png')
+				format = '.gif'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '+0.png'):
+				create_animated(version, imagestring, '+0.png')
+				format = '.gif'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '+00.png'):
+				create_animated(version, imagestring, '+00.png')
+				format = '.gif'
+			image = image + gen_imglink(version, imagestring, format)
+	# land images
+	if cat == 'planet':
+		if obj.find('landscape') > 1:
+			postab = obj.find('\t')
+			posfind = obj.find('landscape', postab)
+			pos1 = obj.find(' ', posfind)
+			pos2 = obj.find('\n', pos1)
+			imagestring = obj[pos1 + 1:pos2].replace('"', '')
+			if imagestring.find('#') > 1:
+				imagestring = imagestring[:imagestring.find('#')-1]
+			if os.path.isfile('tmp/' + version + '/images/' + imagestring + '.jpg'):
+				format = '.jpg'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '.JPG'):
+				format = '.JPG'
+			elif os.path.isfile('tmp/' + version + '/images/' + imagestring + '.png'):
+				format = '.png'
+			image = gen_imglink(version, imagestring, format)
 	return image
+	# effect / star / outfit "flare sprite" "reverse flare sprite" "steering flare sprite" icon weapon sprite
 	
 
 def write_html(categories, category_template, object_names, object_paths, objects, object_template, version):

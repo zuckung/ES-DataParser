@@ -81,7 +81,7 @@ def unpack(version, vpath, lastmodifiedO):
 				if line.find('release/index') > 0:
 					line = '<td style="width:200px"><a href="release/index.html" style="color: #80808;">release (' + version + ')</a></td>\n'
 				elif line.find('release update') > 0:
-					line = '<td style="font-size:11px;">release update: <br>[' + str(lastmodifiedO) + ']</td>\n'
+					line = '<td style="font-size:11px;">release update: <br>[' + str(lastmodifiedO).split(' ')[0] + ']</td>\n'
 				target.write(line)
 	# if android
 	if vpath == 'tmp/android/':
@@ -92,7 +92,7 @@ def unpack(version, vpath, lastmodifiedO):
 				if line.find('android/index') > 0:
 					line = '<td style="width:200px"><a href="android/index.html" style="color: #80808;">android (' + version + ')</a></td>\n'
 				elif line.find('android update') > 0:
-					line = '<td style="font-size:11px;">android update: <br>[' + str(lastmodifiedO) + ']</td>\n'
+					line = '<td style="font-size:11px;">android update: <br>[' + str(lastmodifiedO).split(' ')[0] + ']</td>\n'
 				target.write(line)
 	# if continuous
 	if vpath == 'tmp/continuous/':
@@ -103,7 +103,7 @@ def unpack(version, vpath, lastmodifiedO):
 				if line.find('continuous/index') > 0:
 					line = '<td style="width:200px"><a href="continuous/index.html" style="color: #808080;">continuous (' + version + ')</a></td>\n'
 				elif line.find('continuous update') > 0:
-					line = '<td style="font-size:11px;">continuous update: <br>[' + str(lastmodifiedO) + ']</td>\n'
+					line = '<td style="font-size:11px;">continuous update: <br>[' + str(lastmodifiedO).split(' ')[0] + ']</td>\n'
 				target.write(line)		
 	# unpacking
 	for file in archive.namelist():
