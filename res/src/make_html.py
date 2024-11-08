@@ -91,17 +91,23 @@ def gen_imglink(version, imagestring, format):
 		if format == '.gif':
 			img_format = get_image_size('page/' + version + '/images/' + imagestring + format)
 			width, height = img_format.get_dimensions()
-			if width > height:
-				image = '<img src="images/' + imagestring + format + '" width="200">'
+			if width > 200 or height > 200:
+				if width > height:
+					image = '<img src="images/' + imagestring + format + '" width="200">'
+				else:
+					image = '<img src="images/' + imagestring + format + '" height="200">'
 			else:
-				image = '<img src="images/' + imagestring + format + '" height="200">'
+					image = '<img src="images/' + imagestring + format + '" width="' + str(width) + '" height="' + str(height) + '">'
 		else:
 			img_format = get_image_size('tmp/' + version + '/images/' + imagestring + format)
 			width, height = img_format.get_dimensions()
-			if width > height:
-				image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="200">'
+			if width > 200 or height > 200:
+				if width > height:
+					image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="200">'
+				else:
+					image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" height="200">'
 			else:
-				image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" height="200">'
+				image = '<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/' + imagestring + format + '" width="' + str(width) + '" height="' + str(height) + '">'
 	else:
 		# something went wrong
 		image = ''
@@ -139,6 +145,8 @@ def create_animated(version, imagestring, format):
 
 
 def add_images(obj, cat, version):
+	# add pictures for outfit / ship / minable / land
+	# CURRENTLY MISSING:  effect / star / outfit "flare sprite" "reverse flare sprite" "steering flare sprite" icon weapon sprite
 	image = ''
 	format = ''
 	# outfit & ship thumbnails
@@ -208,7 +216,6 @@ def add_images(obj, cat, version):
 				format = '.png'
 			image = gen_imglink(version, imagestring, format)
 	return image
-	# effect / star / outfit "flare sprite" "reverse flare sprite" "steering flare sprite" icon weapon sprite
 	
 
 def write_html(categories, category_template, object_names, object_paths, objects, object_template, version):
