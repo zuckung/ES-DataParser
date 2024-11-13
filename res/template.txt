@@ -13,7 +13,8 @@ color: #FFFFFF;
 </style>
 <body>
 <script type="text/javascript" src="//counter.websiteout.com/js/35/6/0/0"></script><br>
-<font size="1"><a href="https://zuckung.github.io/ES-DataParser/">back</a><br>
+<br>
+<font size="1"><a href="https://zuckung.github.io/ES-DataParser/" target="_top">back</a><br>
 <br>
 show objects starting with:<br>
 <br>
