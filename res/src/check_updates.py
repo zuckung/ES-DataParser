@@ -27,15 +27,16 @@ def decide_update(vpath, vapi, vchangelog):
 		newrequest = requests.get('https://api.github.com/repos/endless-sky/endless-sky/commits?path=data&page=1&per_page=1', allow_redirects=True, timeout=30) 
 		data = newrequest.json()
 		lastmodifiedO = datetime.strptime(data[0]['commit']['committer']['date'],'%Y-%m-%dT%H:%M:%SZ')
+	# get version number
+	request = requests.get(vchangelog)
+	with open(vpath + 'changelog.txt', 'wb') as changelog:
+		changelog.write(request.content) # downloading the changelog
+	with open(vpath + 'changelog.txt', 'r') as sourcefile:
+		onlineversion = sourcefile.readline().replace('Version ', '').replace('\n', '') # result example: 0.10.10
 	# check for local data
 	if not os.path.isfile(vpath + 'check.txt'):
 		# create a new check.txt
 		print('  no local data found, creating it now')
-		request = requests.get(vchangelog)
-		with open(vpath + 'changelog.txt', 'wb') as changelog:
-			changelog.write(request.content) # downloading the changelog
-		with open(vpath + 'changelog.txt', 'r') as sourcefile:
-			onlineversion = sourcefile.readline().replace('Version ', '').replace('\n', '') # result example: 0.10.10
 		with open(vpath + 'check.txt', 'w') as target:
 			target.writelines('version=' + onlineversion + '\n')
 			target.writelines('lastUpdate=' + str(lastmodifiedO)+ '\n')
