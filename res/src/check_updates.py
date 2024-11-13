@@ -45,10 +45,10 @@ def decide_update(vpath, vapi, vchangelog):
 	else:
 		print('  found local data, comparing now')
 		with open(vpath + 'check.txt', 'r') as source:
-			onlineversion = source.readline().replace('version=', '').replace('\n', '')
+			localversion = source.readline().replace('version=', '').replace('\n', '')
 			uDate = datetime.strptime(source.readline().replace('lastUpdate=', '').replace('\n', ''),'%Y-%m-%d %H:%M:%S')
 		if uDate != lastmodifiedO:
-			print('  online and local data different')
+			print('  online and local data is different')
 			with open(vpath + 'check.txt', 'w') as target:
 				target.writelines('version=' + onlineversion + '\n')
 				target.writelines('lastUpdate=' + str(lastmodifiedO)+ '\n')
