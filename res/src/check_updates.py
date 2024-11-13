@@ -101,7 +101,7 @@ def unpack(version, vpath, lastmodifiedO):
 		with open('page/index.html', 'w') as target:
 			for line in lines:
 				if line.find('continuous/index') > 0:
-					line = '<td style="width:200px"><a href="continuous/index.html" style="color: #808080;">continuous (' + version + ')</a></td>\n'
+					line = '<td style="width:200px"><a href="continuous/index.html" style="color: #808080;">continuous (' + version + ' +)</a></td>\n'
 				elif line.find('continuous update') > 0:
 					line = '<td style="font-size:11px;">continuous update: <br>[' + str(lastmodifiedO).split(' ')[0] + ']</td>\n'
 				target.write(line)		
