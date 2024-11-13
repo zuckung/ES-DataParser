@@ -1,4 +1,4 @@
-name: (manual) test the on push workflow
+name: (manual) test
 on: 
   workflow_dispatch:
 
@@ -12,24 +12,25 @@ jobs:
         with:
           fetch-depth: 2
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      - name: Change file in `page/` folder
-        run: |
-          import os
-          if os.path.isfile('page/test.txt'):
-            with open('page/test.txt', 'r') as source:
-              content = int(source.read()) + 1
-            with open('page/test.txt', 'w') as target:
-              target.write(str(content))
-          else:
-            with open('page/test.txt', 'w') as target:
-              target.write('1')
-        shell: python
-
+#      - name: Change file in `page/` folder
+#        run: |
+#          import os
+#          if os.path.isfile('page/test.txt'):
+#            with open('page/test.txt', 'r') as source:
+#              content = int(source.read()) + 1
+#            with open('page/test.txt', 'w') as target:
+#              target.write(str(content))
+#          else:
+#            with open('page/test.txt', 'w') as target:
+#              target.write('1')
+#        shell: python
+      - name: set check.txts to old dates
+        run: python3 res/src/set_force_reload.py
       - name: Commit file
         run: |
           git config --global user.name "zuckung"
           git config --global user.email "zuckung@gmx.de"
-          git add page/test.txt
+          git add "tmp/"
           git diff-index --quiet HEAD || git commit -m "Initiated test"
       - name: Push changes
         uses: ad-m/github-push-action@master
