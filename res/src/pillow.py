@@ -241,6 +241,28 @@ def line_length(start, end): # start (tuple): l(x1, y1) startpoint, end (tuple):
 	length = math.sqrt((x2 - x1)**2 + (y2 - y1)**2) 
 	return length # float line length
 
+
+def draw_arrow(x0, y0, x1, y1):
+	# Now we can work out the x,y coordinates of the bottom of the arrowhead triangle
+	xb = 0.95*(x1-x0)+x0
+	yb = 0.95*(y1-y0)+y0
+	# Work out the other two vertices of the triangle
+	# Check if line is vertical
+	if x0==x1:
+		vtx0 = (xb-5, yb)
+		vtx1 = (xb+5, yb)
+	# Check if line is horizontal
+	elif y0==y1:
+		vtx0 = (xb, yb+5)
+		vtx1 = (xb, yb-5)
+	else:
+		alpha = math.atan2(y1-y0,x1-x0)-90*math.pi/180
+		a = 4*math.cos(alpha)
+		b = 4*math.sin(alpha)
+		vtx0 = (xb+a, yb+b)
+		vtx1 = (xb-a, yb-b)
+	return vtx0, vtx1
+
 				
 def createImage(path):
 	print('  creating image')
@@ -284,12 +306,11 @@ def createImage(path):
 					start = linepoints[5]
 					end = linepoints[len(linepoints) - 6]
 					draw.line((start, end), fill=(204,0,204))
-					
-					# create code for wormhole direction here
-					# draw.polygon([(20,10), (200, 200), (100,20)], fill = (204,0,204))
-					# https://stackoverflow.com/questions/63671018/how-can-i-draw-an-arrow-using-pil
-					# opencv arrowedLine() ?
-					
+					# create arrows
+					x0, y0 = linepoints[len(linepoints)-20]
+					x1, y1 = linepoints[len(linepoints)-30]
+					vtx0, vtx1 = draw_arrow(x0, y0, x1, y1)
+					draw.polygon([vtx0, vtx1, linepoints[len(linepoints) - 20]], fill=(204,0,204))					
 	print('    drawing systems')
 	for each in systemNames:
 		inhab = False
