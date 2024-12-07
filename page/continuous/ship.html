@@ -11457,6 +11457,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"launch effect" "human internal"
 	bay "Fighter" 43.5 2
 		"launch effect" "human internal"
+	bay "Fighter" -43.5 2
+		"launch effect" "human internal"
+	bay "Fighter" 43.5 2
+		"launch effect" "human internal"
 	leak "leak" 50 50
 	leak "flame" 50 80
 	leak "big leak" 90 30
@@ -12312,7 +12316,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"fuel capacity" 700
 		"cargo space" 100
 		"outfit space" 820
-		"weapon capacity" 370
+		"weapon capacity" 240
 		"engine capacity" 210
 		weapon
 			"blast radius" 300
@@ -12320,41 +12324,47 @@ document.addEventListener("DOMContentLoaded", function() {
 			"hull damage" 1500
 			"hit force" 4500
 	outfits
-		"Particle Cannon" 4
-		"Meteor Missile Launcher" 4
-		"Meteor Missile" 120
-		"Heavy Laser Turret" 2
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 60
+		"Sidewinder Missile Rack" 8
+		"Sidewinder Missile" 184
+		"Torpedo Launcher" 2
+		"Torpedo" 60
+		"Heavy Laser Turret"
 		"Heavy Anti-Missile Turret" 2
 		"Fusion Reactor"
 		"LP288a Battery Pack"
-		"D94-YV Shield Generator"
+		"D94-YV Shield Generator" 2
 		"Large Radar Jammer" 2
 		"Water Coolant System"
 		"Brig"
 		"Laser Rifle" 40
 		"Fragmentation Grenades" 40
-		"Security Station"
+		"Security Station" 2
 		"Tactical Scanner"
 		"X5700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
 	engine -36.5 200 0.65
 	engine 36.5 200 0.65
-	gun -17.5 -176.5 "Particle Cannon"
-	gun 17.5 -176.5 "Particle Cannon"
-	gun -17.5 -176.5 "Meteor Missile Launcher"
-	gun 17.5 -176.5 "Meteor Missile Launcher"
-	gun -26 -167.5 "Particle Cannon"
-	gun 26 -167.5 "Particle Cannon"
+	gun -17.5 -176.5 "Torpedo Launcher"
+	gun 17.5 -176.5 "Torpedo Launcher"
 	gun -26 -167.5 "Meteor Missile Launcher"
 	gun 26 -167.5 "Meteor Missile Launcher"
 	turret 0 -49 "Heavy Laser Turret"
-	turret 0 14 "Heavy Laser Turret"
 	turret -22 22 "Heavy Anti-Missile Turret"
 	turret 22 22 "Heavy Anti-Missile Turret"
 	bay "Fighter" -38.5 -64.5
 		"launch effect" "human internal"
 	bay "Fighter" 38.5 -64.5
+		"launch effect" "human internal"
+	bay "Fighter" -38.5 -64.5
+		"launch effect" "human internal"
+	bay "Fighter" 38.5 -64.5
+		"launch effect" "human internal"
+	bay "Fighter" -50 40.5
+		"launch effect" "human internal"
+	bay "Fighter" 50 40.5
 		"launch effect" "human internal"
 	bay "Fighter" -50 40.5
 		"launch effect" "human internal"
@@ -15061,7 +15071,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "large explosion" 20
 	explode "huge explosion" 5
 	"final explode" "final explosion large"
-	description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry more fighters than even the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound and Tarazed to restrict sale of the "Hauler III: Type F," "Skein" to its Militia only.`
+	description `This particular cockpit and engine set has found itself attached to three of Southbound Shipyards' new "Type F" Fighter-carrier pods. When the Free Worlds asked for a carrier, they did not expect one that would be able to carry almost as many fighters as the heaviest Navy warships. Given this fact, the Free Worlds have asked Southbound and Tarazed to restrict sale of the "Hauler III: Type F," "Skein" to its Militia only.`
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/skein.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/skein.png" height="200">
 </details>
@@ -16653,17 +16663,22 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/variants.txt | ship "Carrier" "Carrier (Jump)"</summary>
 <pre>ship "Carrier" "Carrier (Jump)"
 	outfits
-		"Particle Cannon" 4
-		"Sidewinder Missile Launcher" 4
-		"Sidewinder Missile" 180
-		"Electron Turret" 2
+		"Typhoon Launcher" 2
+		"Typhoon Torpedo" 60
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Rack" 8
+		"Sidewinder Missile" 184
+		"Electron Turret"
 		"Heavy Anti-Missile Turret" 2
 		"Laser Rifle" 40
 		"Fragmentation Grenades" 40
+		"Security Station" 2
+		"Brig"
 		"Armageddon Core"
-		"Dwarf Core"
 		"LP072a Battery Pack"
-		"D94-YV Shield Generator"
+		"D94-YV Shield Generator" 2
+		"D67-TM Shield Generator"
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Water Coolant System"
@@ -16672,18 +16687,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"A860 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Jump Drive"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
+	gun "Typhoon Launcher"
+	gun "Typhoon Launcher"
 	gun "Sidewinder Missile Launcher"
 	gun "Sidewinder Missile Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Sidewinder Missile Launcher"
-	gun "Sidewinder Missile Launcher"
-	turret "Heavy Anti-Missile Turret"
 	turret "Electron Turret"
 	turret "Heavy Anti-Missile Turret"
-	turret "Electron Turret"
+	turret "Heavy Anti-Missile Turret"
 </pre>
 
 </details>
@@ -16693,37 +16703,34 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/variants.txt | ship "Carrier" "Carrier (Mark II)"</summary>
 <pre>ship "Carrier" "Carrier (Mark II)"
 	outfits
-		"Particle Cannon" 4
-		"Sidewinder Missile Launcher" 4
-		"Sidewinder Missile" 180
-		"Electron Turret" 2
+		"Typhoon Launcher" 2
+		"Typhoon Torpedo" 60
+		"Sidewinder Missile Launcher" 2
+		"Sidewinder Missile" 90
+		"Sidewinder Missile Rack" 8
+		"Sidewinder Missile" 184
+		"Electron Turret"
 		"Heavy Anti-Missile Turret" 2
 		"Armageddon Core"
-		"Dwarf Core"
 		"LP036a Battery Pack"
-		"Supercapacitor" 3
-		"D94-YV Shield Generator"
+		"D94-YV Shield Generator" 2
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
 		"Outfits Expansion" 4
 		"Brig"
 		"Laser Rifle" 45
 		"Fragmentation Grenades" 45
+		"Security Station" 2
 		"A860 Atomic Thruster"
 		"A525 Atomic Steering"
 		"Hyperdrive"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
+	gun "Typhoon Launcher"
+	gun "Typhoon Launcher"
 	gun "Sidewinder Missile Launcher"
 	gun "Sidewinder Missile Launcher"
-	gun "Particle Cannon"
-	gun "Particle Cannon"
-	gun "Sidewinder Missile Launcher"
-	gun "Sidewinder Missile Launcher"
-	turret "Heavy Anti-Missile Turret"
 	turret "Electron Turret"
 	turret "Heavy Anti-Missile Turret"
-	turret "Electron Turret"
+	turret "Heavy Anti-Missile Turret"
 </pre>
 
 </details>
@@ -30710,6 +30717,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/wanderer/wanderers start.txt | ship "Carrier" "Carrier (Alpha)"</summary>
 <pre>ship "Carrier" "Carrier (Alpha)"
+	sprite "ship/modified carrier"
+	thumbnail "thumbnail/modified carrier"
+	add attributes
+		"weapon capacity" 120
 	outfits
 		"Ion Cannon" 2
 		"Hai Tracker Pod" 4
@@ -30726,20 +30737,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		`"Bondir" Atomic Thruster`
 		"Steering (Stellar Class)"
 		"Jump Drive"
-	gun "Hai Tracker Pod"
-	gun "Hai Tracker Pod"
-	gun "Ion Cannon"
-	gun "Ion Cannon"
-	gun "Hai Tracker Pod"
-	gun "Hai Tracker Pod"
-	gun
-	gun
-	turret "Shield Disruptor Turret"
-	turret "Husk-Slice Turret"
-	turret "Shield Disruptor Turret"
-	turret "Husk-Slice Turret"
+	gun -17 -179 "Ion Cannon"
+	gun 17 -179 "Ion Cannon"
+	gun -25 -168 "Hai Tracker Pod"
+	gun 25 -168 "Hai Tracker Pod"
+	gun -32.5 -163.5 "Hai Tracker Pod"
+	gun 32.5 -163.5 "Hai Tracker Pod"
+	turret 0 -49 "Shield Disruptor Turret"
+	turret 0 14 "Husk-Slice Turret"
+	turret -22 22 "Shield Disruptor Turret"
+	turret 22 22 "Husk-Slice Turret"
 </pre>
-
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/modified carrier.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/modified carrier.png" height="200">
 </details>
 
 
