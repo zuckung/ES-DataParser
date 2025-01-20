@@ -1,9 +1,20 @@
 import sys
 import os
 import glob
+import PIL
 from PIL import Image, ImageDraw, ImageFont
 import numpy as np
 import math
+
+
+
+def check_local():
+	if os.getcwd() == "/storage/emulated/0/Download/mgit/ES-DataParser/res/src": # check for local testing
+		iFont = '/system/fonts/Roboto-Regular.ttf'
+		os.chdir("../../")
+	else:
+		iFont = 'DejaVuSans.ttf'
+	return iFont
 
 
 def setVar():
@@ -23,6 +34,8 @@ def setVar():
 	global inhabited
 	global governments
 	global govColor
+	global w
+	global h
 	wormBlacklist = ['Over the Rainbow'] # dont draw these links
 	legend = ['Republic', 'Syndicate', 'Pirate', 'Remnant', 'Hai', 'Hai (Unfettered)', 'Quarg', 'Pug', 'Coalition', 'Heliarch', 
 		'Korath Exiles', 'Kor Efret', 'Kor Mereti', 'Kor Sestor', 'Wanderer', 'Bunrodea', 'Gegno', 'Gegno Scin', 'Gegno Vi'] # show these governments in the map legend
@@ -37,12 +50,14 @@ def setVar():
 	inhabited = []
 	governments = []
 	govColor = []
+	w = 4096
+	h = 4096
 
 
 def convertCoordinates(pos):  # 4096 x 4096, center at 2048, 2048 sagitarius a, which is  112 22
 	poss = pos.split(' ')
-	new_posx = float(poss[0]) + 1936
-	new_posy = float(poss[1]) + 2026
+	new_posx = float(poss[0]) + w/2 - 112
+	new_posy = float(poss[1]) + h/2 - 22
 	return int(new_posx), int(new_posy)
 
 
@@ -266,25 +281,32 @@ def draw_arrow(x0, y0, x1, y1):
 				
 def createImage(path):
 	print('  creating image')
-	im = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
+	# define size
+	im = PIL.Image.new(mode = "RGB", size = (w, h), color = (0, 0, 0))
+	im2 = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
+	width, height = im2.size
+	pastex = int((w - width) / 2)
+	pastey = int((h - height) / 2)
+	im.paste(im2, (pastex, pastey))
 	draw = ImageDraw.Draw(im, 'RGBA')
-	print('    drawing links')
+	print('    drawing links')	
 	for each in systemNames:
 		sysIndex = systemNames.index(each)
 		links = systemLinks[sysIndex].split('|')
 		for link in links:
 			if link != ' ':
-				# drawing system link
-				targetIndex = systemNames.index(link)
-				# remove some pixels to not overlap the system circles
-				start = (systemPosX[sysIndex], systemPosY[sysIndex]) 
-				end = (systemPosX[targetIndex], systemPosY[targetIndex])
-				linelength = line_length(start, end)
-				linepoints = line_points(start, end, int(linelength))
-				points = len(linepoints)
-				start = linepoints[5]
-				end = linepoints[len(linepoints) - 6]
-				draw.line((start, end), fill=(128,128,128))
+				if each != link:
+					# drawing system link
+					targetIndex = systemNames.index(link)
+					# remove some pixels to not overlap the system circles
+					start = (systemPosX[sysIndex], systemPosY[sysIndex])
+					end = (systemPosX[targetIndex], systemPosY[targetIndex])
+					linelength = line_length(start, end)
+					linepoints = line_points(start, end, int(linelength))
+					points = len(linepoints)
+					start = linepoints[5]
+					end = linepoints[len(linepoints) - 6]
+					draw.line((start, end), fill=(128,128,128))
 		for link in wormholes:
 			# drawing wormhole link
 			first = link.split('|')[0]
@@ -346,12 +368,12 @@ def createImage(path):
 		draw.text((startX+15, startY-14) , each, fill=(255,255,255), font=font)
 		startY += 25
 	# crop image
-	print('    cropping image')
-	left = 200 # - 200
-	top = 800 # - 800
-	right = 3596 # -500
-	bottom = 4096 # -0
-	im = im.crop((left, top, right, bottom))
+#	print('    cropping image')
+#	left = 200 # - 200
+#	top = 800 # - 800
+#	right = 3596 # -500
+#	bottom = 4096 # -0
+#	im = im.crop((left, top, right, bottom))
 	# save now
 	im = im.convert('RGB')
 	print('    saving image')
@@ -362,7 +384,7 @@ def run():
 	global dataFolder
 	global backgroundImage
 	global iFont
-	iFont = 'DejaVuSans.ttf'
+	iFont = check_local()
 	# if release
 	if os.path.isdir('tmp/release/data/'):
 		dataFolder = 'tmp/release/data/'
