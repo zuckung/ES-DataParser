@@ -266,7 +266,7 @@ def draw_arrow(x0, y0, x1, y1):
 				
 def createImage(path):
 	print('  creating image')
-	im = Image.open(backgroundImage + 'ui/milky way.jpg', 'r')
+	im = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
 	draw = ImageDraw.Draw(im, 'RGBA')
 	print('    drawing links')
 	for each in systemNames:
