@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <font size="1">
 
 <details>
-<summary>data/start.txt | start "default"</summary>
+<summary>data/starts.txt | start "default"</summary>
 <pre>start "default"
 	name "Endless Sky"
 	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport at the age of fifteen. After many long years of working at a textile mill, you've finally saved enough credits to apply for a pilot's license from the Republic.`
@@ -62,6 +62,58 @@ document.addEventListener("DOMContentLoaded", function() {
 			interest 0.004
 			term 365
 	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/starts.txt | start "hai space"</summary>
+<pre>start "hai space"
+	name "Hai Origins"
+	description `You grew up on Greenwater, a Hai world with a rich and mixed culture thanks to its climate. You've dreamed of owning your own fleet since you were given toy spaceships as a small child. To reach that goal, you worked hard at a travel company, recommending locations in human space.`
+	description `	Now, as your ferry docks at the main spaceport, you feel like this is the start of a new life as a captain.`
+	thumbnail "scene/hai start"
+	system "Fah Soom"
+	planet "Greenwater"
+	date 16 11 3013
+	on display
+		description `This start is locked.`
+	to reveal
+		has "Ask the Hai about the Unfettered"
+	on reveal
+		name "Hai Origins"
+		description `You grew up on Greenwater, a Hai world with a rich and mixed culture thanks to its climate. You've dreamed of owning your own fleet since you were given toy spaceships as a small child, and you've worked hard at a travel company to reach this goal.`
+		description `	Now, as your ferry docks at the main spaceport, you feel like this is the start of a new life as a captain.`
+		description `	To unlock this start, you must complete the main human campaign.`
+		system "Fah Soom"
+		planet "Greenwater"
+		date 16 11 3013
+		credits 1431000
+		debt 1431000
+	to unlock
+		has "Hai Start Unlocked"
+		# TODO: think about what point of HR should unlock this once it's back in the game, if any
+		# has "event: hai-human resolution announced"
+	conversation "hai intro"
+	account
+		credits 1431000
+		score 400
+		mortgage Mortgage
+			principal 1431000
+			interest 0.003
+			term 730
+	set "species: human"
+	set "hai space start"
+	# need to set it here to not have it trigger alongside the invisible mission
+	set "First Contact: Hai: offered"
+	set "First Contact: Hai: declined"
+	set "First Contact: Unfettered: offered"
+	set "First Contact: Unfettered: declined"
+	set "Ask the Hai about the Unfettered: offered"
+	set "Ask the Hai about the Unfettered: declined"
 </pre>
 
 </details>

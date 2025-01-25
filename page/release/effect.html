@@ -635,6 +635,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/effects.txt | effect "human external"</summary>
 <pre>effect "human external"
 	sound "human launch external"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -652,6 +653,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "human launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -669,6 +671,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "hai launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -678,6 +681,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/effects.txt | effect "remnant external"</summary>
 <pre>effect "remnant external"
 	sound "remnant launch external"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -695,6 +699,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "remnant launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -704,6 +709,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/effects.txt | effect "korath external"</summary>
 <pre>effect "korath external"
 	sound "korath launch external"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -721,6 +727,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "korath launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -738,6 +745,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "coalition launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -755,6 +763,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 360
 	"random velocity" 3
 	sound "sheragi launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -764,6 +773,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/effects.txt | effect "scin launch"</summary>
 <pre>effect "scin launch"
 	sound "scin launch"
+	"sound category" "engine"
 </pre>
 
 </details>
@@ -811,6 +821,39 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/harvesting.txt | effect "droplet burst"</summary>
+<pre>effect "droplet burst"
+	sprite "effect/puff"
+		"frame rate" 12
+		"no repeat"
+		"scale" 0.5
+	sound "bombardment"
+	"random angle" 360
+	"random spin" 3
+	"lifetime" 15
+	"random lifetime" 15
+	"random velocity" 9
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/harvesting.txt | effect "timber"</summary>
+<pre>effect "timber"
+	sprite "effect/flotsam integral wood"
+	sound "crunch"
+	"random angle" 180
+	"random lifetime" 120
+	"random velocity" 3
+	"velocity scale" 0.3
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/hazards.txt | effect "ion hazard"</summary>
 <pre>effect "ion hazard"
 	sprite "effect/spark"
@@ -829,6 +872,62 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/hazards.txt | effect "gravity well"</summary>
 <pre>effect "gravity well"
 	"sound" "gravity well"
+	"sound category" "environment"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | effect "power beaming"</summary>
+<pre>effect "power beaming"
+	sprite "effect/spark"
+		"scale" 0.25
+		"frame rate" 5
+		"random start frame"
+		"rewind"
+	"lifetime" 30
+	"random lifetime" 30
+	"random angle" 180
+	"random velocity" 1
+	"random spin" 10
+	"random frame rate" 5
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | effect "airstream 1"</summary>
+<pre>effect "airstream 1"
+	sprite "effect/leak big"
+		"start frame" 2
+		"no repeat"
+		"frame rate" 3
+		"scale" 0.5
+	"lifetime" 60
+	"random lifetime" 60
+	"random angle" 12
+	"random spin" 180
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | effect "airstream 2"</summary>
+<pre>effect "airstream 2"
+	sprite "effect/leak"
+		"start frame" 2
+		"no repeat"
+		"frame rate" 3
+		"scale" 0.5
+	"lifetime" 60
+	"random lifetime" 90
+	"random angle" 15
+	"random spin" 180
+	"velocity scale" 0
 </pre>
 
 </details>
@@ -982,6 +1081,322 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/avgi/avgi outfits.txt | effect "small remass injection"</summary>
+<pre>effect "small remass injection"
+	sprite "effect/avgi flare/remass"
+		"frame rate" 30
+		"scale" 0.75
+	sound "flamethrower"
+	"sound category" "afterburner"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi outfits.txt | effect "medium remass injection"</summary>
+<pre>effect "medium remass injection"
+	sprite "effect/avgi flare/remass"
+		"frame rate" 30
+	sound "flamethrower"
+	"sound category" "afterburner"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi outfits.txt | effect "large remass injection"</summary>
+<pre>effect "large remass injection"
+	sprite "effect/avgi flare/remass"
+		"frame rate" 30
+		"scale" 2
+	sound "flamethrower"
+	"sound category" "afterburner"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "speckle fire"</summary>
+<pre>effect "speckle fire"
+	sprite "effect/emp torpedo fire"
+		"scale" 0.75
+		"random start frame"
+		"frame rate" 60
+	"lifetime" 3
+	"random angle" 30
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "speck impact"</summary>
+<pre>effect "speck impact"
+	sprite "effect/bullet impact"
+		"no repeat"
+		"frame rate" 60
+	"lifetime" 9
+	"random angle" 30
+	"velocity scale" -.06
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "green laser glare"</summary>
+<pre>effect "green laser glare"
+	sprite "effect/green optical laser glare"
+		"frame rate" 3
+		"random start frame"
+		"rewind"
+	"lifetime" 1
+	"absolute angle" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "green laser reflection"</summary>
+<pre>effect "green laser reflection"
+	sprite "effect/typhoon fire"
+		"frame rate" 30
+		"random start frame"
+		scale 0.25
+	"lifetime" 3
+	"random lifetime" 3
+	"random velocity" -24
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "green laser scattering"</summary>
+<pre>effect "green laser scattering"
+	sprite "effect/heavy laser impact"
+		"frame rate" 30
+		"random start frame"
+	"lifetime" 1
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "blue laser glare"</summary>
+<pre>effect "blue laser glare"
+	sprite "effect/blue optical laser glare"
+		"random start frame"
+		"rewind"
+	"lifetime" 1
+	"absolute angle" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "blue laser flicker"</summary>
+<pre>effect "blue laser flicker"
+	sprite "effect/skylance impact"
+		"no repeat"
+		"frame rate" 20
+		"scale" 0.125
+	"random lifetime" 1
+	"random velocity" 90
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "blue laser reflection"</summary>
+<pre>effect "blue laser reflection"
+	sprite "effect/skylance impact"
+		"random start frame"
+		"scale" 0.125
+	"lifetime" 1
+	"random lifetime" 3
+	"random velocity" -90
+	"velocity scale" -0.0003
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "blue laser scattering"</summary>
+<pre>effect "blue laser scattering"
+	sprite "effect/skylance impact"
+		"frame rate" 3
+		"scale" 0.5
+	"lifetime" 3
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "laser ejecta"</summary>
+<pre>effect "laser ejecta"
+	sprite "effect/static"
+		"no repeat"
+		"frame rate" 20
+		scale 0.75
+	"random lifetime" 3
+	"random angle" 30
+	"random spin" 15
+	"random velocity" -12
+	"velocity scale" -0.003
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "bremsstrahlung"</summary>
+<pre>effect "bremsstrahlung"
+	sprite "effect/skylance impact"
+		"frame rate" 30
+		"no repeat"
+		scale 0.5
+	"random lifetime" 6
+	"velocity scale" 0.3
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "nuclear spallation"</summary>
+<pre>effect "nuclear spallation"
+	sprite "effect/detainer sparks"
+		"frame rate" 60
+		"no repeat"
+		scale 0.5
+	"random angle" 15
+	"random spin" 15
+	"random lifetime" 12
+	"random velocity" -6
+	"velocity scale" -0.03
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "electron flare"</summary>
+<pre>effect "electron flare"
+	sprite "effect/pwaveflare"
+		"frame rate" 60
+		"random start frame"
+	"lifetime" 1
+	"velocity scale" 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "nettle split"</summary>
+<pre>effect "nettle split"
+	sprite "effect/emp spark"
+		"no repeat"
+		"frame rate" 60
+	sound "clink"
+	"lifetime" 60
+	"random angle" 180
+	"random velocity" 15
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "fleck impact"</summary>
+<pre>effect "fleck impact"
+	sprite "effect/bombardment impact"
+		"no repeat"
+		"frame rate" 30
+	"lifetime" 9
+	"random angle" 30
+	"random spin" 30
+	"random velocity" 3
+	"velocity scale" -.12
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "avgi missile exhaust"</summary>
+<pre>effect "avgi missile exhaust"
+	sprite "effect/avgi flare/rcs"
+		"random start frame"
+		"scale" 0.5
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "thermonuclear flash"</summary>
+<pre>effect "thermonuclear flash"
+	sprite "effect/explosion/nuke"
+		"no repeat"
+		"frame rate" 20
+		"scale" 2.5
+	sound "explosion nuke"
+	"lifetime" 15
+	"random angle" 360
+	"random spin" 5
+	"random velocity" 1
+	"velocity scale" .3
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "prompt radiation"</summary>
+<pre>effect "prompt radiation"
+	sprite "effect/explosion/huge"
+		"no repeat"
+		"frame rate" 15
+	"lifetime" 36
+	"random angle" 360
+	"random spin" 6
+	"random velocity" 12
+	"velocity scale" 0.3
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "fission fragments"</summary>
+<pre>effect "fission fragments"
+	sprite "effect/finisher sparks"
+		"no repeat"
+		"frame rate" 10
+	"lifetime" 60
+	"random angle" 360
+	"random spin" 6
+	"random velocity" 6
+	"velocity scale" 0.3
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/bunrodea/bunrodea weapons.txt | effect "yellow spark"</summary>
 <pre>effect "yellow spark"
 	sprite "effect/yellow spark"
@@ -1082,6 +1497,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 10
 	sound "buzzer am"
+	"sound category" "anti-missile"
 	"lifetime" 11
 	"velocity scale" 1
 </pre>
@@ -1721,6 +2137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 30
 	sound "afterburner"
+	"sound category" "afterburner"
 	"lifetime" 10
 	"random angle" 30
 	"random spin" 10
@@ -1738,6 +2155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 15
 	sound "afterburner"
+	"sound category" "afterburner"
 	"lifetime" 20
 	"random angle" 30
 	"random spin" 10
@@ -1755,6 +2173,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 30
 	sound "ionic afterburner"
+	"sound category" "afterburner"
 	"lifetime" 12
 	"random angle" 360
 	"random spin" 30
@@ -1858,6 +2277,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 3
 	sound "anti-missile"
+	"sound category" "anti-missile"
 	"lifetime" 21
 	"velocity scale" 1
 </pre>
@@ -1872,6 +2292,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 2
 	sound "heavy anti-missile"
+	"sound category" "anti-missile"
 	"lifetime" 31
 	"velocity scale" 1
 </pre>
@@ -2182,6 +2603,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/kahet/aberrant outfits.txt | effect "spiker trail"</summary>
+<pre>effect "spiker trail"
+	sprite "effect/blood"
+		"no repeat"
+		"frame rate" 10
+		"random start frame"
+	"lifetime" 61
+	"random angle" 20
+	"random velocity" 6
+	"random spin" 5
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/aberrant outfits.txt | effect "spiker impact"</summary>
+<pre>effect "spiker impact"
+	sprite "effect/explosion/pug/medium"
+		"no repeat"
+		"frame rate" 19
+	sound "explosion medium"
+	"lifetime" 30
+	"random angle" 360
+	"random frame rate" 5
+	"random spin" 6
+	"random velocity" .5
+	"velocity scale" .4
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/kahet/kahet outfits.txt | effect "ionball spark"</summary>
 <pre>effect "ionball spark"
 	sprite "effect/ion impact"
@@ -2331,6 +2787,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 90
 	sound "korath afterburner"
+	"sound category" "afterburner"
 	"lifetime" 7
 	"random angle" 15
 	"random spin" 360
@@ -2349,6 +2806,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 60
 	sound "korath afterburner"
+	"sound category" "afterburner"
 	"lifetime" 10
 	"random angle" 15
 	"random spin" 360
@@ -2368,6 +2826,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 45
 	sound "korath afterburner"
+	"sound category" "afterburner"
 	"lifetime" 12
 	"random angle" 15
 	"random spin" 360
@@ -2387,6 +2846,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 30
 	sound "korath afterburner"
+	"sound category" "afterburner"
 	"lifetime" 14
 	"random angle" 15
 	"random spin" 360
@@ -2406,6 +2866,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 20
 	sound "korath afterburner"
+	"sound category" "afterburner"
 	"lifetime" 16
 	"random angle" 15
 	"random spin" 360
@@ -2477,6 +2938,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 6
 	sound "warder"
+	"sound category" "anti-missile"
 	"lifetime" 11
 	"velocity scale" 1
 </pre>
@@ -2853,6 +3315,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 6
 	sound "pug anti-missile"
+	"sound category" "anti-missile"
 	"lifetime" 11
 	"velocity scale" 1
 </pre>
@@ -2953,6 +3416,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 3
 	sound "quarg anti-missile"
+	"sound category" "anti-missile"
 	"lifetime" 21
 	"velocity scale" 1
 </pre>
@@ -2999,6 +3463,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"frame rate" 17
 		"no repeat"
 	sound "point defense"
+	"sound category" "anti-missile"
 	lifetime 10
 	"velocity scale" .5
 </pre>
@@ -3155,6 +3620,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "effect/remnant afterburner/remnant afterburner"
 		"frame rate" 10
 	sound "remnant afterburner"
+	"sound category" "afterburner"
 </pre>
 
 </details>
@@ -3350,6 +3816,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"frame rate" 20
 		"scale" 0.20
 	sound "successor afterburner tiny"
+	"sound category" "afterburner"
 	lifetime 1
 </pre>
 
@@ -3363,6 +3830,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"frame rate" 20
 		"scale" 0.36
 	sound "successor afterburner small"
+	"sound category" "afterburner"
 	lifetime 1
 </pre>
 
@@ -3376,6 +3844,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"frame rate" 20
 		"scale" 0.6
 	sound "successor afterburner medium"
+	"sound category" "afterburner"
 	lifetime 1
 </pre>
 
@@ -3388,6 +3857,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "effect/successor flare/afterburner/afterburner"
 		"frame rate" 20
 	sound "successor afterburner large"
+	"sound category" "afterburner"
 	lifetime 1
 </pre>
 
@@ -3527,6 +3997,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"no repeat"
 		"frame rate" 6
 	sound "heavy anti-missile"
+	"sound category" "anti-missile"
 	"lifetime" 31
 	"velocity scale" 1
 </pre>

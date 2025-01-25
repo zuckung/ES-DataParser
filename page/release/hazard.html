@@ -182,6 +182,38 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/hazards.txt | hazard "Magnetar Magnetic Field"</summary>
+<pre>hazard "Magnetar Magnetic Field"
+	"constant strength"
+	"range" 1800
+	weapon
+		"damage dropoff" 0 1800
+		"dropoff modifier" 0
+		"disruption damage" 0.5
+		"discharge damage" 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | hazard "Magnetar Induction"</summary>
+<pre>hazard "Magnetar Induction"
+	"constant strength"
+	"range" 900
+	weapon
+		"gravitational"
+		"damage dropoff" 0 900
+		"dropoff modifier" 0
+		"heat damage" 24
+		"slowing damage" 0.3
+		"hit force" 12
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/hazards.txt | hazard "Rulei Gravity Field"</summary>
 <pre>hazard "Rulei Gravity Field"
 	"constant strength"
@@ -268,6 +300,36 @@ document.addEventListener("DOMContentLoaded", function() {
 		"piercing" 0.1
 		"damage dropoff" 1100
 		"target effect" "spatial hazard" 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | hazard "Avgi Beamed Power"</summary>
+<pre>hazard "Avgi Beamed Power"
+	"constant strength"
+	"range" 300
+	"environmental effect" "power beaming" 12
+	weapon
+		"damage dropoff" 0 300
+		"energy damage" -90
+		"target effect" "power beaming" 60
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/hazards.txt | hazard "Smoke Ring Atmosphere"</summary>
+<pre>hazard "Smoke Ring Atmosphere"
+	range 1800 3000
+	"constant strength"
+	weapon
+		"shield damage" 0.3
+		"heat damage" 3
+		"target effect" "airstream 1" 6
+		"target effect" "airstream 2" 6
 </pre>
 
 </details>
