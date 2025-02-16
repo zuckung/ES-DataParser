@@ -286,8 +286,8 @@ def createImage(path):
 	im2 = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
 	width, height = im2.size
 	# 112 22
-	pastex = int((w - width) / 2 + 112)
-	pastey = int((h - height) / 2 + 22)
+	pastex = int((w - width) / 2 - 112)
+	pastey = int((h - height) / 2 - 22)
 	im.paste(im2, (pastex, pastey))
 	draw = ImageDraw.Draw(im, 'RGBA')
 	print('    drawing links')	
