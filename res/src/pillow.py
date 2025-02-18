@@ -56,8 +56,8 @@ def setVar():
 
 def convertCoordinates(pos):  # 4096 x 4096, center at 2048, 2048 sagitarius a, which is  112 22
 	poss = pos.split(' ')
-	new_posx = float(poss[0]) + w/2 - 112
-	new_posy = float(poss[1]) + h/2 - 22
+	new_posx = float(poss[0]) + w/2
+	new_posy = float(poss[1]) + h/2
 	return int(new_posx), int(new_posy)
 
 
@@ -286,8 +286,8 @@ def createImage(path):
 	im2 = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
 	width, height = im2.size
 	# 112 22
-	pastex = int((w - width) / 2 - 112)
-	pastey = int((h - height) / 2 - 22)
+	pastex = int((w - width) / 2)
+	pastey = int((h - height) / 2)
 	im.paste(im2, (pastex, pastey))
 	draw = ImageDraw.Draw(im, 'RGBA')
 	print('    drawing links')	
@@ -425,7 +425,19 @@ def run():
 		createImage('page/continuous')
 		print('  DONE')
 		print(' ')
-
+	# if local
+	if os.path.isdir('/storage/9C33-6BBD/endless sky/data/'):
+		dataFolder = '/storage/9C33-6BBD/endless sky/data/'
+		backgroundImage = '/storage/9C33-6BBD/endless sky/images/'
+		print('[local]')
+		setVar()
+		readSystems()
+		readPlanets()
+		readWormholes()
+		readColors()
+		createImage('')
+		print('  DONE')
+		print(' ')
 
 if __name__ == "__main__":
 	run()
