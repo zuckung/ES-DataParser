@@ -1,2 +1,2 @@
-version=0.10.11
-lastUpdate=2025-01-25 22:21:31
+version=0.10.12
+lastUpdate=2025-02-22 20:30:46
