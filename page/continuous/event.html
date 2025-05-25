@@ -6194,6 +6194,72 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/kahet/kahet missions.txt | event "Patir moves"</summary>
+<pre>event "Patir moves"
+	system Patir
+		pos 10059.5 10.5
+		remove haze
+		set "ka'het: beyond Patir"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir spaceport"</summary>
+<pre>event "Patir spaceport"
+	planet "Builder Settlement"
+		spaceport `The Remnant laboratory merges oddly well with the rest of the environment, similar in color and design to the Builder structures around here. The spaceport consists only of a flat strip of regolith near the settlement, hastily cleaned of the debris that covers most of the terrain.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "no Patir spaceport and no Fetri spawn"</summary>
+<pre>event "no Patir spaceport and no Fetri spawn"
+	system Patir
+		remove fleet "Ka'sei"
+	planet "Builder Settlement"
+		remove spaceport
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir spaceport returns and Fetri spawn"</summary>
+<pre>event "Patir spaceport returns and Fetri spawn"
+	system Patir
+		add fleet "Ka'sei" 300
+	planet "Builder Settlement"
+		spaceport `The Remnant laboratory merges oddly well with the rest of the environment, similar in color and design to the Builder structures around here. The spaceport amounts to only a flat strip of regolith near the settlement, hastily cleaned of the debris that covers most of the terrain.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir returns"</summary>
+<pre>event "Patir returns"
+	system Patir
+		pos -38 553
+		haze _menu/haze-red
+		clear "ka'het: beyond Patir"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "patir mystery 2 timer"</summary>
+<pre>event "patir mystery 2 timer"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/korath/korath missions.txt | event "label korath space"</summary>
 <pre>event "label korath space"
 	galaxy "label korath"
