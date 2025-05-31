@@ -1,0 +1,425 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "cloak fast"</summary>
+<pre>swizzle "cloak fast"
+	override
+	red   0 0 1 0
+	green 0 0 0 0
+	blue  0 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "cloak fancy base"</summary>
+<pre>swizzle "cloak fancy base"
+	override
+	red   0 0 1 0
+	green 0 0 1 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "0"</summary>
+<pre>swizzle "0"
+	red   1 0 0 0
+	green 0 1 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "1"</summary>
+<pre>swizzle "1"
+	red   1 0 0 0
+	green 0 0 1 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "2"</summary>
+<pre>swizzle "2"
+	red   0 1 0 0
+	green 1 0 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "3"</summary>
+<pre>swizzle "3"
+	red   0 0 1 0
+	green 1 0 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "4"</summary>
+<pre>swizzle "4"
+	red   0 1 0 0
+	green 0 0 1 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "5"</summary>
+<pre>swizzle "5"
+	red   0 0 1 0
+	green 0 1 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "6"</summary>
+<pre>swizzle "6"
+	red   0 1 0 0
+	green 0 0 1 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "7"</summary>
+<pre>swizzle "7"
+	red   1 0 0 0
+	green 0 0 1 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "8"</summary>
+<pre>swizzle "8"
+	red   1 0 0 0
+	green 0 1 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "9"</summary>
+<pre>swizzle "9"
+	red   0 0 1 0
+	green 0 0 1 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "10"</summary>
+<pre>swizzle "10"
+	red   0 1 0 0
+	green 0 1 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "11"</summary>
+<pre>swizzle "11"
+	red   1 0 0 0
+	green 1 0 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "12"</summary>
+<pre>swizzle "12"
+	red   0 0 1 0
+	green 0 0 1 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "13"</summary>
+<pre>swizzle "13"
+	red   0 0 1 0
+	green 0 0 1 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "14"</summary>
+<pre>swizzle "14"
+	red   0 1 0 0
+	green 0 1 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "15"</summary>
+<pre>swizzle "15"
+	red   0 0 1 0
+	green 0 1 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "16"</summary>
+<pre>swizzle "16"
+	red   0 0 1 0
+	green 1 0 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "17"</summary>
+<pre>swizzle "17"
+	red   0 1 0 0
+	green 1 0 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "18"</summary>
+<pre>swizzle "18"
+	red   0 0 1 0
+	green 0 1 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "19"</summary>
+<pre>swizzle "19"
+	red   0 0 1 0
+	green 1 0 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "20"</summary>
+<pre>swizzle "20"
+	red   0 1 0 0
+	green 1 0 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "21"</summary>
+<pre>swizzle "21"
+	red   0 1 0 0
+	green 0 1 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "22"</summary>
+<pre>swizzle "22"
+	red   1 0 0 0
+	green 1 0 0 0
+	blue  0 0 1 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "23"</summary>
+<pre>swizzle "23"
+	red   1 0 0 0
+	green 1 0 0 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "24"</summary>
+<pre>swizzle "24"
+	red   0 1 0 0
+	green 0 0 1 0
+	blue  0 1 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "25"</summary>
+<pre>swizzle "25"
+	red   1 0 0 0
+	green 0 0 1 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "26"</summary>
+<pre>swizzle "26"
+	red   1 0 0 0
+	green 0 1 0 0
+	blue  1 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "27"</summary>
+<pre>swizzle "27"
+	override
+	red   0 0 1 0
+	green 0 0 0 0
+	blue  0 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/swizzles.txt | swizzle "28"</summary>
+<pre>swizzle "28"
+	override
+	red   0 0 0 0
+	green 0 0 0 0
+	blue  0 0 0 0
+	alpha 0 0 0 1
+</pre>
+
+</details>
+
+
+</font>
+</body>
+</html>
+

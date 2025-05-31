@@ -58,6 +58,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Indigenous Lifeform (Tree)" 0
 		"Indigenous Lifeform (Tree Two)" 0
 		"Ka'sei" 0
+		"Marauder" 0
+		"Parrot" 0
 	"penalty for"
 		assist 0
 		disable 0
@@ -1122,6 +1124,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled unfettered"
 	"hostile hail" "hostile unfettered"
 	"hostile disabled hail" "hostile disabled unfettered"
+	raid "Large Plundering Unfettered" 8
 </pre>
 
 </details>
@@ -1607,7 +1610,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"default attitude" -.01
 	"attitude toward"
 		"Author" 0
+		"Builder" 0
 		"Indigenous Lifeform (Subsidurial)" 0
+		"Marauder" 0
+		"Parrot" 0
 	"player reputation" -1
 </pre>
 
@@ -1623,7 +1629,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"default attitude" -.01
 	"attitude toward"
 		"Author" 0
+		"Builder" 0
 		"Indigenous Lifeform (Subsidurial)" 0
+		"Marauder" 0
+		"Parrot" 0
 	"player reputation" -1
 </pre>
 
@@ -1641,6 +1650,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		board 0
 		capture 0
 	"player reputation" 1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Ka'sei (12.2)"</summary>
+<pre>government "Ka'sei (12.2)"
+	# Used only by the Patir Mystery mission in question
+	"display name" "Ka'sei"
+	swizzle 0
+	language "Ka'het"
+	"penalty for"
+		assist 0
+		disable 0
+		board 0
+		capture 0
+	"player reputation" 10
+	"friendly hail" "friendly ka'het"
+	"friendly disabled hail" "friendly disabled ka'het"
+	"hostile hail" "hostile ka'het"
+	"hostile disabled hail" "hostile disabled ka'het"
 </pre>
 
 </details>
@@ -1815,6 +1846,21 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Quarg" .01
 		"Heliarch" -.01
 		"Pirate" -.01
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Magic Asteroid"</summary>
+<pre>government "Magic Asteroid"
+	"display name" "???"
+	swizzle 0
+	language "Magic Asteroid"
+	"attitude toward"
+		"Ka'sei (12.2)" -.01
+		"Uninhabited" -.01
+	"player reputation" 10
 </pre>
 
 </details>
@@ -2183,8 +2229,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Quarg"</summary>
 <pre>government "Quarg"
-	swizzle 0
-	color .88 .77 0
+	swizzle 4
+	color "governments: Quarg"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg (Hai)" 1
@@ -2203,16 +2249,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
 	atrocities
-		"Nanotech Battery"
 		"Antimatter Core"
-		"Quarg Skylance"
-		"Quarg Anti-Missile"
-		"Intrusion Countermeasures"
+		"Astral Ribault"
+		"Celestial Culverin"
+		"Central Repair Hub"
+		"Elysian Ranseur"
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
+		"Peripheral Repair Hub"
+		"Phalanx System"
 		"Quantum Shield Generator"
-		ship "Quarg Skylark"
+		"Quantum Vacuum Battery"
+		"Quasar Core"
+		"Singularity Core"
+		"Skydagger"
+		"Skylance"
+		"Slipstream Projector"
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Stratospear"
+		ship "Quarg Guivre"
+		ship "Quarg Hydra"
+		ship "Quarg Lindwyrm"
 		ship "Quarg Wardragon"
+		ship "Quarg Wyvern"
 </pre>
 
 </details>
@@ -2221,8 +2283,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Quarg (Hai)"</summary>
 <pre>government "Quarg (Hai)"
-	swizzle 0
-	color .88 .77 0
+	swizzle 4
+	color "governments: Quarg"
 	"display name" "Quarg"
 	"player reputation" 1
 	"attitude toward"
@@ -2240,16 +2302,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
 	atrocities
-		"Nanotech Battery"
 		"Antimatter Core"
-		"Quarg Skylance"
-		"Quarg Anti-Missile"
-		"Intrusion Countermeasures"
+		"Astral Ribault"
+		"Celestial Culverin"
+		"Central Repair Hub"
+		"Elysian Ranseur"
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
+		"Peripheral Repair Hub"
+		"Phalanx System"
 		"Quantum Shield Generator"
-		ship "Quarg Skylark"
+		"Quantum Vacuum Battery"
+		"Quasar Core"
+		"Singularity Core"
+		"Skydagger"
+		"Skylance"
+		"Slipstream Projector"
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Stratospear"
+		ship "Quarg Guivre"
+		ship "Quarg Hydra"
+		ship "Quarg Lindwyrm"
 		ship "Quarg Wardragon"
+		ship "Quarg Wyvern"
 </pre>
 
 </details>
@@ -2258,8 +2336,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Quarg (Incipias)"</summary>
 <pre>government "Quarg (Incipias)"
-	swizzle 0
-	color .88 .77 0
+	swizzle 4
+	color "governments: Quarg"
 	"display name" "Quarg"
 	"player reputation" 1
 	"attitude toward"
@@ -2287,16 +2365,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
 	atrocities
-		"Nanotech Battery"
 		"Antimatter Core"
-		"Quarg Skylance"
-		"Quarg Anti-Missile"
-		"Intrusion Countermeasures"
+		"Astral Ribault"
+		"Celestial Culverin"
+		"Central Repair Hub"
+		"Elysian Ranseur"
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
+		"Peripheral Repair Hub"
+		"Phalanx System"
 		"Quantum Shield Generator"
-		ship "Quarg Skylark"
+		"Quantum Vacuum Battery"
+		"Quasar Core"
+		"Singularity Core"
+		"Skydagger"
+		"Skylance"
+		"Slipstream Projector"
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Stratospear"
+		ship "Quarg Guivre"
+		ship "Quarg Hydra"
+		ship "Quarg Lindwyrm"
 		ship "Quarg Wardragon"
+		ship "Quarg Wyvern"
 </pre>
 
 </details>
@@ -2305,8 +2399,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Quarg (Kor Efret)"</summary>
 <pre>government "Quarg (Kor Efret)"
-	swizzle 0
-	color .88 .77 0
+	swizzle 4
+	color "governments: Quarg"
 	"display name" "Quarg"
 	"player reputation" 1
 	"attitude toward"
@@ -2323,16 +2417,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
 	atrocities
-		"Nanotech Battery"
 		"Antimatter Core"
-		"Quarg Skylance"
-		"Quarg Anti-Missile"
-		"Intrusion Countermeasures"
+		"Astral Ribault"
+		"Celestial Culverin"
+		"Central Repair Hub"
+		"Elysian Ranseur"
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
+		"Peripheral Repair Hub"
+		"Phalanx System"
 		"Quantum Shield Generator"
-		ship "Quarg Skylark"
+		"Quantum Vacuum Battery"
+		"Quasar Core"
+		"Singularity Core"
+		"Skydagger"
+		"Skylance"
+		"Slipstream Projector"
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Stratospear"
+		ship "Quarg Guivre"
+		ship "Quarg Hydra"
+		ship "Quarg Lindwyrm"
 		ship "Quarg Wardragon"
+		ship "Quarg Wyvern"
 </pre>
 
 </details>
@@ -2341,8 +2451,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Quarg (Gegno)"</summary>
 <pre>government "Quarg (Gegno)"
-	swizzle 0
-	color .88 .77 0
+	swizzle 4
+	color "governments: Quarg"
 	"display name" "Quarg"
 	"player reputation" 1
 	"attitude toward"
@@ -2357,16 +2467,32 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
 	atrocities
-		"Nanotech Battery"
 		"Antimatter Core"
-		"Quarg Skylance"
-		"Quarg Anti-Missile"
-		"Intrusion Countermeasures"
+		"Astral Ribault"
+		"Celestial Culverin"
+		"Central Repair Hub"
+		"Elysian Ranseur"
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
+		"Peripheral Repair Hub"
+		"Phalanx System"
 		"Quantum Shield Generator"
-		ship "Quarg Skylark"
+		"Quantum Vacuum Battery"
+		"Quasar Core"
+		"Singularity Core"
+		"Skydagger"
+		"Skylance"
+		"Slipstream Projector"
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Stratospear"
+		ship "Quarg Guivre"
+		ship "Quarg Hydra"
+		ship "Quarg Lindwyrm"
 		ship "Quarg Wardragon"
+		ship "Quarg Wyvern"
 </pre>
 
 </details>
@@ -2402,6 +2528,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "remnant uncontacted hostile"
 	"hostile disabled hail" "hostile disabled"
+	"travel restrictions"
+		system "Nenia"
 </pre>
 
 </details>
@@ -2433,6 +2561,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "remnant uncontacted hostile"
 	"hostile disabled hail" "hostile disabled"
+	"travel restrictions"
+		system "Nenia"
 </pre>
 
 </details>
