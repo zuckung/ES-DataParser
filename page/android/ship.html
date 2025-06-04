@@ -74,6 +74,65 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/persons.txt | ship "Wardragon"</summary>
+<pre>ship "Wardragon"
+	sprite "ship/wardragon"
+	thumbnail "thumbnail/wardragon"
+	attributes
+		category "Heavy Warship"
+		"cost" 5900000
+		"shields" 160000
+		"hull" 50000
+		"required crew" 160
+		"bunks" 185
+		"mass" 840
+		"drag" 14
+		"heat dissipation" .34
+		"fuel capacity" 800
+		"cargo space" 50
+		"outfit space" 610
+		"weapon capacity" 200
+		"engine capacity" 120
+		"hull repair rate" 5
+		"hull energy" 5
+		"ramscoop" 10
+		weapon
+			"blast radius" 250
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Quarg Skylance" 2
+		"Quarg Anti-Missile" 2
+		"Antimatter Core"
+		"Nanotech Battery"
+		"Quantum Shield Generator"
+		"Intrusion Countermeasures" 160
+		"Cargo Scanner"
+		"Outfit Scanner"
+		"Wanderer Ramscoop"
+		"Medium Graviton Thruster"
+		"Medium Graviton Steering"
+		"Scram Drive"
+	engine -14 47
+	engine 14 47
+	turret -9 -14 "Quarg Anti-Missile"
+	turret 9 -14 "Quarg Anti-Missile"
+	turret -28 7 "Quarg Skylance"
+	turret 28 7 "Quarg Skylance"
+	explode "tiny explosion" 12
+	explode "small explosion" 16
+	explode "medium explosion" 30
+	explode "large explosion" 40
+	explode "huge explosion" 20
+	"final explode" "final explosion medium"
+	description "The origin of this Wardragon is shrouded in mystery. It was said that the Quarg once used this ship as a powerful light warship. Other sources suggest that it was used as a front-line heavy warship. One thing is for certain though, and that's its design is far different than any Quarg ship that exists today, and one can only question where it came from."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/wardragon.png" width="176" height="150"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/wardragon.png" width="140" height="150">
+</details>
+
+
+<details>
 <summary>data/persons.txt | ship "Marauder Fury"</summary>
 <pre>ship "Marauder Fury"
 	plural "Marauder Furies"
@@ -293,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	plural "Ursa Polaris"
 	sprite "ship/localworldship"
 	attributes
-		category "Heavy Warship"
+		category "Unclassified"
 		cost 142857
 		shields 39000
 		hull 27000
@@ -1770,6 +1829,62 @@ document.addEventListener("DOMContentLoaded", function() {
 	turret 91 286 "Warder Anti-Missile"
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/world-ship c.png" height="200">
+</details>
+
+
+<details>
+<summary>data/_deprecated/deprecated ships.txt | ship "Quarg Skylark"</summary>
+<pre>ship "Quarg Skylark"
+	sprite "ship/skylark"
+	thumbnail "thumbnail/skylark"
+	attributes
+		category "Heavy Warship"
+		"cost" 5900000
+		"shields" 120000
+		"hull" 70000
+		"required crew" 120
+		"bunks" 210
+		"mass" 990
+		"drag" 18.5
+		"heat dissipation" .47
+		"fuel capacity" 1000
+		"cargo space" 200
+		"outfit space" 600
+		"weapon capacity" 200
+		"engine capacity" 120
+		"hull repair rate" 5
+		"hull energy" 5
+		"ramscoop" 10
+		weapon
+			"blast radius" 250
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Quarg Skylance" 2
+		"Quarg Anti-Missile" 2
+		"Antimatter Core"
+		"Nanotech Battery"
+		"Quantum Shield Generator"
+		"Intrusion Countermeasures" 120
+		"Medium Graviton Thruster"
+		"Medium Graviton Steering"
+		"Jump Drive"
+	engine -15 117
+	engine 15 117
+	turret -12 -80 "Quarg Skylance"
+	turret 12 -80 "Quarg Skylance"
+	turret -34 24 "Quarg Anti-Missile"
+	turret 34 24 "Quarg Anti-Missile"
+	explode "tiny explosion" 12
+	explode "small explosion" 16
+	explode "medium explosion" 30
+	explode "large explosion" 40
+	explode "huge explosion" 20
+	"final explode" "final explosion medium"
+	description "The Skylark is used by the Quarg as a freighter and warship."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/skylark.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/skylark.png" height="200">
 </details>
 
 
@@ -4388,7 +4503,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "ship/windjammer"
 	"uncapturable"
 	attributes
-		category "Space Liner"
+		category "Unclassified"
 		"cost" 1111000
 		"hull" 6900
 		"required crew" 1
@@ -4423,112 +4538,112 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Pollen" 120
 		"Jamfruit" 60
 	gun 0 -84.5 "Pinecone Launcher"
-	bay Fighter -14.5 -125
+	bay "Unclassified Minor" -14.5 -125
 		under
 		"launch effect" "basic launch"
-	bay Fighter 14.5 -125
+	bay "Unclassified Minor" 14.5 -125
 		under
 		"launch effect" "basic launch"
-	bay Fighter -32 -126
+	bay "Unclassified Minor" -32 -126
 		under
 		"launch effect" "basic launch"
-	bay Fighter 32 -126
+	bay "Unclassified Minor" 32 -126
 		under
 		"launch effect" "basic launch"
-	bay Fighter -49 -128
+	bay "Unclassified Minor" -49 -128
 		under
 		"launch effect" "basic launch"
-	bay Fighter 49 -128
+	bay "Unclassified Minor" 49 -128
 		under
 		"launch effect" "basic launch"
-	bay Fighter -91.5 -190.5
+	bay "Unclassified Minor" -91.5 -190.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 91.5 -190.5
+	bay "Unclassified Minor" 91.5 -190.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -106 -201.5
+	bay "Unclassified Minor" -106 -201.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 106 -201.5
+	bay "Unclassified Minor" 106 -201.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -123 -205.5
+	bay "Unclassified Minor" -123 -205.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 123 -205.5
+	bay "Unclassified Minor" 123 -205.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -141 -201
+	bay "Unclassified Minor" -141 -201
 		under
 		"launch effect" "basic launch"
-	bay Fighter 141 -201
+	bay "Unclassified Minor" 141 -201
 		under
 		"launch effect" "basic launch"
-	bay Fighter -156 -190.5
+	bay "Unclassified Minor" -156 -190.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 156 -190.5
+	bay "Unclassified Minor" 156 -190.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -164 -174
+	bay "Unclassified Minor" -164 -174
 		under
 		"launch effect" "basic launch"
-	bay Fighter 164 -174
+	bay "Unclassified Minor" 164 -174
 		under
 		"launch effect" "basic launch"
-	bay Fighter -163.5 -155
+	bay "Unclassified Minor" -163.5 -155
 		under
 		"launch effect" "basic launch"
-	bay Fighter 163.5 -155
+	bay "Unclassified Minor" 163.5 -155
 		under
 		"launch effect" "basic launch"
-	bay Fighter -156 -138.5
+	bay "Unclassified Minor" -156 -138.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 156 -138.5
+	bay "Unclassified Minor" 156 -138.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -141 -127.5
+	bay "Unclassified Minor" -141 -127.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 141 -127.5
+	bay "Unclassified Minor" 141 -127.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -121.5 -122
+	bay "Unclassified Minor" -121.5 -122
 		under
 		"launch effect" "basic launch"
-	bay Fighter 121.5 -122
+	bay "Unclassified Minor" 121.5 -122
 		under
 		"launch effect" "basic launch"
-	bay Fighter -104 -118
+	bay "Unclassified Minor" -104 -118
 		under
 		"launch effect" "basic launch"
-	bay Fighter 104 -118
+	bay "Unclassified Minor" 104 -118
 		under
 		"launch effect" "basic launch"
-	bay Fighter -86 -114.5
+	bay "Unclassified Minor" -86 -114.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 86 -114.5
+	bay "Unclassified Minor" 86 -114.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -68 -110.5
+	bay "Unclassified Minor" -68 -110.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 68 -110.5
+	bay "Unclassified Minor" 68 -110.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -24.5 -13
+	bay "Unclassified Minor" -24.5 -13
 		under
 		"launch effect" "basic launch"
-	bay Fighter 24.5 -13
+	bay "Unclassified Minor" 24.5 -13
 		under
 		"launch effect" "basic launch"
-	bay Fighter -24.5 5
+	bay "Unclassified Minor" -24.5 5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 24.5 5
+	bay "Unclassified Minor" 24.5 5
 		under
 		"launch effect" "basic launch"
 	leak "leak" 15 30
@@ -4547,7 +4662,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "ship/bluejacket"
 	"uncapturable"
 	attributes
-		category "Space Liner"
+		category "Unclassified"
 		"cost" 1212100
 		"hull" 3200
 		"required crew" 1
@@ -4582,76 +4697,76 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Pollen" 90
 		"Jamfruit" 90
 	gun 0 -84.5 "Pinecone Launcher"
-	bay Fighter -14.5 -46
+	bay "Unclassified Minor" -14.5 -46
 		under
 		"launch effect" "basic launch"
-	bay Fighter 14.5 -46
+	bay "Unclassified Minor" 14.5 -46
 		under
 		"launch effect" "basic launch"
-	bay Fighter -32 -49
+	bay "Unclassified Minor" -32 -49
 		under
 		"launch effect" "basic launch"
-	bay Fighter 32 -49
+	bay "Unclassified Minor" 32 -49
 		under
 		"launch effect" "basic launch"
-	bay Fighter -49 -54.5
+	bay "Unclassified Minor" -49 -54.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 49 -54.5
+	bay "Unclassified Minor" 49 -54.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -65.5 -60
+	bay "Unclassified Minor" -65.5 -60
 		under
 		"launch effect" "basic launch"
-	bay Fighter 65.5 -60
+	bay "Unclassified Minor" 65.5 -60
 		under
 		"launch effect" "basic launch"
-	bay Fighter -82.5 -66.5
+	bay "Unclassified Minor" -82.5 -66.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 82.5 -66.5
+	bay "Unclassified Minor" 82.5 -66.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -99 -72
+	bay "Unclassified Minor" -99 -72
 		under
 		"launch effect" "basic launch"
-	bay Fighter 99 -72
+	bay "Unclassified Minor" 99 -72
 		under
 		"launch effect" "basic launch"
-	bay Fighter -118.5 -29
+	bay "Unclassified Minor" -118.5 -29
 		under
 		"launch effect" "basic launch"
-	bay Fighter 118.5 -29
+	bay "Unclassified Minor" 118.5 -29
 		under
 		"launch effect" "basic launch"
-	bay Fighter -119 -11
+	bay "Unclassified Minor" -119 -11
 		under
 		"launch effect" "basic launch"
-	bay Fighter 119 -11
+	bay "Unclassified Minor" 119 -11
 		under
 		"launch effect" "basic launch"
-	bay Fighter -110.5 5.5
+	bay "Unclassified Minor" -110.5 5.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter 110.5 5.5
+	bay "Unclassified Minor" 110.5 5.5
 		under
 		"launch effect" "basic launch"
-	bay Fighter -94.5 16
+	bay "Unclassified Minor" -94.5 16
 		under
 		"launch effect" "basic launch"
-	bay Fighter 94.5 16
+	bay "Unclassified Minor" 94.5 16
 		under
 		"launch effect" "basic launch"
-	bay Fighter -76.5 19
+	bay "Unclassified Minor" -76.5 19
 		under
 		"launch effect" "basic launch"
-	bay Fighter 76.5 19
+	bay "Unclassified Minor" 76.5 19
 		under
 		"launch effect" "basic launch"
-	bay Fighter -55.5 17
+	bay "Unclassified Minor" -55.5 17
 		under
 		"launch effect" "basic launch"
-	bay Fighter 55.5 17
+	bay "Unclassified Minor" 55.5 17
 		under
 		"launch effect" "basic launch"
 	leak "leak" 20 35
@@ -4670,7 +4785,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "ship/pollen"
 	thumbnail "ship/pollen"
 	attributes
-		category "Fighter"
+		category "Unclassified Minor"
 		"cost" 126000
 		"hull" 200
 		"required crew" 1
@@ -4708,7 +4823,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "ship/pollen"
 	"uncapturable"
 	attributes
-		category "Fighter"
+		category "Unclassified Minor"
 		"cost" 126000
 		"hull" 200
 		"required crew" 1
@@ -4807,6 +4922,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"weapon capacity" 122
 		"engine capacity" 126
 		"cloak" .05
+		"cloaked regen multiplier" -1
+		"cloaked repair multiplier" -1
 		"cloaking energy" 10
 		"cloaking fuel" .05
 		weapon
@@ -7654,7 +7771,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/archon"
 	"never disabled"
 	attributes
-		category "Heavy Warship"
+		category "Unclassified"
 		"cost" 1000000000
 		"shields" 4000000
 		"hull" 1000000
@@ -7766,6 +7883,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"never disabled"
 	add attributes
 		"cloak" .04
+		"cloaked communication" 1
+		"cloak phasing" 1
+		"cloaked scanning" 1
 	"final explode" "archon c teleport"
 </pre>
 <img src="images/ship/archon c.gif" height="200">
@@ -7780,6 +7900,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"never disabled"
 	add attributes
 		"cloak" .04
+		"cloaked communication" 1
+		"cloak phasing" 1
+		"cloaked scanning" 1
 		"jump speed" 1
 		"hyperdrive" 1
 		"silent jumps" 1
@@ -7807,7 +7930,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/subsidurial"
 	"never disabled"
 	attributes
-		category "Light Freighter"
+		category "Unclassified"
 		"hull" 11600
 		"automaton" 1
 		"mass" 1050
@@ -7855,7 +7978,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/void sprite adult"
 	"never disabled"
 	attributes
-		category "Medium Warship"
+		category "Unclassified"
 		"hull" 9600
 		"required crew" 4
 		"bunks" 4
@@ -7899,7 +8022,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/void sprite infant"
 	"never disabled"
 	attributes
-		category "Light Warship"
+		category "Unclassified"
 		"hull" 2800
 		"required crew" 2
 		"bunks" 2
@@ -7942,7 +8065,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/ember waste node"
 	"never disabled"
 	attributes
-		category "Heavy Warship"
+		category "Unclassified"
 		"hull" 19600
 		"shields" 5000
 		"required crew" 5
@@ -8004,7 +8127,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		rewind
 	"never disabled"
 	attributes
-		category "Light Warship"
+		category "Unclassified"
 		"hull" 9600
 		"required crew" 1
 		"bunks" 1
@@ -8019,6 +8142,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"energy generation" 6
 		"hull repair rate" 3
 		"cloak" .02
+		"cloaked firing" .02
 		"cloaking energy" 5
 		"hyperdrive" 1
 		"jump speed" .1
@@ -8048,7 +8172,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"random start frame"
 	"never disabled"
 	attributes
-		category "Light Warship"
+		category "Unclassified"
 		"shields" 4400
 		"hull" 900
 		"required crew" 1
@@ -8378,8 +8502,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"steering engine" -58 -58
 		right
 	gun 9 -132
+		parallel
 		over
 	gun -9 -132
+		parallel
 		over
 	leak "leak" 50 60
 	leak "flame" 70 70
@@ -8400,23 +8526,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>ship "Corundum" "Corundum (Torch)"
 	outfits
 		"Ion Torch" 2
-		"C3 Scrap Cell"
-		"C7 Brawl Cell"
-		"R01 Skirmish Battery"
-		"RG18 Torch Thruster"
-		"RG18 Torch Steering" 2
-		"Hyperdrive"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/gegno/gegno ships.txt | ship "Corundum" "Corundum (Multi)"</summary>
-<pre>ship "Corundum" "Corundum (Multi)"
-	outfits
-		"Ion Torch"
-		"Burrower"
 		"C3 Scrap Cell"
 		"C7 Brawl Cell"
 		"R01 Skirmish Battery"
@@ -8611,32 +8720,46 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -35.5 -373.5 "Irate Cannon"
 	gun -42.5 -367.5 "Irate Cannon"
 	gun 100.5 -309 "Irate Cannon"
+		parallel
 		angle 40
 	gun -85.5 -309.5 "Irate Cannon"
+		parallel
 		angle -43
 	gun 116.5 -200.5 "Irate Cannon"
+		parallel
 		angle 90
 	gun 116.5 -195.5 "Irate Cannon"
+		parallel
 		angle 90
 	gun -121.5 -115.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun -121 -109.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun 127 -37.5 "Irate Cannon"
+		parallel
 		angle 85
 	gun -134.5 33.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun -134.5 39 "Irate Cannon"
+		parallel
 		angle -90
 	gun -119 140.5 "Irate Cannon"
+		parallel
 		angle -115
 	gun 114 186.5 "Irate Cannon"
+		parallel
 		angle 90
 	gun 114 192 "Irate Cannon"
+		parallel
 		angle 90
 	gun -58.5 256 "Irate Cannon"
+		parallel
 		angle -150
 	gun 88.5 334 "Irate Cannon"
+		parallel
 		angle 155
 	turret 13 -297.5 "Ballistic Cannon Turret"
 	turret 13 -212 "Ballistic Cannon Turret"
@@ -8747,12 +8870,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -16.5 -181.5 "Irate Cannon"
 	gun 16.5 -181.5 "Irate Cannon"
 	gun 44.5 -81 "Irate Cannon"
+		parallel
 		angle 80
 	gun -44.5 -81 "Irate Cannon"
+		parallel
 		angle -80
 	gun 56.5 30.5 "Irate Cannon"
+		parallel
 		angle 112
 	gun -56.5 30.5 "Irate Cannon"
+		parallel
 		angle -112
 	turret 0 -139.5 "Irate Cannon Turret"
 	leak "leak" 60 50
@@ -9024,16 +9151,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -24.5 -208 "Irate Cannon"
 	gun 24.5 -208 "Irate Cannon"
 	gun 29 -120 "Irate Cannon"
+		parallel
 		angle 60
 	gun -29 -107.5 "Irate Cannon"
+		parallel
 		angle -60
 	gun -38 -1.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun 40.5 30 "Irate Cannon"
+		parallel
 		angle 90
 	gun -29 141.5 "Irate Cannon"
+		parallel
 		angle -135
 	gun 29 120.5 "Irate Cannon"
+		parallel
 		angle 135
 	turret 0 -111 "Choleric Cannon Turret"
 	turret 0 -42 "Choleric Cannon Turret"
@@ -9104,16 +9237,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -24.5 -208 "Irate Cannon"
 	gun 24.5 -208 "Irate Cannon"
 	gun 29 -120 "Irate Cannon"
+		parallel
 		angle 60
 	gun -29 -107.5 "Irate Cannon"
+		parallel
 		angle -60
 	gun -38 -1.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun 40.5 30 "Irate Cannon"
+		parallel
 		angle 90
 	gun -29 141.5 "Irate Cannon"
+		parallel
 		angle -135
 	gun 29 120.5 "Irate Cannon"
+		parallel
 		angle 135
 	turret 0 -174 "Irate Cannon Turret"
 	turret 0 -111 "Choleric Cannon Turret"
@@ -9167,20 +9306,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -23 -270.5 "Irate Cannon"
 	gun 23 -270.5 "Irate Cannon"
 	gun -38.5 -192.5 "Irate Cannon"
+		parallel
 		angle -60
 	gun 39 -185 "Irate Cannon"
+		parallel
 		angle 60
 	gun 46.5 -66.5 "Irate Cannon"
+		parallel
 		angle 90
 	gun -58 -14 "Irate Cannon"
+		parallel
 		angle -40
 	gun -69.5 5.5 "Irate Cannon"
+		parallel
 		angle -95
 	gun 65.5 9.5 "Irate Cannon"
+		parallel
 		angle 45
 	gun 66 87 "Irate Cannon"
+		parallel
 		angle 135
 	gun -55.5 133.5 "Irate Cannon"
+		parallel
 		angle -135
 	turret 0 -97.5 "Ballistic Cannon Turret"
 	turret 0 -23 "Ballistic Cannon Turret"
@@ -9248,22 +9395,31 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -22.5 -269 "Irate Cannon"
 	gun 22.5 -269 "Irate Cannon"
 	gun 62.5 -186.5 "Irate Cannon"
+		parallel
 		angle 45
 	gun -74 -165 "Irate Cannon"
+		parallel
 		angle -90
 	gun 93 -27.5 "Irate Cannon"
+		parallel
 		angle 100
 	gun -86.5 -60 "Irate Cannon"
+		parallel
 		angle -50
 	gun 107 -11.5 "Irate Cannon"
+		parallel
 		angle 35
 	gun -124.5 103.5 "Irate Cannon"
+		parallel
 		angle -90
 	gun 105 142 "Irate Cannon"
+		parallel
 		angle 95
 	gun -101 194.5 "Irate Cannon"
+		parallel
 		angle -125
 	gun 94.5 211 "Irate Cannon"
+		parallel
 		angle 150
 	turret 0 21 "Choleric Cannon Turret"
 	turret -69.5 21 "Irate Cannon Turret"
@@ -11293,9 +11449,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Diamond Regenerator"
 		"Hai Valley Batteries"
 		"Hyperdrive"
-		"Value Detector"
-		"Ionic Blaster Prototype" 4
-		"Pulse Turret" 2
+		"Ion Cannon"
+		"Ionic Blaster Prototype" 2
+		"Ionic Turret Prototype"
 		"Pulse Rifle" 36
 </pre>
 
@@ -11315,7 +11471,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Williwaw Cooling" 4
 		"Hyperdrive"
 		"Pulse Cannon" 2
-		"Pulse Rifle" 15
+		"Pulse Rifle" 36
 		"Pulse Turret"
 		"Quantum Keystone"
 		"Tripulse Shredder" 2
@@ -13002,6 +13158,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"random start frame"
 	"never disabled"
 	attributes
+		category "Unclassified"
 		"hull" 1000
 		"mass" 180
 		"drag" 2.1
@@ -13029,6 +13186,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "asteroid/medium rock/spin"
 		"frame rate" 10
 	attributes
+		category "Unclassified"
 		"fuel capacity" 1
 		"hull" 10000
 		"mass" 1000
@@ -13088,6 +13246,47 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Scram Drive"
 </pre>
 
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | ship "Emergency Shuttle"</summary>
+<pre>ship "Emergency Shuttle"
+	sprite "ship/escape shuttle"
+	attributes
+		category "Utility"
+		"cost" 45000
+		"shields" 300
+		"hull" 600
+		"required crew" 1
+		"bunks" 10
+		"mass" 65
+		"drag" 1.7
+		"heat dissipation" .7
+		"fuel capacity" 100
+		"cargo space" 20
+		"outfit space" 39
+		"weapon capacity" 0
+		"engine capacity" 20
+		weapon
+			"blast radius" 9
+			"shield damage" 90
+			"hull damage" 45
+			"hit force" 135
+	outfits
+		"KP-6 Photovoltaic Panel" 2
+		"LP036a Battery Pack"
+		"Outfits Expansion"
+		"X1050 Ion Engines"
+		"Hyperdrive"
+	engine 0 26
+		zoom 1.4
+	leak "leak" 40 50
+	explode "tiny explosion" 5
+	explode "small explosion" 1
+	description "This Emergency Shuttle is custom-built, designed to be attached to a larger ship and to serve as a lifeboat if the need arises. It is intentionally designed to maximize the number of people it can carry to safety, but has very little space for outfits."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/escape shuttle.png" width="40" height="60">
 </details>
 
 
@@ -15348,10 +15547,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"engine capacity" 120
 		"threshold percentage" .08
 		weapon
-			"blast radius" 120
-			"shield damage" 1200
-			"hull damage" 600
-			"hit force" 1800
+			"blast radius" 145
+			"shield damage" 1450
+			"hull damage" 725
+			"hit force" 2175
 	outfits
 		"Plasma Cannon" 2
 		"Heavy Rocket Launcher" 2
@@ -15379,11 +15578,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	turret -35.5 29.5 "Quad Blaster Turret"
 	turret 35.5 29.5 "Quad Blaster Turret"
 	leak "leak" 40 50
-	leak "flame" 40 80
-	leak "big leak" 70 30
-	explode "tiny explosion" 5
+	leak "flame" 50 80
+	leak "big leak" 70 40
 	explode "small explosion" 15
-	explode "medium explosion" 30
+	explode "medium explosion" 40
 	explode "large explosion" 20
 	"final explode" "final explosion medium"
 	description `The Bulwark is basically what you get by welding a bunch of scrap metal on to a Bastion. It is a tough, slow brawler that is most often used by warlords to protect their properties, whether it'd be their ships or hideouts from raids by either the authorities or their rivals. Due to their lack of speed and cargo space these ships rarely participate in raiding merchant convoys outside their home system.`
@@ -15647,7 +15845,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Drone"
 		licenses
 			Navy
-		"cost" 83000
+		"cost" 63000
 		"hull" 700
 		"automaton" 1
 		"mass" 20
@@ -15893,32 +16091,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	attributes
 		category "Light Warship"
 		"cost" 1100000
-		"shields" 2800
-		"hull" 600
-		"required crew" 4
-		"bunks" 6
-		"mass" 252
+		"shields" 3000
+		"hull" 1000
+		"required crew" 3
+		"bunks" 5
+		"mass" 202
 		"drag" 3.9
 		"heat dissipation" .7
-		"fuel capacity" 500
-		"cargo space" 27
-		"outfit space" 282
-		"weapon capacity" 60
+		"fuel capacity" 800
+		"cargo space" 82
+		"outfit space" 255
+		"weapon capacity" 32
 		"engine capacity" 111
-		weapon
-			"blast radius" 36
-			"shield damage" 360
-			"hull damage" 180
-			"hit force" 540
+			"blast radius" 40
+			"shield damage" 400
+			"hull damage" 200
+			"hit force" 600
 	outfits
-		"Twin Modified Blaster" 2
-		"Torpedo Pod" 2
-		"Torpedo Storage Rack"
-		"Torpedo" 21
-		"Fission Reactor"
+		"Gatling Gun" 4
+		"Gatling Gun Ammo" 12000
+		"S3 Thermionic"
 		"LP036a Battery Pack"
-		"Water Coolant System"
-		"D23-QP Shield Generator"
+		"D41-HY Shield Generator"
 		"Laser Rifle" 5
 		"A370 Atomic Thruster"
 		"A375 Atomic Steering"
@@ -15928,17 +16122,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	engine 22 47
 	engine -13 43.5 .7
 	engine 13 43.5 .7
-	gun -21.5 -18 "Torpedo Pod"
-	gun 21.5 -18 "Torpedo Pod"
-	gun -11 -8.5 "Twin Modified Blaster"
-	gun 11 -8.5 "Twin Modified Blaster"
-	leak "leak" 60 50
-	leak "flame" 50 80
-	explode "tiny explosion" 15
-	explode "small explosion" 20
+	gun -21.5 -18 "Gatling Gun"
+	gun 21.5 -18 "Gatling Gun"
+	gun -11 -8.5 "Gatling Gun"
+	gun 11 -8.5 "Gatling Gun"
+	leak "leak" 70 50
+	leak "flame" 60 80
+	explode "tiny explosion" 10
+	explode "small explosion" 25
 	explode "medium explosion" 10
 	"final explode" "final explosion small"
-	description `Pirates call this heavily modified Clipper the "Cutthroat." With an extra pair of engine pods bolted on for the sole purpose of maximizing speed, it can catch or outrun all but the most fine-tuned ships in the sky.`
+	description `Pirates call this heavily modified Clipper the "Cutthroat." With an extra pair of engine pods bolted on for the sole purpose of maximizing speed, it can outrun all but the most fine-tuned ships in the sky, allowing its users to run almost any blockade.`
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/pirate cutthroat.png" width="170" height="120"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/pirate cutthroat.png" width="100" height="110">
 </details>
@@ -17005,6 +17199,56 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/human/ships.txt | ship "Jackal"</summary>
+<pre>ship "Jackal"
+	sprite "ship/jackal"
+	thumbnail "thumbnail/jackal"
+	attributes
+		category "Interceptor"
+		"cost" 320000
+		"shields" 1600
+		"hull" 500
+		"required crew" 1
+		"bunks" 2
+		"mass" 100
+		"drag" .95
+		"heat dissipation" .68
+		"fuel capacity" 500
+		"cargo space" 10
+		"outfit space" 155
+		"weapon capacity" 25
+		"engine capacity" 40
+		weapon
+			"blast radius" 21
+			"shield damage" 210
+			"hull damage" 105
+			"hit force" 315
+	outfits
+		"Modified Blaster" 4
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D14-RN Shield Generator"
+		"Chipmunk Plasma Thruster"
+		"Chipmunk Plasma Steering"
+		"Hyperdrive"
+	engine -10 35
+	engine 10 35
+	gun -17 -8.5
+	gun 17 -8.5
+	gun -25 -6
+	gun 25 -6
+	leak "leak" 50 40
+	leak "flame" 70 80
+	explode "tiny explosion" 10
+	explode "small explosion" 10
+	"final explode" "final explosion small"
+	description `The Jackal is notable for being one of the earliest warships that was designed with "freelancer" pilots in mind, rather than for corporate or law enforcement use. In its heyday, the Jackal contended with the Berserker for the title of the most popular Interceptor-class ship in human space. However, the Jackal's age and inflexibility regarding new developments in weaponry led to a decline in sales that eventually saw its manufacturer absorbed by the shipyard of its age-old rival, the Betelgeuse Shipyards Berserker.`
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/jackal.png" width="180" height="120"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/jackal.png" width="70" height="80">
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Lance"</summary>
 <pre>ship "Lance"
 	sprite "ship/lance"
@@ -17134,10 +17378,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"engine capacity" 114
 		"scan interference" 2
 		weapon
-			"blast radius" 140
-			"shield damage" 1400
-			"hull damage" 780
-			"hit force" 2100
+			"blast radius" 136
+			"shield damage" 1360
+			"hull damage" 680
+			"hit force" 2040
 	outfits
 		"Sidewinder Missile Launcher" 2
 		"Sidewinder Missile" 90
@@ -17172,15 +17416,15 @@ document.addEventListener("DOMContentLoaded", function() {
 	turret 47.5 33.5 "Proton Turret"
 	turret -22 66.5 "Anti-Missile Turret"
 	turret 22 66.5 "Anti-Missile Turret"
-	leak "leak" 30 50
-	leak "flame" 30 80
+	leak "leak" 40 50
+	leak "flame" 40 80
 	leak "big leak" 50 30
 	explode "small explosion" 15
-	explode "medium explosion" 25
-	explode "large explosion" 35
+	explode "medium explosion" 20
+	explode "large explosion" 40
 	explode "huge explosion" 20
 	"final explode" "final explosion large"
-	description "This is a rare, extensively modified Behemoth used by some pirates and smugglers to transport large amounts of goods. It is armed well enough to handle even a Navy Frigate if caught and fast enough to dash away from anything bigger."
+	description "This is a rare, extensively modified Behemoth used by some pirates and smugglers to transport large amounts of goods to systems both near and far. It is armed well enough to handle even a Navy Frigate if caught and fast enough to dash away from anything bigger."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/pirate mammoth.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/pirate mammoth.png" height="200">
 </details>
@@ -17345,6 +17589,67 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/human/ships.txt | ship "Monitor"</summary>
+<pre>ship "Monitor"
+	sprite "ship/monitor"
+	thumbnail "thumbnail/monitor"
+	attributes
+		category "Medium Warship"
+		"cost" 2900000
+		"shields" 4900
+		"hull" 2400
+		"required crew" 20
+		"bunks" 32
+		"mass" 690
+		"drag" 8.4
+		"heat dissipation" .32
+		"fuel capacity" 500
+		"cargo space" 20
+		"outfit space" 330
+		"weapon capacity" 130
+		"engine capacity" 90
+		weapon
+			"blast radius" 73
+			"shield damage" 730
+			"hull damage" 365
+			"hit force" 1095
+	outfits
+		"Heavy Blaster" 3
+		"Laser Turret" 2
+		"Anti-Missile Turret"
+		"KP-6 Photovoltaic Array" 3
+		"nGVF-BB Fuel Cell"
+		"LP036a Battery Pack"
+		"D23-QP Shield Generator"
+		"Laser Rifle" 6
+		"Fragmentation Grenades" 4
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
+		"Hyperdrive"
+	engine -20.5 92
+	engine 20.5 92
+	gun 0 -94.5 "Heavy Blaster"
+	gun -11 -86 "Heavy Blaster"
+	gun 11 -86 "Heavy Blaster"
+	turret -17.5 -19.5 "Laser Turret"
+	turret 17.5 -19.5 "Laser Turret"
+	turret 0 17 "Anti-Missile Turret"
+	leak "leak" 30 40
+	leak "flame" 40 80
+	leak "big leak" 70 30
+	explode "tiny explosion" 20
+	explode "small explosion" 40
+	explode "medium explosion" 20
+	explode "large explosion" 5
+	"final explode" "final explosion medium"
+	description `When the Republic first formed, planetary governments and corporations often fielded their own fleets; only the Deep had any form of a combined navy. Earth often found itself inefficiently directing those fleets to fight against pirates or defiant worlds. With a need to bring "peace among the stars," per the Republic motto, the newly formed Republic Navy commissioned the shipyards on Luna to design a robust warship that would be able to project the power of a united Republic. The resulting ship, the Monitor, served as the mainstay of the Navy fleets until the introduction of the more advanced Frigate.`
+	description `The few Monitors that still fly today are remnants of those sold by the Navy to the government of Betelgeuse, before they joined the Republic. Of the Monitors that made it into private hands, some eventually found themselves passing through the black markets of the Far North.`
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/monitor.png" width="190" height="170"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/monitor.png" width="120" height="200">
+</details>
+
+
+<details>
 <summary>data/human/ships.txt | ship "Mule"</summary>
 <pre>ship "Mule"
 	sprite "ship/mule"
@@ -17480,35 +17785,36 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "thumbnail/pirate nighthawk"
 	attributes
 		category "Transport"
-		"cost" 2530000
+		"cost" 2630000
 		"shields" 4000
 		"hull" 1100
-		"required crew" 4
-		"bunks" 28
-		"mass" 424
+		"required crew" 6
+		"bunks" 39
+		"mass" 400
 		"drag" 6.5
 		"heat dissipation" .52
 		"fuel capacity" 700
 		"cargo space" 16
-		"outfit space" 362
-		"weapon capacity" 102
+		"outfit space" 340
+		"weapon capacity" 72
 		"engine capacity" 123
+		"outfit scan opacity" 200
 		weapon
-			"blast radius" 60
-			"shield damage" 600
-			"hull damage" 300
-			"hit force" 900
+			"blast radius" 51
+			"shield damage" 510
+			"hull damage" 255
+			"hit force" 765
 	outfits
-		"Quad Blaster Turret" 2
-		"Heavy Anti-Missile Turret"
+		"Quad Blaster Turret"
+		"Anti-Missile Turret" 2
 		"RT-I Radiothermal"
 		"KP-6 Photovoltaic Array" 3
 		"LP072a Battery Pack"
 		"D23-QP Shield Generator"
 		"Large Radar Jammer"
-		"Tactical Scanner"
 		"Laser Rifle" 24
 		"Nerve Gas" 10
+		"Brig" 1
 		"Impala Plasma Thruster"
 		"Impala Plasma Steering"
 		"Hyperdrive"
@@ -17516,17 +17822,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	engine 42.5 63 .8
 	engine -24 68 .6
 	engine 24 68 .6
-	turret 0 -6 "Heavy Anti-Missile Turret"
-	turret -26 15 "Quad Blaster Turret"
-	turret 26 15 "Quad Blaster Turret"
-	leak "leak" 50 50
+	turret 0 -6 "Quad Blaster Turret"
+	turret -26 15 "Anti-Missile Turret"
+	turret 26 15 "Anti-Missile Turret"
+	leak "leak" 40 50
 	leak "flame" 70 80
-	explode "tiny explosion" 15
-	explode "small explosion" 34
-	explode "medium explosion" 18
+	explode "tiny explosion" 20
+	explode "small explosion" 30
+	explode "medium explosion" 15
 	explode "large explosion" 2
 	"final explode" "final explosion small"
-	description "This is a modified Blackbird for ground raids and slave trading. It comes with an extra turret mount for suppressive fire on ground operations and additional hull reinforcement to resist returning fire."
+	description "The Nighthawk is the result of modifications to increase a Blackbird's passenger capacity for transportation of both lawless individuals and slavery, sacrificing much of the original cargo space. Additionally, at the cost of some shield strength, hull conversions have given the ship a bit more armor plating, along with another turret mount. This gives Nighthawks a bit more defense for combat situations that a Blackbird would not want to find itself in."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/pirate nighthawk.png" width="200" height="130"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/pirate nighthawk.png" width="160" height="140">
 </details>
@@ -18497,20 +18803,20 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shields" 4800
 		"hull" 2800
 		"required crew" 9
-		"bunks" 26
+		"bunks" 19
 		"mass" 436
 		"drag" 7.4
 		"heat dissipation" .42
 		"fuel capacity" 500
-		"cargo space" 41
+		"cargo space" 81
 		"outfit space" 400
-		"weapon capacity" 170
-		"engine capacity" 76
+		"weapon capacity" 180
+		"engine capacity" 105
 		weapon
-			"blast radius" 80
-			"shield damage" 800
-			"hull damage" 400
-			"hit force" 1200
+			"blast radius" 76
+			"shield damage" 760
+			"hull damage" 380
+			"hit force" 1140
 	outfits
 		"Quad Blaster Turret" 2
 		"Particle Cannon" 2
@@ -18519,12 +18825,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		"NT-200 Nucleovoltaic"
 		"KP-6 Photovoltaic Panel" 3
 		"LP072a Battery Pack"
-		"D67-TM Shield Generator"
-		"Large Radar Jammer"
+		"D23-QP Shield Generator"
+		"Small Radar Jammer"
 		"Laser Rifle" 18
 		"Nerve Gas" 3
-		"Greyhound Plasma Thruster"
-		"Greyhound Plasma Steering"
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
 		"Hyperdrive"
 	engine 15 97
 	engine -15 97
@@ -18544,7 +18850,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	explode "medium explosion" 25
 	explode "large explosion" 10
 	"final explode" "final explosion medium"
-	description "Valkyries are pirate Aeries converted into more of a standalone warship than a support carrier. Losing a turret and a few bunks in place of increased armor protection, as well as boasting two more gun mounts, allows Valkyries to both take and put out noticeable amounts of damage. However, due to the extra weight, they are somewhat slower and lose a bit of shield efficiency."
+	description "Valkyries are modified Aeries that convert two of their bays and bunk space into more cargo space for smuggling goods, as well as more room to boast two extra gun mounts and increased armor protection. This allows Valkyries to both take and put out noticeable amounts of damage, however, due to the extra weight, they are somewhat slower and lose a bit of shield efficiency."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/pirate valkyrie.png" width="190" height="150"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/pirate valkyrie.png" width="150" height="200">
 </details>
@@ -19811,7 +20117,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"D94-YV Shield Generator" 2
 		"Large Radar Jammer"
 		"Liquid Helium Cooler"
-		"Outfits Expansion" 4
 		"Brig"
 		"Laser Rifle" 45
 		"Fragmentation Grenades" 45
@@ -20418,31 +20723,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/human/variants.txt | ship "Cutthroat" "Cutthroat (Jousting)"</summary>
-<pre>ship "Cutthroat" "Cutthroat (Jousting)"
-	outfits
-		"Twin Modified Blaster" 2
-		"Heavy Rocket Pod" 2
-		"Heavy Rocket Rack"
-		"Heavy Rocket" 14
-		"Fission Reactor"
-		"Supercapacitor"
-		"Water Coolant System"
-		"D23-QP Shield Generator"
-		"Laser Rifle" 5
-		"A520 Atomic Thruster"
-		"A255 Atomic Steering"
-		"Hyperdrive"
-	gun -21.5 -18 "Heavy Rocket Pod"
-	gun 21.5 -18 "Heavy Rocket Pod"
-	gun -11 -8.5 "Twin Modified Blaster"
-	gun 11 -8.5 "Twin Modified Blaster"
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/hai/hai reveal 7 epilogue.txt | ship "Dagger" "Dagger (Miner)"</summary>
 <pre>ship "Dagger" "Dagger (Miner)"
 	outfits
@@ -20842,6 +21122,26 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Laser Rifle" 3
 		"X3700 Ion Thruster"
 		"A375 Atomic Steering"
+		"Hyperdrive"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/variants.txt | ship "Firebird" "Firebird (Heavy Blaster)"</summary>
+<pre>ship "Firebird" "Firebird (Heavy Blaster)"
+	outfits
+		"Heavy Blaster" 4
+		"Quad Blaster Turret"
+		"Heavy Anti-Missile Turret"
+		"RT-I Radiothermal"
+		"nGVF-AA Fuel Cell"
+		"LP144a Battery Pack"
+		"D41-HY Shield Generator"
+		"Laser Rifle" 3
+		"X3700 Ion Thruster"
+		"X3200 Ion Steering"
 		"Hyperdrive"
 </pre>
 
@@ -22317,50 +22617,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/human/variants.txt | ship "Nighthawk" "Nighthawk (Raider)"</summary>
-<pre>ship "Nighthawk" "Nighthawk (Raider)"
-	crew 28
-	outfits
-		"Quad Blaster Turret" 2
-		"Heavy Anti-Missile Turret"
-		"RT-I Radiothermal"
-		"KP-6 Photovoltaic Array" 3
-		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
-		"Large Radar Jammer"
-		"Tactical Scanner"
-		"Laser Rifle" 28
-		"Nerve Gas" 10
-		"Impala Plasma Thruster"
-		"Impala Plasma Steering"
-		"Hyperdrive"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/human/variants.txt | ship "Nighthawk" "Nighthawk (Slaver)"</summary>
-<pre>ship "Nighthawk" "Nighthawk (Slaver)"
-	outfits
-		"Quad Blaster Turret" 2
-		"Heavy Anti-Missile Turret"
-		"RT-I Radiothermal"
-		"KP-6 Photovoltaic Array" 3
-		"LP072a Battery Pack"
-		"D23-QP Shield Generator"
-		"Large Radar Jammer"
-		"Laser Rifle" 6
-		"Brig"
-		"Impala Plasma Thruster"
-		"Impala Plasma Steering"
-		"Hyperdrive"
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/human/variants.txt | ship "Osprey" "Osprey (Alien Weapons)"</summary>
 <pre>ship "Osprey" "Osprey (Alien Weapons)"
 	outfits
@@ -23286,7 +23542,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Fighter"
+		category "Unclassified Minor"
 		"cost" 0
 		"hull" 4000
 		"required crew" 2
@@ -23341,7 +23597,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Utility"
+		category "Unclassified"
 		"cost" 0
 		"hull" 6000
 		"required crew" 4
@@ -23387,31 +23643,31 @@ document.addEventListener("DOMContentLoaded", function() {
 			"hit force" 4500
 	engine 0 0
 	"steering engine" 0 0
-	bay "Fighter" -36 40
+	bay "Unclassified Minor" -36 40
 		over
 		angle 60
-	bay "Fighter" 36 20
+	bay "Unclassified Minor" 36 20
 		over
 		angle -70
-	bay "Fighter" -16 104
+	bay "Unclassified Minor" -16 104
 		over
 		angle 162
-	bay "Fighter" -28 66
+	bay "Unclassified Minor" -28 66
 		over
 		angle 68
-	bay "Fighter" -18 14
+	bay "Unclassified Minor" -18 14
 		over
 		angle 127
-	bay "Fighter" 35 25
+	bay "Unclassified Minor" 35 25
 		over
 		angle 25
-	bay "Fighter" 25 70
+	bay "Unclassified Minor" 25 70
 		over
 		angle -120
-	bay "Fighter" 11 110
+	bay "Unclassified Minor" 11 110
 		over
 		angle 38
-	bay "Fighter" -36 40
+	bay "Unclassified Minor" -36 40
 		over
 		angle -53
 	"final explode" "ayym boom"
@@ -23482,12 +23738,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	engine 0 42
 		"over"
 	engine 90 42
-	gun 58.5 -76.5
-	gun 29 -76.5
-	gun 29 -76.5
-	gun -28 -76.5
-	gun -28 -76.5
-	gun -57 -76
+	gun 58.5 -76.5 "Plasma Discharger"
+	gun 29 -76.5 "Star Tail"
+	gun 29 -76.5 "Star Tail"
+	gun -28 -76.5 "Star Tail"
+	gun -28 -76.5 "Star Tail"
+	gun -57.5 -76.5 "Plasma Discharger"
 	explode "medium explosion" 50
 	explode "large explosion" 40
 	explode "huge explosion" 10
@@ -23725,7 +23981,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Interceptor"
+		category "Unclassified"
 		cost 500000
 		"mass" 525
 		"outfit space" 45
@@ -23789,6 +24045,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -23863,6 +24121,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -23944,6 +24204,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24019,6 +24281,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24096,6 +24360,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24179,6 +24445,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.6
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 500
 			"shield damage" 11400
@@ -24260,6 +24528,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24339,6 +24609,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24419,6 +24691,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24498,6 +24772,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24579,6 +24855,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 300
 			"shield damage" 6400
@@ -24653,6 +24931,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.2
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 600
 			"shield damage" 12400
@@ -24739,6 +25019,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.4
 		"quantum keystone" 1
 		"ka'sei" 1
+		"overheat damage threshold" 0.7
+		"overheat damage rate" 0.7
 		weapon
 			"blast radius" 600
 			"shield damage" 12400
@@ -24793,6 +25075,777 @@ document.addEventListener("DOMContentLoaded", function() {
 	"uncapturable"
 </pre>
 
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Large 1"</summary>
+<pre>ship "Asteroid Large 1"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid adult"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 29000000
+		"hull" 36561
+		"required crew" 1
+		"bunks" 1
+		"mass" 11740
+		"drag" 704
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3402
+		"flare sprite" "effect/asteroid adult flare"
+			"frame rate" 1
+		"turn" 59314
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount" 1
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Weapon Large" 2
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large"
+	gun 0 0 "Asteroid Weapon Large"
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult.png" width="200" height="200">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Large 2"</summary>
+<pre>ship "Asteroid Large 2"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid adult 2"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 23000000
+		"hull" 37151
+		"required crew" 1
+		"bunks" 1
+		"mass" 11980
+		"drag" 704
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3402
+		"flare sprite" "effect/asteroid adult 2 flare"
+			"frame rate" 1
+		"turn" 59314
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount" 1
+		"asteroid mount 4" 1
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Weapon Large"
+		"Asteroid Weapon Large 4"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large"
+	gun 0 0 "Asteroid Weapon Large 4"
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult 2.png" width="200" height="200">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Large 3"</summary>
+<pre>ship "Asteroid Large 3"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid adult 3"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 19000000
+		"hull" 35172
+		"required crew" 1
+		"bunks" 1
+		"mass" 11310
+		"drag" 704
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3402
+		"flare sprite" "effect/asteroid adult 3 flare"
+			"frame rate" 1
+		"turn" 59314
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount 4" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Weapon Large 4" 2
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large 4"
+	gun 0 0 "Asteroid Weapon Large 4"
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult 3.png" width="200" height="200">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Large 4"</summary>
+<pre>ship "Asteroid Large 4"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid adult 4"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 17000000
+		"hull" 35172
+		"required crew" 1
+		"bunks" 1
+		"mass" 12510
+		"drag" 704
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3402
+		"flare sprite" "effect/asteroid adult 4 flare"
+			"frame rate" 1
+		"turn" 59314
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount 3" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Weapon Large 3" 2
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large 3"
+	gun 0 0 "Asteroid Weapon Large 3"
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult 4.png" width="200" height="200">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Large 5"</summary>
+<pre>ship "Asteroid Large 5"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid adult 5"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 31000000
+		"hull" 36716
+		"required crew" 1
+		"bunks" 1
+		"mass" 12150
+		"drag" 704
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3402
+		"flare sprite" "effect/asteroid adult 5 flare"
+			"frame rate" 1
+		"turn" 59314
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount 2" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Weapon Large 2" 2
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large 2"
+	gun 0 0 "Asteroid Weapon Large 2"
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult 5.png" width="200" height="200">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Medium"</summary>
+<pre>ship "Asteroid Medium"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid medium"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 13000000
+		"hull" 21248
+		"required crew" 1
+		"bunks" 1
+		"mass" 7620
+		"drag" 551
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 3272
+		"flare sprite" "effect/asteroid medium flare"
+			"frame rate" 1
+		"turn" 48163
+		"asteroid mount jd" 1
+		"asteroid mount small" 1
+		"asteroid mount 2" 1
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile 2"
+		"Asteroid Weapon Large 2"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Large 2"
+	turret 0 0 "Asteroid Anti-Missile 2"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid medium.png" width="110" height="110">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Young 1"</summary>
+<pre>ship "Asteroid Young 1"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid young"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 11000000
+		"hull" 16459
+		"required crew" 1
+		"bunks" 1
+		"mass" 5810
+		"drag" 397
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 2039
+		"flare sprite" "effect/asteroid young flare"
+			"frame rate" 1
+		"turn" 40191
+		"asteroid mount jd" 1
+		"asteroid mount small" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile 2"
+		"Asteroid Weapon Small"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Small"
+	turret 0 0 "Asteroid Anti-Missile 2"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid young.png" width="70" height="70">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Young 2"</summary>
+<pre>ship "Asteroid Young 2"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid young 2"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 7000000
+		"hull" 15984
+		"required crew" 1
+		"bunks" 1
+		"mass" 5780
+		"drag" 397
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 2039
+		"flare sprite" "effect/asteroid young 2 flare"
+			"frame rate" 1
+		"turn" 40191
+		"asteroid mount jd" 1
+		"asteroid mount small" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile 2"
+		"Asteroid Weapon Small"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Small"
+	turret 0 0 "Asteroid Anti-Missile 2"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid young 2.png" width="70" height="70">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Young 3"</summary>
+<pre>ship "Asteroid Young 3"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid young 3"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 5000000
+		"hull" 17021
+		"required crew" 1
+		"bunks" 1
+		"mass" 5850
+		"drag" 397
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 2039
+		"flare sprite" "effect/asteroid young 3 flare"
+			"frame rate" 1
+		"turn" 40191
+		"asteroid mount jd" 1
+		"asteroid mount small" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile 2"
+		"Asteroid Weapon Small"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Small"
+	turret 0 0 "Asteroid Anti-Missile 2"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid young 3.png" width="60" height="60">
+</details>
+
+
+<details>
+<summary>data/kahet/beyond patir assets.txt | ship "Asteroid Young 4"</summary>
+<pre>ship "Asteroid Young 4"
+	"display name" "???"
+	"noun" "asteroid"
+	sprite "ship/asteroid young 4"
+	attributes
+		category "Transport"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 3000000
+		"hull" 16462
+		"required crew" 1
+		"bunks" 1
+		"mass" 5910
+		"drag" 397
+		"heat dissipation" 10
+		"fuel capacity" 1000
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 2039
+		"flare sprite" "effect/asteroid young 4 flare"
+			"frame rate" 1
+		"turn" 40191
+		"asteroid mount jd" 1
+		"asteroid mount small" 2
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile 2"
+		"Asteroid Weapon Small"
+		"Asteroid Jump Drive"
+	engine 0 0
+		over
+	gun 0 0 "Asteroid Weapon Small"
+	turret 0 0 "Asteroid Anti-Missile 2"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid young 4.png" width="60" height="60">
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Cloak Check"</summary>
+<pre>ship "Cloak Check"
+	attributes
+		"heat dissipation" 1
+		"hull" 3
+		"mass" 100
+		"drag" 5
+		"automaton" 1
+		"thrust" 100
+		"turn" 6000
+	outfits
+		"Cloak Checker"
+	turret 0 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Asteroid Planet"</summary>
+<pre>ship "Asteroid Planet"
+	attributes
+		category "Heavy Warship"
+		"uncapturable" 1
+		"inscrutable" 1
+		"cost" 158000000
+		"hull" 86135672193
+		"required crew" 1
+		"bunks" 1
+		"mass" 67400
+		"drag" 3040
+		"heat dissipation" 10
+		"energy capacity" 1
+		"fuel generation" 0.3
+		"cargo space" 40
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		"hull repair rate" 47
+		"cargo scan power" 1
+		"cargo scan efficiency" 0.001
+		"thrust" 34020
+		"turn" 593140
+		"asteroid mount jd" 1
+		"asteroid mount am" 1
+		"asteroid mount" 1
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Weapon Super"
+	gun 0 0 "Asteroid Weapon Super"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Remnant Satellite"</summary>
+<pre>ship "Remnant Satellite"
+	sprite "ship/remnant satellite"
+	attributes
+		category "Drone"
+		hull 130
+		mass 10
+		drag 2
+		"heat dissipation" 1
+	explode "tiny explosion" 5
+	explode "small explosion" 2
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/remnant satellite.png" width="40" height="70">
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Asteroid Blocker"</summary>
+<pre>ship "Asteroid Blocker"
+	attributes
+		"heat dissipation" 1
+		"hull" 3
+		"mass" 100
+		"drag" 5
+		"automaton" 1
+		"thrust" 100
+		"turn" 6000
+	outfits
+		"Fuel Removal"
+	turret 0 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Fetri'sei" "Fetri'sei (Patir 12.2)"</summary>
+<pre>ship "Fetri'sei" "Fetri'sei (Patir 12.2)"
+	plural "Fetri'seia"
+	sprite "ship/fetri'sei"
+	thumbnail "thumbnail/fetri'sei"
+	attributes
+		category "Interceptor"
+		"cost" 5700000
+		"shields" 2400
+		"hull" 7200
+		"required crew" 1
+		"bunks" 1
+		"mass" 210
+		"drag" 2.9
+		"heat dissipation" .5
+		"fuel capacity" 100
+		"self destruct" 1
+		"ramscoop" 0.13
+		"cargo space" 62
+		"outfit space" 383
+		"weapon capacity" 184
+		"engine capacity" 86
+		"energy capacity" 10000
+		"energy generation" 23.3
+		"heat generation" 32
+		"shield heat" 3.4
+		"hull repair rate" 0.3
+		"ka'sei" 1
+		weapon
+			"blast radius" 120
+			"shield damage" 540
+			"hull damage" 280
+			"hit force" 780
+	outfits
+		"Ka'het Machinery"
+		"Ka'het Ravager Beam" 2
+		"Ka'het Primary Cooling"
+		"Ka'het Shield Restorer"
+		"Ka'het MHD Generator"
+		"Ka'het Reserve Accumulator"
+		"Ka'het Compact Engine" 2
+	gun -13 -36
+	gun 13 -36
+	turret 0 0
+	engine -20 46.5
+	engine 20 46.5
+	explode "tiny explosion" 6
+	explode "small explosion" 10
+	explode "medium explosion" 18
+	explode "large explosion" 10
+	"final explode" "final explosion small"
+	description "The Fetri is a self replicating probe, built to harvest iridium away from the Graveyard and transport it back to the Builders."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/fetri'sei.png" width="160" height="130"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/fetri'sei.png" width="70" height="120">
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | ship "Asteroid Large 1" "Asteroid Large (Patir 12.2)"</summary>
+<pre>ship "Asteroid Large 1" "Asteroid Large (Patir 12.2)"
+	sprite "ship/asteroid adult"
+	attributes
+		category "Transport"
+		"cost" 1350000000
+		"hull" 965612
+		"required crew" 1
+		"bunks" 1
+		"mass" 130
+		"drag" 4.1
+		"heat dissipation" .7
+		"energy capacity" 1000
+		"energy generation" 10
+		"fuel capacity" 250
+		"fuel generation" -1
+		"cargo space" 50
+		"outfit space" 390
+		"weapon capacity" 150
+		"engine capacity" 95
+		weapon
+			"blast radius" 80
+			"shield damage" 800
+			"hull damage" 400
+			"hit force" 1200
+	outfits
+		"Asteroid Anti-Missile"
+		"Asteroid Jump Drive"
+	engine 0 0
+		zoom 1
+		angle 0
+		over
+	turret 0 0 "Asteroid Anti-Missile"
+	explode "tiny explosion" 10
+	explode "small explosion" 25
+	explode "medium explosion" 25
+	explode "large explosion" 10
+	"final explode" "final explosion medium"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/asteroid adult.png" width="200" height="200">
 </details>
 
 
@@ -25421,6 +26474,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shield heat" 3.4
 		"hull repair rate" 0.3
 		"ka'sei" 1
+		"overheat damage threshold" 0.2
+		"overheat damage rate" 1
 		weapon
 			"blast radius" 120
 			"shield damage" 540
@@ -27837,8 +28892,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Large Heat Shunt"
 		"Small Heat Shunt" 2
 		"Reasoning Node" 3
+		"Thruster (Lunar Class)"
 		"Thruster (Planetary Class)"
-		"Steering (Stellar Class)"
+		"Steering (Planetary Class)"
 		Hyperdrive
 	engine -145 97
 	engine 145 97
@@ -29416,6 +30472,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/korath/nanobots.txt | ship "Nanobot"</summary>
 <pre>ship "Nanobot"
 	attributes
+		category "Unclassified"
 		"hull" 100
 		"automaton" 1
 		"mass" 10
@@ -29628,13 +30685,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"weapon capacity" 390
 		"engine capacity" 220
 		"energy capacity" 10000
-		"energy generation" 200
+		"energy generation" 90
 		"heat generation" 10
-		"shield generation" 32
-		"shield energy" 32
+		"shield generation" 24
+		"shield energy" 24
 		"hull repair rate" 5
 		"hull energy" 5
-		"cloaking fuel" -.2
+		"cloaking fuel" -.15
 		"reverse thrust" 99
 		"reverse thrusting energy" 4.9
 		"reverse thrusting heat" 6.9
@@ -29671,114 +30728,327 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/quarg/quarg ships.txt | ship "Quarg Skylark"</summary>
-<pre>ship "Quarg Skylark"
-	sprite "ship/skylark"
-	thumbnail "thumbnail/skylark"
+<summary>data/quarg/quarg ships.txt | ship "Quarg Lindwyrm"</summary>
+<pre>ship "Quarg Lindwyrm"
+	sprite "ship/quarg lindwyrm"
+	thumbnail "thumbnail/quarg lindwyrm"
 	attributes
-		category "Heavy Warship"
-		"cost" 5900000
-		"shields" 120000
-		"hull" 70000
-		"required crew" 120
-		"bunks" 210
-		"mass" 990
-		"drag" 18.5
-		"heat dissipation" .47
+		category "Heavy Freighter"
+		"cost" 20000000
+		"shields" 95000
+		"hull" 55000
+		"required crew" 35
+		"bunks" 40
+		"mass" 840
+		"drag" 11.5
+		"heat dissipation" .5
 		"fuel capacity" 1000
-		"cargo space" 200
-		"outfit space" 600
-		"weapon capacity" 200
-		"engine capacity" 120
-		"hull repair rate" 5
-		"hull energy" 5
-		"ramscoop" 10
+		"cargo space" 400
+		"outfit space" 460
+		"weapon capacity" 140
+		"engine capacity" 100
 		weapon
-			"blast radius" 250
-			"shield damage" 1000
-			"hull damage" 500
-			"hit force" 1500
+			"blast radius" 150
+			"shield damage" 15000
+			"hull damage" 7500
+			"hit force" 2250
 	outfits
-		"Quarg Skylance" 2
-		"Quarg Anti-Missile" 2
-		"Antimatter Core"
-		"Nanotech Battery"
-		"Quantum Shield Generator"
-		"Intrusion Countermeasures" 120
-		"Medium Graviton Thruster"
+		"Skydagger" 2
+		"Stratospear" 2
+		"Singularity Core"
+		"Quantum Vacuum Battery"
+		"Aspis Shield Generator"
+		"Peripheral Repair Hub"
+		"Phalanx System" 40
+		"Small Graviton Thruster"
 		"Medium Graviton Steering"
 		"Jump Drive"
-	engine -15 117
-	engine 15 117
-	turret -12 -80 "Quarg Skylance"
-	turret 12 -80 "Quarg Skylance"
-	turret -34 24 "Quarg Anti-Missile"
-	turret 34 24 "Quarg Anti-Missile"
-	explode "tiny explosion" 12
-	explode "small explosion" 16
-	explode "medium explosion" 30
-	explode "large explosion" 40
-	explode "huge explosion" 20
+	engine -29 125
+	engine 29 125
+	turret -19.5 -88.5 "Skydagger"
+	turret 19.5 -88.5 "Skydagger"
+	turret -29.5 69 "Stratospear"
+	turret 29.5 69 "Stratospear"
+	explode "small explosion" 35
+	explode "medium explosion" 50
+	explode "large explosion" 20
 	"final explode" "final explosion medium"
-	description "The Skylark is used by the Quarg as a freighter and warship."
+	description `The Quarg use the Lindwyrm as a heavy freighter, transporting in its ample cargo bays items both mundane and fantastical. In the days before the advent of modern cargo scanners revealed some measure of their contents, "the inside of a Quarg cargo hold" was slang used to describe any thing or place thought to be unknowable.`
 </pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/skylark.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/skylark.png" height="200">
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg lindwyrm.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg lindwyrm.png" height="200">
+</details>
+
+
+<details>
+<summary>data/quarg/quarg ships.txt | ship "Quarg Guivre"</summary>
+<pre>ship "Quarg Guivre"
+	sprite "ship/quarg guivre"
+	thumbnail "thumbnail/quarg guivre"
+	attributes
+		category "Utility"
+		"cost" 75000000
+		"shields" 185000
+		"hull" 115000
+		"required crew" 165
+		"bunks" 180
+		"mass" 2800
+		"drag" 29
+		"heat dissipation" .3
+		"fuel capacity" 2000
+		"cargo space" 300
+		"outfit space" 720
+		"weapon capacity" 280
+		"engine capacity" 140
+		weapon
+			"blast radius" 300
+			"shield damage" 30000
+			"hull damage" 15000
+			"hit force" 4500
+	outfits
+		"Slipstream Projector"
+		"Stratospear" 2
+		"Quasar Core"
+		"Quantum Vacuum Battery"
+		"Ancile Shield Generator"
+		"Central Repair Hub"
+		"Phalanx System" 180
+		"Medium Graviton Thruster"
+		"Large Graviton Steering"
+		"Jump Drive"
+	engine -25.5 144
+	engine 25.5 144
+	gun 0 -40 "Slipstream Projector"
+	turret -70 61 "Stratospear"
+	turret 70 61 "Stratospear"
+	explode "small explosion" 40
+	explode "medium explosion" 60
+	explode "large explosion" 45
+	explode "huge explosion" 20
+	"final explode" "final explosion large"
+	description "The Quarg employ these unusual craft as one of their primary tools for building and maintaining their ringworlds, each one operating continuously for hundreds or thousands of years on its planet-scale tasks. Each Guivre is equipped with a graviton slipstream projector, similar in usage to human-built tractor beams, but capable of shifting much, much larger objects with uncanny elegance and precision."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg guivre.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg guivre.png" width="200">
+</details>
+
+
+<details>
+<summary>data/quarg/quarg ships.txt | ship "Quarg Drake"</summary>
+<pre>ship "Quarg Drake"
+	sprite "ship/quarg drake"
+	thumbnail "thumbnail/quarg drake"
+	attributes
+		category "Light Warship"
+		"cost" 12000000
+		"shields" 95000
+		"hull" 25000
+		"required crew" 20
+		"bunks" 30
+		"mass" 440
+		"drag" 5.7
+		"heat dissipation" .65
+		"fuel capacity" 800
+		"cargo space" 20
+		"outfit space" 450
+		"weapon capacity" 140
+		"engine capacity" 80
+		weapon
+			"blast radius" 120
+			"shield damage" 12000
+			"hull damage" 6000
+			"hit force" 1800
+	outfits
+		"Skydagger" 2
+		"Skylance"
+		"Stratospear"
+		"Antimatter Core"
+		"Quantum Vacuum Battery"
+		"Ancile Shield Generator"
+		"Peripheral Repair Hub"
+		"Phalanx System" 30
+		"Small Graviton Thruster"
+		"Small Graviton Steering"
+		"Jump Drive"
+	engine -14 59.5
+	engine 14 59.5
+	turret 0 -29 "Skylance"
+	turret -43.5 4.5 "Skydagger"
+	turret 43.5 4.5 "Skydagger"
+	turret 0 8.5 "Stratospear"
+	explode "tiny explosion" 10
+	explode "small explosion" 15
+	explode "medium explosion" 20
+	explode "large explosion" 10
+	"final explode" "final explosion small"
+	description "The Drake is an older ship used by the Quarg for reconnaissance and initial contact with emerging spacefaring species. A popular legend states that a Drake surveyed Sol while humans began to discover spaceflight."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg drake.png" width="170" height="120"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg drake.png" width="120" height="150">
 </details>
 
 
 <details>
 <summary>data/quarg/quarg ships.txt | ship "Quarg Wardragon"</summary>
 <pre>ship "Quarg Wardragon"
-	sprite "ship/wardragon"
-	thumbnail "thumbnail/wardragon"
+	sprite "ship/quarg wardragon"
+	thumbnail "thumbnail/quarg wardragon"
 	attributes
-		category "Heavy Warship"
-		"cost" 5900000
-		"shields" 160000
-		"hull" 50000
-		"required crew" 160
-		"bunks" 185
-		"mass" 840
-		"drag" 14
-		"heat dissipation" .34
+		category "Light Warship"
+		"cost" 15000000
+		"shields" 105000
+		"hull" 30000
+		"required crew" 30
+		"bunks" 40
+		"mass" 600
+		"drag" 8.5
+		"heat dissipation" .6
 		"fuel capacity" 800
-		"cargo space" 50
-		"outfit space" 600
-		"weapon capacity" 200
-		"engine capacity" 120
-		"hull repair rate" 5
-		"hull energy" 5
-		"ramscoop" 10
+		"cargo space" 30
+		"outfit space" 510
+		"weapon capacity" 180
+		"engine capacity" 100
 		weapon
-			"blast radius" 250
-			"shield damage" 1000
-			"hull damage" 500
-			"hit force" 1500
+			"blast radius" 135
+			"shield damage" 13500
+			"hull damage" 6750
+			"hit force" 2025
 	outfits
-		"Quarg Skylance" 2
-		"Quarg Anti-Missile" 2
-		"Antimatter Core"
-		"Nanotech Battery"
-		"Quantum Shield Generator"
-		"Intrusion Countermeasures" 160
+		"Skylance" 2
+		"Stratospear" 2
+		"Singularity Core"
+		"Quantum Vacuum Battery"
+		"Ancile Shield Generator"
+		"Peripheral Repair Hub"
+		"Phalanx System" 40
+		"Small Graviton Thruster"
+		"Medium Graviton Steering"
+		"Jump Drive"
+	engine -17 76.5
+	engine 17 76.5
+	turret -13 -18.5 "Stratospear"
+	turret 13 -18.5 "Stratospear"
+	turret -44 0.5 "Skylance"
+	turret 44 0.5 "Skylance"
+	explode "tiny explosion" 5
+	explode "small explosion" 20
+	explode "medium explosion" 25
+	explode "large explosion" 15
+	"final explode" "final explosion medium"
+	description "The Wardragon is used by the Quarg as a light warship. It is an older design within the Quarg's fleets, supposedly less intimidating compared to their larger warships and thus more suitable for dealings with particularly nascent species."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg wardragon.png" width="180" height="130"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg wardragon.png" width="160" height="200">
+</details>
+
+
+<details>
+<summary>data/quarg/quarg ships.txt | ship "Quarg Wyvern"</summary>
+<pre>ship "Quarg Wyvern"
+	sprite "ship/quarg wyvern"
+	thumbnail "thumbnail/quarg wyvern"
+	attributes
+		category "Medium Warship"
+		"cost" 27000000
+		"shields" 155000
+		"hull" 45000
+		"required crew" 50
+		"bunks" 60
+		"mass" 750
+		"drag" 9
+		"heat dissipation" .55
+		"fuel capacity" 1000
+		"cargo space" 20
+		"outfit space" 575
+		"weapon capacity" 250
+		"engine capacity" 120
+		weapon
+			"blast radius" 200
+			"shield damage" 20000
+			"hull damage" 10000
+			"hit force" 3000
+	outfits
+		"Elysian Ranseur" 2
+		"Astral Ribault" 2
+		"Stratospear"
+		"Singularity Core"
+		"Quantum Vacuum Battery"
+		"Aspis Shield Generator"
+		"Peripheral Repair Hub"
+		"Phalanx System" 60
 		"Medium Graviton Thruster"
 		"Medium Graviton Steering"
 		"Jump Drive"
-	engine -14 47
-	engine 14 47
-	turret -9 -14 "Quarg Anti-Missile"
-	turret 9 -14 "Quarg Anti-Missile"
-	turret -28 7 "Quarg Skylance"
-	turret 28 7 "Quarg Skylance"
-	explode "tiny explosion" 12
-	explode "small explosion" 16
+	engine -23 121
+	engine 23 121
+	gun -17.5 -123 "Elysian Ranseur"
+	gun 17.5 -123 "Elysian Ranseur"
+	turret -38 -74 "Astral Ribault"
+	turret 38 -74 "Astral Ribault"
+	turret 0 6.5 "Stratospear"
+	explode "small explosion" 15
 	explode "medium explosion" 30
-	explode "large explosion" 40
-	explode "huge explosion" 20
+	explode "large explosion" 25
 	"final explode" "final explosion medium"
-	description "The Wardragon is used by the Quarg as a light warship."
+	description "When humans first encountered Quarg vessels, with their bizarre, scaly-looking hulls and alien forms, the comparisons to dragons of different sorts rapidly proliferated. The Wyvern is a midsize warship of the Quarg, though the distinction between the Quarg warship classes is insignificant to all but the most powerful forces in the galaxy."
 </pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/wardragon.png" width="176" height="150"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/wardragon.png" width="140" height="150">
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg wyvern.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg wyvern.png" height="200">
+</details>
+
+
+<details>
+<summary>data/quarg/quarg ships.txt | ship "Quarg Hydra"</summary>
+<pre>ship "Quarg Hydra"
+	sprite "ship/quarg hydra"
+	thumbnail "thumbnail/quarg hydra"
+	attributes
+		category "Heavy Warship"
+		"cost" 65000000
+		"shields" 310000
+		"hull" 80000
+		"required crew" 120
+		"bunks" 140
+		"mass" 2600
+		"drag" 25
+		"heat dissipation" .4
+		"fuel capacity" 800
+		"cargo space" 80
+		"outfit space" 925
+		"weapon capacity" 380
+		"engine capacity" 170
+		weapon
+			"blast radius" 390
+			"shield damage" 39000
+			"hull damage" 19500
+			"hit force" 5850
+	outfits
+		"Elysian Ranseur" 2
+		"Celestial Culverin" 3
+		"Stratospear" 2
+		"Astral Ribault"
+		"Quasar Core"
+		"Antimatter Core"
+		"Quantum Vacuum Battery"
+		"Aegis Shield Generator"
+		"Central Repair Hub"
+		"Phalanx System" 140
+		"Large Graviton Thruster"
+		"Large Graviton Steering"
+		"Jump Drive"
+	engine -23.5 135
+	engine 23.5 135
+	gun -38 -168 "Elysian Ranseur"
+	gun 38 -168 "Elysian Ranseur"
+	gun -78 -129 "Celestial Culverin"
+	gun 78 -129 "Celestial Culverin"
+	gun 0 -130 "Celestial Culverin"
+	turret -52 -71.5 "Stratospear"
+	turret 52 -71.5 "Stratospear"
+	turret 0 7.5 "Astral Ribault"
+	explode "small explosion" 15
+	explode "medium explosion" 30
+	explode "large explosion" 20
+	explode "huge explosion" 10
+	"final explode" "final explosion large"
+	description "The many-headed mythological Hydra was supposedly venomous enough to kill mortals with nothing but the scent of its breath or a single drop of its blood. Any captain foolish enough to arouse the fury of the Quarg's heavy warships will no doubt quickly come to understand the exact significance of this part of the Hydra's legend."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/quarg hydra.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/quarg hydra.png" height="200">
 </details>
 
 
@@ -29809,6 +31079,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	# The _Ion Storm Timer: Generator outfit counteracts this until there is an ion storm
 	# sprite "ship/shuttle" # uncomment this for debugging
 	attributes
+		category "Game Mechanics"
 		"heat dissipation" 1
 		"hull" 1.0
 		"mass" 100
@@ -29831,6 +31102,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>ship "Rescue Dummy"
 	# sprite "ship/behemoth"
 	attributes
+		category "Game Mechanics"
 		"heat dissipation" 1
 		"hull" 1
 		"mass" 10
@@ -30134,7 +31406,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull" 9600
 		"required crew" 95
 		"bunks" 300
-		"mass" 4732
+		"mass" 2366
 		"drag" 28.7
 		"heat dissipation" .22
 		"fuel capacity" 900
@@ -30364,8 +31636,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.7
 		"hull energy" 0.5
 		"cloak" .02
+		"cloaked shield permeability" 1
 		"cloaking energy" 5
 		"cloaking fuel" .1
+		"cloaked communication" 1
 		"outfit scan power" 12
 		"outfit scan efficiency" 20
 		"tactical scan power" 26
@@ -30545,8 +31819,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 15
 		"hull energy" 0.75
 		"cloak" .05
+		"cloaked shield permeability" 1
 		"cloaking energy" 3
 		"cloaking fuel" .05
+		"cloaked communication" 1
 		"gaslining" 1
 		"atmosphere scan" 100
 		"outfit scan power" 175
@@ -30799,8 +32075,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.9
 		"hull energy" 0.6
 		"cloak" .03
+		"cloaked shield permeability" 1
 		"cloaking energy" 4
 		"cloaking fuel" .075
+		"cloaked communication" 1
 		"atmosphere scan" 100
 		"outfit scan power" 12
 		"outfit scan efficiency" 12
@@ -30998,8 +32276,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull energy" 1.0
 		"gaslining" 1
 		"cloak" .03
+		"cloaked shield permeability" 1
 		"cloaking energy" 3
 		"cloaking fuel" .05
+		"cloaked communication" 1
+		"cloaked scanning" 1
 		"outfit scan power" 50
 		"outfit scan efficiency" 36
 		"tactical scan power" 50
@@ -31112,8 +32393,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 1.5
 		"hull energy" 0.90
 		"cloak" .03
+		"cloaked shield permeability" 1
 		"cloaking energy" 4
 		"cloaking fuel" .075
+		"cloaked communication" 1
 		"gaslining" 1
 		"outfit scan power" 18
 		"outfit scan efficiency" 22
@@ -31444,8 +32727,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull repair rate" 0.8
 		"hull energy" 0.6
 		"cloak" .02
+		"cloaked shield permeability" 1
 		"cloaking energy" 5
 		"cloaking fuel" .1
+		"cloaked communication" 1
 		"outfit scan power" 12
 		"outfit scan efficiency" 20
 		"tactical scan power" 26
@@ -31657,7 +32942,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Heavy Warship"
+		category "Unclassified"
 		"cost" 77777777
 		"shields" 68000
 		"shield generation" 13
@@ -31729,6 +33014,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/sheragi/archaeology missions.txt | ship "Timer Ship"</summary>
 <pre>ship "Timer Ship"
 	attributes
+		category "Game Mechanics"
 		"heat dissipation" 1
 		"hull" 3
 		"hull repair rate" .001
@@ -32014,7 +33300,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Primary Power Reserve"
 		`"Jorv" Shield Cortex`
 		"Successor Cooling" 2
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Regen"
 		"Kinetic Rail Rifle" 7
 		`"Chyyra" Inductive Thruster`
 		`"Veusa" Inductive Steering`
@@ -32192,7 +33478,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Auxiliary Power Reserve"
 		`"Jaase" Shield Cortex`
 		"Successor Cooling"
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		"Kinetic Rail Rifle" 25
 		`"Veusa" Inductive Thruster`
 		`"Veusa" Inductive Steering`
@@ -32794,7 +34080,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Auxiliary Power Reserve" 3
 		`"Jaase" Shield Cortex`
 		"Successor Cooling"
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		"Kinetic Rail Rifle" 15
 		`"Veusa" Inductive Thruster`
 		`"Veusa" Inductive Steering`
@@ -33151,6 +34437,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`"Uoret" Fusion Core`
 		`3-"Kaska" Betavoltaic Cell`
 		`"Jorv" Shield Cortex`
+		"Multimodal Armor: Regen"
 		"Successor Cooling"
 		`"Chyyra" Inductive Thruster`
 		`"Chyyra" Inductive Steering`
@@ -33179,6 +34466,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`"Uoret" Fusion Core`
 		`3-"Kaska" Betavoltaic Cell`
 		`"Jaase" Shield Cortex`
+		"Multimodal Armor: Light"
 		"Successor Cooling"
 		`"Chyyra" Inductive Thruster`
 		`"Chyyra" Inductive Steering`
@@ -33205,6 +34493,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`"Uoret" Fusion Core`
 		`OC-"Mavra" Betavoltaic Cell`
 		`"Jorv" Shield Cortex`
+		"Multimodal Armor: Regen"
 		"Successor Cooling"
 		`"Chyyra" Inductive Thruster`
 		`"Chyyra" Inductive Steering`
@@ -33232,6 +34521,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"High-Velocity Spike" 60
 		`"Uoret" Fusion Core`
 		`"Jaase" Shield Cortex`
+		"Multimodal Armor: Light"
 		"Successor Cooling"
 		`"Veusa" Inductive Thruster`
 		`"Veusa" Inductive Steering`
@@ -33426,7 +34716,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`"Ojet" Bimodal Coilgun` 3
 		`3-"Kaska" Betavoltaic Cell`
 		`"Byiaa" Shield Cortex`
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		`"Veldt" Combat Scanner`
 		`"Aqra" Inductive Thruster`
 		`"Aqra" Inductive Steering`
@@ -33448,7 +34738,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`3-"Kaska" Betavoltaic Cell`
 		`"Byiaa" Shield Cortex`
 		"Fuel Pod" 3
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		`"Aqra" Inductive Thruster`
 		`"Chyyra" Inductive Steering`
 		`"Aqra" Inductive Reverser`
@@ -33468,7 +34758,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Drag Cannon" 3
 		`OC-"Mavra" Betavoltaic Cell` 2
 		`"Byiaa" Shield Cortex`
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		`"Veldt" Combat Scanner`
 		`"Aqra" Inductive Thruster` 2
 		`"Aqra" Inductive Steering`
@@ -33491,7 +34781,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Auxiliary Power Reserve"
 		`"Jaase" Shield Cortex`
 		"Successor Cooling"
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		`"Veldt" Combat Scanner`
 		`"Veusa" Inductive Thruster`
 		`"Veusa" Inductive Steering`
@@ -33540,7 +34830,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Primary Power Reserve"
 		`"Jaase" Shield Cortex`
 		"Successor Cooling"
-		"Multimodal Armor: Heavy"
+		"Multimodal Armor: Light"
 		`"Veldt" Combat Scanner`
 		`"Chyyra" Inductive Thruster`
 		`"Chyyra" Inductive Steering`
@@ -33566,7 +34856,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Fighter"
+		"category" "Unclassified Minor"
 		"cost" 0
 		"shields" 0
 		"hull" 400
@@ -33611,7 +34901,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Fighter"
+		"category" "Unclassified Minor"
 		"cost" 0
 		"shields" 0
 		"hull" 1420
@@ -33652,7 +34942,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Fighter"
+		category "Unclassified Minor"
 		"cost" 0
 		"shields" 0
 		"hull" 860
@@ -33692,12 +34982,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>ship "Astral Cetacean"
 	noun "creature"
 	sprite "ship/astral cetacean/astral"
+		"center" 0 -50
 		"frame rate" 24
 		"random start frame"
 	swizzle 0
 	"never disabled"
 	attributes
-		category "Transport"
+		category "Unclassified"
 		"cost" 0
 		"shields" 0
 		"hull" 11000
@@ -33893,12 +35184,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shields" 18700
 		"hull" 7400
 		"required crew" 8
-		"bunks" 16
+		"bunks" 13
 		"mass" 228
 		"drag" 3.5
 		"heat dissipation" .67
-		"fuel capacity" 1000
-		"cargo space" 45
+		"fuel capacity" 800
+		"cargo space" 35
 		"outfit space" 361
 		"weapon capacity" 103
 		"engine capacity" 117
@@ -34003,6 +35294,65 @@ document.addEventListener("DOMContentLoaded", function() {
 	description "The Strong Wind was originally designed for science and exploration, but recently the Wanderers have modified the design to allow it to be used as a warship."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/strong wind.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/strong wind.png" height="200">
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderer ships.txt | ship "Heavy Gust"</summary>
+<pre>ship "Heavy Gust"
+	sprite "ship/heavy gust"
+	thumbnail "thumbnail/heavy gust"
+	attributes
+		category "Medium Warship"
+		licenses
+			"Wanderer Military"
+		"cost" 17600000
+		"shields" 35200
+		"hull" 21200
+		"required crew" 22
+		"bunks" 34
+		"mass" 598
+		"drag" 7.4
+		"heat dissipation" .45
+		"fuel capacity" 600
+		"cargo space" 52
+		"outfit space" 534
+		"weapon capacity" 224
+		"engine capacity" 132
+		"tactical scan power" 75
+		weapon
+			"blast radius" 220
+			"shield damage" 2200
+			"hull damage" 1100
+			"hit force" 3300
+	outfits
+		"Sunbeam" 4
+		"Thunderhead Launcher" 2
+		"Thunderhead Missile" 100
+		"Thunderhead Storage Array"
+		"Wanderer Anti-Missile"
+		"White Sun Reactor"
+		"Dark Storm Shielding"
+		"Wanderer Ramscoop"
+		"Type 4 Radiant Thruster"
+		"Type 4 Radiant Steering"
+		"Hyperdrive"
+	engine -35 130
+	engine 35 130
+	gun -66 17 "Sunbeam"
+	gun 66 17 "Sunbeam"
+	gun -59 23 "Sunbeam"
+	gun 59 23 "Sunbeam"
+	gun -38 54 "Thunderhead Launcher"
+	gun 38 54 "Thunderhead Launcher"
+	turret 0 27 "Wanderer Anti-Missile"
+	explode "small explosion" 70
+	explode "medium explosion" 45
+	explode "large explosion" 22
+	"final explode" "final explosion medium"
+	description "The Heavy Gust is a further modification of the Strong Wind, adjusted even more heavily for combat purposes at the expense of much of its precursor's peacetime utility. These modifications make the Heavy Gust a fast medium warship, agile enough to keep up with foes too quick to be caught with a Tempest."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/heavy gust.png" width="200"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/heavy gust.png" height="200">
 </details>
 
 
@@ -34918,7 +36268,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "ship/pincer beast"
 	thumbnail "thumbnail/pincer beast"
 	attributes
-		category "Light Freighter"
+		category "Unclassified"
 		"hull" 14300
 		"self destruct" 1.0
 		"automaton" 1

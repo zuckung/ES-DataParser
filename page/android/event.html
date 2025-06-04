@@ -439,7 +439,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	planet "Zydee"
 		attributes "gegno" "vi" "moon"
 		description `There is evidence that the nearby Gegno Scin have attempted to establish a presence on this barren moon in the form of several partially-constructed buildings and landing zones scattered about the surface. In recent times, however, the opposing Gegno Vi have fielded their own forces to take control of the system, and have begun a number of operations to convert existing infrastructure and set up posts of their own, claiming the moon in their name.`
-		spaceport `The Vi have made makeshift landing zones and outposts, such as this one, for the group of warriors they've distributed across the moon. Although their numbers are no more than than that of a small village, those who are present have accomplished a considerable amount during their time on the surface while the fleets above defend them.`
+		spaceport `The Vi have made makeshift landing zones and outposts, such as this one, for the group of warriors they've distributed across the moon. Although their numbers are no more than that of a small village, those who are present have accomplished a considerable amount during their time on the surface while the fleets above defend them.`
 		government "Gegno Vi"
 		"required reputation" 1
 	planet "Ghneoe"
@@ -2758,6 +2758,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Large Free Worlds" 1500
 		fleet "Human Miners" 1600
 	planet "Winter"
+		add attributes "education"
 		description `The dense clouds in Winter's atmosphere block out much of the sunlight, creating a frigid landscape below. The planet was not settled until about a century ago, when a group of investors from Pherkad decided to build a manufacturing center here, rather than trying to find more land on the already overcrowded planet of Solace. Claiming that the industrial emissions of carbon dioxide and other greenhouse gases would eventually warm the planet and turn it into a tropical paradise, they were able to draw enough settlers to keep the factories going.`
 		description `	Winter is home to the Free Worlds Conservatory, a new university focused on making terraforming technology and expertise available at a reasonable price, as well as on ecological protection and renewal.`
 		security .4
@@ -2827,6 +2828,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Large Free Worlds" 800
 		fleet "Small Southern Pirates" 3000
 		fleet "Large Southern Pirates" 5000
+		fleet "Old Southern Pirates" 10000
 	planet "Greenrock"
 		description `Greenrock was the closest thing that the pirates in southern human space had to a center of government, at least until the Free Worlds occupied it. When rival pirate bands sought to negotiate on neutral territory, this is where they met. Nearly everything was for sale here: illegal weapons, ships customized for pirating, and even slaves.`
 		description `	Now that the Free Worlds are occupying the system, Greenrock has become a marginally more respectable world. Pirates still run wild in the wilderness of the planet, but the Free Worlds are actively arresting criminals and freeing slaves in the population centers.`
@@ -2848,6 +2850,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Large Core Pirates" 7000
 		fleet "Small Northern Pirates" 5000
 		fleet "Large Northern Pirates" 9000
+		fleet "Old Southern Pirates" 7000
 		fleet "Large Free Worlds" 9000
 	planet "Greenrock"
 		description `Greenrock was the closest thing that the pirates in southern human space had to a center of government, at least until the Free Worlds occupied it. When rival pirate bands sought to negotiate on neutral territory, this is where they met. Nearly everything was for sale here: illegal weapons, ships customized for pirating, and even slaves.`
@@ -3536,6 +3539,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Large Free Worlds" 3000
 		fleet "Small Southern Pirates" 2000
 		fleet "Large Southern Pirates" 5000
+		fleet "Old Southern Pirates" 11000
 </pre>
 
 </details>
@@ -4188,60 +4192,65 @@ document.addEventListener("DOMContentLoaded", function() {
 	system "Zeta Aquilae"
 		fleet "Small Southern Merchants" 1000
 		fleet "Large Southern Merchants" 3000
-		fleet "Small Republic" 1000
-		fleet "Large Republic" 2000
+		fleet "Small Southern Pirates" 2000
+		fleet "Large Southern Pirates" 5000
 	system "Rasalhague"
 		fleet "Small Southern Merchants" 1500
 		fleet "Large Southern Merchants" 2000
-		fleet "Small Republic" 1200
-		fleet "Large Republic" 2500
+		fleet "Small Southern Pirates" 4000
+		fleet "Large Southern Pirates" 8000
 	system "Vega"
 		fleet "Small Northern Merchants" 800
 		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 800
-		fleet "Large Republic" 1200
+		fleet "Small Republic" 1600
+		fleet "Large Republic" 5000
+		fleet "Human Miners" 5000
 	system "Altair"
 		fleet "Small Core Merchants" 400
 		fleet "Large Core Merchants" 600
 		fleet "Small Northern Merchants" 1000
 		fleet "Large Northern Merchants" 3000
-		fleet "Small Republic" 700
-		fleet "Large Republic" 900
+		fleet "Small Republic" 3000
+		fleet "Large Republic" 6000
+		fleet "Republic Logistics" 6000
+		fleet "Small Syndicate" 9000
 	system "Fomalhaut"
 		fleet "Small Core Merchants" 1000
 		fleet "Large Core Merchants" 1200
-		fleet "Small Republic" 1600
-		fleet "Large Republic" 3000
+		fleet "Small Syndicate" 5000
+		fleet "Large Syndicate" 10000
+		fleet "Republic Logistics" 3300
 	system "Delta Capricorni"
 		fleet "Small Core Merchants" 700
 		fleet "Large Core Merchants" 800
-		fleet "Small Syndicate" 500
-		fleet "Large Syndicate" 600
+		fleet "Small Syndicate" 2000
+		fleet "Small Core Pirates" 4000
+		fleet "Human Miners" 3000
 	system "Alderamin"
 		fleet "Small Core Merchants" 2000
 		fleet "Large Core Merchants" 3200
-		fleet "Small Syndicate" 700
-		fleet "Large Syndicate" 900
+		fleet "Small Syndicate" 800
+		fleet "Large Syndicate" 800
+		fleet "Small Core Pirates" 1000
+		fleet "Large Core Pirates" 1200
 	system "Diphda"
 		fleet "Small Core Merchants" 2000
 		fleet "Large Core Merchants" 600
-		fleet "Small Republic" 1600
-		fleet "Large Republic" 3000
+		fleet "Small Syndicate" 3000
 	system "Caph"
 		fleet "Small Core Merchants" 500
 		fleet "Large Core Merchants" 600
-		fleet "Small Republic" 1600
-		fleet "Large Republic" 3000
+		fleet "Small Syndicate" 1600
+		fleet "Human Miners" 2000
 	system "Nocte"
 		fleet "Small Northern Merchants" 1500
-		fleet "Large Northern Merchants" 5000
 		fleet "Small Republic" 3000
 		fleet "Large Republic" 7000
 		fleet "Small Northern Pirates" 2500
 		fleet "Derelict Northern" 10000
+		fleet "Human Miners" 1600
 	system "Orvala"
 		fleet "Small Southern Merchants" 3000
-		fleet "Large Southern Merchants" 6000
 		fleet "Small Southern Pirates" 1000
 		fleet "Large Southern Pirates" 3000
 		fleet "Derelict Southern" 10000
@@ -4429,6 +4438,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Small Republic" 800
 		fleet "Large Republic" 1200
 		fleet "Large Syndicate" 1000
+	planet "Covert"
+		description `Covert is home to a powerful mining cartel, only nominally under the control of Republic law. It is rumored to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labor, often by survivors of ships that have been captured by pirates. A pirate fleet lurks on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
 </pre>
 
 </details>
@@ -4448,6 +4459,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		fleet "Small Core Pirates" 500
 		fleet "Large Core Pirates" 800
 		fleet "Large Syndicate" 5000
+	planet "Covert"
+		description `Covert is home to a powerful mining cartel, operating outside the control of Republic law or any other external authority. It is rumored to be one of the few planets in human space where weapons-grade uranium and plutonium is mined and enriched. Any goods for sale here were most likely produced by slave labor, often by survivors of ships that have been captured by pirates. A massive pirate fleet is docked on the outskirts of the spaceport, a warning to any private pilot who might think of cheating or opposing the cartel.`
 </pre>
 
 </details>
@@ -5924,6 +5937,50 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/human/human missions.txt | event "start of independent violence"</summary>
+<pre>event "start of independent violence"
+	government "Independent (Killable)"
+		"attitude toward"
+			"Independent" -.01
+	government "Independent"
+		"attitude toward"
+			"Independent (Killable)" -.01
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "end of independent violence"</summary>
+<pre>event "end of independent violence"
+	government "Independent (Killable)"
+		"attitude toward"
+			"Independent" 0
+	government "Independent"
+		"attitude toward"
+			"Independent (Killable)" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "syndicate business 1m investment done"</summary>
+<pre>event "syndicate business 1m investment done"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "syndicate business 10m investment done"</summary>
+<pre>event "syndicate business 10m investment done"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/human/human missions.txt | event "timothy radrickson: on rand"</summary>
 <pre>event "timothy radrickson: on rand"
 </pre>
@@ -5950,6 +6007,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/human/human missions.txt | event "timothy radrickson imprisoned"</summary>
 <pre>event "timothy radrickson imprisoned"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "rad tim dead"</summary>
+<pre>event "rad tim dead"
 </pre>
 
 </details>
@@ -6129,6 +6194,72 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/kahet/kahet missions.txt | event "Patir moves"</summary>
+<pre>event "Patir moves"
+	system Patir
+		pos 10059.5 10.5
+		remove haze
+		set "ka'het: beyond Patir"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir spaceport"</summary>
+<pre>event "Patir spaceport"
+	planet "Builder Settlement"
+		spaceport `The Remnant laboratory merges oddly well with the rest of the environment, similar in color and design to the Builder structures around here. The spaceport consists only of a flat strip of regolith near the settlement, hastily cleaned of the debris that covers most of the terrain.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "no Patir spaceport and no Fetri spawn"</summary>
+<pre>event "no Patir spaceport and no Fetri spawn"
+	system Patir
+		remove fleet "Ka'sei"
+	planet "Builder Settlement"
+		remove spaceport
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir spaceport returns and Fetri spawn"</summary>
+<pre>event "Patir spaceport returns and Fetri spawn"
+	system Patir
+		add fleet "Ka'sei" 300
+	planet "Builder Settlement"
+		spaceport `The Remnant laboratory merges oddly well with the rest of the environment, similar in color and design to the Builder structures around here. The spaceport amounts to only a flat strip of regolith near the settlement, hastily cleaned of the debris that covers most of the terrain.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "Patir returns"</summary>
+<pre>event "Patir returns"
+	system Patir
+		pos -38 553
+		haze _menu/haze-red
+		clear "ka'het: beyond Patir"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "patir mystery 2 timer"</summary>
+<pre>event "patir mystery 2 timer"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/korath/korath missions.txt | event "label korath space"</summary>
 <pre>event "label korath space"
 	galaxy "label korath"
@@ -6256,6 +6387,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant events.txt | event "remnant: return the samples timer"</summary>
 <pre>event "remnant: return the samples timer"
+	government "Remnant"
+		remove "travel restrictions"
+	government "Remnant (Research)"
+		remove "travel restrictions"
 </pre>
 
 </details>
@@ -7128,7 +7263,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		belt 2000
 		habitable 1505.92
 		haze _menu/haze-red
-		"jump range" 0
 		link Statina
 		link Vaticanus
 		asteroids "small rock" 1 8
@@ -7177,7 +7311,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		belt 2000
 		habitable 534.375
 		haze _menu/haze-red
-		"jump range" 0
 		link Statina
 		link Postverta
 		asteroids "small rock" 65 3
@@ -7232,7 +7365,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		belt 2000
 		habitable 135
 		haze _menu/haze-red
-		"jump range" 0
 		link Diespiter
 		link Prosa
 		link Statina
@@ -7278,7 +7410,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		habitable 2372.76
 		belt 2000
 		haze _menu/haze-red
-		"jump range" 0
 		link Vaticanus
 		link Postverta
 		asteroids "medium metal" 11 2
@@ -7333,7 +7464,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		belt 2000
 		habitable 135
 		haze _menu/haze-red
-		"jump range" 0
 		link Diespiter
 		link Egeria
 		link Postverta
@@ -7385,7 +7515,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		belt 2000
 		habitable 320
 		haze _menu/haze-red
-		"jump range" 0
 		link Egeria
 		link Prosa
 		asteroids "small rock" 3 6
@@ -8264,6 +8393,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/wanderer/wanderers start.txt | event "wanderers: vara k'chrai facilities"</summary>
+<pre>event "wanderers: vara k'chrai facilities"
+	planet "Vara K'chrai"
+		add port
+			recharges all
+			services all
+		add shipyard "Wanderer Advanced"
+		add outfitter "Wanderer Advanced"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers start.txt | event "Sich'ka'ara empty"</summary>
 <pre>event "Sich'ka'ara empty"
 	system "Sich'ka'ara"
@@ -8367,6 +8510,22 @@ document.addEventListener("DOMContentLoaded", function() {
 		remove outfitter
 		remove "required reputation"
 		remove tribute
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/wanderer/wanderers start.txt | event "hai blockade"</summary>
+<pre>event "hai blockade"
+	system "Bore Fah"
+		remove raid
+	system "Bote Asu"
+		remove raid
+	system "Imo Dep"
+		remove raid
+	system "Zuba Zub"
+		remove raid
 </pre>
 
 </details>
