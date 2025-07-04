@@ -8795,6 +8795,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/wanderer/wanderers.txt | event "wanderers: heavy gust mass production"</summary>
+<pre>event "wanderers: heavy gust mass production"
+	shipyard "Wanderer Advanced"
+		"Heavy Gust"
+	fleet "Wanderer Defense"
+		add variant 2
+			"Heavy Gust"
+			"Autumn Leaf"
+		add variant 3
+			"Heavy Gust"
+			"Autumn Leaf" 2
+		add variant 2
+			"Heavy Gust" 2
+		add variant 1
+			"Heavy Gust" 3
+		add variant 1
+			"Strong Wind"
+			"Heavy Gust"
+		remove variant
+			"Strong Wind"
+			"Summer Leaf"
+		remove variant
+			"Strong Wind"
+			"Summer Leaf" 3
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers.txt | event "wanderers: riptide mass production"</summary>
 <pre>event "wanderers: riptide mass production"
 	fleet "Wanderer Freight"
@@ -8825,7 +8855,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Tempest"
 			"Summer Leaf"
 			"Autumn Leaf"
-		add variant 4
+		add variant 3
+			"Tempest (Heavy)"
+			"Heavy Gust"
+		add variant 1
 			"Tempest (Heavy)"
 			"Strong Wind"
 		add variant 1
@@ -8838,20 +8871,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant 1
 			"Tempest (Missile)" 2
 		add variant 2
-			"Strong Wind"
-			"Autumn Leaf"
-		add variant 2
 			"Autumn Leaf" 3
 		add variant 1
 			"Summer Leaf" 4
 		remove variant
 			"Summer Leaf" 5
-		remove variant
-			"Strong Wind"
-			"Summer Leaf"
-		remove variant
-			"Strong Wind"
-			"Summer Leaf" 3
 		remove variant
 			"Autumn Leaf" 2
 		remove variant
@@ -8992,7 +9016,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Tempest (Heavy)"
 		add variant 4
 			"Derecho"
-			"Strong Wind" 2
+			"Heavy Gust"
+			"Strong Wind"
 		add variant 3
 			"Derecho (Tough)"
 			"Autumn Leaf"
@@ -9057,6 +9082,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant 2
 			"Hurricane (Tough)"
 			"Tempest (Missile)" 2
+		add variant 2
+			"Hurricane"
+			"Heavy Gust" 2
 	shipyard "Wanderer Advanced"
 		"Hurricane"
 </pre>
@@ -9101,6 +9129,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant
 			"Derecho"
 			"Autumn Leaf (Heavy)" 2
+		add variant 2
+			"Heavy Gust"
+			"Heavy Gust (Moonbeam)" 2
 	outfitter "Wanderer Advanced"
 		"Moonbeam"
 		"Moonbeam Turret"
