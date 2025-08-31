@@ -710,26 +710,26 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	Beyond your ship are the ruins of the last unfrozen city. Where the final refugees huddled together awaiting their saviors, the Republic Navy, and were whisked away to other more welcoming worlds.`
 	choice
 		`	(Search for the Snaiwaz Family-Cairn.)`
-			goto cairnsearch
+			goto "cairn search"
 		`	(Toss the stone out your hatch and leave this world.)`
 	action
 		set "chucked tosti's stone"
 	`	The stone of Tosti's father tumbles out of the ship and comes to rest in a heap of cluttered refuse. This is as close as it will get to its Family-Cairn, and far closer than Tosti could have gotten it on his own.`
 		decline
-	label cairnsearch
+	label "cairn search"
 	`	You break out the cold gear and dress yourself in warm layers with sturdy boots. Furtive frost cracks and breaks as your ship's door opens, and you step out into the cold air. This world's dim light reflects painfully off the ice and snow, momentarily blinding you.`
 	`	Once outside in the sharp, crisp air it's easy to find the dismal ruins of this world's last spaceport. The trek is slow and clumsy in the unfamiliar gravity and granular snow.`
 	`	You work around the silent spaceport, where the half-buried hangars are littered with the forgotten mementos of desperate refugees, and many of the buildings are lost beneath the encroaching ice. Eventually you find the cliffs that Tosti spoke of, and the many dozens of Family-Cairns piled along side it. Silent watchers of the churning glaciers.`
 	`	You see a nearly toppled Family-Cairn with the name "Snaiwaz" at its base.`
 	choice
 		`	(Place Tosti's father's stone.)`
-			goto placestone
+			goto "place stone"
 		`	(Throw the stone off the side of the cliff.)`
 	action
 		set "threw tosti's stone"
 	`	You hurl the stone far beyond the cliff side and down into glacial slopes beneath it, forever separated from its kindred-stones.`
 		decline
-	label placestone
+	label "place stone"
 	action
 		set "placed tosti's stone"
 	`	Carefully you place Tosti's stone with the others. The act is greeted only by the deafening silence and the icy air of the abandoned world.`
@@ -738,11 +738,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	As you pass around one corner of the sagging spaceport, you notice a large, ice-free building in the distance with a light burning within.`
 	choice
 		`	(Enter the building.)`
-			goto litbuilding
+			goto "lit building"
 		`	(Keep heading toward your ship.)`
 	`	Whatever is going on in that building, it has nothing to do with you, and so you ignore it and return to your waiting ship.`
 		decline
-	label litbuilding
+	label "lit building"
 	`	You enter into the sturdy and unfrozen building at the edge of the spaceport.`
 	`	Faded wealth still clings to peeling walls of this once spacious manor. It is evident that it was once the heart and hearth of a wealthy family in an earlier, warmer time. The home feels like a tomb or a museum; it seems as if everything here has been left in a certain way for a long time. But as you work deeper into its nested walls you begin to see signs of much more recent life.`
 	`	Eventually you find your way to the kitchen, which appears to be the epicenter of activity in this household. You see assorted survival rations and gear strewn about everywhere. More alarmingly, you also see a young woman sitting on the floor with her back against a counter.`
@@ -769,25 +769,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	"So, what do you say," she says while leaning her head back, clearly exhausted by this exchange. "Will you kill me? Take advantage of me? Save me? Or leave me... to die?"`
 	choice
 		`	"Come with me. It's time you gave up on Hope."`
-			goto comewithme
+			goto "come with me"
 		`	"I'll get you out of here. After that, no promises."`
-			goto comewithme
+			goto "come with me"
 		`	"I don't have time for wretches. You're on your own."`
 	`	Ildico, her eyes still closed, takes a deep breath. She opens her eyes just as she lunges at you, with a swift arm motion toward your head. Before you have a chance to react, her knife is embedded deep in your throat.`
 	`	You're on the ground now, with ruby red blood oozing out over the cold floor. You hear a strange moan escaping from your mouth, and Ildico's hands are in your pockets removing everything you have of value.`
 	`	As the world fades to black, you hear her talking, her words sound as though they are coming from a great distance. "Like I said, I won't die here. Thanks for the ship."`
 	`	Your vision grows darker until only a single point of light remains. You don't feel cold, or pain, or anything at all. You just feel heavy. So heavy. Too heavy. So, you let go.`
 		die
-	label comewithme
+	label "come with me"
 	`	You help her back onto her feet, and with her leaning on you, the two of you make your way back outside and through the perilous cold to your ship.`
 	`	Once aboard, after she's eaten and regained a little of her strength, she comes to talk with you.`
 	`	"Thank you for saving me. There are places I need to go. But I know I cannot force you to take me. And I have no credits to pay you. If you could take me to &#60;planet&#62;, I could make my own way from there."`
 	choice
 		`	"Anywhere you need to go, I can take you."`
-			goto wheresheneedstogo
+			goto "where she needs to go"
 		`	"Okay, I'll take you to &#60;planet&#62;, but after that you're on your own."`
 			accept
-	label wheresheneedstogo
+	label "where she needs to go"
 	`	Ildico narrows her eyes. "Nothing is free."`
 	choice
 		`	"I just want to make the universe a better place."`
@@ -811,13 +811,13 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/human/human missions.txt | conversation "Ice Queen End"</summary>
 <pre>conversation "Ice Queen End"
-	branch helpildico
+	branch "help ildico"
 		has "helpildico"
 	`Your thrusters kick up fresh dust as you land on your assigned concrete pad in the sprawling spaceport. Ildico, looking less pale and significantly more sturdy, waits by the exit.`
 	`	"Thank you for getting me out of there. After all those years on the ice this place will be no challenge for me. Perhaps someday our paths will cross again. If they do, I will remember this small kindness."`
 	`	She gives you a stern nod, and then exits your ship and into the chaos of Clark.`
 		goto end
-	label helpildico
+	label "help ildico"
 	`Your thrusters kick up fresh dust as you land on your assigned concrete pad on the fringes of the sprawling spaceport. Ildico, looking less pale and significantly more sturdy, waits by the exit.`
 	`	"The terraforming firm is certain to have an office, or booth, in the ramshackle spaceport here. Let's pay them a visit."`
 	label end
@@ -1084,7 +1084,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	choice
 		`	"I can purchase outfits into my cargo bay?"`
 		`	"Why would you even need to specify that?"`
-			goto whymention
+			goto "why mention"
 		`	"Okay."`
 			accept
 	`	"Of course. There are several different methods available for doing so." He switches to a chant as he begins listing methods.`
@@ -1093,7 +1093,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	"Lastly, if you have an outfit installed, just tap the 'U' key on the outfitter to request that the selected outfit be uninstalled. After removal they will be left in your cargo hold."`
 	`	He glances at his commlink and starts tapping at something. "We look forward to your return," he trills, before striding away still looking at his display.`
 		accept
-	label whymention
+	label "why mention"
 	`	"What seems straightforward to you and I is not always so simple for others. I have met more than a few pilots who thought that outfits could only be transported installed on their hull." He smiles briefly at the thought before turning and heading away.`
 		accept
 </pre>
@@ -1200,11 +1200,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/wanderer/wanderers start.txt | conversation "solifuge conversation"</summary>
 <pre>conversation "solifuge conversation"
-	branch altStart
+	branch "alt start"
 		has "Strider Alt Start: done"
 	`You give the message from Sayari to the spaceport authorities so that they can deliver it to the council of elders. After the message has been delivered, the council requests that you meet with them.`
 		goto start
-	label altStart
+	label "alt start"
 	`	When you arrive on &#60;planet&#62;, you are quickly escorted from the spaceport to the council chambers.`
 	label start
 	`	"Greetings again, &#60;first&#62; &#60;last&#62;," one of the elders says to you. "It is our understanding that our Unfettered brothers and sisters have created a carrier ship. How difficult was it for you to combat it?"`
@@ -1230,7 +1230,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	The elders once again mumble among themselves. They continue to ask Osen a number of questions about this new carrier. How difficult is one to produce? How much does it cost? What are the capabilities of the drones? How useful would it be without being able to repair the hull of its drones?`
 	`	After having all their questions answered, the elders seem to be interested in the idea of Osen's new ship. "This hull repair technology indeed sounds necessary," an elder says. "We will provide what funding we can to help fast track its development."`
 	`	Osen's father turns to you. "You have traveled many systems, &#60;first&#62; &#60;last&#62;. Perhaps you might be able to help. If you know of any peoples who have such technology from elsewhere in the galaxy, should it exist, then perhaps we could meet with them."`
-	branch altEnd
+	branch "alt end"
 		has "Strider Alt Start: done"
 	choice
 		`	"I'm sorry, but I can't help right now. I need to return to the Wanderers."`
@@ -1241,7 +1241,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label busy
 	`	"This is understandable," Osen's father responds. "Return to where you are needed, but when you are able to help, we will gladly accept it." The elders all thank you for bringing Sayari's message and bid you safe travels back to &#60;planet&#62;.`
 		accept
-	label altEnd
+	label "alt end"
 	choice
 		`	"I'd be glad to help. I'm sure I could find someone with hull repair technology that could help."`
 			goto glad
