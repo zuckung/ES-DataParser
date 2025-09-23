@@ -2935,7 +2935,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"cost" 99000000
 		"shields" 6000
 		"hull" 36000
-		"required crew" 300
+		"required crew" 600
 		"bunks" 900
 		"mass" 6000
 		"drag" 6
@@ -2971,7 +2971,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Concealment Lamina"
 		"Radiative Lamina"
 		"Optical Laser Rifle" 900
-		`Z-3600 "Beam" Amat Torch`
+		`A-3600 "Beam" Amat Drive`
 		"Inductive Extractor" 6
 		"Hyperdrive"
 	engine -204 -456
@@ -3070,8 +3070,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull" 2400
 		"automaton" 1
 		"crew equivalent" 1
+		"threshold percentage" 0.15
 		"mass" 90
-		"drag" 2.1
+		"drag" 1.5
 		"heat dissipation" 0.72
 		"fuel capacity" 900
 		"cargo space" 12
@@ -3087,44 +3088,42 @@ document.addEventListener("DOMContentLoaded", function() {
 	outfits
 		"Speckle Coilgun" 4
 		"Speck Round" 3600
-		"Ultracapacitor Cell" 4
-		"Diffuse Deflector"
+		"Tiny VLS"
+		`"Nettle" KKV` 27
+		"Ultracapacitor Bank" 5
 		"Multispectral Scanner"
-		"Magnetic Scoop"
-		`Z-333 "Spark" Fusion Torch`
-		"Inductive Extractor"
-		"Remass Injector" 2
+		"Vapor Nuclear Rocket"
 		"R-180 RCS Thrusters"
 		"Hyperdrive"
 	engine 0 51
 		gimbal 6
-		zoom 0.6
+		zoom 0.75
 	"reverse engine" -3 -33
 		angle 30
 	"reverse engine" 3 -33
 		angle -30
 	"steering engine" -3 -33
-		angle 120
+		angle 90
 		right
 	"steering engine" 3 -33
-		angle -120
+		angle -90
 		left
-	"steering engine" 0 51
-		angle -30
+	"steering engine" -6 45
+		angle 90
+		left
+	"steering engine" 6 45
+		angle -90
 		right
-	"steering engine" 0 51
-		angle 30
-		left
 	gun -6.5 -18 "Speckle Coilgun"
 	gun 6.5 -18 "Speckle Coilgun"
 	gun -6.5 -18 "Speckle Coilgun"
 	gun 6.5 -18 "Speckle Coilgun"
-	turret 0 39
+	turret 0 39 "Tiny VLS"
 	leak "flame" 30 90
 	explode "tiny explosion" 12
 	explode "small explosion" 9
 	"final explode" "final explosion small"
-	description "The Tremoros-class Interceptor is a small autonomous ship designed to support patrol and interdiction missions. With an emphasis on raw acceleration, it can rocket past any adversary even as it brings its guns to bear, making it exceedingly difficult to hit."
+	description "The Tremoros-class Interceptor is a small autonomous ship designed to support patrol and interdiction missions. Derived from a transatmospheric hypersonic fighter, it is capable of dual operations in both space and planetary atmospheres. With an emphasis on raw acceleration, it can rocket past any adversary even as it brings its guns to bear, making it exceedingly difficult to hit."
 	description "	The Tremoros has also seen use as an escort for smaller merchant convoys, with the ability to intercept any enemies that might pose a threat before they can come within range of vulnerable civilian ships."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/thumbnail/avgi tremoros.png" width="160" height="140"><img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/ship/avgi tremoros.png" width="40" height="110">
@@ -3141,6 +3140,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Light Warship"
 		licenses
 			"Twilight Guard"
+			"Avgi Torch"
 		"cost" 3600000
 		"shields" 1800
 		"hull" 7200
@@ -3154,7 +3154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"cargo space" 36
 		"outfit space" 360
 		"weapon capacity" 120
-		"engine capacity" 96
+		"engine capacity" 105
 		"anchor point" 1
 		weapon
 			"blast radius" 240
@@ -3164,8 +3164,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	outfits
 		"Speckle Turret" 2
 		"Speck Round" 4800
-		"Medium VLS"
-		`"Nettle" KKV` 216
+		"Small VLS"
+		`"Nettle" KKV` 54
 		"Green Optical Laser"
 		"Ultracapacitor Bank"
 		"Diffuse Deflector"
@@ -3203,7 +3203,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun 9 33
 		angle 90
 		parallel
-	turret 0 -48 "Medium VLS"
+	turret 0 -48 "Small VLS"
 	turret -9 18 "Speckle Turret"
 	turret 9 18 "Speckle Turret"
 	turret 0 90 "Green Optical Laser"
@@ -3226,7 +3226,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Green Optical Laser" 2
 		"Blue Optical Laser" 2
 		"Lantern Fission Core"
-		"Ultracapacitor Bank" 3
+		"Ultracapacitor Bank" 2
 		"Diffuse Deflector"
 		"Optical Lasing Generator" 2
 		"Multispectral Scanner"
@@ -3247,15 +3247,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Prismaios" "Prismaios (Atomic)"</summary>
-<pre>ship "Prismaios" "Prismaios (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Prismaios" "Prismaios (Orchid)"</summary>
+<pre>ship "Prismaios" "Prismaios (Orchid)"
 	outfits
 		"Green Optical Laser" 2
 		"Speckle Turret" 2
 		"Speck Round" 4800
 		"External Launch Tube" 2
-		"Orchid Magazine" 2
-		`"Orchid" Nuclear Missile` 18
+		`"Orchid" Nuclear Missile` 12
 		"Ultracapacitor Bank"
 		"Diffuse Deflector"
 		"Optical Lasing Generator"
@@ -3265,7 +3264,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		`Z-333 "Spark" Fusion Torch`
 		"Inductive Extractor"
 		"Remass Injector" 2
-		"R-180 RCS Thrusters"
+		"R-360 RCS Thrusters"
 		"Hyperdrive"
 	gun
 	gun "External Launch Tube"
@@ -3299,7 +3298,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"fuel capacity" 600
 		"cargo space" 12
 		"outfit space" 294
-		"weapon capacity" 99
+		"weapon capacity" 102
 		"engine capacity" 66
 		"anchor point" 1
 		weapon
@@ -3371,7 +3370,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	outfits
 		"Green Optical Laser"
 		"Medium VLS" 2
-		`"Nettle" KKV` 432
+		`"Nettle" KKV` 216
 		"Ultracapacitor Cell" 3
 		"Diffuse Deflector"
 		"Optical Lasing Generator"
@@ -3390,14 +3389,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Interferos" "Interferos (Atomic)"</summary>
-<pre>ship "Interferos" "Interferos (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Interferos" "Interferos (Orchid)"</summary>
+<pre>ship "Interferos" "Interferos (Orchid)"
 	outfits
+		"Green Optical Laser"
 		"External Launch Tube" 4
-		"Orchid Magazine" 3
-		`"Orchid" Nuclear Missile` 33
+		`"Orchid" Nuclear Missile` 24
 		"Ultracapacitor Cell" 3
 		"Diffuse Deflector"
+		"Optical Lasing Generator"
 		"Magnetic Scoop"
 		`Z-333 "Spark" Fusion Torch`
 		"Inductive Extractor"
@@ -3409,6 +3409,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun "External Launch Tube"
 	gun "External Launch Tube"
 	gun "External Launch Tube"
+	turret
+	turret
+	turret "Green Optical Laser"
 </pre>
 
 </details>
@@ -3423,6 +3426,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Medium Warship"
 		licenses
 			"Twilight Guard"
+			"Avgi Torch"
 		"cost" 4200000
 		"shields" 2400
 		"hull" 14400
@@ -3445,17 +3449,14 @@ document.addEventListener("DOMContentLoaded", function() {
 			"hit force" 2400
 	outfits
 		"Green Optical Laser" 2
-		"Speckle Turret"
-		"Speck Round" 2400
-		"Medium VLS"
-		"Nettle Magazine" 6
-		`"Nettle" KKV` 648
+		"Medium VLS" 2
+		`"Nettle" KKV` 216
 		"Ultracapacitor Bank"
 		"Diffuse Deflector"
 		"Optical Lasing Generator"
-		"Multispectral Scanner" 2
+		"Multispectral Scanner" 4
 		"Concealment Lamina"
-		"Deuterium Slush Tank"
+		"Deuterium Slush Tank" 3
 		"Magnetic Scoop"
 		"Optical Laser Rifle" 36
 		`Z-333 "Spark" Fusion Torch`
@@ -3491,7 +3492,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	turret 0 -12 "Medium VLS"
 	turret -9 9 "Green Optical Laser"
 	turret 9 9 "Green Optical Laser"
-	turret 0 51 "Speckle Turret"
+	turret 0 51 "Medium VLS"
 	bay "Fighter" 0 -63
 		"launch effect" "avgi external"
 		over
@@ -3534,21 +3535,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Diaspersi" "Diaspersi (Atomic)"</summary>
-<pre>ship "Diaspersi" "Diaspersi (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Diaspersi" "Diaspersi (Orchid)"</summary>
+<pre>ship "Diaspersi" "Diaspersi (Orchid)"
 	outfits
 		"Green Optical Laser" 2
 		"Speckle Turret"
 		"Speck Round" 2400
 		"External Launch Tube" 2
-		"Orchid Magazine" 2
-		`"Orchid" Nuclear Missile` 18
+		`"Orchid" Nuclear Missile` 12
 		"Ophrys Stockpile" 3
 		`"Ophrys" Nuclear Torpedo` 36
-		"Ultracapacitor Cell" 3
+		"Ultracapacitor Bank"
 		"Diffuse Deflector"
 		"Optical Lasing Generator"
-		"Multispectral Scanner" 2
+		"Multispectral Scanner" 3
 		"Concealment Lamina"
 		"Deuterium Slush Tank"
 		"Magnetic Scoop"
@@ -3571,6 +3571,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/avgi/avgi ships.txt | ship "Diaspersi" "Diaspersi (UREB)"</summary>
+<pre>ship "Diaspersi" "Diaspersi (UREB)"
+	outfits
+		"UREB Turret"
+		"Green Optical Laser" 2
+		"Small VLS"
+		`"Nettle" KKV` 54
+		"Ultracapacitor Bank"
+		"Specular Deflector"
+		"Optical Lasing Generator"
+		"Multispectral Scanner" 4
+		"Concealment Lamina"
+		"Deuterium Slush Tank" 3
+		"Magnetic Scoop"
+		"Optical Laser Rifle" 36
+		`Z-333 "Spark" Fusion Torch`
+		"Inductive Extractor"
+		"Remass Injector" 2
+		"R-360 RCS Thrusters"
+		"Hyperdrive"
+	turret "Small VLS"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "UREB Turret"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/avgi/avgi ships.txt | ship "Refraktos"</summary>
 <pre>ship "Refraktos"
 	plural "Refraktos"
@@ -3580,6 +3610,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Medium Warship"
 		licenses
 			"Twilight Guard"
+			"Avgi Torch"
 		"cost" 4500000
 		"shields" 3600
 		"hull" 12600
@@ -3593,7 +3624,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"cargo space" 60
 		"outfit space" 516
 		"weapon capacity" 150
-		"engine capacity" 168
+		"engine capacity" 180
 		"anchor point" 1
 		weapon
 			"blast radius" 420
@@ -3604,7 +3635,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Blue Optical Laser" 4
 		"Green Optical Laser" 3
 		"Photoelectric Lamina"
-		"Ultracapacitor Bank" 3
+		"Ultracapacitor Bank" 2
 		"Diffuse Deflector"
 		"Optical Lasing Generator" 4
 		"Multispectral Scanner" 2
@@ -3673,6 +3704,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/avgi/avgi ships.txt | ship "Refraktos" "Refraktos (UREB)"</summary>
+<pre>ship "Refraktos" "Refraktos (UREB)"
+	outfits
+		"UREB Turret" 2
+		"Green Optical Laser" 3
+		"Photoelectric Lamina"
+		"Ultracapacitor Bank" 3
+		"Specular Deflector"
+		"Optical Lasing Generator"
+		"Multispectral Scanner" 2
+		"Magnetic Scoop" 2
+		"Heatsink Partition" 3
+		"Optical Laser Rifle" 24
+		`Z-666 "Zap" Fusion Torch`
+		"Inductive Extractor" 5
+		"Remass Injector" 1
+		"R-360 RCS Thrusters"
+		"Hyperdrive"
+	turret "UREB Turret"
+	turret "UREB Turret"
+	turret
+	turret
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi ships.txt | ship "Refraktos" "Refraktos (Excimer)"</summary>
+<pre>ship "Refraktos" "Refraktos (Excimer)"
+	outfits
+		"Ultraviolet Excimer Laser"
+		"Green Optical Laser" 6
+		"Photoelectric Lamina"
+		"Ultracapacitor Bank" 3
+		"Specular Deflector"
+		"Optical Lasing Generator" 2
+		"Multispectral Scanner" 2
+		"Magnetic Scoop" 2
+		"Heatsink Partition"
+		"Optical Laser Rifle" 24
+		`Z-666 "Zap" Fusion Torch`
+		"Inductive Extractor" 5
+		"Remass Injector" 1
+		"R-360 RCS Thrusters"
+		"Hyperdrive"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+	turret "Ultraviolet Excimer Laser"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/avgi/avgi ships.txt | ship "Difraktos"</summary>
 <pre>ship "Difraktos"
 	plural "Difraktos"
@@ -3682,6 +3775,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Medium Warship"
 		licenses
 			"Twilight Guard"
+			"Avgi Torch"
 		"cost" 6000000
 		"shields" 6000
 		"hull" 18000
@@ -3707,17 +3801,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Speckle Turret" 4
 		"Speck Round" 9600
 		"Medium VLS" 2
-		"Nettle Magazine" 2
-		`"Nettle" KKV` 576
+		`"Nettle" KKV` 216
 		"Lantern Fission Core"
 		"Ultracapacitor Bank"
-		"Diffuse Deflector"
+		"Specular Deflector"
 		"Optical Lasing Generator"
-		"Multispectral Scanner" 2
+		"Multispectral Scanner" 3
 		"Concealment Lamina"
 		"Magnetic Scoop"
 		"Optical Laser Rifle" 42
-		`Z-666 "Zap" Fusion Torch`
+		`Z-333 "Spark" Fusion Torch`
 		"Inductive Extractor"
 		"Remass Injector" 2
 		"R-180 RCS Thrusters"
@@ -3790,16 +3883,15 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Speckle Turret" 2
 		"Speck Round" 4800
 		"Medium VLS" 4
-		"Nettle Magazine" 2
-		`"Nettle" KKV` 1008
-		"Ultracapacitor Cell" 2
+		`"Nettle" KKV` 432
+		"Ultracapacitor Bank"
 		"Diffuse Deflector"
 		"Optical Lasing Generator"
-		"Multispectral Scanner" 2
+		"Multispectral Scanner" 3
 		"Concealment Lamina"
 		"Magnetic Scoop"
 		"Optical Laser Rifle" 42
-		`Z-666 "Zap" Fusion Torch`
+		`Z-333 "Spark" Fusion Torch`
 		"Inductive Extractor"
 		"Remass Injector" 2
 		"R-180 RCS Thrusters"
@@ -3819,23 +3911,22 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Difraktos" "Difraktos (Atomic)"</summary>
-<pre>ship "Difraktos" "Difraktos (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Difraktos" "Difraktos (Orchid)"</summary>
+<pre>ship "Difraktos" "Difraktos (Orchid)"
 	outfits
 		"Green Optical Laser" 3
 		"Speckle Turret" 2
 		"Speck Round" 9600
 		"External Launch Tube" 4
-		"Orchid Magazine" 6
-		`"Orchid" Nuclear Missile` 42
+		`"Orchid" Nuclear Missile` 24
 		"Ultracapacitor Bank"
-		"Diffuse Deflector"
+		"Specular Deflector"
 		"Optical Lasing Generator"
-		"Multispectral Scanner" 2
+		"Multispectral Scanner" 3
 		"Concealment Lamina"
 		"Magnetic Scoop"
 		"Optical Laser Rifle" 42
-		`Z-666 "Zap" Fusion Torch`
+		`Z-333 "Spark" Fusion Torch`
 		"Inductive Extractor"
 		"Remass Injector" 2
 		"R-180 RCS Thrusters"
@@ -3860,6 +3951,79 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/avgi/avgi ships.txt | ship "Difraktos" "Difraktos (UREB + Orchid)"</summary>
+<pre>ship "Difraktos" "Difraktos (UREB + Orchid)"
+	outfits
+		`"Orchid" Nuclear Missile` 24
+		"Concealment Lamina"
+		"External Launch Tube" 4
+		"Green Optical Laser" 2
+		Hyperdrive
+		"Inductive Extractor"
+		"Lantern Fission Core"
+		"Magnetic Scoop"
+		"Multispectral Scanner" 3
+		"Optical Laser Rifle" 42
+		"Optical Lasing Generator"
+		"R-180 RCS Thrusters"
+		"R-360 RCS Thrusters"
+		"Remass Injector" 2
+		"Specular Deflector"
+		"UREB Turret" 2
+		"Ultracapacitor Bank"
+		`Z-333 "Spark" Fusion Torch`
+	gun
+	gun "External Launch Tube"
+	gun "External Launch Tube"
+	gun "External Launch Tube"
+	gun "External Launch Tube"
+	turret "UREB Turret"
+	turret "UREB Turret"
+	turret
+	turret
+	turret
+	turret
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi ships.txt | ship "Difraktos" "Difraktos (UREB)"</summary>
+<pre>ship "Difraktos" "Difraktos (UREB)"
+	outfits
+		"Concealment Lamina"
+		"Green Optical Laser" 2
+		"Inductive Extractor" 2
+		"Jump Drive"
+		"Lantern Fission Core"
+		"Magnetic Scoop"
+		"Multispectral Scanner" 3
+		"Optical Laser Rifle" 42
+		"Optical Lasing Generator"
+		"R-180 RCS Thrusters"
+		"R-360 RCS Thrusters"
+		"Remass Injector"
+		"Specular Deflector"
+		"UREB Turret" 4
+		"Ultracapacitor Bank" 2
+		`Z-333 "Spark" Fusion Torch`
+	turret "UREB Turret"
+	turret "UREB Turret"
+	turret "UREB Turret"
+	turret "UREB Turret"
+	turret
+	turret
+	turret "Green Optical Laser"
+	turret "Green Optical Laser"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/avgi/avgi ships.txt | ship "Atenuatia"</summary>
 <pre>ship "Atenuatia"
 	sprite "ship/avgi atenuatia"
@@ -3868,6 +4032,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		category "Heavy Warship"
 		licenses
 			"Twilight Guard"
+			"Avgi Torch"
 		"cost" 14400000
 		"shields" 4200
 		"hull" 30000
@@ -3894,13 +4059,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Blue Optical Laser" 2
 		"Green Optical Laser" 3
 		"Medium VLS" 2
-		"Nettle Magazine" 3
-		`"Nettle" KKV` 648
+		`"Nettle" KKV` 216
 		"Ultracapacitor Bank" 3
 		"Specular Deflector"
 		"Optical Lasing Generator" 3
-		"Magnetic Scoop"
 		"Multispectral Scanner" 6
+		"Deuterium Slush Tank" 3
+		"Magnetic Scoop"
 		"Optical Laser Rifle" 90
 		`Z-666 "Zap" Fusion Torch`
 		"Inductive Extractor" 3
@@ -4034,8 +4199,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Atenuatia" "Atenuatia (Atomic)"</summary>
-<pre>ship "Atenuatia" "Atenuatia (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Atenuatia" "Atenuatia (Orchid)"</summary>
+<pre>ship "Atenuatia" "Atenuatia (Orchid)"
 	outfits
 		"Speckle Turret"
 		"Speck Round" 2400
@@ -4154,6 +4319,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shields" 240
 		"hull" 2100
 		"automaton" 1
+		"crew equivalent" 1
+		"threshold percentage" 0.15
 		"mass" 45
 		"drag" 0.6
 		"heat dissipation" 0.72
@@ -4203,7 +4370,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	gun -6 -30
 	gun 0 -30
 	gun 6 -30
-	turret 0 -33 "Speckle Turret"
+	turret 0 -21 "Speckle Turret"
 	leak "flame" 30 60
 	explode "tiny explosion" 15
 	"final explode" "final explosion small"
@@ -4216,8 +4383,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/avgi/avgi ships.txt | ship "Photikon" "Photikon (Atomic)"</summary>
-<pre>ship "Photikon" "Photikon (Atomic)"
+<summary>data/avgi/avgi ships.txt | ship "Photikon" "Photikon (KKV)"</summary>
+<pre>ship "Photikon" "Photikon (KKV)"
+	outfits
+		"Small VLS"
+		`"Nettle" KKV` 54
+		"Concentrating Solar Array"
+		"Ultracapacitor Cell" 3
+		"Multispectral Scanner"
+		"Magnetoplasma Drive"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi ships.txt | ship "Photikon" "Photikon (Ophrys)"</summary>
+<pre>ship "Photikon" "Photikon (Ophrys)"
 	outfits
 		"External Launch Rail" 3
 		`"Ophrys" Nuclear Torpedo` 3
@@ -4303,6 +4485,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	attributes
 		category "Drone"
 		licenses
+			"Twilight Guard"
 			"Avgi Atomics"
 		"cost" 36000
 		"hull" 600
@@ -24980,7 +25163,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Ka'het MHD Generator"
 		"Ka'het Reserve Accumulator"
 		"Anomalous Shield Restorer"
-		"Ka'het Compact Engine" 2
+		"Ka'het Compact Engine"
 		"Hyperdrive"
 		"Anomalous Mass" 22
 	gun -2 -37 "Nucleolysis Beam"
@@ -25068,7 +25251,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Ka'het MHD Generator"
 		"Ka'het Reserve Accumulator"
 		"Anomalous Shield Restorer"
-		"Ka'het Compact Engine" 2
+		"Ka'het Compact Engine"
 		"Hyperdrive"
 		"Anomalous Mass" 34
 	gun -8.5 -42 "Nucleolysis Beam"
