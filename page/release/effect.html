@@ -1223,24 +1223,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/avgi/avgi weapons.txt | effect "blue laser glare"</summary>
 <pre>effect "blue laser glare"
 	sprite "effect/blue optical laser glare"
+		"frame rate" 3
 		"random start frame"
 		"rewind"
 	"lifetime" 1
 	"absolute angle" 0
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/avgi/avgi weapons.txt | effect "blue laser flicker"</summary>
-<pre>effect "blue laser flicker"
-	sprite "effect/skylance impact"
-		"no repeat"
-		"frame rate" 20
-		"scale" 0.125
-	"random lifetime" 1
-	"random velocity" 90
 </pre>
 
 </details>
@@ -1275,6 +1262,49 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/avgi/avgi weapons.txt | effect "uv laser glare"</summary>
+<pre>effect "uv laser glare"
+	sprite "effect/uv excimer laser glare"
+		"frame rate" 3
+		"random start frame"
+		"rewind"
+	"lifetime" 0
+	"absolute angle" 0
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "uv laser reflection"</summary>
+<pre>effect "uv laser reflection"
+	sprite "effect/skylance impact"
+		"start frame" 2
+		"no repeat"
+		"scale" 0.25
+	"lifetime" 1
+	"random lifetime" 3
+	"random velocity" -90
+	"velocity scale" -0.0003
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "uv laser scattering"</summary>
+<pre>effect "uv laser scattering"
+	sprite "effect/distancer"
+		"frame rate" 3
+		"scale" 0.5
+	"lifetime" 3
+	"velocity scale" 0
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/avgi/avgi weapons.txt | effect "laser ejecta"</summary>
 <pre>effect "laser ejecta"
 	sprite "effect/static"
@@ -1286,6 +1316,22 @@ document.addEventListener("DOMContentLoaded", function() {
 	"random spin" 15
 	"random velocity" -12
 	"velocity scale" -0.003
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | effect "laser explosion"</summary>
+<pre>effect "laser explosion"
+	sprite "effect/pwave impact"
+		"no repeat"
+		"frame rate" 12
+	sound "explosion tiny"
+	"lifetime" 18
+	"random angle" 9
+	"random spin" 3
+	"velocity scale" -.0003
 </pre>
 
 </details>

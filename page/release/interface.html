@@ -1096,6 +1096,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		from 120 0 bottom left
 		to -110 -200 bottom right
 	value "messages reversed" 0
+	value "message animation duration" 30
 	box "ammo"
 		from -110 450 top right
 		to 0 0 bottom right
@@ -1278,7 +1279,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		center 0 -140
 		dimensions 720 360
 	box "content"
-		from -240 80 to 240 355
+		from -240 80 to 240 320
 	visible if "has shipyard"
 	sprite "ui/planet dialog button"
 		center 340 90
@@ -2038,6 +2039,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "map"
 	value "max zoom" 2
 	value "min zoom" -2
+	value "zoom animation duration" 10
 	anchor top
 	string "route error"
 		center 1 59

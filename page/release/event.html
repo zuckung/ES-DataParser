@@ -5571,7 +5571,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/human/free worlds 2 middle.txt | event "pirates use cutthroat"</summary>
 <pre>event "pirates use cutthroat"
-	fleet "Large Southern Pirate"
+	fleet "Large Southern Pirates"
 		add variant 2
 			"Cutthroat" 3
 		add variant 1
@@ -5904,6 +5904,14 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/human/human missions.txt | event "artemis renard recovered"</summary>
+<pre>event "artemis renard recovered"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/human/human missions.txt | event "kris gets frustrated"</summary>
 <pre>event "kris gets frustrated"
 </pre>
@@ -5982,6 +5990,30 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/human/human missions.txt | event "syndicate business 10m investment done"</summary>
 <pre>event "syndicate business 10m investment done"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "syndicate business Howard schmoozing"</summary>
+<pre>event "syndicate business Howard schmoozing"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "syndicate business 100m investment done"</summary>
+<pre>event "syndicate business 100m investment done"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | event "syndicate business vip eligible"</summary>
+<pre>event "syndicate business vip eligible"
 </pre>
 
 </details>
@@ -6261,6 +6293,24 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/kahet/kahet missions.txt | event "patir mystery 2 timer"</summary>
 <pre>event "patir mystery 2 timer"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "ka'het: quarantine site"</summary>
+<pre>event "ka'het: quarantine site"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/kahet/kahet missions.txt | event "ka'het: alix discoveries"</summary>
+<pre>event "ka'het: alix discoveries"
+	planet Alix
+		add description `	Long before becoming an automated mining outpost, this moon was designated as a Builder quarantine site.`
 </pre>
 
 </details>
@@ -8795,6 +8845,36 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/wanderer/wanderers.txt | event "wanderers: heavy gust mass production"</summary>
+<pre>event "wanderers: heavy gust mass production"
+	shipyard "Wanderer Advanced"
+		"Heavy Gust"
+	fleet "Wanderer Defense"
+		add variant 2
+			"Heavy Gust"
+			"Autumn Leaf"
+		add variant 3
+			"Heavy Gust"
+			"Autumn Leaf" 2
+		add variant 2
+			"Heavy Gust" 2
+		add variant 1
+			"Heavy Gust" 3
+		add variant 1
+			"Strong Wind"
+			"Heavy Gust"
+		remove variant
+			"Strong Wind"
+			"Summer Leaf"
+		remove variant
+			"Strong Wind"
+			"Summer Leaf" 3
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers.txt | event "wanderers: riptide mass production"</summary>
 <pre>event "wanderers: riptide mass production"
 	fleet "Wanderer Freight"
@@ -8825,7 +8905,10 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Tempest"
 			"Summer Leaf"
 			"Autumn Leaf"
-		add variant 4
+		add variant 3
+			"Tempest (Heavy)"
+			"Heavy Gust"
+		add variant 1
 			"Tempest (Heavy)"
 			"Strong Wind"
 		add variant 1
@@ -8838,20 +8921,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant 1
 			"Tempest (Missile)" 2
 		add variant 2
-			"Strong Wind"
-			"Autumn Leaf"
-		add variant 2
 			"Autumn Leaf" 3
 		add variant 1
 			"Summer Leaf" 4
 		remove variant
 			"Summer Leaf" 5
-		remove variant
-			"Strong Wind"
-			"Summer Leaf"
-		remove variant
-			"Strong Wind"
-			"Summer Leaf" 3
 		remove variant
 			"Autumn Leaf" 2
 		remove variant
@@ -8992,7 +9066,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Tempest (Heavy)"
 		add variant 4
 			"Derecho"
-			"Strong Wind" 2
+			"Heavy Gust"
+			"Strong Wind"
 		add variant 3
 			"Derecho (Tough)"
 			"Autumn Leaf"
@@ -9057,6 +9132,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant 2
 			"Hurricane (Tough)"
 			"Tempest (Missile)" 2
+		add variant 2
+			"Hurricane"
+			"Heavy Gust" 2
 	shipyard "Wanderer Advanced"
 		"Hurricane"
 </pre>
@@ -9101,6 +9179,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		add variant
 			"Derecho"
 			"Autumn Leaf (Heavy)" 2
+		add variant 2
+			"Heavy Gust"
+			"Heavy Gust (Moonbeam)" 2
 	outfitter "Wanderer Advanced"
 		"Moonbeam"
 		"Moonbeam Turret"
