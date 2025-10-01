@@ -815,7 +815,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" .2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .7
 		"shield damage" 108
 		"hull damage" 32
@@ -1052,7 +1054,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .54
 		"drag" .03
 		"turn" 1.6
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"infrared tracking" .9
 		"shield damage" 290
 		"hull damage" 440
@@ -1128,7 +1132,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .16
 		"drag" .04
 		"turn" 2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"infrared tracking" .9
 		"missile strength" 35
 		"shield damage" -3200
@@ -1383,6 +1389,79 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_deprecated/deprecated outfits.txt | outfit "Nettle Magazine"</summary>
+<pre>outfit "Nettle Magazine"
+	category "Ammunition"
+	series "Ammunition"
+	index 07021
+	licenses
+		"Twilight Guard"
+	cost 60000
+	thumbnail "outfit/nettle magazine"
+	"mass" 3
+	"outfit space" -12
+	"nettle capacity" 72
+	ammo `"Nettle" KKV`
+	description "To improve the combat endurance of ships that rely on flooding the battlespace with small missiles, this magazine extends the capacity of Nettle launch cells by loading new Nettle KKVs through the bottoms of the cells."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/nettle magazine.png" width="150" height="110">
+</details>
+
+
+<details>
+<summary>data/_deprecated/deprecated outfits.txt | outfit "Orchid Magazine"</summary>
+<pre>outfit "Orchid Magazine"
+	category "Ammunition"
+	series "Ammunition"
+	index 07031
+	licenses
+		"Avgi Atomics"
+	cost 150000
+	thumbnail "outfit/orchid magazine"
+	"mass" 3
+	"outfit space" -12
+	"orchid capacity" 3
+	ammo `"Orchid" Nuclear Missile`
+	description "This large ammunition storage loads new Orchid Missiles into the launch tubes with little more than a few cables, actuators, and solenoids. Designed to be as minimalistic as possible, the sheer size of each Orchid nonetheless makes this magazine rather bulky for the number of missiles it stores."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/orchid magazine.png" width="180" height="120">
+</details>
+
+
+<details>
+<summary>data/_deprecated/deprecated outfits.txt | outfit `Z-3600 "Beam" Amat Torch`</summary>
+<pre>outfit `Z-3600 "Beam" Amat Torch`
+	category "Engines"
+	series "Engines"
+	index 07080
+	"cost" 300000000
+	thumbnail "outfit/beam antimatter drive"
+	"mass" 3600
+	"outfit space" -360
+	"engine capacity" -360
+	"thrust" 600
+	"thrusting energy" 15
+	"thrusting heat" 90
+	"thrusting fuel" 0.3
+	"drag reduction" 9
+	"flare sprite" "effect/avgi flare/antimatter"
+		"frame rate" 15
+	"flare sound" "fusion torch"
+	"turn" 6000
+	"turning energy" 9
+	"turning heat" 54
+	"steering flare sprite" "effect/avgi flare/rcs"
+		"frame rate" 15
+		"scale" 0.5
+	"steering flare sound" "remnant afterburner"
+	"magnetic nozzle" 18
+	description "The fastest Avgi starships were propelled not just by their engines, but also by immense banks of lasers and particle beams stationed in the Anax system, pushing ships to velocities in excess of 0.2c before braking with a magsail or plasma magnet. Just before the invention of the hyperdrive, however, the Avgi perfected this beam-core antimatter drive, capable of pushing a starship with sufficient antimatter fuel to 0.4c and perhaps beyond. Requiring immense quantities of antimatter, the amat farms around Anax such as Antivli Station would have been strained to their limits had this design entered mass production, but the surprise invention of the hyperdrive rendered it laughably obsolete overnight."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/beam antimatter drive.png" height="200">
+</details>
+
+
+<details>
 <summary>data/avgi/avgi outfits.txt | outfit "Radiative Lamina"</summary>
 <pre>outfit "Radiative Lamina"
 	plural "Radiative Laminae"
@@ -1538,7 +1617,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "outfit/multispectral scanner"
 	"mass" 6
 	"outfit space" -12
-	"tactical scan power" 180
+	"tactical scan power" 144
 	"energy consumption" 0.45
 	"heat generation" 1.8
 	description "The Multispectral Scanner is a veritable suite of instruments, including an active scanning phased array radar, a combined infrared/optical/ultraviolet telescope, an array of semiconductor gamma detectors, and a bundle of neutron-detecting helium-3 tubes. With this plethora of instruments, distant ships can be detected, ranged, and tracked, despite any attempts to hide."
@@ -1684,7 +1763,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 24
 	"outfit space" -24
 	"energy generation" 6
-	"heat generation" 54
+	"heat generation" 48
 	"overheat damage rate" 3
 	description "While most Avgi starships either use solar arrays or tap energy from their torch drives, sometimes a more consistent power source is desirable. The Lantern is a compact electrostatic gas core fission reactor, which supplies a stable, reliable flow of power to even smaller ships. With uranium plasma intermixed with hydrogen gas, an applied voltage keeps the ionized uranium fuel contained in the reactor core while the superheated hydrogen is allowed to flow through a compact magnetohydrodynamic generator. The high temperatures involved allow the reactor to achieve a surprisingly high thermodynamic efficiency for its size, at the cost of producing significant amounts of waste heat."
 	description "	Run at the very edge of its thermal limits, the Lantern does not tolerate overheating of its coolant loop, which can cause catastrophic damage if sustained."
@@ -1742,13 +1821,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 12
 	"outfit space" -12
 	"engine capacity" -12
-	"thrust" 7.5
+	"thrust" 4.5
 	"thrusting energy" 1.2
 	"thrusting heat" 0.6
-	"reverse thrust" 7.5
+	"reverse thrust" 4.5
 	"reverse thrusting energy" 1.2
 	"reverse thrusting heat" 0.6
-	"turn" 240
+	"turn" 180
 	"turning energy" 1.2
 	"turning heat" 0.6
 	"drag reduction" 0.3
@@ -1762,9 +1841,70 @@ document.addEventListener("DOMContentLoaded", function() {
 		"frame rate" 5
 	"reverse flare sound" "plasma tiny"
 	description "For bulk transportation of passengers and goods, electric propulsion has long been used by the Avgi for its versatility and low cost. This compact set of magnetoplasmadynamic thrusters can propel light ships to impressive velocities, given time to accelerate, but it is also notably energy-hungry. Being propellant agnostic, it is common to see this workhorse drive ran with common water or ammonia propellants, contributing to its renowned flexibility."
-	description "	Designed to be clustered and oriented in any direction, this design can give a ship full six-axis control, allowing it to translate and rotate in any direction with ease."
+	description "	Designed to be clustered and oriented in any direction, the thruster layout gives a ship full six-axis control, allowing it to translate and rotate in any direction with ease."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/magnetoplasma drive.png" width="180" height="180">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi outfits.txt | outfit "Vapor Nuclear Rocket"</summary>
+<pre>outfit "Vapor Nuclear Rocket"
+	category "Engines"
+	series "Engines"
+	index 07010
+	"cost" 900000
+	thumbnail "outfit/vapor nuclear rocket"
+	"mass" 24
+	"outfit space" -24
+	"engine capacity" -24
+	"thrust" 24
+	"thrusting energy" 1.5
+	"thrusting heat" -6
+	"energy generation" 1.5
+	"heat generation" 9
+	"overheat damage rate" 3
+	"drag reduction" 0.6
+	"flare sprite" "effect/avgi flare/ntr"
+		"frame rate" 15
+	"flare sound" "atomic small"
+	description "While an efficient means of propulsion, fusion engines are large and cumbersome, scaling down poorly. The Avgi use gas core nuclear fission thermal rockets for smaller ships that need a better thrust-to-weight ratio than electric propulsion can provide, but are not large enough to justify a multi-hundred ton fusion torch. Impressive specific powers are achieved through performant fuels such as U-233 or Am-242m, but this also makes these engines rather expensive."
+	description "	The Vapor Gas Core Nuclear Thermal Rocket is derived from the same reactor design as the Lantern Fission Core, stripped of power conversion equipment and radiation shielding. Like the Lantern, an electrostatic field of a few volts is used to trap ionized uranium plasma in the reactor even as hot hydrogen flows freely. The engine is bimodal, producing a small trickle of power from thermionic converters, but this capability comes at the cost of constant heat generation."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/vapor nuclear rocket.png" width="150" height="150">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi outfits.txt | outfit `A-3600 "Beam" Amat Drive`</summary>
+<pre>outfit `A-3600 "Beam" Amat Drive`
+	category "Engines"
+	series "Engines"
+	index 07080
+	"cost" 300000000
+	thumbnail "outfit/beam antimatter drive"
+	"mass" 3600
+	"outfit space" -360
+	"engine capacity" -360
+	"thrust" 600
+	"thrusting energy" 15
+	"thrusting heat" 90
+	"thrusting fuel" 0.3
+	"drag reduction" 9
+	"flare sprite" "effect/avgi flare/antimatter"
+		"frame rate" 15
+	"flare sound" "fusion torch"
+	"turn" 6000
+	"turning energy" 9
+	"turning heat" 54
+	"steering flare sprite" "effect/avgi flare/rcs"
+		"frame rate" 15
+		"scale" 0.5
+	"steering flare sound" "remnant afterburner"
+	"magnetic nozzle" 18
+	description "The fastest Avgi starships were propelled not just by their engines, but also by immense banks of lasers and particle beams stationed in the Anax system, pushing ships to velocities in excess of 0.2c before braking with a magsail or plasma magnet. Just before the invention of the hyperdrive, however, the Avgi perfected this beam-core antimatter drive, capable of pushing a starship with sufficient antimatter fuel to 0.4c and perhaps beyond. Requiring immense quantities of antimatter, the amat farms around Anax such as Antivli Station would have been strained to their limits had this design entered mass production, but the surprise invention of the hyperdrive rendered it laughably obsolete overnight."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/beam antimatter drive.png" height="200">
 </details>
 
 
@@ -1776,14 +1916,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07050
 	licenses
 		"Avgi Torch"
-	"cost" 1800000
+	"cost" 3600000
 	thumbnail "outfit/spark fusion torch"
 	"mass" 333
 	"outfit space" -33
 	"engine capacity" -33
 	"thrust" 120
 	"thrusting energy" 9
-	"thrusting heat" 45
+	"thrusting heat" 60
 	"thrusting fuel" 0.09
 	"drag reduction" 1
 	"flare sprite" "effect/avgi flare/fusion"
@@ -1807,14 +1947,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07060
 	licenses
 		"Avgi Torch"
-	"cost" 3900000
+	"cost" 9000000
 	thumbnail "outfit/zap fusion torch"
 	"mass" 666
 	"outfit space" -66
 	"engine capacity" -66
 	"thrust" 270
 	"thrusting energy" 18
-	"thrusting heat" 90
+	"thrusting heat" 120
 	"thrusting fuel" 0.18
 	"drag reduction" 2
 	"flare sprite" "effect/avgi flare/fusion"
@@ -1837,14 +1977,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07070
 	licenses
 		"Avgi Torch"
-	"cost" 6000000
+	"cost" 14400000
 	thumbnail "outfit/arc fusion torch"
 	"mass" 999
 	"outfit space" -99
 	"engine capacity" -99
 	"thrust" 450
 	"thrusting energy" 27
-	"thrusting heat" 135
+	"thrusting heat" 180
 	"thrusting fuel" 0.27
 	"drag reduction" 3
 	"flare sprite" "effect/avgi flare/fusion"
@@ -1878,7 +2018,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"afterburner heat" -18
 	"afterburner fuel" 0.24
 	"magnetic nozzle" -1
-	description "A powerful magnetohydrodynamic turbopump forces a torrent of lithium-seeded water into the throat of a fusion torch's magnetic nozzle, dramatically increasing thrust at the cost of a significant increase in propellant consumption. The additional mass flow likewise reduces the waste heat generated by a torch drive, capturing much of it as propellant is injected around the fusion reaction."
+	description "A powerful turbopump forces a torrent of liquid hydrogen into the throat of a fusion torch's magnetic nozzle, dramatically increasing thrust at the cost of a significant increase in propellant consumption. The additional mass flow likewise reduces the waste heat absorbed by a torch drive, expelling much of it as reaction mass is injected around the fusion plasma."
 	description "	The Remass Injector is a component that can be installed into an Avgi fusion torch to give it afterburning capabilities. It requires a magnetic nozzle slot to be installed."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/remass injector.png" width="150" height="150">
@@ -1900,7 +2040,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"engine capacity" -6
 	"energy generation" 1.5
 	"heat generation" 1.5
-	"thrust" -12
+	"thrust" -30
 	"thrusting energy" -24
 	"thrusting heat" 6
 	"magnetic nozzle" -1
@@ -2004,39 +2144,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	description "This large set of 'teakettle' style reaction control thrusters can allow even the largest of Avgi starships to maneuver with ease, or even reverse course without needing to fully turn around. They also can be used to reject considerable amounts of waste heat by expelling superheated water vapor, boosted by an electromagnetic accelerator."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/rcs large.png" width="200" height="140">
-</details>
-
-
-<details>
-<summary>data/avgi/avgi outfits.txt | outfit `Z-3600 "Beam" Amat Torch`</summary>
-<pre>outfit `Z-3600 "Beam" Amat Torch`
-	category "Engines"
-	series "Engines"
-	index 07080
-	"cost" 300000000
-	thumbnail "outfit/beam antimatter torch"
-	"mass" 3600
-	"outfit space" -360
-	"engine capacity" -360
-	"thrust" 600
-	"thrusting energy" 15
-	"thrusting heat" 90
-	"thrusting fuel" 0.3
-	"drag reduction" 9
-	"flare sprite" "effect/avgi flare/antimatter"
-		"frame rate" 15
-	"flare sound" "fusion torch"
-	"turn" 6000
-	"turning energy" 9
-	"turning heat" 54
-	"steering flare sprite" "effect/avgi flare/rcs"
-		"frame rate" 15
-		"scale" 0.5
-	"steering flare sound" "remnant afterburner"
-	"magnetic nozzle" 18
-	description "The fastest Avgi starships were propelled not just by their engines, but also by immense banks of lasers and particle beams stationed in the Anax system, pushing ships to velocities in excess of 0.2c before braking with a magsail or plasma magnet. Just before the invention of the hyperdrive, however, the Avgi perfected this beam-core antimatter drive, capable of pushing a starship with sufficient antimatter fuel to 0.4c and perhaps beyond. Requiring immense quantities of antimatter, the amat farms around Anax such as Antivli Station would have been strained to their limits had this design entered mass production, but the surprise invention of the hyperdrive rendered it laughably obsolete overnight."
-</pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/beam antimatter torch.png" height="200">
 </details>
 
 
@@ -2196,8 +2303,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		ammo "Speck Round"
 		"fire effect" "speckle fire"
 		"inaccuracy" 0.9
-		"velocity" 30
-		"random velocity" 0.6
+		"velocity override" 30
 		"reload" 18
 		"burst reload" 6
 		"burst count" 3
@@ -2222,12 +2328,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07020
 	cost 90000
 	thumbnail "outfit/speckle turret"
-	"mass" 16.8
+	"mass" 18.6
 	"outfit space" -24
 	"weapon capacity" -24
 	"energy capacity" 180
 	"turret mounts" -1
-	"speck capacity" 2400
+	"speck capacity" 1800
 	weapon
 		"sound" "speckle"
 		ammo "Speck Round" 2
@@ -2235,8 +2341,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hardpoint offset" 9
 		"fire effect" "speckle fire"
 		"inaccuracy" 1.2
-		"velocity" 30
-		"random velocity" 0.6
+		"velocity override" 30
 		"reload" 18
 		"burst reload" 6
 		"burst count" 3
@@ -2266,7 +2371,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			"frame rate" 30
 			"no repeat"
 		"hit effect" "speck impact"
-		"lifetime" 30
+		"velocity" 30
+		"random velocity" 0.6
+		"lifetime" 24
 		"random lifetime" 3
 		"shield damage" 24
 		"hull damage" 48
@@ -2317,10 +2424,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"die effect" "green laser reflection" 30
 		"die effect" "green laser scattering"
 		"anti-missile" 2
-		"velocity" 1800
+		"velocity" 1200
 		"lifetime" 1
-		"firing energy" 6
-		"firing heat" 12
+		"firing energy" 3
+		"firing heat" 6
 	description "This lightweight turret can be fed a beam of light from a lasing generator, which is then combined and focused to produce an intense beam suitable for targeting and destroying missiles. Unlike a typical pulsed-shot human antimissile system, this turret's precise optics seems designed to hold a beam on target at an extreme distance for a longer period of time, making it better suited for defending and supporting other ships from afar."
 	description "	The turret itself only contains the optics needed to synthesize, focus, and target the beam, allowing the laser light to be produced elsewhere. Because of this, an Optical Lasing Generator is needed to run this turret, providing enough power to support three Green Lasers."
 </pre>
@@ -2338,37 +2445,82 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Twilight Guard"
 	cost 120000
 	thumbnail "outfit/blue optical laser"
-	"mass" 9
-	"outfit space" -9
-	"weapon capacity" -9
+	"mass" 12
+	"outfit space" -12
+	"weapon capacity" -12
 	"turret mounts" -1
 	"lasing power" -2
 	weapon
 		"hardpoint sprite" "hardpoint/blue optical laser"
 		"hardpoint offset" 3
-		sprite "projectile/blue optical laser"
 			"frame rate" 3
 		"sound" "optical laser"
 		"fire effect" "blue laser glare"
-		"fire effect" "blue laser flicker" 60
 		"hit effect" "laser ejecta" 6
 		"hit effect" "blue laser reflection" 60
 		"hit effect" "blue laser scattering"
-		"velocity" 2400
+		"velocity" 1500
 		"lifetime" 1
 		"reload" 1
+		"inaccuracy" 0.6
 		"turret turn" 6
 		"firing energy" 6
 		"firing heat" 12
-		"shield damage" 3.6
-		"hull damage" 4.8
+		"shield damage" 4.2
+		"hull damage" 6
 		"heat damage" 6
-		"damage dropoff" 0 2400
+		"damage dropoff" 0 1500
 		"dropoff modifier" 0
 	description "This lightweight turret can be fed a beam of light from a lasing generator, which is then combined and focused to produce an intense beam ideal for damaging other ships. By pulsing thousands of times each second, the beam can create thermal and mechanical shocks in the target material, enhancing its ability to drill through armor. Unlike the advanced beam weapons used by some other species, this laser is subject to the effects of diffraction, causing its damage to become less intense with distance while also rendering it invisible. However, precise optics allow the beam to be targeted from an exceptional range, despite the tenuous damage at the edge of the laser's reach."
 	description "	The turret itself only contains the optics needed to synthesize, focus, and target the beam, allowing the laser light to be produced elsewhere. Because of this, an Optical Lasing Generator is needed to run this turret, providing enough power to support a single Blue Laser."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/blue optical laser.png" width="120" height="120">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | outfit "Ultraviolet Excimer Laser"</summary>
+<pre>outfit "Ultraviolet Excimer Laser"
+	series "Avgi: Beams"
+	index 30
+	category "Turrets"
+	licenses
+		"Twilight Guard"
+	cost 120000
+	thumbnail "outfit/unknown"
+	"mass" 120
+	"outfit space" -60
+	"weapon capacity" -30
+	"engine capacity" -30
+	"thrusting heat" 24
+	"turret mounts" -1
+	"magnetic nozzle" -2
+	weapon
+		# "hardpoint sprite" "hardpoint/uv excimer laser"
+		"hardpoint offset" 3
+			"frame rate" 3
+		"sound" "optical laser"
+		"fire effect" "uv laser glare"
+		"hit effect" "laser ejecta" 6
+		"hit effect" "laser explosion"
+		"hit effect" "uv laser reflection" 60
+		"hit effect" "uv laser scattering"
+		"velocity" 2100
+		"lifetime" 1
+		"reload" 1
+		"inaccuracy" 1.8
+		"turret turn" 0.9
+		"firing energy" 24
+		"firing heat" 60
+		"firing fuel" 0.24
+		"shield damage" 24
+		"hull damage" 18
+		"heat damage" 18
+		"hit force" 3
+		"damage dropoff" 0 2100
+		"dropoff modifier" 0
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/unknown.png" width="120" height="120">
 </details>
 
 
@@ -2396,15 +2548,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			"narrow"
 		"velocity override" 300
 		"piercing" 0.3
-		"submunition" "Electron Bunch" 180
+		"submunition" "TeV Electron Bunch" 180
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/unknown.png" width="120" height="120">
 </details>
 
 
 <details>
-<summary>data/avgi/avgi weapons.txt | outfit "Electron Bunch"</summary>
-<pre>outfit "Electron Bunch"
+<summary>data/avgi/avgi weapons.txt | outfit "TeV Electron Bunch"</summary>
+<pre>outfit "TeV Electron Bunch"
 	weapon
 		sprite "effect/mhd spark"
 			"frame rate" 15
@@ -2420,6 +2572,63 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull damage" 1.8
 		"scrambling damage" 0.006
 		"piercing" 0.3
+		"penetration count" 3
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | outfit "UREB Turret"</summary>
+<pre>outfit "UREB Turret"
+	category "Turrets"
+	series "Turrets"
+	index 07010
+	cost 3000000
+	thumbnail "outfit/ureb turret"
+	"mass" 60
+	"outfit space" -45
+	"weapon capacity" -60
+	"turret mounts" -1
+	weapon
+		"hardpoint sprite" "hardpoint/ureb turret"
+		"hardpoint offset" 21
+		sound "slicer"
+		"fire effect" "electron flare"
+		"firing energy" 60
+		"firing heat" 90
+		"turret turn" 0.3
+		"reload" 6
+		"burst reload" 3
+		"burst count" 30
+		"inaccuracy" 3
+			"narrow"
+		"velocity override" 300
+		"piercing" 0.15
+		"submunition" "GeV Electron Bunch" 180
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/ureb turret.png" height="200">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | outfit "GeV Electron Bunch"</summary>
+<pre>outfit "GeV Electron Bunch"
+	weapon
+		sprite "effect/mhd spark"
+			"frame rate" 15
+			"no repeat"
+		"hit effect" "bremsstrahlung"
+		"hit effect" "nuclear spallation"
+		"velocity" 300
+		"random velocity" -210
+		"lifetime" 12
+		"random lifetime" 3
+		"inaccuracy" 0.6
+		"shield damage" 0.12
+		"hull damage" 0.15
+		"scrambling damage" 0.003
+		"piercing" 0.15
 		"penetration count" 3
 </pre>
 
@@ -2456,7 +2665,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"velocity" 6
 		"lifetime" 3
 		"turn" 90
-		"homing" 2
+		"homing"
 		"optical tracking" 0.72
 		"range override" 600
 		"stream"
@@ -2499,13 +2708,109 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing heat" 30
 		"drag" 3
 		"radar tracking" 0.9
-		"homing" 4
-		"missile strength" 9
+		"homing"
+			"leading"
+			"throttle control"
+		"missile strength" 18
 		"stream"
 		"submunition" "Orchid Active"
 	description "This is a large launcher capable of carrying and deploying large torch-driven missiles and torpedoes. With a standardized design, it is compatible with a wide range of Avgi torch missiles. A coilgun-based ejection system allows missiles to be deployed with considerable initial velocity."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/external launch tube.png" width="200" height="120">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | outfit "Tiny VLS"</summary>
+<pre>outfit "Tiny VLS"
+	"display name" "Vertical Launch Array (9)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 07030
+	licenses
+		"Twilight Guard"
+	cost 36000
+	thumbnail "outfit/tiny vls"
+	"mass" 3
+	"outfit space" -9
+	"weapon capacity" -9
+	"turret mounts" -1
+	"nettle capacity" 27
+	weapon
+		"hardpoint sprite" "hardpoint/tiny vls"
+		sprite "projectile/nettle"
+			"scale" 0.5
+		sound "bounce"
+		ammo `"Nettle" KKV`
+		icon "icon/nettle"
+		"fire effect" "sidewinder fire"
+		"inaccuracy" 360
+		"velocity" 3
+		"lifetime" 30
+		"range override" 3600
+		"reload" 60
+		"burst reload" 9
+		"burst count" 3
+		"turret turn" 0.000001
+		"firing energy" 3
+		"firing heat" 1.5
+		"drag" .024
+		"infrared tracking" 0.6
+		"optical tracking" 0.6
+		"homing"
+			"leading"
+			"throttle control"
+		"missile strength" 9
+		"submunition" "Nettle Active"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/tiny vls.png" width="150" height="150">
+</details>
+
+
+<details>
+<summary>data/avgi/avgi weapons.txt | outfit "Small VLS"</summary>
+<pre>outfit "Small VLS"
+	"display name" "Vertical Launch Array (18)"
+	category "Secondary Weapons"
+	series "Secondary Weapons"
+	index 07030
+	licenses
+		"Twilight Guard"
+	cost 108000
+	thumbnail "outfit/small vls"
+	"mass" 6
+	"outfit space" -18
+	"weapon capacity" -18
+	"turret mounts" -1
+	"nettle capacity" 54
+	weapon
+		"hardpoint sprite" "hardpoint/small vls"
+		sprite "projectile/nettle"
+			"scale" 0.5
+		sound "bounce"
+		ammo `"Nettle" KKV`
+		icon "icon/nettle"
+		"fire effect" "sidewinder fire"
+		"inaccuracy" 360
+		"velocity" 3
+		"lifetime" 30
+		"range override" 3600
+		"reload" 30
+		"burst reload" 9
+		"burst count" 6
+		"turret turn" 0.000001
+		"firing energy" 3
+		"firing heat" 1.5
+		"drag" .024
+		"infrared tracking" 0.6
+		"optical tracking" 0.6
+		"homing"
+			"leading"
+			"throttle control"
+		"missile strength" 9
+		"submunition" "Nettle Active"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/small vls.png" width="150" height="140">
 </details>
 
 
@@ -2518,13 +2823,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07030
 	licenses
 		"Twilight Guard"
-	cost 240000
+	cost 216000
 	thumbnail "outfit/medium vls"
 	"mass" 12
-	"outfit space" -42
-	"weapon capacity" -42
+	"outfit space" -36
+	"weapon capacity" -36
 	"turret mounts" -1
-	"nettle capacity" 216
+	"nettle capacity" 108
 	weapon
 		"hardpoint sprite" "hardpoint/medium vls"
 		sprite "projectile/nettle"
@@ -2535,7 +2840,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"fire effect" "sidewinder fire"
 		"inaccuracy" 360
 		"velocity" 3
-		"lifetime" 15
+		"lifetime" 30
 		"range override" 3600
 		"reload" 15
 		"burst reload" 9
@@ -2544,9 +2849,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing energy" 3
 		"firing heat" 1.5
 		"drag" .024
-		"infrared tracking" 0.9
+		"infrared tracking" 0.6
 		"optical tracking" 0.6
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"missile strength" 9
 		"submunition" "Nettle Active"
 	description "This large vertical launch system is made up of 36 independent launch cells arrayed in parallel. A wide variety of small to mid-sized Avgi missiles are compatible with the launch cells, which can be easily interchanged. Designed for rapid vertical cold-launch, the system needs an open space comparable to a turret mount to function properly."
@@ -2568,29 +2875,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 0.15
 	"nettle capacity" -1
 	description "The Nettle missile is a cheap, single-stage kinetic kill vehicle designed for situations where a nuclear warhead would be unnecessary. Little more than a payload of tungsten rods, an octaazacubane thruster package, and a nose mounted sensor array, they can be manufactured in bulk at minimal cost. Upon closing in on a target, the missile unwraps into dozens of thin tungsten rods to create a cone-shaped area of effect. While only a fraction of the payload actually impacts a target, the cloud of projectiles is difficult to completely eliminate."
-	description "	The Nettle KKV is ammunition for the Vertical Launch Array; without a Vertical Launch Array or Nettle Magazine to store them in you cannot purchase or use Nettle KKVs."
+	description "	The Nettle KKV is ammunition for the Vertical Launch Array; without a Vertical Launch Array to store them in you cannot purchase or use Nettle KKVs."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/nettle kkv.png" width="150" height="150">
-</details>
-
-
-<details>
-<summary>data/avgi/avgi weapons.txt | outfit "Nettle Magazine"</summary>
-<pre>outfit "Nettle Magazine"
-	category "Ammunition"
-	series "Ammunition"
-	index 07021
-	licenses
-		"Twilight Guard"
-	cost 60000
-	thumbnail "outfit/nettle magazine"
-	"mass" 3
-	"outfit space" -12
-	"nettle capacity" 72
-	ammo `"Nettle" KKV`
-	description "To improve the combat endurance of ships that rely on flooding the battlespace with small missiles, this magazine extends the capacity of Nettle launch cells by loading new Nettle KKVs through the bottoms of the cells."
-</pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/nettle magazine.png" width="150" height="110">
 </details>
 
 
@@ -2604,14 +2891,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		"die effect" "nettle split" 30
 		"lifetime" 300
 		"split range" 180
-		"acceleration" 0.3
-		"drag" .024
+		"acceleration" 0.27
+		"drag" .03
 		"turn" 6
-		"homing" 4
-		"infrared tracking" 0.9
+		"homing"
+			"leading"
+			"throttle control"
+		"infrared tracking" 0.6
 		"optical tracking" 0.6
-		"shield damage" -108
-		"hull damage" -162
+		"shield damage" -81
+		"hull damage" -108
 		"missile strength" 12
 		"submunition" "Nettle Flecks" 18
 </pre>
@@ -2635,9 +2924,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"lifetime" 60
 		"random lifetime" 30
 		"random velocity" 6
-		"shield damage" 12
-		"hull damage" 18
-		"hit force" 45
+		"shield damage" 9
+		"hull damage" 12
+		"hit force" 36
 </pre>
 
 </details>
@@ -2657,29 +2946,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"orchid capacity" -1
 	description "Unlike humanity, the Avgi do not have a strong taboo against the use of nuclear weapons in space. To them, nuclear weapons are simply another tool, albeit one with a particularly high energy density, to be used when the occasion calls for it. They have been the Avgi's trump card against the Aberrant, the one weapon they have capable of reliably breaking their advanced shields and atomizing their armor."
 	description "	This particular missile carries a powerful thermonuclear warhead, a staged device with a far higher yield to weight ratio than anything humanity has developed. It seems to be the product of centuries of development of nuclear devices, as opposed to humanity's long abstention from nuclear weapons research."
-	description "	The Orchid Missile is ammunition for the External Launch Tube; without a External Launch Tube or Orchid Magazine to store them in you cannot purchase or use Orchid Missiles."
+	description "	The Orchid Missile is ammunition for the External Launch Tube; without a External Launch Tube to store them in you cannot purchase or use Orchid Missiles."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/orchid missile.png" height="200">
-</details>
-
-
-<details>
-<summary>data/avgi/avgi weapons.txt | outfit "Orchid Magazine"</summary>
-<pre>outfit "Orchid Magazine"
-	category "Ammunition"
-	series "Ammunition"
-	index 07031
-	licenses
-		"Avgi Atomics"
-	cost 150000
-	thumbnail "outfit/orchid magazine"
-	"mass" 3
-	"outfit space" -12
-	"orchid capacity" 3
-	ammo `"Orchid" Nuclear Missile`
-	description "This large ammunition storage loads new Orchid Missiles into the launch tubes with little more than a few cables, actuators, and solenoids. Designed to be as minimalistic as possible, the sheer size of each Orchid nonetheless makes this magazine rather bulky for the number of missiles it stores."
-</pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/orchid magazine.png" width="180" height="120">
 </details>
 
 
@@ -2695,8 +2964,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"die effect" "missile death"
 		"lifetime" 15
 		"drag" 3
-		"turn" 15
-		"homing" 2
+		"turn" 3
+		"homing"
 		"radar tracking" 0.9
 		"submunition" "Orchid Boost"
 		"missile strength" 36
@@ -2721,7 +2990,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 0.3
 		"drag" 0.018
 		"turn" 3
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" 0.9
 		"split range" 300
 		"submunition" "Orchid Coast"
@@ -2746,7 +3017,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 0.03
 		"drag" 0.006
 		"turn" 1.5
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" 0.9
 		"split range" 1200
 		"submunition" "Orchid Divert"
@@ -2772,7 +3045,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 0.3
 		"drag" 0.018
 		"turn" 3
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" 0.9
 		"split range" 600
 		"submunition" "Orchid Terminal"
@@ -2908,7 +3183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 0.006
 		"drag" 0.0003
 		"turn" 6
-		"homing" 2
+		"homing"
 		"optical tracking" 0.72
 		"trigger radius" 30
 		"blast radius" 90
@@ -2944,7 +3219,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.3
 		"drag" .1
 		"turn" 4
-		"homing" 5
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .5
 		"missile strength" 40
 	description "When there is no one left to speak for the trees, these cannons will do all the talking."
@@ -3686,7 +3963,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.3
 		"drag" .1
 		"turn" 5.35
-		"homing" 2
+		"homing"
 		"radar tracking" 0.5
 		"optical tracking" 0.5
 		"shield damage" 46
@@ -4527,7 +4804,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .8
 		"drag" .1
 		"turn" 0.1
-		"homing" 2
+		"homing"
 		"radar tracking" .8
 		"missile strength" 50
 		"submunition" "Active Finisher" 1
@@ -4575,7 +4852,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .8
 		"drag" .1
 		"turn" 0.1
-		"homing" 2
+		"homing"
 		"radar tracking" .8
 		"missile strength" 50
 		"submunition" "Active Finisher" 1
@@ -4600,7 +4877,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" 2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" .8
 		"optical tracking" .5
 		"missile strength" 50
@@ -6833,7 +7112,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 2.2
 		"drag" .05
 		"turn" .6
-		"homing" 1
+		"homing"
+			"blindspot"
 		"optical tracking" .4
 		"shield damage" 4.2
 		"hull damage" 8.4
@@ -6912,7 +7192,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .7
 		"drag" .05
 		"turn" 1.2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"optical tracking" .8
 		"infrared tracking" .4
 		"shield damage" 200
@@ -8555,7 +8837,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.2
 		"drag" .1
 		"turn" 3
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" 1.
 </pre>
 
@@ -9274,6 +9558,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/human/outfits.txt | outfit "Old Man's Sword"</summary>
+<pre>outfit "Old Man's Sword"
+	category "Unique"
+	series "H2H"
+	index 99030
+	cost 220000
+	thumbnail "outfit/sword"
+	"capture attack" 1.4
+	"capture defense" 1
+	"unplunderable" 1
+	"unique" 1
+	description "While swords are seen today as being old curios and commemorative objects, rendered useless when gunpowder became dominant on the battlefield thousands of years ago, this sword is unlike any you have seen before. Despite how heavy it looks, it is remarkably light, and there are inscriptions on the blade itself that don't appear to be in any human language."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/sword.png" width="200" height="200">
+</details>
+
+
+<details>
 <summary>data/human/outfits.txt | outfit "Puny"</summary>
 <pre>outfit "Puny"
 	category "Unique"
@@ -9327,7 +9629,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	cost 1000
 	thumbnail "outfit/map"
 	"map" 12
-	"map minable" 1
+	"map minables" 1
 	description "This data chip contains complete information on the twelve star systems closest to this one: planets, ports, governments, trade prices, available services, etc. You can get all the same information just by exploring those systems yourself, but having a map can save you from making wrong turns if you are trying to travel through new territory to reach a certain system quickly."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/map.png" width="120" height="120">
@@ -10811,7 +11113,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" 1.8
-		"homing" 1
+		"homing"
+			"blindspot"
 		"infrared tracking" .65
 		"shield damage" 360
 		"hull damage" 220
@@ -10858,7 +11161,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" 1.8
-		"homing" 1
+		"homing"
+			"blindspot"
 		"infrared tracking" .65
 		"shield damage" 360
 		"hull damage" 220
@@ -10938,7 +11242,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.2
 		"drag" .1
 		"turn" 4
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" .9
 		"shield damage" 260
 		"hull damage" 180
@@ -10986,7 +11292,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.2
 		"drag" .1
 		"turn" 4
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" .9
 		"shield damage" 260
 		"hull damage" 180
@@ -11219,7 +11527,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .15
 		"drag" .025
 		"turn" 1.5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"optical tracking" .8
 		"shield damage" 820
 		"hull damage" 820
@@ -11266,7 +11575,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .15
 		"drag" .025
 		"turn" 1.5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"optical tracking" .8
 		"shield damage" 820
 		"hull damage" 820
@@ -11347,7 +11657,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .1
 		"drag" .02
 		"turn" 1.5
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"optical tracking" .9
 		"shield damage" 1050
 		"hull damage" 1050
@@ -11394,7 +11706,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .1
 		"drag" .02
 		"turn" 1.5
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"optical tracking" .9
 		"shield damage" 1050
 		"hull damage" 1050
@@ -11563,7 +11877,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .8
 		"drag" .1
 		"turn" 4
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" .5
 		"optical tracking" 1
 		"trigger radius" 30
@@ -11839,7 +12155,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull damage" 860
 		"range override" 3000
 		# To make the AI fire even if the ship is not directly in front.
-		"homing" 1
+		"homing"
+			"blindspot"
 		"optical tracking" 1
 		"turn" 0.5
 		ammo "Star Tail Cell"
@@ -11865,7 +12182,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"lifetime" 120
 		"shield damage" 410
 		"hull damage" 430
-		"homing" 1
+		"homing"
+			"blindspot"
 		"optical tracking" 1
 		"turn" .5
 </pre>
@@ -12228,7 +12546,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.45
 		"drag" .21
 		"turn" 1.3
-		"homing" 3
+		"homing"
+			"throttle control"
 		"optical tracking" 0.9
 		"hit force" -1350
 		"hull damage" 730
@@ -12362,9 +12681,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"flotsam chance" 0.4
 	"mass" 2.718
 	"outfit space" -4
-	"heat generation" 1.4
+	"heat generation" 0.4
 	"drag" 0.04
-	"inertia reduction" 0.04
+	"inertia reduction" 0.01
 	"unplunderable" 1
 	description "Found with widely varying properties in different mechanisms of an Aberration, this mass of glassy, fleshy material is characterized by the very difficulty of classifying its composition. Webs of anomalous material embedded in the mass seem not to be composed of atomic matter as the Avgi know it, but by something entirely different, which resists any attempts to probe its makeup. This is thought to enable many of the Aberrants' more baffling abilities, for lack of any other explanation."
 </pre>
@@ -12472,7 +12791,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hit effect" "detainer smoke" 5
 		"die effect" "tiny explosion"
 		"turn" 6
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"acceleration" 1.5
 		"drag" 0.2
@@ -13094,7 +13414,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 2
 		"drag" .1
 		"turn" 6
-		"homing" 3
+		"homing"
+			"throttle control"
 		"hit effect" "seeker impact"
 		"die effect" "seeker impact"
 		"tracking" 1
@@ -13193,7 +13514,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13218,7 +13540,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13287,7 +13610,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13312,7 +13636,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13381,7 +13706,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13406,7 +13732,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13473,7 +13800,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13496,7 +13824,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 20
 		"live effect" "asteroid circle trail" 5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"tracking" 1
 		"lifetime" 550
 		"inaccuracy" 5
@@ -13555,7 +13884,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"submunition" "asteroid missile"
 			"facing" -30
 		"submunition" "magic deployer1"
-		"homing" 1
+		"homing"
+			"blindspot"
 		"optical tracking" 1
 		"turn" 0
 		"split range" 180
@@ -13580,7 +13910,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"turn" 60
 		"hit effect" "seeker impact"
 		"die effect" "seeker impact"
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" 0.95
 		"lifetime" 155
 		"hit force" 120
@@ -14768,7 +15100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" 1
 		"lifetime" 575
 		"turn" 360
-		"homing" 2
+		"homing"
 		"tracking" 1
 		"trigger radius" 240
 		"blast radius" 400
@@ -14907,7 +15239,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"safe"
 		"no damage scaling"
 		"range override" 10000000
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" 1
 		"acceleration" 1.5
 		"drag" 0.2
@@ -14934,7 +15268,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"safe"
 		"no damage scaling"
 		"range override" 1000000
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" 1
 		"acceleration" 1.5
 		"drag" 0.2
@@ -15174,7 +15510,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .7
 		"drag" .1
 		"turn" 2
-		"homing" 3
+		"homing"
+			"throttle control"
 		"infrared tracking" .7
 		"radar tracking" .8
 		"trigger radius" 50
@@ -16651,7 +16988,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" .2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .7
 		"shield damage" 108
 		"hull damage" 32
@@ -16697,7 +17036,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1
 		"drag" .1
 		"turn" .2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .9
 		"blast radius" 30
 		"shield damage" 48
@@ -17060,7 +17401,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .54
 		"drag" .03
 		"turn" 1.6
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"infrared tracking" .9
 		"shield damage" 290
 		"hull damage" 440
@@ -17183,7 +17526,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .16
 		"drag" .04
 		"turn" 2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"infrared tracking" .9
 		"missile strength" 35
 		"shield damage" -3200
@@ -17552,7 +17897,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 0.6
 		"drag" .1
 		"optical tracking" .7
-		"homing" 3
+		"homing"
+			"throttle control"
 		"blast radius" 48
 		"hit force" 150
 		"missile strength" 33
@@ -17577,7 +17923,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"lifetime" 20
 		"acceleration" -0.1
 		"turn" 4.6
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .9
 		"trigger radius" 20
 		"blast radius" 48
@@ -17603,7 +17951,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.6
 		"drag" .12
 		"turn" 1.7
-		"homing" 3
+		"homing"
+			"throttle control"
 		"optical tracking" .7
 		"trigger radius" 20
 		"blast radius" 48
@@ -17727,10 +18076,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"inaccuracy" 3
 		"lifetime" 1900
 		"velocity" 6.6
+		"velocity override" 5
 		"acceleration" .6
 		"drag" .12
 		"turn" 1.6
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"optical tracking" .9
 		"trigger radius" 40
 		"blast radius" 95
@@ -17871,7 +18223,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.3
 		"drag" .1
 		"turn" 4
-		"homing" 5
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .5
 		"shield damage" 24
 		"hull damage" 13
@@ -18634,7 +18988,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"die effect" "culverin die"
 		lifetime 110
 		reload 36
-		homing 4
+		"homing"
+			"leading"
+			"throttle control"
 		velocity 10
 		acceleration 0.6
 		drag 0.05
@@ -18716,7 +19072,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"lifetime" 30
 		"fade out" 7
 		"turn" 5
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"tracking" .6
 		"acceleration" 1
 		"drag" .1
@@ -19069,7 +19427,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .7
 		"drag" .1
 		"turn" 2
-		"homing" 3
+		"homing"
+			"throttle control"
 		"infrared tracking" .7
 		"radar tracking" .8
 		"trigger radius" 50
@@ -19164,7 +19523,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .7
 		"drag" .1
 		"turn" 2.5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"infrared tracking" .8
 		"radar tracking" .9
 		"trigger radius" 50
@@ -19225,7 +19585,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" .7
 		"drag" .1
 		"turn" 2.5
-		"homing" 3
+		"homing"
+			"throttle control"
 		"infrared tracking" .8
 		"radar tracking" .9
 		"trigger radius" 50
@@ -19857,7 +20218,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing energy" 800
 		"firing heat" 400
 		"turn" 180
-		"homing" 2
+		"homing"
 		"infrared tracking" 1
 		"radar tracking" 1
 		"optical tracking" 1
@@ -19913,7 +20274,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing energy" 800
 		"firing heat" 400
 		"turn" 180
-		"homing" 2
+		"homing"
 		"infrared tracking" 1
 		"radar tracking" 1
 		"optical tracking" 1
@@ -20352,7 +20713,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.5
 		"drag" .1
 		"turn" 8
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"radar tracking" .8
 		"missile strength" 1
 	description "To reduce reliance on supply chains during prolonged war time, this outfit contains specialized fabricators that produce simple kinetic missiles from stock materials and a small amount of stored fuel; their guidance system merely receives data from the shipboard radar. The missiles are fired in volleys of six at a time from each launcher, making them very effective at overwhelming point defenses despite their fragility. However, the low amount of fuel they carry means they can only home in on the target for about a second before they turn into unguided ammunition. Because they are manufactured on the spot, it takes a long time to reload."
@@ -21962,7 +22325,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.1
 		"drag" .1
 		"turn" 2
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"infrared tracking" .9
 		"radar tracking" .6
 		"missile strength" 12
@@ -22004,7 +22369,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" 1.4
 		"drag" .1
 		"turn" 3
-		"homing" 4
+		"homing"
+			"leading"
+			"throttle control"
 		"optical tracking" .9
 		"radar tracking" .6
 		"shield damage" 110
