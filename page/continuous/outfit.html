@@ -1924,7 +1924,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"thrust" 120
 	"thrusting energy" 9
 	"thrusting heat" 60
-	"thrusting fuel" 0.09
+	"thrusting fuel" 0.15
 	"drag reduction" 1
 	"flare sprite" "effect/avgi flare/fusion"
 		"frame rate" 15
@@ -1955,7 +1955,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"thrust" 270
 	"thrusting energy" 18
 	"thrusting heat" 120
-	"thrusting fuel" 0.18
+	"thrusting fuel" 0.3
 	"drag reduction" 2
 	"flare sprite" "effect/avgi flare/fusion"
 		"frame rate" 15
@@ -1985,7 +1985,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"thrust" 450
 	"thrusting energy" 27
 	"thrusting heat" 180
-	"thrusting fuel" 0.27
+	"thrusting fuel" 0.45
 	"drag reduction" 3
 	"flare sprite" "effect/avgi flare/fusion"
 		"frame rate" 15
@@ -2016,7 +2016,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"afterburner thrust" 90
 	"afterburner energy" 3
 	"afterburner heat" -18
-	"afterburner fuel" 0.24
+	"afterburner fuel" 0.6
 	"magnetic nozzle" -1
 	description "A powerful turbopump forces a torrent of liquid hydrogen into the throat of a fusion torch's magnetic nozzle, dramatically increasing thrust at the cost of a significant increase in propellant consumption. The additional mass flow likewise reduces the waste heat absorbed by a torch drive, expelling much of it as reaction mass is injected around the fusion plasma."
 	description "	The Remass Injector is a component that can be installed into an Avgi fusion torch to give it afterburning capabilities. It requires a magnetic nozzle slot to be installed."
@@ -7996,7 +7996,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -10
 	"engine capacity" -10
 	"afterburner thrust" 40.65
-	"afterburner fuel" .125
+	"afterburner fuel" .1875
 	"afterburner heat" 10.0
 	"afterburner effect" "afterburner"
 	description "An afterburner works by dumping hyperspace fuel into your engines and igniting it, producing a large amount of thrust. This can be very useful for dodging missiles or briefly escaping from faster opponents, but you must be careful to avoid using up so much fuel that you do not have enough left for hyperspace travel."
@@ -8016,8 +8016,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 37
 	"outfit space" -37
 	"engine capacity" -37
-	"afterburner thrust" 180.0
-	"afterburner fuel" .5
+	"afterburner thrust" 165
+	"afterburner fuel" .75
 	"afterburner heat" 42.0
 	"afterburner effect" "caldera afterburner" 5
 	description "The Caldera Afterburner is designed for heavy warships, allowing otherwise slow ships to gain a burst of speed to catch up to a faster target or flee from the heat of battle."
@@ -8038,7 +8038,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -16
 	"engine capacity" -16
 	"afterburner thrust" 47.1
-	"afterburner fuel" .03
+	"afterburner fuel" .045
 	"afterburner energy" 5.1
 	"afterburner heat" 4.0
 	"afterburner effect" "ionic afterburner"
@@ -16262,10 +16262,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"engine capacity" -5
 	"fuel capacity" 100
 	"ramscoop" 0.25
-	"afterburner thrust" 23.1
+	"afterburner thrust" 20.6
 	"afterburner energy" 0.6
 	"afterburner heat" 6.25
-	"afterburner fuel" 0.0375
+	"afterburner fuel" 0.075
 	"afterburner effect" "korath afterburner tiny"
 	description "The smallest of afterburners is as much Fuel Processor as it is afterburner. It allows Korath small craft operators to squeeze a hyperdrive into otherwise intrasystem ships and dispense with conventional thrusters entirely."
 	description "	Korath afterburners pump super-heated hyperspace fuel directly into a thruster's plasma stream, resulting in a phenomenal explosion that may nearly melt the thruster."
@@ -16286,10 +16286,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 19
 	"outfit space" -19
 	"engine capacity" -19
-	"afterburner thrust" 93.6
+	"afterburner thrust" 84.3
 	"afterburner energy" 2.25
 	"afterburner heat" 22.75
-	"afterburner fuel" 0.125
+	"afterburner fuel" 0.25
 	"afterburner effect" "korath afterburner small"
 	description "Adding these afterburners to an interceptor allows it to reach absurd speeds; however, the heat produced ensures that running them for any substantial period of time will require some serious cooling."
 	description "	Korath afterburners pump super-heated hyperspace fuel directly into a thruster's plasma stream, resulting in a phenomenal explosion that nearly melts the thruster."
@@ -16310,10 +16310,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 32
 	"outfit space" -32
 	"engine capacity" -32
-	"afterburner thrust" 178.5
+	"afterburner thrust" 148.5
 	"afterburner energy" 3.9
 	"afterburner heat" 41.65
-	"afterburner fuel" 0.225
+	"afterburner fuel" 0.45
 	"afterburner effect" "korath afterburner medium"
 	description "Although these afterburners produce an incredible amount of thrust for their fuel usage, the prospect of installing one brings to mind many safety concerns."
 	description "	Korath afterburners pump super-heated hyperspace fuel directly into a thruster's plasma stream, resulting in a phenomenal explosion that nearly melts the thruster."
@@ -16334,10 +16334,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 55
 	"outfit space" -55
 	"engine capacity" -55
-	"afterburner thrust" 345.6
+	"afterburner thrust" 265.5
 	"afterburner energy" 7.1
 	"afterburner heat" 79.45
-	"afterburner fuel" 0.4
+	"afterburner fuel" 0.8
 	"afterburner effect" "korath afterburner large"
 	"heat capacity" 150
 	description "These enormous afterburners have dedicated reaction chambers with cooling vents to keep the fuel-plasma explosion from destroying the thruster."
@@ -16359,10 +16359,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 94
 	"outfit space" -94
 	"engine capacity" -94
-	"afterburner thrust" 662.4
+	"afterburner thrust" 474.3
 	"afterburner energy" 12.65
 	"afterburner heat" 148
-	"afterburner fuel" 0.725
+	"afterburner fuel" 1.45
 	"afterburner effect" "korath afterburner huge"
 	"active cooling" 8
 	"cooling energy" 0.4
@@ -19973,9 +19973,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"engine capacity" -11
 	"slowing resistance" 0.01
 	"afterburner thrust" 187.5
-	"afterburner fuel" 1.3
+	"afterburner fuel" 1.95
 	"afterburner energy" 6
-	"afterburner heat" 18
+	"afterburner heat" 72
 	"afterburner effect" "remnant afterburner"
 	description "The Remnant live in an environment where the raw materials for fuel are relatively common on the winds of the nebula. As such, their ships incorporate significant built-in ramscoop technology, and while they are reluctant to waste fuel, they aren't afraid of using it when needed. Far more important is the ability for their ships to quickly and efficiently enter or exit combat as needed. At the end of the day, it is continued life that is paramount."
 	description "	The Bellows-Class Afterburner embodies this philosophy by providing captains with a tool that allows them to make great leaps of acceleration, typically during evasive maneuvers or to catch up with a fleeing target. Due to their enormous fuel usage, only the most specialized of ships have enough fuel to use these for more than a few seconds at a time before completely running out of fuel."
