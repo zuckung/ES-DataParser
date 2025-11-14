@@ -186,6 +186,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/coalition/coalition missions.txt | conversation "anna invites you to book signing"</summary>
+<pre>conversation "anna invites you to book signing"
+	action
+		log "People" "Anna Fangvin" `Anna was a struggling science fiction author in human space until she found success publishing her novel Beyond the Hyperdrive in the Coalition. Her book is a bestseller in the Kimek region.`
+		log "Helped somebody named Anna Fangvin get her book published in Coalition space. Apparently, it's a bestseller now. The book was Beyond the Hyperdrive, something about humans stealing jump drives from the Quarg."
+		event "beyond the hyperdrive payment" 40
+		set "beyond the hyperdrive news can show now"
+		outfit "Beyond the Hyperdrive" 1
+	`The moment you land, Anna arrives, very happy to see you. She grabs your shoulders with both arms and in an excited tone explains that her book has been approved for publication.`
+	`	"They're publishing Beyond the Hyperdrive today, and there's a full release event where I'll be signing copies! Thanks for everything you've done, &#60;first&#62;! Do you want to join me during the book signing?"`
+	choice
+		`	"I've been with you through the whole process. Count me in!"`
+		`	"I'd be happy to!"`
+		`	"No thanks."`
+			goto decline
+	`	"Great! Let's walk to the bookstore and get ready! The staff have already prepared seats for both of us."`
+	`	You and Anna walk into the massive bookstore at the spaceport. There are already several Heliarchs present, their Enforcer Riot Staffs in place for crowd control.`
+	`	A Kimek, dressed in what looks like the bookstore's uniform, takes out a loudspeaker with multiple handholds and begins announcing the release of Beyond the Hyperdrive. Within minutes, the bookstore has become crowded, with a long queue forming between the cashiers and your table, as Anna signs every copy brought to her.`
+	`	Occasionally, Anna alternates between her left and right hand to sign books whenever the other is tired. For hours, this continues. You tried to keep count of how many copies she signed, but gave up when it reached six hundred.`
+	choice
+		`	(Say nothing.)`
+			goto continue
+		`	"Are you left- or right-handed?"`
+	`	"I was originally born left-handed, but as a child I chose to learn how to use my right hand, because I thought being able to use both hands would be cool."`
+	label continue
+	`	The signing continues for several more hours. Eventually, the same Kimek in the bookstore uniform announces that the store is closing soon.`
+	`	As the store closes and the queue shortens, Anna signs the last Kimek's copy. With that, the event is over. Anna walks with you back to your ship to say goodbye.`
+	`	"My book succeeded beyond my wildest dreams, and it was all because of you, &#60;first&#62;!" she says, almost in a teary voice. She pulls out a credit chip. "Here, &#60;payment&#62;. You've done so much for me and my career, and you deserve it."`
+	`	Anna then takes out another copy of Beyond the Hyperdrive, which she signs in front of you. It is the Coalition edition of the book, but translated to your language. Quickly reading through it, you realize that the book has been significantly altered from the version you read in human space. "Here, take it. A special copy just for you, as a thank you for all you've done."`
+	choice
+		`	"Why is this book so different from the one in human space?"`
+		`	"Did you make any changes to it?"`
+	`	"Well, for one, it's not in our language. Some concepts just don't translate very well, so I tried to capture the spirit of the story. The Heliarch linguists were very helpful," she explains. "They really went into depth on some aspects of the Coalition's languages. None of the major plot points were changed, thankfully, though some content in the book had to be edited or removed. My Heliarch friend said that if I changed this or removed that, the book would sell so much better, and as they said, they wanted to 'make it more suitable for the Coalition.' Their words.`
+	`	"As for the special copy, it was so I could verify and look at the changes they made, in my language, so I wouldn't have to learn their language. They agreed to print another copy for me so I could give it to you."`
+	`	Anna checks a wristwatch that she didn't have when you first met. "Wow, it looks like people have already started reviewing the book, and they're giving great feedback! I've got to go now; I want to see in person how well my book is selling. Goodbye!"`
+	`	Anna then leaves your ship, leaving you with a novel, a payment, and the knowledge that you've helped a struggling author make it big.`
+		decline
+	label decline
+	`	Anna looks disappointed, but the emotion quickly disappears in her flood of exuberence. She dashes off in the direction she came in.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/gegno/gegno intro missions.txt | conversation "interfered with duel"</summary>
 <pre>conversation "interfered with duel"
 	action
