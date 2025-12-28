@@ -4118,6 +4118,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Toggle performance info"</summary>
+<pre>tip "Toggle performance info"
+	`Toggle the "Show CPU / GPU load" setting.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Deploy / recall fighters"</summary>
 <pre>tip "Deploy / recall fighters"
 	`Deploy or recall carried ships (e.g. fighters, drones) in your fleet. Requires carriers with space to hold the carried ships.`
@@ -4229,7 +4238,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Show CPU / GPU load"</summary>
 <pre>tip "Show CPU / GPU load"
-	`Display the CPU and GPU load at the top of the screen while in flight. Loads are presented as a percentage of a frame (1/60th of a second) that it takes to calculate or draw each frame. &#62;100% load (or &#62;33% when fast-forward is active) means the game will run slower.`
+	`Display the CPU load, GPU load, and virtual memory usage at the top of the screen. CPU and GPU loads are presented as the time that it takes to calculate or draw each frame, respectively. The percentages represent how long it takes to calculate or draw each frame relative to the target frame rate, which is 60 frames/second for the GPU and 60 ticks/second (or 180 ticks/second with fast-forward enabled) for the CPU. &#62;100% load means the game will run slower than the target frame rate.`
 </pre>
 
 </details>
