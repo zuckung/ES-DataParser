@@ -1023,6 +1023,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	`	He grins. "Well, don't be too hasty. The galaxy is a big and dangerous place, and not for the fainthearted. It'll be quite a while until you can make the universe your oyster. Took me decades."`
 		goto captain
 	label syndicate
+	branch jackal
+		has "Intro [0 Jackal]: offered"
+		has "ship model: Jackal"
 	`With a strange sense of relief, you give the salesman your money and jump into your new ship. The flight from the shipyard to the landing bays has you navigate through tunnels with only centimeters of clearance in all directions. After setting your ship down and disembarking, an old man in grease-stained coveralls approaches you.`
 	`	"Nothing quite like buying your first starship," he says.`
 	choice
@@ -1032,6 +1035,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		`	"If I wanted to talk with you, I'd have said something. Leave me alone."`
 			decline
 	`	He grins. "Well, I wouldn't be so sure yet. Often, the quickest way to fame and fortune is to curry favor with the big players. I always preferred to work by myself, though."`
+		goto captain
+	label jackal
+	`Sure enough, you find your new Jackal waiting in one of the port's landing bays. You start to examine the &#60;ship&#62;, and your worst fears are realized. Of the ship's outfits, the only one to pass any safety tests is the battery; you'll have to completely replace everything else. As you rip out broken components and throw them in the nearest dumpster, an old man in grease-stained coveralls approaches you.`
+	`	"Looks like you've landed yourself a real lemon, haven'tcha?" he says.`
+	choice
+		`	"Yep."`
+		`	"Look, I'm having a really bad day today. Bother someone else."`
+			decline
+	`	"Well, there's no point crying over jettisoned cargo. Mind if I give you a hand?"`
+	`	With the old man's help, you manage to clear out the Jackal before nightfall. "Haven't had to do this to a ship in a long time. Still, it's nice to have a blank slate when you're outfitting your fleet."`
 	label captain
 	`	"You're a captain?" you ask.`
 	`	"Was," he says. "Sold off my fleet a few days ago, and I already miss it. But it was time. Time for me to retire." His voice trails off, then his face lights up. "Say, any chance I could hitch a ride with you, maybe show you the ropes, give you some pointers? I could pay you, of course."`
