@@ -48,32 +48,32 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "performance info"
 	anchor top left
 	fill
-		from 400 5 to 560 55
-		color "panel background"
+		from 560 5 to 720 55
+		color "performance info background"
 	visible if "ready"
 	string "cpu"
-		from 410 16
+		from 570 16
 		color "medium"
 		align left
 	string "gpu"
-		from 410 30
+		from 570 30
 		color "medium"
 		align left
 	string "mem"
-		from 410 44
+		from 570 44
 		color "medium"
 		align left
 	visible if "!ready"
 	label "CPU: calculating..."
-		from 410 16
+		from 570 16
 		color "medium"
 		align left
 	label "GPU: calculating..."
-		from 410 30
+		from 570 30
 		color "medium"
 		align left
 	label "MEM: calculating..."
-		from 410 44
+		from 570 44
 		color "medium"
 		align left
 </pre>
@@ -242,7 +242,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "menu start info"
 	visible if "chosen start"
 	image "thumbnail"
-		center 360 -100
+		center 360 -105
 		dimensions 220 240
 	label "name:"
 		from 250 -35

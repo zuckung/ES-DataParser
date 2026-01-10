@@ -1204,7 +1204,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				has "start: default"
 				has "start: paradise"
 				has "start: syndicate"
-	`	(As before, click the "Spaceport" button to continue this mission. The next mission will involve carrying cargo, so it will only show up if you have all 15 tons of space free.)`
+	`	(As before, click the "Spaceport" button to continue this mission. The next mission will involve carrying cargo, so it will only show up if you have 10 tons of space free.)`
 		to display
 			or
 				has "start: default"
@@ -1306,6 +1306,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		`	"Well, maybe I should've bought a freighter instead."`
 	`	"Better start saving up then," he says. "I know a number of old Sparrow pilots who made their first million credits mining asteroids before they could afford a more combat-worthy ship. They had to look around for a while before finding a system with any asteroids worth mining, but it was worth it. Anyway, let's go get your payment." You walk out of the ship and sign the papers to hand off the &#60;commodity&#62; to the dock workers on &#60;planet&#62;. They hand you a credit chip worth &#60;payment&#62;.`
 	`	"I've got an idea for something you might want to try," says James. "Meet me in the spaceport bar in a little while."`
+		to display
+			not "flagship model: Jackal"
+	`	"I've got an idea for something you might want to try," says James. "Meet me in the spaceport bar in a little while. And make sure you have a weapon installed; you should be able to buy one in &#60;planet&#62;'s outfitter."`
+		to display
+			has "flagship model: Jackal"
 </pre>
 
 </details>
