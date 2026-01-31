@@ -1353,9 +1353,46 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 720 360
 	box "content"
 		from -240 80 to 240 320
+	visible if "has trade"
+	sprite "ui/planet dialog button"
+		center -340 90
+	button t "_Trading"
+		center -340 90
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has job board"
+	sprite "ui/planet dialog button"
+		center -340 145
+	button j "_Job Board"
+		center -340 145
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible
+	sprite "ui/planet dialog button"
+		center -340 200
+	button i "Player _Info"
+		center -340 200
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has bank"
+	sprite "ui/planet dialog button"
+		center -340 255
+	button b "_Bank"
+		center -340 255
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has port"
 	sprite "ui/planet dialog button"
 		center -340 310
-	button i "Player _Info"
+	"dynamic button" p "port name"
 		center -340 310
 		dimensions 140 40
 		size 18
@@ -1379,15 +1416,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		size 18
 		align right
 		pad 10 0
-	visible if "has job board"
-	sprite "ui/planet dialog button"
-		center -340 145
-	button j "_Job Board"
-		center -340 145
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
 	visible if "can hire crew"
 	sprite "ui/planet dialog button"
 		center 340 200
@@ -1396,33 +1424,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has trade"
-	sprite "ui/planet dialog button"
-		center -340 90
-	button t "_Trading"
-		center -340 90
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has bank"
-	sprite "ui/planet dialog button"
-		center -340 200
-	button b "_Bank"
-		center -340 200
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has port"
-	sprite "ui/planet dialog button"
-		center -340 255
-	"dynamic button" p "port name"
-		center -340 255
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible
 	active if "has ship"
@@ -1451,9 +1452,46 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 720 360
 	box "content"
 		from -300 80 to 180 320
+	visible if "has trade"
+	sprite "ui/planet dialog button"
+		center -400 90
+	button t "_Trading"
+		center -400 90
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has job board"
+	sprite "ui/planet dialog button"
+		center -400 145
+	button j "_Job Board"
+		center -400 145
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible
+	sprite "ui/planet dialog button"
+		center -400 200
+	button i "Player _Info"
+		center -400 200
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has bank"
+	sprite "ui/planet dialog button"
+		center -400 255
+	button b "_Bank"
+		center -400 255
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has port"
 	sprite "ui/planet dialog button"
 		center -400 310
-	button i "Player _Info"
+	"dynamic button" p "port name"
 		center -400 310
 		dimensions 140 40
 		size 18
@@ -1477,15 +1515,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		size 18
 		align right
 		pad 10 0
-	visible if "has job board"
-	sprite "ui/planet dialog button"
-		center -400 145
-	button j "_Job Board"
-		center -400 145
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
 	visible if "can hire crew"
 	sprite "ui/planet dialog button"
 		center 280 200
@@ -1494,33 +1523,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has trade"
-	sprite "ui/planet dialog button"
-		center -400 90
-	button t "_Trading"
-		center -400 90
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has bank"
-	sprite "ui/planet dialog button"
-		center -400 200
-	button b "_Bank"
-		center -400 200
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has port"
-	sprite "ui/planet dialog button"
-		center -400 255
-	"dynamic button" p "port name"
-		center -400 255
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible
 	active if "has ship"
