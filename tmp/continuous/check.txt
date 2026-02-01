@@ -1,2 +1,2 @@
-version=0.10.16
-lastUpdate=2026-01-31 19:58:55
+version=0.11.0
+lastUpdate=2026-02-01 04:31:29

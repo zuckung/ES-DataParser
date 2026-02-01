@@ -345,22 +345,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/governments.txt | government "Bounty Hunter that Won't Enter Hai Space"</summary>
-<pre>government "Bounty Hunter that Won't Enter Hai Space"
-	"display name" "Bounty Hunter"
-	swizzle 6
-	color "governments: Pirate"
-	"player reputation" -1000
-	"bribe" .2
-	"fine" 0
-	"hostile hail" "hostile bounty hunter"
-	"hostile disabled hail" "hostile disabled"
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/governments.txt | government "Builder"</summary>
 <pre>government "Builder"
 	# While when you attack the drones they will try to defend themselves, when you come back
@@ -535,10 +519,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"player reputation" 1
 	"attitude toward"
+		"Bounty" -.2
+		"Bounty (Disguised)" -.2
 		"Merchant" .5
 		"Pirate" -.2
-		"Pirate (Devil-Run Gang)" -.2
-		"Smuggler (Hai Trafficker)" .05
 	"friendly hail" "friendly deep"
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile deep"
@@ -617,24 +601,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/governments.txt | government "Elenctic Commune"</summary>
-<pre>government "Elenctic Commune"
-	swizzle 0
-	color "governments: Neutral"
-	"player reputation" 1000
-	"attitude toward"
-		"Hai" .1
-		"Hai (Friendly Unfettered)" .1
-		"Pirate" -.2
-		"Pirate (Devil-Run Gang)" -.2
-		"Smuggler (Hai Trafficker)" -.2
-	"bribe" .05
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/governments.txt | government "Ember Waste"</summary>
 <pre>government "Ember Waste"
 	"display name" "???"
@@ -682,25 +648,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/governments.txt | government "Forest (Prey)"</summary>
-<pre>government "Forest (Prey)"
-	"display name" "Forest"
-	# Nothing you do permanently angers indigenous creatures, because they are
-	# not sentient and do not remember you as an individual.
-	"player reputation" 1
-	"penalty for"
-		assist 0
-		disable 0
-		board 0
-		capture 0
-		destroy 0
-		atrocity 0
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/governments.txt | government "Free Worlds"</summary>
 <pre>government "Free Worlds"
 	swizzle 2
@@ -708,38 +655,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	"player reputation" 1
 	"attitude toward"
 		"Alpha" -.4
-		"Free Worlds that won't enter wormhole" 1
+		"Bounty" -.4
+		"Bounty (Disguised)" -.4
 		"Merchant" .3
 		"Militia" .3
 		"Pirate" -.4
-		"Pirate (Devil-Run Gang)" -.4
-		"Smuggler (Hai Trafficker)" .05
-		"Neutral" .1
-	"bribe" .1
-	"friendly hail" "friendly free worlds"
-	"friendly disabled hail" "friendly disabled"
-	"hostile hail" "hostile free worlds"
-	"hostile disabled hail" "hostile disabled"
-	raid "pirate raid"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Free Worlds that won't enter wormhole"</summary>
-<pre>government "Free Worlds that won't enter wormhole"
-	"display name" "Free Worlds"
-	swizzle 2
-	color "governments: Free"
-	"player reputation" 1
-	"attitude toward"
-		"Free Worlds" 1
-		"Merchant" .3
-		"Militia" .3
-		"Pirate" -.4
-		"Pirate (Devil-Run Gang)" -.4
-		"Smuggler (Hai Trafficker)" .05
 		"Neutral" .1
 	"bribe" .1
 	"friendly hail" "friendly free worlds"
@@ -970,10 +890,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant (Sympathizers)" 1
 		"Hai Merchant (Human)" 1
 		"Hai (Unfettered)" -.01
-		"Hai (Friendly Unfettered)" .1
 		"Hai (Unfettered Civilians)" .1
 		"Merchant" .01
-		"Elenctic Commune" .1
 	"penalty for"
 		assist -.15
 	"travel restrictions"
@@ -983,6 +901,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled hai"
 	"hostile hail" "hostile hai"
 	"hostile disabled hail" "hostile disabled hai"
+	"ship bribe acceptance hail" "ship bribe acceptance hai"
+	"ship bribe rejection hail" "ship bribe rejection hai"
 </pre>
 
 </details>
@@ -1001,7 +921,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant (Sympathizers)" .95
 		"Hai Merchant (Human)" .95
 		"Hai (Unfettered)" -.1
-		"Hai (Friendly Unfettered)" .1
 		"Hai (Unfettered Civilians)" .1
 		"Merchant" .01
 	"penalty for"
@@ -1016,6 +935,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled hai"
 	"hostile hail" "hostile hai"
 	"hostile disabled hail" "hostile disabled hai"
+	"ship bribe acceptance hail" "ship bribe acceptance hai"
+	"ship bribe rejection hail" "ship bribe rejection hai"
 </pre>
 
 </details>
@@ -1034,7 +955,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant" .95
 		"Hai Merchant (Human)" .95
 		"Hai (Unfettered)" .01
-		"Hai (Friendly Unfettered)" .5
 		"Hai (Unfettered Civilians)" .5
 		"Merchant" .01
 	"penalty for"
@@ -1044,6 +964,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled hai"
 	"hostile hail" "hostile hai"
 	"hostile disabled hail" "hostile disabled hai"
+	"ship bribe acceptance hail" "ship bribe acceptance hai"
+	"ship bribe rejection hail" "ship bribe rejection hai"
 </pre>
 
 </details>
@@ -1062,7 +984,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant" .95
 		"Hai Merchant (Sympathizers)" .95
 		"Hai (Unfettered)" -.2
-		"Hai (Friendly Unfettered)" .1
 		"Hai (Unfettered Civilians)" .1
 		"Merchant" .01
 	"travel restrictions"
@@ -1072,34 +993,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile civilian"
 	"hostile disabled hail" "hostile disabled"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Hai (Friendly Unfettered)"</summary>
-<pre>government "Hai (Friendly Unfettered)"
-	swizzle 4
-	color "governments: Hai (Unfettered)"
-	"display name" "Hai (Unfettered)"
-	"player reputation" 100
-	"attitude toward"
-		"Pirate" -.01
-		"Pirate (Devil-Run Gang)" -.01
-		"Korath" -.01
-		"Hai" .01
-		"Hai (Wormhole Access)" .01
-		"Hai (Unfettered)" 1
-		"Elenctic Commune" .01
-	"foreign penalties for"
-		"Hai (Unfettered)"
-	"bribe" .02
-	"fine" 0
-	"friendly hail" "friendly unfettered"
-	"friendly disabled hail" "friendly disabled unfettered"
-	"hostile hail" "hostile unfettered"
-	"hostile disabled hail" "hostile disabled unfettered"
+	"ship bribe acceptance hail" "ship bribe acceptance hai"
+	"ship bribe rejection hail" "ship bribe rejection hai"
 </pre>
 
 </details>
@@ -1119,7 +1014,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai (Wormhole Access)" -.01
 		"Hai Merchant" -.01
 		"Hai Merchant (Sympathizers)" .1
-		"Hai (Friendly Unfettered)" 1
 		"Hai (Unfettered Civilians)" 2
 		"Hai Merchant (Human)" -.01
 		"Wanderer" -.01
@@ -1127,14 +1021,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Pug (Wanderer)" -.01
 		"Merchant" -.01
 		"Kor Efret" -.01
-		"Elenctic Commune" .1
 	"foreign penalties for"
-		"Hai (Friendly Unfettered)"
 		"Hai (Unfettered Wanderer Tribute)"
 		"Hai (Unfettered Civilians)"
 	"penalty for"
 		disable 0
 	"bribe" .02
+	"planet bribe rejection hail" "bribe rejection unfettered"
 	"fine" 0
 	"friendly hail" "friendly unfettered"
 	"friendly disabled hail" "friendly disabled unfettered"
@@ -1215,10 +1108,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant (Sympathizers)" 1
 		"Hai Merchant (Human)" 1
 		"Hai (Unfettered)" -.01
-		"Hai (Friendly Unfettered)" .1
 		"Hai (Unfettered Civilians)" .1
 		"Merchant" .01
-		"Elenctic Commune" .1
 	"penalty for"
 		assist -.15
 	"bribe" .2
@@ -1775,7 +1666,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	"attitude toward"
 		"Kor Sestor" -.01
 		"Korath (Civilian)" 1
-		"Hai (Friendly Unfettered)" -.01
 	"player reputation" -10
 	"send untranslated hails"
 	"friendly hail" "friendly korath untranslated"
@@ -1903,8 +1793,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 5
 	"player reputation" 10
 	"attitude toward"
+		"Bounty" -.2
+		"Bounty (Disguised)" -.2
 		"Pirate" -.2
-		"Pirate (Devil-Run Gang)" -.2
 		"Korath" -.2
 	"bribe" .05
 	"fine" 0
@@ -1918,16 +1809,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/governments.txt | government "Merchant (Hostile)"</summary>
+<pre>government "Merchant (Hostile)"
+	swizzle 5
+	"display name" "Merchant"
+	"player reputation" -10
+	"hostile hail" "hostile pirate"
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/governments.txt | government "Militia"</summary>
 <pre>government "Militia"
 	swizzle 2
 	color "governments: Free"
 	"player reputation" 0
 	"attitude toward"
+		"Bounty" -.4
+		"Bounty (Disguised)" -.4
 		"Merchant" .3
 		"Pirate" -.4
-		"Pirate (Devil-Run Gang)" -.4
-		"Smuggler (Hai Trafficker)" .05
 	"bribe" .1
 	"friendly hail" "friendly militia"
 	"friendly disabled hail" "friendly disabled"
@@ -1947,7 +1850,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	"attitude toward"
 		"Syndicate" -.1
 		"Pirate" -.3
-		"Pirate (Devil-Run Gang)" -.3
 	"friendly disabled hail" "friendly disabled"
 	"hostile disabled hail" "hostile disabled"
 </pre>
@@ -1965,19 +1867,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	"player reputation" 100
 	"attitude toward"
 		"Alpha" -.3
+		"Bounty" -.3
+		"Bounty (Disguised)" -.3
 		"Merchant" .25
 		"Militia" .1
 		"Pirate" -.3
-		"Pirate (Devil-Run Gang)" -.3
-		"Smuggler (Hai Trafficker)" .05
 		"Kor Sestor" -.01
 		"Kor Mereti" -.01
 		"Navy Intelligence" 1
-		"Republic Intelligence" 1
 	"friendly hail" "friendly navy"
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
 	"hostile disabled hail" "hostile disabled"
+	"ship bribe rejection hail" "ship bribe rejection navy"
 </pre>
 
 </details>
@@ -1990,10 +1892,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	color "governments: Neutral"
 	"player reputation" 1
 	"attitude toward"
+		"Bounty" -.2
+		"Bounty (Disguised)" -.2
 		"Merchant" .3
 		"Pirate" -.2
-		"Pirate (Devil-Run Gang)" -.2
-		"Smuggler (Hai Trafficker)" .05
 	"bribe" .05
 	"friendly hail" "friendly civilian"
 	"friendly disabled hail" "friendly disabled"
@@ -2119,46 +2021,21 @@ document.addEventListener("DOMContentLoaded", function() {
 	"player reputation" -10
 	"attitude toward"
 		"Author" -.01
+		"Bounty" 1.
+		"Bounty (Disguised)" 1.
 		"Hai" -.01
 		"Hai (Wormhole Access)" -.01
 		"Korath" -.01
 		"Merchant" -.1
 		"Syndicate" -.01
-		"Hai (Friendly Unfettered)" -.01
 	"bribe" .05
 	"fine" 0
 	"friendly hail" "friendly pirate"
 	"friendly disabled hail" "friendly disabled pirate"
 	"hostile hail" "hostile pirate"
 	"hostile disabled hail" "hostile disabled pirate"
+	"ship bribe acceptance hail" "ship bribe acceptance pirate"
 	raid "pirate raid"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Pirate (Devil-Run Gang)"</summary>
-<pre>government "Pirate (Devil-Run Gang)"
-	swizzle 6
-	color "governments: Pirate"
-	"display name" "Pirate"
-	"player reputation" -1000
-	"attitude toward"
-		"Author" -.001
-		"Hai" -.001
-		"Hai (Wormhole Access)" -.001
-		"Korath" -.001
-		"Merchant" -.001
-		"Syndicate" -.001
-		"Hai (Friendly Unfettered)" -.001
-		"Forest (Prey)" -.001
-	"bribe" .05
-	"fine" 0
-	"friendly hail" "friendly pirate"
-	"friendly disabled hail" "friendly disabled pirate"
-	"hostile hail" "hostile pirate"
-	"hostile disabled hail" "hostile disabled pirate"
 </pre>
 
 </details>
@@ -2173,6 +2050,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"player reputation" -10
 	"attitude toward"
 		"Author" -.01
+		"Bounty" 1.
+		"Bounty (Disguised)" 1.
 		"Hai" -.01
 		"Hai (Wormhole Access)" -.01
 		"Korath" -.01
@@ -2184,6 +2063,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"friendly disabled hail" "friendly disabled pirate"
 	"hostile hail" "hostile pirate"
 	"hostile disabled hail" "hostile disabled pirate"
+	"ship bribe rejection hail" "ship bribe rejection"
 	raid "pirate raid"
 </pre>
 
@@ -2260,11 +2140,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai" .01
 		"Hai (Wormhole Access)" .01
 		"Pirate" -.01
-		"Pirate (Devil-Run Gang)" -.01
-	"death sentence" "quarg imprisonment"
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
-	atrocities
+	atrocities "death sentence" "quarg imprisonment"
 		"Aegis Shield Generator"
 		"Ancile Shield Generator"
 		"Antimatter Core"
@@ -2315,10 +2193,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Gegno" 0.1
 	"foreign penalties for"
 		"Gegno"
-	"death sentence" "quarg imprisonment"
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
-	atrocities
+	atrocities "death sentence" "quarg imprisonment"
 		"Aegis Shield Generator"
 		"Ancile Shield Generator"
 		"Antimatter Core"
@@ -2371,11 +2248,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai" .01
 		"Hai (Wormhole Access)" .01
 		"Pirate" -.01
-		"Pirate (Devil-Run Gang)" -.01
-	"death sentence" "quarg imprisonment"
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
-	atrocities
+	atrocities "death sentence" "quarg imprisonment"
 		"Aegis Shield Generator"
 		"Ancile Shield Generator"
 		"Antimatter Core"
@@ -2439,10 +2314,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			board 10
 			capture 20
 			destroy 40
-	"death sentence" "quarg imprisonment"
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
-	atrocities
+	atrocities "death sentence" "quarg imprisonment"
 		"Aegis Shield Generator"
 		"Ancile Shield Generator"
 		"Antimatter Core"
@@ -2495,10 +2369,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Kor Sestor" -.01
 	"foreign penalties for"
 		"Kor Efret"
-	"death sentence" "quarg imprisonment"
 	"hostile hail" "hostile quarg"
 	"hostile disabled hail" "hostile quarg"
-	atrocities
+	atrocities "death sentence" "quarg imprisonment"
 		"Aegis Shield Generator"
 		"Ancile Shield Generator"
 		"Antimatter Core"
@@ -2614,20 +2487,19 @@ document.addEventListener("DOMContentLoaded", function() {
 	"player reputation" 2
 	"attitude toward"
 		"Alpha" -.3
+		"Bounty" -.3
+		"Bounty (Disguised)" -.3
 		"Merchant" .25
 		"Militia" .1
 		"Pirate" -.3
-		"Pirate (Devil-Run Gang)" -.3
-		"Republic that won't enter wormhole" 1
-		"Smuggler (Hai Trafficker)" .05
 		"Navy Intelligence" 1
-		"Republic Intelligence" 1
 		"Navy (Oathkeeper)" 1
 		"Neutral" .1
 	"friendly hail" "friendly navy"
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
 	"hostile disabled hail" "hostile disabled"
+	"ship bribe rejection hail" "ship bribe rejection navy"
 	raid "pirate raid"
 </pre>
 
@@ -2648,60 +2520,13 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Militia" .01
 		"Pirate" -.01
 		"Navy Intelligence" .01
-		"Republic Intelligence" .01
 		"Navy (Oathkeeper)" .01
 		"Neutral" .01
 	"friendly hail" "friendly navy"
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile navy"
 	"hostile disabled hail" "hostile disabled"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Republic Intelligence"</summary>
-<pre>government "Republic Intelligence"
-	swizzle 0
-	"crew attack" 1.2
-	"crew defense" 2.2
-	"attitude toward"
-		"Pirate" -.3
-		"Pirate (Devil-Run Gang)" -.3
-	"friendly disabled hail" "friendly disabled"
-	"hostile disabled hail" "hostile disabled"
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/governments.txt | government "Republic that won't enter wormhole"</summary>
-<pre>government "Republic that won't enter wormhole"
-	"display name" Republic
-	swizzle 0
-	color "governments: Republic"
-	"crew attack" 1.2
-	"crew defense" 2.2
-	"player reputation" 2
-	"attitude toward"
-		"Alpha" -.3
-		"Merchant" .25
-		"Militia" .1
-		"Pirate" -.3
-		"Pirate (Devil-Run Gang)" -.3
-		"Republic" 1
-		"Smuggler (Hai Trafficker)" .05
-		"Navy Intelligence" 1
-		"Republic Intelligence" 1
-		"Navy (Oathkeeper)" 1
-		"Neutral" .1
-	"friendly hail" "friendly navy"
-	"friendly disabled hail" "friendly disabled"
-	"hostile hail" "hostile navy"
-	"hostile disabled hail" "hostile disabled"
-	raid "pirate raid"
+	"ship bribe rejection hail" "ship bribe rejection navy"
 </pre>
 
 </details>
@@ -2790,32 +2615,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/governments.txt | government "Smuggler (Hai Trafficker)"</summary>
-<pre>government "Smuggler (Hai Trafficker)"
-	swizzle 5
-	"display name" "Smuggler"
-	"bribe" .1
-	"fine" 0
-	"friendly hail" "friendly civilian"
-	"friendly disabled hail" "friendly disabled"
-	"hostile hail" "hostile pirate"
-	"hostile disabled hail" "hostile disabled"
-	# They just want to pass through the system alive, so they
-	# won't attack anyone unless they have to.
-	"player reputation" 1
-	"penalty for"
-		assist 0
-		disable 0
-		board 0
-		capture 0
-		destroy 0
-		atrocity 0
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/governments.txt | government "Successor"</summary>
 <pre>government "Successor"
 	swizzle 4
@@ -2837,10 +2636,10 @@ document.addEventListener("DOMContentLoaded", function() {
 	color "governments: Syndicate"
 	"player reputation" 2
 	"attitude toward"
+		"Bounty" -.4
+		"Bounty (Disguised)" -.4
 		"Merchant" .3
 		"Pirate" -.4
-		"Pirate (Devil-Run Gang)" -.4
-		"Smuggler (Hai Trafficker)" .3
 		"Korath" -.5
 	"bribe" .08
 	"friendly hail" "friendly syndicate"
@@ -2922,17 +2721,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/governments.txt | government "Unknown"</summary>
-<pre>government "Unknown"
-	swizzle 1
-	color "governments: Ungoverned"
-	"player reputation" -1000
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/governments.txt | government "Wanderer"</summary>
 <pre>government "Wanderer"
 	swizzle 2
@@ -2964,9 +2752,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Hai Merchant (Sympathizers)" -.01
 		"Hai Merchant (Human)" -.01
 		"Hai (Unfettered)" -.01
-		"Bounty Hunter that Won't Enter Hai Space" -.01
-		"Free Worlds that won't enter wormhole" -.01
-		"Republic that won't enter wormhole" -.01
 </pre>
 
 </details>

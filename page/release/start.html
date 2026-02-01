@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/starts.txt | start "default"</summary>
 <pre>start "default"
 	name "Endless Sky"
-	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport at the age of fifteen. After many long years of working at a textile mill, you've finally saved enough credits to apply for a pilot's license from the Republic.`
-	description `	After receiving the license and with freedom from this planet at your fingertips, you travel to the bank to take out a loan on your first ship...`
-	thumbnail "scene/lobby"
+	description `You grew up on New Boston, an uninteresting world in the Dirt Belt. You've dreamed of owning a starship ever since your first visit to the spaceport. After years of working at a textile mill, you've saved enough credits to apply for a pilot's license from the Republic. Now you must take out a loan on your first ship...`
+	description `	This is the classic Endless Sky experience. You will begin in debt, and must use your new starship to pay off your mortgage.`
+	thumbnail "scene/new boston"
 	date 16 11 3013
 	system "Rutilicus"
 	planet "New Boston"
@@ -64,6 +64,84 @@ document.addEventListener("DOMContentLoaded", function() {
 	set "license: Pilot's"
 	set "species: human"
 	set "human space start"
+	set "start: default"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/starts.txt | start "deep"</summary>
+<pre>start "deep"
+	name "Deep Desire"
+	description `You grew up on Midgard, a world in the advanced Deep region. Most pursue higher education, but you've always wanted to be a starship captain. After finishing primary education, you learn that the Deep provides low-interest loans for prospecting captains with high enough grades, and you made the mark! You make your way to the capital city of New Reykjavik...`
+	description `	This start provides a lower interest rate and more credits to upgrade your ship.`
+	thumbnail "scene/midgard"
+	date 16 11 3013
+	system "Aludra"
+	planet "Midgard"
+	conversation "deep intro"
+	account
+		credits 680000
+		score 400
+		mortgage Mortgage
+			principal 680000
+			interest 0.002
+			term 365
+	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+	set "start: deep"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/starts.txt | start "paradise"</summary>
+<pre>start "paradise"
+	name "Birthday Surprise"
+	description `You grew up on Mainsail, an oceanic Paradise World terraformed to perfection. Only the richest live on such worlds; luckily, your father is a wealthy financier. But you've always found your pampered life boring, and are more interested in living a life among the stars. As your eighteenth birthday party winds down, your father takes you aside to talk...`
+	description `	This start has no mortgage, leaving you free to explore the galaxy at your own pace.`
+	thumbnail "scene/mainsail"
+	date 16 11 3013
+	system "Alhena"
+	planet "Mainsail"
+	conversation "paradise intro"
+	account
+		credits 500000
+		score 600
+	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+	set "start: paradise"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/starts.txt | start "syndicate"</summary>
+<pre>start "syndicate"
+	name "Escaping Squalor"
+	description `You grew up on Earth, an overpopulated world with few opportunities. But you took a contract working for the Syndicate, and they gave you a place to live, enough to eat, and a decent wage off of Earth. Afterward you moved to Antipode, a cheap frontier world, but found that it wasn't much better than Earth. Fed up, you used what you had left to travel to Delve, the closest planet with a shipyard...`
+	description `	This is a more difficult start, with larger daily repayments.`
+	thumbnail "scene/earth"
+	date 16 11 3013
+	system "Scheat"
+	planet "Delve"
+	conversation "syndicate intro"
+	account
+		credits 480000
+		score 200
+		mortgage Mortgage
+			principal 600000
+			interest 0.005
+			term 365
+	set "license: Pilot's"
+	set "species: human"
+	set "human space start"
+	set "start: syndicate"
 </pre>
 
 </details>
@@ -75,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	name "Hai Origins"
 	description `You grew up on Greenwater, a Hai world with a rich and mixed culture thanks to its climate. You've dreamed of owning your own fleet since you were given toy spaceships as a small child. To reach that goal, you worked hard at a travel company, recommending locations in human space.`
 	description `	Now, as your ferry docks at the main spaceport, you feel like this is the start of a new life as a captain.`
-	thumbnail "scene/hai start"
+	thumbnail "scene/greenwater"
 	system "Fah Soom"
 	planet "Greenwater"
 	date 16 11 3013
@@ -95,8 +173,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		debt 1431000
 	to unlock
 		has "Hai Start Unlocked"
-		# TODO: think about what point of HR should unlock this once it's back in the game, if any
-		# has "event: hai-human resolution announced"
 	conversation "hai intro"
 	account
 		credits 1431000
@@ -107,6 +183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			term 730
 	set "species: human"
 	set "hai space start"
+	set "start: hai"
 	# need to set it here to not have it trigger alongside the invisible mission
 	set "First Contact: Hai: offered"
 	set "First Contact: Hai: declined"

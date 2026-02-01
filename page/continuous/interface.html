@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "map detail panel"</summary>
 <pre>interface "map detail panel"
+	anchor top right
 	value "min planet panel height" 195
 	value "max planet panel height" 2022
 	value "starting X" 100
@@ -96,6 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	value "description x offset" 240
 	value "description width" 500
 	value "description height" 240
+	visible if "has escort destination"
+	sprite "ui/wide button"
+		center -256 56
+	button c "Cancel order"
+		center -256 56
+		dimensions 90 30
 </pre>
 
 </details>

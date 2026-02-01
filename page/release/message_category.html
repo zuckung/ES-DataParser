@@ -1,0 +1,149 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "high"</summary>
+<pre>"message category" "high"
+	"main color" "message category high"
+	"log color" "message log category high"
+	important
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "normal"</summary>
+<pre>"message category" "normal"
+	"main color" "message category normal"
+	"log color" "message log category normal"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "low"</summary>
+<pre>"message category" "low"
+	"main color" "message category low"
+	"log color" "message log category low"
+	"main duplicates" "keep old"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "info"</summary>
+<pre>"message category" "info"
+	"main color" "message category info"
+	"log color" "message log category info"
+	important
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "daily"</summary>
+<pre>"message category" "daily"
+	"main color" "message category daily"
+	"log color" "message log category daily"
+	important
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "force log"</summary>
+<pre>"message category" "force log"
+	"main color" "message category normal"
+	"log color" "message log category normal"
+	"log duplicates" "keep both"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "log only"</summary>
+<pre>"message category" "log only"
+	"log color" "message log category normal"
+	"log only"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "high no repeat"</summary>
+<pre>"message category" "high no repeat"
+	"main color" "message category high"
+	"log color" "message log category high"
+	important
+	"main duplicates" "keep old"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/messages.txt | "message category" "high duplicating"</summary>
+<pre>"message category" "high duplicating"
+	"main color" "message category high"
+	"log color" "message log category high"
+	important
+	"main duplicates" "keep both"
+	"log duplicates" "keep both"
+</pre>
+
+</details>
+
+
+</font>
+</body>
+</html>
+
