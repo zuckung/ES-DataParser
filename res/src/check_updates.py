@@ -32,7 +32,7 @@ def decide_update(vpath, vapi, vchangelog):
 	with open(vpath + 'changelog.txt', 'wb') as changelog:
 		changelog.write(request.content) # downloading the changelog
 	with open(vpath + 'changelog.txt', 'r') as sourcefile:
-		onlineversion = sourcefile.readline().replace('Version ', '').replace('\n', '') # result example: 0.10.10
+		onlineversion = sourcefile.readline().replace('Version ', '').replace('\n', '').replace(':', '') # result example: 0.10.10
 	# check for local data
 	if not os.path.isfile(vpath + 'check.txt'):
 		# create a new check.txt
