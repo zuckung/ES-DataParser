@@ -44,6 +44,44 @@ document.addEventListener("DOMContentLoaded", function() {
 <font size="1">
 
 <details>
+<summary>data/_ui/interfaces.txt | interface "performance info"</summary>
+<pre>interface "performance info"
+	anchor top left
+	fill
+		from 560 5 to 720 55
+		color "performance info background"
+	visible if "ready"
+	string "cpu"
+		from 570 16
+		color "medium"
+		align left
+	string "gpu"
+		from 570 30
+		color "medium"
+		align left
+	string "mem"
+		from 570 44
+		color "medium"
+		align left
+	visible if "!ready"
+	label "CPU: calculating..."
+		from 570 16
+		color "medium"
+		align left
+	label "GPU: calculating..."
+		from 570 30
+		color "medium"
+		align left
+	label "MEM: calculating..."
+		from 570 44
+		color "medium"
+		align left
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/interfaces.txt | interface "map detail panel"</summary>
 <pre>interface "map detail panel"
 	value "min planet panel height" 195
@@ -152,8 +190,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	button e "_Enter Ship"
 		center 435 155
 		dimensions 90 30
-	visible if "!pilot loaded"
+	visible if "no pilot loaded"
 	button n "_New Pilot"
+		center 435 155
+		dimensions 90 30
+	visible if "pilot dead"
+	button r "_Reload Pilot"
 		center 435 155
 		dimensions 90 30
 	visible
@@ -238,7 +280,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "menu start info"
 	visible if "chosen start"
 	image "thumbnail"
-		center 360 -100
+		center 360 -105
 		dimensions 220 240
 	label "name:"
 		from 250 -35
@@ -377,8 +419,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "controls"</summary>
 <pre>interface "controls"
-	sprite "ui/keys panel"
-		center -65 -20
 	# Box to hold supported gestures
 	uirect
 		center -344.5 -35
@@ -393,6 +433,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	box "control type"
 		center -344.5 170
 		dimensions 159 28
+	sprite "ui/settings four buttons"
+		center -337 -180
+	sprite "ui/settings audio bar"
+		center 285 -82
+	sprite "ui/settings keys box"
+		center -350 102
+	sprite "ui/settings base panel"
+		center -1 -20
 	button c "_Controls"
 		center -300 -230
 		dimensions 90 30
@@ -412,6 +460,17 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 90 30
 		color medium
 		hover bright
+	label "Additional info"
+		from -275 34
+		align top right
+		color bright
+	fill
+		from -400 48 to -270 49
+		color medium
+	"wrapped label" "Press '_x' over controls to unbind them. Controls can share the same keybind."
+		from -420 70 to -270 130
+		alignment right
+		color medium
 	visible if "multiple controls pages"
 	sprite "ui/dialog cancel"
 		center -115 210
@@ -524,36 +583,34 @@ document.addEventListener("DOMContentLoaded", function() {
 		color shields
 		size 8
 	visible if "Left Shoulder Button"
-	line
+	fill
 		center 160 120
 		dimensions 90 26
 		color shields
 	visible if "Right Shoulder Button"
-	line
+	fill
 		center 476 120
 		dimensions 90 26
 		color shields
 	visible if "Left Trigger Button"
-	line
+	fill
 		center 175 84
 		dimensions 30 42
 		color shields
 	visible if "Right Trigger Button"
-	line
+	fill
 		center 460 84
 		dimensions 30 42
 		color shields
 	visible
-	ring "Left Stick Button"
+	fill "Left Stick Button"
 		center 157 236
 		dimensions 26 26
 		color shields
-		size 14
-	ring "Right Stick Button"
+	fill "Right Stick Button"
 		center 391 314
 		dimensions 26 26
 		color shields
-		size 14
 	visible if "Left Dpad Button"
 	sprite "ui/left_button"
 		center 207 302
@@ -629,8 +686,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "settings"</summary>
 <pre>interface "settings"
-	sprite "ui/settings panel"
-		center -20 -20
+	sprite "ui/settings four buttons"
+		center -337 -180
+	sprite "ui/settings audio bar"
+		center 285 -82
+	sprite "ui/settings base panel"
+		center -1 -20
 	button c "_Controls"
 		center -300 -230
 		dimensions 90 30
@@ -671,8 +732,14 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "plugins"</summary>
 <pre>interface "plugins"
-	sprite "ui/plugins panel"
-		center -20 -20
+	sprite "ui/settings four buttons"
+		center -337 -180
+	sprite "ui/settings audio bar"
+		center 285 -82
+	sprite "ui/settings base panel"
+		center -1 -20
+	sprite "ui/very wide button"
+		center -194 210
 	button c "_Controls"
 		center -300 -230
 		dimensions 90 30
@@ -694,7 +761,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		hover bright
 	visible if "plugin import"
 	# hide the "open plugin folder button" under the import/remove button
-	line
+	fill
 		center -180 210
 		dimensions 20 40
 		color black
@@ -719,7 +786,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		align top left
 		color bright
 	visible
-	line
+	fill
 		from -230 -222 to -10 -221
 	box "plugin list"
 		from -250 -216 to -10 184
@@ -733,8 +800,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "audio"</summary>
 <pre>interface "audio"
-	sprite "ui/settings panel"
-		center -20 -20
+	sprite "ui/settings four buttons"
+		center -337 -180
+	sprite "ui/settings audio bar"
+		center 285 -82
+	sprite "ui/settings base panel"
+		center -1 -20
 	button c "_Controls"
 		center -300 -230
 		dimensions 90 30
@@ -758,7 +829,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Music"
 		center -129.5 -228
 		color bright
-	line
+	fill
 		center -117.5 -208.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -787,7 +858,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "UI"
 		center -129.5 -168
 		color bright
-	line
+	fill
 		center -117.5 -148.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -816,7 +887,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Anti-Missiles"
 		center -129.5 -108
 		color bright
-	line
+	fill
 		center -117.5 -88.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -845,7 +916,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Weapons"
 		center -129.5 -48
 		color bright
-	line
+	fill
 		center -117.5 -28.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -874,7 +945,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Engines"
 		center -129.5 12
 		color bright
-	line
+	fill
 		center -117.5 32.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -903,7 +974,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Afterburners"
 		center -129.5 72
 		color bright
-	line
+	fill
 		center -117.5 92.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -932,7 +1003,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Hyperdrives"
 		center -129.5 132
 		color bright
-	line
+	fill
 		center -117.5 152.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -961,7 +1032,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Explosions"
 		center 129.5 -228
 		color bright
-	line
+	fill
 		center 117.5 -208.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -990,7 +1061,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Scans"
 		center 129.5 -168
 		color bright
-	line
+	fill
 		center 117.5 -148.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -1019,7 +1090,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Environment"
 		center 129.5 -108
 		color bright
-	line
+	fill
 		center 117.5 -88.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -1048,7 +1119,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	label "Alerts"
 		center 129.5 -48
 		color bright
-	line
+	fill
 		center 117.5 -28.5
 		dimensions 210 10.5
 		color "volume bar background"
@@ -1085,7 +1156,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		center 195 210
 		dimensions 120 30
 	value "master volume bar size" 220
-	line
+	fill
 		center 280.5 -97
 		dimensions 10.5 235
 		color "volume bar background"
@@ -1546,6 +1617,51 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 720 360
 	box "content"
 		from -240 80 to 240 320
+	visible if "has trade"
+	sprite "ui/planet dialog button"
+		center -340 90
+	button t "_Trading"
+		center -340 90
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has job board"
+	sprite "ui/planet dialog button"
+		center -340 145
+	button j "_Job Board"
+		center -340 145
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible
+	sprite "ui/planet dialog button"
+		center -340 200
+	button i "Player _Info"
+		center -340 200
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has bank"
+	sprite "ui/planet dialog button"
+		center -340 255
+	button b "_Bank"
+		center -340 255
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has port"
+	sprite "ui/planet dialog button"
+		center -340 310
+	"dynamic button" p "port name"
+		center -340 310
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
 	visible if "has shipyard"
 	sprite "ui/planet dialog button"
 		center 340 90
@@ -1557,64 +1673,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		pad 10 0
 	visible if "has outfitter"
 	sprite "ui/planet dialog button"
-		center 340 150
+		center 340 145
 	button o "_Outfitter"
-		center 340 150
+		center 340 145
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has job board"
-	sprite "ui/planet dialog button"
-		center -340 150
-	button j "_Job Board"
-		center -340 150
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible if "can hire crew"
 	sprite "ui/planet dialog button"
-		center 340 210
+		center 340 200
 	button h "_Hire Crew"
-		center 340 210
+		center 340 200
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has trade"
-	sprite "ui/planet dialog button"
-		center -340 90
-	button t "_Trading"
-		center -340 90
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has bank"
-	sprite "ui/planet dialog button"
-		center -340 210
-	button b "_Bank"
-		center -340 210
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has port"
-	sprite "ui/planet dialog button"
-		center -340 270
-	"dynamic button" p "port name"
-		center -340 270
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible
 	active if "has ship"
 	sprite "ui/planet dialog button"
-		center 340 270
+		center 340 310
 	button d "_Depart"
-		center 340 270
+		center 340 310
 		dimensions 140 40
 		size 18
 		align right
@@ -1636,6 +1716,51 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 720 360
 	box "content"
 		from -300 80 to 180 320
+	visible if "has trade"
+	sprite "ui/planet dialog button"
+		center -400 90
+	button t "_Trading"
+		center -400 90
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has job board"
+	sprite "ui/planet dialog button"
+		center -400 145
+	button j "_Job Board"
+		center -400 145
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible
+	sprite "ui/planet dialog button"
+		center -400 200
+	button i "Player _Info"
+		center -400 200
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has bank"
+	sprite "ui/planet dialog button"
+		center -400 255
+	button b "_Bank"
+		center -400 255
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
+	visible if "has port"
+	sprite "ui/planet dialog button"
+		center -400 310
+	"dynamic button" p "port name"
+		center -400 310
+		dimensions 140 40
+		size 18
+		align left
+		pad 10 0
 	visible if "has shipyard"
 	sprite "ui/planet dialog button"
 		center 280 90
@@ -1647,82 +1772,28 @@ document.addEventListener("DOMContentLoaded", function() {
 		pad 10 0
 	visible if "has outfitter"
 	sprite "ui/planet dialog button"
-		center 280 150
+		center 280 145
 	button o "_Outfitter"
-		center 280 150
+		center 280 145
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has job board"
-	sprite "ui/planet dialog button"
-		center -400 150
-	button j "_Job Board"
-		center -400 150
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible if "can hire crew"
 	sprite "ui/planet dialog button"
-		center 280 210
+		center 280 200
 	button h "_Hire Crew"
-		center 280 210
+		center 280 200
 		dimensions 140 40
 		size 18
 		align right
-		pad 10 0
-	visible if "has trade"
-	sprite "ui/planet dialog button"
-		center -400 90
-	button t "_Trading"
-		center -400 90
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "no trade"
-	sprite "ui/planet dialog button"
-		center -400 90
-	button "View star map" "Map"
-		center -400 90
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has bank"
-	sprite "ui/planet dialog button"
-		center -400 210
-	button b "_Bank"
-		center -400 210
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "has port"
-	sprite "ui/planet dialog button"
-		center -400 270
-	"dynamic button" p "port name"
-		center -400 270
-		dimensions 140 40
-		size 18
-		align left
-		pad 10 0
-	visible if "!has port"
-	sprite "ui/planet dialog button"
-		center -400 270
-	button "View player info" "Info"
-		center -400 270
-		dimensions 140 40
-		size 18
-		align left
 		pad 10 0
 	visible
 	active if "has ship"
 	sprite "ui/planet dialog button"
-		center 280 270
+		center 280 310
 	button d "_Depart"
-		center 280 270
+		center 280 310
 		dimensions 140 40
 		size 18
 		align right
@@ -1912,7 +1983,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		center 230 85
 		color "bright"
 		align right
-	line
+	fill
 		center 0 95
 		dimensions 480 1
 	label "bunks"
@@ -2001,7 +2072,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		center 170 85
 		color "bright"
 		align right
-	line
+	fill
 		center -60 95
 		dimensions 480 1
 	label "bunks"
@@ -2079,8 +2150,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/interfaces.txt | interface "trade"</summary>
 <pre>interface "trade"
 	box "content"
-		from -240 80 to 250 355
-	line
+		from -250 80 to 250 355
+	fill
 		center 0 95
 		dimensions 480 1
 	active if "can buy"
@@ -2111,7 +2182,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "trade (small screen)"
 	box "content"
 		from -310 80 to 190 355
-	line
+	fill
 		center -60 95
 		dimensions 480 1
 	active if "can buy"
@@ -2142,7 +2213,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "bank"
 	box "content"
 		from -250 78 to 250 355
-	line
+	fill
 		center 0 95
 		dimensions 480 1
 	active if "can pay"
@@ -2161,7 +2232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "bank (small screen)"
 	box "content"
 		from -310 78 to 190 355
-	line
+	fill
 		center -60 95
 		dimensions 480 1
 	active if "can pay"
@@ -2349,6 +2420,98 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/interfaces.txt | interface "map: mission view: key"</summary>
+<pre>interface "map: mission view: key"
+	anchor bottom left
+	sprite "ui/mission key"
+		align bottom left
+		from 0 0
+	pointer
+		align left
+		center 15 -90
+		dimensions 10 18
+		"orientation angle" 135
+		color "available job"
+	pointer
+		align left
+		center 15 -70
+		dimensions 10 18
+		"orientation angle" 135
+		color "unavailable job"
+	pointer
+		align left
+		center 15 -50
+		dimensions 10 18
+		"orientation angle" 135
+		color "active mission"
+	pointer
+		align left
+		center 15 -30
+		dimensions 10 18
+		"orientation angle" 135
+		color "blocked mission"
+	pointer
+		align left
+		center 15 -10
+		dimensions 10 18
+		"orientation angle" 135
+		color "waypoint"
+	visible if "available"
+	label "Available job; can accept"
+		align bottom left
+		from 18 -87
+		color bright
+	visible if "!available"
+	label "Available job; can accept"
+		align bottom left
+		from 18 -87
+		color dim
+	visible if "unavailable"
+	label "Too little space to accept"
+		align bottom left
+		from 18 -67
+		color bright
+	visible if "!unavailable"
+	label "Too little space to accept"
+		align bottom left
+		from 18 -67
+		color dim
+	visible if "active"
+	label "Active job; go here to complete"
+		align bottom left
+		from 18 -47
+		color bright
+	visible if "!active"
+	label "Active job; go here to complete"
+		align bottom left
+		from 18 -47
+		color dim
+	visible if "blocked"
+	label "Has unfinished requirements"
+		align bottom left
+		from 18 -27
+		color bright
+	visible if "!blocked"
+	label "Has unfinished requirements"
+		align bottom left
+		from 18 -27
+		color dim
+	visible if "waypoint"
+	label "System of importance"
+		align bottom left
+		from 18 -7
+		color bright
+	visible if "!waypoint"
+	label "System of importance"
+		align bottom left
+		from 18 -7
+		color dim
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/interfaces.txt | interface "info panel"</summary>
 <pre>interface "info panel"
 	sprite "ui/info panel"
@@ -2506,6 +2669,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		width 130
 		color active
 		inactive medium
+	sprite "ui/dialog cancel"
+		center 654 -80 bottom left
+	active if "!empty"
+	button c "Clear"
+		center 654 -80 bottom left
+		dimensions 70 30
 	visible if "empty"
 	label "(The message log is empty.)"
 		from 300 0 left
@@ -2648,7 +2817,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		center -240 -30
 		radius 22
 		selection_angles -1.5 1.5
-		selection_radius 175
+		selection_radius 185
 		"Show main menu"
 		"Toggle fast-forward"
 		"Pause"
@@ -2659,6 +2828,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"View message log"
 		visible if "can hail"
 		"Talk to selected ship"
+		"Talk to selected planet"
 		visible if "can scan asteroids"
 		"Select nearest asteroid" "asteroid/small rock/spin"
 	visible if "can scan"
