@@ -283,7 +283,7 @@ def createImage(path):
 	print('  creating image')
 	# define size
 	im = PIL.Image.new(mode = "RGB", size = (w, h), color = (0, 0, 0))
-	im2 = Image.open(backgroundImage + 'ui/galaxy.jpg', 'r')
+	im2 = Image.open(backgroundImage + 'ui/milky way.jpg', 'r')
 	width, height = im2.size
 	# 112 22
 	pastex = int((w - width) / 2)
