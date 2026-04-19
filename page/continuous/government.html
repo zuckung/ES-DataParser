@@ -1585,6 +1585,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/governments.txt | government "Ka'sei (Patir 18)"</summary>
+<pre>government "Ka'sei (Patir 18)"
+	"display name" "Ka'sei"
+	swizzle 0
+	language "Ka'het"
+	"penalty for"
+		assist 0
+		disable 0
+		board 0
+		capture 0
+	"player reputation" 1
+	"attitude toward"
+		"Uninhabited" -.01
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/governments.txt | government "Kor Efret"</summary>
 <pre>government "Kor Efret"
 	swizzle 4
@@ -1760,6 +1779,37 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Magic Asteroid"</summary>
 <pre>government "Magic Asteroid"
+	"display name" "???"
+	swizzle 0
+	language "Magic Asteroid"
+	"attitude toward"
+		"Ka'sei (12.2)" -.01
+		"Uninhabited" -.01
+	"player reputation" 10
+	"travel restrictions"
+		system "Patir"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Magic Asteroid (Disabled)"</summary>
+<pre>government "Magic Asteroid (Disabled)"
+	"display name" "???"
+	swizzle 0
+	language "Magic Asteroid"
+	"attitude toward"
+		"Ka'sei" -.01
+	"player reputation" -.01
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Magic Asteroid (Patir 12.2)"</summary>
+<pre>government "Magic Asteroid (Patir 12.2)"
 	"display name" "???"
 	swizzle 0
 	language "Magic Asteroid"
@@ -2419,6 +2469,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Indigenous Lifeform" 0.05
 		"Korath" -.05
 		"Alpha" -.05
+		"Remnant (Postverta)" 1
 		"Remnant (Research)" 1
 	"penalty for"
 		assist -0.25
@@ -2428,6 +2479,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		destroy 10
 		scan 0.1
 	"foreign penalties for"
+		"Remnant (Postverta)"
 		"Remnant (Research)"
 	"custom penalties for"
 		"Indigenous Lifeform"
@@ -2472,6 +2524,41 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hostile disabled hail" "hostile disabled"
 	"travel restrictions"
 		system "Nenia"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/governments.txt | government "Remnant (Postverta)"</summary>
+<pre>government "Remnant (Postverta)"
+	"display name" "Remnant"
+	swizzle 0
+	color "governments: Remnant"
+	"crew defense" 2.2
+	"player reputation" 1
+	"bribe" 0
+	"attitude toward"
+		"Indigenous Lifeform" 0.05
+		"Korath" -.05
+		"Alpha" -.05
+		"Remnant" 1
+	"penalty for"
+		assist -0.25
+		disable 1
+		board 1
+		capture 10
+		destroy 10
+		scan 0.1
+	"foreign penalties for"
+		"Remnant"
+	"friendly hail" "remnant uncontacted"
+	"friendly disabled hail" "friendly disabled"
+	"hostile hail" "remnant uncontacted hostile"
+	"hostile disabled hail" "hostile disabled"
+	"travel restrictions"
+		system "Levana"
+		system "Caeculus"
 </pre>
 
 </details>
