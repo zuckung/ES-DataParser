@@ -584,6 +584,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "fleet cost:"</summary>
+<pre>tip "fleet cost:"
+	`How much this ship costs toward your fleet capacity. Your flagship and parked escorts do not count toward the capacity. You may exceed your capacity while landed, but will not be able to depart if you go over your capacity.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "discharge protection:"</summary>
 <pre>tip "discharge protection:"
 	`Protection provided against shield discharge damage. Increases by the given factor how much discharge damage a ship can withstand before it loses as much shielding as an unprotected ship.`
@@ -4972,6 +4981,46 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip "Spawn raid fleets"</summary>
 <pre>tip "Spawn raid fleets"
 	`Controls whether raid fleets are able to spawn. Raid fleets are hostile fleets that can spawn in some systems if your fleet's cargo attractiveness is much higher than its deterrence. (That is, if you have a lot of cargo space and not a lot of firepower to defend it.) If this rule is active, your fleet's raid fleet spawn chance can be viewed from the player info panel.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Fleet size limitation"</summary>
+<pre>tip "Fleet size limitation"
+	`Determines whether the player can only have a limited number of escorts active at once. If active, your flagship, parked ships, and carried ships (fighters and drones) are excluded from your fleet capacity, and you will not be able to capture ships that would put you over your capacity or take off from a planet if your capacity has been reached.`
+	`- "none": you can have as many escorts as you want.`
+	`- "ship cap": you can only command up to a certain number of escorts.`
+	`- "crew cap": the base crew requirement of your active escorts may not exceed a certain limit.`
+	`- "admin cap": the limit is tied to an "administrative cost" that every ship has, with larger ships having a higher cost.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Default max escort count"</summary>
+<pre>tip "Default max escort count"
+	`If the fleet size limitation is "ship cap," then this is the default maximum number of escorts that you can have active at once. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Default max escort crew"</summary>
+<pre>tip "Default max escort crew"
+	`If the fleet size limitation is "crew cap," then this is the default maximum sum of the base required crew (i.e. excluding required crew added by outfits like turrets) across all your escorts that you can have at once. Automated ships will use a crew-equivalent value. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip `Default admin cap`</summary>
+<pre>tip `Default admin cap`
+	`If the fleet size limitation is "admin cap," then this is the default maximum administrative capacity. Ships will have individual administrative costs that count toward your capacity. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
 </pre>
 
 </details>
