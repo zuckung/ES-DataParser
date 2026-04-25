@@ -84,6 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/interfaces.txt | interface "map detail panel"</summary>
 <pre>interface "map detail panel"
+	anchor top right
 	value "min planet panel height" 195
 	value "max planet panel height" 2022
 	value "starting X" 100
@@ -96,6 +97,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	value "description x offset" 240
 	value "description width" 500
 	value "description height" 240
+	visible if "has escort destination"
+	sprite "ui/wide button"
+		center -256 56
+	button c "Cancel order"
+		center -256 56
+		dimensions 90 30
 </pre>
 
 </details>
@@ -151,6 +158,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	visible if "pilot loaded"
 	button e "_Enter Ship"
 		center 435 155
+		dimensions 90 30
+	visible if "gamerules unlocked"
+	sprite "ui/wide button"
+		center 435 195
+	button g "_Gamerules"
+		center 435 195
 		dimensions 90 30
 	visible if "no pilot loaded"
 	button n "_New Pilot"
@@ -301,6 +314,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	button s "_Start Game"
 		center -285 155
 		dimensions 90 30
+	sprite "ui/wide button"
+		center -435 195
+	active
+	button g "_Gamerules"
+		center -435 195
+		dimensions 90 30
 	# The box that will contain the description text
 	box "start description"
 		from -105 -160
@@ -367,6 +386,13 @@ document.addEventListener("DOMContentLoaded", function() {
 	active if "pilot loaded"
 	button l "_Load Game"
 		center 435 155
+		dimensions 90 30
+	active
+	visible if "gamerules unlocked"
+	sprite "ui/wide button"
+		center 435 195
+	button g "_Gamerules"
+		center 435 195
 		dimensions 90 30
 </pre>
 
@@ -922,6 +948,105 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/interfaces.txt | interface "gamerules"</summary>
+<pre>interface "gamerules"
+	sprite "ui/settings two buttons"
+		center -337 -180
+	sprite "ui/settings keys box"
+		center -350 102
+	sprite "ui/settings base panel"
+		center -1 -20
+	button b "_Back to Menu..."
+		center 195 210
+		dimensions 120 30
+	button g "_Gamerules"
+		center -304 -230
+		dimensions 90 30
+		color medium
+		hover bright
+	button p "_Presets"
+		center -304 -190
+		dimensions 90 30
+		color medium
+		hover bright
+	label "Additional info"
+		from -275 34
+		align top right
+		color bright
+	fill
+		from -400 48 to -270 49
+		color medium
+	"wrapped label" "Press '_x' over a rule to reset it to the value from the chosen preset."
+		from -400 60 to -275 130
+		alignment right
+		color medium
+	visible if "multiple settings pages"
+	sprite "ui/dialog cancel"
+		center -115 210
+	active if "show next settings"
+	button n "_Next"
+		center -115 210
+		dimensions 70 30
+	sprite "ui/wide button"
+		center -210 210
+	active if "show previous settings"
+	button r "P_revious"
+		center -210 210
+		dimensions 90 30
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "gamerules presets"</summary>
+<pre>interface "gamerules presets"
+	sprite "ui/settings two buttons"
+		center -337 -180
+	sprite "ui/settings keys box"
+		center -350 102
+	sprite "ui/settings base panel"
+		center -1 -20
+	button b "_Back to Menu..."
+		center 195 210
+		dimensions 120 30
+	button g "_Gamerules"
+		center -304 -230
+		dimensions 90 30
+		color medium
+		hover bright
+	button p "_Presets"
+		center -304 -190
+		dimensions 90 30
+		color medium
+		hover bright
+	label "Gamerule Presets:"
+		from -225 -236
+		align top left
+		color bright
+	fill
+		from -230 -222 to -10 -221
+	box "preset list"
+		from -250 -216 to -10 184
+	box "preset description"
+		from 250 -244 to 10 184
+	label "Additional info"
+		from -275 34
+		align top right
+		color bright
+	fill
+		from -400 48 to -270 49
+		color medium
+	"wrapped label" "Click the checkbox next to a preset to activate it."
+		from -400 50 to -275 120
+		alignment right
+		color medium
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/interfaces.txt | interface "hud"</summary>
 <pre>interface "hud"
 	# Player status.
@@ -998,6 +1123,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	sprite "ui/red alert"
 		from 10 10
 		align top left
+	visible if "nuke alert"
+	sprite "icon/nuke"
+		from 24 24
 	visible
 	sprite "ui/radar"
 		from 0 0
@@ -1005,6 +1133,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	point "radar"
 		center 128 128
 	value "radar radius" 110
+	value "radar scale" .025
 	value "radar pointer radius" 130
 	sprite "ui/navigation"
 		from 200 0
@@ -1544,6 +1673,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "spaceport"
 	box "content"
 		from -240 80 to 240 320
+	image "port"
+		center 0 -140
 </pre>
 
 </details>
@@ -1554,6 +1685,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "spaceport (small screen)"
 	box "content"
 		from -300 80 to 180 320
+	image "port"
+		center -60 -140
 </pre>
 
 </details>
@@ -1892,21 +2025,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 480 1
 	active if "can buy"
 	sprite "ui/dialog cancel"
-		center 100 355
+		center 120 355
 	button u "B_uy All"
-		center 100 355
+		center 120 355
 		dimensions 70 30
-	sprite "ui/wide button"
-		center 190 355
 	active if "can sell"
-	visible if "!can sell outfits"
+	sprite "ui/dialog cancel"
+		center 200 355
 	button e "S_ell All"
-		center 190 355
+		center 200 355
+		dimensions 70 30
+	active if "can sell minables"
+	sprite "ui/wide button"
+		center -90 355
+	button m "Sell _Minables"
+		center -90 355
 		dimensions 90 30
 	active if "can sell outfits"
-	visible if "can sell outfits"
-	button e "S_ell Outfits"
-		center 190 355
+	sprite "ui/wide button"
+		center -190 355
+	button f "Sell Out_fits"
+		center -190 355
 		dimensions 90 30
 </pre>
 
@@ -1923,21 +2062,27 @@ document.addEventListener("DOMContentLoaded", function() {
 		dimensions 480 1
 	active if "can buy"
 	sprite "ui/dialog cancel"
-		center 40 355
+		center 60 355
 	button u "B_uy All"
-		center 40 355
+		center 60 355
 		dimensions 70 30
-	sprite "ui/wide button"
-		center 130 355
 	active if "can sell"
-	visible if "!can sell outfits"
+	sprite "ui/dialog cancel"
+		center 140 355
 	button e "S_ell All"
-		center 130 355
+		center 140 355
+		dimensions 70 30
+	active if "can sell minables"
+	sprite "ui/wide button"
+		center -150 355
+	button m "Sell _Minables"
+		center -150 355
 		dimensions 90 30
 	active if "can sell outfits"
-	visible if "can sell outfits"
-	button e "S_ell Outfits"
-		center 130 355
+	sprite "ui/wide button"
+		center -250 355
+	button f "Sell Out_fits"
+		center -250 355
 		dimensions 90 30
 </pre>
 
@@ -2446,6 +2591,93 @@ document.addEventListener("DOMContentLoaded", function() {
 	button h "Ask For _Help"
 		center -20 115
 		dimensions 140 30
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "map: sales key"</summary>
+<pre>interface "map: sales key"
+	anchor bottom left
+	box "content"
+		align bottom left
+		from 330 -80
+		dimensions 140 80
+	sprite "ui/sales key"
+		align bottom left
+		from 300 0
+	ring full
+		center 340 -72
+		dimensions 9 9
+		size 1.75
+		color "map: sale marker: no shop"
+	ring full
+		center 340 -52
+		dimensions 9 9
+		size 1.75
+		color "map: sale marker: has shop"
+	ring full
+		center 340 -32
+		dimensions 9 9
+		size 1.75
+		color "map: sale marker: item sold"
+	ring full
+		center 340 -12
+		dimensions 9 9
+		size 1.75
+		color "map: sale marker: item stored"
+	visible if "is shipyards"
+	label "Has no shipyard",
+		from 350 -72
+		align left
+	label "Has shipyard",
+		from 350 -52
+		align left
+	label "Sells this ship",
+		from 350 -32
+		align left
+	label "Ship parked here"
+		from 350 -12
+		align left
+	visible if "is outfitters"
+	label "Has no outfitter",
+		from 350 -72
+		align left
+	label "Has outfitter",
+		from 350 -52
+		align left
+	label "Sells this outfit",
+		from 350 -32
+		align left
+	label "Outfit in storage"
+		from 350 -12
+		align left
+	visible if "is outfitters w/ minerals"
+	label "Has no outfitter",
+		from 350 -72
+		align left
+	label "Has outfitter",
+		from 350 -52
+		align left
+	label "Mine this here",
+		from 350 -32
+		align left
+	label "Mineral in storage"
+		from 350 -12
+		align left
+	visible if "only sold here"
+	pointer
+		center 333 -32
+		color bright
+		dimensions 10 10
+		"orientation vector" 1 0
+	visible if "only stored here"
+	pointer
+		center 333 -12
+		color bright
+		dimensions 10 10
+		"orientation vector" 1 0
 </pre>
 
 </details>

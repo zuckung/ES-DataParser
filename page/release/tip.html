@@ -584,6 +584,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "fleet cost:"</summary>
+<pre>tip "fleet cost:"
+	`How much this ship costs toward your fleet capacity. Your flagship and parked escorts do not count toward the capacity. You may exceed your capacity while landed, but will not be able to depart if you go over your capacity.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "discharge protection:"</summary>
 <pre>tip "discharge protection:"
 	`Protection provided against shield discharge damage. Increases by the given factor how much discharge damage a ship can withstand before it loses as much shielding as an unprotected ship.`
@@ -4191,9 +4200,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Fleet: Scan my target"</summary>
+<pre>tip "Fleet: Scan my target"
+	`Command your fleet to scan a target. Requires your escorts to have cargo or outfit scanners installed. If only some escorts are selected, only sends the command to those escorts.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Main zoom factor"</summary>
 <pre>tip "Main zoom factor"
-	`Increase the main zoom factor (the size of the UI and gameplay). Wraps back to 100 if the zoom exceeds your screen's limits. If the zoom factor is greater than 100, activates high DPI images if they are available.`
+	`Increase the main zoom factor (the size of the UI and gameplay). Wraps back to 100 if the zoom exceeds your screen's limits.`
 </pre>
 
 </details>
@@ -4257,6 +4275,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip "Reduce large graphics"</summary>
 <pre>tip "Reduce large graphics"
 	`Reduce the size of very large (images with &#62;= 1 million pixels) or all graphics to half their dimensions. UI sprites are excluded. (Not recommended for high-resolution displays, but may be used to free up memory. Requires game restart.)`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Defer loading images"</summary>
+<pre>tip "Defer loading images"
+	`Defer the loading of certain images so that they are loaded when they are needed instead of loading them when the game is first opened. This will result in a quicker launch time and lower VRAM usage, but you may experience pop-in as sprites are being loaded. Recommended for systems with low VRAM. (Requires game restart.)`
 </pre>
 
 </details>
@@ -4425,9 +4452,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/_ui/tooltips.txt | tip "Highlight player's flagship"</summary>
-<pre>tip "Highlight player's flagship"
-	`Apply a green highlight to your flagship.`
+<summary>data/_ui/tooltips.txt | tip "Highlight ships"</summary>
+<pre>tip "Highlight ships"
+	`Control whether ships should be highlighted while in flight. If set to "flagship," then a green highlight is applied to your flagship. If set to "owned ships," then your flagship and all the escorts you own will be highlighted. If set to "all," then all ships will have a highlight matching their color on the radar.`
 </pre>
 
 </details>
@@ -4650,15 +4677,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/_ui/tooltips.txt | tip "System map sends move orders"</summary>
-<pre>tip "System map sends move orders"
-	`Right-click on a location in the system mini-map on the galaxy map to send your escorts to that location in the selected system.`
-</pre>
-
-</details>
-
-
-<details>
 <summary>data/_ui/tooltips.txt | tip "Always underline shortcuts"</summary>
 <pre>tip "Always underline shortcuts"
 	`Always underline the shortcut key for any buttons. Holding the alt key in any panel will also underline the button shortcut keys if this setting is off.`
@@ -4680,6 +4698,33 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip "Interrupt fast-forward"</summary>
 <pre>tip "Interrupt fast-forward"
 	`Disable fast-forward whenever you land or when a conversation, dialog, or other panel appears while in flight.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "'Sell Outfits' without outfitter"</summary>
+<pre>tip "'Sell Outfits' without outfitter"
+	`In the Trading panel, controls whether the 'Sell Outfits' button will allow selling outfits even when there is no Outfitter at which to buy them back.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Confirm 'Sell Outfits' button"</summary>
+<pre>tip "Confirm 'Sell Outfits' button"
+	`In the Trading panel, controls whether or not to confirm sales of all outfits in cargo.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Confirm 'Sell Minables' button"</summary>
+<pre>tip "Confirm 'Sell Minables' button"
+	`In the Trading panel, controls whether or not to confirm sales of mineables, specials and other flotsam that may have been picked up.`
 </pre>
 
 </details>
@@ -4758,6 +4803,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Auto refill ammo"</summary>
+<pre>tip "Auto refill ammo"
+	`Controls the ammo refill behavior when you enter the outfitter.`
+	`- "always": ammo will be automatically refilled if you have the credits for it.`
+	`- "when free": ammo will be automatically refilled only if it doesn't cost you anything, such as when you have spare ammo in cargo or storage.`
+	`- "ask": you will be prompted to refill any missing ammunition upon entering the outfitter.`
+	`- "never": you will always have to manually refill your ammunition.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Title bar theme"</summary>
 <pre>tip "Title bar theme"
 	`Choose the theme of the title bar, or leave "system default" to use system settings. (Available on Windows 10 or newer; on Windows 10, the game window must be resized or restarted in order for the change to take effect.)`
@@ -4770,6 +4828,199 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip "Window rounding"</summary>
 <pre>tip "Window rounding"
 	`Control the appearance of window corners. (Available on Windows 11.)`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Tribute confirmation"</summary>
+<pre>tip "Tribute confirmation"
+	`Whether a confirmation dialog will be displayed when you attempt to demand tribute from a planet. Either it always appears, never appears, or only appears if the target planet is friendly to you.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Minimum value"</summary>
+<pre>tip "Minimum value"
+	`The lowest value that an outfit or ship can depreciate to relative to its full price. All plundered, captured, or gifted items start at this value, and all purchased items start at 100% value and then depreciate toward this value according to the other depreciation gamerules.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Grace period"</summary>
+<pre>tip "Grace period"
+	`The number of days that must pass before a newly purchased outfit or ship will begin to depreciate. This allows you to have a short amount of time to test out an item and then sell it back at full value if you decide that you do not like it.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Maximum age"</summary>
+<pre>tip "Maximum age"
+	`The number of days that must pass, after the grace period has ended, in order for an outfit or ship to become fully depreciated.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Daily depreciation"</summary>
+<pre>tip "Daily depreciation"
+	`The percentage of an item's depreciable value that it maintains day over day. Only impacts the exponential term of the depreciation calculation. If set to 100%, an item will still linearly lose value.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Spawn attempt period"</summary>
+<pre>tip "Spawn attempt period"
+	`The number of frames on average that the game waits before attempting to spawn a person ship. The game rolls a random number between 0 and this value minus one every frame. If the value lands on 0, a person ship spawn attempt is made. There are 60 frames in a second.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "No spawn weight"</summary>
+<pre>tip "No spawn weight"
+	`When a person ship spawn attempt is made, this is the "weight" of the chance of having the spawn attempt fail. Each person ship has a "weight" associated with it which determines its chance of spawning. The chance of any single person ship spawning is its weight divided by the sum of the weights of all person ships and this value. That means that the chance of a spawn attempt failing is this number over that same sum.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "NPC max mining time"</summary>
+<pre>tip "NPC max mining time"
+	`Randomly spawned NPCs with the "mining" personality will spend this many frames mining in the current system before deciding to do something else. The purpose of this limit is so that NPC ships can be seen by the player to show how to mine without stripping the system bare of minable asteroids. This limit does not apply to mining ships that are spawned by a mission.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Universal frugal threshold"</summary>
+<pre>tip "Universal frugal threshold"
+	`Ships with the "frugal" personality will only use weapons that consume ammo or fuel while their health (shields + hull - the hull level when they become disabled) is at or below this percentage, or if the hostiles in the system are considerably stronger than them.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Universal ramscoop"</summary>
+<pre>tip "Universal ramscoop"
+	`Determines whether the "universal ramscoop" is active on all ships. This ramscoop provides a very small amount of fuel to every ship regardless of whether it has an actual ramscoop installed. The strength of this ramscoop falls off much more strongly than normal ramscoops, requiring you to be as close to a star as possible to have any real gain in fuel. Having this enabled prevents needing to reload your save file if you run out of fuel and no NPCs spawn in the system that you can get fuel from.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Minimum arrival distance"</summary>
+<pre>tip "Minimum arrival distance"
+	`The minimum arrival distance for all systems. Applies to both hyperdrive and jump drive travel. If the system has a defined arrival distance greater than this value, then it will be used instead. If this gamerule has a value of "(unset)", then the value defined by the system will always be used.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Minimum departure distance"</summary>
+<pre>tip "Minimum departure distance"
+	`The minimum departure distance for all systems. A ship can only jump out of a system if it is farther from the system center than the departure distance. If a system has a defined departure distance greater than this value, then it will be used instead.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Fleet multiplier"</summary>
+<pre>tip "Fleet multiplier"
+	`A global fleet spawn rate multiplier for random fleet spawns within systems.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Lock gamerules"</summary>
+<pre>tip "Lock gamerules"
+	`Controls whether gamerules can be altered after a pilot has been created. If true, the gamerules button will not appear on the main menu for this pilot. If you set this to true on an existing pilot, you will not be able to return to this menu after leaving.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Fighters hit when disabled"</summary>
+<pre>tip "Fighters hit when disabled"
+	`Controls which carried ships (fighters and drones), when disabled, will not be hit by projectiles unless they are directly targeted. Fighters and drones are fragile ships that can be difficult and/or tedious to replace for the player, so this gamerule is a means of increasing their survivability without increasing their combat effectiveness. Disabled carried ships can still be hit by explosions, whether from weapons or exploding ships.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Universal ammo stocking"</summary>
+<pre>tip "Universal ammo stocking"
+	`Controls whether the ammo for most secondary weapons that you have installed or in your cargo will be available for purchase at any outfitter, even if that outfitter does not normally sell ammo of that type. The description of each secondary weapon will indicate whether it can be restocked anywhere when this rule is true.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Spawn raid fleets"</summary>
+<pre>tip "Spawn raid fleets"
+	`Controls whether raid fleets are able to spawn. Raid fleets are hostile fleets that can spawn in some systems if your fleet's cargo attractiveness is much higher than its deterrence. (That is, if you have a lot of cargo space and not a lot of firepower to defend it.) If this rule is active, your fleet's raid fleet spawn chance can be viewed from the player info panel.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Fleet size limitation"</summary>
+<pre>tip "Fleet size limitation"
+	`Determines whether the player can only have a limited number of escorts active at once. If active, your flagship, parked ships, and carried ships (fighters and drones) are excluded from your fleet capacity, and you will not be able to capture ships that would put you over your capacity or take off from a planet if your capacity has been reached.`
+	`- "none": you can have as many escorts as you want.`
+	`- "ship cap": you can only command up to a certain number of escorts.`
+	`- "crew cap": the base crew requirement of your active escorts may not exceed a certain limit.`
+	`- "admin cap": the limit is tied to an "administrative cost" that every ship has, with larger ships having a higher cost.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Default max escort count"</summary>
+<pre>tip "Default max escort count"
+	`If the fleet size limitation is "ship cap," then this is the default maximum number of escorts that you can have active at once. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Default max escort crew"</summary>
+<pre>tip "Default max escort crew"
+	`If the fleet size limitation is "crew cap," then this is the default maximum sum of the base required crew (i.e. excluding required crew added by outfits like turrets) across all your escorts that you can have at once. Automated ships will use a crew-equivalent value. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip `Default admin cap`</summary>
+<pre>tip `Default admin cap`
+	`If the fleet size limitation is "admin cap," then this is the default maximum administrative capacity. Ships will have individual administrative costs that count toward your capacity. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
 </pre>
 
 </details>

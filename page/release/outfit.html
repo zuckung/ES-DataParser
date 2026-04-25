@@ -1431,6 +1431,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_deprecated/deprecated outfits.txt | outfit `Z-3600 "Beam" Amat Torch`</summary>
 <pre>outfit `Z-3600 "Beam" Amat Torch`
+	plural `Z-3600 "Beam" Amat Torches`
 	category "Engines"
 	series "Engines"
 	index 07080
@@ -1458,6 +1459,45 @@ document.addEventListener("DOMContentLoaded", function() {
 	description "The fastest Avgi starships were propelled not just by their engines, but also by immense banks of lasers and particle beams stationed in the Anax system, pushing ships to velocities in excess of 0.2c before braking with a magsail or plasma magnet. Just before the invention of the hyperdrive, however, the Avgi perfected this beam-core antimatter drive, capable of pushing a starship with sufficient antimatter fuel to 0.4c and perhaps beyond. Requiring immense quantities of antimatter, the amat farms around Anax such as Antivli Station would have been strained to their limits had this design entered mass production, but the surprise invention of the hyperdrive rendered it laughably obsolete overnight."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/beam antimatter drive.png" height="200">
+</details>
+
+
+<details>
+<summary>data/_deprecated/deprecated outfits.txt | outfit "Teciimach Canister"</summary>
+<pre>outfit "Teciimach Canister"
+	category "Ammunition"
+	series "Ammunition"
+	index 03020
+	cost 35500
+	thumbnail "outfit/emp torpedo"
+	"mass" 1
+	"teciimach canister capacity" -1
+	description "This canister contains everything required to assemble a Teciimach Torpedo. These weapons emit strong electromagnetic pulses which interfere with a ship's generators and neutralize a portion of their energy."
+	description `	Unlike the previous generation of "EMP Torpedoes," the Teciimach torpedoes actively shape their emission pattern to avoid impacting their allies.`
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/emp torpedo.png" width="100" height="90">
+</details>
+
+
+<details>
+<summary>data/_deprecated/deprecated outfits.txt | outfit "Teciimach Canister Rack"</summary>
+<pre>outfit "Teciimach Canister Rack"
+	category "Ammunition"
+	series "Ammunition"
+	index 03021
+	licenses
+		Remnant
+	cost 295000
+	thumbnail "outfit/emp rack"
+	"mass" 5
+	"outfit space" -9
+	"energy capacity" 500
+	"teciimach canister capacity" 9
+	ammo "Teciimach Canister"
+	description "The Teciimach Canister Rack is used to store extra sets of components, both to expand the capacity of a ship, and on carriers for resupplying fighters."
+	description "	In addition to its ammunition capacity, the storage bay can also contain a small amount of charge, enough to let an otherwise battery-less ship assemble Teciimach Torpedoes."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/emp rack.png" width="140" height="140">
 </details>
 
 
@@ -1496,7 +1536,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"anchor point" -1
 	"scan interference" 6
 	"radar jamming" 12
-	"optical jamming" 12
+	"optical jamming" 1.2
 	"solar heat" 6
 	description "A specialized coating of quantum dot phased array antennas, grown molecule by molecule, forms a conformal film capable of interfering with and jamming any attempts to scan or detect a ship. Working in aggregate, the phased array can be used to jam the sensors of missiles from further away, or even blind them with a low-power beam. However, the density of quantum dots required to produce these effects considerably increases the amount of sunlight absorbed by a ship using Concealment Laminae, and such an advanced material does not come cheap."
 	description "	Laminae take advantage of special external hardpoints built into most Avgi ships, allowing them to be mounted without taking up any outfit space. However, they also tend to increase the amount of heat absorbed from the local star."
@@ -1902,6 +1942,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"scale" 0.5
 	"steering flare sound" "remnant afterburner"
 	"magnetic nozzle" 18
+	linked "Remass Injector"
+	linked "Inductive Extractor"
 	description "The fastest Avgi starships were propelled not just by their engines, but also by immense banks of lasers and particle beams stationed in the Anax system, pushing ships to velocities in excess of 0.2c before braking with a magsail or plasma magnet. Just before the invention of the hyperdrive, however, the Avgi perfected this beam-core antimatter drive, capable of pushing a starship with sufficient antimatter fuel to 0.4c and perhaps beyond. Requiring immense quantities of antimatter, the amat farms around Anax such as Antivli Station would have been strained to their limits had this design entered mass production, but the surprise invention of the hyperdrive rendered it laughably obsolete overnight."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/beam antimatter drive.png" height="200">
@@ -1911,6 +1953,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/avgi/avgi outfits.txt | outfit `Z-333 "Spark" Fusion Torch`</summary>
 <pre>outfit `Z-333 "Spark" Fusion Torch`
+	plural `Z-333 "Spark" Fusion Torches`
 	category "Engines"
 	series "Engines"
 	index 07050
@@ -1932,6 +1975,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"flare sound" "fusion torch"
 	"afterburner effect" "small remass injection"
 	"magnetic nozzle" 3
+	linked "Remass Injector"
+	linked "Inductive Extractor"
 	description "The smallest Avgi fusion torch is actually the most recent design in the family, owing to the difficulties of miniaturizing the systems driving nuclear fusion. By cooling the fuel with a laser and passing it through an extremely powerful magnetic field, it can be spin polarized, aligning the nuclear spins of the deuterons to reduce ignition requirements and direct some of the emitted neutrons away from the spacecraft. While spin polarization is used on all Avgi fusion torches, it allows the Spark in particular to be far lighter and more compact than would otherwise be possible, reducing the required currents to drive the pinch and the mass of the necessary radiation shielding."
 	description "	The magnetic nozzle is designed to support a variety of components that can be slotted in to provide various effects, from injecting additional propellant to improve thrust to tapping energy from the expanding fusion plasma to power a ship's systems."
 </pre>
@@ -1942,6 +1987,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/avgi/avgi outfits.txt | outfit `Z-666 "Zap" Fusion Torch`</summary>
 <pre>outfit `Z-666 "Zap" Fusion Torch`
+	plural `Z-666 "Zap" Fusion Torches`
 	category "Engines"
 	series "Engines"
 	index 07060
@@ -1962,6 +2008,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"flare sound" "fusion torch"
 	"afterburner effect" "medium remass injection"
 	"magnetic nozzle" 6
+	linked "Remass Injector"
+	linked "Inductive Extractor"
 	description "The fusion confinement scheme favored by the Avgi is a variant on the Z-pinch, which runs current axially down a column of deuterium plasma to squeeze it with the resulting magnetic field until it is hot and dense enough for fusion to occur. An annular flow surrounding the pinch keeps it stable, confining the plasma long enough for nearly all of the fuel to be burned by the time it makes its way down the length of the engine and out the magnetic nozzle on its rear. Without the need for fragile, heavy magnets or bulky lasers to ignite and confine the fusion reaction, the resulting drive is incredibly efficient and compact, which has made it the mainstay of Avgi spacecraft propulsion for centuries."
 	description "	The magnetic nozzle is designed to support a variety of components that can be slotted in to provide various effects, from injecting additional propellant to improve thrust to tapping energy from the expanding fusion plasma to power a ship's systems."
 </pre>
@@ -1972,6 +2020,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/avgi/avgi outfits.txt | outfit `Z-999 "Arc" Fusion Torch`</summary>
 <pre>outfit `Z-999 "Arc" Fusion Torch`
+	plural `Z-999 "Arc" Fusion Torches`
 	category "Engines"
 	series "Engines"
 	index 07070
@@ -1993,6 +2042,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"flare sound" "fusion torch"
 	"afterburner effect" "large remass injection"
 	"magnetic nozzle" 9
+	linked "Remass Injector"
+	linked "Inductive Extractor"
 	description "The largest and oldest of the common fusion torches used by the Avgi, the Arc is derived from an interstellar-class design that was modified and downrated to make it more suitable for interplanetary operations by trading specific impulse for raw thrust. At this scale, the pinch is long enough that it is able to confine the plasma for sufficient time to not only fuse the deuterium into a mix of helium-3 and tritium, but to likewise burn the aforementioned fusion products together with leftover deuterium to release even more energy. This reaction, known as catalyzed D-D fusion, gives the Arc superior fuel efficiency over its smaller cousins."
 	description "	The magnetic nozzle is designed to support a variety of components that can be slotted in to provide various effects, from injecting additional propellant to improve thrust to tapping energy from the expanding fusion plasma to power a ship's systems."
 </pre>
@@ -2398,6 +2449,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 30
 	"outfit space" -30
 	"lasing power" 3
+	linked "Green Optical Laser"
+	linked "Blue Optical Laser"
 	description "A monolithic slab of semiconductor diode is used to efficiently pump a spool of doped optical fiber. Hundreds of kilometers long, the coiled fibers serve as a lasing medium with the power needed to produce an intense beam of light, and can be gain-switched to pulse at a variety of frequencies. The produced laser light, which can be converted to a number of wavelengths, can be easily tapped and routed via optical fibers or mirrors to a number of turrets on a ship, eliminating the need for the heavy lasing generator to be anywhere near the turret itself."
 	description "	The wavelength of light produced in the coil can altered by swapping the diodes and fiber dopants, allowing the Optical Lasing Generator to support up to three Green Optical Lasers or a single Blue Optical Laser."
 </pre>
@@ -2417,7 +2470,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -6
 	"weapon capacity" -6
 	"turret mounts" -1
-	"optical jamming" 6
+	"optical jamming" .6
 	"lasing power" -1
 	weapon
 		"hardpoint sprite" "hardpoint/green optical laser"
@@ -2733,7 +2786,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 07030
 	licenses
 		"Twilight Guard"
-	cost 36000
+	cost 54000
 	thumbnail "outfit/tiny vls"
 	"mass" 3
 	"outfit space" -9
@@ -3329,6 +3382,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"shield generation" 0.65
 	"shield energy" 0.6
 	"relay upgrades" 6
+	linked "Shield Relay Booster"
+	linked "Shield Relay Limiter"
 	description "Bunrodean shield relays are impressively efficient; while a similarly sized shield generator from another faction might be capable of providing more shield generation, Bunrodean shield relays provide a modest amount of shield generation for only a small amount of energy."
 	description "	Shield relays are able to be upgraded by installing shield boosters or limiters, which alter the performance of the shield relay. Each relay only has a limited number of slots for these upgrades, though."
 </pre>
@@ -3349,6 +3404,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"shield generation" 2
 	"shield energy" 1.6
 	"relay upgrades" 16
+	linked "Shield Relay Booster"
+	linked "Shield Relay Limiter"
 	description "Some Bunrodean military captains argued that trading shield generation for energy efficiency is a foolish trade, while merchant captains looking to get the most out of their reactors argued that they could be more energy efficient. As such, shield relays are able to be customized to the owner's liking using external components."
 	description "	Shield relays are able to be upgraded by installing shield boosters or limiters, which alter the performance of the shield relay. Each relay only has a limited number of slots for these upgrades, though."
 </pre>
@@ -3407,6 +3464,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hull repair rate" 0.72
 	"hull energy" 1.08
 	"nanite upgrades" 4
+	linked "Nanite Enhancer"
+	linked "Nanite Limiter"
 	description "Although Bunrodea ships tend to rely on their shields for defense, some pilots will opt to install a nanite fabricator. These fabricators produce a steady stream of nanites that travel across the hull of the ship and repair any damage that they find."
 	description "	Nanite fabricators are able to be upgraded by installing nanite enhancers or limiters, which alter the performance of the fabricator. Each fabricator only has a limited number of slots for these upgrades, though."
 </pre>
@@ -3427,6 +3486,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"hull repair rate" 2.12
 	"hull energy" 3.18
 	"nanite upgrades" 10
+	linked "Nanite Enhancer"
+	linked "Nanite Limiter"
 	description "The creation of nanite fabricators was spurred on by early contact between the Bunrodea and Korath. The hull-walking microbots of Korath System Cores allowed Korath ships to make repairs without the need of a spaceport, a trait that the Bunrodea favored for use in their scout vessels."
 	description "	Nanite fabricators are able to be upgraded by installing nanite enhancers or limiters, which alter the performance of the fabricator. Each fabricator only has a limited number of slots for these upgrades, however."
 </pre>
@@ -3447,6 +3508,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -7
 	"energy capacity" 6000
 	"solar cell" 36
+	linked "Solar Cell"
 	description "Bunrodean solar batteries are required for the installation of solar cells, but solar batteries are perfectly capable of going without solar cells. Many captains will install batteries to store energy gained from normal reactors without ever installing solar cells."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/solar battery.png" width="160" height="140">
@@ -3524,7 +3586,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"energy generation" 8.35
 	"heat generation" 10.9
 	"reactor upgrades" 6
-	description "Bunrodean reactors appear to be named after types of exotic stars that either once were or still are considered theoretical to humanity. A quark star was first discovered by humanity near the Shangri-La system during the 28th century, a star with core temperatures and pressures so extreme that quark matter is produced."
+	linked "Reactor Overclocker"
+	linked "Reactor Limiter"
+	description "Bunrodean reactors appear to be named after types of exotic stars that either once were or still are considered theoretical to humanity. A quark star was first discovered by humanity near the Polaris system during the 28th century, a star with core temperatures and pressures so extreme that quark matter is produced."
 	description "	Bunrodean reactors are able to be upgraded by installing Reactor Overclockers or Limiters, which alter the performance of the reactor. Each reactor only has a limited number of slots for these upgrades, though."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/quark reactor.png" width="120" height="100">
@@ -3544,6 +3608,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"energy generation" 17.25
 	"heat generation" 20.5
 	"reactor upgrades" 18
+	linked "Reactor Overclocker"
+	linked "Reactor Limiter"
 	description "The existence of the exotic stars that this Bunrodean reactor bears the name of is still unknown to humanity. An electroweak star is an exotic star that would be prevented from collapsing by the electroweak force as quarks are converted to leptons in the star's core."
 	description "	Bunrodean reactors are able to be upgraded by installing Reactor Overclockers or Limiters, which alter the performance of the reactor. Each reactor only has a limited number of slots for these upgrades, though."
 </pre>
@@ -3564,6 +3630,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	"energy generation" 24.7
 	"heat generation" 28.6
 	"reactor upgrades" 30
+	linked "Reactor Overclocker"
+	linked "Reactor Limiter"
 	description `The term "dark star" can have different meanings, but one definition of it is a star whose core is formed around a large amount of dark matter. Such exotic stars are theorized by humanity to have possibly existed among the first generations of stars in the universe, with concentrations of dark matter acting as nucleation sites.`
 	description "	Bunrodean reactors are able to be upgraded by installing Reactor Overclockers or Limiters, which alter the performance of the reactor. Each reactor only has a limited number of slots for these upgrades, though."
 </pre>
@@ -3937,8 +4005,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 10011
 	cost 24000
 	thumbnail "outfit/swarm storage"
-	"mass" 2
-	"outfit space" -10
+	"mass" 1
+	"outfit space" -7
 	"swarm capacity" 200
 	ammo "Swarm Missile"
 	description "Swarm Clips provide a sizable increase in ammo capacity for Swarm Pods, holding a respectable 200 missiles able to be swiftly loaded into a launcher after its current clip is empty."
@@ -3955,7 +4023,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 10010
 	cost 250
 	thumbnail "outfit/swarm missile"
-	"mass" 0.04
+	"mass" 0.03
 	"swarm capacity" -1
 	description "Swarm missiles are small, fast moving munitions for the Swarm Pod."
 </pre>
@@ -3971,9 +4039,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 10010
 	cost 363000
 	thumbnail "outfit/swarm pod"
-	"mass" 5
-	"outfit space" -21
-	"weapon capacity" -21
+	"mass" 3
+	"outfit space" -15
+	"weapon capacity" -15
 	"gun ports" -1
 	"swarm capacity" 400
 	weapon
@@ -3995,8 +4063,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"drag" .1
 		"turn" 5.35
 		"homing"
-		"radar tracking" 0.5
-		"optical tracking" 0.5
+		"radar tracking" 0.2
+		"optical tracking" 0.6
 		"shield damage" 46
 		"hull damage" 24
 		"missile strength" 8
@@ -6590,6 +6658,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/gegno/gegno outfits.txt | outfit "Ion Torch"</summary>
 <pre>outfit "Ion Torch"
+	plural "Ion Torches"
 	category "Guns"
 	series "Guns"
 	index 06080
@@ -7225,8 +7294,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 02011
 	cost 28000
 	thumbnail "outfit/hai tracker storage"
-	"mass" 4.4
-	"outfit space" -10
+	"mass" 2.4
+	"outfit space" -8
 	"tracker capacity" 28
 	ammo "Hai Tracker"
 	description "The Tracker Storage Pod is used to store extra ammunition for Tracker Pods."
@@ -7243,9 +7312,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 02010
 	cost 150000
 	thumbnail "outfit/hai tracker pod"
-	"mass" 8
-	"outfit space" -19
-	"weapon capacity" -19
+	"mass" 5
+	"outfit space" -16
+	"weapon capacity" -16
 	"gun ports" -1
 	"tracker capacity" 56
 	weapon
@@ -7272,7 +7341,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"leading"
 			"throttle control"
 		"optical tracking" .8
-		"infrared tracking" .4
+		"infrared tracking" .2
 		"shield damage" 200
 		"hull damage" 160
 		"hit force" 525
@@ -7354,7 +7423,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "outfit/hai jammer"
 	"mass" 10
 	"outfit space" -7
-	"optical jamming" 15
+	"optical jamming" 1.5
 	"energy consumption" .8
 	description "When the Hai first started fighting each other, the need for a counter to Trackers quickly became apparent. The Cuttlefish Jammer can noticeably disturb a Tracker's lock to the ship by presenting it with a seemingly better, albeit illusory, target. This jammer is most effective on larger ships that cannot field enough anti-missiles to effectively counter missiles from all directions."
 </pre>
@@ -7372,7 +7441,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	thumbnail "outfit/hai jammer overclocked"
 	"mass" 10
 	"outfit space" -7
-	"optical jamming" 20
+	"optical jamming" 2
 	"energy consumption" 1.2
 	description "The Octopus Jammer is a more aggressive adaptation of the Cuttlefish Jammer, intended for short raids by the Unfettered. With several safety circuits bypassed, it is able to more effectively deceive incoming Trackers, but the much higher associated energy cost makes any ship carrying this even more vulnerable to ion weaponry."
 </pre>
@@ -11859,6 +11928,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"frame rate" 4
 		sound "rocket"
 		ammo "Heavy Rocket"
+		stream
 		icon "icon/rocket"
 		"hit effect" "heavy rocket hit"
 		"die effect" "small explosion"
@@ -11875,7 +11945,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shield damage" 790
 		"hull damage" 670
 		"hit force" 900
-		"missile strength" 16
+		"missile strength" 24
 	description "Heavy Rockets are one of the most powerful missile weapons available, but at a price: instead of having a homing system, they simply fire straight forward and rely on a proximity trigger to set them off. Once triggered, however, they damage all ships within their blast radius, making them highly effective against clusters of fighters."
 	description "	Ammunition for this weapon can be restocked at any outfitter."
 		to display
@@ -11921,7 +11991,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"shield damage" 790
 		"hull damage" 670
 		"hit force" 900
-		"missile strength" 16
+		"missile strength" 24
 	description "Heavy Rockets are one of the most powerful missile weapons available, but at a price: instead of having a homing system, they simply fire straight forward and rely on a proximity trigger to set them off. Once triggered, however, they damage all ships within their blast radius, making them highly effective against clusters of fighters."
 	description "	Pods enable fighters and other light craft to carry small quantities of rockets into battle while retaining enough space for other weapons. Large ships are better off with full-size launchers."
 	description "	Ammunition for this weapon can be restocked at any outfitter."
@@ -11977,6 +12047,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull damage" 7000
 		"hit force" 6000
 		"missile strength" 200
+		"triggers nuke alert"
 	description "It has been centuries since the last nuclear war was fought, and until very recently, most people in the galaxy assumed that that era of chaos and destruction was forever behind us..."
 	description "	[Nuclear missiles are a one-shot weapon: each missile occupies a gun slot, and after it is fired, the slot it was in is left empty.]"
 </pre>
@@ -15380,6 +15451,51 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/kahet/kahet missions.txt | outfit "Asteroid Jump Drive (Patir 18)"</summary>
+<pre>outfit "Asteroid Jump Drive (Patir 18)"
+	"display name" "???"
+	category "Systems"
+	cost 29631456
+	thumbnail "outfit/asteroid weapon 7"
+	"mass" 20
+	"outfit space" -20
+	"jump speed" 10
+	"jump fuel" 200
+	"jump range" 48
+	"jump drive" 1
+	"asteroid mount jd" -1
+	"jump effect" "jump drive circle"
+	"jump effect" "jump drive spark 1"
+	"jump effect" "jump drive spark 2"
+	"jump effect" "jump drive spark 3"
+	"jump effect" "jump drive spark 4"
+	"jump effect" "jump drive spark 5"
+	"jump effect" "jump drive spark 6"
+	"jump effect" "jump drive spark 7"
+	"jump effect" "jump drive spark 8"
+	"jump effect" "jump drive spark 9"
+	"jump effect" "jump drive 1"
+	"jump effect" "jump drive 2"
+	"jump effect" "jump drive 3"
+	"jump effect" "jump drive 4"
+	"jump effect" "jump drive 5"
+	"jump effect" "jump drive 6"
+	"jump effect" "jump drive 7"
+	"jump effect" "jump drive 8"
+	"jump effect" "jump drive 9"
+	"jump effect" "jump drive 10"
+	"jump effect" "jump drive 11"
+	"jump effect" "jump drive 12"
+	"jump effect" "jump drive 13"
+	"jump effect" "jump drive 14"
+	"jump effect" "jump drive 15"
+	description "Whatever the mechanism that hides beneath the translucent orb may be, it functions similarly to a jump drive, bridging different parts of the universe together for the cost of merely 200 units of fuel."
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/asteroid weapon 7.png" width="140" height="150">
+</details>
+
+
+<details>
 <summary>data/kahet/kahet outfits.txt | outfit "Ka'het Nullifier"</summary>
 <pre>outfit "Ka'het Nullifier"
 	category "Guns"
@@ -15580,11 +15696,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 05010
 	cost 715000
 	thumbnail "outfit/ka'het emp deployer"
-	"mass" 18
+	"mass" 10
 	"outfit space" -26
 	"weapon capacity" -26
 	"gun ports" -1
-	"emp torpedo capacity" 16
+	"emp torpedo capacity" 27
 	weapon
 		sprite "projectile/emp torpedo"
 			"frame rate" 2
@@ -15609,7 +15725,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"turn" 2
 		"homing"
 			"throttle control"
-		"infrared tracking" .7
+		"infrared tracking" .2
 		"radar tracking" .8
 		"trigger radius" 50
 		"blast radius" 200
@@ -17438,9 +17554,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	category "Ammunition"
 	series "Ammunition"
 	index 04030
-	cost 3500
+	cost 830
 	thumbnail "outfit/piercer"
-	"mass" .3
+	"mass" .07
 	"piercer capacity" -1
 	description "This missile is fired from a Piercer Missile Launcher."
 </pre>
@@ -17456,9 +17572,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04031
 	cost 56000
 	thumbnail "outfit/korath piercer storage"
-	"mass" 2.2
+	"mass" .1
 	"outfit space" -7
-	"piercer capacity" 16
+	"piercer capacity" 98
 	ammo "Piercer Missile"
 	description "The Piercer Missile Rack is used to store extra ammunition for Piercer Missile Launchers."
 </pre>
@@ -17474,12 +17590,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04030
 	cost 593000
 	thumbnail "outfit/piercer launcher"
-	"mass" 18
-	"outfit space" -27
-	"weapon capacity" -27
+	"mass" 7
+	"outfit space" -21
+	"weapon capacity" -21
 	"energy capacity" 50
 	"gun ports" -1
-	"piercer capacity" 31
+	"piercer capacity" 197
 	weapon
 		sprite "projectile/piercer"
 			"frame rate" 5
@@ -17490,25 +17606,18 @@ document.addEventListener("DOMContentLoaded", function() {
 		"fire effect" "piercer fire"
 		"hit effect" "piercer impact"
 		"hit effect" "piercer explosion"
-		"die effect" "piercer explosion"
-		"inaccuracy" 3
+		"die effect" "piercer death"
+		"inaccuracy" 1.5
 		"velocity" 18
-		"lifetime" 200
-		"reload" 72
-		"firing energy" 29
-		"firing heat" 144
-		"acceleration" .54
-		"drag" .03
-		"turn" 1.6
-		"homing"
-			"leading"
-			"throttle control"
-		"infrared tracking" .9
-		"shield damage" 290
-		"hull damage" 440
+		"lifetime" 47
+		"reload" 23
+		"firing energy" 9
+		"firing heat" 46
+		"shield damage" 130
+		"hull damage" 197
 		"piercing" .2
-		"hit force" 450
-		"missile strength" 73
+		"hit force" 144
+		"missile strength" 23
 		"stream"
 	description "Korath Piercer Missiles carry a pair of warheads. The first, a smaller one in the very tip of the missile, explodes on impact to blast a hole in the ship's shields to allow some of the subsequent, larger explosion to pierce through."
 	description "	Ammunition for this weapon can be restocked at any outfitter."
@@ -17567,7 +17676,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04040
 	cost 3500
 	thumbnail "outfit/korath mine"
-	"mass" .7
+	"mass" .4
 	"minelayer capacity" -1
 	description "This is ammunition for a Cluster Mine Layer. Each mine splits into eleven submunitions after it is deployed."
 </pre>
@@ -17583,9 +17692,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04041
 	cost 31500
 	thumbnail "outfit/korath mine storage"
-	"mass" 2.7
+	"mass" .8
 	"outfit space" -9
-	"minelayer capacity" 9
+	"minelayer capacity" 20
 	ammo "Cluster Mine"
 	description "The Cluster Mine Rack is used to store extra ammunition for Cluster Mine Layers."
 </pre>
@@ -17601,12 +17710,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04040
 	cost 1073000
 	thumbnail "outfit/korath minelayer"
-	"mass" 36
-	"outfit space" -48
-	"weapon capacity" -48
+	"mass" 15
+	"outfit space" -27
+	"weapon capacity" -27
 	"energy capacity" 50
 	"gun ports" -1
-	"minelayer capacity" 17
+	"minelayer capacity" 41
 	weapon
 		sprite "projectile/korath minelayer"
 			"frame rate" .6
@@ -17940,9 +18049,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04011
 	cost 27400
 	thumbnail "outfit/firelight rack"
-	"mass" 3
-	"outfit space" -6
-	"firelight missile capacity" 10
+	"mass" 3.2
+	"outfit space" -8
+	"firelight missile capacity" 6
 	ammo "Firelight Missile"
 	description "This rack stores additional Firelight missiles to feed into a Firelight Bank."
 </pre>
@@ -17958,7 +18067,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04010
 	cost 7600
 	thumbnail "outfit/firelight"
-	"mass" 0.3
+	"mass" .8
 	"firelight missile capacity" -1
 	"energy generation" 0.02
 	"heat generation" 0.1
@@ -17976,12 +18085,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04010
 	cost 1937000
 	thumbnail "outfit/firelight bank"
-	"mass" 22
+	"mass" 13
 	"outfit space" -28
 	"weapon capacity" -28
 	"gun ports" -1
 	"energy capacity" 700
-	"firelight missile capacity" 20
+	"firelight missile capacity" 18
 	weapon
 		sprite "projectile/firelight"
 		sound "firelight"
@@ -18002,7 +18111,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"optical tracking" .7
 		"homing"
 			"throttle control"
-		"blast radius" 48
 		"hit force" 150
 		"missile strength" 33
 		submunition "Firelight Turning"
@@ -18029,11 +18137,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"acceleration" -0.1
 		"turn" 4.6
 		"homing"
-			"leading"
-			"throttle control"
-		"tracking" .9
-		"trigger radius" 20
-		"blast radius" 48
+		"optical tracking" .9
 		"hit force" 90
 		"missile strength" 30
 		"submunition" "Firelight Activated"
@@ -18059,13 +18163,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		"homing"
 			"throttle control"
 		"optical tracking" .7
-		"trigger radius" 20
-		"blast radius" 48
 		"shield damage" 950
 		"hull damage" 950
 		"heat damage" 1800
 		"burn damage" 10
-		"corrosion damage" 2
 		"hit force" 600
 		"missile strength" 33
 </pre>
@@ -18119,7 +18220,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04020
 	cost 19800
 	thumbnail "outfit/firestorm torpedo"
-	"mass" 1
+	"mass" 2
 	"firestorm torpedo capacity" -1
 	"energy generation" 0.06
 	"heat generation" 0.3
@@ -18137,9 +18238,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04021
 	cost "135000"
 	thumbnail "outfit/firestorm torpedo rack"
-	"mass" 7
+	"mass" 8
 	"outfit space" -20
-	"firestorm torpedo capacity" 13
+	"firestorm torpedo capacity" 6
 	ammo "Firestorm Torpedo"
 	description "This large cage-like rack is designed to be able to house several deadly Firestorm Torpedoes."
 </pre>
@@ -18156,7 +18257,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 04020
 	cost 2383000
 	thumbnail "outfit/firestorm battery"
-	"mass" 35
+	"mass" 22
 	"outfit space" -48
 	"weapon capacity" -48
 	"energy capacity" 1300
@@ -18195,7 +18296,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull damage" 2760
 		"heat damage" 5320
 		"burn damage" 40
-		"corrosion damage" 5
 		"hit force" 6000
 		"missile strength" 115
 	description "Though not as refined as the newer Firelight version, this torpedo contains an augmented Korath Plasma Core reactor element completely stripped of its protective casing and safety interlocks. When activated, it generates a tremendous explosion of heat and force that pushes ships away and will even melt their hulls."
@@ -19320,8 +19420,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	cost 1371000
 	thumbnail "outfit/inhibitor turret"
 	"mass" 42
-	"outfit space" -28
-	"weapon capacity" -22
+	"outfit space" -42
+	"weapon capacity" -42
 	"required crew" 1
 	"turret mounts" -1
 	weapon
@@ -19346,8 +19446,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"hull damage" 19.5
 		"hit force" 58.5
 		"slowing damage" .5
-	description `While cannons that can interfere with a ship's engines are useful in any situation, the Remnant quickly decided that it would be even more useful as a turret that their ships could use to impede those chasing after them. These small Inhibitor Turrets are typically found primarily on Pelicans trying to outrun opponents rather than defeat them.`
-	description `Although these turrets are unremarkable in terms of performance, the comparatively recent perfection of a technique of installing the bulk of the weapon itself externally on the turret mount instead of under the base has resulted in a weapon that takes comparatively little outfit space. It does, however, still add quite a bit more to the mass of the ship.`
+	description `While cannons that can interfere with a ship's engines are useful in any situation, the Remnant have long desired a turret that their ships could use to impede those chasing after them. These versatile Inhibitor Turrets are typically found on ships trying to outrun opponents rather than defeat them.`
+	description `	Although these turrets are unremarkable in terms of performance, the comparatively recent refinement of the interference effect dampens the strong torques that previously made the use of a swiveling mount unfeasible, making these turrets a true engineering achievement.`
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/inhibitor turret.png" width="150" height="150">
 </details>
@@ -19467,7 +19567,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 03010
 	cost 4400
 	thumbnail "outfit/emp torpedo"
-	"mass" 1
+	"mass" .6
 	"emp torpedo capacity" -1
 	description "This torpedo can emit electromagnetic pulses, interfering with a ship's generators."
 </pre>
@@ -19485,10 +19585,10 @@ document.addEventListener("DOMContentLoaded", function() {
 		Remnant
 	cost 98000
 	thumbnail "outfit/emp rack"
-	"mass" 5
+	"mass" 4.8
 	"outfit space" -12
 	"energy capacity" 400
-	"emp torpedo capacity" 7
+	"emp torpedo capacity" 12
 	ammo "EMP Torpedo"
 	description "The EMP Torpedo Storage Bay is used to store extra ammunition for weapons that use EMP torpedoes."
 	description "	In addition to its ammunition capacity, the storage bay can also contain a small amount of charge, enough to let an otherwise battery-less ship fire EMP Torpedoes."
@@ -19511,7 +19611,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -18
 	"weapon capacity" -18
 	"gun ports" -1
-	"emp torpedo capacity" 9
+	"emp torpedo capacity" 15
 	weapon
 		sprite "projectile/emp torpedo"
 			"frame rate" 2
@@ -19536,7 +19636,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"turn" 2
 		"homing"
 			"throttle control"
-		"infrared tracking" .7
+		"infrared tracking" .2
 		"radar tracking" .8
 		"trigger radius" 50
 		"blast radius" 200
@@ -19556,45 +19656,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/remnant/remnant outfits.txt | outfit "Teciimach Canister"</summary>
-<pre>outfit "Teciimach Canister"
-	category "Ammunition"
-	series "Ammunition"
-	index 03020
-	cost 35500
-	thumbnail "outfit/emp torpedo"
-	"mass" 1
-	"teciimach canister capacity" -1
-	description "This canister contains everything required to assemble a Teciimach Torpedo. These weapons emit strong electromagnetic pulses which interfere with a ship's generators and neutralize a portion of their energy."
-	description `	Unlike the previous generation of "EMP Torpedoes," the Teciimach torpedoes actively shape their emission pattern to avoid impacting their allies.`
-</pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/emp torpedo.png" width="100" height="90">
-</details>
-
-
-<details>
-<summary>data/remnant/remnant outfits.txt | outfit "Teciimach Canister Rack"</summary>
-<pre>outfit "Teciimach Canister Rack"
-	category "Ammunition"
-	series "Ammunition"
-	index 03021
-	licenses
-		Remnant
-	cost 295000
-	thumbnail "outfit/emp rack"
-	"mass" 5
-	"outfit space" -9
-	"energy capacity" 500
-	"teciimach canister capacity" 9
-	ammo "Teciimach Canister"
-	description "The Teciimach Canister Rack is used to store extra sets of components, both to expand the capacity of a ship, and on carriers for resupplying fighters."
-	description "	In addition to its ammunition capacity, the storage bay can also contain a small amount of charge, enough to let an otherwise battery-less ship assemble Teciimach Torpedoes."
-</pre>
-<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/emp rack.png" width="140" height="140">
-</details>
-
-
-<details>
 <summary>data/remnant/remnant outfits.txt | outfit "Teciimach Bay"</summary>
 <pre>outfit "Teciimach Bay"
 	category "Secondary Weapons"
@@ -19604,51 +19665,50 @@ document.addEventListener("DOMContentLoaded", function() {
 		Remnant
 	cost 1525000
 	thumbnail "outfit/teciimach bay"
-	"mass" 9
-	"outfit space" -13
-	"weapon capacity" -13
+	"mass" 6
+	"outfit space" -18
+	"weapon capacity" -18
 	"gun ports" -1
-	"teciimach canister capacity" 9
+	"emp torpedo capacity" 20
 	weapon
 		sprite "projectile/emp torpedo"
 			"frame rate" 2
 			"no repeat"
 		sound "torpedo"
-		ammo "Teciimach Canister"
+		ammo "EMP Torpedo"
 		icon "icon/emp"
 		"fire effect" "emp torpedo fire" 5
 		"hit effect" "nuke explosion"
 		"hit effect" "emp ring" 30
 		"hit effect" "emp spark" 20
 		"die effect" "tiny explosion"
-		cluster
+		stream
 		safe
-		"reload" 310
+		"reload" 330
 		"firing energy" 400
 		"firing heat" 18
 		"inaccuracy" 5
 		"lifetime" 300
-		"velocity" 8
+		"velocity" 7
 		"acceleration" .7
 		"drag" .1
-		"turn" 2.5
+		"turn" 2
 		"homing"
 			"throttle control"
-		"infrared tracking" .8
-		"radar tracking" .9
+		"infrared tracking" .2
+		"radar tracking" .8
 		"trigger radius" 50
 		"blast radius" 200
-		"shield damage" 900
-		"hull damage" 125
-		"disabled damage" 60
-		"ion damage" 65
-		"scrambling damage" 65
-		"energy damage" 2000
+		"shield damage" 700
+		"hull damage" 100
+		"ion damage" 48
+		"scrambling damage" 48
 		"hit force" 135
-		"missile strength" 95
-	description "Electromagnetic pulse weapons were originally developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it."
-	description "Centuries later, the Teciimach revision includes a range of upgrades to their effectiveness, efficiency, reliability, and safety. The Remnant attribute these improvements to a mix of the latest research and secrets uncovered by Warren research teams."
-	description "	Ammunition for this weapon can be restocked at any outfitter."
+		"missile strength" 80
+	description `Electromagnetic pulse weapons were originally developed by the Remnant during the early days of their colony, when they were living in fear that the Alphas would overrun human space and expand beyond it.`
+	description `	The newest revision of the EMP Torpedo Bay, the "Teciimach," contains two major improvements. The first is a mechanism on the launcher that alters each torpedoes' energy to ignore allies, letting Teciimachs be deployed without risk of ionizing yourself or the rest of your fleet.`
+	description `	The second is a significant reduction in the size of the launcher hardware, allowing space for a clip that is a third larger.`
+	description `	Ammunition for this weapon can be restocked at any outfitter.`
 		to display
 			has "gamerule: universal ammo restocking"
 </pre>
@@ -19666,52 +19726,49 @@ document.addEventListener("DOMContentLoaded", function() {
 		Remnant
 	cost 762500
 	thumbnail "outfit/teciimach pod"
-	"mass" 3
+	"mass" 4
 	"outfit space" -6
 	"weapon capacity" -6
 	"gun ports" -1
-	"teciimach canister capacity" 3
+	"emp torpedo capacity" 3
 	weapon
 		sprite "projectile/emp torpedo"
 			"frame rate" 2
 			"no repeat"
 		sound "torpedo"
-		ammo "Teciimach Canister"
+		ammo "EMP Torpedo"
 		icon "icon/emp"
 		"fire effect" "emp torpedo fire" 5
 		"hit effect" "nuke explosion"
 		"hit effect" "emp ring" 30
 		"hit effect" "emp spark" 20
 		"die effect" "tiny explosion"
-		cluster
 		safe
 		"burst count" 3
-		"burst reload" 110
-		"reload" 620
-		"firing energy" 350
-		"firing heat" 16
+		"burst reload" 330
+		"reload" 660
+		"firing energy" 400
+		"firing heat" 18
 		"inaccuracy" 5
 		"lifetime" 300
-		"velocity" 8
+		"velocity" 7
 		"acceleration" .7
 		"drag" .1
-		"turn" 2.5
+		"turn" 2
 		"homing"
 			"throttle control"
-		"infrared tracking" .8
-		"radar tracking" .9
+		"infrared tracking" .2
+		"radar tracking" .8
 		"trigger radius" 50
 		"blast radius" 200
-		"shield damage" 900
-		"hull damage" 125
-		"disabled damage" 60
-		"ion damage" 60
-		"scrambling damage" 60
-		"energy damage" 2000
+		"shield damage" 700
+		"hull damage" 100
+		"ion damage" 48
+		"scrambling damage" 48
 		"hit force" 135
-		"missile strength" 95
+		"missile strength" 80
 	description "While originally developed as a heavy weapon to paralyze enemy capital ships, the Remnant have utilized on-the-spot assembly techniques to support their use on smaller ships. These pods sacrifice multiple assembly systems in order to fit them onto interceptor-class vessels."
-	description "	Despite this explanation, a careful examination of these bays and pods suggest that there is much more here than their volume would suggest."
+	description "	To better fit the hit-and-run tactics used on interceptors and light warships, Teciimach Pods launch all ready torpedoes at once instead of in sequence, maximizing the ion damage dealt in a single moment."
 	description "	Ammunition for this weapon can be restocked at any outfitter."
 		to display
 			has "gamerule: universal ammo restocking"
@@ -20938,6 +20995,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor outfits.txt | outfit `"Byiaa" Shield Cortex`</summary>
 <pre>outfit `"Byiaa" Shield Cortex`
+	plural `"Byiaa" Shield Cortices`
 	category "Systems"
 	series "Shields"
 	index 11010
@@ -20949,8 +21007,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -13
 	"shield generation" 1.9
 	"shield protection" -0.33
-	"shield energy" 2.92
+	"shield energy" 2.53
 	"shield connection point" 1
+	linked "Shield Cortex Interface"
 	description "At their peak, the Predecessors were feared not by how quickly they could overpower their enemies, but by how effectively they could outlast them. Many generations later, this philosophy is still reflected in modern Successor shield cortices, which are exceptionally powerful for their size but weaken the shield's resistance to incoming fire. This allows Successor ships to recover quickly from sustained damage, even if they are slightly more vulnerable to it."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/tiny successor shield.png" width="180" height="180">
@@ -20960,6 +21019,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor outfits.txt | outfit `"Ej" Shield Cortex`</summary>
 <pre>outfit `"Ej" Shield Cortex`
+	plural `"Ej" Shield Cortices`
 	category "Systems"
 	series "Shields"
 	index 11020
@@ -20971,8 +21031,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -21
 	"shield generation" 3.0
 	"shield protection" -0.33
-	"shield energy" 4.7
+	"shield energy" 4.0
 	"shield connection point" 1
+	linked "Shield Cortex Interface"
 	description "Because their bimodal engines draw power from a ship's shield matrix, even non-combat Successor craft can justify equipping powerful shield generators to afford them greater mobility. This is the largest unit the High Houses permit for sale to the general public; even so, it offers substantially faster regeneration than even the largest human shield generators."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/small successor shield.png" width="180" height="180">
@@ -20982,6 +21043,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor outfits.txt | outfit `"Jaase" Shield Cortex`</summary>
 <pre>outfit `"Jaase" Shield Cortex`
+	plural `"Jaase" Shield Cortices`
 	category "Systems"
 	series "Shields"
 	index 11030
@@ -20993,8 +21055,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -30
 	"shield generation" 4.8
 	"shield protection" -0.33
-	"shield energy" 7.4
+	"shield energy" 6.4
 	"shield connection point" 1
+	linked "Shield Cortex Interface"
 	description "The technology of their Predecessors was not nearly as modular as the modern Successor equivalents, which must be built with more limited resources and comparatively primitive manufacturing techniques. Nonetheless, this medium-sized shield cortex is powerful enough to shrug off the combined damage output of several lesser attackers, and consequently is reserved by the High Houses for use in their private navies."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/medium successor shield.png" width="180" height="180">
@@ -21004,6 +21067,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor outfits.txt | outfit `"Jorv" Shield Cortex`</summary>
 <pre>outfit `"Jorv" Shield Cortex`
+	plural `"Jorv" Shield Cortices`
 	category "Systems"
 	series "Shields"
 	index 11040
@@ -21015,8 +21079,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	"outfit space" -55
 	"shield generation" 10.5
 	"shield protection" -0.33
-	"shield energy" 16.1
+	"shield energy" 14.0
 	"shield connection point" 1
+	linked "Shield Cortex Interface"
 	description "Bristling with regeneration nodes, this large Successor shield cortex requires a power budget greater than most human warships in their entirety. Many more traditional members of the High Houses disapprove of its design, arguing that such a powerful piece of their technology deserves a more artful form, but there has ultimately been little desire to invest time and money into a redesign for purely aesthetic reasons."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/large successor shield.png" width="180" height="180">
@@ -21036,9 +21101,8 @@ document.addEventListener("DOMContentLoaded", function() {
 	mass 3
 	"outfit space" -3
 	"shield protection" 0.33
-	"shield generation multiplier" -0.05
 	"shield connection point" -2
-	description "This compact tract of electrical fibers connects two Successor shield cortices to function as a single unit, preventing the shield-softening effect of one of the generators from unduly reducing the durability of the ship's shields at the cost of slightly reducing efficiency. The effect scales poorly past two connected generators."
+	description "This compact tract of electrical fibers connects two Successor shield cortices to function as a single unit, preventing the shield-softening effect of one of the generators from unduly reducing the durability of the ship's shields. The effect scales poorly past two connected generators."
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/outfit/shield cortex interface.png" width="180" height="180">
 </details>
@@ -21735,15 +21799,16 @@ document.addEventListener("DOMContentLoaded", function() {
 		"reload" 30
 		"firing energy" 80
 		"firing heat" 120
+		"firing force" 25
 		# Because parent projectiles inherit the damage of their submunitions, we must subtract the total damage of all submunitions from the parent projectile to get the desired behavior (different damage profiles over different ranges).
 		"shield damage" -94
 		# 50 (parent) - 3*48 (child)
 		# close: 50 shield damage
 		# far: 144 shield damage
-		"hull damage" 75
-		# 135 (parent) - 3*20 (child)
+		"hull damage" 93
+		# 135 (parent) - 3*14 (child)
 		# close: 135 hull damage
-		# far: 60 hull damage
+		# far: 42 hull damage
 		"hit force" 120
 		"cluster"
 		"submunition" "Bimodal Switch" 3
@@ -21791,7 +21856,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing heat" 120
 		"firing force" 25
 		"shield damage" -94
-		"hull damage" 75
+		"hull damage" 93
 		"hit force" 120
 		"cluster"
 		"submunition" "Bimodal Switch" 3
@@ -21814,7 +21879,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"lifetime" 6
 		"random lifetime" 3
 		"shield damage" 48
-		"hull damage" 20
+		"hull damage" 14
 </pre>
 
 </details>
@@ -22046,7 +22111,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	licenses
 		"High Houses"
 	thumbnail "outfit/sjeja kinetic lance"
-	"mass" 60
+	"mass" 54
 	"outfit space" -60
 	"weapon capacity" -60
 	"energy capacity" 1900
@@ -22070,7 +22135,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		"firing energy" 1900
 		"firing ion" 3.0
 		"firing heat" 4000
-		"shield damage" 1336
+		"shield damage" 1069
 		"hull damage" 1920
 		"piercing" 0.15
 		"hit force" 800
@@ -22154,7 +22219,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"mass" 10
 	"outfit space" 10
 	"radar jamming" 30
-	"optical jamming" 20
+	"optical jamming" 2
 	"energy capacity" 100
 	"energy generation" 1
 	"heat generation" 0.5
@@ -22415,11 +22480,11 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Wanderer Outfits"
 	cost 450000
 	thumbnail "outfit/thunderhead launcher"
-	"mass" 14
+	"mass" 11
 	"outfit space" -26
 	"weapon capacity" -26
 	"gun ports" -1
-	"thunderhead capacity" 40
+	"thunderhead capacity" 56
 	weapon
 		sprite "projectile/thunderhead"
 			"no repeat"
@@ -22444,8 +22509,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"homing"
 			"leading"
 			"throttle control"
-		"infrared tracking" .9
-		"radar tracking" .6
+		"infrared tracking" 1.
+		"radar tracking" .3
 		"missile strength" 12
 	description "A prime example of Wanderer ingenuity, Thunderhead Missiles each carry five submunitions that are capable of independent tracking. Even if the target is able to shoot down or evade a few of them, the remaining missile fragments will still find their mark."
 	description "	Ammunition for this weapon can be restocked at any outfitter."
@@ -22464,7 +22529,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	index 09010
 	cost 1800
 	thumbnail "outfit/thunderhead"
-	mass .3
+	mass .27
 	"thunderhead capacity" -1
 	description "Thunderhead cluster munitions are long-range Wanderer missiles that split into five fast and agile submunitions when they are close to their target. Each launcher can hold up to 40 of these."
 </pre>
@@ -22490,8 +22555,8 @@ document.addEventListener("DOMContentLoaded", function() {
 		"homing"
 			"leading"
 			"throttle control"
-		"optical tracking" .9
-		"radar tracking" .6
+		"infrared tracking" 1.
+		"radar tracking" .3
 		"shield damage" 110
 		"hull damage" 80
 		"hit force" 225
@@ -22511,9 +22576,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		"Wanderer Outfits"
 	cost 36000
 	thumbnail "outfit/thunderhead storage"
-	"mass" 2
+	"mass" .4
 	"outfit space" -8
-	"thunderhead capacity" 20
+	"thunderhead capacity" 28
 	ammo "Thunderhead Missile"
 	description "The Thunderhead Storage Array is used to store extra ammunition for Thunderhead Launchers."
 </pre>
