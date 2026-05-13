@@ -4256,7 +4256,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Camera acceleration"</summary>
 <pre>tip "Camera acceleration"
-	`Determines whether the screen center is fixed on, trails behind, or speeds ahead of the flagship while accelerating.`
+	`Determines where the screen center is positioned relative to the flagship while accelerating.`
+	`- "off": camera is fixed on flagship.`
+	`- "on": camera trails behind.`
+	`- "reversed": camera speeds ahead.`
 </pre>
 
 </details>
@@ -4328,7 +4331,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Parallax background"</summary>
 <pre>tip "Parallax background"
-	`Add parallax to objects in the background (haze and starfield). If set to fancy, create three layers of parallax. If set to fast, create one layer of parallax.`
+	`Add parallax to objects in the background, which includes the haze and starfield.`
+	`- "fancy": three layers of parallax.`
+	`- "fast": one layer of parallax.`
+	`- "off": no parallax.`
 </pre>
 
 </details>
@@ -4364,7 +4370,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Ship outlines in shops"</summary>
 <pre>tip "Ship outlines in shops"
-	`Controls the display of your fleet ship icons when in the shipyard or outfitter. When fancy, applies a sobel filter to all ships. (This can result in high GPU load for large fleets.) When fast, just uses the ship's sprite.`
+	`Controls the display of your fleet ship icons when in the shipyard or outfitter.`
+	`- "fancy": applies a sobel filter to all ships. This can result in high GPU load for large fleets and/or on low performance computers.`
+	`- "fast": just uses the ship's sprite.`
 </pre>
 
 </details>
@@ -4373,7 +4381,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Ship outlines in HUD"</summary>
 <pre>tip "Ship outlines in HUD"
-	`Controls the display of your flagship and target ship icons in the HUD. When fancy, applies a sobel filter to the sprites. (This can result in high GPU load for some ships on very old or low performance computers.) When fast, just uses the ship's sprite.`
+	`Controls the display of your flagship and target ship icons in the HUD.`
+	`- "fancy": applies a sobel filter to the sprites. This can result in high GPU load for some ships on very old or low performance computers.`
+	`- "fast": just uses the ship's sprite.`
 </pre>
 
 </details>
@@ -4382,7 +4392,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Cloaked ship outlines"</summary>
 <pre>tip "Cloaked ship outlines"
-	`Controls the display of cloaked escorts. When fancy, causes the ship to become transparent and applies a red outline. When fast, simply shifts the ship to being red.`
+	`Controls the display of cloaked escorts.`
+	`- "fancy": causes the ship to become transparent and applies a red outline.`
+	`- "fast": simply shifts the ship to being red.`
 </pre>
 
 </details>
@@ -4400,7 +4412,12 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Show status overlays"</summary>
 <pre>tip "Show status overlays"
-	`Display status overlays over top of all ships when in flight. Status overlays display a ship's shields and hull. If the damaged option is chosen, overlays only appear on ships that have taken damage.`
+	`Display status overlays over top of all ships when in flight. Status overlays display a ship's shields and hull.`
+	`- "off": overlays never appear.`
+	`- "always on": overlays always appear.`
+	`- "damaged": overlays only appear on ships that have taken damage.`
+	`- "on hit": overlays appear for a short time on ships that have just taken damage.`
+	`- "--": this setting is broken down by ship category in the sub-settings below.`
 </pre>
 
 </details>
@@ -4472,7 +4489,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Highlight ships"</summary>
 <pre>tip "Highlight ships"
-	`Control whether ships should be highlighted while in flight. If set to "flagship," then a green highlight is applied to your flagship. If set to "owned ships," then your flagship and all the escorts you own will be highlighted. If set to "all," then all ships will have a highlight matching their color on the radar.`
+	`Control whether ships should be highlighted while in flight.`
+	`- "flagship": a green highlight is applied to your flagship.`
+	`- "owned ships": your flagship and all the escorts you own will be highlighted.`
+	`- "all": all ships will have a highlight matching their color on the radar.`
 </pre>
 
 </details>
@@ -4499,7 +4519,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Show mini-map"</summary>
 <pre>tip "Show mini-map"
-	`Control the display of a mini-map of nearby systems. If set to "when jumping", the mini-map only appears when initiating a hyperspace jump. If set to "always on", then it is always present when in flight.`
+	`Control the display of a mini-map of nearby systems.`
+	`- "off": the mini-map is never shown.`
+	`- "when jumping": the mini-map only appears when initiating a hyperspace jump.`
+	`- "always on": the mini-map is always present when in flight.`
 </pre>
 
 </details>
@@ -4517,7 +4540,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Alert indicator"</summary>
 <pre>tip "Alert indicator"
-	`Indicate when hostile ships enter your current system. Audio plays a siren. Visual displays an alert icon by the in-system radar.`
+	`Control an indicator that occurs when hostile ships enter your current system.`
+	`- "off": no indicator occurs.`
+	`- "audio": plays a siren.`
+	`- "visual": displays an alert icon by the in-system radar.`
+	`- "both": both audio and visual indicators occur.`
 </pre>
 
 </details>
@@ -4571,7 +4598,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Turret tracking"</summary>
 <pre>tip "Turret tracking"
-	`The strategy that your fleet's turrets use when targeting hostiles. Focused tracking will target all turrets on a ship at the same hostile. Opportunistic tracking will cause turrets to target ships that they are nearest to aiming at, allowing multiple hostiles to be engaged at once.`
+	`The strategy that your fleet's turrets use when targeting hostiles.`
+	`- "focused": all turrets will attack the same target.`
+	`- "opportunistic": turrets will target ships that they are nearest to aiming at, allowing multiple hostiles to be engaged at once.`
 </pre>
 
 </details>
@@ -4580,7 +4609,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Target asteroid based on"</summary>
 <pre>tip "Target asteroid based on"
-	`The strategy that the "Select nearest asteroid" control uses for selecting asteroids. Proximity selects the nearest asteroid. Value selects the highest value asteroid.`
+	`The strategy that the "Select nearest asteroid" control uses for selecting asteroids.`
+	`- "proximity": selects the nearest asteroid.`
+	`- "value": selects the highest value asteroid.`
 </pre>
 
 </details>
@@ -4589,7 +4620,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Boarding target priority"</summary>
 <pre>tip "Boarding target priority"
-	`The strategy that the "Board selected ship" control uses for selecting ships when you have none targeted. Proximity selects the nearest ship. Value selects the highest value ship (with the value being estimated if you haven't scanned the outfits of the ship). Mixed accounts for the value divided by the distance to the ship.`
+	`The strategy that the "Board selected ship" control uses for selecting ships when you have none targeted.`
+	`- "proximity": selects the nearest ship.`
+	`- "value": selects the highest value ship, with the value being estimated if you haven't scanned the outfits of the ship.`
+	`- "mixed": accounts for the value divided by the distance to the ship.`
 </pre>
 
 </details>
@@ -4598,7 +4632,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Escorts expend ammo"</summary>
 <pre>tip "Escorts expend ammo"
-	`The strategy that your escorts use for determining when to fire their secondary weapons. Able to be toggled by the "Fleet: Toggle ammo usage" control. The frugal setting only fires secondary weapons when your escort's HP is low or the hostiles in the system are stronger than your fleet and friendlies.`
+	`The strategy that your escorts use for determining when to fire their secondary weapons. Able to be toggled by the "Fleet: Toggle ammo usage" control.`
+	`- "never": your escorts will never use their secondary weapons.`
+	`- "frugal": your escorts will only fire their secondary weapons when their HP is low or the hostiles in the system are stronger than your fleet and friendlies.`
+	`- "always": your escorts will always use their secondary weapons when firing.`
 </pre>
 
 </details>
@@ -4607,7 +4644,11 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Flotsam collection"</summary>
 <pre>tip "Flotsam collection"
-	`Control which of your ships can pick up cargo floating in space.`
+	`Control which of your ships can pick up flotsam (cargo floating in space). Flotsam is picked up automatically when your ships overlap it.`
+	`- "off": your ships will never pick up flotsam.`
+	`- "flagship only": only your flagship will pick up flotsam.`
+	`- "escorts only": only your escorts will pick up flotsam.`
+	`- "on": your entire fleet will pick up flotsam.`
 </pre>
 
 </details>
@@ -4616,7 +4657,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Repair fighters in"</summary>
 <pre>tip "Repair fighters in"
-	`The strategy used for repairing carried ships (e.g. fighters, drones) in your fleet while they are docked with their carrier. Series repairs the highest HP ship until it is fully repaired, then moves on to the next one. Parallel repairs the lowest HP ship at all times so that all ships increase in HP together.`
+	`The strategy used for repairing carried ships (e.g. fighters, drones) in your fleet while they are docked with their carrier.`
+	`- "series": repairs the highest HP ship until it is fully repaired, then moves on to the next one.`
+	`- "parallel": repairs the lowest HP ship at all times so that all ships increase in HP together.`
 </pre>
 
 </details>
@@ -4796,7 +4839,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Notify on destination"</summary>
 <pre>tip "Notify on destination"
-	`If you enter a system with a planet you must land on for a mission, plays a notification sound.`
+	`Control an indicator that occurs when you enter a system with a planet you must land on for a mission.`
+	`- "off": no indication given.`
+	`- "message": displays a message with the planets you must land on.`
+	`- "both": displays the message and plays a notification sound.`
 </pre>
 
 </details>
@@ -4867,7 +4913,10 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Tribute confirmation"</summary>
 <pre>tip "Tribute confirmation"
-	`Whether a confirmation dialog will be displayed when you attempt to demand tribute from a planet. Either it always appears, never appears, or only appears if the target planet is friendly to you.`
+	`Whether a confirmation dialog will be displayed when you attempt to demand tribute from a planet.`
+	`- "off": you will never be asked for confirmation.`
+	`- "friendly only": you will only be asked for confirmation against planets that you are friendly toward.`
+	`- "always": you will always be asked for confirmation.`
 </pre>
 
 </details>
