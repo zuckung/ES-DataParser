@@ -4961,7 +4961,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "Spawn attempt period"</summary>
 <pre>tip "Spawn attempt period"
-	`The number of frames on average that the game waits before attempting to spawn a person ship. The game rolls a random number between 0 and this value minus one every frame. If the value lands on 0, a person ship spawn attempt is made. There are 60 frames in a second.`
+	`The number of frames on average that the game waits before attempting to spawn a person ship. The game rolls a random number between 0 and this value minus one every frame. (There are 60 frames in a second.) If the value lands on 0, a person ship spawn attempt is made. In other words, higher values result in lower spawn rates of person ships.`
 </pre>
 
 </details>
@@ -5040,9 +5040,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/_ui/tooltips.txt | tip "Fighters hit when disabled"</summary>
-<pre>tip "Fighters hit when disabled"
+<summary>data/_ui/tooltips.txt | tip "Fighter crossfire immunity"</summary>
+<pre>tip "Fighter crossfire immunity"
 	`Controls which carried ships (fighters and drones), when disabled, will not be hit by projectiles unless they are directly targeted. Fighters and drones are fragile ships that can be difficult and/or tedious to replace for the player, so this gamerule is a means of increasing their survivability without increasing their combat effectiveness. Disabled carried ships can still be hit by explosions, whether from weapons or exploding ships.`
+	`- "none": no carried ships are affected.`
+	`- "player": only ships owned by the player are affected.`
+	`- "all": all carried ships are affected.`
 </pre>
 
 </details>
