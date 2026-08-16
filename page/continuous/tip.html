@@ -4148,6 +4148,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip "Deploy / recall fighters"</summary>
 <pre>tip "Deploy / recall fighters"
 	`Deploy or recall carried ships (e.g. fighters, drones) in your fleet. Requires carriers with space to hold the carried ships.`
+	`Carried ships may automatically return to the carrier when damaged and redeploy when healed based off of the "Damaged fighters retreat" setting.`
+	`When used while holding &#60;shift&#62; or with the aforementioned setting disabled, fighters will remain deployed until manually recalled.`
 </pre>
 
 </details>
@@ -4663,6 +4665,17 @@ document.addEventListener("DOMContentLoaded", function() {
 	`The strategy used for repairing carried ships (e.g. fighters, drones) in your fleet while they are docked with their carrier.`
 	`- "series": repairs the highest HP ship until it is fully repaired, then moves on to the next one.`
 	`- "parallel": repairs the lowest HP ship at all times so that all ships increase in HP together.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Damaged fighters retreat"</summary>
+<pre>tip "Damaged fighters retreat"
+	`When deployed, your fighters and drones will automatically recall themselves to the carrier if their health drops below 50%, then automatically deploy again after healing above 75% if a manual recall command has not been sent.`
+	`If your fighters cannot be repaired above this threshold while docked in their carrier, they will not leave the carrier if you send another deploy command without holding &#60;shift&#62;.`
+	`The health of a ship is calculated as its shields plus the amount of hull prior to the ship becoming disabled.`
 </pre>
 
 </details>
