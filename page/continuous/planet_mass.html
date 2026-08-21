@@ -1,0 +1,959 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/stars.txt | "planet mass" 120.0</summary>
+<pre>"planet mass" 120.0
+	planet/ringworld
+	planet/ringworld left
+	planet/ringworld right
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 329.28</summary>
+<pre>"planet mass" 329.28
+	planet/dust0
+	planet/dust0-b
+	planet/oberon
+	planet/oberon-b
+	planet/rock17
+	planet/rock17-b
+	planet/tethys
+	planet/tethys-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 405.0</summary>
+<pre>"planet mass" 405.0
+	planet/station0
+	planet/station1
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 446.865</summary>
+<pre>"planet mass" 446.865
+	planet/europa
+	planet/europa-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 491.52</summary>
+<pre>"planet mass" 491.52
+	planet/rock7
+	planet/rock7-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 539.055</summary>
+<pre>"planet mass" 539.055
+	planet/desert4
+	planet/desert4-b
+	planet/miranda
+	planet/miranda-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 643.125</summary>
+<pre>"planet mass" 643.125
+	planet/station1k
+	planet/station1kd
+	planet/station2
+	planet/station3
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 699.84</summary>
+<pre>"planet mass" 699.84
+	planet/io
+	planet/io-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 759.795</summary>
+<pre>"planet mass" 759.795
+	planet/dust3
+	planet/dust3-b
+	planet/dust7
+	planet/dust7-b
+	planet/ice0
+	planet/ice0-b
+	planet/ice8
+	planet/ice8-b
+	planet/rock0
+	planet/rock0-b
+	planet/rock3
+	planet/rock3-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 823.08</summary>
+<pre>"planet mass" 823.08
+	planet/luna
+	planet/luna-b
+	planet/rock20
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1111.32</summary>
+<pre>"planet mass" 1111.32
+	planet/dust1
+	planet/dust1-b
+	planet/dust4
+	planet/dust4-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1192.605</summary>
+<pre>"planet mass" 1192.605
+	planet/rhea
+	planet/rhea-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1366.875</summary>
+<pre>"planet mass" 1366.875
+	planet/station2k
+	planet/station2kd
+	planet/station4
+	planet/station7
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1460.04</summary>
+<pre>"planet mass" 1460.04
+	planet/rock14
+	planet/rock14-b
+	planet/vesvi
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1557.345</summary>
+<pre>"planet mass" 1557.345
+	planet/callisto
+	planet/callisto-b
+	planet/dust5
+	planet/dust5-b
+	planet/ice7
+	planet/ice7-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1658.88</summary>
+<pre>"planet mass" 1658.88
+	planet/lava0
+	planet/lava0-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1875.0</summary>
+<pre>"planet mass" 1875.0
+	planet/lava2
+	planet/lava2-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 1989.765</summary>
+<pre>"planet mass" 1989.765
+	planet/dust2
+	planet/dust2-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2109.12</summary>
+<pre>"planet mass" 2109.12
+	planet/ganymede
+	planet/ganymede-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2233.155</summary>
+<pre>"planet mass" 2233.155
+	planet/lava1
+	planet/lava1-b
+	planet/mercury
+	planet/mercury-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2361.96</summary>
+<pre>"planet mass" 2361.96
+	planet/titan
+	planet/titan-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2495.625</summary>
+<pre>"planet mass" 2495.625
+	planet/rock11
+	planet/rock11-b
+	planet/station3k
+	planet/station3kd
+	planet/station5
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2634.24</summary>
+<pre>"planet mass" 2634.24
+	planet/lava6
+	planet/lava6-b
+	planet/rock15
+	planet/rock15-b
+	planet/water0
+	planet/water0-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 2777.895</summary>
+<pre>"planet mass" 2777.895
+	planet/dust6
+	planet/dust6-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 3240.0</summary>
+<pre>"planet mass" 3240.0
+	planet/lava7
+	planet/lava7-b
+	planet/rock5
+	planet/rock5-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 3932.16</summary>
+<pre>"planet mass" 3932.16
+	planet/desert7
+	planet/desert7-b
+	planet/lava3
+	planet/lava3-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 4119.375</summary>
+<pre>"planet mass" 4119.375
+	planet/rock8
+	planet/rock8-b
+	planet/station6
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 4312.44</summary>
+<pre>"planet mass" 4312.44
+	planet/desert9
+	planet/desert9-b
+	planet/lava5
+	planet/lava5-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 4927.635</summary>
+<pre>"planet mass" 4927.635
+	planet/forest6
+	planet/forest6-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 5145.0</summary>
+<pre>"planet mass" 5145.0
+	planet/cloud7
+	planet/cloud7-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 5368.665</summary>
+<pre>"planet mass" 5368.665
+	planet/forest3
+	planet/forest3-b
+	planet/rock16
+	planet/rock16-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 5598.72</summary>
+<pre>"planet mass" 5598.72
+	planet/mars
+	planet/mars-b
+	planet/rock19
+	planet/rock19-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 6078.36</summary>
+<pre>"planet mass" 6078.36
+	planet/desert8
+	planet/desert8-b
+	planet/lava4
+	planet/lava4-b
+	planet/rock9
+	planet/rock9-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 6328.125</summary>
+<pre>"planet mass" 6328.125
+	planet/desert0
+	planet/desert0-b
+	planet/ice2
+	planet/ice2-b
+	planet/ice4
+	planet/ice4-b
+	planet/ice6
+	planet/ice6-b
+	planet/rock13
+	planet/rock13-b
+	planet/rock18
+	planet/rock18-b
+	planet/rock6
+	planet/rock6-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 6584.64</summary>
+<pre>"planet mass" 6584.64
+	planet/cloud0
+	planet/cloud0-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 6847.995</summary>
+<pre>"planet mass" 6847.995
+	planet/cloud8
+	planet/cloud8-b
+	planet/ocean0
+	planet/ocean0-b
+	planet/ocean5
+	planet/ocean5-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 7395.585</summary>
+<pre>"planet mass" 7395.585
+	planet/rock1
+	planet/rock1-b
+	"planet/yniu eiu"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 7680.0</summary>
+<pre>"planet mass" 7680.0
+	planet/venus
+	planet/venus-b
+	planet/forest10
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 7971.615</summary>
+<pre>"planet mass" 7971.615
+	planet/desert2
+	planet/desert2-b
+	planet/forest1
+	planet/forest1-b
+	planet/ocean3
+	planet/ocean3-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 8270.52</summary>
+<pre>"planet mass" 8270.52
+	planet/cloud3
+	planet/cloud3-b
+	planet/desert5
+	planet/desert5-b
+	planet/ocean7
+	planet/ocean7-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 8576.805</summary>
+<pre>"planet mass" 8576.805
+	planet/forest5
+	planet/forest5-b
+	planet/rock2
+	planet/rock2-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 9211.875</summary>
+<pre>"planet mass" 9211.875
+	planet/desert3
+	planet/desert3-b
+	planet/desert6
+	planet/desert6-b
+	planet/rock12
+	planet/rock12-b
+	planet/wisp
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 9540.84</summary>
+<pre>"planet mass" 9540.84
+	planet/cloud6
+	planet/cloud6-b
+	planet/desert10
+	planet/desert10-b
+	planet/earth
+	planet/earth-b
+	planet/ocean9
+	planet/ocean9-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 9877.545</summary>
+<pre>"planet mass" 9877.545
+	planet/ocean1
+	planet/ocean1-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 10222.08</summary>
+<pre>"planet mass" 10222.08
+	planet/ice5
+	planet/ice5-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 10935.0</summary>
+<pre>"planet mass" 10935.0
+	planet/forest2
+	planet/forest2-b
+	planet/ice3
+	planet/ice3-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 11303.565</summary>
+<pre>"planet mass" 11303.565
+	planet/cloud4
+	planet/cloud4-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 12065.355</summary>
+<pre>"planet mass" 12065.355
+	planet/ocean4
+	planet/ocean4-b
+	planet/rock4
+	planet/rock4-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 12458.76</summary>
+<pre>"planet mass" 12458.76
+	planet/forest4
+	planet/forest4-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 12860.625</summary>
+<pre>"planet mass" 12860.625
+	planet/ocean8
+	planet/ocean8-b
+	planet/ice11
+	planet/redias
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 13271.04</summary>
+<pre>"planet mass" 13271.04
+	planet/desert1
+	planet/desert1-b
+	planet/desert13
+	planet/ocean2
+	planet/ocean2-b
+	planet/water1
+	planet/water1-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 13690.095</summary>
+<pre>"planet mass" 13690.095
+	planet/forest0
+	planet/forest0-b
+	planet/ice1
+	planet/ice1-b
+	planet/aviskir
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 14117.88</summary>
+<pre>"planet mass" 14117.88
+	planet/rock10
+	planet/rock10-b
+	planet/desert11
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 15000.0</summary>
+<pre>"planet mass" 15000.0
+	planet/cloud1
+	planet/cloud1-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 15454.515</summary>
+<pre>"planet mass" 15454.515
+	planet/cloud2
+	planet/cloud2-b
+	planet/ocean6
+	planet/ocean6-b
+	planet/ocean10
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 17364.375</summary>
+<pre>"planet mass" 17364.375
+	planet/gas7-r
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 18375.645</summary>
+<pre>"planet mass" 18375.645
+	planet/fog0
+	planet/fog0-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 23413.44</summary>
+<pre>"planet mass" 23413.44
+	planet/cloud5
+	planet/cloud5-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 27237.72</summary>
+<pre>"planet mass" 27237.72
+	planet/gas2
+	planet/gas2-hot
+	planet/gas2-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 35289.555</summary>
+<pre>"planet mass" 35289.555
+	planet/gas8
+	planet/gas8-hot
+	planet/gas8-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 36091.56</summary>
+<pre>"planet mass" 36091.56
+	planet/gas10
+	planet/gas10-hot
+	planet/gas10-b
+	planet/gas15
+	planet/gas15-b
+	planet/gas16
+	planet/gas16-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 40284.285</summary>
+<pre>"planet mass" 40284.285
+	planet/neptune
+	planet/neptune-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 54783.96</summary>
+<pre>"planet mass" 54783.96
+	planet/gas17
+	planet/gas17-b
+	planet/uranus
+	planet/uranus-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 60295.185</summary>
+<pre>"planet mass" 60295.185
+	planet/gas14
+	planet/gas14-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 62599.215</summary>
+<pre>"planet mass" 62599.215
+	planet/gas1
+	planet/gas1-hot
+	planet/gas1-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 71124.48</summary>
+<pre>"planet mass" 71124.48
+	planet/gas9
+	planet/gas9-hot
+	planet/gas9-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 79020.36</summary>
+<pre>"planet mass" 79020.36
+	planet/gas7
+	planet/gas7-hot
+	planet/gas7-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 80390.625</summary>
+<pre>"planet mass" 80390.625
+	planet/gas4
+	planet/gas4-hot
+	planet/gas4-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 90428.52</summary>
+<pre>"planet mass" 90428.52
+	planet/gas5
+	planet/gas5-hot
+	planet/gas5-b
+	planet/saturn
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 91927.305</summary>
+<pre>"planet mass" 91927.305
+	planet/gas11
+	planet/gas11-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 101269.035</summary>
+<pre>"planet mass" 101269.035
+	planet/jupiter
+	planet/jupiter-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 106168.32</summary>
+<pre>"planet mass" 106168.32
+	planet/gliese
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 111223.125</summary>
+<pre>"planet mass" 111223.125
+	planet/wormhole
+	planet/wormhole-red
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 116435.88</summary>
+<pre>"planet mass" 116435.88
+	planet/gas0
+	planet/gas0-hot
+	planet/gas0-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 125481.405</summary>
+<pre>"planet mass" 125481.405
+	planet/gas13
+	planet/gas13-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 144953.955</summary>
+<pre>"planet mass" 144953.955
+	planet/gas12
+	planet/gas12-b
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 151165.44</summary>
+<pre>"planet mass" 151165.44
+	planet/vulpa
+	planet/aera
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/stars.txt | "planet mass" 153274.695</summary>
+<pre>"planet mass" 153274.695
+	planet/gas3
+	planet/gas3-hot
+	planet/gas3-b
+	planet/gas6
+	planet/gas6-hot
+	planet/gas6-b
+</pre>
+
+</details>
+
+
+</font>
+</body>
+</html>
+
