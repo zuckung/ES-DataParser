@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	language "Ka'het"
 	color 0.4 0.4 0.7
+	confusion "aberrant"
 	"player reputation" -1000
 	"default attitude" -.01
 	"attitude toward"
@@ -78,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 1
 	"crew attack" 1.5
 	"crew defense" 2.5
+	confusion "elite"
 	"player reputation" -1000
 	"bribe" 0
 	"fine" 0
@@ -89,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Author"</summary>
 <pre>government "Author"
+	confusion "perfect"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -105,6 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 15
 	language "Avgi"
 	color "governments: Avgi"
+	confusion "civilian"
 	"player reputation" 1
 	"attitude toward"
 		"Avgi (Consonance)" 0.5
@@ -162,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 1
 	language "Avgi"
 	color "governments: Dissonance"
+	confusion "pirate"
 	"player reputation" 1
 	"attitude toward"
 		"Avgi" 1
@@ -198,6 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	language "Avgi"
 	color "governments: Dissonance"
 	"player reputation" 0
+	confusion "pirate"
 	"attitude toward"
 		"Avgi" -0.01
 		"Avgi (Consonance)" -0.05
@@ -225,6 +231,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 12
 	language "Avgi"
 	color "governments: Twilight Guard"
+	confusion "military"
 	"player reputation" 1
 	"attitude toward"
 		"Avgi" 1
@@ -257,6 +264,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 22
 	language "Avgi"
 	color "governments: Wandering Fleet"
+	confusion "military"
 	"player reputation" 0
 	"attitude toward"
 		"Avgi" 1
@@ -288,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Bad Trip"</summary>
 <pre>government "Bad Trip"
 	swizzle 0
+	confusion "perfect"
 	"player reputation" -1000
 </pre>
 
@@ -298,6 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Bounty"</summary>
 <pre>government "Bounty"
 	swizzle 6
+	confusion "pirate"
 	"player reputation" -1000
 	"fine" 0
 	"hostile hail" "hostile bounty"
@@ -312,6 +322,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Bounty (Disguised)"
 	"display name" "Merchant"
 	swizzle 5
+	confusion "pirate"
 	"player reputation" 1
 	"fine" 0
 	"friendly hail" "friendly civilian"
@@ -335,6 +346,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Bounty Hunter"
 	swizzle 6
 	color "governments: Pirate"
+	confusion "pirate"
 	"player reputation" -1000
 	"bribe" .2
 	"fine" 0
@@ -352,6 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	# as long as you don't attack them again they will focus on their usual activities
 	color .91 .13 .82
 	language "Builder"
+	confusion "advanced automata"
 	"fine" 0
 	"penalty for"
 		assist 0
@@ -371,6 +384,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 3
 	color .35 .65 .3
 	language "Bunrodea"
+	confusion "civilian"
 	"player reputation" 1
 	"attitude toward"
 		"Bunrodea (Erabu)" 1
@@ -394,6 +408,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 11
 	color .35 .65 .3
 	language "Bunrodea"
+	confusion "civilian"
 	"player reputation" 1
 	"attitude toward"
 		"Bunrodea" 1
@@ -417,6 +432,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 11
 	color .35 .65 .3
 	language "Bunrodea"
+	confusion "military"
 	"player reputation" -1
 	"attitude toward"
 		"Bunrodea" 1
@@ -442,6 +458,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 18
 	color .35 .65 .3
 	language "Bunrodea"
+	confusion "civilian"
 	"player reputation" 1
 	"attitude toward"
 		"Bunrodea" 1
@@ -467,6 +484,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" .6
 	"crew defense" 3
 	language "Coalition"
+	confusion "civilian"
 	"player reputation" 1
 	"bribe" 0
 	"attitude toward"
@@ -505,6 +523,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Deep"
 	"display name" "Deep Security"
 	swizzle 0
+	confusion "military"
 	"player reputation" -1000
 	"friendly disabled hail" "friendly disabled"
 	"hostile hail" "hostile deep"
@@ -518,6 +537,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Deep Security"</summary>
 <pre>government "Deep Security"
 	swizzle 0
+	confusion "military"
 	"player reputation" 1
 	"attitude toward"
 		"Bounty" -.2
@@ -561,6 +581,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Drak"
 	swizzle 0
 	color 1 1 1
+	confusion "perfect"
 	"player reputation" 1
 	"fine" 0
 	"attitude toward"
@@ -576,6 +597,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Drak (Hostile)"
 	"display name" "Drak"
 	swizzle 0
+	confusion "perfect"
 	"player reputation" -1000
 	"attitude toward"
 		"Indigenous Lifeform" 1
@@ -590,6 +612,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Drak"
 	swizzle 0
 	color 1 1 1
+	confusion "perfect"
 	"player reputation" 1
 	"fine" 0
 	"attitude toward"
@@ -605,6 +628,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Ember Waste"</summary>
 <pre>government "Ember Waste"
 	"display name" "???"
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -624,6 +648,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Escort"</summary>
 <pre>government "Escort"
 	swizzle 5
+	confusion "player"
 	"fine" 0
 </pre>
 
@@ -635,6 +660,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Escort (Betraying)"
 	"display name" "Merchant"
 	swizzle 5
+	confusion "pirate"
 	"player reputation" 10
 	"attitude toward"
 		"Korath" -.01
@@ -653,6 +679,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Free Worlds"
 	swizzle 2
 	color "governments: Free"
+	confusion "military"
 	"player reputation" 1
 	"attitude toward"
 		"Alpha" -.4
@@ -679,6 +706,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	language "Gegno"
 	color .75 .59 .27
+	confusion "military"
 	"player reputation" 0
 	"crew attack" 1.1
 	"crew defense" 1.2
@@ -701,6 +729,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 18
 	language "Gegno"
 	color "governments: Gegno Scin"
+	confusion "civilian"
 	"player reputation" 0
 	"crew attack" 1.2
 	"crew defense" 1.4
@@ -724,6 +753,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Gegno Scin"
 	language "Gegno"
 	color "governments: Gegno Scin"
+	confusion "militia"
 	"player reputation" -1
 	"crew attack" 1.2
 	"crew defense" 1.4
@@ -744,6 +774,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 18
 	language "Gegno"
 	color "governments: Gegno Scin"
+	confusion "militia"
 	"player reputation" 0
 	"crew attack" 1.2
 	"crew defense" 1.4
@@ -767,6 +798,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	language "Gegno"
 	color "governments: Gegno Vi"
+	confusion "militia"
 	"player reputation" 0
 	"crew attack" 1.3
 	"crew defense" 1.5
@@ -792,6 +824,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Gegno Vi"
 	language "Gegno"
 	color "governments: Gegno Vi"
+	confusion "militia"
 	"player reputation" -1
 	"crew attack" 1.3
 	"crew defense" 1.5
@@ -812,6 +845,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Gegno Vi"
 	language "Gegno"
 	color "governments: Gegno Vi"
+	confusion "militia"
 	"player reputation" 0
 	"crew attack" 1.3
 	"crew defense" 1.5
@@ -837,6 +871,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Gegno Vi"
 	language "Gegno"
 	color "governments: Gegno Vi"
+	confusion "militia"
 	"player reputation" 0
 	"crew attack" 1.3
 	"crew defense" 1.5
@@ -862,6 +897,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	language "Gegno"
 	color "governments: Gegno Vi"
+	confusion "militia"
 	"player reputation" 0
 	"crew attack" 1.3
 	"crew defense" 1.5
@@ -884,6 +920,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Hai"
 	swizzle 0
 	color "governments: Hai"
+	confusion "militia"
 	"player reputation" 0
 	"attitude toward"
 		"Hai (Wormhole Access)" 1
@@ -915,6 +952,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Hai"
 	swizzle 0
 	color "governments: Hai"
+	confusion "civilian"
 	"player reputation" 0
 	"attitude toward"
 		"Hai" 1
@@ -949,6 +987,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Hai"
 	swizzle 0
 	color "governments: Hai"
+	confusion "civilian"
 	"player reputation" 0
 	"attitude toward"
 		"Hai" 1
@@ -978,6 +1017,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Hai"
 	swizzle 0
 	color "governments: Hai"
+	confusion "civilian"
 	"player reputation" 0
 	"attitude toward"
 		"Hai" 1
@@ -1008,6 +1048,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	color "governments: Hai (Unfettered)"
 	"crew attack" 1.4
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" -1000
 	"attitude toward"
 		"Hai (Unfettered Wanderer Tribute)" 2
@@ -1047,6 +1088,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 5
 	"crew attack" 1.4
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" -1000
 	"bribe" .02
 	"fine" 0
@@ -1065,6 +1107,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color "governments: Hai (Unfettered)"
 	"display name" "Hai (Unfettered)"
+	confusion "pirate"
 	"player reputation" 10
 	"attitude toward"
 		"Hai (Unfettered)" .01
@@ -1086,6 +1129,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Hai (Unfettered)"
 	"crew attack" 1.4
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" 0
 	"friendly hail" "friendly unfettered"
 	"friendly disabled hail" "friendly disabled unfettered"
@@ -1102,6 +1146,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Hai"
 	swizzle 0
 	color "governments: Hai"
+	confusion "militia"
 	"player reputation" 0
 	"attitude toward"
 		"Hai" 1
@@ -1130,6 +1175,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	color 1 .8 .5
 	"crew attack" 1.3
 	"crew defense" 2.8
+	confusion "elite"
 	"player reputation" 1
 	"bribe" 0
 	"friendly hail" "friendly heliarch"
@@ -1152,6 +1198,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Heliarch Test Dummy"</summary>
 <pre>government "Heliarch Test Dummy"
 	"display name" "Heliarch"
+	confusion "elite"
 	swizzle 0
 	color 1 .8 .5
 	"player reputation" -1000
@@ -1172,6 +1219,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" .2
 	"crew defense" 1
 	language "Incipias"
+	confusion "militia"
 	"player reputation" 0
 	"attitude toward"
 		"Conlatio" 1
@@ -1189,6 +1237,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Aqrabe"
 	swizzle 3
 	color "governments: New Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"New Houses" 1
@@ -1213,6 +1262,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Chydiyi"
 	swizzle 5
 	color "governments: Old Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"Old Houses" 1
@@ -1237,6 +1287,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Kaatrij"
 	swizzle 3
 	color "governments: New Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"New Houses" 1
@@ -1261,6 +1312,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Myurej"
 	swizzle 5
 	color "governments: Old Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"House Chydiyi" 1
@@ -1285,6 +1337,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Seineq"
 	swizzle 3
 	color "governments: New Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"New Houses" 1
@@ -1309,6 +1362,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "House Sioeora"
 	swizzle 5
 	color "governments: Old Houses"
+	confusion "elite"
 	"attitude toward"
 		Successor 1
 		"House Chydiyi" 1
@@ -1336,6 +1390,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" .2
 	"crew defense" 1
 	language "Incipias"
+	confusion "civilian"
 	"player reputation" 0
 	"attitude toward"
 		"Hicemus" 1
@@ -1353,6 +1408,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Independent"
 	swizzle 6
 	color "governments: Independent"
+	confusion "pirate"
 	"player reputation" 10
 	"bribe" .05
 	"fine" 0
@@ -1372,6 +1428,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Independent"
 	swizzle 6
 	color "governments: Independent"
+	confusion "pirate"
 	"player reputation" 10
 	"bribe" .05
 	"fine" 0
@@ -1389,6 +1446,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Indigenous Lifeform"
 	# Nothing you do permanently angers indigenous creatures, because they are
 	# not sentient and do not remember you as an individual.
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -1411,6 +1469,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Indigenous Lifeform (Acheron)"
 	# This indigenous gov is specifically for Acheron space life so they do not influence Ember Waste life.
 	"display name" "Indigenous Lifeform"
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -1431,6 +1490,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Indigenous Lifeform (Astral)"
 	# This indigenous gov is specifically for Astral Cetaceans so they "eat" other indigenous lifeforms.
 	"display name" "Indigenous Lifeform"
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -1455,6 +1515,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	# This indigenous gov is specifically for the Subsidurial, so that nothing in the game tries to hurt the poor thing.
 	"player reputation" 1
 	"display name" "Indigenous Lifeform"
+	confusion "wild"
 	"bribe" 0
 	"fine" 0
 	"penalty for"
@@ -1473,6 +1534,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Indigenous Lifeform (Tree)"</summary>
 <pre>government "Indigenous Lifeform (Tree)"
 	"display name" "Indigenous Lifeform"
+	confusion "wild"
 	"bribe" 0
 	swizzle 26
 	# Nothing you do permanently angers indigenous creatures, because they are
@@ -1494,6 +1556,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Indigenous Lifeform (Tree Two)"</summary>
 <pre>government "Indigenous Lifeform (Tree Two)"
 	"display name" "Indigenous Lifeform"
+	confusion "wild"
 	"bribe" 0
 	swizzle 14
 	# Nothing you do permanently angers indigenous creatures, because they are
@@ -1516,6 +1579,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Ka'het"
 	swizzle 0
 	language "Ka'het"
+	confusion "ka'het"
 	"default attitude" -.01
 	"attitude toward"
 		"Author" 0
@@ -1535,6 +1599,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Ka'het"
 	swizzle 0
 	language "Ka'het"
+	confusion "ka'het"
 	"default attitude" -.01
 	"attitude toward"
 		"Author" 0
@@ -1553,6 +1618,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Ka'sei"
 	swizzle 0
 	language "Ka'het"
+	confusion "ka'het"
 	"penalty for"
 		assist 0
 		disable 0
@@ -1570,6 +1636,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Ka'sei"
 	swizzle 0
 	language "Ka'het"
+	confusion "ka'het"
 	"penalty for"
 		assist 0
 		disable 0
@@ -1610,6 +1677,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color .49 .33 .69
 	language "Korath"
+	confusion "militia"
 	"attitude toward"
 		"Kor Mereti" -.01
 		"Kor Sestor" -.01
@@ -1632,6 +1700,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 5
 	color .43 .48 .87
 	language "Korath"
+	confusion "kor mereti"
 	"attitude toward"
 		"Kor Sestor" -.01
 		"Wanderer" -.01
@@ -1647,6 +1716,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Kor Mereti"
 	swizzle 5
 	language "Korath"
+	confusion "kor mereti"
 	"attitude toward"
 		"Wanderer" -.01
 		"Kor Mereti" -.01
@@ -1662,6 +1732,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	color 1 .36 .49
 	language "Korath"
+	confusion "kor sestor"
 	"attitude toward"
 		"Kor Mereti" -.01
 		"Wanderer" -.01
@@ -1683,6 +1754,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.4
 	"crew defense" 2.6
 	language "Korath"
+	confusion "military"
 	"attitude toward"
 		"Kor Sestor" -.01
 		"Korath (Civilian)" 1
@@ -1706,6 +1778,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.1
 	"crew defense" 2.1
 	language "Korath"
+	confusion "pirate"
 	"attitude toward"
 		"Kor Mereti" -.01
 		"Kor Sestor" -.01
@@ -1724,6 +1797,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/governments.txt | government "Korath Nanobots"</summary>
 <pre>government "Korath Nanobots"
+	confusion "perfect"
 	"player reputation" -1000
 	"bribe" 0
 	"fine" 0
@@ -1739,6 +1813,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.2
 	"crew defense" 2.7
 	language "Coalition"
+	confusion "pirate"
 	"player reputation" 1
 	"bribe" 0
 	"friendly hail" "friendly lunarium"
@@ -1762,6 +1837,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.2
 	"crew defense" 2.7
 	language "Coalition"
+	confusion "pirate"
 	"player reputation" 1
 	"bribe" 0
 	"friendly hail" "friendly lunarium"
@@ -1781,6 +1857,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Magic Asteroid"</summary>
 <pre>government "Magic Asteroid"
 	"display name" "???"
+	confusion "perfect"
 	swizzle 0
 	language "Magic Asteroid"
 	"attitude toward"
@@ -1827,6 +1904,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Marauder"</summary>
 <pre>government "Marauder"
 	swizzle 6
+	confusion "perfect"
 	"player reputation" 1
 	"bribe" .1
 	"fine" 0
@@ -1842,6 +1920,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Merchant"</summary>
 <pre>government "Merchant"
 	swizzle 5
+	confusion "civilian"
 	"player reputation" 10
 	"attitude toward"
 		"Bounty" -.2
@@ -1864,6 +1943,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Merchant (Hostile)"
 	swizzle 5
 	"display name" "Merchant"
+	confusion "pirate"
 	"player reputation" -10
 	"hostile hail" "hostile pirate"
 </pre>
@@ -1876,6 +1956,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Militia"
 	swizzle 2
 	color "governments: Free"
+	confusion "military"
 	"player reputation" 0
 	"attitude toward"
 		"Bounty" -.4
@@ -1898,6 +1979,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	"crew attack" 1.2
 	"crew defense" 2.2
+	confusion "military"
 	"attitude toward"
 		"Syndicate" -.1
 		"Pirate" -.3
@@ -1915,6 +1997,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	color "governments: Republic"
 	"crew attack" 1.2
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" 100
 	"attitude toward"
 		"Alpha" -.3
@@ -1963,6 +2046,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "New Houses"
 	swizzle 3
 	color "governments: New Houses"
+	confusion "military"
 	"attitude toward"
 		Successor 1
 		"House Kaatrij" 1
@@ -1988,6 +2072,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Old Houses"
 	swizzle 5
 	color "governments: Old Houses"
+	confusion "military"
 	"attitude toward"
 		Successor 1
 		"House Chydiyi" 1
@@ -2012,6 +2097,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Parrot"</summary>
 <pre>government "Parrot"
 	swizzle 2
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"friendly disabled hail" "friendly disabled"
@@ -2026,6 +2112,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "People's Houses"
 	swizzle 6
 	color 0.92 0.29 0.20
+	confusion "militia"
 	"attitude toward"
 		Successor 1
 		"People's Houses (Hostile)" 0.2
@@ -2047,6 +2134,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "People's Houses"
 	swizzle 6
 	color 0.92 0.29 0.20
+	confusion "militia"
 	"player reputation" -10
 	"attitude toward"
 		Author -0.01
@@ -2069,6 +2157,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Pirate"
 	swizzle 6
 	color "governments: Pirate"
+	confusion "pirate"
 	"player reputation" -10
 	"attitude toward"
 		"Author" -.01
@@ -2098,6 +2187,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Pirate"
 	swizzle 6
 	color "governments: Pirate"
+	confusion "pirate"
 	"player reputation" -10
 	"attitude toward"
 		"Author" -.01
@@ -2135,6 +2225,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Pug"
 	swizzle 0
 	color "governments: Pug"
+	confusion "pug"
 	"player reputation" 1
 	"attitude toward"
 		"Drak" -.01
@@ -2157,6 +2248,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Pug"
 	swizzle 0
 	color "governments: Pug"
+	confusion "perfect"
 	"player reputation" 1
 	"attitude toward"
 		"Drak" -.01
@@ -2178,6 +2270,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Quarg"
 	swizzle 4
 	color "governments: Quarg"
+	confusion "elite"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg (Hai)" 1
@@ -2235,6 +2328,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color "governments: Quarg"
 	"display name" "Quarg"
+	confusion "elite"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg" 1
@@ -2288,6 +2382,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color "governments: Quarg"
 	"display name" "Quarg"
+	confusion "elite"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg" 1
@@ -2343,6 +2438,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color "governments: Quarg"
 	"display name" "Quarg"
+	confusion "elite"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg" 1
@@ -2409,6 +2505,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color "governments: Quarg"
 	"display name" "Quarg"
+	confusion "elite"
 	"player reputation" 1
 	"attitude toward"
 		"Quarg" 1
@@ -2464,6 +2561,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	color "governments: Remnant"
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" 1
 	"bribe" 0
 	"attitude toward"
@@ -2504,6 +2602,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 0
 	color "governments: Remnant"
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" 1
 	"bribe" 0
 	"attitude toward"
@@ -2572,6 +2671,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	color "governments: Republic"
 	"crew attack" 1.2
 	"crew defense" 2.2
+	confusion "military"
 	"player reputation" 2
 	"attitude toward"
 		"Alpha" -.3
@@ -2602,6 +2702,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.2
 	"crew defense" 2.2
 	"player reputation" 2
+	confusion "military"
 	"attitude toward"
 		"Alpha" -.01
 		"Merchant" .01
@@ -2624,6 +2725,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Rulei"</summary>
 <pre>government "Rulei"
 	swizzle 0
+	confusion "perfect"
 	"player reputation" 0
 	"bribe" 0
 	"fine" 0
@@ -2638,6 +2740,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Scar's Legion"
 	swizzle 6
 	color "governments: Pirate"
+	confusion "pirate"
 	"player reputation" 10
 	"attitude toward"
 		"Merchant" -0.01
@@ -2658,6 +2761,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"display name" "Scar's Legion"
 	swizzle 6
 	color "governments: Pirate"
+	confusion "pirate"
 	"player reputation" -1000
 	bribe 0
 	fine 0
@@ -2685,6 +2789,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Silent Ones"
 	"display name" "Indigenous Lifeform"
 	swizzle 0
+	confusion "wild"
 	"player reputation" 1
 	"bribe" 0
 	"fine" 0
@@ -2708,6 +2813,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	swizzle 4
 	color 0 .8 0.653
 	language "Successor"
+	confusion "militia"
 	"friendly hail" "successor friendly hail"
 	"friendly disabled hail" "successor friendly disabled hail"
 	"hostile hail" "successor hostile hail"
@@ -2722,6 +2828,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Syndicate"
 	swizzle 4
 	color "governments: Syndicate"
+	confusion "military"
 	"player reputation" 2
 	"attitude toward"
 		"Bounty" -.4
@@ -2745,6 +2852,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>government "Syndicate (Extremist)"
 	swizzle 1
 	color "governments: Syndicate"
+	confusion "elite"
 	"player reputation" -1000
 	"attitude toward"
 		"Syndicate" -.01
@@ -2763,6 +2871,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Team Blue"</summary>
 <pre>government "Team Blue"
 	swizzle 5
+	confusion "basic automata"
 	"player reputation" -1000
 	"attitude toward"
 		"Team Red" -.1
@@ -2775,6 +2884,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Team Red"</summary>
 <pre>government "Team Red"
 	swizzle 0
+	confusion "basic automata"
 	"player reputation" -1000
 	"attitude toward"
 		"Team Blue" -.1
@@ -2787,6 +2897,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/governments.txt | government "Test Dummy"</summary>
 <pre>government "Test Dummy"
 	swizzle 3
+	confusion "basic automata"
 	"player reputation" -1000
 	"hostile hail" "test dummy"
 	"hostile disabled hail" "disabled test dummy"
@@ -2815,6 +2926,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	"crew attack" 1.4
 	"crew defense" 1.8
 	color .70 .91 .12
+	confusion "militia"
 	"player reputation" 1
 	"attitude toward"
 		"Hai (Unfettered Wanderer Tribute)" .1
