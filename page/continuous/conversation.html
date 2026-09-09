@@ -1736,6 +1736,68 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/successors/successor 2 ghosts aqrabe.txt | conversation "successor keystone delivery"</summary>
+<pre>conversation "successor keystone delivery"
+	`	As soon as you inform traffic control that you are returning with the fifty keystones that House Aqrabe requested, your ship is directed to a side hangar surrounded by multiple small outfitting bays. Most are shuttered, but one is brightly lit and full of activity. It seems to be the domain of some of House Aqrabe's more unorthodox research efforts - the walls are draped with strange-looking fabrics, and a couple of unusual, abstract statues dot its interior. In the center, a ship-mounted scanner is in the midst of being deconstructed; as you walk in, a Successor pops their head around from behind it.`
+	`	"Captain &#60;last&#62;?" they ask.`
+	`	"Yes?"`
+	`	They slither forward towards you and splay their arms in the traditional gesture. "Tiliia," they offer as an introduction. "I was told to expect thine arrival. Thou hast brought," and they pause to pronounce the word, "keystones, yes?"`
+	`	"I have," you say. "Fifty keystones, as was requested." Tiliia joins you in walking back to the &#60;ship&#62; to examine the cargo; when they're sufficiently satisfied that you've brought the proper amount, they pull out a data-pad and enter a couple of values. Though their eyes widen when you provide them with your receipts, they nonetheless confirm a few moments later that House Aqrabe has credited you to offset the purchase price of the keystones, plus a three hundred thousand-credit bonus.`
+	`	As they begin directing ground crews to offload the keystones, Tiliia turns to you for a moment and requests that you meet them back at the spaceport by the end of the day: "thine assistance might be a boon to us in the next part of this journey," they say.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor 2 ghosts.txt | conversation "successor house contact"</summary>
+<pre>conversation "successor house contact"
+	`After you were asked to deploy sensor drones by House Seineq, it might be prudent to contact your patron House to update them about this development.`
+	choice
+		`	(Yes.)`
+		`	(No.)`
+			decline
+	action
+		event "successors: ghosts message delay" 4
+	`	You find your way to the local spaceport's communication hub, where you check out one of the Successors' data-spheres to encode your message for delivery to your patron House. When you're done, you submerge the data-sphere into a liquid-metal bath that pushes it around for a few moments before spitting it back at you, quietly chirping "missive sent."`
+		accept
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor 2 ghosts.txt | conversation "saajret returns"</summary>
+<pre>conversation "saajret returns"
+	`	Your ship once again glides into the &#60;planet&#62; spaceport, slipping beneath a dense layer of early-morning fog. Saajret meets you just outside, informing you the data they were sent to collect has already been transmitted and thanking you for your help.`
+	branch helped
+		has "Successors: Ghosts Helped Saajret"
+	`	They tell you to expect a deposit of &#60;payment&#62; from House Kaatrij.`
+		goto secret
+	label helped
+	`	They tell you to expect a deposit of 140000 credits from House Kaatrij and hand over a small chip containing 80000 additional credits.`
+	label secret
+	`	As Saajret watches a dockworker fitting a fuel hose to the &#60;ship&#62;'s side, something changes in their demeanor and a glint of almost furious orange sparks on their skin. "Captain," they say. "I'm told that thou'st experienced for thyself the hunting practices of the dread Kijran-Khora."`
+	choice
+		`	"I beg your pardon?"`
+		`	"A little too closely, actually."`
+	`	They continue, the color continuing to sparkle on their skin. "Beautiful beasts, aren't they? Truly aspirational; adept at camouflage, hiding themselves beyond all but the most scrutinizing gaze before closing in on their quarry. In the early days of Kaatrij, when the Kijran were still new, some particularly well-cloaked ones slipped into a weather-control tower. Perhaps," they say, "one might learn from their example, were there somewhere notable one wished to go." They cast their gaze upward, where the shimmering dots of planets above peek through the clouds.`
+	choice
+		`	"Why are you telling me this?"`
+		`	"Are you trying to tell me something?"`
+			goto foolish
+	`	The sparkle of color on their skin dies down and they look at you with mirth in their eyes. "I'm an archivist," they say. "I adore a good story."`
+		goto end
+	label foolish
+	`	The sparkle of color on their face intensifies for a moment before dying out. "Naught but an archivist's foolish games," they say.`
+	label end
+	`	They look over at the spaceport again. "Till again we meet, &#60;first&#62; &#60;last&#62;."`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderers start.txt | conversation "eruk cultural data"</summary>
 <pre>conversation "eruk cultural data"
 	branch return

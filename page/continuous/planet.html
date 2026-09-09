@@ -2695,6 +2695,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/map planets.txt | planet "Exotic Metal Garden"</summary>
+<pre>planet "Exotic Metal Garden"
+	attributes predecessor station uninhabited "requires: starlining"
+	landscape land/space6
+	description `Eerily quiet, the small habitable areas of this station are dominated by the view of a tangled nest of enormous metallic ribbons that stretch away from the Kasii-Cavasaa star. Deep in the bowels of the facility, these are spooled into strings of exotic stellar metal which, despite their small size, are improbably heavy and uncomfortably cold to the touch. Having not been harvested in many hundreds of years, the spools are silent and still - apart from a single one, which slowly revolves and holds almost no material.`
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/land/space6.jpg" width="200">
+</details>
+
+
+<details>
 <summary>data/map planets.txt | planet "Factory of Eblumab"</summary>
 <pre>planet "Factory of Eblumab"
 	attributes arach factory mining
@@ -4212,6 +4223,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/map planets.txt | planet "Ijra-Ea, Shimmering Veil"</summary>
+<pre>planet "Ijra-Ea, Shimmering Veil"
+	attributes predecessor station uninhabited
+	landscape land/station42
+	description `Uncomfortably vast, this ancient citadel of House Kaatrij seems to remain in a state of partial cloaking; sections of it shimmer in and out of view. Because of this, it shows up only intermittently on long-range sensors despite its great size.`
+	description `	Having been labeled as an ally by the station's security systems, your ship is able to land inside an empty docking bay within, but without a way of interfacing with the station's damaged computer systems, the further depths of its vast interior remain inscrutable for now. Though it still appears damaged, your previous visit seems to have activated some of its self-repair functions: tiny, ant-sized robots are hard at work performing maintenance on the bay's systems.`
+		to display
+			has "Successors: Ghosts 16: done"
+	government Predecessor
+	to land
+		has "Successors: Ghosts 16: offered"
+</pre>
+<img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/land/station42.jpg" width="200">
+</details>
+
+
+<details>
 <summary>data/map planets.txt | planet "Illbo Avo"</summary>
 <pre>planet "Illbo Avo"
 	attributes bunrodea military moon
@@ -4573,7 +4601,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	outfitter "Successor Civilian"
 	outfitter "Successor Weapons Heavy"
 	"required reputation" 2
-	bribe 0
 </pre>
 <img src="https://raw.githubusercontent.com/endless-sky/endless-sky/master/images/land/station42.jpg" width="200">
 </details>

@@ -7905,6 +7905,236 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/successors/successor events.txt | event "successors: ghosts initial timer"</summary>
+<pre>event "successors: ghosts initial timer"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts incident"</summary>
+<pre>event "successors: ghosts incident"
+	set "successors: ghosts stage 0"
+	planet "Qasa-Sija-Iri"
+		government "House Kaatrij"
+		description `Until recently, this moon was an utterly unremarkable uninhabited world within House Kaatrij's sphere of influence. However, near the south pole, the exposed guts of a strange facility now twinkle and shimmer half-enveloped in the moon's sands. A large military presence by House Kaatrij repels any closer inspection, but regardless, it seems that Qasa-Sija-Iri is not quite as uninhabited as it immediately appeared.`
+			to display
+				not "successors kaatrij vassal"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts restrict"</summary>
+<pre>event "successors: ghosts restrict"
+	planet "Qasa-Sija-Iri"
+		government "House Kaatrij"
+		"required reputation" 2
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts saajret contact"</summary>
+<pre>event "successors: ghosts saajret contact"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts stage 1"</summary>
+<pre>event "successors: ghosts stage 1"
+	set "successors: ghosts stage 1"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts unrestrict"</summary>
+<pre>event "successors: ghosts unrestrict"
+	planet "Qasa-Sija-Iri"
+		description `Beneath the colorless sandy surface of Qasa-Sija-Iri, House Kaatrij and their Quarg patrons have built a variety of advanced bases. The one near the south pole, now recovered from its earlier attack, is the moon's primary spaceport.`
+		spaceport `The subterranean spaceport here is small but clearly well-maintained. The landing pads travel on elevators to deep below the surface - the House Kaatrij ones, at least, because Successor vessels are the only craft visible here. If the Quarg have their own craft in residence, they must be landing in a different section of the facility, or at a different base altogether.`
+		add outfitter `Successor Basics`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts message delay"</summary>
+<pre>event "successors: ghosts message delay"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts seineq attacked"</summary>
+<pre>event "successors: ghosts seineq attacked"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts seineq memorial"</summary>
+<pre>event "successors: ghosts seineq memorial"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts cloak prompt delay"</summary>
+<pre>event "successors: ghosts cloak prompt delay"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts star unrestrict"</summary>
+<pre>event "successors: ghosts star unrestrict"
+	planet "Exotic Metal Garden"
+		remove attributes "requires: starlining"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts star restrict"</summary>
+<pre>event "successors: ghosts star restrict"
+	planet "Exotic Metal Garden"
+		add attributes "requires: starlining"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts keystones finished"</summary>
+<pre>event "successors: ghosts keystones finished"
+	planet Kasii-Cavasaa-Oa
+		add outfitter "Harmonic Keystone"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts probes destroyed"</summary>
+<pre>event "successors: ghosts probes destroyed"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts ijra-ea decloak"</summary>
+<pre>event "successors: ghosts ijra-ea decloak"
+	system Kasii-Sola
+		add object "Ijra-Ea, Shimmering Veil"
+			sprite "planet/station predecessor 1"
+			distance 2000
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts abandoned kaatrij"</summary>
+<pre>event "successors: ghosts abandoned kaatrij"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: military escalation"</summary>
+<pre>event "successors: military escalation"
+	"reputation: House Kaatrij" &#60;?= 0
+	planet Shassa-Wyra-Orrou
+		government "House Kaatrij"
+	planet Uo-Oraa-Vayya
+		government "House Kaatrij"
+	planet Kasi-Osolaa-Sossa
+		government "House Kaatrij"
+	system "Luue-Saqru"
+		fleet "Kaatrij Home" 2000
+	system "Maspa-Cavasaa"
+		fleet "Kaatrij Home" 1500
+	system "Osolaa-Uuoru"
+		fleet "Kaatrij Home" 2000
+	system "Pelaa-Muora"
+		fleet "Kaatrij Home" 1500
+	system "Myruet-Kvelq"
+		fleet "Kaatrij Expeditionary" 2000
+	system "Oublaa-Khora"
+		fleet "Kaatrij Expeditionary" 2000
+	system "Aaura-Kaska"
+		fleet "Large Old Houses" 2000
+	planet "Raaqa-Puan-Uuoru"
+		add shipyard "Kaatrij Light"
+	fleet "Kaatrij Home"
+		add variant 4
+			"Vujlet-Usaqri"
+		add variant 2
+			"Vujlet-Usaqri" 2
+		add variant 2
+			"Aaulqra"
+		add variant 2
+			"Aaulqra (Sniper)"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts intermission timer"</summary>
+<pre>event "successors: ghosts intermission timer"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor events.txt | event "successors: ghosts kaatrij expansion"</summary>
+<pre>event "successors: ghosts kaatrij expansion"
+	system "Luue-Saqru"
+		fleet "Kaatrij Home" 3000
+	system "Maspa-Cavasaa"
+		fleet "Kaatrij Home" 3000
+	system "Osolaa-Uuoru"
+		fleet "Kaatrij Home" 3000
+	system "Myruet-Kvelq"
+		fleet "Kaatrij Expeditionary" 3000
+	system "Oublaa-Khora"
+		fleet "Kaatrij Expeditionary" 3000
+	planet "Raaqa-Puan-Uuoru"
+		add shipyard "Kaatrij Light"
+		add outfitter "Harmonic Keystone"
+	planet "Yoqqa-Vasa-Vasa"
+		add outfitter "Harmonic Keystone"
+	planet "O-Vasa-Oa"
+		add outfitter "Harmonic Keystone"
+	fleet "Kaatrij Home"
+		add variant 4
+			"Vujlet-Usaqri"
+		add variant 2
+			"Vujlet-Usaqri" 2
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/wanderer/wanderer missions.txt | event "mereti visiting eneremprukt"</summary>
 <pre>event "mereti visiting eneremprukt"
 	system Eneremprukt
