@@ -52,74 +52,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	phrase
 		word
 			"I hope you're enjoying the game!"
-	ship Kestrel Kestrel
-		sprite "ship/kestreloriginal"
-		thumbnail "thumbnail/kestreloriginal"
-		"never disabled"
-		attributes
-			category "Heavy Warship"
-			"cost" 50000000
-			"shields" 40000
-			"hull" 40000
-			"required crew" 400
-			"bunks" 500
-			"mass" 2270
-			"drag" 18.75
-			"heat dissipation" 0.3
-			"fuel capacity" 500
-			"cargo space" 200
-			"outfit space" 2400
-			"weapon capacity" 900
-			"engine capacity" 400
-		outfits
-			"Ion Cannon" 12
-			"Electron Turret" 4
-			"Heavy Anti-Missile Turret" 4
-			
-			"Armageddon Core" 4
-			"LP036a Battery Pack"
-			"S-970 Regenerator" 6
-			"Liquid Helium Cooler" 5
-			"Catalytic Ramscoop"
-			
-			"A860 Atomic Thruster"
-			"A865 Atomic Steering" 2
-			"Ionic Afterburner"
-			"Scram Drive"
-		engine -14 177
-		engine 14 177
-		gun -75 57 "Ion Cannon"
-		gun 75 57 "Ion Cannon"
-		gun -75 57 "Ion Cannon"
-		gun 75 57 "Ion Cannon"
-		gun -53 61 "Ion Cannon"
-		gun 53 61 "Ion Cannon"
-		gun -53 61 "Ion Cannon"
-		gun 53 61 "Ion Cannon"
-		gun -31 66 "Ion Cannon"
-		gun 31 66 "Ion Cannon"
-		gun -31 66 "Ion Cannon"
-		gun 31 66 "Ion Cannon"
-		turret -7 -4 "Electron Turret"
-		turret 7 -4 "Electron Turret"
-		turret -7 -4 "Heavy Anti-Missile Turret"
-		turret 7 -4 "Heavy Anti-Missile Turret"
-		turret -23 14 "Electron Turret"
-		turret 23 14 "Electron Turret"
-		turret -23 14 "Heavy Anti-Missile Turret"
-		turret 23 14 "Heavy Anti-Missile Turret"
-		bay "Fighter" -46 106 under
-			"launch effect" "human internal"
-		bay "Fighter" 46 106 under
-			"launch effect" "human internal"
-		explode "small explosion" 50
-		explode "medium explosion" 80
-		explode "large explosion" 120
-		explode "huge explosion" 60
+	ship "Kestrel (MZ)"
 	ship "Finch (MZ)" "Vapor"
-		"never disabled"
 	ship "Finch (MZ)" "Cipher"
-		"never disabled"
 </pre>
 
 </details>
@@ -135,9 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	phrase
 		phrase
 			"friendly author"
-	ship "Wardragon" "Wardragon"
-		sprite "ship/wardragon"
-		"never disabled"
+	ship "Wardragon"
 </pre>
 
 </details>
@@ -269,84 +202,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Did you know that you can hail a ship over and over again and you'll get a different reply each time?"
 			"Don't you have a cargo of antique grandfather clocks or something to deliver somewhere?"
 			"Need as well as greed have followed us to the stars, and the rewards of wealth still await those wise enough to recognize this deep thrumming of our common pulse."
-	ship Vanguard "Pointedstick"
-		sprite "ship/pointedstick vanguard"
-		"never disabled"
-		attributes
-			category "Heavy Warship"
-			"cost" 7200000
-			"shields" 20000
-			"hull" 8000
-			"required crew" 23
-			"bunks" 45
-			"mass" 1357.5
-			"drag" 12
-			"heat dissipation" .4
-			"fuel capacity" 400
-			"cargo space" 50
-			"outfit space" 1215
-			"weapon capacity" 450
-			"engine capacity" 330
-			weapon
-				"blast radius" 160
-				"shield damage" 1600
-				"hull damage" 800
-				"hit force" 2400
-		outfits
-			"Proton Gun" 11
-			"Heavy Rocket Launcher" 4
-			"Heavy Rocket" 400
-			"Anti-Missile Turret"
-			
-			"Armageddon Core" 2
-			"KP-6 Photovoltaic Array" 4
-			"LP072a Battery Pack"
-			"D67-TM Shield Generator" 2
-			"Liquid Helium Cooler" 2
-			
-			"A860 Atomic Thruster"
-			"A865 Atomic Steering"
-			"Ionic Afterburner"
-			"Hyperdrive"
-		engine -31.5 130.5 0.7
-		engine 31.5 130.5 0.7
-		engine 0 130.5 0.7
-		gun 0 -130.5 "Proton Gun"
-			parallel
-		gun 0 -130.5 "Proton Gun"
-			parallel
-		gun 0 -130.5 "Proton Gun"
-			parallel
-		gun -24 -122 "Heavy Rocket Launcher"
-			parallel
-		gun -24 -122 "Heavy Rocket Launcher"
-			parallel
-		gun 24 -122 "Heavy Rocket Launcher"
-			parallel
-		gun 24 -122 "Heavy Rocket Launcher"
-			parallel
-		gun -40 -46 "Proton Gun"
-			parallel
-		gun -40 -46 "Proton Gun"
-			parallel
-		gun 40 -46 "Proton Gun"
-			parallel
-		gun 40 -46 "Proton Gun"
-			parallel
-		gun -34.5 -43 "Proton Gun"
-			parallel
-		gun -34.5 -43 "Proton Gun"
-			parallel
-		gun 34.5 -43 "Proton Gun"
-			parallel
-		gun 34.5 -43 "Proton Gun"
-			parallel
-		turret 0 42 "Anti-Missile Turret"
-		explode "tiny explosion" 18
-		explode "small explosion" 36
-		explode "medium explosion" 24
-		explode "large explosion" 8
-		"final explode" "final explosion large"
+	ship "Vanguard (Pointedstick)"
 </pre>
 
 </details>
@@ -476,8 +332,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`"Negative. I am a meat popsicle."`
 			`"How 'bout a bumper sandwich, Boogerlips?"`
 			`"I recommend the lobster."`
-	ship "Modified Osprey" "Power of the People"
-		"never disabled"
+	ship "Modified Osprey"
 </pre>
 
 </details>
@@ -566,8 +421,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"made a few modifications"
 		word
 			", with a little help, of course."
-	ship "Ursa Polaris" "Local God"
-		"never disabled"
+	ship "Ursa Polaris"
 </pre>
 
 </details>
@@ -580,10 +434,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	frequency 1000
 	personality
 		timid unconstrained coward appeasing uninterested mining harvests mute
-	ship "Subsidurial" "Subsidurial"
-		"never disabled"
 	system
 		government "Uninhabited"
+	ship "Subsidurial"
 </pre>
 
 </details>
@@ -681,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"transmission burst"
 		word
 			"&#62;"
-	ship "Shooting Star" "Prototype B3-CC4"
+	ship "Shooting Star"
 </pre>
 
 </details>
@@ -762,8 +615,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			"scatty stallion."
 			"potty pony."
 			"mental mustang."
-	ship "Marauder Bactrian" "Rais Iris XVIII"
-		"never disabled"
+	ship "Marauder Bactrian"
 </pre>
 
 </details>
@@ -915,11 +767,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Bricks and blenders make monsters."
 			"I have no idea what I'm doing."
 	ship "Modified Boxwing" "Quarg Block"
-		"never disabled"
 	ship "Modified Boxwing" "Hai Block"
-		"never disabled"
 	ship "Modified Boxwing" "Remnant Block"
-		"never disabled"
 </pre>
 
 </details>
@@ -944,7 +793,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			"You need new sprites?"
 			"Spot the difference."
 	ship "Modified Battleship" "RSS Smoking Dove"
-		"never disabled"
 </pre>
 
 </details>
@@ -984,7 +832,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Heat lasers and hull lasers are different metas and shouldn't be combined."
 			"&#60;placeholder text&#62;"
 	ship "Modified Ladybug" "Revealer of Hai"
-		"never disabled"
 </pre>
 
 </details>
@@ -1069,17 +916,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			"."
 			"!"
 	ship "Waverider" "Proofreader's Pain"
-		"never disabled"
 	ship "Waverider" "Art Critics' Regret"
-		"never disabled"
 	ship "Waverider" "Code Herders' Curse"
-		"never disabled"
 		add attributes
 			"required crew" 2
 	ship "Waverider" "Choreographers' Tears"
-		"never disabled"
 	ship "Waverider" "Adjuncators' Blood"
-		"never disabled"
 		outfits
 			"Particle Cannon" 4
 			"S-970 Regenerator"
@@ -1097,7 +939,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Emotional Baggage"
 			"Tear of Skade" 2
 	ship "Waverider" "Balancers' Madness"
-		"never disabled"
 		add attributes
 			"shields" 12000
 			"hull" 5000
@@ -1206,7 +1047,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			"Have more time for playing the game!"
 			"Prevent bugs!"
 	ship "Modified Hauler VI" "Bouldered Sea"
-		"never disabled"
 	ship "Hauler III" "Gravelly Reservoir"
 		"never disabled"
 	ship "Hauler III" "Stony Mere"
