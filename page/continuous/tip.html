@@ -1484,6 +1484,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "    w/ afterburner:"</summary>
+<pre>tip "    w/ afterburner:"
+	`Movement while both your primary thrusters and afterburners are active.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "movement:"</summary>
 <pre>tip "movement:"
 	`How quickly this ship can accelerate and turn.`
@@ -2681,7 +2690,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "idle:"</summary>
 <pre>tip "idle:"
-	`Energy and heat generated when this ship is idle, i.e. not firing weapons, turning, or thrusting.`
+	`Energy and heat generated per second when this ship is idle, i.e. not firing weapons, moving, or using any other systems.`
 </pre>
 
 </details>
@@ -2690,7 +2699,43 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "moving:"</summary>
 <pre>tip "moving:"
-	`Energy consumed and heat generated when this ship is turning and thrusting. This is in addition to the "idle" amount.`
+	`Energy consumed and heat generated per second when this ship is turning and thrusting. Includes the cost of using an afterburner if one is installed, or uses the cost of using reverse thrust if that is greater than the cost of forward thrust. This is in addition to the "idle" amount.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "thrusting:"</summary>
+<pre>tip "thrusting:"
+	`Energy consumed and heat generated per second when this ship is thrusting. This is in addition to the "idle" amount.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "reversing:"</summary>
+<pre>tip "reversing:"
+	`Energy consumed and heat generated per second when this ship is using reverse thrusters. This is in addition to the "idle" amount.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "afterburner:"</summary>
+<pre>tip "afterburner:"
+	`Energy consumed and heat generated per second when this ship is using its afterburner. This is in addition to the "idle" amount.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "turning:"</summary>
+<pre>tip "turning:"
+	`Turn rate, in degrees per second. The higher a ship's mass (including the mass of any cargo or fighters it is carrying), the slower it turns.`
 </pre>
 
 </details>
@@ -2699,7 +2744,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "firing:"</summary>
 <pre>tip "firing:"
-	`Energy consumed and heat generated when this ship is firing all its weapons. This is in addition to the "idle" amount.`
+	`Energy consumed and heat generated per second when this ship is firing all its weapons. This is in addition to the "idle" amount. Note that weapons may consume or generate more energy or heat than this at the moment they fire, and this is the average value over time.`
 </pre>
 
 </details>
@@ -2708,7 +2753,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "shields / hull:"</summary>
 <pre>tip "shields / hull:"
-	`Energy consumed and heat generated when this ship is recharging shields and repairing its hull at the same time. This is in addition to the "idle" amount.`
+	`Energy consumed and heat generated per second when this ship is recharging shields and repairing its hull at the same time. This is in addition to the "idle" amount.`
 </pre>
 
 </details>
@@ -2717,7 +2762,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "repairing hull:"</summary>
 <pre>tip "repairing hull:"
-	`Energy consumed and heat generated when this ship is repairing its hull. This is in addition to the "idle" amount.`
+	`Energy consumed and heat generated per second when this ship is repairing its hull. This is in addition to the "idle" amount.`
 </pre>
 
 </details>
@@ -2726,7 +2771,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "charging shields:"</summary>
 <pre>tip "charging shields:"
-	`Energy consumed and heat generated when this ship is recharging its shields. This is in addition to the "idle" amount.`
+	`Energy consumed and heat generated per second when this ship is recharging its shields. This is in addition to the "idle" amount.`
 </pre>
 
 </details>
@@ -2735,7 +2780,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "net change:"</summary>
 <pre>tip "net change:"
-	`The sum of the energy consumed and heat generated from the above energy and heat values. Represents the worst case scenario when all systems are active at once.`
+	`The sum of the energy consumed and heat generated per second from the above energy and heat values. Represents the worst case scenario when all possible systems are active at once.`
 </pre>
 
 </details>
@@ -2744,7 +2789,17 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "capacity:"</summary>
 <pre>tip "capacity:"
-	`Energy storage capacity and heat capacity. Energy capacity allows a ship to temporarily draw more energy than it produces, and can be increased by installing batteries. The heat capacity is the highest your heat generation can be without eventually causing your ship to overheat, and is influenced by the mass of the ship.`
+	`Energy capacity allows a ship to temporarily draw more energy than it produces, and can be increased by installing batteries.`
+	`Heat capacity is the highest your heat generation can be without eventually causing your ship to overheat, and is influenced by the mass of the ship. If the "net change" value for heat is greater than this value, then the ship can overheat itself. Weapons with high firing heat per shot can cause you to become overheated even if "net change" is below heat capacity.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "surge:"</summary>
+<pre>tip "surge:"
+	`This ship lacks energy storage. Therefore, this is the greatest amount of energy that can be drawn by any of this ship's systems in a single instant, such as the energy required for a single shot of a weapon. Systems that require more than this amount of energy to activate will be unusable.`
 </pre>
 
 </details>
@@ -3822,6 +3877,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "limited movement?"</summary>
+<pre>tip "limited movement?"
+	`This ship's energy supply is not sufficient to run both thrusters and steering at the same time. Its movement will be diminished.`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "solar power?"</summary>
 <pre>tip "solar power?"
 	`This ship is powered entirely by solar energy. It could be difficult to maneuver if you fly too far from the center of a star system, because your engines will only have a fraction of the power they require.`
@@ -3869,7 +3933,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/_ui/tooltips.txt | tip "insufficient energy to fire?"</summary>
 <pre>tip "insufficient energy to fire?"
-	`This ship has insufficient energy storage to fire an installed weapon.`
+	`This ship has insufficient energy storage to fire an installed weapon. Install outfits that increase your energy storage, or if you have no energy storage, ensure that your "surge" energy is greater than the firing energy per shot of your weapons.`
 </pre>
 
 </details>
@@ -5184,6 +5248,37 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/tooltips.txt | tip `Default admin cap`</summary>
 <pre>tip `Default admin cap`
 	`If the fleet size limitation is "admin cap," then this is the default maximum administrative capacity. Ships will have individual administrative costs that count toward your capacity. This value may be increased through story events. Changing this value on an existing pilot will have no effect.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Permadeath"</summary>
+<pre>tip "Permadeath"
+	`Whether permadeath mode is active, and how it should behave.`
+	`- "lock on death": When you die, this pilot will be locked. You will be unable to load any of its saves after it enters this state, but you'll still have the save files to share and for keeping memories.`
+	`- "delete on death": When you die, this pilot's save files will be deleted.`
+	`- "lock on takeoff": When you depart from a planet, this pilot will be locked. It will be unlocked again upon landing on a planet. Forces the "Restricted save loading" gamerule to be on.`
+	`- "delete on takeoff": When you depart from a planet, this pilot's save file will be deleted and will only be recreated when you land. Forces the "Single save file" and "Restricted save loading" gamerules to be on.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Single save file"</summary>
+<pre>tip "Single save file"
+	`If true, this pilot will only be able to have a single save file at a time. You will be unable to create snapshots and the game will not create autosaves for previous days. Only your most recent landing point will be saved.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Restricted save loading"</summary>
+<pre>tip "Restricted save loading"
+	`If true, this pilot will be unable to reload save files while not on the safety of a planet.`
 </pre>
 
 </details>
