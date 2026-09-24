@@ -25183,7 +25183,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			choice
 				`	"What is this about?"`
 			`	The second one now takes a step toward you to speak, almost interrupting the first. "We have a proposition for you. Should you agree to bring much needed supplies to our brethren, the Unfettered Hai, we will sell you this ship for the modest price of ten million credits - including two weapons belonging to the savage Korath!" The first one seems surprised by this and tries to intervene, but the second resumes before they can speak up.`
-			`	"These legendary weapons can interfere with nearly any engine system! Worry not, you'll be able to recuperate the cost of this ship with ease by assisting us. A load of medical supplies is needed on &#60;destination&#62;, and we lack the time and personnel to bring them ourselves on such short notice.`
+			`	"These weapons pack more of a punch than anything in human or even Hai space for their size! Worry not, you'll be able to recuperate the cost of this ship with ease by assisting us. A load of medical supplies is needed on &#60;destination&#62;, and we lack the time and personnel to bring them ourselves on such short notice.`
 			`	"Of course, the ship is aged, and you should not expect the best price in a shipyard. Nevertheless, it is a fine vessel, capable of fighting, freighting, and mining. So, what do you say, &#60;last&#62;? This is the opportunity of a lifetime; they simply don't make ships like this anymore."`
 			label choice
 			choice
@@ -96319,7 +96319,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 14"</summary>
 <pre>mission "Successors: Ghosts 14"
 	name "Destroy sensor probes"
-	description "House Kaatrij is concerned that the sensor probes in Predecessor space are being used against them, and have asked you to destroy them in &#60;waypoints&#62;."
+	description "House Kaatrij is concerned that the sensor probes in Predecessor space are being used against them, and have asked you to destroy them in Avasaa-Novaa, Eta Carinae, Khasola-Ryuit, and Kasii-Sola."
 	passengers 1
 	source "Qasa-Sija-Iri"
 	waypoint "Khasola-Ryuit"
@@ -96370,9 +96370,12 @@ document.addEventListener("DOMContentLoaded", function() {
 		dialog `Undoing your earlier hard work, you locate and destroy the scanner in this system.`
 	on waypoint
 		dialog `With this system cleared, you've destroyed all the sensor probes except the one in Kasii-Sola.`
+		mark "Kasii-Sola"
 		event "successors: ghosts ijra-ea decloak"
 		clear "Successors: you"
 		clear "Successors: uncannier"
+	to complete
+		has "successors: ghosts entered kasii-sola"
 	on fail
 		dialog phrase "successor ghosts story failed"
 </pre>
@@ -96383,15 +96386,15 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 15"</summary>
 <pre>mission "Successors: Ghosts 15"
-	passengers 1
 	transition
-	name "Destroy final sensor probe"
-	description "Having destroyed the other sensor probes, go to &#60;waypoints&#62; to destroy the fourth and final one before returning to &#60;destination&#62;."
+	invisible
 	waypoint "Kasii-Sola"
 	destination "Qasa-Sija-Iri"
 	to offer
 		has "event: successors: ghosts ijra-ea decloak"
 	on enter "Kasii-Sola"
+		unmark "Kasii-Sola" "Successors: Ghosts 14"
+		set "successors: ghosts entered kasii-sola"
 		conversation
 			`As you enter the system, your ship's sensors remark on an object that wasn't here the last time: a space station has appeared in close solar orbit. Every few seconds your lock on the station breaks before it is quickly reacquired.`
 			`	Saajret's look at examining the station is one of despair. "Wretches!" they say. "We shall need to address this upon returning. Our time is running short, Captain. Let us destroy the fourth probe with haste."`
@@ -96401,10 +96404,9 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	Saajret hums for a moment. "Fine, fine. It's one of ours, a citadel of old Kaatrij from bygone years. 'Twas cloaked, of course. 'Til now, t'would seem; and so we are outmaneuvered again. That is why we must be quick, Captain; thou mustn't delay."`
 				accept
 	on complete
+		clear "successors: ghosts entered kasii-sola"
 		conversation
 			`While you are presenting your landing authorization, Saajret calls for several members of Kaatrij to meet you in the docking bay; by the time you land, they are there waiting, slithering over to speak to Saajret almost immediately. The leader of this group dismisses you and Saajret, with an apologetic bow, asks you to meet them at the &#60;planet&#62; spaceport in an hour.`
-	on fail
-		dialog phrase "successor ghosts story failed"
 </pre>
 
 </details>
