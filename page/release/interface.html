@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		to -250 115
 	sprite "_menu/side panel"
 		center 360 0
-	visible if "pilot loaded"
+	visible if "can load"
 	button e "_Enter Ship"
 		center 435 155
 		dimensions 90 30
@@ -371,11 +371,11 @@ document.addEventListener("DOMContentLoaded", function() {
 	button o "_Open Saves"
 		center -435 195
 		dimensions 90 30
-	active if "pilot alive"
+	active if "can add snapshot"
 	button a "_Add Snapshot"
 		center -60 155
 		dimensions 120 30
-	active if "snapshot selected"
+	active if "can remove snapshot"
 	button R "Remove"
 		center 75 155
 		dimensions 90 30
@@ -383,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	button b "_Back to Menu"
 		center 300 155
 		dimensions 120 30
-	active if "pilot loaded"
+	active if "can load"
 	button l "_Load Game"
 		center 435 155
 		dimensions 90 30
@@ -1708,7 +1708,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		to -50 10
 	box "message"
 		from -340 -80
-		to 80 10
+		to 140 20
 </pre>
 
 </details>
@@ -1730,7 +1730,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		to -50 10
 	box "message"
 		from -400 -80
-		to 80 10
+		to 80 20
 </pre>
 
 </details>
@@ -1740,6 +1740,17 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/_ui/interfaces.txt | interface "boarding"</summary>
 <pre>interface "boarding"
 	sprite "ui/boarding dialog"
+	box "plunder table: frame"
+		center -155 -60
+		dimensions 350 240
+	box "plunder table: inner"
+		center -155 -60
+		dimensions 330 220
+	box "plunder table: scrollbar"
+		center 25 -60
+		dimensions 0 230
+	value "plunder table: size column: width" 70
+	value "plunder table: icon offset" 14
 	label "item"
 		from -320 -189
 		align left
@@ -1812,6 +1823,9 @@ document.addEventListener("DOMContentLoaded", function() {
 	string "defense casualties"
 		from 330 28
 		align right
+	box "messages"
+		from 45 45
+		to 330 160
 	active if "can take"
 	button t "_Take"
 		center -235 115
@@ -2020,9 +2034,54 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "trade"
 	box "content"
 		from -250 80 to 250 355
+	value "column: name" 20
+	value "column: price" 140
+	value "column: price level" 180
+	value "column: profit" 260
+	value "column: buy" 310
+	value "column: sell" 370
+	value "column: in cargo hold" 430
 	fill
 		center 0 95
 		dimensions 480 1
+	label "Commodity"
+		align top left
+		from -230 80
+		color bright
+	label "Price"
+		align top left
+		from -110 80
+		color bright
+	visible if "has profit"
+	label "Profit"
+		align top left
+		from 10 80
+		color bright
+	visible
+	string "multiplier"
+		align top left
+		from 60 80
+		color medium
+	string "multiplier"
+		align top left
+		from 120 80
+		color medium
+	label "In Hold"
+		align top left
+		from 180 80
+		color bright
+	string "other cargo"
+		align left
+		from -230 318
+		color medium
+	label "free:"
+		align left
+		from 125 318
+		color bright
+	string "free cargo space"
+		align left
+		from 180 318
+		color bright
 	active if "can buy"
 	sprite "ui/dialog cancel"
 		center 120 355
@@ -2038,7 +2097,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	active if "can sell minables"
 	sprite "ui/wide button"
 		center -90 355
-	button m "Sell _Minables"
+	button n "Sell Mi_nables"
 		center -90 355
 		dimensions 90 30
 	active if "can sell outfits"
@@ -2057,9 +2116,54 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>interface "trade (small screen)"
 	box "content"
 		from -310 80 to 190 355
+	value "column: name" 20
+	value "column: price" 140
+	value "column: price level" 180
+	value "column: profit" 260
+	value "column: buy" 310
+	value "column: sell" 370
+	value "column: in cargo hold" 430
 	fill
 		center -60 95
 		dimensions 480 1
+	label "Commodity"
+		align top left
+		from -290 80
+		color bright
+	label "Price"
+		align top left
+		from -170 80
+		color bright
+	visible if "has profit"
+	label "Profit"
+		align top left
+		from -50 80
+		color bright
+	visible
+	string "multiplier"
+		align top left
+		from 0 80
+		color medium
+	string "multiplier"
+		align top left
+		from 60 80
+		color medium
+	label "In Hold"
+		align top left
+		from 120 80
+		color bright
+	string "other cargo"
+		align left
+		from -290 318
+		color medium
+	label "free:"
+		align left
+		from 65 318
+		color bright
+	string "free cargo space"
+		align left
+		from 120 318
+		color bright
 	active if "can buy"
 	sprite "ui/dialog cancel"
 		center 60 355
@@ -2075,7 +2179,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	active if "can sell minables"
 	sprite "ui/wide button"
 		center -150 355
-	button m "Sell _Minables"
+	button n "Sell Mi_nables"
 		center -150 355
 		dimensions 90 30
 	active if "can sell outfits"
@@ -2245,6 +2349,34 @@ document.addEventListener("DOMContentLoaded", function() {
 		from -170 -40 to -80 -90
 	button t "S_tars"
 		from -160 -80 to -90 -50
+	active
+	sprite "ui/dialog cancel"
+		from -90 -50 to 0 0
+	button d "_Done"
+		from -80 -40 to -10 -10
+	active
+	sprite "ui/dialog cancel"
+		from 0 -40 to -90 -90
+	button f "_Find"
+		from -80 -80 to -10 -50
+	sprite "ui/zoom"
+		from 0 -80 to -90 -130
+	active if "!max zoom"
+	button + "_+"
+		from -10 -90 to -40 -120
+		size 18
+	active if "!min zoom"
+	button - "_-"
+		from -50 -90 to -80 -120
+		size 18
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/interfaces.txt | interface "map buttons (simplified)" bottom right</summary>
+<pre>interface "map buttons (simplified)" bottom right
 	active
 	sprite "ui/dialog cancel"
 		from -90 -50 to 0 0
@@ -2469,11 +2601,16 @@ document.addEventListener("DOMContentLoaded", function() {
 	button D "Disown"
 		center -150 305
 		dimensions 70 30
-	visible if "show dump"
-	active if "enable dump"
+	visible if "show dump/jettison button"
+	active if "enable dump/jettison"
 	sprite "ui/wide button"
 		center -65 305
+	visible if "show dump"
 	button c "Dump _Cargo"
+		center -65 305
+		dimensions 90 30
+	visible if "show jettison"
+	button j "_Jettison"
 		center -65 305
 		dimensions 90 30
 	active
@@ -2564,6 +2701,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		align left
 		width 330
 		truncate back
+	box "message"
+		from -50 -50
+		to 280 90
 	button d "_Done"
 		center 250 115
 		dimensions 80 30
