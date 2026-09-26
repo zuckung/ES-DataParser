@@ -66,6 +66,7 @@ def download(version, vpath, vzip):
 	request = requests.get(vzip, allow_redirects=True, timeout=30)
 	if request.status_code == 404:
 		vzip = vzip.replace('v' + version, version)
+		vzip = vzip.replace(version, 'v' + version, 1)
 		request = requests.get(vzip, allow_redirects=True, timeout=30)
 	with open(vpath + version + '.zip', 'wb') as zipped: # creating zip file
 		zipped.write(request.content)
