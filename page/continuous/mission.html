@@ -95564,6 +95564,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source "Qasa-Sija-Iri"
 	repeat
 	to offer
+		has "Successors: Ghosts Prelude Incident: offered"
 		not "Successors: Ghosts 7a: done"
 		not "Successors: Ghosts 7b: done"
 	on offer
@@ -96438,7 +96439,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		has "successors: ghosts dealt with aqrabe"
 	on offer
 		conversation
-			`As disembark from your ship, you notice a group of Successor soldiers emerging from another craft in the spaceport, a Seiitej bearing House Kaatrij's colors. They meet you outside your own vessel, their weapons held at attention.`
+			`As you disembark from your ship, you notice a group of Successor soldiers emerging from another craft in the spaceport, a Seiitej bearing House Kaatrij's colors. They meet you outside your own vessel, their weapons held at attention.`
 			`	"Captain &#60;first&#62; &#60;last&#62;," their leader says, "We've been instructed to take thee with us."`
 			choice
 				`	"For what purpose exactly?"`
@@ -96885,7 +96886,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	Saajret hums for a moment. "Fine, fine. It's one of ours, a citadel of old Kaatrij from bygone years. 'Twas cloaked, of course. 'Til now, t'would seem; and so we are outmaneuvered again. That is why we must be quick, Captain; thou mustn't delay."`
 				accept
 	on complete
-		clear "successors: ghosts entered kasii-sola"
 		conversation
 			`While you are presenting your landing authorization, Saajret calls for several members of Kaatrij to meet you in the docking bay; by the time you land, they are there waiting, slithering over to speak to Saajret almost immediately. The leader of this group dismisses you and Saajret, with an apologetic bow, asks you to meet them at the &#60;planet&#62; spaceport in an hour.`
 </pre>

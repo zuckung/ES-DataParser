@@ -1,0 +1,247 @@
+
+<html>
+<head>
+</head>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #000000;
+color: #FFFFFF;
+}
+:link { color: #808080; }
+:visited { color: #808080; }
+:link:active, :visited:active { color: #808080; }
+pre {
+padding-top: 7px;
+padding-bottom: 8px;
+padding-left: 10px;
+padding-right: 10px;
+margin: 10px;
+white-space: pre-wrap;
+}
+</style>
+<body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var preTags = document.querySelectorAll("pre");
+    preTags.forEach(function(pre) {
+        var button = document.createElement("button");
+        button.innerText = "Copy";
+        button.addEventListener("click", function() {
+            var code = pre.innerText;
+            var tempTextArea = document.createElement("textarea");
+            tempTextArea.value = code;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempTextArea);
+            alert("Code copied to clipboard!");
+        });
+        pre.parentNode.insertBefore(button, pre);
+    });
+});
+</script>
+<font size="1">
+
+<details>
+<summary>data/confusions.txt | confusion "player"</summary>
+<pre>confusion "player"
+	"max confusion" 2.
+	period 210
+	"focus multiplier" .2
+	"gain focus time" 120
+	"lose focus time" 600
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "civilian"</summary>
+<pre>confusion "civilian"
+	"max confusion" 20.
+	period 210.
+	"focus multiplier" .2
+	"gain focus time" 600
+	"lose focus time" 120
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "militia"</summary>
+<pre>confusion "militia"
+	"max confusion" 14.
+	period 210.
+	"focus multiplier" .1
+	"gain focus time" 600
+	"lose focus time" 120
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "military"</summary>
+<pre>confusion "military"
+	"max confusion" 10.
+	period 240.
+	"focus multiplier" .1
+	"gain focus time" 600
+	"lose focus time" 120
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "elite"</summary>
+<pre>confusion "elite"
+	"max confusion" 5.
+	period 270.
+	"focus multiplier" .1
+	"gain focus time" 360
+	"lose focus time" 180
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "pirate"</summary>
+<pre>confusion "pirate"
+	"max confusion" 15.
+	period 180.
+	"focus multiplier" .4
+	"gain focus time" 600
+	"lose focus time" 90
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "miner"</summary>
+<pre>confusion "miner"
+	"max confusion" 15.
+	period 210.
+	"focus multiplier" .2
+	"gain focus time" 540
+	"lose focus time" 240
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "basic automata"</summary>
+<pre>confusion "basic automata"
+	"max confusion" 10.
+	period 270.
+	"focus multiplier" 1.
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "advanced automata"</summary>
+<pre>confusion "advanced automata"
+	"max confusion" 5.
+	period 270.
+	"focus multiplier" 1.
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "kor mereti"</summary>
+<pre>confusion "kor mereti"
+	"max confusion" 4.
+	period 210.
+	"focus multiplier" .5
+	"gain focus time" 240
+	"lose focus time" 120
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "kor sestor"</summary>
+<pre>confusion "kor sestor"
+	"max confusion" 2.5
+	period 270.
+	"focus multiplier" 1.
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "ka'het"</summary>
+<pre>confusion "ka'het"
+	"max confusion" 10.
+	period 240.
+	"focus multiplier" .3
+	"gain focus time" 600
+	"lose focus time" 300
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "aberrant"</summary>
+<pre>confusion "aberrant"
+	"max confusion" 20.
+	period 300.
+	"focus multiplier" .4
+	"gain focus time" 360
+	"lose focus time" 60
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "wild"</summary>
+<pre>confusion "wild"
+	"max confusion" 15.
+	period 300.
+	"focus multiplier" .5
+	"gain focus time" 600
+	"lose focus time" 150
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "pug"</summary>
+<pre>confusion "pug"
+	"max confusion" 1.
+	period 210.
+	"focus multiplier" 15.
+	"gain focus time" 420
+	"lose focus time" 900
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/confusions.txt | confusion "perfect"</summary>
+<pre>confusion "perfect"
+	"max confusion" 0.
+</pre>
+
+</details>
+
+
+</font>
+</body>
+</html>
+
