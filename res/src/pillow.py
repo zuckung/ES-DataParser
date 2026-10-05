@@ -56,8 +56,8 @@ def setVar():
 
 def convertCoordinates(pos):  # 4096 x 4096, center at 2048, 2048 sagitarius a, which is  112 22
 	poss = pos.split(' ')
-	new_posx = float(poss[0]) + w/2
-	new_posy = float(poss[1]) + h/2
+	new_posx = float(poss[0]) + w/2 - 122
+	new_posy = float(poss[1]) + h/2 - 22
 	return int(new_posx), int(new_posy)
 
 
