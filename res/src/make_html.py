@@ -67,6 +67,53 @@ def read_everything(data_folder):
 							txt += line
 	return obj, obj_path, obj_name
 
+def build_full_es_data_json(obj_list, obj_path_list, obj_name_list, output_filename):
+	"""
+	Generates a complete JSON database containing all Endless Sky nodes.
+	"""
+	data_db = {}
+
+	for code, raw_path, first_line in zip(obj_list, obj_path_list, obj_name_list):
+		# 1. Clean path (strip everything preceding 'data/')
+		path_str = str(raw_path).replace("\\", "/")
+		if "data/" in path_str:
+			rel_path = "data/" + path_str.split("data/", 1)[1]
+		else:
+			rel_path = path_str
+
+		clean_path = Path(rel_path)
+		
+		# 2. Extract folder name as category/race
+		category = clean_path.parent.name if clean_path.parent.name else "global"
+
+		# 3. Extract node type and display name from first line
+		clean_line = first_line.strip()
+		parts = clean_line.split(" ", 1)
+		
+		node_type = parts[0].strip().lower() if len(parts) > 0 else "other"
+		display_name = parts[1].strip().strip('"') if len(parts) > 1 else clean_line
+
+		# Build nested dictionary hierarchy
+		if category not in data_db:
+			data_db[category] = {}
+			
+		if node_type not in data_db[category]:
+			data_db[category][node_type] = {}
+
+		# Save node entry
+		data_db[category][node_type][display_name] = {
+			"path": rel_path,
+			"code": code.strip()
+		}
+
+	# Export formatted JSON database
+	with open(output_filename, "w", encoding="utf-8") as f:
+		json.dump(data_db, f, ensure_ascii=False, indent=2)
+
+	print(f"Done! Saved {len(obj_list)} nodes into '{output_filename}'.")
+	return data_db
+
+
 
 def get_object_categories(object_names):
 	print('    getting categories')
@@ -296,6 +343,7 @@ def run():
 		print('[release]')
 		menu_template, category_template, object_template = read_template()
 		objects, object_paths, object_names = read_everything(data_folder) # creates list of objects, a list of each path and each name
+		build_full_es_data_json(obj, obj_path, obj_name, 'page/data.json')
 		categories = get_object_categories(object_names)
 		counting, globalcount = write_html(categories, category_template, object_names, object_paths, objects, object_template, 'release')
 		save_global_count(globalcount,vpath)
