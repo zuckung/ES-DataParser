@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Endless Sky - Savegame Editor</title>
+	
+	<!-- PyScript CSS & JS -->
+	<link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+	<script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+	
+	<style>
+		:root {
+			--bg-color: #0f172a;
+			--card-bg: #1e293b;
+			--border-color: #334155;
+			--text-color: #f8fafc;
+			--text-muted: #94a3b8;
+			
+			--btn-silver-bg: #475569;
+			--btn-silver-hover: #64748b;
+			--btn-silver-border: #64748b;
+			
+			--btn-save-bg: #059669;
+			--btn-save-hover: #10b981;
+			--btn-save-border: #34d399;
+
+			--btn-danger-bg: #991b1b;
+			--btn-danger-hover: #dc2626;
+
+			--input-bg: #0f172a;
+			--success-bg: #064e3b;
+			--success-border: #059669;
+			--success-text: #6ee7b7;
+
+			/* Status Farben */
+			--cond-green-bg: rgba(16, 185, 129, 0.12);
+			--cond-green-text: #6ee7b7;
+			--cond-red-bg: rgba(239, 68, 68, 0.12);
+			--cond-red-text: #fca5a5;
+			--cond-blue-bg: rgba(59, 130, 246, 0.12);
+			--cond-blue-text: #93c5fd;
+			--cond-yellow-bg: rgba(234, 179, 8, 0.12);
+			--cond-yellow-text: #fde047;
+		}
+
+		body {
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+			max-width: 950px;
+			margin: 10px auto;
+			padding: 0 15px;
+			line-height: 1.3;
+			background-color: var(--bg-color);
+			color: var(--text-color);
+		}
+
+		.card {
+			background: var(--card-bg);
+			padding: 8px 12px;
+			border-radius: 6px;
+			border: 1px solid var(--border-color);
+			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+			margin-bottom: 8px;
+		}
+
+		.header-title {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 6px;
+			border-bottom: 1px solid var(--border-color);
+			padding-bottom: 4px;
+		}
+
+		.header-title h2 { margin: 0; font-size: 1.1em; font-weight: 600; letter-spacing: -0.02em; }
+
+		.upload-inline {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		#file-name-display {
+			font-size: 0.8em;
+			color: var(--text-muted);
+			font-style: italic;
+		}
+
+		.info-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+			gap: 4px 8px;
+			background: var(--input-bg);
+			padding: 4px 8px;
+			border-radius: 4px;
+			border: 1px solid var(--border-color);
+			margin-bottom: 6px;
+		}
+
+		.info-item { display: flex; flex-direction: column; }
+		.info-label { font-size: 0.65em; font-weight: 700; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.03em; }
+		.info-value { font-size: 0.8em; font-weight: 600; color: var(--text-color); word-break: break-word; }
+
+		.credits-inline {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 0.8em;
+		}
+
+		.credits-inline label { margin: 0; font-weight: 600; color: var(--text-muted); white-space: nowrap; }
+		.credits-inline input[type="number"] { width: 150px; padding: 2px 6px; }
+
+		.license-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 2px 8px;
+		}
+
+		.license-checkbox {
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			font-size: 0.8em;
+			cursor: pointer;
+			padding: 2px 4px;
+			border-radius: 4px;
+			border: 1px solid transparent;
+		}
+
+		.license-checkbox:hover { 
+			background-color: var(--input-bg);
+			border-color: var(--border-color);
+		}
+		
+		.license-checkbox input[type="checkbox"] { 
+			width: 13px; 
+			height: 13px; 
+			accent-color: var(--btn-save-hover); 
+			cursor: pointer; 
+		}
+
+		.rep-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 6px;
+		}
+
+		table.rep-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-size: 0.78em;
+		}
+
+		table.rep-table tr {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid var(--border-color);
+			padding: 2px 0;
+		}
+
+		table.rep-table td {
+			border: none;
+			padding: 0;
+		}
+
+		table.rep-table td.faction-cell {
+			font-weight: 500;
+			color: var(--text-color);
+			overflow: hidden;
+			text-overflow: ellipsis;
+			padding-right: 8px;
+			flex-grow: 1;
+		}
+
+		table.rep-table td.value-cell {
+			text-align: right;
+			white-space: nowrap;
+		}
+
+		table.rep-table td input {
+			width: 65px;
+			padding: 1px 3px;
+			font-size: 0.85em;
+			text-align: right;
+		}
+
+		.plugins-list {
+			margin: 0;
+			padding-left: 20px;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 0.8em;
+			color: var(--text-color);
+		}
+
+		.plugins-list li { padding: 1px 0; }
+
+		input[type="text"], input[type="number"], select, textarea {
+			padding: 4px 8px;
+			background-color: var(--input-bg);
+			border: 1px solid var(--border-color);
+			color: var(--text-color);
+			border-radius: 4px;
+			box-sizing: border-box;
+			font-family: inherit;
+		}
+
+		input:focus, select:focus, textarea:focus { 
+			outline: none; 
+			border-color: var(--btn-silver-hover); 
+		}
+
+		select, textarea { width: 100%; }
+
+		textarea {
+			height: 240px;
+			font-family: 'Courier New', Courier, monospace;
+			white-space: pre;
+			tab-size: 4;
+			font-size: 0.82em;
+		}
+
+		.btn {
+			padding: 4px 10px;
+			background-color: var(--btn-silver-bg);
+			color: #f8fafc;
+			border: 1px solid var(--btn-silver-border);
+			border-radius: 4px;
+			font-weight: 600;
+			font-size: 0.8em;
+			cursor: pointer;
+			transition: background-color 0.15s ease, border-color 0.15s ease;
+			display: inline-flex;
+			align-items: center;
+			white-space: nowrap;
+		}
+
+		.btn:hover { 
+			background-color: var(--btn-silver-hover); 
+			border-color: #cbd5e1;
+		}
+
+		.btn-save {
+			background-color: var(--btn-save-bg);
+			border-color: var(--btn-save-border);
+			color: #ffffff;
+		}
+
+		.btn-save:hover {
+			background-color: var(--btn-save-hover);
+			border-color: #6ee7b7;
+		}
+
+		.btn-delete {
+			background-color: var(--btn-danger-bg);
+			border: 1px solid #ef4444;
+			color: #ffffff;
+			padding: 2px 6px;
+			font-size: 0.75em;
+			border-radius: 3px;
+		}
+
+		.btn-delete:hover {
+			background-color: var(--btn-danger-hover);
+		}
+
+		.add-ship-box {
+			display: flex;
+			flex-direction: column;
+			gap: 8px;
+			margin-top: 10px;
+			padding: 8px;
+			background: var(--input-bg);
+			border: 1px solid var(--border-color);
+			border-radius: 4px;
+		}
+
+		.add-ship-controls {
+			display: grid;
+			grid-template-columns: 1.5fr 1.5fr 1fr;
+			gap: 8px;
+		}
+
+		.preview-title {
+			font-size: 0.7em;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: var(--text-muted);
+			margin-bottom: 2px;
+		}
+
+		#add-ship-preview {
+			height: 220px;
+			background-color: #050b14;
+			color: #a7f3d0;
+		}
+
+		.navigation-bar {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 8px;
+			gap: 10px;
+			overflow-x: auto;
+			white-space: nowrap;
+			-webkit-overflow-scrolling: touch;
+			padding-bottom: 4px;
+		}
+
+		.nav-left { 
+			display: flex; 
+			gap: 6px; 
+			flex-wrap: nowrap;
+			overflow-x: auto;
+			-webkit-overflow-scrolling: touch;
+		}
+
+		.nav-right { display: flex; align-items: center; gap: 8px; }
+
+		#download-section {
+			background: var(--success-bg);
+			border: 1px solid var(--success-border);
+			color: var(--success-text);
+			padding: 3px 8px;
+			border-radius: 4px;
+			font-size: 0.78em;
+			display: flex;
+			align-items: center;
+			gap: 4px;
+		}
+
+		#download-link { font-weight: 600; color: #a7f3d0; text-decoration: underline; }
+
+		.hidden { display: none !important; }
+
+		.toolbar-inline {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: 6px;
+			gap: 10px;
+			flex-wrap: wrap;
+		}
+
+		.filter-checkboxes {
+			display: flex;
+			gap: 10px;
+			font-size: 0.78em;
+			flex-wrap: wrap;
+		}
+
+		.filter-checkboxes label {
+			display: flex;
+			align-items: center;
+			gap: 4px;
+			cursor: pointer;
+			color: var(--text-color);
+		}
+
+		.filter-checkboxes input[type="checkbox"] {
+			width: 13px;
+			height: 13px;
+			accent-color: #2563eb;
+			cursor: pointer;
+		}
+
+		.cond-table-container {
+			max-height: 420px;
+			overflow-y: auto;
+			border: 1px solid var(--border-color);
+			border-radius: 4px;
+			background: var(--input-bg);
+		}
+
+		table.cond-table {
+			width: 100%;
+			border-collapse: collapse;
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 0.82em;
+		}
+
+		table.cond-table th {
+			position: sticky;
+			top: 0;
+			background: #1e293b;
+			padding: 4px 8px;
+			text-align: left;
+			border-bottom: 1px solid var(--border-color);
+			color: var(--text-muted);
+			font-size: 0.78em;
+			text-transform: uppercase;
+		}
+
+		table.cond-table td {
+			padding: 2px 8px;
+			border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+		}
+
+		.type-badge {
+			font-size: 0.68em;
+			padding: 2px 5px;
+			border-radius: 3px;
+			font-weight: 600;
+			font-family: system-ui, sans-serif;
+			display: inline-block;
+			text-align: center;
+			white-space: nowrap;
+			box-sizing: border-box;
+		}
+
+		.badge-vanilla {
+			background-color: #059669;
+			color: #ffffff;
+			cursor: pointer;
+			border: 1px solid #34d399;
+			transition: background-color 0.15s ease;
+		}
+
+		.badge-vanilla:hover { background-color: #10b981; }
+		.badge-plugin { background-color: #1e293b; color: var(--text-muted); border: 1px solid #475569; }
+		.badge-other { background-color: #0f172a; color: #64748b; border: 1px solid #334155; }
+
+		tr.cond-row-green { background-color: var(--cond-green-bg); color: var(--cond-green-text); }
+		tr.cond-row-red { background-color: var(--cond-red-bg); color: var(--cond-red-text); }
+		tr.cond-row-blue { background-color: var(--cond-blue-bg); color: var(--cond-blue-text); }
+		tr.cond-row-yellow { background-color: var(--cond-yellow-bg); color: var(--cond-yellow-text); }
+
+		#mission-detail-box {
+			margin-top: 8px;
+			padding: 8px;
+			background: #050b14;
+			border: 1px solid var(--border-color);
+			border-radius: 4px;
+		}
+
+		#mission-detail-code {
+			height: 180px;
+			background-color: transparent;
+			color: #a7f3d0;
+			border: none;
+		}
+
+		.mission-outcome-line {
+			margin-top: 4px;
+			font-size: 0.8em;
+			font-weight: 600;
+			color: #fde047;
+			font-family: system-ui, sans-serif;
+		}
+
+		/* Mobile Media Queries */
+		@media (max-width: 768px) {
+			body {
+				margin: 5px auto;
+				padding: 0 6px;
+			}
+			.rep-grid {
+				grid-template-columns: 1fr !important;
+			}
+			.license-grid {
+				grid-template-columns: 1fr !important;
+			}
+			.add-ship-controls {
+				grid-template-columns: 1fr !important;
+			}
+			.toolbar-inline {
+				flex-direction: column;
+				align-items: stretch;
+			}
+			.filter-checkboxes {
+				flex-direction: column;
+				gap: 4px;
+			}
+			.navigation-bar {
+				flex-direction: column;
+				align-items: stretch;
+				gap: 6px;
+				overflow-x: visible;
+			}
+			.nav-left {
+				overflow-x: auto;
+				padding-bottom: 4px;
+			}
+			.nav-right {
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<div class="card">
+		<div class="header-title">
+			<h2>Endless Sky - Savegame Editor</h2>
+			<div class="upload-inline">
+				<span id="file-name-display">No file chosen</span>
+				<input type="file" id="file-input" accept=".txt" style="display: none;">
+				<label for="file-input" class="btn">Browse File...</label>
+			</div>
+		</div>
+
+		<div id="status-container" class="hidden">
+			<div class="info-grid">
+				<div class="info-item"><span class="info-label">Pilot</span><span class="info-value" id="info-pilot">-</span></div>
+				<div class="info-item"><span class="info-label">Date</span><span class="info-value" id="info-date">-</span></div>
+				<div class="info-item"><span class="info-label">System</span><span class="info-value" id="info-system">-</span></div>
+				<div class="info-item"><span class="info-label">Planet</span><span class="info-value" id="info-planet">-</span></div>
+				<div class="info-item"><span class="info-label">Prev. System</span><span class="info-value" id="info-prev-system">-</span></div>
+				<div class="info-item"><span class="info-label">Prev. Planet</span><span class="info-value" id="info-prev-planet">-</span></div>
+				<div class="info-item"><span class="info-label">Entry Method</span><span class="info-value" id="info-entry-method">-</span></div>
+				<div class="info-item"><span class="info-label">File Size</span><span class="info-value" id="info-filesize">-</span></div>
+			</div>
+
+			<div class="credits-inline">
+				<label for="credits-input">Credits:</label>
+				<input type="number" id="credits-input">
+			</div>
+		</div>
+	</div>
+
+	<div id="editor-section" class="hidden">
+
+		<div class="navigation-bar">
+			<div class="nav-left">
+				<button class="btn" id="show-ships-btn">Ships</button>
+				<button class="btn" id="show-rep-btn">Reputations</button>
+				<button class="btn" id="show-lic-btn">Licenses</button>
+				<button class="btn" id="show-cond-btn">Conditions</button>
+				<button class="btn" id="show-plug-btn">Plugins</button>
+			</div>
+			
+			<div class="nav-right">
+				<div id="download-section" class="hidden">
+					<span>Ready: </span>
+					<a id="download-link" href="#" download="savegame.txt">Download File</a>
+				</div>
+				<!-- Apply Changes Button initial verborgen -->
+				<button class="btn btn-save hidden" id="save-btn">Apply Changes & Generate Savegame</button>
+			</div>
+		</div>
+
+		<!-- Ships Section -->
+		<div id="section-ships" class="card">
+			<div style="margin-bottom: 6px;">
+				<select id="ship-select">
+					<option value="">-- Select owned ship --</option>
+				</select>
+			</div>
+
+			<div id="ship-details" class="hidden" style="margin-bottom: 10px;">
+				<div style="display: flex; justify-content: flex-end; margin-bottom: 4px;">
+					<button class="btn" id="insert-tab-btn" type="button" style="font-size: 0.75em; padding: 2px 8px;">+ Tab</button>
+				</div>
+				<textarea id="ship-code" spellcheck="false"></textarea>
+			</div>
+
+			<div class="add-ship-box">
+				<div class="preview-title" style="color: var(--btn-save-border);">+ Add New Ship to Fleet</div>
+				<div class="add-ship-controls">
+					<select id="add-ship-category">
+						<option value="">-- Select Category / Race --</option>
+					</select>
+					<select id="add-ship-model" disabled>
+						<option value="">-- Select Ship Model --</option>
+					</select>
+					<button class="btn" id="add-ship-btn" disabled>+ Add Ship</button>
+				</div>
+				<div>
+					<div class="preview-title">ES Script Node Preview:</div>
+					<textarea id="add-ship-preview" readonly placeholder="// Select a ship model to preview Endless Sky syntax node..."></textarea>
+				</div>
+			</div>
+		</div>
+
+		<!-- Reputations Section -->
+		<div id="section-reputations" class="card hidden">
+			<div class="rep-grid">
+				<table class="rep-table"><tbody id="reputations-table-1"></tbody></table>
+				<table class="rep-table"><tbody id="reputations-table-2"></tbody></table>
+				<table class="rep-table"><tbody id="reputations-table-3"></tbody></table>
+				<table class="rep-table"><tbody id="reputations-table-4"></tbody></table>
+			</div>
+		</div>
+
+		<!-- Licenses Section -->
+		<div id="section-licenses" class="card hidden">
+			<div class="license-grid" id="license-checkbox-container"></div>
+		</div>
+
+		<!-- Conditions Section -->
+		<div id="section-conditions" class="card hidden">
+			<div class="toolbar-inline">
+				<span id="cond-count-display" style="font-size: 0.8em; font-weight: 600; color: var(--text-color);">0 Conditions</span>
+
+				<div class="filter-checkboxes">
+					<label><input type="checkbox" id="filter-vanilla" checked> Vanilla Missions</label>
+					<label><input type="checkbox" id="filter-plugin" checked> Plugin Missions</label>
+					<label><input type="checkbox" id="filter-other" checked> Other Conditions</label>
+					<label><input type="checkbox" id="filter-problematic"> Maybe Problematic</label>
+				</div>
+			</div>
+
+			<div class="cond-table-container">
+				<table class="cond-table">
+					<thead>
+						<tr>
+							<th style="width: 45px;">✕</th>
+							<th>Condition Key / Mission State</th>
+							<th style="width: 140px; text-align: right;">Type / Source</th>
+						</tr>
+					</thead>
+					<tbody id="conditions-table-body"></tbody>
+				</table>
+			</div>
+
+			<div id="mission-detail-box" class="hidden">
+				<div class="preview-title" id="mission-detail-title">Mission Script Preview:</div>
+				<textarea id="mission-detail-code" readonly spellcheck="false"></textarea>
+				<div class="mission-outcome-line" id="mission-outcome-display"></div>
+			</div>
+		</div>
+
+		<!-- Plugins Section -->
+		<div id="section-plugins" class="card hidden">
+			<h3 style="margin-top:0; font-size: 0.85em; color: var(--text-muted);">Active Plugins in Savegame</h3>
+			<ul class="plugins-list" id="plugins-list-container"></ul>
+		</div>
+
+	</div>
+
+<script type="py" src="./editor_logic.py"></script>
+</body>
+</html>
