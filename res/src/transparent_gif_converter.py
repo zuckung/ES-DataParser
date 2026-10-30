@@ -98,8 +98,8 @@ class TransparentAnimatedGifConverter(object):
     def _adjust_palette(self):
         """Modify the palette in the new `Image`."""
         unused_color = self._get_unused_color()
-        final_palette = chain.from_iterable(
-            self._img_p_parsedpalette.get(x, unused_color) for x in range(256))
+        final_palette = bytes(chain.from_iterable(
+            self._img_p_parsedpalette.get(x, unused_color) for x in range(256)))
         self._img_p.putpalette(data=final_palette)
 
     def process(self) -> Image:
