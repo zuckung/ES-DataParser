@@ -55794,7 +55794,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	mark "Acamar"
 	destination "Sandswell"
 	passengers 1
-	deadline
 	to offer
 		has "Lost Racer 1: done"
 		not "abandoned lost racer"
@@ -55863,6 +55862,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			label acamar
 			`	"Thank you, Captain. We need to get moving immediately."`
 				launch
+	on accept
+		event "lost racer deadline" 12
 	on enter Acamar
 		unmark Acamar
 		conversation
@@ -55890,8 +55891,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Perhaps that would be best."`
 					goto abandon
 				`	(Suggest a different system.)`
-			action
-				set "rescue artemis renard"
 			`	"What about there," you say, pointing to the neighboring system. "Kugel. It's off the circuit, so no one will have searched there, but if her hyperdrive malfunctioned or was sabotaged, she might have ended up there. It's only a single jump away."`
 			`	"Okay," he says, wiping his eyes with the corners of his sleeves. "Kugel it is, Captain."`
 				accept
@@ -55904,11 +55903,40 @@ document.addEventListener("DOMContentLoaded", function() {
 				fail
 	on enter Kugel
 		unmark Acamar
+		set "lost racer found artemis"
 		dialog
 			"As soon as you enter the Kugel system, your sensors begin to pick up a weak radio signal coming from the second planet, this time matching exactly the frequency of Artemis Renard's transponder. It seems you have arrived in the correct system."
 	on visit
 		dialog
 			"You have reached &#60;planet&#62;, but August Renard is not in the system! Better depart and wait for your escorts to arrive in this star system."
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | mission "Lost Racer 2 - Deadline"</summary>
+<pre>mission "Lost Racer 2 - Deadline"
+	entering
+	name "Take August to &#60;planet&#62;"
+	description "After your aborted search for Artemis Renard, take her father, August, back to &#60;destination&#62;."
+	destination "Glory"
+	passengers 1
+	to offer
+		has "event: lost racer deadline"
+		not "lost racer found artemis"
+	on offer
+		fail "Lost Racer 2 - Continued"
+		set "lost racer august to glory"
+		set "lost racer august aborted"
+		conversation
+			`As you enter the system, August enters the bridge. "Captain, we're too late. Artemis is dead. I just know it."`
+			choice
+				`	"No need to panic."`
+				`	(Say nothing.)`
+			`	"Even if she wasn't attacked by competition, she still can't have survived this long. You've failed." He looks ready to break down.`
+			`	"Take me back to Glory. There's no hope."`
+				accept
 </pre>
 
 </details>
@@ -55925,12 +55953,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	destination "Glory"
 	passengers 1
 	to offer
-		has "Lost Racer 2 - Continued: failed"
+		not "lost racer august aborted"
 		has "lost racer august to glory"
-	on complete
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | mission "Lost Racer 2 - August Reached Glory"</summary>
+<pre>mission "Lost Racer 2 - August Reached Glory"
+	invisible
+	landing
+	source "Glory"
+	to offer
+		has "lost racer august to glory"
+	on offer
 		clear "lost racer august to glory"
 		conversation
-			`As the advanced medical facilities of &#60;planet&#62; rise up to greet the &#60;ship&#62;, August comes to meet you on the bridge. "Captain, I would like to thank you for attempting to find my daughter, even though the attempt ended poorly. Thank you for that, at least." He then prepares to exit the ship, outside of which a veritable army of attendants are waiting.`
+			`As the advanced medical facilities of &#60;planet&#62; rise up to greet the &#60;ship&#62;, August comes to meet you on the bridge. "Captain, I would like to thank you for attempting to find my daughter, even though we failed. Thank you for that, at least." He then prepares to exit the ship, outside of which a veritable army of attendants are waiting.`
 			choice
 				`	"Weren't you going to pay me?"`
 					goto greedy
@@ -55958,6 +55999,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	passengers 2
 	to offer
 		has "Lost Racer 2 - Continued: done"
+		not "event: lost racer deadline"
 	on offer
 		conversation
 			`Upon reaching the planet, you pinpoint the radio signal to a valley in the southern hemisphere. You descend through a raging sandstorm; you have to rely entirely on instruments as the view from the &#60;ship&#62;'s bridge is almost entirely obscured. Soon, your scanners report that the source of the signal is less than a kilometer out, and after a few moments more, you begin to discern the vague shape of a crashed Flivver through the haze of dust. You land the &#60;ship&#62; next to the wreck, and both you and Mr. Renard go to exit the ship.`
@@ -58085,7 +58127,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	name "Rescue &#60;origin&#62; convoy"
 	description "&#60;origin&#62;'s largest ever convoy was intercepted on its way to Tarazed. Merchants report that a large pirate fleet escorting a freighter convoy went to &#60;destination&#62;. Governor Tim has asked you to try and save it before the pirates can plunder it completely."
 	source "Rand"
-	priority
 	destination "Greenrock"
 	deadline 7
 	clearance
@@ -66862,7 +66903,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 3
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder I"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66899,6 +66940,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 3
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder II"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66931,6 +66973,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder III"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66963,6 +67006,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder IV"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -67000,6 +67044,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet I"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67037,7 +67082,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet II"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67073,7 +67118,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet III"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67109,7 +67154,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet IV"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67145,7 +67190,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet V"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67181,7 +67226,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VI"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67213,7 +67258,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VII"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67245,7 +67290,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VIII"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67277,7 +67322,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet IX"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67307,7 +67352,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 7 9
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet X"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -79403,12 +79448,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			`The giant creature floats a few meters away from your cockpit, silent and motionless, but you know that inside the shell, the slug remains alive and well, ready to kill. Compared to some of the Ka'het back in the Graveyard, this is one of the Builders' smaller creations, but its size is still impressive for what is, in essence, a single organism.`
 			`	Before setting the &#60;flagship&#62; to automatic station-keeping, you move your ship so that the main hatch is as close as possible to the Fetri'sei. The Remnant are already in the airlock donning their extravehicular suits, and you join them shortly after.`
 			`	"When we are inside, there is a high probability we will not be able to communicate," advises Dusk. "Normally, the walls of the armored shell are too thick and dense for our signals to pass through, and the spaces we need to navigate prevent us from using a physical tether. This does not mean we will be unprotected, however. May I see your sidearm?"`
-			`	You draw your weapon out of the holster and hand it to him. After a quick examination, he nods and gives it back before continuing. "Once inside, one of our first operations will be connecting to the downlink of the Fetri's telemetry: it is not protected, in our experience, and it is easy to access. From there, we will be able to monitor the vessel's shields.`
-			`	"Many things could go wrong during this mission: the unknown creature could leave the system early, or maybe we could inadvertently awaken the Ka'sei with our actions. If you notice anything out of the ordinary, no matter how minor, take out this gun, point at an empty spot on the shell, and shoot. Our terminals will let us know even the smallest variation in its shield integrity, and we will run back to safety as soon as this happens."`
+			`	You draw your weapon out of the holster and hand it to him. After a quick examination, he nods and gives it back before continuing. "Once inside, one of our first operations will be connecting to the downlink of the Fetri's telemetry: it is not protected, in our experience, and it is easy to access. From there, we will be able to monitor the vessel's systems.`
+			`	"Many things could go wrong during this mission: the unknown creature could leave the system early, or maybe we could inadvertently awaken the Ka'sei with our actions. If you notice anything out of the ordinary, no matter how minor, take out this gun, point at an empty spot on the shell, and shoot. Our terminals will let us know even the smallest variation in its system metrics, and we will run back to safety as soon as this happens."`
 			choice
 				`	"Will this not anger the Ka'sei?"`
 					goto anger
-				`	"What if you cannot access the shield levels?"`
+				`	"What if you cannot access the vessel's systems?"`
 			`	"Then we will abandon the mission. Without that safety net, it would be too dangerous to continue. However, since they were both created by the Builders, it should be similar enough to the Ka'het design language.`
 				goto move
 			label anger
@@ -79445,7 +79490,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	You leave the handles and use your feet to give you a good push away from the spacecraft. At the last second, you move to the right to avoid ending up behind one of its thrusters just as they roar to life. The Fetri'sei has awakened, and for an instant you see all of its systems activate at once - the engines, the steering, even the Ravagers.`
 				goto return
 			label shoot
-			`	You press the trigger once more, and the projectile again dissolves in the shield protecting the back of the Fetri'sei. For a few seconds still nothing seems to happen, but then, slowly, white noise starts coming from the communicator. Watching the spacecraft, you finally see the Remnant leaping out of the hatch, carrying a dozen faintly glowing cylindrical tubes under their arms.`
+			`	You pull the trigger once more, and the projectile again impacts the back of the Fetri'sei. For a few seconds still nothing seems to happen, but then, slowly, white noise starts coming from the communicator. Watching the spacecraft, you finally see the Remnant leaping out of the hatch, carrying a dozen faintly glowing cylindrical tubes under their arms.`
 				goto continue
 			label wait
 			`	The wait is excruciating, but after a few seconds, you start hearing white noise coming from your headphones. Right as you start recognizing some words, one of the Remnant leaps out of the hatch, followed closely by the other four. Under their arms, you can distinguish a dozen cylindrical tubes, a faint glow surrounding them.`
@@ -82230,7 +82275,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	You try to contact the Remnant, but the arrival of another EMP prevents you from doing so. For their part, one of the Peregrines has taken the initiative to approach the alien spacecraft.`
 			choice
 				`	(Return to orbit to fight the Ka'het.)`
-					flee
+					depart
 				`	(Keep trying to speak with the Remnant.)`
 			action
 				set "ka'het: cloud probe electronics burnt"
@@ -82296,7 +82341,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/kahet/kahet missions.txt | mission "Ka'het: Lightning in a Bottle Epilogue 1"</summary>
 <pre>mission "Ka'het: Lightning in a Bottle Epilogue 1"
+	landing
 	invisible
+	non-blocking
 	to offer
 		has "Ka'het: Lightning in a Bottle 5: done"
 		has "Ka'het: Voice From The Past 4: done"
@@ -84154,6 +84201,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Defense 1"</summary>
 <pre>mission "Remnant: Defense 1"
+	minor
 	name "Defend &#60;planet&#62;"
 	description "Assist in defending &#60;planet&#62; from a Korath raid, then return to the planet."
 	source "Caelian"
@@ -84395,6 +84443,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Void Sprites 1"</summary>
 <pre>mission "Remnant: Void Sprites 1"
+	minor
 	name "Space creatures"
 	description "A man on the Remnant homeworld of &#60;planet&#62; asked you to collect data on some strange space creatures in the &#60;waypoints&#62; system, in another part of the Ember Waste."
 	source "Aventine"
@@ -85525,6 +85574,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Tech Retrieval"</summary>
 <pre>mission "Remnant: Tech Retrieval"
+	minor
 	name "Remnant Human Tech Retrieval"
 	description "The Remnant are interested in learning what advances humanity has made over the past centuries. Bring them samples of advanced technology, such as newly developed ramscoops, weapons, or shields."
 	source "Viminal"
@@ -85988,6 +86038,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Return the Samples"</summary>
 <pre>mission "Remnant: Return the Samples"
+	minor
 	name "Return the Samples"
 	description "A researcher on &#60;planet&#62; has asked you to return void sprite eggs to Nasqueron that the Remnant stole many years ago."
 	source "Aventine"
@@ -87734,6 +87785,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Expanded Horizons Storms 1"</summary>
 <pre>mission "Remnant: Expanded Horizons Storms 1"
+	minor
 	name "Ember Waste Storm Scanning"
 	description "Dawn has asked that you scan one of the Ember Waste's storms at &#60;waypoints&#62; and return with the data to &#60;planet&#62;."
 	passengers 1
@@ -87849,6 +87901,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Logistics 1"</summary>
 <pre>mission "Remnant: Logistics 1"
+	minor
 	name "Rush delivery to &#60;planet&#62;"
 	description `Deliver &#60;cargo&#62; to &#60;destination&#62; by &#60;date&#62;.`
 	source "Caelian"
@@ -95013,7 +95066,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 2"</summary>
 <pre>mission "Successors: Ghosts Myurej 2"
 	landing
-	priority
 	name "Search &#60;planet&#62;"
 	description "Following information from Myurej's contact, look for Riiria at &#60;destination&#62;."
 	source Kasii-Tuur-Saqru
@@ -95235,7 +95287,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 5"</summary>
 <pre>mission "Successors: Ghosts Myurej 5"
-	priority
 	name "Locate hidden vault"
 	description "Enter House Myurej's hidden vault on &#60;destination&#62;, accompanied by Ijaset and two of House Myurej's soldiers."
 	source Raaqa-Kvelq-Ryuit
@@ -95337,7 +95388,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 6"</summary>
 <pre>mission "Successors: Ghosts Myurej 6"
 	landing
-	priority
 	name "Flee back to Successor space"
 	description "Escape the warships attacking you and regroup in Successor space."
 	source Kella-Uuoru-Sossa
@@ -95622,7 +95672,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts QSI 2"</summary>
 <pre>mission "Successors: Ghosts QSI 2"
-	priority
+	minor
+	invisible
 	source
 		government "House Kaatrij"
 	to offer
@@ -96335,7 +96386,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 8"</summary>
 <pre>mission "Successors: Ghosts 8"
-	priority
 	landing
 	source "Qasa-Sija-Iri"
 	to offer
@@ -96861,6 +96911,23 @@ document.addEventListener("DOMContentLoaded", function() {
 		has "successors: ghosts entered kasii-sola"
 	on fail
 		dialog phrase "successor ghosts story failed"
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 14 to 15 Patch"</summary>
+<pre>mission "Successors: Ghosts 14 to 15 Patch"
+	landing
+	invisible
+	non-blocking
+	to offer
+		has "Successors: Ghosts 15: done"
+		not "successors: ghosts entered kasii-sola"
+	on offer
+		set "successors: ghosts entered kasii-sola"
+		fail
 </pre>
 
 </details>
