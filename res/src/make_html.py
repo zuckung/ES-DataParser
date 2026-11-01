@@ -343,7 +343,7 @@ def run():
 		print('[release]')
 		menu_template, category_template, object_template = read_template()
 		objects, object_paths, object_names = read_everything(data_folder) # creates list of objects, a list of each path and each name
-		build_full_es_data_json(obj, obj_path, obj_name, 'page/data.json')
+		build_full_es_data_json(objects, object_paths, objct_names, 'page/data.json')
 		categories = get_object_categories(object_names)
 		counting, globalcount = write_html(categories, category_template, object_names, object_paths, objects, object_template, 'release')
 		save_global_count(globalcount,vpath)
