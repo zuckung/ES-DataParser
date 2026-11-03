@@ -4,6 +4,7 @@ import time
 from pillow import Image
 from pymage_size import get_image_size
 from transparent_gif_converter import save_transparent_gif # local lib
+from pathlib import Path
 
 
 def read_template():
