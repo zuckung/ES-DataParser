@@ -24273,15 +24273,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	landing
 	name "More Jump Drives"
 	description "The Unfettered Hai have promised you rich rewards if you bring them more jump drives."
+	source
+		attributes "unfettered"
 	to offer
 		has "First Contact: Unfettered: offered"
 		not "Wanderers: Jump Drive Source: active"
-	to fail
-		has "event: wanderers: unfettered invasion starts"
-	to complete
-		has "Unfettered Jump Drive 2: offered"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`The Unfettered have clearly noticed that you have a jump drive; a large crowd of them has gathered around your ship. Do you want to talk with them, and perhaps arrange a sale of your jump drive?`
@@ -24316,29 +24313,39 @@ document.addEventListener("DOMContentLoaded", function() {
 			choice
 				`	"Okay, as long as you give me a hyperdrive to take its place, I'll give you my jump drive."`
 					to display
-						"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" == 1
+						not "outfit (cargo): Jump Drive"
+						"flagship attribute: jump drive" &#60;= 1000
+						not "flagship attribute: hyperdrive"
 					goto end
 				`	"You can take the jump drive, but I don't need a hyperdrive in exchange."`
 					to display
-						"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+						or
+							has "outfit (cargo): Jump Drive"
+							"flagship attribute: jump drive" &#62; 1000
+							has "flagship attribute: hyperdrive"
 					goto spareJD
 				`	"Sorry, but if I give you this jump drive, I will lose my ability to capture more of them. Be patient, and I will bring you several of them when I am able."`
 					goto refuse
 			
 			label end
-			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
 			`	The Unfettered engineers quickly and carefully remove your jump drive and replace it with an ordinary hyperdrive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as they hand you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favor you, human friend."`
 				accept
+			
 			label spareJD
+			action
+				outfit "Jump Drive" -1
 			`	The Unfettered engineers quickly retrieve the jump drive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as they hand you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favor you, human friend."`
 				accept
 	on accept
-		outfit "Jump Drive" -1
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 10
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		has "Unfettered Jump Drive 2: offered"
 </pre>
 
 </details>
@@ -24351,15 +24358,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	landing
 	name "More Jump Drives"
 	description "The Unfettered Hai have promised you rich rewards, and more information about their plans, if you bring them more jump drives."
+	source
+		attributes "unfettered"
 	to offer
 		has "Unfettered Jump Drive 1: offered"
 		not "Wanderers: Jump Drive Source: active"
-	to fail
-		has "event: wanderers: unfettered invasion starts"
-	to complete
-		has "Unfettered Jump Drive 3: offered"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`As before, when you land on this Unfettered world with a jump drive, a large crowd gathers around your ship. Clearly they are hoping that once again you will arrange a sale. Do you want to bargain with them?`
@@ -24374,11 +24378,21 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Yes, I will sell you my jump drive."`
 			
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	Once again, they swap your jump drive for a hyperdrive, and pay you far more than you could sell a jump drive for anywhere else.`
+				goto end
 			label spareJD
-			`	Once again, they swap your jump drive for a hyperdrive, and pay you far more than you could sell a jump drive for anywhere else. "We will tell the other true Hai to offer you jobs in our job boards," they tell you, "and remember that we need still more jump drives."`
+			action
+				outfit "Jump Drive" -1
+			`	Once again, they take your jump drive pay you far more than you could sell it for anywhere else.`
+			label end
+			`	"We will tell the other true Hai to offer you jobs in our job boards," they tell you, "and remember that we need still more jump drives."`
 			choice
 				`	"Then I will find more, and bring them to you."`
 					accept
@@ -24386,10 +24400,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	"Not yet. If you further prove your friendship, perhaps we will." You assure them that you will continue to do your best to assist them.`
 				accept
 	on accept
-		outfit "Jump Drive" -1
+		fail "Unfettered Jump Drive 1"
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 20
-		fail "Unfettered Jump Drive 1"
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		has "Unfettered Jump Drive 3: offered"
 </pre>
 
 </details>
@@ -24401,11 +24418,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	minor
 	landing
 	invisible
+	source
+		attributes "unfettered"
 	to offer
 		has "Unfettered Jump Drive 2: offered"
 		not "Wanderers: Jump Drive Source: active"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`You have another jump drive, and the Unfettered will certainly be willing to pay you well for it. They also hinted that they might be willing to give you more information about what they plan to use the jump drives for. Do you want to sell them another drive?`
@@ -24443,26 +24461,35 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	"Your help may indeed be beneficial to us," says the leader. "I will tell the others to contact you if they have any particular missions you can undertake."`
 			choice
 				`	"I look forward to hearing from them."`
-					goto job
+					goto trade
 				`	"What do you plan to do to the species that inhabits those worlds now?"`
 			
 			label wanderers
 			`	"Those worlds are now held by a species of scavengers, who feast on the ruin of proud civilizations. Our scouts tell us that these carrion-feeders have wiped away nearly every Hai artifact, melting down our cities to make metal for their ships and factories, and hiding the scars of our wars beneath newly planted forests. They are an old and strong species, but few in number, and those worlds are ours by right."`
 			`	You try to press them for more information, but they tell you nothing useful, aside from promising you that they will seek out your help when it is time to reclaim their territory.`
-			label job
+			
+			label trade
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	Once again, the Unfettered engineers swap your jump drive for a hyperdrive.`
+				goto job
 			label spareJD
+			action
+				outfit "Jump Drive" -1
+			`	Once again, the Unfettered engineers take your jump drive.`
+			label job
 			`	"If you want to provide us with more jump drives, visit the job board from now on," says the leader. "We will have warriors ready to receive them from you for the usual pay."`
-				accept
-	on accept
-		outfit "Jump Drive" -1
+				decline
+	on decline
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 30
 		fail "Unfettered Jump Drive 2"
-		fail
 </pre>
 
 </details>
@@ -24499,6 +24526,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		&#60;leave&#62; "She then leaves, her anger barely contained."
 			has "unfettered: blade rodeo"
 	to offer
+		has "outfit (removable): Jump Drive"
 		has "Unfettered Jump Drive 3: offered"
 		not "Wanderers: Jump Drive Source: active"
 		not "Wanderers: Jump Drive Source: done"
@@ -24614,24 +24642,35 @@ document.addEventListener("DOMContentLoaded", function() {
 				payment 1000000
 				set "unfettered: money for drives"
 			`	"As you wish. Do remember that if you want to sell further jump drives to us for money you may go to the job board."`
-				goto end
+				goto "jump drive trade"
+			
 			label tripulse
 			action
 				set "choice: tripulse"
 			scene "outfit/tripulse shredder"
 			`	"The Tripulse Shredder may seem crude, but it packs a punch! Its specialty is how it combines a lot of firepower in one gun slot, and, due to its burst nature, it's perfect for pilots who already use hit and run tactics. Some captains even say that a Sea Scorpion can get the upper hand against a Shield Beetle when it uses four of them, if you know what you're doing, of course! As I said, I may offer you two of these in exchange for your jump drive."`
 				goto weapons
+			
 			label "buy tripulse"
 			action
 				outfit "Tripulse Shredder" 2
 			`	They order their crew to do the transfer and come to address you before leaving. "Do note that if you ever want more weapons, we will always be willing to trade them for jump drives in the job board. However, we can always offer money instead if that is of higher value to you. Of course, we can only do this exchange here on &#60;origin&#62;, given it is where these advanced weapons are produced and stocked."`
-			label end
+			
+			label "jump drive trade"
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	The Unfettered engineer swaps your jump drive for a hyperdrive before leaving, and you return to your ship after being escorted out of the facility.`
+				accept
 			label spareJD
-			`	The engineer leaves and you return to your ship after being escorted out of the facility.`
+			action
+				outfit "Jump Drive" -1
+			`	The Unfettered engineer takes your jump drive before leaving, and you return to your ship after being escorted out of the facility.`
 				accept
 			label dodge
 			action
@@ -24678,7 +24717,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		clear "choice: turret"
 		clear "choice: tripulse"
 		clear "choice: blaster"
-		outfit "Jump Drive" -1
 		"reputation: Hai (Unfettered)" &#62;?= 40
 		fail
 </pre>
@@ -24782,7 +24820,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Sell Jump Drive"
-	description "Exchange a jump drive on your flagship or in cargo for money, or for weapons, if an outfitter is available."
+	description "Exchange a jump drive on your flagship or in cargo for money or, if an outfitter is available, for weapons."
 	source
 		attributes "unfettered"
 	to offer
@@ -24791,16 +24829,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	to fail
 		has "Unfettered Jump Drive 4: active"
 	to accept
-		or
-			has "outfit (flagship installed): Jump Drive"
-			has "outfit (cargo): Jump Drive"
+		has "outfit (removable): Jump Drive"
 	on accept
+		"reputation: Hai (Unfettered)" &#62;?= 40
 		conversation
 			branch "want outfits"
 				not "unfettered: money for drives"
 				has "Unfettered Jump Drive Trading: offered"
 				has "flagship planet: Darkcloak"
-			label money
 			action
 				payment 1000000
 			`As usual, the Unfettered are more than willing to pay you a million credits for your jump drive, but you do not gain any additional information by talking with them.`
@@ -24814,15 +24850,28 @@ document.addEventListener("DOMContentLoaded", function() {
 			action
 				outfit "Tripulse Shredder" 2
 			`	The two Shredders are loaded onto your ship, in exchange for your jump drive.`
+				goto trade
+			label money
+			action
+				payment 1000000
+			`	The Unfettered pay you a million credits for your jump drive.`
+				goto trade
 			label trade
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	The Unfettered engineer swaps your jump drive for a hyperdrive before leaving.`
+				accept
 			label spareJD
 			action
 				outfit "Jump Drive" -1
-				"reputation: Hai (Unfettered)" &#62;?= 40
+			`	The Unfettered engineer takes your jump drive before leaving.`
+				accept
 </pre>
 
 </details>
@@ -26735,7 +26784,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "near earth"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26755,7 +26804,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Syndicate"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26775,7 +26824,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Syndicate"
 		not attributes "station" "frontier" "urban"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26796,7 +26845,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "deep"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26833,7 +26882,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>mission "New China Mourners"
 	minor
 	source "New China"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -26851,7 +26900,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>mission "New Holland Foibles"
 	minor
 	source "New Holland"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -26888,7 +26937,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		attributes "dirt belt"
 		attributes "farming"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26917,7 +26966,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "dirt belt"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26951,7 +27000,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "paradise"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -26973,7 +27022,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Syndicate"
 		attributes "factory"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27005,7 +27054,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Syndicate"
 		attributes "urban"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27025,7 +27074,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		attributes "south"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27044,7 +27093,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		attributes "south"
 		not attributes "station" "frontier"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27066,7 +27115,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Free Worlds"
 		attributes "farming"
 		not attributes "station" "frontier"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		"year" &#62; "bumper crop year" + 2
 		random &#60; 1
@@ -27098,7 +27147,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Free Worlds"
 		attributes "frontier"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27135,7 +27184,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		attributes "frontier"
 		attributes "south"
 		not attributes "station" "urban" "ex-pirate"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		or
 			and
@@ -27165,7 +27214,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Free Worlds"
 		not attributes "station" "urban" "frontier"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27186,7 +27235,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Free Worlds"
 		not attributes "station" "frontier"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27207,7 +27256,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Free Worlds"
 		attributes "urban"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27227,7 +27276,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	to offer
 		random &#60; 10
 		has "main plot completed"
-	"offer precedence" 5
+	"offer precedence" -5
 	on offer
 		conversation
 			`As you walk past a number of ships and crew going about their work in the spaceport, a small gathering in front of a Shuttle catches your attention. A young woman wearing a rather cheesy pilot uniform is in the midst of a little group of people all celebrating together. As you pass by them, a man standing on the top of a ladder breaks a bottle of Champagne on the (clearly not new) ship's hull. A loud cheer erupts from the group, earning an embarrassed blush from the young woman.`
@@ -27286,7 +27335,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Pirate"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27307,7 +27356,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "paradise"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 8
 		has "event: war begins"
@@ -27370,7 +27419,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		government "Republic"
 		attributes "urban"
 		not attributes "station"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 1
 	on offer
@@ -27433,7 +27482,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	minor
 	source
 		system "Sol"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -27467,7 +27516,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	minor
 	landing
 	source "Earth"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		day == 22
 		month == 4
@@ -27531,7 +27580,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	minor
 	source
 		planet "Burthen"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -27596,7 +27645,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>mission "CCOR Guerrilla Standoff"
 	minor
 	source "Gagarin"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -27631,7 +27680,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/culture conversations.txt | mission "Raider returning to Mordente-Bridi"</summary>
 <pre>mission "Raider returning to Mordente-Bridi"
 	source "Mordente-Bridi"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -27648,7 +27697,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/culture conversations.txt | mission "Militia returning to Solace"</summary>
 <pre>mission "Militia returning to Solace"
 	source "Solace"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 	on offer
@@ -27668,7 +27717,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source
 		government "Republic"
 		not attributes "uninhabited"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		year == 3030
 	on offer
@@ -27716,7 +27765,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>mission "Exotic Life: Buccaneer Bay"
 	minor
 	source "Buccaneer Bay"
-	"offer precedence" 5
+	"offer precedence" -5
 	to offer
 		random &#60; 10
 		credits &#62; 379
@@ -29237,7 +29286,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/deep jobs.txt | mission "Deep Hovercraft Large Racer Transport"</summary>
 <pre>mission "Deep Hovercraft Large Racer Transport"
 	name "Transport team to &#60;planet&#62;"
-	description "Deliver this &#60;passengers&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62;."
+	description "Deliver this &#60;bunks&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62;."
 	passengers 50 100 .9
 	cargo "Deep hovercraft" 50
 	job
@@ -75321,7 +75370,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/rim jobs.txt | mission "Delta V Hovercraft Large Racer Transport"</summary>
 <pre>mission "Delta V Hovercraft Large Racer Transport"
 	name "Transport team to &#60;planet&#62;"
-	description "Deliver this &#60;passengers&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62;."
+	description "Deliver this &#60;bunks&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62;."
 	passengers 50 100 .9
 	cargo "Delta V hovercraft" 50
 	job
@@ -76687,7 +76736,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/human/syndicate jobs.txt | mission "Syndicate Hovercraft Large Racer Transport"</summary>
 <pre>mission "Syndicate Hovercraft Large Racer Transport"
 	name "Transport team to &#60;planet&#62;"
-	description "Deliver this &#60;passengers&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62; for &#60;payment&#62;."
+	description "Deliver this &#60;bunks&#62;-member racing team and their set of &#60;cargo&#62; to &#60;destination&#62; to attend a race by &#60;date&#62; for &#60;payment&#62;."
 	passengers 50 100 .9
 	cargo "Syndicate hovercraft" 50
 	job
@@ -97236,7 +97285,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	Saajret's skin sparkles with satisfaction. "Soon after leaving, Kaatrij pulled its fleets from Aaura-Kaska, circled them around our core. 'Tis an invitation to the wormhole, we should think - fewer scans, fewer edits to one's course. Open we leave the gate, and now something wicked this way comes."`
 			label trap
 			`	"Won't they think it could be a trap?"`
-			`	"Perhaps." Outside, a gust of wind throws up enough grit to leave tiny blue flashes against the shields of one of the cloaked Vuljeten. "We've become our own quarries, though, isolated from our allies, no longer fearsome in scale. Surprise," they say, "is only worth so much."`
+			`	"Perhaps." Outside, a gust of wind throws up enough grit to leave tiny blue flashes against the shields of one of the cloaked Vujleten. "We've become our own quarries, though, isolated from our allies, no longer fearsome in scale. Surprise," they say, "is only worth so much."`
 			`	Saajret excuses themself there, offering you a short bow and splay of the arms. With nothing left to do but wait, you and your crew work to prepare the &#60;ship&#62; for the forthcoming battle.`
 			choice
 				`	(Wait.)`

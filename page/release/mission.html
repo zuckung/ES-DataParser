@@ -24273,15 +24273,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	landing
 	name "More Jump Drives"
 	description "The Unfettered Hai have promised you rich rewards if you bring them more jump drives."
+	source
+		attributes "unfettered"
 	to offer
 		has "First Contact: Unfettered: offered"
 		not "Wanderers: Jump Drive Source: active"
-	to fail
-		has "event: wanderers: unfettered invasion starts"
-	to complete
-		has "Unfettered Jump Drive 2: offered"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`The Unfettered have clearly noticed that you have a jump drive; a large crowd of them has gathered around your ship. Do you want to talk with them, and perhaps arrange a sale of your jump drive?`
@@ -24316,29 +24313,39 @@ document.addEventListener("DOMContentLoaded", function() {
 			choice
 				`	"Okay, as long as you give me a hyperdrive to take its place, I'll give you my jump drive."`
 					to display
-						"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" == 1
+						not "outfit (cargo): Jump Drive"
+						"flagship attribute: jump drive" &#60;= 1000
+						not "flagship attribute: hyperdrive"
 					goto end
 				`	"You can take the jump drive, but I don't need a hyperdrive in exchange."`
 					to display
-						"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+						or
+							has "outfit (cargo): Jump Drive"
+							"flagship attribute: jump drive" &#62; 1000
+							has "flagship attribute: hyperdrive"
 					goto spareJD
 				`	"Sorry, but if I give you this jump drive, I will lose my ability to capture more of them. Be patient, and I will bring you several of them when I am able."`
 					goto refuse
 			
 			label end
-			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
 			`	The Unfettered engineers quickly and carefully remove your jump drive and replace it with an ordinary hyperdrive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as they hand you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favor you, human friend."`
 				accept
+			
 			label spareJD
+			action
+				outfit "Jump Drive" -1
 			`	The Unfettered engineers quickly retrieve the jump drive. You sincerely hope that you are not making a mistake by giving them this new technology. "Remember," one of them says as they hand you your payment, "when you acquire more jump drives, return here with them and we will give you further rewards. Until then, may fortune favor you, human friend."`
 				accept
 	on accept
-		outfit "Jump Drive" -1
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 10
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		has "Unfettered Jump Drive 2: offered"
 </pre>
 
 </details>
@@ -24351,15 +24358,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	landing
 	name "More Jump Drives"
 	description "The Unfettered Hai have promised you rich rewards, and more information about their plans, if you bring them more jump drives."
+	source
+		attributes "unfettered"
 	to offer
 		has "Unfettered Jump Drive 1: offered"
 		not "Wanderers: Jump Drive Source: active"
-	to fail
-		has "event: wanderers: unfettered invasion starts"
-	to complete
-		has "Unfettered Jump Drive 3: offered"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`As before, when you land on this Unfettered world with a jump drive, a large crowd gathers around your ship. Clearly they are hoping that once again you will arrange a sale. Do you want to bargain with them?`
@@ -24374,11 +24378,21 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Yes, I will sell you my jump drive."`
 			
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	Once again, they swap your jump drive for a hyperdrive, and pay you far more than you could sell a jump drive for anywhere else.`
+				goto end
 			label spareJD
-			`	Once again, they swap your jump drive for a hyperdrive, and pay you far more than you could sell a jump drive for anywhere else. "We will tell the other true Hai to offer you jobs in our job boards," they tell you, "and remember that we need still more jump drives."`
+			action
+				outfit "Jump Drive" -1
+			`	Once again, they take your jump drive pay you far more than you could sell it for anywhere else.`
+			label end
+			`	"We will tell the other true Hai to offer you jobs in our job boards," they tell you, "and remember that we need still more jump drives."`
 			choice
 				`	"Then I will find more, and bring them to you."`
 					accept
@@ -24386,10 +24400,13 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	"Not yet. If you further prove your friendship, perhaps we will." You assure them that you will continue to do your best to assist them.`
 				accept
 	on accept
-		outfit "Jump Drive" -1
+		fail "Unfettered Jump Drive 1"
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 20
-		fail "Unfettered Jump Drive 1"
+	to fail
+		has "event: wanderers: unfettered invasion starts"
+	to complete
+		has "Unfettered Jump Drive 3: offered"
 </pre>
 
 </details>
@@ -24401,11 +24418,12 @@ document.addEventListener("DOMContentLoaded", function() {
 	minor
 	landing
 	invisible
+	source
+		attributes "unfettered"
 	to offer
 		has "Unfettered Jump Drive 2: offered"
 		not "Wanderers: Jump Drive Source: active"
-	source
-		attributes "unfettered"
+		has "outfit (removable): Jump Drive"
 	on offer
 		conversation
 			`You have another jump drive, and the Unfettered will certainly be willing to pay you well for it. They also hinted that they might be willing to give you more information about what they plan to use the jump drives for. Do you want to sell them another drive?`
@@ -24443,26 +24461,35 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	"Your help may indeed be beneficial to us," says the leader. "I will tell the others to contact you if they have any particular missions you can undertake."`
 			choice
 				`	"I look forward to hearing from them."`
-					goto job
+					goto trade
 				`	"What do you plan to do to the species that inhabits those worlds now?"`
 			
 			label wanderers
 			`	"Those worlds are now held by a species of scavengers, who feast on the ruin of proud civilizations. Our scouts tell us that these carrion-feeders have wiped away nearly every Hai artifact, melting down our cities to make metal for their ships and factories, and hiding the scars of our wars beneath newly planted forests. They are an old and strong species, but few in number, and those worlds are ours by right."`
 			`	You try to press them for more information, but they tell you nothing useful, aside from promising you that they will seek out your help when it is time to reclaim their territory.`
-			label job
+			
+			label trade
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	Once again, the Unfettered engineers swap your jump drive for a hyperdrive.`
+				goto job
 			label spareJD
+			action
+				outfit "Jump Drive" -1
+			`	Once again, the Unfettered engineers take your jump drive.`
+			label job
 			`	"If you want to provide us with more jump drives, visit the job board from now on," says the leader. "We will have warriors ready to receive them from you for the usual pay."`
-				accept
-	on accept
-		outfit "Jump Drive" -1
+				decline
+	on decline
 		payment 1000000
 		"reputation: Hai (Unfettered)" &#62;?= 30
 		fail "Unfettered Jump Drive 2"
-		fail
 </pre>
 
 </details>
@@ -24499,6 +24526,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		&#60;leave&#62; "She then leaves, her anger barely contained."
 			has "unfettered: blade rodeo"
 	to offer
+		has "outfit (removable): Jump Drive"
 		has "Unfettered Jump Drive 3: offered"
 		not "Wanderers: Jump Drive Source: active"
 		not "Wanderers: Jump Drive Source: done"
@@ -24614,24 +24642,35 @@ document.addEventListener("DOMContentLoaded", function() {
 				payment 1000000
 				set "unfettered: money for drives"
 			`	"As you wish. Do remember that if you want to sell further jump drives to us for money you may go to the job board."`
-				goto end
+				goto "jump drive trade"
+			
 			label tripulse
 			action
 				set "choice: tripulse"
 			scene "outfit/tripulse shredder"
 			`	"The Tripulse Shredder may seem crude, but it packs a punch! Its specialty is how it combines a lot of firepower in one gun slot, and, due to its burst nature, it's perfect for pilots who already use hit and run tactics. Some captains even say that a Sea Scorpion can get the upper hand against a Shield Beetle when it uses four of them, if you know what you're doing, of course! As I said, I may offer you two of these in exchange for your jump drive."`
 				goto weapons
+			
 			label "buy tripulse"
 			action
 				outfit "Tripulse Shredder" 2
 			`	They order their crew to do the transfer and come to address you before leaving. "Do note that if you ever want more weapons, we will always be willing to trade them for jump drives in the job board. However, we can always offer money instead if that is of higher value to you. Of course, we can only do this exchange here on &#60;origin&#62;, given it is where these advanced weapons are produced and stocked."`
-			label end
+			
+			label "jump drive trade"
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	The Unfettered engineer swaps your jump drive for a hyperdrive before leaving, and you return to your ship after being escorted out of the facility.`
+				accept
 			label spareJD
-			`	The engineer leaves and you return to your ship after being escorted out of the facility.`
+			action
+				outfit "Jump Drive" -1
+			`	The Unfettered engineer takes your jump drive before leaving, and you return to your ship after being escorted out of the facility.`
 				accept
 			label dodge
 			action
@@ -24678,7 +24717,6 @@ document.addEventListener("DOMContentLoaded", function() {
 		clear "choice: turret"
 		clear "choice: tripulse"
 		clear "choice: blaster"
-		outfit "Jump Drive" -1
 		"reputation: Hai (Unfettered)" &#62;?= 40
 		fail
 </pre>
@@ -24782,7 +24820,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Sell Jump Drive"
-	description "Exchange a jump drive on your flagship or in cargo for money, or for weapons, if an outfitter is available."
+	description "Exchange a jump drive on your flagship or in cargo for money or, if an outfitter is available, for weapons."
 	source
 		attributes "unfettered"
 	to offer
@@ -24791,16 +24829,14 @@ document.addEventListener("DOMContentLoaded", function() {
 	to fail
 		has "Unfettered Jump Drive 4: active"
 	to accept
-		or
-			has "outfit (flagship installed): Jump Drive"
-			has "outfit (cargo): Jump Drive"
+		has "outfit (removable): Jump Drive"
 	on accept
+		"reputation: Hai (Unfettered)" &#62;?= 40
 		conversation
 			branch "want outfits"
 				not "unfettered: money for drives"
 				has "Unfettered Jump Drive Trading: offered"
 				has "flagship planet: Darkcloak"
-			label money
 			action
 				payment 1000000
 			`As usual, the Unfettered are more than willing to pay you a million credits for your jump drive, but you do not gain any additional information by talking with them.`
@@ -24814,15 +24850,28 @@ document.addEventListener("DOMContentLoaded", function() {
 			action
 				outfit "Tripulse Shredder" 2
 			`	The two Shredders are loaded onto your ship, in exchange for your jump drive.`
+				goto trade
+			label money
+			action
+				payment 1000000
+			`	The Unfettered pay you a million credits for your jump drive.`
+				goto trade
 			label trade
 			branch spareJD
-				"outfit (cargo): Jump Drive" + "outfit (flagship installed): Hyperdrive" + "outfit (flagship installed): Scram Drive" + "outfit (flagship installed): Jump Drive" &#62; 1
+				or
+					has "outfit (cargo): Jump Drive"
+					"flagship attribute: jump drive" &#62; 1000
+					has "flagship attribute: hyperdrive"
 			action
+				outfit "Jump Drive" -1
 				outfit "Hyperdrive" 1
+			`	The Unfettered engineer swaps your jump drive for a hyperdrive before leaving.`
+				accept
 			label spareJD
 			action
 				outfit "Jump Drive" -1
-				"reputation: Hai (Unfettered)" &#62;?= 40
+			`	The Unfettered engineer takes your jump drive before leaving.`
+				accept
 </pre>
 
 </details>
@@ -55794,7 +55843,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	mark "Acamar"
 	destination "Sandswell"
 	passengers 1
-	deadline
 	to offer
 		has "Lost Racer 1: done"
 		not "abandoned lost racer"
@@ -55863,6 +55911,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			label acamar
 			`	"Thank you, Captain. We need to get moving immediately."`
 				launch
+	on accept
+		event "lost racer deadline" 12
 	on enter Acamar
 		unmark Acamar
 		conversation
@@ -55890,8 +55940,6 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Perhaps that would be best."`
 					goto abandon
 				`	(Suggest a different system.)`
-			action
-				set "rescue artemis renard"
 			`	"What about there," you say, pointing to the neighboring system. "Kugel. It's off the circuit, so no one will have searched there, but if her hyperdrive malfunctioned or was sabotaged, she might have ended up there. It's only a single jump away."`
 			`	"Okay," he says, wiping his eyes with the corners of his sleeves. "Kugel it is, Captain."`
 				accept
@@ -55904,11 +55952,40 @@ document.addEventListener("DOMContentLoaded", function() {
 				fail
 	on enter Kugel
 		unmark Acamar
+		set "lost racer found artemis"
 		dialog
 			"As soon as you enter the Kugel system, your sensors begin to pick up a weak radio signal coming from the second planet, this time matching exactly the frequency of Artemis Renard's transponder. It seems you have arrived in the correct system."
 	on visit
 		dialog
 			"You have reached &#60;planet&#62;, but August Renard is not in the system! Better depart and wait for your escorts to arrive in this star system."
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | mission "Lost Racer 2 - Deadline"</summary>
+<pre>mission "Lost Racer 2 - Deadline"
+	entering
+	name "Take August to &#60;planet&#62;"
+	description "After your aborted search for Artemis Renard, take her father, August, back to &#60;destination&#62;."
+	destination "Glory"
+	passengers 1
+	to offer
+		has "event: lost racer deadline"
+		not "lost racer found artemis"
+	on offer
+		fail "Lost Racer 2 - Continued"
+		set "lost racer august to glory"
+		set "lost racer august aborted"
+		conversation
+			`As you enter the system, August enters the bridge. "Captain, we're too late. Artemis is dead. I just know it."`
+			choice
+				`	"No need to panic."`
+				`	(Say nothing.)`
+			`	"Even if she wasn't attacked by competition, she still can't have survived this long. You've failed." He looks ready to break down.`
+			`	"Take me back to Glory. There's no hope."`
+				accept
 </pre>
 
 </details>
@@ -55925,12 +56002,25 @@ document.addEventListener("DOMContentLoaded", function() {
 	destination "Glory"
 	passengers 1
 	to offer
-		has "Lost Racer 2 - Continued: failed"
+		not "lost racer august aborted"
 		has "lost racer august to glory"
-	on complete
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/human/human missions.txt | mission "Lost Racer 2 - August Reached Glory"</summary>
+<pre>mission "Lost Racer 2 - August Reached Glory"
+	invisible
+	landing
+	source "Glory"
+	to offer
+		has "lost racer august to glory"
+	on offer
 		clear "lost racer august to glory"
 		conversation
-			`As the advanced medical facilities of &#60;planet&#62; rise up to greet the &#60;ship&#62;, August comes to meet you on the bridge. "Captain, I would like to thank you for attempting to find my daughter, even though the attempt ended poorly. Thank you for that, at least." He then prepares to exit the ship, outside of which a veritable army of attendants are waiting.`
+			`As the advanced medical facilities of &#60;planet&#62; rise up to greet the &#60;ship&#62;, August comes to meet you on the bridge. "Captain, I would like to thank you for attempting to find my daughter, even though we failed. Thank you for that, at least." He then prepares to exit the ship, outside of which a veritable army of attendants are waiting.`
 			choice
 				`	"Weren't you going to pay me?"`
 					goto greedy
@@ -55958,6 +56048,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	passengers 2
 	to offer
 		has "Lost Racer 2 - Continued: done"
+		not "event: lost racer deadline"
 	on offer
 		conversation
 			`Upon reaching the planet, you pinpoint the radio signal to a valley in the southern hemisphere. You descend through a raging sandstorm; you have to rely entirely on instruments as the view from the &#60;ship&#62;'s bridge is almost entirely obscured. Soon, your scanners report that the source of the signal is less than a kilometer out, and after a few moments more, you begin to discern the vague shape of a crashed Flivver through the haze of dust. You land the &#60;ship&#62; next to the wreck, and both you and Mr. Renard go to exit the ship.`
@@ -58085,7 +58176,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	name "Rescue &#60;origin&#62; convoy"
 	description "&#60;origin&#62;'s largest ever convoy was intercepted on its way to Tarazed. Merchants report that a large pirate fleet escorting a freighter convoy went to &#60;destination&#62;. Governor Tim has asked you to try and save it before the pirates can plunder it completely."
 	source "Rand"
-	priority
 	destination "Greenrock"
 	deadline 7
 	clearance
@@ -58369,6 +58459,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <pre>mission "Timothy Radrickson 3d: Return to Rand"
 	landing
 	name "Return to Rand"
+	description "Now that you've finished escorting the Hroar's Haulers Convoy, visit &#60;destination&#62; for your reward."
 	source "Wayfarer"
 	destination "Rand"
 	to offer
@@ -66861,7 +66952,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 3
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder I"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66898,6 +66989,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 3
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder II"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66930,6 +67022,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 2 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder III"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66962,6 +67055,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder IV"
 		dialog phrase "generic hunted bounty eliminated and payment dialog"
 		on kill
@@ -66999,6 +67093,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			government "Republic" "Free Worlds" "Syndicate" "Neutral" "Independent"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet I"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67036,7 +67131,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet II"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67072,7 +67167,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 4
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet III"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67108,7 +67203,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet IV"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67144,7 +67239,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet V"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67180,7 +67275,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 3 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VI"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67212,7 +67307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VII"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67244,7 +67339,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet VIII"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67276,7 +67371,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 4 5
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet IX"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -67306,7 +67401,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		system
 			distance 7 9
 			attributes "rim" "south" "north" "dirt belt" "core" "frontier"
-			not system "Ultima Thule"
+			not system "Ultima Thule" "Tarazed" "Enif" "Sadalmelik" "Sadalsuud"
 		fleet "Marauder fleet X"
 		dialog phrase "generic hunted bounty fleet eliminated and payment dialog"
 		on kill
@@ -77300,14 +77395,14 @@ document.addEventListener("DOMContentLoaded", function() {
 		has "remnant met taely"
 	on offer
 		conversation
-			`Do you want to ask Taely about the section of space south of the Ember Wastes, the Graveyard, and its inhabitants?`
+			`Do you want to ask Taely about the section of space south of the Ember Waste, the Graveyard, and its inhabitants?`
 			choice
 				`	(Yes.)`
 				`	(Not now.)`
 					defer
 			`	You find Taely inside one of the outer hangars of the shipyard, apparently teaching a small group of people how to make basic repairs on an Albatross. You sit on a bench waiting for her to finish her lesson, after which she walks over to you. "Hello, &#60;first&#62;!" she says. "Is there something I can help you with?"`
 			`	"I'm here because I need to ask you a few questions," you reply.`
-			`	As she sits near you, you start explaining to her the area you reached, including the weird alien ships that attacked you with weapons similar to the ones the Remnant possess, although this doesn't seem to be news for her. "We know of the existence of the Ka'het, the aliens you encountered, since we first reached the Ember Wastes. We found many of their shells within our planets, crashed there thousands, perhaps even tens of thousands of years before our arrival, but some of their outfits survived long enough for us to reverse engineer these advanced technologies."`
+			`	As she sits near you, you start explaining to her the area you reached, including the weird alien ships that attacked you with weapons similar to the ones the Remnant possess, although this doesn't seem to be news for her. "We know of the existence of the Ka'het, the aliens you encountered, since we first reached the Ember Waste. We found many of their shells within our planets, crashed there thousands, perhaps even tens of thousands of years before our arrival, but some of their outfits survived long enough for us to reverse engineer these advanced technologies."`
 			`	"Then," she continues, "a few hundred years ago, a scout fleet arrived in a system where some Ka'het were still alive. They attacked our fleet instantly with EMP Torpedoes that quickly disabled two Starlings. The Starlings couldn't recover quickly enough to survive, and the only remaining ship could do nothing but flee as soon as possible."`
 			choice
 				`	"Which technology did you recover from the crashed Ka'het?"`
@@ -77527,7 +77622,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		has "event: remnant: lab availability"
 	on offer
 		conversation
-			`After setting course toward the surface, you feel comfortable enough to leave the control panel and let the autopilot do the job. It's a calm, cloudless night on this part of &#60;planet&#62;; a rare sight in the Graveyard, and indeed in most of the Ember Wastes. With all but the essential lights turned off, you catch the opportunity to relax for a few minutes on your chair, watching the evolving landscape below and the night sky above.`
+			`After setting course toward the surface, you feel comfortable enough to leave the control panel and let the autopilot do the job. It's a calm, cloudless night on this part of &#60;planet&#62;; a rare sight in the Graveyard, and indeed in most of the Ember Waste. With all but the essential lights turned off, you catch the opportunity to relax for a few minutes on your chair, watching the evolving landscape below and the night sky above.`
 			`	Your ship's proximity alert breaks the silence, then falls quiet before you reach the control panel. A quick glance out the window confirms you're still fairly high up, and the ship's radar reveals nothing of interest - at least not currently. You press a couple of buttons to check what your ship recorded, and see what looks like a large mass flicker for a few seconds a hundred meters away from your ship during the alarm.`
 			choice
 				`	(Continue the descent.)`
@@ -79002,7 +79097,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			label what
 			`	"I wish I knew. And the worst may have yet to come," Dusk replies. "Something is not right with the sky."`
 			label constellation
-			`	He points at the projector. "Do you see those two triangular formations near the top of the star map? That is something we called the Ember Prism - a constellation of six stars of similar magnitude, located far from the Wastes and close to each other. While it is not visible from Earth, it should be recognizable from almost every system here, including Patir, but no longer. And that is not all. None of the constellations in this star map can be found anywhere in the sky." He stops for a second, giving a worried look to the rest of the team. "We are no longer in the Ember Wastes."`
+			`	He points at the projector. "Do you see those two triangular formations near the top of the star map? That is something we called the Ember Prism - a constellation of six stars of similar magnitude, located far from the Wastes and close to each other. While it is not visible from Earth, it should be recognizable from almost every system here, including Patir, but no longer. And that is not all. None of the constellations in this star map can be found anywhere in the sky." He stops for a second, giving a worried look to the rest of the team. "We are no longer in the Ember Waste."`
 			choice
 				`	"How is that possible?"`
 				`	"Where are we then?"`
@@ -79402,12 +79497,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			`The giant creature floats a few meters away from your cockpit, silent and motionless, but you know that inside the shell, the slug remains alive and well, ready to kill. Compared to some of the Ka'het back in the Graveyard, this is one of the Builders' smaller creations, but its size is still impressive for what is, in essence, a single organism.`
 			`	Before setting the &#60;flagship&#62; to automatic station-keeping, you move your ship so that the main hatch is as close as possible to the Fetri'sei. The Remnant are already in the airlock donning their extravehicular suits, and you join them shortly after.`
 			`	"When we are inside, there is a high probability we will not be able to communicate," advises Dusk. "Normally, the walls of the armored shell are too thick and dense for our signals to pass through, and the spaces we need to navigate prevent us from using a physical tether. This does not mean we will be unprotected, however. May I see your sidearm?"`
-			`	You draw your weapon out of the holster and hand it to him. After a quick examination, he nods and gives it back before continuing. "Once inside, one of our first operations will be connecting to the downlink of the Fetri's telemetry: it is not protected, in our experience, and it is easy to access. From there, we will be able to monitor the vessel's shields.`
-			`	"Many things could go wrong during this mission: the unknown creature could leave the system early, or maybe we could inadvertently awaken the Ka'sei with our actions. If you notice anything out of the ordinary, no matter how minor, take out this gun, point at an empty spot on the shell, and shoot. Our terminals will let us know even the smallest variation in its shield integrity, and we will run back to safety as soon as this happens."`
+			`	You draw your weapon out of the holster and hand it to him. After a quick examination, he nods and gives it back before continuing. "Once inside, one of our first operations will be connecting to the downlink of the Fetri's telemetry: it is not protected, in our experience, and it is easy to access. From there, we will be able to monitor the vessel's systems.`
+			`	"Many things could go wrong during this mission: the unknown creature could leave the system early, or maybe we could inadvertently awaken the Ka'sei with our actions. If you notice anything out of the ordinary, no matter how minor, take out this gun, point at an empty spot on the shell, and shoot. Our terminals will let us know even the smallest variation in its system metrics, and we will run back to safety as soon as this happens."`
 			choice
 				`	"Will this not anger the Ka'sei?"`
 					goto anger
-				`	"What if you cannot access the shield levels?"`
+				`	"What if you cannot access the vessel's systems?"`
 			`	"Then we will abandon the mission. Without that safety net, it would be too dangerous to continue. However, since they were both created by the Builders, it should be similar enough to the Ka'het design language.`
 				goto move
 			label anger
@@ -79444,7 +79539,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	You leave the handles and use your feet to give you a good push away from the spacecraft. At the last second, you move to the right to avoid ending up behind one of its thrusters just as they roar to life. The Fetri'sei has awakened, and for an instant you see all of its systems activate at once - the engines, the steering, even the Ravagers.`
 				goto return
 			label shoot
-			`	You press the trigger once more, and the projectile again dissolves in the shield protecting the back of the Fetri'sei. For a few seconds still nothing seems to happen, but then, slowly, white noise starts coming from the communicator. Watching the spacecraft, you finally see the Remnant leaping out of the hatch, carrying a dozen faintly glowing cylindrical tubes under their arms.`
+			`	You pull the trigger once more, and the projectile again impacts the back of the Fetri'sei. For a few seconds still nothing seems to happen, but then, slowly, white noise starts coming from the communicator. Watching the spacecraft, you finally see the Remnant leaping out of the hatch, carrying a dozen faintly glowing cylindrical tubes under their arms.`
 				goto continue
 			label wait
 			`	The wait is excruciating, but after a few seconds, you start hearing white noise coming from your headphones. Right as you start recognizing some words, one of the Remnant leaps out of the hatch, followed closely by the other four. Under their arms, you can distinguish a dozen cylindrical tubes, a faint glow surrounding them.`
@@ -79977,7 +80072,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			label risk
 			`	He seems dubious. "Answering this question is... more complicated than it looks. We are not certain of how the Ka'het gained keystones the first time, nor how many of them were able to do so. We know that it is a possibility, that the Ka'het as a whole are likely stronger than our fleets, and that no Ka'het has moved past the Graveyard since the Exodus. The truth, &#60;first&#62;, is that risk posturing is a very complex subject; for that matter, the same can be said with our mission.`
 			label danger
-			`	He thoughtfully passes his hand over the hull of Calm Sea Afire. "Only time will tell, but I stand by the decisions we have made. A standard Smew is simple to repair and to keep in storage, but not too useful outside of the Ember Wastes. A large, jump-capable starship is complicated to keep in flight-status for months at a time, not to mention the maintenance needs of a cloaking system. And worse of all, it might not even be of much use if Patir was not in the Milky Way when the emergency happens!"`
+			`	He thoughtfully passes his hand over the hull of Calm Sea Afire. "Only time will tell, but I stand by the decisions we have made. A standard Smew is simple to repair and to keep in storage, but not too useful outside of the Ember Waste. A large, jump-capable starship is complicated to keep in flight-status for months at a time, not to mention the maintenance needs of a cloaking system. And worse of all, it might not even be of much use if Patir was not in the Milky Way when the emergency happens!"`
 			label skip
 			`	The buzz of Dusk's commlink draws his attention. He smiles, and his tone changes almost instantly. "Ssil Vida is ready to cut the signal. Once they do so, it will take six days for this to reach Patir; at that point, it will instantly disappear, possibly to move into the same cluster we visited the last time. You, I, and four of our researchers must be there when this happens." He rights up and clears his throat. "Captain," he sings, "shall I give the order?"`
 			choice
@@ -80110,7 +80205,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	The Petrel leaves your wing and falls like a stone through the cloud layer. Irregular updates from the crew reassure you that their test is continuing, and that their ship is holding up well. You follow their trip on your radar screen until they move beyond the range of your instruments.`
 			`	The stars above you are barely visible through the atmosphere of &#60;origin&#62;, which at first seems normal. It is not until they begin flickering more that you realize Patir is in the process of moving again! There is no way that the Remnant can see it from deep below, and those who remained at the Builder settlement are probably too busy with their experiments to notice it. Chances are that, this time, you are the only person who can stop and take a look at the spectacle. You recline your seat to watch through your cockpit the faint dance above the planet, for once all by yourself.`
 			`	The sequence you have now seen twice repeats in reverse: the number of stars now grows continuously, spinning or moving erratically left and right. In the last few seconds, most condense into a mass of light that shrinks until it appears as simply another star. Still, you can confidently say that you can see far more stars around you than before Patir started moving.`
-			`	Soon enough, the fruitful return of their lifeboat puts an end to your thoughts. Now that you are back in the Milky Way, it's time to pack things up in the Remnant laboratory and make the trip back to the Ember Wastes.`
+			`	Soon enough, the fruitful return of their lifeboat puts an end to your thoughts. Now that you are back in the Milky Way, it's time to pack things up in the Remnant laboratory and make the trip back to the Ember Waste.`
 				accept
 	npc save
 		government "Remnant"
@@ -80382,7 +80477,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Alone? What should I do if I have an issue?"`
 					goto alone
 				`	"What if you have an emergency and need to leave quickly?"`
-			`	He smiles. "I appreciate your concerns, &#60;first&#62;. You could wait until we have entered the station before going on with your work; I can assure you that after that, it will take longer for us to return here than it will for you. Well," he corrects himself, "I realize that does not sound very reassuring, but it was more to say that it matters little where your ship stays while are deep inside the station."`
+			`	He smiles. "I appreciate your concerns, &#60;first&#62;. You could wait until we have entered the station before going on with your work; I can assure you that after that, it will take longer for us to return here than it will for you. Well," he corrects himself, "I realize that does not sound very reassuring, but it was more to say that it matters little where your ship stays while we are deep inside the station."`
 				goto enter
 			label alone
 			`	He smiles. "We will remain in radio contact for the entire time, if we can. Plus, we have seen first hand the experience you have gained lately. It would be foolish of us not to make use of your expertise when we can."`
@@ -81602,7 +81697,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				`	"Not much. Can you summarize it?"`
 				`	"Enough."`
 					goto waaaah
-			`	"After the loss of a number of vehicles to what we now know to be the Ka'het, our ancestors developed and adopted new standards to reduce the risk of such expeditions into the depth of the Ember Wastes. Cloaks were to be kept active at all times while inside the Graveyard, limiting the range of our archeological missions to the ever-increasing capacity of our fuel tanks.`
+			`	"After the loss of a number of vehicles to what we now know to be the Ka'het, our ancestors developed and adopted new standards to reduce the risk of such expeditions into the depth of the Ember Waste. Cloaks were to be kept active at all times while inside the Graveyard, limiting the range of our archeological missions to the ever-increasing capacity of our fuel tanks.`
 			`	"Despite limiting most expeditions to the northern systems, these guidelines still led to the golden age of Builder archeology, giving us incredible insights into the history of this region and its inhabitants. The culmination of this effort was the partial translation of their written language, as well as the decoding of some of their programming. The problem, however, is that this did not extend to their spoken language.`
 				goto continue
 			label waaaah
@@ -82200,6 +82295,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/kahet/kahet missions.txt | mission "Ka'het: Lightning in a Bottle 5"</summary>
 <pre>mission "Ka'het: Lightning in a Bottle 5"
+	landing
 	name "Builder technology to &#60;planet&#62;"
 	description "Escort the Remnant ships back to &#60;destination&#62; with the hardware taken from the Builder gas probe."
 	source "Meligara"
@@ -82228,7 +82324,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	You try to contact the Remnant, but the arrival of another EMP prevents you from doing so. For their part, one of the Peregrines has taken the initiative to approach the alien spacecraft.`
 			choice
 				`	(Return to orbit to fight the Ka'het.)`
-					flee
+					depart
 				`	(Keep trying to speak with the Remnant.)`
 			action
 				set "ka'het: cloud probe electronics burnt"
@@ -82294,7 +82390,9 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/kahet/kahet missions.txt | mission "Ka'het: Lightning in a Bottle Epilogue 1"</summary>
 <pre>mission "Ka'het: Lightning in a Bottle Epilogue 1"
+	landing
 	invisible
+	non-blocking
 	to offer
 		has "Ka'het: Lightning in a Bottle 5: done"
 		has "Ka'het: Voice From The Past 4: done"
@@ -84152,6 +84250,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Defense 1"</summary>
 <pre>mission "Remnant: Defense 1"
+	minor
 	name "Defend &#60;planet&#62;"
 	description "Assist in defending &#60;planet&#62; from a Korath raid, then return to the planet."
 	source "Caelian"
@@ -84393,6 +84492,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Void Sprites 1"</summary>
 <pre>mission "Remnant: Void Sprites 1"
+	minor
 	name "Space creatures"
 	description "A man on the Remnant homeworld of &#60;planet&#62; asked you to collect data on some strange space creatures in the &#60;waypoints&#62; system, in another part of the Ember Waste."
 	source "Aventine"
@@ -85523,6 +85623,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Tech Retrieval"</summary>
 <pre>mission "Remnant: Tech Retrieval"
+	minor
 	name "Remnant Human Tech Retrieval"
 	description "The Remnant are interested in learning what advances humanity has made over the past centuries. Bring them samples of advanced technology, such as newly developed ramscoops, weapons, or shields."
 	source "Viminal"
@@ -85986,6 +86087,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Return the Samples"</summary>
 <pre>mission "Remnant: Return the Samples"
+	minor
 	name "Return the Samples"
 	description "A researcher on &#60;planet&#62; has asked you to return void sprite eggs to Nasqueron that the Remnant stole many years ago."
 	source "Aventine"
@@ -87732,6 +87834,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Expanded Horizons Storms 1"</summary>
 <pre>mission "Remnant: Expanded Horizons Storms 1"
+	minor
 	name "Ember Waste Storm Scanning"
 	description "Dawn has asked that you scan one of the Ember Waste's storms at &#60;waypoints&#62; and return with the data to &#60;planet&#62;."
 	passengers 1
@@ -87804,7 +87907,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					goto "temperature units"
 				`	"I think that is all the technical detail I can take."`
 					goto "storm end"
-			`	She looks mischievous. "I cannot tell you where or how we got it, but look at this." Her display shifts again with the hazes vanishing, and shows the galaxy map with one key difference. "Yes, the Ember Wastes are violet. Actually, they are off the visual spectrum into the ultraviolets, but this downshifts it so we can see it. This is what the Ember Wastes looked like a very long time ago."`
+			`	She looks mischievous. "I cannot tell you where or how we got it, but look at this." Her display shifts again with the hazes vanishing, and shows the galaxy map with one key difference. "Yes, the Ember Waste is violet. Actually, it is off the visual spectrum into the ultraviolets, but this downshifts it so we can see it. This is what the Ember Waste looked like a very long time ago."`
 			`	She takes on a serious tone. "This data suggests there is enough energy in the area to maintain the hydrogen at somewhere in excess of 61A8 degrees. It does not tell us the source of that energy, but based on patterns and some other data we have collected, the two appear to be intertwined. At the very least, the ion storms are one of the means by which energy is being transferred into the clouds." Her display vanishes, and she slings her backpack over her shoulder.`
 				goto "storm end"
 			label "numeric system"
@@ -87847,6 +87950,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/remnant/remnant 1 introduction.txt | mission "Remnant: Logistics 1"</summary>
 <pre>mission "Remnant: Logistics 1"
+	minor
 	name "Rush delivery to &#60;planet&#62;"
 	description `Deliver &#60;cargo&#62; to &#60;destination&#62; by &#60;date&#62;.`
 	source "Caelian"
@@ -90910,7 +91014,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Destroy Ground Assault Bounty"
-	description "A Korath ship is hunting for our outposts in the Ember Wastes. Track it down, eliminate it and any fighters it is carrying, and then return to &#60;planet&#62; to receive your payment of &#60;payment&#62;."
+	description "A Korath ship is hunting for our outposts in the Ember Waste. Track it down, eliminate it and any fighters it is carrying, and then return to &#60;planet&#62; to receive your payment of &#60;payment&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91075,7 +91179,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Scout"
-	description "The &#60;npc&#62; has gone missing during a scouting mission in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a scouting mission in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91117,7 +91221,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Scout"
-	description "The &#60;npc&#62; has gone missing during a scouting mission in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a scouting mission in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91159,7 +91263,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Retrieval"
-	description "The &#60;npc&#62; has gone missing during a tech retrieval mission in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a tech retrieval mission in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91203,7 +91307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Retrieval"
-	description "The &#60;npc&#62; has gone missing during a tech retrieval mission in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a tech retrieval mission in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91245,7 +91349,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Supply Ship"
-	description "The &#60;npc&#62; has gone missing during a supply run in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a supply run in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -91287,7 +91391,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	job
 	repeat
 	name "Search and Rescue: Supply Ship"
-	description "The &#60;npc&#62; has gone missing during a supply run in the Ember Wastes. Find them and help them return to &#60;destination&#62;."
+	description "The &#60;npc&#62; has gone missing during a supply run in the Ember Waste. Find them and help them return to &#60;destination&#62;."
 	source
 		government "Remnant"
 	to offer
@@ -94561,7 +94665,7 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts aqrabe.txt | mission "Successors: Ghosts Aqrabe 3"</summary>
 <pre>mission "Successors: Ghosts Aqrabe 3"
 	name "Visit stellar garden"
-	description "Attempt to land on the star of the &#60;system&#62; system."
+	description "Attempt to land on the stellar metal garden orbiting the Kasii-Cavaasa star."
 	source "Kasii-Cavasaa-Oa"
 	stopover "Exotic Metal Garden"
 	destination "Kasii-Cavasaa-Oa"
@@ -95011,7 +95115,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 2"</summary>
 <pre>mission "Successors: Ghosts Myurej 2"
 	landing
-	priority
 	name "Search &#60;planet&#62;"
 	description "Following information from Myurej's contact, look for Riiria at &#60;destination&#62;."
 	source Kasii-Tuur-Saqru
@@ -95233,7 +95336,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 5"</summary>
 <pre>mission "Successors: Ghosts Myurej 5"
-	priority
 	name "Locate hidden vault"
 	description "Enter House Myurej's hidden vault on &#60;destination&#62;, accompanied by Ijaset and two of House Myurej's soldiers."
 	source Raaqa-Kvelq-Ryuit
@@ -95335,7 +95437,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <summary>data/successors/successor 2 ghosts myurej.txt | mission "Successors: Ghosts Myurej 6"</summary>
 <pre>mission "Successors: Ghosts Myurej 6"
 	landing
-	priority
 	name "Flee back to Successor space"
 	description "Escape the warships attacking you and regroup in Successor space."
 	source Kella-Uuoru-Sossa
@@ -95563,6 +95664,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	source "Qasa-Sija-Iri"
 	repeat
 	to offer
+		has "Successors: Ghosts Prelude Incident: offered"
 		not "Successors: Ghosts 7a: done"
 		not "Successors: Ghosts 7b: done"
 	on offer
@@ -95619,7 +95721,8 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts QSI 2"</summary>
 <pre>mission "Successors: Ghosts QSI 2"
-	priority
+	minor
+	invisible
 	source
 		government "House Kaatrij"
 	to offer
@@ -96332,7 +96435,6 @@ document.addEventListener("DOMContentLoaded", function() {
 <details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 8"</summary>
 <pre>mission "Successors: Ghosts 8"
-	priority
 	landing
 	source "Qasa-Sija-Iri"
 	to offer
@@ -96437,7 +96539,7 @@ document.addEventListener("DOMContentLoaded", function() {
 		has "successors: ghosts dealt with aqrabe"
 	on offer
 		conversation
-			`As disembark from your ship, you notice a group of Successor soldiers emerging from another craft in the spaceport, a Seiitej bearing House Kaatrij's colors. They meet you outside your own vessel, their weapons held at attention.`
+			`As you disembark from your ship, you notice a group of Successor soldiers emerging from another craft in the spaceport, a Seiitej bearing House Kaatrij's colors. They meet you outside your own vessel, their weapons held at attention.`
 			`	"Captain &#60;first&#62; &#60;last&#62;," their leader says, "We've been instructed to take thee with us."`
 			choice
 				`	"For what purpose exactly?"`
@@ -96864,6 +96966,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 14 to 15 Patch"</summary>
+<pre>mission "Successors: Ghosts 14 to 15 Patch"
+	landing
+	invisible
+	non-blocking
+	to offer
+		has "Successors: Ghosts 15: done"
+		not "successors: ghosts entered kasii-sola"
+	on offer
+		set "successors: ghosts entered kasii-sola"
+		fail
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/successors/successor 2 ghosts.txt | mission "Successors: Ghosts 15"</summary>
 <pre>mission "Successors: Ghosts 15"
 	transition
@@ -96884,7 +97003,6 @@ document.addEventListener("DOMContentLoaded", function() {
 			`	Saajret hums for a moment. "Fine, fine. It's one of ours, a citadel of old Kaatrij from bygone years. 'Twas cloaked, of course. 'Til now, t'would seem; and so we are outmaneuvered again. That is why we must be quick, Captain; thou mustn't delay."`
 				accept
 	on complete
-		clear "successors: ghosts entered kasii-sola"
 		conversation
 			`While you are presenting your landing authorization, Saajret calls for several members of Kaatrij to meet you in the docking bay; by the time you land, they are there waiting, slithering over to speak to Saajret almost immediately. The leader of this group dismisses you and Saajret, with an apologetic bow, asks you to meet them at the &#60;planet&#62; spaceport in an hour.`
 </pre>
