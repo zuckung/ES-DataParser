@@ -5353,9 +5353,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
-<summary>data/_ui/tooltips.txt | tip "Spawn raid fleets"</summary>
-<pre>tip "Spawn raid fleets"
-	`Controls whether raid fleets are able to spawn. Raid fleets are hostile fleets that can spawn in some systems if your fleet's cargo attractiveness is much higher than its deterrence. (That is, if you have a lot of cargo space and not a lot of firepower to defend it.) If this rule is active, your fleet's raid fleet spawn chance can be viewed from the player info panel.`
+<summary>data/_ui/tooltips.txt | tip "Roll chance"</summary>
+<pre>tip "Roll chance"
+	`Controls the chance of a raid fleet spawn attempt occurring each time you jump into a system.`
+	`Raid fleets are hostile fleets that can spawn in some systems if your fleet's cargo attractiveness is much higher than its deterrence. (That is, if you have a lot of cargo space and not a lot of firepower to defend it.) If this rule isn't 0%, your fleet's raid fleet spawn chance can be viewed from the player info panel.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Attraction multiplier"</summary>
+<pre>tip "Attraction multiplier"
+	`Multiplies the raid fleet attraction value of all the ships in your fleet. 200% means that you would need half as much cargo space to have the same chance to spawn raid fleets, while 50% means you need twice as much.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Deterrence multiplier"</summary>
+<pre>tip "Deterrence multiplier"
+	`Multiplies the raid fleet deterrence value of all the ships in your fleet. 200% means that you would need half as much firepower to have the same chance to spawn raid fleets, while 50% means you need twice as much.`
+</pre>
+
+</details>
+
+
+<details>
+<summary>data/_ui/tooltips.txt | tip "Fleet spawn attempts"</summary>
+<pre>tip "Fleet spawn attempts"
+	`Each time you jump into a system when your fleet is attractive to raid fleets and the raid fleet roll chance was successful, this is the maximum number of fleets that could possibly spawn`
 </pre>
 
 </details>
