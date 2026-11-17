@@ -89739,8 +89739,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			names "korath"
 			cargo 0
 			variant
-				"Rano'erek" 1
-				"Rano'erek (Ground Assault)" 4
+				"Rano'erek" 5
 				"Palavret (Ember)" 6
 				"'olofez" 32
 		on kill
@@ -89785,8 +89784,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			names "korath"
 			cargo 0
 			variant
-				"Rano'erek" 1
-				"Rano'erek (Ground Assault)" 2
+				"Rano'erek" 3
 				"Palavret (Ember)" 6
 				"'olofez" 24
 	on complete
@@ -91310,46 +91308,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	on complete
 		payment 500000
 		dialog "A Remnant military leader thanks you for hunting down the Korath ship &#60;npc&#62;, and gives you the agreed-upon payment of &#60;payment&#62;."
-</pre>
-
-</details>
-
-
-<details>
-<summary>data/remnant/remnant jobs.txt | mission "Remnant: Bounty 5"</summary>
-<pre>mission "Remnant: Bounty 5"
-	job
-	repeat
-	name "Destroy Ground Assault Bounty"
-	description "A Korath ship is hunting for our outposts in the Ember Waste. Track it down, eliminate it and any fighters it is carrying, and then return to &#60;planet&#62; to receive your payment of &#60;payment&#62;."
-	source
-		government "Remnant"
-	to offer
-		has "Remnant: Cognizance 29: done"
-		or
-			not "remnant: ssil vida active"
-			not "flagship planet: Ssil Vida"
-		random &#60; 5
-	npc kill
-		government "Korath"
-		personality heroic vindictive target marked staying
-		system
-			attributes "ember waste"
-			not attributes "graveyard"
-			not attributes "twilight"
-		fleet
-			names "korath"
-			cargo 3
-			commodities "Food" "Clothing" "Metal" "Plastic" "Medical" "Heavy Metals"
-			variant
-				"Rano'erek (Ground Assault)"
-				"'olofez" 4
-		dialog "You have destroyed the Korath ship and its fighters. You can now return to &#60;planet&#62; to collect your payment."
-	on visit
-		dialog "You've landed on &#60;planet&#62;, but the Korath ship and its fighters have not all been eliminated. Hunt them down and destroy them before returning."
-	on complete
-		payment 400000
-		dialog "A Remnant military leader thanks you for hunting down the Korath ship &#60;npc&#62; and its fighters, and gives you the agreed-upon payment of &#60;payment&#62;."
 </pre>
 
 </details>
