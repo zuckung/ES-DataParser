@@ -5555,6 +5555,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <details>
+<summary>data/_ui/tooltips.txt | tip "Jettisoned value"</summary>
+<pre>tip "Jettisoned value"
+	`The value that outfits jettisoned from a ship or dropped by a ship when it explodes will have. If unset, outfits will use the value they had before being jettisoned.`
+	`If this value is above the "Minimum value", then jettisoned outfits will continue to depreciate toward the minimum value. This value is allowed to be below the minimum value, in which case the outfits will be locked to that value.`
+	`Note that modifying this value in an existing save file will not cause previously jettisoned items to begin aging if this value is moved to above "Minimum value".`
+</pre>
+
+</details>
+
+
+<details>
 <summary>data/_ui/tooltips.txt | tip "Cargo is plunder"</summary>
 <pre>tip "Cargo is plunder"
 	`If false, outfits taken from a ship's cargo hold or which are still in the ship's cargo hold at the moment it is captured will not be considered plundered and will use the "Minimum value" to determine their worth.`
